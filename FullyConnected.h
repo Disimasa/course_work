@@ -5,6 +5,7 @@
 class FullyConnected:public Layer {
 public:
 	FullyConnected(int neuronsAmountVal);
+	Matrix forward(Matrix input);
 };
 
 

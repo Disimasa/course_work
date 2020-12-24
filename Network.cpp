@@ -14,6 +14,15 @@ void Network::setWeights(std::vector<Matrix> weights) {
 	}
 }
 
+std::vector<Matrix> Network::activate(Matrix input) {
+	std::vector<Matrix> activatedLayers;
+	Matrix previousLayer = input;
+	for (int ind = 0; ind < layers.size()-1;ind++) {
+		previousLayer = layers[ind]->forward(previousLayer);
+	}
+	return activatedLayers;
+}
+
 void Network::printTopology() {
 	for (Layer *layer : layers) {
 		std::cout<<layer->getNeuronsAmount()<<' ';

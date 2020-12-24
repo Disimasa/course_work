@@ -8,6 +8,7 @@ class Layer {
 public:
 	Layer(int neuronsAmountVal);
 	void setWeights(Matrix weightsVal);
+	virtual Matrix forward(Matrix input);
 	int getNeuronsAmount();
 private:
 	int neuronsAmount{0};
