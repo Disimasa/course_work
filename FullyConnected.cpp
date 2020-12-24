@@ -8,5 +8,5 @@ Matrix FullyConnected::forward(Matrix input) {
 }
 
 Matrix FullyConnected::back(Matrix delta, bool isLast) {
-
+	return delta;
 }
