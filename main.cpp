@@ -19,6 +19,6 @@ int main() {
 	network.addLayer(FullyConnected(1));
 	network.setRandomWeights();
 	network.printTopology();
-	auto s = network.activate(data);
+	std::cout<<network.activate(data).back();
 	network.train(data, answers, 1, 1);
 }

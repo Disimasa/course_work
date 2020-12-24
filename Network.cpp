@@ -37,7 +37,7 @@ Matrix Network::train(Matrix input, Matrix answers, int epochs, double learningR
 		std::cout<<outputError.unaryExpr([](double x) {return x*x;}).sum()/(2*input.rows())<<std::endl;
 		std::vector<Matrix> deltas;
 		deltas.push_back(outputError.array() * activatedLayers.back().unaryExpr(
-				[] (double x) {return sigmoid(x, true);}).array());
+				[activatedLayers, this] (double x) {return layers.back()->activationMethod(x, true);}).array());
 		for (int ind = layers.size()-2; ind >=0;ind--) {
 
 		}
