@@ -24,7 +24,7 @@ std::vector<Matrix> Network::activate(Matrix input) {
 	std::vector<Matrix> activatedLayers;
 	Matrix previousLayer = input;
 	for (int ind = 0; ind < layers.size()-1;ind++) {
-		previousLayer = layers[ind]->forward(previousLayer).unaryExpr([](float x) {return sigmoid(x);});
+		previousLayer = layers[ind]->forward(previousLayer);
 		activatedLayers.push_back(previousLayer);
 	}
 	return activatedLayers;
@@ -36,7 +36,11 @@ Matrix Network::train(Matrix input, Matrix answers, int epochs, double learningR
 		Matrix outputError = answers - activatedLayers.back();
 		std::cout<<outputError.unaryExpr([](double x) {return x*x;}).sum()/(2*input.rows())<<std::endl;
 		std::vector<Matrix> deltas;
-		deltas.push_back()
+		deltas.push_back(outputError.array() * activatedLayers.back().unaryExpr(
+				[] (double x) {return sigmoid(x, true);}).array());
+		for (int ind = layers.size()-2; ind >=0;ind--) {
+
+		}
 	}
 	return activate(input).back();
 }

@@ -13,9 +13,6 @@ public:
 	std::vector<Matrix> activate(Matrix input);
 	Matrix train(Matrix input, Matrix answers, int epochs, double learningRate);
 	void printTopology();
-	static float sigmoid(float x, bool derivative = false) {
-		return derivative ? sigmoid(x)*(1-sigmoid(x)) : 1/(1+exp(-x));
-	}
 private:
 	std::vector<Layer*> layers;
 };
