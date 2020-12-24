@@ -1,5 +1,14 @@
-//
-// Created by lichk on 24.12.2020.
-//
-
 #include "Layer.h"
+
+Layer::Layer(int neuronsAmountVal):
+neuronsAmount(neuronsAmountVal) {};
+
+void Layer::setWeights(Matrix weightsVal) {
+	weights = weightsVal;
+}
+
+int Layer::getNeuronsAmount() {
+	return neuronsAmount;
+}
+
+
