@@ -8,11 +8,11 @@ class Layer {
 public:
 	Layer(int neuronsAmountVal);
 	void setWeights(Matrix weightsVal);
-	virtual Matrix forward(Matrix input);
+	virtual Matrix forward(Matrix input) = 0;
 	int getNeuronsAmount();
-private:
-	int neuronsAmount{0};
+protected:
 	Matrix weights;
+	int neuronsAmount{0};
 };
 
 

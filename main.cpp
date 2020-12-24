@@ -3,9 +3,22 @@
 #include "FullyConnected.h"
 
 int main() {
+	Matrix data(4, 2);
+	data << 0, 0,
+					0, 1,
+					1, 0,
+					1, 1;
+	Matrix answers(4, 1);
+	answers << 0,
+						 1,
+						 1,
+						 0;
 	Network network;
-	network.addLayer(FullyConnected(10));
+	network.addLayer(FullyConnected(2));
 	network.addLayer(FullyConnected(15));
-	network.setWeights(std::vector<Matrix> {Matrix()});
+	network.addLayer(FullyConnected(1));
+	network.setRandomWeights();
 	network.printTopology();
+	auto s = network.activate(data);
+	network.train(data, answers, 1, 1);
 }
