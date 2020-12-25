@@ -6,7 +6,8 @@ class FullyConnected:public Layer {
 public:
 	FullyConnected(int neuronsAmountVal);
 	Matrix forward(Matrix input);
-	Matrix back(Matrix delta, bool isLast = false);
+	Matrix back(Matrix delta, Matrix activatedLayer);
+	void update(Matrix delta, Matrix activatedLayer, double learningRate);
 };
 
 

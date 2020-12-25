@@ -18,7 +18,7 @@ int main() {
 	network.addLayer(FullyConnected(15));
 	network.addLayer(FullyConnected(1));
 	network.setRandomWeights();
-	network.printTopology();
-	std::cout<<network.activate(data).back();
-	network.train(data, answers, 1, 1);
+//	network.printTopology();
+//	std::cout<<network.activate(data)[0]<<std::endl;
+	std::cout<<network.train(data, answers, 1, 1);
 }
