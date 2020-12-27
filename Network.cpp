@@ -26,6 +26,7 @@ std::vector<Matrix> Network::activate(Matrix input) {
 	Matrix previousLayer = input;
 	for (int ind = 0; ind < layers.size()-1;ind++) {
 		previousLayer = layers[ind]->forward(previousLayer);
+		std::cout<<previousLayer.rows()<<' '<<previousLayer.cols();
 		activatedLayers.push_back(previousLayer);
 	}
 	return activatedLayers;

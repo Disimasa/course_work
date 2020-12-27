@@ -3,6 +3,7 @@
 #include <vector>
 #include "Layer.h"
 #include "FullyConnected.h"
+#include "Convolutional.h"
 
 class Network {
 public:

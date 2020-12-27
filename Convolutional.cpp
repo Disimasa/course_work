@@ -1,7 +1,7 @@
 #include "Convolutional.h"
 
 Convolutional::Convolutional(int width, int height, int kernelSize, double (*activationMethod)(double x, bool derivative)):
-	Layer(width*height, activationMethod), kernel(kernelSize) {}
+	Layer(width*height, activationMethod), kernel(kernelSize), height(height), width(width) {}
 
 void Convolutional::setRandomWeights(Layer *nextLayer) {
 	setWeights(Matrix::Random(kernel, kernel));
@@ -21,7 +21,13 @@ Matrix Convolutional::forward(Matrix input) {
 			}
 		}
 	}
+return convLayer;
 }
 
-	return convLayer;
+Matrix Convolutional::back(Matrix delta, Matrix activatedLayer) {
+	return delta;
+}
+
+void Convolutional::update(Matrix delta, Matrix activatedLayer, double learningRate) {
+	std::cout<<0;
 }
