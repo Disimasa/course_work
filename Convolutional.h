@@ -4,8 +4,9 @@
 
 class Convolutional: public Layer {
 public:
-	Convolutional(int neuronsAmountVal, double (*activationMethod)(double x, bool derivative) = sigmoid, int kernelSize = 3);
-//	Matrix forward(Matrix input);
+	Convolutional(int neuronsAmountVal, int kernelSize = 3, double (*activationMethod)(double x, bool derivative) = sigmoid);
+	void setRandomWeights(Layer *nextLayer);
+//		Matrix forward(Matrix input);
 //	Matrix back(Matrix delta, Matrix activatedLayer);
 //	void update(Matrix delta, Matrix activatedLayer, double learningRate);
 private:

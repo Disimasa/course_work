@@ -1,7 +1,6 @@
 #include "Network.h"
 #include <iostream>
 
-Network::Network(int inputWidth, int inputHeight): inputWidth(inputWidth), inputHeight(inputHeight) {}
 
 void Network::addLayer(Layer *layer) {
 	layers.push_back(layer);
