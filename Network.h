@@ -7,7 +7,8 @@
 class Network {
 public:
 	Network() = default;
-	void addLayer(FullyConnected layer);
+	Network(int inputWidth, int inputHeight);
+	void addLayer(Layer *layer);
 	void setWeights(std::vector<Matrix> weights);
 	void setRandomWeights();
 	std::vector<Matrix> activate(Matrix input);
@@ -15,6 +16,8 @@ public:
 	void printTopology();
 private:
 	std::vector<Layer*> layers;
+	int inputWidth = 0;
+	int inputHeight = 0;
 };
 
 

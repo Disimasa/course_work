@@ -1,8 +1,10 @@
 #include "Network.h"
 #include <iostream>
 
-void Network::addLayer(FullyConnected layer) {
-	layers.push_back(&layer);
+Network::Network(int inputWidth, int inputHeight): inputWidth(inputWidth), inputHeight(inputHeight) {}
+
+void Network::addLayer(Layer *layer) {
+	layers.push_back(layer);
 }
 
 void Network::setWeights(std::vector<Matrix> weights) {
@@ -16,7 +18,7 @@ void Network::setWeights(std::vector<Matrix> weights) {
 
 void Network::setRandomWeights() {
 	for (int ind = 0; ind < layers.size() - 1;ind++) {
-		layers[ind]->setWeights(Matrix::Random(layers[ind]->getNeuronsAmount(), layers[ind+1]->getNeuronsAmount()));
+		layers[ind]->setRandomWeights(layers[ind+1]);
 	}
 }
 

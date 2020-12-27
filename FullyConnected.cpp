@@ -4,6 +4,10 @@
 FullyConnected::FullyConnected(int neuronsAmountVal, double (*activationMethodLink)(double x, bool derivative)):
 Layer(neuronsAmountVal, activationMethodLink) {}
 
+void FullyConnected::setRandomWeights(Layer *nextLayer) {
+	setWeights(Matrix::Random(neuronsAmount, nextLayer->getNeuronsAmount()));
+}
+
 Matrix FullyConnected::forward(Matrix input) {
 	return (input * weights).unaryExpr([this] (double x) {return activationMethod(x, false);});
 }
