@@ -1,4 +1,6 @@
-//
-// Created by lichk on 27.12.2020.
-//
+#include <iostream>
+#include "Network.h"
 
+int main() {
+	std::cout<<1;
+}
