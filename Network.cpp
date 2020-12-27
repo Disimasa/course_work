@@ -35,16 +35,17 @@ Matrix Network::train(Matrix input, Matrix answers, int epochs, double learningR
 		std::vector<Matrix> activatedLayers = activate(input);
 		Matrix outputError = answers - activatedLayers.back();
 		std::cout<<outputError.unaryExpr([](double x) {return x*x;}).sum()/(2*input.rows())<<std::endl;
+		std::cout<<"-----------"<<std::endl;
 		std::vector<Matrix> deltas;
 		deltas.push_back(outputError.array() * activatedLayers.back().unaryExpr(
 				[this] (double x) {return layers.back()->activationMethod(x, true);}).array());
 		for (int ind = layers.size()-2; ind >0;ind--) {
-			std::cout<<activatedLayers[ind-1].rows()<<' '<<activatedLayers[ind-1].cols();
 			deltas.push_back(layers[ind]->back(deltas[layers.size()-2-ind], activatedLayers[ind-1]));
 		}
-		for (int ind = layers.size()-1; ind >0; ind--) {
-			layers[ind]->update(deltas[layers.size()-1-ind], activatedLayers[ind-1], learningRate);
+		for (int ind = layers.size()-2; ind > 0; ind--) {
+			layers[ind]->update(deltas[layers.size()-2-ind], activatedLayers[ind-1], learningRate);
 		}
+		layers[0]->update(deltas.back(), input, learningRate);
 	}
 	return activate(input).back();
 }

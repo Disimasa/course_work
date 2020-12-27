@@ -4,7 +4,7 @@
 
 class FullyConnected:public Layer {
 public:
-	FullyConnected(int neuronsAmountVal);
+	FullyConnected(int neuronsAmountVal, double (*activationMethodLink)(double x, bool derivative) = sigmoid);
 	Matrix forward(Matrix input);
 	Matrix back(Matrix delta, Matrix activatedLayer);
 	void update(Matrix delta, Matrix activatedLayer, double learningRate);
