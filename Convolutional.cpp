@@ -29,5 +29,19 @@ Matrix Convolutional::back(Matrix delta, Matrix activatedLayer) {
 }
 
 void Convolutional::update(Matrix delta, Matrix activatedLayer, double learningRate) {
-	std::cout<<0;
+	int newWidth = (width - kernel + 1);
+	int newHeight = (height - kernel + 1);
+	Matrix convDelta = Matrix::Zero(kernel, kernel);
+	std::cout<<activatedLayer.rows()<<' '<<activatedLayer.cols();
+	for (int img = 0; img < activatedLayer.rows(); img++) {
+		for (int row = 0; row < newHeight; row++) {
+			for (int col = 0; col < newWidth; col++) {
+				for (int i = 0; i < kernel - 1; i++) {
+					for (int j = 0; j < kernel - 1; j++) {
+						convDelta(i, j) += delta(row, col) * activatedLayer(img, i*kernel + j);
+					}
+				}
+			}
+		}
+	}
 }

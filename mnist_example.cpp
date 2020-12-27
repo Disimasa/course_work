@@ -74,5 +74,6 @@ int main() {
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
 	network.setRandomWeights();
-	std::cout<<network.activate(trainData).back();
+//	std::cout<<network.activate(trainData).back();
+	network.train(trainData, trainAnswers, 1, 0.8);
 }
