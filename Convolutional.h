@@ -6,7 +6,7 @@ class Convolutional: public Layer {
 public:
 	Convolutional(int width, int height, int kernelSize = 3, double (*activationMethod)(double x, bool derivative) = sigmoid);
 	void setRandomWeights(Layer *nextLayer);
-		Matrix forward(Matrix input);
+	Matrix forward(Matrix input);
 	Matrix back(Matrix delta, Matrix activatedLayer);
 	void update(Matrix delta, Matrix, Matrix previousLayer, double learningRate);
 private:

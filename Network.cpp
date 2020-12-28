@@ -1,6 +1,6 @@
 #include "Network.h"
 #include <iostream>
-
+#include <fstream>
 
 void Network::addLayer(Layer *layer) {
 	layers.push_back(layer);
@@ -18,6 +18,45 @@ void Network::setWeights(std::vector<Matrix> weights) {
 void Network::setRandomWeights() {
 	for (int ind = 0; ind < layers.size() - 1;ind++) {
 		layers[ind]->setRandomWeights(layers[ind+1]);
+	}
+}
+
+void Network::recordWeights(std::string path) {
+	std::ofstream out;
+	out.open(path);
+	if (out.is_open()) {
+		out<<layers.size()-1<<std::endl;
+		for (Layer *layer : layers) {
+			out<<layer->getWeights().rows()<<' '<<layer->getWeights().cols()<<std::endl;
+			for (int row = 0; row < layer->getWeights().rows(); row++) {
+				for (int col = 0; col < layer->getWeights().cols(); col++) {
+					out<<layer->getWeights()(row, col)<<' ';
+				}
+			}
+			out<<std::endl;
+		}
+	}
+	out.close();
+}
+
+void Network::readWeights(std::string path) {
+	std::ifstream file(path);
+	if (file.is_open()) {
+		std::vector<Matrix> weights;
+		int amount;
+		file>>amount;
+		for (int iter = 0; iter < amount; iter++) {
+			int rows, cols;
+			file >> rows>>cols;
+			Matrix matrix(rows, cols);
+			for (int row = 0; row<rows; row++) {
+				for (int col = 0; col < cols; col++) {
+					file>>matrix(row, col);
+				}
+			}
+			weights.push_back(matrix);
+		}
+		setWeights(weights);
 	}
 }
 

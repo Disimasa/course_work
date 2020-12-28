@@ -12,4 +12,8 @@ int Layer::getNeuronsAmount() {
 	return neuronsAmount;
 }
 
+Matrix Layer::getWeights() {
+	return weights;
+}
+
 

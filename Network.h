@@ -4,6 +4,7 @@
 #include "Layer.h"
 #include "FullyConnected.h"
 #include "Convolutional.h"
+#include <string>
 
 class Network {
 public:
@@ -11,6 +12,8 @@ public:
 	void addLayer(Layer *layer);
 	void setWeights(std::vector<Matrix> weights);
 	void setRandomWeights();
+	void recordWeights(std::string path);
+	void readWeights(std::string path);
 	std::vector<Matrix> activate(Matrix input);
 	Matrix train(Matrix input, Matrix answers, int epochs, double learningRate);
 	void printTopology();

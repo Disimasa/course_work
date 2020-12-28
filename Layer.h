@@ -14,6 +14,7 @@ public:
 	virtual void update(Matrix, Matrix, Matrix, double) = 0;
 	int getNeuronsAmount();
 	double (*activationMethod)(double x, bool derivative);
+	Matrix getWeights();
 protected:
 	Matrix weights;
 	int neuronsAmount{0};

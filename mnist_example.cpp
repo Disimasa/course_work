@@ -17,8 +17,8 @@ int intoDec (int x) //from 32bit
 
 int main() {
 	std::ifstream data_file("../train-images.idx3-ubyte", std::ios::binary);
-	Matrix trainData(1000, 784);
-	Matrix testData(1000, 784);
+	Matrix trainData(10000, 784);
+	Matrix testData(10000, 784);
 	if (data_file.is_open())
 	{
 		int imagesAmount = 0, magic = 0, rows = 0, cols = 0;
@@ -29,14 +29,14 @@ int main() {
 		rows = intoDec(rows);
 		data_file.read((char *)&cols, sizeof(cols));
 		cols = intoDec(cols);
-		for (int image = 0; image < 1000; image++) {
+		for (int image = 0; image < 10000; image++) {
 			for (int ind = 0; ind < rows * cols; ind++) {
 				unsigned char pixel = 0;
 				data_file.read((char *) &pixel, sizeof(pixel));
 				trainData(image, ind) = pixel/255.0;
 			}
 		}
-		for (int image = 0; image < 1000;image++) {
+		for (int image = 0; image < 10000;image++) {
 			for (int ind = 0; ind < rows*cols; ind++) {
 				unsigned char pixel = 0;
 				data_file.read((char *)&pixel, sizeof(pixel));
@@ -46,21 +46,21 @@ int main() {
 	}
 	data_file.close();
 	std::ifstream answers_file("../train-labels.idx1-ubyte", std::ios::binary);
-	Matrix trainAnswers(1000, 10);
-	Matrix testAnswers(1000, 10);
+	Matrix trainAnswers(10000, 10);
+	Matrix testAnswers(10000, 10);
 	if (answers_file.is_open()) {
 		int magic = 0, answersAmount = 0;
 		answers_file.read((char *)&magic, sizeof(magic));
 		answers_file.read((char *)&answersAmount, sizeof(answersAmount));
 		answersAmount = intoDec(answersAmount);
-		for (int answer_ind = 0; answer_ind < 1000; answer_ind++) {
+		for (int answer_ind = 0; answer_ind < 10000; answer_ind++) {
 			unsigned char answer = 0;
 			answers_file.read((char *) &answer, sizeof(answer));
 			for (int i = 0; i < 10; i++) {
 				i == (int) answer ? trainAnswers(answer_ind, i) = 1 : trainAnswers(answer_ind, i) = 0;
 			}
 		}
-		for (int answer_ind = 0; answer_ind < 1000; answer_ind++) {
+		for (int answer_ind = 0; answer_ind < 10000; answer_ind++) {
 			unsigned char answer = 0;
 			answers_file.read((char *)&answer, sizeof(answer));
 			for (int i = 0; i < 10; i++) {
@@ -75,7 +75,8 @@ int main() {
 	network.addLayer(new FullyConnected(10));
 	network.setRandomWeights();
 //	std::cout<<network.activate(trainData).back();
-	network.train(trainData, trainAnswers, 100, 0.8);
+	network.train(trainData, trainAnswers, 100, 0.01);
+	network.recordWeights("./weights.txt");
 	auto s = network.activate(testData);
 	int counter = 0;
 	for (int j = 0; j < 1000; j++) {
