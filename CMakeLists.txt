@@ -15,7 +15,7 @@ add_executable(mnist_example mnist_example.cpp)
 target_link_libraries(mnist_example NeuralNetwork)
 
 set(CMAKE_PREFIX_PATH "C:/opencv/opencv/build/")
-find_package( OpenCV REQUIRED )
+find_package( OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(mnist_with_opencv mnist_with_opencv.cpp)
@@ -24,6 +24,7 @@ target_link_libraries(mnist_with_opencv NeuralNetwork ${OpenCV_LIBS})
 add_custom_target(Dlls
         COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/dlls/opencv_world451.dll ${CMAKE_BINARY_DIR}
         COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/dlls/opencv_world451d.dll ${CMAKE_BINARY_DIR}
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/weights/trained_weights.txt ${CMAKE_BINARY_DIR}
         COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/images/one.jpg ${CMAKE_BINARY_DIR}
         COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/images/two.jpg ${CMAKE_BINARY_DIR}
         COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/images/three.jpg ${CMAKE_BINARY_DIR}

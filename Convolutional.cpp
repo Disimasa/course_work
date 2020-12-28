@@ -25,7 +25,21 @@ return convLayer;
 }
 
 Matrix Convolutional::back(Matrix delta, Matrix activatedLayer) {
-	return delta;
+	int newWidth = (width - kernel + 1);
+	int newHeight = (height - kernel + 1);
+	Matrix convDelta = Matrix::Zero(activatedLayer.rows(), width*height);
+	for (int img = 0; img < activatedLayer.rows(); img++) {
+		for (int row = 0; row < newHeight; row++) {
+			for (int col = 0; col < newWidth; col++) {
+				for (int i = 0; i < kernel; i++) {
+					for (int j = 0; j < kernel; j++) {
+						convDelta(img, (row+i)*width + col + j) += weights(i, j) * delta(row, col);
+					}
+				}
+			}
+		}
+	}
+	return convDelta;
 }
 
 void Convolutional::update(Matrix delta, Matrix activatedLayer, Matrix previousLayer, double learningRate) {

@@ -17,8 +17,7 @@ int intoDec (int x) //from 32bit
 
 int main() {
 	std::ifstream data_file("../train-images.idx3-ubyte", std::ios::binary);
-	Matrix trainData(30000, 784);
-	Matrix testData(30000, 784);
+	Matrix trainData(60000, 784);
 	if (data_file.is_open())
 	{
 		int imagesAmount = 0, magic = 0, rows = 0, cols = 0;
@@ -29,42 +28,27 @@ int main() {
 		rows = intoDec(rows);
 		data_file.read((char *)&cols, sizeof(cols));
 		cols = intoDec(cols);
-		for (int image = 0; image < 30000; image++) {
+		for (int image = 0; image < 60000; image++) {
 			for (int ind = 0; ind < rows * cols; ind++) {
 				unsigned char pixel = 0;
 				data_file.read((char *) &pixel, sizeof(pixel));
 				trainData(image, ind) = pixel/255.0;
 			}
 		}
-		for (int image = 0; image < 30000;image++) {
-			for (int ind = 0; ind < rows*cols; ind++) {
-				unsigned char pixel = 0;
-				data_file.read((char *)&pixel, sizeof(pixel));
-				testData(image, ind) = pixel/255.0;
-			}
-		}
 	}
 	data_file.close();
 	std::ifstream answers_file("../train-labels.idx1-ubyte", std::ios::binary);
-	Matrix trainAnswers(30000, 10);
-	Matrix testAnswers(30000, 10);
+	Matrix trainAnswers(60000, 10);
 	if (answers_file.is_open()) {
 		int magic = 0, answersAmount = 0;
 		answers_file.read((char *)&magic, sizeof(magic));
 		answers_file.read((char *)&answersAmount, sizeof(answersAmount));
 		answersAmount = intoDec(answersAmount);
-		for (int answer_ind = 0; answer_ind < 30000; answer_ind++) {
+		for (int answer_ind = 0; answer_ind < 60000; answer_ind++) {
 			unsigned char answer = 0;
 			answers_file.read((char *) &answer, sizeof(answer));
 			for (int i = 0; i < 10; i++) {
 				i == (int) answer ? trainAnswers(answer_ind, i) = 1 : trainAnswers(answer_ind, i) = 0;
-			}
-		}
-		for (int answer_ind = 0; answer_ind < 30000; answer_ind++) {
-			unsigned char answer = 0;
-			answers_file.read((char *)&answer, sizeof(answer));
-			for (int i = 0; i < 10; i++) {
-				i == (int)answer ? testAnswers(answer_ind, i) = 1 : testAnswers(answer_ind, i) = 0;
 			}
 		}
 	}
@@ -73,28 +57,7 @@ int main() {
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
-	network.readWeights("./weights.txt");
-//	std::cout<<network.activate(trainData).back();
+	network.setRandomWeights();
 	network.train(trainData, trainAnswers, 500, 0.0015);
-	network.recordWeights("./new_weights.txt");
-	auto s = network.activate(testData);
-	int counter = 0;
-	for (int j = 0; j < 30000; j++) {
-		double max = s.back()(j, 0);
-		int maxId = 0;
-		int rightId = 0;
-		for (int k = 0; k < 10; k++) {
-			if (s.back()(j, k) > max) {
-				max = s.back()(j, k);
-				maxId = k;
-			}
-			if (testAnswers(j, k) == 1) rightId = k;
-		}
-		for (int k = 0; k < 10; k++) {
-			s.back()(j, k) = 0;
-		}
-		s.back()(j, maxId) = 1;
-		if (rightId != maxId) counter++;
-	}
-	std::cout <<"Test data error: "<< counter << std::endl<<std::endl;
+	network.recordWeights("./trained_weights.txt");
 }
