@@ -28,20 +28,20 @@ Matrix Convolutional::back(Matrix delta, Matrix activatedLayer) {
 	return delta;
 }
 
-void Convolutional::update(Matrix delta, Matrix activatedLayer, double learningRate) {
-	int newWidth = (width - kernel + 1);
-	int newHeight = (height - kernel + 1);
-	Matrix convDelta = Matrix::Zero(kernel, kernel);
-	std::cout<<activatedLayer.rows()<<' '<<activatedLayer.cols();
-	for (int img = 0; img < activatedLayer.rows(); img++) {
-		for (int row = 0; row < newHeight; row++) {
-			for (int col = 0; col < newWidth; col++) {
-				for (int i = 0; i < kernel - 1; i++) {
-					for (int j = 0; j < kernel - 1; j++) {
-						convDelta(i, j) += delta(row, col) * activatedLayer(img, i*kernel + j);
-					}
-				}
-			}
-		}
-	}
+void Convolutional::update(Matrix delta, Matrix activatedLayer, Matrix previousLayer, double learningRate) {
+//	int newWidth = (width - kernel + 1);
+//	int newHeight = (height - kernel + 1);
+//	Matrix convDelta = Matrix::Zero(kernel, kernel);
+//	for (int img = 0; img < activatedLayer.rows(); img++) {
+//		for (int row = 0; row < newHeight; row++) {
+//			for (int col = 0; col < newWidth; col++) {
+//				for (int i = 0; i < kernel; i++) {
+//					for (int j = 0; j < kernel; j++) {
+//						convDelta(i, j) += delta(img, row*newWidth + col) * activatedLayer(img, (row + i)*width + col + j);
+//					}
+//				}
+//			}
+//		}
+//	}
+//	weights += (convDelta * learningRate).transpose();
 }

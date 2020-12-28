@@ -8,7 +8,7 @@ public:
 	void setRandomWeights(Layer *nextLayer);
 	Matrix forward(Matrix input);
 	Matrix back(Matrix delta, Matrix activatedLayer);
-	void update(Matrix delta, Matrix activatedLayer, double learningRate);
+	void update(Matrix delta, Matrix activatedLayer, Matrix, double learningRate);
 };
 
 

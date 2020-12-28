@@ -18,6 +18,6 @@ Matrix FullyConnected::back(Matrix delta, Matrix activatedLayer) {
 	return newDelta;
 }
 
-void FullyConnected::update(Matrix delta, Matrix activatedLayer, double learningRate) {
+void FullyConnected::update(Matrix delta, Matrix activatedLayer, Matrix, double learningRate) {
 	weights += (delta.transpose() * activatedLayer * learningRate).transpose();
 }

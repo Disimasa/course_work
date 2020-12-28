@@ -11,7 +11,7 @@ public:
 	virtual void setRandomWeights(Layer *nextLayer) = 0;
 	virtual Matrix forward(Matrix) = 0;
 	virtual Matrix back(Matrix, Matrix) = 0;
-	virtual void update(Matrix, Matrix, double) = 0;
+	virtual void update(Matrix, Matrix, Matrix, double) = 0;
 	int getNeuronsAmount();
 	double (*activationMethod)(double x, bool derivative);
 protected:

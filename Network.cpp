@@ -43,10 +43,11 @@ Matrix Network::train(Matrix input, Matrix answers, int epochs, double learningR
 		for (int ind = layers.size()-2; ind >0;ind--) {
 			deltas.push_back(layers[ind]->back(deltas[layers.size()-2-ind], activatedLayers[ind-1]));
 		}
+
 		for (int ind = layers.size()-2; ind > 0; ind--) {
-			layers[ind]->update(deltas[layers.size()-2-ind], activatedLayers[ind-1], learningRate);
+			layers[ind]->update(deltas[layers.size()-2-ind], activatedLayers[ind-1], activatedLayers[ind], learningRate);
 		}
-		layers[0]->update(deltas.back(), input, learningRate);
+		layers[0]->update(deltas.back(), input, activatedLayers[0], learningRate);
 	}
 	return activate(input).back();
 }
