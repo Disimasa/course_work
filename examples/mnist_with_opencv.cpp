@@ -1,4 +1,4 @@
-#include "Network.h"
+#include "../Network_lib/headers/Network.h"
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/eigen.hpp>
 #include <string>
@@ -25,11 +25,9 @@ int main() {
 	Network network;
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
-	network.addLayer(new FullyConnected(100));
 	network.addLayer(new FullyConnected(10));
 	network.readWeights("./trained_weights.txt");
 	Matrix prediction = network.activate(testData).back();
-	std::cout<<prediction;
 	double maxVal = prediction(0, 0);
 	int maxId = 0;
 	for (int i = 0; i < 10; i++) {

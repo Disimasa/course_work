@@ -1,4 +1,4 @@
-#include "FullyConnected.h"
+#include "../headers/FullyConnected.h"
 #include <iostream>
 
 FullyConnected::FullyConnected(int neuronsAmountVal, double (*activationMethodLink)(double x, bool derivative)):

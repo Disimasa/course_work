@@ -4,21 +4,21 @@ project(Neural_network)
 
 # adding library
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
-add_library(NeuralNetwork Network.h Network.cpp Layer.h Layer.cpp FullyConnected.h FullyConnected.cpp
-        Convolutional.h Convolutional.cpp ActivationMethods.h)
+add_library(NeuralNetwork Network_lib/headers/Network.h Network_lib/source/Network.cpp Network_lib/headers/Layer.h Network_lib/source/Layer.cpp Network_lib/headers/FullyConnected.h Network_lib/source/FullyConnected.cpp
+        Network_lib/headers/Convolutional.h Network_lib/source/Convolutional.cpp Network_lib/headers/ActivationMethods.h)
 target_link_libraries(NeuralNetwork Eigen3::Eigen)
 
-add_executable(xor_example xor_example.cpp)
+add_executable(xor_example examples/xor_example.cpp)
 target_link_libraries (xor_example NeuralNetwork)
 
-add_executable(mnist_example mnist_example.cpp)
+add_executable(mnist_example examples/mnist_example.cpp)
 target_link_libraries(mnist_example NeuralNetwork)
 
 set(CMAKE_PREFIX_PATH "C:/opencv/opencv/build/")
 find_package( OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(mnist_with_opencv mnist_with_opencv.cpp)
+add_executable(mnist_with_opencv examples/mnist_with_opencv.cpp)
 target_link_libraries(mnist_with_opencv NeuralNetwork ${OpenCV_LIBS})
 
 add_custom_target(Dlls

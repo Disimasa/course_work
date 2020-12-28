@@ -1,4 +1,4 @@
-#include "Convolutional.h"
+#include "../headers/Convolutional.h"
 
 Convolutional::Convolutional(int width, int height, int kernelSize, double (*activationMethod)(double x, bool derivative)):
 	Layer(width*height, activationMethod), kernel(kernelSize), height(height), width(width) {}

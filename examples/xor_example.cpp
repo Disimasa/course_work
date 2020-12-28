@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Network.h"
+#include "../Network_lib/headers/Network.h"
 
 int main() {
 	Matrix data(4, 2);

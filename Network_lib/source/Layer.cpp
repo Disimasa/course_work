@@ -1,4 +1,4 @@
-#include "Layer.h"
+#include "../headers/Layer.h"
 #include <iostream>
 
 Layer::Layer(int neuronsAmountVal, double (*activationMethodLink)(double x, bool derivative)):
