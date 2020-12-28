@@ -20,3 +20,15 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(mnist_with_opencv mnist_with_opencv.cpp)
 target_link_libraries(mnist_with_opencv NeuralNetwork ${OpenCV_LIBS})
+
+add_custom_target(Dlls
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/dlls/opencv_world451.dll ${CMAKE_BINARY_DIR}
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/dlls/opencv_world451d.dll ${CMAKE_BINARY_DIR}
+        )
+
+add_dependencies(mnist_with_opencv Dlls)
+
+#add_custom_command(TARGET mnist_with_opencv POST_BUILD
+#        COMMAND ${CMAKE_COMMAND} -E copy_directory
+#        "${PROJECT_SOURCE_DIR}/dlls/opencv_world451.dll"
+#        $<TARGET_FILE_DIR:mnist_with_opencv>)
