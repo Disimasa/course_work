@@ -4,8 +4,7 @@
 #include <string>
 
 int main() {
-	setlocale(LC_ALL, "Russian");
-	std::cout<<"Введите путь до изображения:"<<std::endl;
+	std::cout<<"Input the path to the image:"<<std::endl<<std::endl;
 	std::string path;
 	std::cin>>path;
 	cv::Mat img = cv::imread(path, cv::IMREAD_GRAYSCALE);
@@ -28,9 +27,14 @@ int main() {
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
 	network.readWeights("./new_weights.txt");
-//
-	std::cout<<network.activate(testData).back();
-//	cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
-//	imshow("Display window", img);
-	cv::waitKey(0);
+	Matrix prediction = network.activate(testData).back();
+	double maxVal = prediction(0, 0);
+	int maxId = 0;
+	for (int i = 0; i < 10; i++) {
+		if (maxVal<prediction(0, i)) {
+			maxVal = prediction(0, i);
+			maxId = i;
+		}
+	}
+	std::cout<<std::endl<<"There is " + std::to_string(maxId) + " on the image";
 }
