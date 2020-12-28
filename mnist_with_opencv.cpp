@@ -1,9 +1,14 @@
 #include "Network.h"
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/eigen.hpp>
+#include <string>
 
 int main() {
-	cv::Mat img = cv::imread("four.jpg", cv::IMREAD_GRAYSCALE);
+	setlocale(LC_ALL, "Russian");
+	std::cout<<"Введите путь до изображения:"<<std::endl;
+	std::string path;
+	std::cin>>path;
+	cv::Mat img = cv::imread(path, cv::IMREAD_GRAYSCALE);
 	cv::resize(img, img, cv::Size(28, 28));
 	Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> matrix;
 	cv::cv2eigen(img, matrix);
@@ -18,8 +23,6 @@ int main() {
 			}
 		}
 	}
-//	std::cout<<testData<<std::endl<<std::endl;
-	std::cout<<matrix<<std::endl<<std::endl;
 	Network network;
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
