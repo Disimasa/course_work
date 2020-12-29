@@ -2,11 +2,8 @@ cmake_minimum_required(VERSION 3.17)
 
 project(Neural_network)
 
-# adding library
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
-add_library(NeuralNetwork Network_lib/headers/Network.h Network_lib/source/Network.cpp Network_lib/headers/Layer.h Network_lib/source/Layer.cpp Network_lib/headers/FullyConnected.h Network_lib/source/FullyConnected.cpp
-        Network_lib/headers/Convolutional.h Network_lib/source/Convolutional.cpp Network_lib/headers/ActivationMethods.h)
-target_link_libraries(NeuralNetwork Eigen3::Eigen)
+add_subdirectory(Network_lib)
+
 
 add_executable(xor_example examples/xor_example.cpp)
 target_link_libraries (xor_example NeuralNetwork)

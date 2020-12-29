@@ -9,6 +9,7 @@
 class Network {
 public:
 	Network() = default;
+	~Network();
 	void addLayer(Layer *layer);
 	void setWeights(std::vector<Matrix> weights);
 	void setRandomWeights();

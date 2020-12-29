@@ -2,6 +2,12 @@
 #include <iostream>
 #include <fstream>
 
+Network::~Network() {
+	for (Layer * layer : layers) {
+		delete layer;
+	}
+}
+
 void Network::addLayer(Layer *layer) {
 	layers.push_back(layer);
 }

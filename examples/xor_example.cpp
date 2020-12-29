@@ -13,11 +13,9 @@ int main() {
 						 1,
 						 0;
 	Network network;
-	network.addLayer(new FullyConnected(2, sigmoid));
+	network.addLayer(new FullyConnected(2));
 	network.addLayer(new FullyConnected(10));
 	network.addLayer(new FullyConnected(1));
 	network.setRandomWeights();
-//	network.printTopology();
-//	std::cout<<network.activate(data).size()<<std::endl;
 	std::cout<<network.train(data, answers, 5000, 1);
 }
