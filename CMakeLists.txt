@@ -18,7 +18,8 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(mnist_with_opencv examples/mnist_with_opencv.cpp)
 target_link_libraries(mnist_with_opencv NeuralNetwork ${OpenCV_LIBS})
 
-file(COPY ${PROJECT_SOURCE_DIR}/dlls/ DESTINATION ${CMAKE_BINARY_DIR} PATTERN "*.rar" EXCLUDE)
+file(COPY ${OpenCV_DIR}/x64/vc15/bin/opencv_world451.dll DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${OpenCV_DIR}/x64/vc15/bin/opencv_world451d.dll DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/images/ DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/weights/ DESTINATION ${CMAKE_BINARY_DIR})
 
