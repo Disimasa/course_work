@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Eigen/build_dir/source_dir/scripts/CMakeLists.txt
+C:/Eigen/build_dir/source_dir/scripts/buildtests.in
+C:/Eigen/build_dir/source_dir/scripts/check.in
+C:/Eigen/build_dir/source_dir/scripts/debug.in
+C:/Eigen/build_dir/source_dir/scripts/release.in

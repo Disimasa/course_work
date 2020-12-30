@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Eigen/build_dir/source_dir/doc/CMakeLists.txt
+C:/Eigen/build_dir/source_dir/doc/Doxyfile.in
+C:/Eigen/build_dir/source_dir/doc/eigendoxy_footer.html.in
+C:/Eigen/build_dir/source_dir/doc/eigendoxy_header.html.in
+C:/Eigen/build_dir/source_dir/doc/eigendoxy_layout.xml.in
+C:/Eigen/build_dir/source_dir/unsupported/doc/eigendoxy_layout.xml.in

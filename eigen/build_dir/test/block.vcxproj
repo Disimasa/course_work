@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DD638ED7-48CE-3576-8955-24CDB7959899}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>block</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Eigen\build_dir\test;C:\Eigen\build_dir\source_dir\test;C:\Eigen\build_dir\source_dir;C:\Eigen\build_dir;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Eigen\build_dir\test;C:\Eigen\build_dir\source_dir\test;C:\Eigen\build_dir\source_dir;C:\Eigen\build_dir;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Eigen\build_dir\test;C:\Eigen\build_dir\source_dir\test;C:\Eigen\build_dir\source_dir;C:\Eigen\build_dir;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Eigen\build_dir\test;C:\Eigen\build_dir\source_dir\test;C:\Eigen\build_dir\source_dir;C:\Eigen\build_dir;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Eigen\build_dir\source_dir\test\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Eigen/build_dir/source_dir/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Eigen/build_dir/source_dir -BC:/Eigen/build_dir --check-stamp-file C:/Eigen/build_dir/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Eigen\build_dir\CMakeFiles\FindMPI\test_mpi.cpp;C:\Eigen\build_dir\source_dir\cmake\FindBLAS.cmake;C:\Eigen\build_dir\source_dir\cmake\FindBLASEXT.cmake;C:\Eigen\build_dir\source_dir\cmake\FindCholmod.cmake;C:\Eigen\build_dir\source_dir\cmake\FindHWLOC.cmake;C:\Eigen\build_dir\source_dir\cmake\FindLAPACK.cmake;C:\Eigen\build_dir\source_dir\cmake\FindMetis.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPTSCOTCH.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPastix.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSPQR.cmake;C:\Eigen\build_dir\source_dir\cmake\FindScotch.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSuperLU.cmake;C:\Eigen\build_dir\source_dir\cmake\FindUmfpack.cmake;C:\Eigen\build_dir\source_dir\cmake\language_support.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI\test_mpi.c;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindQt4.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\MacroAddFileDependencies.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Eigen\build_dir\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Eigen/build_dir/source_dir/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Eigen/build_dir/source_dir -BC:/Eigen/build_dir --check-stamp-file C:/Eigen/build_dir/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Eigen\build_dir\CMakeFiles\FindMPI\test_mpi.cpp;C:\Eigen\build_dir\source_dir\cmake\FindBLAS.cmake;C:\Eigen\build_dir\source_dir\cmake\FindBLASEXT.cmake;C:\Eigen\build_dir\source_dir\cmake\FindCholmod.cmake;C:\Eigen\build_dir\source_dir\cmake\FindHWLOC.cmake;C:\Eigen\build_dir\source_dir\cmake\FindLAPACK.cmake;C:\Eigen\build_dir\source_dir\cmake\FindMetis.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPTSCOTCH.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPastix.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSPQR.cmake;C:\Eigen\build_dir\source_dir\cmake\FindScotch.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSuperLU.cmake;C:\Eigen\build_dir\source_dir\cmake\FindUmfpack.cmake;C:\Eigen\build_dir\source_dir\cmake\language_support.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI\test_mpi.c;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindQt4.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\MacroAddFileDependencies.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Eigen\build_dir\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Eigen/build_dir/source_dir/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Eigen/build_dir/source_dir -BC:/Eigen/build_dir --check-stamp-file C:/Eigen/build_dir/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Eigen\build_dir\CMakeFiles\FindMPI\test_mpi.cpp;C:\Eigen\build_dir\source_dir\cmake\FindBLAS.cmake;C:\Eigen\build_dir\source_dir\cmake\FindBLASEXT.cmake;C:\Eigen\build_dir\source_dir\cmake\FindCholmod.cmake;C:\Eigen\build_dir\source_dir\cmake\FindHWLOC.cmake;C:\Eigen\build_dir\source_dir\cmake\FindLAPACK.cmake;C:\Eigen\build_dir\source_dir\cmake\FindMetis.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPTSCOTCH.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPastix.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSPQR.cmake;C:\Eigen\build_dir\source_dir\cmake\FindScotch.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSuperLU.cmake;C:\Eigen\build_dir\source_dir\cmake\FindUmfpack.cmake;C:\Eigen\build_dir\source_dir\cmake\language_support.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI\test_mpi.c;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindQt4.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\MacroAddFileDependencies.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Eigen\build_dir\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Eigen/build_dir/source_dir/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Eigen/build_dir/source_dir -BC:/Eigen/build_dir --check-stamp-file C:/Eigen/build_dir/test/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Eigen\build_dir\CMakeFiles\FindMPI\test_mpi.cpp;C:\Eigen\build_dir\source_dir\cmake\FindBLAS.cmake;C:\Eigen\build_dir\source_dir\cmake\FindBLASEXT.cmake;C:\Eigen\build_dir\source_dir\cmake\FindCholmod.cmake;C:\Eigen\build_dir\source_dir\cmake\FindHWLOC.cmake;C:\Eigen\build_dir\source_dir\cmake\FindLAPACK.cmake;C:\Eigen\build_dir\source_dir\cmake\FindMetis.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPTSCOTCH.cmake;C:\Eigen\build_dir\source_dir\cmake\FindPastix.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSPQR.cmake;C:\Eigen\build_dir\source_dir\cmake\FindScotch.cmake;C:\Eigen\build_dir\source_dir\cmake\FindSuperLU.cmake;C:\Eigen\build_dir\source_dir\cmake\FindUmfpack.cmake;C:\Eigen\build_dir\source_dir\cmake\language_support.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindMPI\test_mpi.c;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindQt4.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.18\Modules\MacroAddFileDependencies.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Eigen\build_dir\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Eigen\build_dir\ZERO_CHECK.vcxproj">
+      <Project>{07391497-E040-31BE-BD48-BE1839C90FB2}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_1.vcxproj">
+      <Project>{76E4C57B-9CAE-3E0B-9A48-D73E7E4BB3FD}</Project>
+      <Name>block_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_2.vcxproj">
+      <Project>{F11756A9-EB04-3C86-85E2-9839EDF92815}</Project>
+      <Name>block_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_3.vcxproj">
+      <Project>{43C159C6-3DB7-3FD7-BBD3-432EA3BC18D5}</Project>
+      <Name>block_3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_4.vcxproj">
+      <Project>{614834FE-6A17-311A-89AF-FBFF82BE6B08}</Project>
+      <Name>block_4</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_5.vcxproj">
+      <Project>{6A47BC19-BA5D-3850-9935-DAB32EB94C7D}</Project>
+      <Name>block_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_6.vcxproj">
+      <Project>{E58F6C4D-671B-3A08-A66D-14E1C179CB4F}</Project>
+      <Name>block_6</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_7.vcxproj">
+      <Project>{F910021C-A8C5-34C0-9A6F-AB4DBC5FB851}</Project>
+      <Name>block_7</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Eigen\build_dir\test\block_8.vcxproj">
+      <Project>{242154A3-E771-3DD4-9152-2E1B8BD555B8}</Project>
+      <Name>block_8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

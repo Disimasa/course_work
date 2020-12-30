@@ -1,0 +1,4 @@
+# Target labels
+ BuildUnsupported
+# Source files and their labels
+C:/Eigen/build_dir/source_dir/unsupported/test/cxx11_tensor_assign.cpp

@@ -11,7 +11,7 @@ target_link_libraries (xor_example NeuralNetwork)
 add_executable(mnist_example examples/mnist_example.cpp)
 target_link_libraries(mnist_example NeuralNetwork)
 
-#set(CMAKE_PREFIX_PATH "C:/")
+set(CMAKE_PREFIX_PATH ./opencv/build/)
 find_package( OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
