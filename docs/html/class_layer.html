@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>Абстрактный класс слоев нейронной сети  
+ <a href="class_layer.html#details">Подробнее...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_layer_8h_source.html">Layer.h</a>&gt;</code></p>
 
 <p>Производные классы:<a class="el" href="class_convolutional.html">Convolutional</a> и <a class="el" href="class_fully_connected.html">FullyConnected</a>.</p>
@@ -103,23 +106,31 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 <tr class="memitem:aeaba2d3ea9efff1d8a0333859b78db76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aeaba2d3ea9efff1d8a0333859b78db76">Layer</a> (int neuronsAmountVal, double(*<a class="el" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a>)(double x, bool derivative)=sigmoid)</td></tr>
 <tr class="separator:aeaba2d3ea9efff1d8a0333859b78db76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c061004a08e17cf96f63d4174ec268"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a06c061004a08e17cf96f63d4174ec268">setWeights</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> weightsVal)</td></tr>
+<tr class="memdesc:a06c061004a08e17cf96f63d4174ec268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает значение весов для этого слоя  <a href="class_layer.html#a06c061004a08e17cf96f63d4174ec268">Подробнее...</a><br /></td></tr>
 <tr class="separator:a06c061004a08e17cf96f63d4174ec268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8df5bfe1eb950c322e231fc4adab92e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">setRandomWeights</a> (<a class="el" href="class_layer.html">Layer</a> *nextLayer)=0</td></tr>
+<tr class="memdesc:ad8df5bfe1eb950c322e231fc4adab92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает случайные значения весов для этого слоя  <a href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad8df5bfe1eb950c322e231fc4adab92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69c20e3aaad17e12f9396490601e07b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">forward</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>)=0</td></tr>
+<tr class="memdesc:aa69c20e3aaad17e12f9396490601e07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция отвечает за активацию слоя и возвращает вычисленные значения нейронов след. слоя  <a href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa69c20e3aaad17e12f9396490601e07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab13a11bb30b3bc232dc001ee432799b8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">back</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>, <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>)=0</td></tr>
+<tr class="memdesc:ab13a11bb30b3bc232dc001ee432799b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция отвечает за расчет дельты при обратном распостранении ошибки  <a href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab13a11bb30b3bc232dc001ee432799b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e4558b5d02c093e89a274ece7b389f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">update</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>, <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>, <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>, double)=0</td></tr>
+<tr class="memdesc:a2e4558b5d02c093e89a274ece7b389f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция обновляет значения весов этого слоя  <a href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2e4558b5d02c093e89a274ece7b389f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6">getNeuronsAmount</a> ()</td></tr>
+<tr class="memdesc:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает количество нейронов этого слоя  <a href="class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4257812065717b168ac2bcd67880a591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a4257812065717b168ac2bcd67880a591">getWeights</a> ()</td></tr>
+<tr class="memdesc:a4257812065717b168ac2bcd67880a591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает матрицу весов этого слоя  <a href="class_layer.html#a4257812065717b168ac2bcd67880a591">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4257812065717b168ac2bcd67880a591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Открытые атрибуты</h2></td></tr>
 <tr class="memitem:ae5d971e1c1925f150062ec7665c115a3"><td class="memItemLeft" align="right" valign="top">double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a> )(double x, bool derivative)</td></tr>
+<tr class="memdesc:ae5d971e1c1925f150062ec7665c115a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод активации, используемый в данном слое  <a href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">Подробнее...</a><br /></td></tr>
 <tr class="separator:ae5d971e1c1925f150062ec7665c115a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -129,7 +140,9 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 <tr class="memitem:acb3ca0207d2957bdc214a0744ee951ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#acb3ca0207d2957bdc214a0744ee951ba">neuronsAmount</a> {0}</td></tr>
 <tr class="separator:acb3ca0207d2957bdc214a0744ee951ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Конструктор(ы)</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный класс слоев нейронной сети </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="aeaba2d3ea9efff1d8a0333859b78db76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeaba2d3ea9efff1d8a0333859b78db76">&#9670;&nbsp;</a></span>Layer()</h2>
 
@@ -193,6 +206,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 </table>
 </div><div class="memdoc">
 
+<p>Функция отвечает за расчет дельты при обратном распостранении ошибки </p>
+
 <p>Замещается в <a class="el" href="class_fully_connected.html#a2ba6aac6c1f348981af49d5706ea83d8">FullyConnected</a> и <a class="el" href="class_convolutional.html#a4ebca1ea0715c90a43afc906465d44ae">Convolutional</a>.</p>
 
 </div>
@@ -221,6 +236,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 </table>
 </div><div class="memdoc">
 
+<p>Функция отвечает за активацию слоя и возвращает вычисленные значения нейронов след. слоя </p>
+
 <p>Замещается в <a class="el" href="class_fully_connected.html#a847e6b3e779eefc62ad7480cfa20511a">FullyConnected</a> и <a class="el" href="class_convolutional.html#a7a5cb23a7167258ff59d4bb1434c00ac">Convolutional</a>.</p>
 
 </div>
@@ -240,6 +257,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
       </table>
 </div><div class="memdoc">
 
+<p>Возвращает количество нейронов этого слоя </p>
+
 </div>
 </div>
 <a id="a4257812065717b168ac2bcd67880a591"></a>
@@ -256,6 +275,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Возвращает матрицу весов этого слоя </p>
 
 </div>
 </div>
@@ -283,6 +304,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 </table>
 </div><div class="memdoc">
 
+<p>Устанавливает случайные значения весов для этого слоя </p>
+
 <p>Замещается в <a class="el" href="class_fully_connected.html#aa013942e70d2f237842c0fa88bdb7d14">FullyConnected</a> и <a class="el" href="class_convolutional.html#ad90e35f7050d1aef7b0dd2636386208e">Convolutional</a>.</p>
 
 </div>
@@ -302,6 +325,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Устанавливает значение весов для этого слоя </p>
 
 </div>
 </div>
@@ -351,6 +376,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
 </table>
 </div><div class="memdoc">
 
+<p>Функция обновляет значения весов этого слоя </p>
+
 <p>Замещается в <a class="el" href="class_convolutional.html#a2a5aa9b41e3e9138cf0f75ae3169e3a3">Convolutional</a> и <a class="el" href="class_fully_connected.html#a1d8dc60ddbc160f311c2cbcbe5b633c4">FullyConnected</a>.</p>
 
 </div>
@@ -367,6 +394,8 @@ $(document).ready(function(){initNavTree('class_layer.html',''); initResizable()
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Метод активации, используемый в данном слое </p>
 
 </div>
 </div>

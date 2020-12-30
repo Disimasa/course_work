@@ -92,6 +92,9 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
+<p>Главный класс нейронной сети  
+ <a href="class_network.html#details">Подробнее...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_network_8h_source.html">Network.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -101,23 +104,31 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
 <tr class="memitem:a7a4e19cdb4bf0c7ecf82baa643831492"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492">~Network</a> ()</td></tr>
 <tr class="separator:a7a4e19cdb4bf0c7ecf82baa643831492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab464c639cd1e3299009a86d8aa18a361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ab464c639cd1e3299009a86d8aa18a361">addLayer</a> (<a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="memdesc:ab464c639cd1e3299009a86d8aa18a361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет новый слой в нейронную сеть  <a href="class_network.html#ab464c639cd1e3299009a86d8aa18a361">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab464c639cd1e3299009a86d8aa18a361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5b3ca8c36933fab4d5629b9e98dc8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a3d5b3ca8c36933fab4d5629b9e98dc8d">setWeights</a> (std::vector&lt; <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> &gt; weights)</td></tr>
+<tr class="memdesc:a3d5b3ca8c36933fab4d5629b9e98dc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает пользовательское значение весов  <a href="class_network.html#a3d5b3ca8c36933fab4d5629b9e98dc8d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3d5b3ca8c36933fab4d5629b9e98dc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774a64b7af6f3b4778eb7e8ab9b9e89c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a774a64b7af6f3b4778eb7e8ab9b9e89c">setRandomWeights</a> ()</td></tr>
+<tr class="memdesc:a774a64b7af6f3b4778eb7e8ab9b9e89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает случайные значения весов  <a href="class_network.html#a774a64b7af6f3b4778eb7e8ab9b9e89c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a774a64b7af6f3b4778eb7e8ab9b9e89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2fb9312b2a2c52d2c3e884204f079a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ada2fb9312b2a2c52d2c3e884204f079a">recordWeights</a> (std::string path)</td></tr>
+<tr class="memdesc:ada2fb9312b2a2c52d2c3e884204f079a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает весы сети в файл по предоставленному пути  <a href="class_network.html#ada2fb9312b2a2c52d2c3e884204f079a">Подробнее...</a><br /></td></tr>
 <tr class="separator:ada2fb9312b2a2c52d2c3e884204f079a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69df2e1a112defbe14e22671df797974"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a69df2e1a112defbe14e22671df797974">readWeights</a> (std::string path)</td></tr>
+<tr class="memdesc:a69df2e1a112defbe14e22671df797974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считывает и устанавливает веса из файла по предоставленному пути  <a href="class_network.html#a69df2e1a112defbe14e22671df797974">Подробнее...</a><br /></td></tr>
 <tr class="separator:a69df2e1a112defbe14e22671df797974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a432c1be5ee2b5cd2f177bbf2992a429d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a432c1be5ee2b5cd2f177bbf2992a429d">activate</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> input)</td></tr>
+<tr class="memdesc:a432c1be5ee2b5cd2f177bbf2992a429d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активирует все слои нейронной сети и возвращает prediction.  <a href="class_network.html#a432c1be5ee2b5cd2f177bbf2992a429d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a432c1be5ee2b5cd2f177bbf2992a429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138adbe48af5e5f30d9140d5780d1ca3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a138adbe48af5e5f30d9140d5780d1ca3">train</a> (<a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> input, <a class="el" href="_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe">Matrix</a> answers, int epochs, double learningRate)</td></tr>
 <tr class="separator:a138adbe48af5e5f30d9140d5780d1ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed476c6a4ea5db1bc94564371761d4cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aed476c6a4ea5db1bc94564371761d4cb">printTopology</a> ()</td></tr>
 <tr class="separator:aed476c6a4ea5db1bc94564371761d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Конструктор(ы)</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Главный класс нейронной сети </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a22366a210c0fb05448d1802a0e98452a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22366a210c0fb05448d1802a0e98452a">&#9670;&nbsp;</a></span>Network()</h2>
 
@@ -177,6 +188,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>Активирует все слои нейронной сети и возвращает prediction. </p>
+
 </div>
 </div>
 <a id="ab464c639cd1e3299009a86d8aa18a361"></a>
@@ -194,6 +207,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Добавляет новый слой в нейронную сеть </p>
 
 </div>
 </div>
@@ -230,6 +245,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>Считывает и устанавливает веса из файла по предоставленному пути </p>
+
 </div>
 </div>
 <a id="ada2fb9312b2a2c52d2c3e884204f079a"></a>
@@ -248,6 +265,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>Записывает весы сети в файл по предоставленному пути </p>
+
 </div>
 </div>
 <a id="a774a64b7af6f3b4778eb7e8ab9b9e89c"></a>
@@ -264,6 +283,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Устанавливает случайные значения весов </p>
 
 </div>
 </div>
@@ -282,6 +303,8 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Устанавливает пользовательское значение весов </p>
 
 </div>
 </div>
@@ -322,6 +345,18 @@ $(document).ready(function(){initNavTree('class_network.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Функция обучения нейронной сети</p>
+<p>Каждую эпоху функция выводит значение среднеквадратичной ошибки обучения</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>- датасэт для тренировки </td></tr>
+    <tr><td class="paramname">answers</td><td>- правильные ответы </td></tr>
+    <tr><td class="paramname">epochs</td><td>- количество эпох тренировки </td></tr>
+    <tr><td class="paramname">learningRate</td><td>- коэффициент изменения весов при обучении </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- prediction после обучения </dd></dl>
 
 </div>
 </div>
