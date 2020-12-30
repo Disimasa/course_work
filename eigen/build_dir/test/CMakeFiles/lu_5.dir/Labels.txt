@@ -1,4 +1,0 @@
-# Target labels
- BuildOfficial
-# Source files and their labels
-C:/Eigen/build_dir/source_dir/test/lu.cpp

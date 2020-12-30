@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "choco": "^0.2.1",
-    "global": "^4.4.0",
-    "make": "^0.8.1"
-  }
-}

@@ -1,4 +1,0 @@
-# Target labels
- BuildUnsupported
-# Source files and their labels
-C:/Eigen/build_dir/source_dir/unsupported/test/splines.cpp
