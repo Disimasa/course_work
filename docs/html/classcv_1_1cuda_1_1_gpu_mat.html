@@ -1,0 +1,2288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::cuda::GpuMat</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1cuda_1_1_gpu_mat.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1cuda_1_1_gpu_mat-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::cuda::GpuMat<div class="ingroups"><a class="el" href="group__cuda.html">CUDA-accelerated Computer Vision</a> &raquo; <a class="el" href="group__cudacore.html">Core part</a> &raquo; <a class="el" href="group__cudacore__struct.html">Data Structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base storage class for GPU memory with reference counting.  
+ <a href="classcv_1_1cuda_1_1_gpu_mat.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">Allocator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a69c5e2fd756efdd43ece785f221851db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a69c5e2fd756efdd43ece785f221851db">GpuMat</a> (<a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="memdesc:a69c5e2fd756efdd43ece785f221851db"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a69c5e2fd756efdd43ece785f221851db">Подробнее...</a><br /></td></tr>
+<tr class="separator:a69c5e2fd756efdd43ece785f221851db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f82ddda4f07951564967aacbdb39f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a60f82ddda4f07951564967aacbdb39f1">GpuMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9265a32d8d29fe29804a0cb8f57213e9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="memdesc:a60f82ddda4f07951564967aacbdb39f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of the specified size and type  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a60f82ddda4f07951564967aacbdb39f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60f82ddda4f07951564967aacbdb39f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e594fd3a422027572189af361c3b9d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a0e594fd3a422027572189af361c3b9d6">GpuMat</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="separator:a0e594fd3a422027572189af361c3b9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d80e7ae207dc09a2c16a4a0947a8cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a02d80e7ae207dc09a2c16a4a0947a8cf">GpuMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9265a32d8d29fe29804a0cb8f57213e9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s, <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="memdesc:a02d80e7ae207dc09a2c16a4a0947a8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> and fills it with the specified value _s  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a02d80e7ae207dc09a2c16a4a0947a8cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a02d80e7ae207dc09a2c16a4a0947a8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b019e4dd8f35bdbfb9ecab413c09e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a28b019e4dd8f35bdbfb9ecab413c09e6">GpuMat</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s, <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="separator:a28b019e4dd8f35bdbfb9ecab413c09e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b54bcb7cf68e1e19339d741e0c60a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5b54bcb7cf68e1e19339d741e0c60a5c">GpuMat</a> (const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;m)</td></tr>
+<tr class="memdesc:a5b54bcb7cf68e1e19339d741e0c60a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy constructor  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a5b54bcb7cf68e1e19339d741e0c60a5c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5b54bcb7cf68e1e19339d741e0c60a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7210166f4bd124855b520b3dde28fb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ab7210166f4bd124855b520b3dde28fb1">GpuMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9265a32d8d29fe29804a0cb8f57213e9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5139f9492f9079c7b9e414d50da332a3">data</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a243b06adb6ff47bf56f03ab3fb100006">step</a>=<a class="el" href="classcv_1_1_mat.html#a7e5fa6b05778287ce2d1009a65bcfe9fa1c147538fd896f4f9abce9eaea9727e3">Mat::AUTO_STEP</a>)</td></tr>
+<tr class="memdesc:ab7210166f4bd124855b520b3dde28fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> headers pointing to user-allocated data  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ab7210166f4bd124855b520b3dde28fb1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab7210166f4bd124855b520b3dde28fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658d498dbb3ecff8bacb52934862533d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a658d498dbb3ecff8bacb52934862533d">GpuMat</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5139f9492f9079c7b9e414d50da332a3">data</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a243b06adb6ff47bf56f03ab3fb100006">step</a>=<a class="el" href="classcv_1_1_mat.html#a7e5fa6b05778287ce2d1009a65bcfe9fa1c147538fd896f4f9abce9eaea9727e3">Mat::AUTO_STEP</a>)</td></tr>
+<tr class="separator:a658d498dbb3ecff8bacb52934862533d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d2f5a2da3fc38de2aafb7f8597318c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a64d2f5a2da3fc38de2aafb7f8597318c">GpuMat</a> (const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;m, <a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a894d82f91e9704c392d2f674bdf4b31d">rowRange</a>, <a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1f1b4d0283f72cf31672a6e70475d269">colRange</a>)</td></tr>
+<tr class="memdesc:a64d2f5a2da3fc38de2aafb7f8597318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for a part of the bigger matrix  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a64d2f5a2da3fc38de2aafb7f8597318c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a64d2f5a2da3fc38de2aafb7f8597318c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93685b5bb47339052e4bb59c8502af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aa93685b5bb47339052e4bb59c8502af7">GpuMat</a> (const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;m, <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> roi)</td></tr>
+<tr class="separator:aa93685b5bb47339052e4bb59c8502af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4a5189458a5d4c8636835d6851280c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9b4a5189458a5d4c8636835d6851280c">GpuMat</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab8e13ef59ba6f71bb02934957ba61c65">arr</a>, <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>=<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>())</td></tr>
+<tr class="memdesc:a9b4a5189458a5d4c8636835d6851280c"><td class="mdescLeft">&#160;</td><td class="mdescRight">builds <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> from host memory (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a9b4a5189458a5d4c8636835d6851280c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b4a5189458a5d4c8636835d6851280c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576b5879eff288bdc3364b6123e38457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a576b5879eff288bdc3364b6123e38457">~GpuMat</a> ()</td></tr>
+<tr class="memdesc:a576b5879eff288bdc3364b6123e38457"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor - calls <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a460951a00945774e9da0b1062ea0a319" title="decreases reference counter, deallocate the data when reference counter reaches 0">release()</a>  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a576b5879eff288bdc3364b6123e38457">Подробнее...</a><br /></td></tr>
+<tr class="separator:a576b5879eff288bdc3364b6123e38457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1432eed28a34f995a641a296281e01c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad1432eed28a34f995a641a296281e01c">operator=</a> (const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;m)</td></tr>
+<tr class="memdesc:ad1432eed28a34f995a641a296281e01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">assignment operators  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ad1432eed28a34f995a641a296281e01c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1432eed28a34f995a641a296281e01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d7dca14a3685457d65f8404f4176f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a21d7dca14a3685457d65f8404f4176f4">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9265a32d8d29fe29804a0cb8f57213e9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>)</td></tr>
+<tr class="memdesc:a21d7dca14a3685457d65f8404f4176f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocates new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> data unless the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> already has specified size and type  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a21d7dca14a3685457d65f8404f4176f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21d7dca14a3685457d65f8404f4176f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30fc0d81eeccdde785cfdf54073ba0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#af30fc0d81eeccdde785cfdf54073ba0d">create</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>)</td></tr>
+<tr class="separator:af30fc0d81eeccdde785cfdf54073ba0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460951a00945774e9da0b1062ea0a319"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a460951a00945774e9da0b1062ea0a319">release</a> ()</td></tr>
+<tr class="memdesc:a460951a00945774e9da0b1062ea0a319"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases reference counter, deallocate the data when reference counter reaches 0  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a460951a00945774e9da0b1062ea0a319">Подробнее...</a><br /></td></tr>
+<tr class="separator:a460951a00945774e9da0b1062ea0a319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72f699fbc4025e7af8dcc05f48b0138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad72f699fbc4025e7af8dcc05f48b0138">swap</a> (<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;<a class="el" href="group__imgproc__c.html#gad9325e85114e7b9ab738a23b62ea10a0">mat</a>)</td></tr>
+<tr class="memdesc:ad72f699fbc4025e7af8dcc05f48b0138"><td class="mdescLeft">&#160;</td><td class="mdescRight">swaps with other smart pointer  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ad72f699fbc4025e7af8dcc05f48b0138">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad72f699fbc4025e7af8dcc05f48b0138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4383dd2ec4827f4b565a088f4e7878f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4383dd2ec4827f4b565a088f4e7878f5">upload</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab8e13ef59ba6f71bb02934957ba61c65">arr</a>)</td></tr>
+<tr class="memdesc:a4383dd2ec4827f4b565a088f4e7878f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs data upload to <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a4383dd2ec4827f4b565a088f4e7878f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4383dd2ec4827f4b565a088f4e7878f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4ddbe584ba2ea719f64c44e2027647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7b4ddbe584ba2ea719f64c44e2027647">upload</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab8e13ef59ba6f71bb02934957ba61c65">arr</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a7b4ddbe584ba2ea719f64c44e2027647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs data upload to <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a7b4ddbe584ba2ea719f64c44e2027647">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7b4ddbe584ba2ea719f64c44e2027647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab340ad0c8a4c186ac97d2b5e9d4f75b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ab340ad0c8a4c186ac97d2b5e9d4f75b4">download</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>) const</td></tr>
+<tr class="memdesc:ab340ad0c8a4c186ac97d2b5e9d4f75b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs data download from <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ab340ad0c8a4c186ac97d2b5e9d4f75b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab340ad0c8a4c186ac97d2b5e9d4f75b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c7ce0ab3d6e0bc6461a334f873b579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ab8c7ce0ab3d6e0bc6461a334f873b579">download</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:ab8c7ce0ab3d6e0bc6461a334f873b579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs data download from <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ab8c7ce0ab3d6e0bc6461a334f873b579">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab8c7ce0ab3d6e0bc6461a334f873b579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa074b35a1bab29d683ba9e57aecc5e89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aa074b35a1bab29d683ba9e57aecc5e89">clone</a> () const</td></tr>
+<tr class="memdesc:aa074b35a1bab29d683ba9e57aecc5e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns deep copy of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>, i.e. the data is copied  <a href="classcv_1_1cuda_1_1_gpu_mat.html#aa074b35a1bab29d683ba9e57aecc5e89">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa074b35a1bab29d683ba9e57aecc5e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c54a89f412762d16a794f1a071171d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4c54a89f412762d16a794f1a071171d0">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>) const</td></tr>
+<tr class="memdesc:a4c54a89f412762d16a794f1a071171d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> content to device memory (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a4c54a89f412762d16a794f1a071171d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4c54a89f412762d16a794f1a071171d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ee2de4ed0255b9c43f357b32ebce62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad5ee2de4ed0255b9c43f357b32ebce62">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:ad5ee2de4ed0255b9c43f357b32ebce62"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> content to device memory (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ad5ee2de4ed0255b9c43f357b32ebce62">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5ee2de4ed0255b9c43f357b32ebce62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8655650f084028d958c171f886dc018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ac8655650f084028d958c171f886dc018">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>) const</td></tr>
+<tr class="memdesc:ac8655650f084028d958c171f886dc018"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies those <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to "m" that are marked with non-zero mask elements (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ac8655650f084028d958c171f886dc018">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac8655650f084028d958c171f886dc018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0111fbcc887ce6aca6d0088256490707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a0111fbcc887ce6aca6d0088256490707">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:a0111fbcc887ce6aca6d0088256490707"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies those <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to "m" that are marked with non-zero mask elements (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a0111fbcc887ce6aca6d0088256490707">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0111fbcc887ce6aca6d0088256490707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fc00bbea413ff9e99c29a31bcb9af3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a36fc00bbea413ff9e99c29a31bcb9af3">setTo</a> (<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s)</td></tr>
+<tr class="memdesc:a36fc00bbea413ff9e99c29a31bcb9af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a36fc00bbea413ff9e99c29a31bcb9af3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a36fc00bbea413ff9e99c29a31bcb9af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace94a0b3910dce3107e2f5bbb4f3242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aace94a0b3910dce3107e2f5bbb4f3242">setTo</a> (<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:aace94a0b3910dce3107e2f5bbb4f3242"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#aace94a0b3910dce3107e2f5bbb4f3242">Подробнее...</a><br /></td></tr>
+<tr class="separator:aace94a0b3910dce3107e2f5bbb4f3242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d96420ed9c502c1208e83de3448509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad1d96420ed9c502c1208e83de3448509">setTo</a> (<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>)</td></tr>
+<tr class="memdesc:ad1d96420ed9c502c1208e83de3448509"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s, according to the mask (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ad1d96420ed9c502c1208e83de3448509">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1d96420ed9c502c1208e83de3448509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71baa77d70cc623a8e0171e31b6a4bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ae71baa77d70cc623a8e0171e31b6a4bc">setTo</a> (<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> s, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:ae71baa77d70cc623a8e0171e31b6a4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s, according to the mask (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ae71baa77d70cc623a8e0171e31b6a4bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae71baa77d70cc623a8e0171e31b6a4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09858a1988e21ef0280d43d2662588bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a09858a1988e21ef0280d43d2662588bf">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype) const</td></tr>
+<tr class="memdesc:a09858a1988e21ef0280d43d2662588bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a09858a1988e21ef0280d43d2662588bf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09858a1988e21ef0280d43d2662588bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6447b1f89f69a599cbf4b7e9879c051"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ae6447b1f89f69a599cbf4b7e9879c051">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:ae6447b1f89f69a599cbf4b7e9879c051"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ae6447b1f89f69a599cbf4b7e9879c051">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae6447b1f89f69a599cbf4b7e9879c051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ec1f528c5c785445c87412e7dfa3ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ab6ec1f528c5c785445c87412e7dfa3ac">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>=0.0) const</td></tr>
+<tr class="memdesc:ab6ec1f528c5c785445c87412e7dfa3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ab6ec1f528c5c785445c87412e7dfa3ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6ec1f528c5c785445c87412e7dfa3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43db24f1394ecba3ec36cf7533a93134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a43db24f1394ecba3ec36cf7533a93134">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:a43db24f1394ecba3ec36cf7533a93134"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a43db24f1394ecba3ec36cf7533a93134">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43db24f1394ecba3ec36cf7533a93134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd7ce4f500874baf757a3b3e8c0bbb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5cd7ce4f500874baf757a3b3e8c0bbb3">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>, <a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream) const</td></tr>
+<tr class="memdesc:a5cd7ce4f500874baf757a3b3e8c0bbb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Non-Blocking call)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a5cd7ce4f500874baf757a3b3e8c0bbb3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5cd7ce4f500874baf757a3b3e8c0bbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006ee6f8248da685233350ab1f232787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a006ee6f8248da685233350ab1f232787">assignTo</a> (<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;m, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a>=-1) const</td></tr>
+<tr class="separator:a006ee6f8248da685233350ab1f232787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83fa0825c60eb22a11a87a98c3cd5ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aa83fa0825c60eb22a11a87a98c3cd5ed">ptr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>=0)</td></tr>
+<tr class="memdesc:aa83fa0825c60eb22a11a87a98c3cd5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns pointer to y-th row  <a href="classcv_1_1cuda_1_1_gpu_mat.html#aa83fa0825c60eb22a11a87a98c3cd5ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa83fa0825c60eb22a11a87a98c3cd5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95918b9342332a41a584b21134b0959"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad95918b9342332a41a584b21134b0959">ptr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>=0) const</td></tr>
+<tr class="separator:ad95918b9342332a41a584b21134b0959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0389962003eec644007c7ca85a04f6d"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:af0389962003eec644007c7ca85a04f6d"><td class="memTemplItemLeft" align="right" valign="top">_Tp *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#af0389962003eec644007c7ca85a04f6d">ptr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>=0)</td></tr>
+<tr class="memdesc:af0389962003eec644007c7ca85a04f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">template version of the above method  <a href="classcv_1_1cuda_1_1_gpu_mat.html#af0389962003eec644007c7ca85a04f6d">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0389962003eec644007c7ca85a04f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7003ff9fa0a24c5e4986174c29820f"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a2d7003ff9fa0a24c5e4986174c29820f"><td class="memTemplItemLeft" align="right" valign="top">const _Tp *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a2d7003ff9fa0a24c5e4986174c29820f">ptr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>=0) const</td></tr>
+<tr class="separator:a2d7003ff9fa0a24c5e4986174c29820f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939f8ef4be2fc9a51058c2404d491f74"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a939f8ef4be2fc9a51058c2404d491f74"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a939f8ef4be2fc9a51058c2404d491f74">operator PtrStepSz&lt; _Tp &gt;</a> () const</td></tr>
+<tr class="separator:a939f8ef4be2fc9a51058c2404d491f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0aa2f9bdf8b40f43be8d8068f2e389"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a8b0aa2f9bdf8b40f43be8d8068f2e389"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a8b0aa2f9bdf8b40f43be8d8068f2e389">operator PtrStep&lt; _Tp &gt;</a> () const</td></tr>
+<tr class="separator:a8b0aa2f9bdf8b40f43be8d8068f2e389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ce5a88374de156e80cd75a76237380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a35ce5a88374de156e80cd75a76237380">row</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>) const</td></tr>
+<tr class="memdesc:a35ce5a88374de156e80cd75a76237380"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for the specified row  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a35ce5a88374de156e80cd75a76237380">Подробнее...</a><br /></td></tr>
+<tr class="separator:a35ce5a88374de156e80cd75a76237380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f0b55085c53c009e0e322a7bcf574a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a98f0b55085c53c009e0e322a7bcf574a">col</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) const</td></tr>
+<tr class="memdesc:a98f0b55085c53c009e0e322a7bcf574a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for the specified column  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a98f0b55085c53c009e0e322a7bcf574a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a98f0b55085c53c009e0e322a7bcf574a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894d82f91e9704c392d2f674bdf4b31d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a894d82f91e9704c392d2f674bdf4b31d">rowRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> startrow, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> endrow) const</td></tr>
+<tr class="memdesc:a894d82f91e9704c392d2f674bdf4b31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">... for the specified row span  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a894d82f91e9704c392d2f674bdf4b31d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a894d82f91e9704c392d2f674bdf4b31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58dbea805c123a16f05a2358419a42da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a58dbea805c123a16f05a2358419a42da">rowRange</a> (<a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>) const</td></tr>
+<tr class="separator:a58dbea805c123a16f05a2358419a42da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1b4d0283f72cf31672a6e70475d269"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1f1b4d0283f72cf31672a6e70475d269">colRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> startcol, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> endcol) const</td></tr>
+<tr class="memdesc:a1f1b4d0283f72cf31672a6e70475d269"><td class="mdescLeft">&#160;</td><td class="mdescRight">... for the specified column span  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a1f1b4d0283f72cf31672a6e70475d269">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f1b4d0283f72cf31672a6e70475d269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f51d9dda0f4f5dc5bb0a937c2392e93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a6f51d9dda0f4f5dc5bb0a937c2392e93">colRange</a> (<a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>) const</td></tr>
+<tr class="separator:a6f51d9dda0f4f5dc5bb0a937c2392e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3c25e36b0f82ca8f9f74b6ae68c41d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a2b3c25e36b0f82ca8f9f74b6ae68c41d">operator()</a> (<a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a894d82f91e9704c392d2f674bdf4b31d">rowRange</a>, <a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1f1b4d0283f72cf31672a6e70475d269">colRange</a>) const</td></tr>
+<tr class="memdesc:a2b3c25e36b0f82ca8f9f74b6ae68c41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">extracts a rectangular sub-GpuMat (this is a generalized form of row, rowRange etc.)  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a2b3c25e36b0f82ca8f9f74b6ae68c41d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2b3c25e36b0f82ca8f9f74b6ae68c41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217e27e7051bed168c34ba767915cc63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a217e27e7051bed168c34ba767915cc63">operator()</a> (<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> roi) const</td></tr>
+<tr class="separator:a217e27e7051bed168c34ba767915cc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd90cd8c58b6f1a16816687306082d2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#afd90cd8c58b6f1a16816687306082d2f">reshape</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cn, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a>=0) const</td></tr>
+<tr class="separator:afd90cd8c58b6f1a16816687306082d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8f91725c7a0d70a235004af6929ed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9e8f91725c7a0d70a235004af6929ed0">locateROI</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;wholeSize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &amp;ofs) const</td></tr>
+<tr class="memdesc:a9e8f91725c7a0d70a235004af6929ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">locates <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header within a parent <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a9e8f91725c7a0d70a235004af6929ed0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e8f91725c7a0d70a235004af6929ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e22ee277f0c8db191a9e3ba2561ab18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a0e22ee277f0c8db191a9e3ba2561ab18">adjustROI</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dtop, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dbottom, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dleft, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dright)</td></tr>
+<tr class="memdesc:a0e22ee277f0c8db191a9e3ba2561ab18"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves/resizes the current <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> ROI inside the parent <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a0e22ee277f0c8db191a9e3ba2561ab18">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e22ee277f0c8db191a9e3ba2561ab18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efa3cef8b5f8dac88233c581bee3dce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a6efa3cef8b5f8dac88233c581bee3dce">isContinuous</a> () const</td></tr>
+<tr class="separator:a6efa3cef8b5f8dac88233c581bee3dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781a2e6efb76e5c86d1c86103fe84ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a781a2e6efb76e5c86d1c86103fe84ab7">elemSize</a> () const</td></tr>
+<tr class="memdesc:a781a2e6efb76e5c86d1c86103fe84ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element size in bytes  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a781a2e6efb76e5c86d1c86103fe84ab7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a781a2e6efb76e5c86d1c86103fe84ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bfe4147b35e2d6907e306b81b2f615d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a3bfe4147b35e2d6907e306b81b2f615d">elemSize1</a> () const</td></tr>
+<tr class="memdesc:a3bfe4147b35e2d6907e306b81b2f615d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the size of element channel in bytes  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a3bfe4147b35e2d6907e306b81b2f615d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3bfe4147b35e2d6907e306b81b2f615d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4e67001da534851843e4b4da099a90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">type</a> () const</td></tr>
+<tr class="memdesc:aee4e67001da534851843e4b4da099a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element type  <a href="classcv_1_1cuda_1_1_gpu_mat.html#aee4e67001da534851843e4b4da099a90">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee4e67001da534851843e4b4da099a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a44ca80e44bfc4b0f1739282101f535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a2a44ca80e44bfc4b0f1739282101f535">depth</a> () const</td></tr>
+<tr class="memdesc:a2a44ca80e44bfc4b0f1739282101f535"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element type  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a2a44ca80e44bfc4b0f1739282101f535">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a44ca80e44bfc4b0f1739282101f535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687642c5db949c7dbfee2f3ba99584c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a687642c5db949c7dbfee2f3ba99584c3">channels</a> () const</td></tr>
+<tr class="memdesc:a687642c5db949c7dbfee2f3ba99584c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns number of channels  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a687642c5db949c7dbfee2f3ba99584c3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a687642c5db949c7dbfee2f3ba99584c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3b2447e1902194ef7a8bc8478b0761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#aad3b2447e1902194ef7a8bc8478b0761">step1</a> () const</td></tr>
+<tr class="memdesc:aad3b2447e1902194ef7a8bc8478b0761"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns step/elemSize1()  <a href="classcv_1_1cuda_1_1_gpu_mat.html#aad3b2447e1902194ef7a8bc8478b0761">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad3b2447e1902194ef7a8bc8478b0761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5236af176f9a104fc630d0e26bdd9917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">size</a> () const</td></tr>
+<tr class="memdesc:a5236af176f9a104fc630d0e26bdd9917"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> size : width == number of columns, height == number of rows  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a5236af176f9a104fc630d0e26bdd9917">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5236af176f9a104fc630d0e26bdd9917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9d42c9b86f5c852ab22f2489f5685b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a6d9d42c9b86f5c852ab22f2489f5685b">empty</a> () const</td></tr>
+<tr class="memdesc:a6d9d42c9b86f5c852ab22f2489f5685b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> data is NULL  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a6d9d42c9b86f5c852ab22f2489f5685b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d9d42c9b86f5c852ab22f2489f5685b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a4bf6a154d7115fb3cf03fb8b4561b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a39a4bf6a154d7115fb3cf03fb8b4561b">cudaPtr</a> () const</td></tr>
+<tr class="separator:a39a4bf6a154d7115fb3cf03fb8b4561b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6830f2726db60c3c7aa283266c5bcde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ae6830f2726db60c3c7aa283266c5bcde">updateContinuityFlag</a> ()</td></tr>
+<tr class="memdesc:ae6830f2726db60c3c7aa283266c5bcde"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal use method: updates the continuity flag  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ae6830f2726db60c3c7aa283266c5bcde">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae6830f2726db60c3c7aa283266c5bcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a4dd0ddac2e6bb93035623db4d55b9474"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">defaultAllocator</a> ()</td></tr>
+<tr class="memdesc:a4dd0ddac2e6bb93035623db4d55b9474"><td class="mdescLeft">&#160;</td><td class="mdescRight">default allocator  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4dd0ddac2e6bb93035623db4d55b9474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addabf51659cf1737304bdd497c07cd51"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#addabf51659cf1737304bdd497c07cd51">setDefaultAllocator</a> (<a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *<a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a>)</td></tr>
+<tr class="separator:addabf51659cf1737304bdd497c07cd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:adfd242b365e79ebc382a0829d8e9f44f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#adfd242b365e79ebc382a0829d8e9f44f">flags</a></td></tr>
+<tr class="separator:adfd242b365e79ebc382a0829d8e9f44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7385022ca9114e5f5058dbb2f12467cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">rows</a></td></tr>
+<tr class="memdesc:a7385022ca9114e5f5058dbb2f12467cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of rows and columns  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a7385022ca9114e5f5058dbb2f12467cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7385022ca9114e5f5058dbb2f12467cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9265a32d8d29fe29804a0cb8f57213e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a9265a32d8d29fe29804a0cb8f57213e9">cols</a></td></tr>
+<tr class="separator:a9265a32d8d29fe29804a0cb8f57213e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243b06adb6ff47bf56f03ab3fb100006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga6fefb17d69c36b334374f612e3795a64">CV_PROP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a243b06adb6ff47bf56f03ab3fb100006">step</a></td></tr>
+<tr class="memdesc:a243b06adb6ff47bf56f03ab3fb100006"><td class="mdescLeft">&#160;</td><td class="mdescRight">a distance between successive rows in bytes; includes the gap if any  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a243b06adb6ff47bf56f03ab3fb100006">Подробнее...</a><br /></td></tr>
+<tr class="separator:a243b06adb6ff47bf56f03ab3fb100006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5139f9492f9079c7b9e414d50da332a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a5139f9492f9079c7b9e414d50da332a3">data</a></td></tr>
+<tr class="memdesc:a5139f9492f9079c7b9e414d50da332a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the data  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a5139f9492f9079c7b9e414d50da332a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5139f9492f9079c7b9e414d50da332a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af528e8b675a72fd79ff1f399b7dd42df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#af528e8b675a72fd79ff1f399b7dd42df">refcount</a></td></tr>
+<tr class="separator:af528e8b675a72fd79ff1f399b7dd42df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4a4dfc61facd5f18143b4c9d56dbae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ade4a4dfc61facd5f18143b4c9d56dbae">datastart</a></td></tr>
+<tr class="memdesc:ade4a4dfc61facd5f18143b4c9d56dbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper fields used in locateROI and adjustROI  <a href="classcv_1_1cuda_1_1_gpu_mat.html#ade4a4dfc61facd5f18143b4c9d56dbae">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade4a4dfc61facd5f18143b4c9d56dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76c4f58490134f1acf3e580e669c58b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#ad76c4f58490134f1acf3e580e669c58b">dataend</a></td></tr>
+<tr class="separator:ad76c4f58490134f1acf3e580e669c58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc1f7a23c89d2a36f0efc7db1b0d5a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">allocator</a></td></tr>
+<tr class="memdesc:a1dc1f7a23c89d2a36f0efc7db1b0d5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocator  <a href="classcv_1_1cuda_1_1_gpu_mat.html#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1dc1f7a23c89d2a36f0efc7db1b0d5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Base storage class for GPU memory with reference counting. </p>
+<p>Its interface matches the <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> interface with the following limitations:</p>
+<ul>
+<li>no arbitrary dimensions support (only 2D)</li>
+<li>no functions that return references to their data (because references on GPU are not valid for CPU)</li>
+<li>no expression templates technique support</li>
+</ul>
+<p>Beware that the latter limitation may lead to overloaded matrix operators that cause memory allocations. The <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> class is convertible to cuda::PtrStepSz and cuda::PtrStep so it can be passed directly to the kernel.</p>
+<dl class="section note"><dt>Заметки</dt><dd>In contrast with <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>, in most cases <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a6efa3cef8b5f8dac88233c581bee3dce">GpuMat::isContinuous()</a> == false . This means that rows are aligned to a size depending on the hardware. Single-row <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> is always a continuous matrix.</dd>
+<dd>
+You are not recommended to leave static or global <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> variables allocated, that is, to rely on its destructor. The destruction order of such variables and CUDA context is undefined. GPU memory release function returns error if the CUDA context has been destroyed before.</dd></dl>
+<p>Some member functions are described as a "Blocking Call" while some are described as a "Non-Blocking Call". Blocking functions are synchronous to host. It is guaranteed that the GPU operation is finished when the function returns. However, non-blocking functions are asynchronous to host. Those functions may return even if the GPU operation is not finished.</p>
+<p>Compared to their blocking counterpart, non-blocking functions accept <a class="el" href="classcv_1_1cuda_1_1_stream.html" title="This class encapsulates a queue of asynchronous calls.">Stream</a> as an additional argument. If a non-default stream is passed, the GPU operation may overlap with operations in other streams.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a69c5e2fd756efdd43ece785f221851db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c5e2fd756efdd43ece785f221851db">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>default constructor </p>
+
+</div>
+</div>
+<a id="a60f82ddda4f07951564967aacbdb39f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f82ddda4f07951564967aacbdb39f1">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructs <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of the specified size and type </p>
+
+</div>
+</div>
+<a id="a0e594fd3a422027572189af361c3b9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e594fd3a422027572189af361c3b9d6">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02d80e7ae207dc09a2c16a4a0947a8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d80e7ae207dc09a2c16a4a0947a8cf">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructs <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> and fills it with the specified value _s </p>
+
+</div>
+</div>
+<a id="a28b019e4dd8f35bdbfb9ecab413c09e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b019e4dd8f35bdbfb9ecab413c09e6">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b54bcb7cf68e1e19339d741e0c60a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b54bcb7cf68e1e19339d741e0c60a5c">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copy constructor </p>
+
+</div>
+</div>
+<a id="ab7210166f4bd124855b520b3dde28fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7210166f4bd124855b520b3dde28fb1">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>step</em> = <code><a class="el" href="classcv_1_1_mat.html#a7e5fa6b05778287ce2d1009a65bcfe9fa1c147538fd896f4f9abce9eaea9727e3">Mat::AUTO_STEP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor for <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> headers pointing to user-allocated data </p>
+
+</div>
+</div>
+<a id="a658d498dbb3ecff8bacb52934862533d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658d498dbb3ecff8bacb52934862533d">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>step</em> = <code><a class="el" href="classcv_1_1_mat.html#a7e5fa6b05778287ce2d1009a65bcfe9fa1c147538fd896f4f9abce9eaea9727e3">Mat::AUTO_STEP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64d2f5a2da3fc38de2aafb7f8597318c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d2f5a2da3fc38de2aafb7f8597318c">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>rowRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>colRange</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates a <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for a part of the bigger matrix </p>
+
+</div>
+</div>
+<a id="aa93685b5bb47339052e4bb59c8502af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93685b5bb47339052e4bb59c8502af7">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td>
+          <td class="paramname"><em>roi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b4a5189458a5d4c8636835d6851280c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4a5189458a5d4c8636835d6851280c">&#9670;&nbsp;</a></span>GpuMat() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::cuda::GpuMat::GpuMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a4dd0ddac2e6bb93035623db4d55b9474">GpuMat::defaultAllocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>builds <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> from host memory (Blocking call) </p>
+
+</div>
+</div>
+<a id="a576b5879eff288bdc3364b6123e38457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576b5879eff288bdc3364b6123e38457">&#9670;&nbsp;</a></span>~GpuMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::GpuMat::~GpuMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>destructor - calls <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html#a460951a00945774e9da0b1062ea0a319" title="decreases reference counter, deallocate the data when reference counter reaches 0">release()</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0e22ee277f0c8db191a9e3ba2561ab18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e22ee277f0c8db191a9e3ba2561ab18">&#9670;&nbsp;</a></span>adjustROI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::adjustROI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dtop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dbottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dleft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dright</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moves/resizes the current <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> ROI inside the parent <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> </p>
+
+</div>
+</div>
+<a id="a006ee6f8248da685233350ab1f232787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006ee6f8248da685233350ab1f232787">&#9670;&nbsp;</a></span>assignTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::assignTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a687642c5db949c7dbfee2f3ba99584c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687642c5db949c7dbfee2f3ba99584c3">&#9670;&nbsp;</a></span>channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::channels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns number of channels </p>
+
+</div>
+</div>
+<a id="aa074b35a1bab29d683ba9e57aecc5e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa074b35a1bab29d683ba9e57aecc5e89">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns deep copy of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>, i.e. the data is copied </p>
+
+</div>
+</div>
+<a id="a98f0b55085c53c009e0e322a7bcf574a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f0b55085c53c009e0e322a7bcf574a">&#9670;&nbsp;</a></span>col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::col </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for the specified column </p>
+
+</div>
+</div>
+<a id="a1f1b4d0283f72cf31672a6e70475d269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1b4d0283f72cf31672a6e70475d269">&#9670;&nbsp;</a></span>colRange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::colRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>startcol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>endcol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... for the specified column span </p>
+
+</div>
+</div>
+<a id="a6f51d9dda0f4f5dc5bb0a937c2392e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f51d9dda0f4f5dc5bb0a937c2392e93">&#9670;&nbsp;</a></span>colRange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::colRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09858a1988e21ef0280d43d2662588bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09858a1988e21ef0280d43d2662588bf">&#9670;&nbsp;</a></span>convertTo() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype (Blocking call) </p>
+
+</div>
+</div>
+<a id="a5cd7ce4f500874baf757a3b3e8c0bbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd7ce4f500874baf757a3b3e8c0bbb3">&#9670;&nbsp;</a></span>convertTo() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="ab6ec1f528c5c785445c87412e7dfa3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ec1f528c5c785445c87412e7dfa3ac">&#9670;&nbsp;</a></span>convertTo() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Blocking call) </p>
+
+</div>
+</div>
+<a id="a43db24f1394ecba3ec36cf7533a93134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43db24f1394ecba3ec36cf7533a93134">&#9670;&nbsp;</a></span>convertTo() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype with scaling (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="ae6447b1f89f69a599cbf4b7e9879c051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6447b1f89f69a599cbf4b7e9879c051">&#9670;&nbsp;</a></span>convertTo() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> to another datatype (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="a4c54a89f412762d16a794f1a071171d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c54a89f412762d16a794f1a071171d0">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> content to device memory (Blocking call) </p>
+
+</div>
+</div>
+<a id="ac8655650f084028d958c171f886dc018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8655650f084028d958c171f886dc018">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies those <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to "m" that are marked with non-zero mask elements (Blocking call) </p>
+
+</div>
+</div>
+<a id="a0111fbcc887ce6aca6d0088256490707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0111fbcc887ce6aca6d0088256490707">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies those <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to "m" that are marked with non-zero mask elements (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="ad5ee2de4ed0255b9c43f357b32ebce62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ee2de4ed0255b9c43f357b32ebce62">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> content to device memory (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="a21d7dca14a3685457d65f8404f4176f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d7dca14a3685457d65f8404f4176f4">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allocates new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> data unless the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> already has specified size and type </p>
+
+</div>
+</div>
+<a id="af30fc0d81eeccdde785cfdf54073ba0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30fc0d81eeccdde785cfdf54073ba0d">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39a4bf6a154d7115fb3cf03fb8b4561b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a4bf6a154d7115fb3cf03fb8b4561b">&#9670;&nbsp;</a></span>cudaPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* cv::cuda::GpuMat::cudaPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dd0ddac2e6bb93035623db4d55b9474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd0ddac2e6bb93035623db4d55b9474">&#9670;&nbsp;</a></span>defaultAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a>* cv::cuda::GpuMat::defaultAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>default allocator </p>
+
+</div>
+</div>
+<a id="a2a44ca80e44bfc4b0f1739282101f535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a44ca80e44bfc4b0f1739282101f535">&#9670;&nbsp;</a></span>depth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::depth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element type </p>
+
+</div>
+</div>
+<a id="ab340ad0c8a4c186ac97d2b5e9d4f75b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab340ad0c8a4c186ac97d2b5e9d4f75b4">&#9670;&nbsp;</a></span>download() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::download </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs data download from <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Blocking call) </p>
+<p>This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. </p>
+
+</div>
+</div>
+<a id="ab8c7ce0ab3d6e0bc6461a334f873b579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c7ce0ab3d6e0bc6461a334f873b579">&#9670;&nbsp;</a></span>download() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::download </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs data download from <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Non-Blocking call) </p>
+<p>This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished.</p>
+<p>The copy operation may be overlapped with operations in other non-default streams if <code>stream</code> is not the default stream and <code>dst</code> is <a class="el" href="classcv_1_1cuda_1_1_host_mem.html" title="Class with reference counting wrapping special memory type allocation functions from CUDA.">HostMem</a> allocated with <a class="el" href="classcv_1_1cuda_1_1_host_mem.html#aa0d69b2aa95680a6b2af6dc4dda44e16a968d788513648797c888aa13e056d6a4">HostMem::PAGE_LOCKED</a> option. </p>
+
+</div>
+</div>
+<a id="a781a2e6efb76e5c86d1c86103fe84ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781a2e6efb76e5c86d1c86103fe84ab7">&#9670;&nbsp;</a></span>elemSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::cuda::GpuMat::elemSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element size in bytes </p>
+
+</div>
+</div>
+<a id="a3bfe4147b35e2d6907e306b81b2f615d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfe4147b35e2d6907e306b81b2f615d">&#9670;&nbsp;</a></span>elemSize1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::cuda::GpuMat::elemSize1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the size of element channel in bytes </p>
+
+</div>
+</div>
+<a id="a6d9d42c9b86f5c852ab22f2489f5685b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9d42c9b86f5c852ab22f2489f5685b">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::GpuMat::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true if <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> data is NULL </p>
+
+</div>
+</div>
+<a id="a6efa3cef8b5f8dac88233c581bee3dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efa3cef8b5f8dac88233c581bee3dce">&#9670;&nbsp;</a></span>isContinuous()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::GpuMat::isContinuous </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns true iff the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> data is continuous (i.e. when there are no gaps between successive rows) </p>
+
+</div>
+</div>
+<a id="a9e8f91725c7a0d70a235004af6929ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8f91725c7a0d70a235004af6929ed0">&#9670;&nbsp;</a></span>locateROI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::locateROI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>wholeSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>ofs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>locates <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header within a parent <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> </p>
+
+</div>
+</div>
+<a id="a8b0aa2f9bdf8b40f43be8d8068f2e389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0aa2f9bdf8b40f43be8d8068f2e389">&#9670;&nbsp;</a></span>operator PtrStep&lt; _Tp &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::GpuMat::operator PtrStep&lt; _Tp &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a939f8ef4be2fc9a51058c2404d491f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939f8ef4be2fc9a51058c2404d491f74">&#9670;&nbsp;</a></span>operator PtrStepSz&lt; _Tp &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::GpuMat::operator PtrStepSz&lt; _Tp &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b3c25e36b0f82ca8f9f74b6ae68c41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3c25e36b0f82ca8f9f74b6ae68c41d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>rowRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>colRange</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extracts a rectangular sub-GpuMat (this is a generalized form of row, rowRange etc.) </p>
+
+</div>
+</div>
+<a id="a217e27e7051bed168c34ba767915cc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217e27e7051bed168c34ba767915cc63">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td>
+          <td class="paramname"><em>roi</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1432eed28a34f995a641a296281e01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1432eed28a34f995a641a296281e01c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>assignment operators </p>
+
+</div>
+</div>
+<a id="aa83fa0825c60eb22a11a87a98c3cd5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83fa0825c60eb22a11a87a98c3cd5ed">&#9670;&nbsp;</a></span>ptr() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* cv::cuda::GpuMat::ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns pointer to y-th row </p>
+
+</div>
+</div>
+<a id="af0389962003eec644007c7ca85a04f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0389962003eec644007c7ca85a04f6d">&#9670;&nbsp;</a></span>ptr() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp* cv::cuda::GpuMat::ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>template version of the above method </p>
+
+</div>
+</div>
+<a id="ad95918b9342332a41a584b21134b0959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95918b9342332a41a584b21134b0959">&#9670;&nbsp;</a></span>ptr() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* cv::cuda::GpuMat::ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d7003ff9fa0a24c5e4986174c29820f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7003ff9fa0a24c5e4986174c29820f">&#9670;&nbsp;</a></span>ptr() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const _Tp* cv::cuda::GpuMat::ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a460951a00945774e9da0b1062ea0a319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460951a00945774e9da0b1062ea0a319">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>decreases reference counter, deallocate the data when reference counter reaches 0 </p>
+
+</div>
+</div>
+<a id="afd90cd8c58b6f1a16816687306082d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd90cd8c58b6f1a16816687306082d2f">&#9670;&nbsp;</a></span>reshape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::reshape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>creates alternative <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for the same data, with different number of channels and/or different number of rows </p>
+
+</div>
+</div>
+<a id="a35ce5a88374de156e80cd75a76237380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ce5a88374de156e80cd75a76237380">&#9670;&nbsp;</a></span>row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> header for the specified row </p>
+
+</div>
+</div>
+<a id="a894d82f91e9704c392d2f674bdf4b31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894d82f91e9704c392d2f674bdf4b31d">&#9670;&nbsp;</a></span>rowRange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::rowRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>startrow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>endrow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... for the specified row span </p>
+
+</div>
+</div>
+<a id="a58dbea805c123a16f05a2358419a42da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58dbea805c123a16f05a2358419a42da">&#9670;&nbsp;</a></span>rowRange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::GpuMat::rowRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addabf51659cf1737304bdd497c07cd51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addabf51659cf1737304bdd497c07cd51">&#9670;&nbsp;</a></span>setDefaultAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::setDefaultAllocator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36fc00bbea413ff9e99c29a31bcb9af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36fc00bbea413ff9e99c29a31bcb9af3">&#9670;&nbsp;</a></span>setTo() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::setTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s (Blocking call) </p>
+
+</div>
+</div>
+<a id="ad1d96420ed9c502c1208e83de3448509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d96420ed9c502c1208e83de3448509">&#9670;&nbsp;</a></span>setTo() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::setTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s, according to the mask (Blocking call) </p>
+
+</div>
+</div>
+<a id="ae71baa77d70cc623a8e0171e31b6a4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71baa77d70cc623a8e0171e31b6a4bc">&#9670;&nbsp;</a></span>setTo() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::setTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s, according to the mask (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="aace94a0b3910dce3107e2f5bbb4f3242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace94a0b3910dce3107e2f5bbb4f3242">&#9670;&nbsp;</a></span>setTo() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&amp; cv::cuda::GpuMat::setTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets some of the <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> elements to s (Non-Blocking call) </p>
+
+</div>
+</div>
+<a id="a5236af176f9a104fc630d0e26bdd9917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5236af176f9a104fc630d0e26bdd9917">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::cuda::GpuMat::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> size : width == number of columns, height == number of rows </p>
+
+</div>
+</div>
+<a id="aad3b2447e1902194ef7a8bc8478b0761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3b2447e1902194ef7a8bc8478b0761">&#9670;&nbsp;</a></span>step1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::cuda::GpuMat::step1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns step/elemSize1() </p>
+
+</div>
+</div>
+<a id="ad72f699fbc4025e7af8dcc05f48b0138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72f699fbc4025e7af8dcc05f48b0138">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>swaps with other smart pointer </p>
+
+</div>
+</div>
+<a id="aee4e67001da534851843e4b4da099a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4e67001da534851843e4b4da099a90">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element type </p>
+
+</div>
+</div>
+<a id="ae6830f2726db60c3c7aa283266c5bcde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6830f2726db60c3c7aa283266c5bcde">&#9670;&nbsp;</a></span>updateContinuityFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::updateContinuityFlag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>internal use method: updates the continuity flag </p>
+
+</div>
+</div>
+<a id="a4383dd2ec4827f4b565a088f4e7878f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4383dd2ec4827f4b565a088f4e7878f5">&#9670;&nbsp;</a></span>upload() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::upload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs data upload to <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Blocking call) </p>
+<p>This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. </p>
+
+</div>
+</div>
+<a id="a7b4ddbe584ba2ea719f64c44e2027647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4ddbe584ba2ea719f64c44e2027647">&#9670;&nbsp;</a></span>upload() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cuda::GpuMat::upload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs data upload to <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> (Non-Blocking call) </p>
+<p>This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished.</p>
+<p>The copy operation may be overlapped with operations in other non-default streams if <code>stream</code> is not the default stream and <code>dst</code> is <a class="el" href="classcv_1_1cuda_1_1_host_mem.html" title="Class with reference counting wrapping special memory type allocation functions from CUDA.">HostMem</a> allocated with <a class="el" href="classcv_1_1cuda_1_1_host_mem.html#aa0d69b2aa95680a6b2af6dc4dda44e16a968d788513648797c888aa13e056d6a4">HostMem::PAGE_LOCKED</a> option. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a1dc1f7a23c89d2a36f0efc7db1b0d5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc1f7a23c89d2a36f0efc7db1b0d5a4">&#9670;&nbsp;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">Allocator</a>* cv::cuda::GpuMat::allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allocator </p>
+
+</div>
+</div>
+<a id="a9265a32d8d29fe29804a0cb8f57213e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9265a32d8d29fe29804a0cb8f57213e9">&#9670;&nbsp;</a></span>cols</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::cols</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5139f9492f9079c7b9e414d50da332a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5139f9492f9079c7b9e414d50da332a3">&#9670;&nbsp;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* cv::cuda::GpuMat::data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pointer to the data </p>
+
+</div>
+</div>
+<a id="ad76c4f58490134f1acf3e580e669c58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76c4f58490134f1acf3e580e669c58b">&#9670;&nbsp;</a></span>dataend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* cv::cuda::GpuMat::dataend</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade4a4dfc61facd5f18143b4c9d56dbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4a4dfc61facd5f18143b4c9d56dbae">&#9670;&nbsp;</a></span>datastart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* cv::cuda::GpuMat::datastart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>helper fields used in locateROI and adjustROI </p>
+
+</div>
+</div>
+<a id="adfd242b365e79ebc382a0829d8e9f44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd242b365e79ebc382a0829d8e9f44f">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>includes several bit-fields:</p><ul>
+<li>the magic signature</li>
+<li>continuity flag</li>
+<li>depth</li>
+<li>number of channels </li>
+</ul>
+
+</div>
+</div>
+<a id="af528e8b675a72fd79ff1f399b7dd42df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af528e8b675a72fd79ff1f399b7dd42df">&#9670;&nbsp;</a></span>refcount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>* cv::cuda::GpuMat::refcount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pointer to the reference counter; when <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> points to user-allocated data, the pointer is NULL </p>
+
+</div>
+</div>
+<a id="a7385022ca9114e5f5058dbb2f12467cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7385022ca9114e5f5058dbb2f12467cb">&#9670;&nbsp;</a></span>rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::cuda::GpuMat::rows</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the number of rows and columns </p>
+
+</div>
+</div>
+<a id="a243b06adb6ff47bf56f03ab3fb100006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243b06adb6ff47bf56f03ab3fb100006">&#9670;&nbsp;</a></span>step</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga6fefb17d69c36b334374f612e3795a64">CV_PROP</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::cuda::GpuMat::step</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a distance between successive rows in bytes; includes the gap if any </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1cuda.html">cuda</a></li><li class="navelem"><a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

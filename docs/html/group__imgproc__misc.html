@@ -1,0 +1,1284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Imgproc_misc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgproc__misc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Imgproc_misc<div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gaa2bfbebbc5c320526897996aafa1d8eb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaa2bfbebbc5c320526897996aafa1d8eb">cv::DistanceTypes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaa0bb8d897ba16dbf5a3ca96c71219a32">cv::DIST_USER</a> = -1
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86">cv::DIST_L1</a> = 1
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96">cv::DIST_L2</a> = 2
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8eba507b16eb5ef95ea784ca1b3cb7b0d7ee">cv::DIST_C</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8eba8f3c18d37e99f7cc58d3605f5c6f9ce9">cv::DIST_L12</a> = 4
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaea158f5abd2b5e2b4e79b79f55297079">cv::DIST_FAIR</a> = 5
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaba5e4b3600852b7a59e78e3041be840e">cv::DIST_WELSCH</a> = 6
+, <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebad701f5622a12450d3b8c85c052e7c520">cv::DIST_HUBER</a> = 7
+<br />
+ }</td></tr>
+<tr class="separator:gaa2bfbebbc5c320526897996aafa1d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa68392323ccf7fad87570e41259b497"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaaa68392323ccf7fad87570e41259b497">cv::DistanceTransformMasks</a> { <a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a520d4f90e1e37d13d7592fd295a6b5b2">cv::DIST_MASK_3</a> = 3
+, <a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a8a8b17ed6012f6ce42e56f302c07d481">cv::DIST_MASK_5</a> = 5
+, <a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a71e13e06c1d12eabd2acd2669f94f9ca">cv::DIST_MASK_PRECISE</a> = 0
+ }</td></tr>
+<tr class="memdesc:gaaa68392323ccf7fad87570e41259b497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask size for distance transform.  <a href="group__imgproc__misc.html#gaaa68392323ccf7fad87570e41259b497">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaa68392323ccf7fad87570e41259b497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9e58d2860d4afa658ef70a9b1115576"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576">cv::ThresholdTypes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a147222a96556ebc1d948b372bcd7ac59">cv::THRESH_BINARY</a> = 0
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754">cv::THRESH_BINARY_INV</a> = 1
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576ac7e89a5e95490116e7d2082b3096b2b8">cv::THRESH_TRUNC</a> = 2
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a0e50a338a4b711a8c48f06a6b105dd98">cv::THRESH_TOZERO</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a47518a30aae90d799035bdcf0bb39a50">cv::THRESH_TOZERO_INV</a> = 4
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a8e723ef461a5349c391032aee325fe15">cv::THRESH_MASK</a> = 7
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff">cv::THRESH_OTSU</a> = 8
+, <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a22ffcf680811aed95be6c7f5cd809621">cv::THRESH_TRIANGLE</a> = 16
+<br />
+ }</td></tr>
+<tr class="separator:gaa9e58d2860d4afa658ef70a9b1115576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa42a3e6ef26247da787bf34030ed772c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaa42a3e6ef26247da787bf34030ed772c">cv::AdaptiveThresholdTypes</a> { <a class="el" href="group__imgproc__misc.html#ggaa42a3e6ef26247da787bf34030ed772cad0c5199ae8637a6b195062fea4789fa9">cv::ADAPTIVE_THRESH_MEAN_C</a> = 0
+, <a class="el" href="group__imgproc__misc.html#ggaa42a3e6ef26247da787bf34030ed772caf262a01e7a3f112bbab4e8d8e28182dd">cv::ADAPTIVE_THRESH_GAUSSIAN_C</a> = 1
+ }</td></tr>
+<tr class="separator:gaa42a3e6ef26247da787bf34030ed772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad43d3e4208d3cf025d8304156b02ba38"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gad43d3e4208d3cf025d8304156b02ba38">cv::GrabCutClasses</a> { <a class="el" href="group__imgproc__misc.html#ggad43d3e4208d3cf025d8304156b02ba38a889f1ce109543e8aed80a7abbc6dcb39">cv::GC_BGD</a> = 0
+, <a class="el" href="group__imgproc__misc.html#ggad43d3e4208d3cf025d8304156b02ba38a4757c1f0587bcf6e53e86dee7689a649">cv::GC_FGD</a> = 1
+, <a class="el" href="group__imgproc__misc.html#ggad43d3e4208d3cf025d8304156b02ba38af748414821c7f39fab3493f9eed1eedf">cv::GC_PR_BGD</a> = 2
+, <a class="el" href="group__imgproc__misc.html#ggad43d3e4208d3cf025d8304156b02ba38ad33184b73cb87e08d29e0a3411b7c863">cv::GC_PR_FGD</a> = 3
+ }</td></tr>
+<tr class="memdesc:gad43d3e4208d3cf025d8304156b02ba38"><td class="mdescLeft">&#160;</td><td class="mdescRight">class of the pixel in GrabCut algorithm  <a href="group__imgproc__misc.html#gad43d3e4208d3cf025d8304156b02ba38">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad43d3e4208d3cf025d8304156b02ba38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8b5832ba85e59fc7a98a2afd034e558"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaf8b5832ba85e59fc7a98a2afd034e558">cv::GrabCutModes</a> { <a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558a5f8853c1e5a89c4aa2687d1f78a7e550">cv::GC_INIT_WITH_RECT</a> = 0
+, <a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558ab01527c7effb50fd1c54d8c4e671ed22">cv::GC_INIT_WITH_MASK</a> = 1
+, <a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558aef3752e3c27c4af9445d0b5590b6aa05">cv::GC_EVAL</a> = 2
+, <a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558a98122ab15c638309a71a1856c3f43a09">cv::GC_EVAL_FREEZE_MODEL</a> = 3
+ }</td></tr>
+<tr class="memdesc:gaf8b5832ba85e59fc7a98a2afd034e558"><td class="mdescLeft">&#160;</td><td class="mdescRight">GrabCut algorithm flags.  <a href="group__imgproc__misc.html#gaf8b5832ba85e59fc7a98a2afd034e558">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf8b5832ba85e59fc7a98a2afd034e558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fe343d63844c40318ee627bd1c1c42f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga3fe343d63844c40318ee627bd1c1c42f">cv::DistanceTransformLabelTypes</a> { <a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d">cv::DIST_LABEL_CCOMP</a> = 0
+, <a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa5d291835de98b72caa12a9947c2cd92a">cv::DIST_LABEL_PIXEL</a> = 1
+ }</td></tr>
+<tr class="memdesc:ga3fe343d63844c40318ee627bd1c1c42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">distanceTransform algorithm flags  <a href="group__imgproc__misc.html#ga3fe343d63844c40318ee627bd1c1c42f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3fe343d63844c40318ee627bd1c1c42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab87810a476a9cb660435a4cd7871c9eb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gab87810a476a9cb660435a4cd7871c9eb">cv::FloodFillFlags</a> { <a class="el" href="group__imgproc__misc.html#ggab87810a476a9cb660435a4cd7871c9eba8aafb7a6a87df91c7624d44f4b092fe3">cv::FLOODFILL_FIXED_RANGE</a> = 1 &lt;&lt; 16
+, <a class="el" href="group__imgproc__misc.html#ggab87810a476a9cb660435a4cd7871c9eba7161dca1d0b9e84e5208c7e8021b4d3a">cv::FLOODFILL_MASK_ONLY</a> = 1 &lt;&lt; 17
+ }</td></tr>
+<tr class="memdesc:gab87810a476a9cb660435a4cd7871c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">floodfill algorithm flags  <a href="group__imgproc__misc.html#gab87810a476a9cb660435a4cd7871c9eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab87810a476a9cb660435a4cd7871c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga7ab63567aec107648ebf3000e4da2645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">cv::integral</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#gaa012757b1a6536a1a3ef813a0aba1c1e">sum</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga0f262b67b82b080bffaa407d07522cad">sdepth</a>=-1)</td></tr>
+<tr class="separator:ga7ab63567aec107648ebf3000e4da2645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99c08064272b90ad3f7e863c5045aa71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga99c08064272b90ad3f7e863c5045aa71">cv::CV_EXPORTS_AS</a> (integral2) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">integral</a>(<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src</td></tr>
+<tr class="separator:ga99c08064272b90ad3f7e863c5045aa71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac8ec7c52a21ddf70b61f177265db7d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaac8ec7c52a21ddf70b61f177265db7d7">cv::CV_EXPORTS_AS</a> (integral3) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">integral</a>(<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src</td></tr>
+<tr class="memdesc:gaac8ec7c52a21ddf70b61f177265db7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the integral of an image.  <a href="group__imgproc__misc.html#gaac8ec7c52a21ddf70b61f177265db7d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaac8ec7c52a21ddf70b61f177265db7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd93e7119f2b85135109ab4b1f4f9eaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">cv::threshold</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, double thresh, double <a class="el" href="group__highgui__c.html#ga90c530b00018f984f641cb89bb7bf577">maxval</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="memdesc:gabd93e7119f2b85135109ab4b1f4f9eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a fixed-level threshold to each array element.  <a href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabd93e7119f2b85135109ab4b1f4f9eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8886eaaac71abdcb2a3a212180d70a50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga8886eaaac71abdcb2a3a212180d70a50">cv::adaptiveThreshold</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, double maxValue, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> adaptiveMethod, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> thresholdType, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize, double C)</td></tr>
+<tr class="memdesc:ga8886eaaac71abdcb2a3a212180d70a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an adaptive threshold to an array.  <a href="group__imgproc__misc.html#ga8886eaaac71abdcb2a3a212180d70a50">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8886eaaac71abdcb2a3a212180d70a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ca35988e63d61ad5ef85769e612205d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga2ca35988e63d61ad5ef85769e612205d">cv::watershed</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__imgproc__c.html#ga2ef275836228f2bc63122df9ce1fe363">markers</a>)</td></tr>
+<tr class="memdesc:ga2ca35988e63d61ad5ef85769e612205d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a marker-based image segmentation using the watershed algorithm.  <a href="group__imgproc__misc.html#ga2ca35988e63d61ad5ef85769e612205d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2ca35988e63d61ad5ef85769e612205d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c8c810ec34c3defe07c1fb6bdc74ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga8c8c810ec34c3defe07c1fb6bdc74ce4">cv::grabCut</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> <a class="el" href="group__core__c.html#ga530a78d59bfb8d13c3013626ebb95c2e">rect</a>, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> bgdModel, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> fgdModel, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> iterCount, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> mode=<a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558aef3752e3c27c4af9445d0b5590b6aa05">GC_EVAL</a>)</td></tr>
+<tr class="memdesc:ga8c8c810ec34c3defe07c1fb6bdc74ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the GrabCut algorithm.  <a href="group__imgproc__misc.html#ga8c8c810ec34c3defe07c1fb6bdc74ce4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8c8c810ec34c3defe07c1fb6bdc74ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga022265a5fdb204c8580ef95382cfd9d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga022265a5fdb204c8580ef95382cfd9d0">cv::CV_EXPORTS_AS</a> (distanceTransformWithLabels) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__imgproc__misc.html#ga07d54f4fc17d60465e4ca1b024afa70f">distanceTransform</a>(<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src</td></tr>
+<tr class="memdesc:ga022265a5fdb204c8580ef95382cfd9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance to the closest zero pixel for each pixel of the source image.  <a href="group__imgproc__misc.html#ga022265a5fdb204c8580ef95382cfd9d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga022265a5fdb204c8580ef95382cfd9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07d54f4fc17d60465e4ca1b024afa70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga07d54f4fc17d60465e4ca1b024afa70f">cv::distanceTransform</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga9c6d4e411e56286cff1b6713af55ee37">distanceType</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga13bbafa1ea9a5073b7fe97cf4f413369">maskSize</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dstType=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="separator:ga07d54f4fc17d60465e4ca1b024afa70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdc2a3a7d3c5587cbbe6d2144133f8cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gacdc2a3a7d3c5587cbbe6d2144133f8cf">cv::floodFill</a> (<a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> seedPoint, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> newVal, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> *<a class="el" href="group__core__c.html#ga530a78d59bfb8d13c3013626ebb95c2e">rect</a>=0, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> loDiff=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(), <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> upDiff=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=4)</td></tr>
+<tr class="separator:gacdc2a3a7d3c5587cbbe6d2144133f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fb66063d2a6ffb118fa30454661aaf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga4fb66063d2a6ffb118fa30454661aaf7">cv::floodFill</a> (<a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> seedPoint, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> newVal, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> *<a class="el" href="group__core__c.html#ga530a78d59bfb8d13c3013626ebb95c2e">rect</a>=0, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> loDiff=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(), <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> upDiff=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=4)</td></tr>
+<tr class="memdesc:ga4fb66063d2a6ffb118fa30454661aaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a connected component with the given color.  <a href="group__imgproc__misc.html#ga4fb66063d2a6ffb118fa30454661aaf7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4fb66063d2a6ffb118fa30454661aaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d7910f4d2ab5abc71b14ebf76d01296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga9d7910f4d2ab5abc71b14ebf76d01296">cv::blendLinear</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> weights1, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> weights2, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)</td></tr>
+<tr class="separator:ga9d7910f4d2ab5abc71b14ebf76d01296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:gaa012757b1a6536a1a3ef813a0aba1c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaa012757b1a6536a1a3ef813a0aba1c1e">cv::sum</a></td></tr>
+<tr class="separator:gaa012757b1a6536a1a3ef813a0aba1c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bd30d74bcc3d062f08aca5eb296c05e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga0bd30d74bcc3d062f08aca5eb296c05e">cv::sqsum</a></td></tr>
+<tr class="separator:ga0bd30d74bcc3d062f08aca5eb296c05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f262b67b82b080bffaa407d07522cad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga0f262b67b82b080bffaa407d07522cad">cv::sdepth</a> = -1</td></tr>
+<tr class="separator:ga0f262b67b82b080bffaa407d07522cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d89ef6260c8b91efb54ab2a92690c71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga1d89ef6260c8b91efb54ab2a92690c71">cv::sqdepth</a> = -1 )</td></tr>
+<tr class="separator:ga1d89ef6260c8b91efb54ab2a92690c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4870865602cfcaa9ec49ef774d0a721b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga4870865602cfcaa9ec49ef774d0a721b">cv::tilted</a></td></tr>
+<tr class="separator:ga4870865602cfcaa9ec49ef774d0a721b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52bb929b38b35664f16102ee054f0b3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">cv::dst</a></td></tr>
+<tr class="separator:ga52bb929b38b35664f16102ee054f0b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa75358e6ed91336d607ff7a9a5991251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#gaa75358e6ed91336d607ff7a9a5991251">cv::labels</a></td></tr>
+<tr class="separator:gaa75358e6ed91336d607ff7a9a5991251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c6d4e411e56286cff1b6713af55ee37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga9c6d4e411e56286cff1b6713af55ee37">cv::distanceType</a></td></tr>
+<tr class="separator:ga9c6d4e411e56286cff1b6713af55ee37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13bbafa1ea9a5073b7fe97cf4f413369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga13bbafa1ea9a5073b7fe97cf4f413369">cv::maskSize</a></td></tr>
+<tr class="separator:ga13bbafa1ea9a5073b7fe97cf4f413369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7766611410594c80d27622896cd90f8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html#ga7766611410594c80d27622896cd90f8e">cv::labelType</a> = <a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d">DIST_LABEL_CCOMP</a> )</td></tr>
+<tr class="separator:ga7766611410594c80d27622896cd90f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gaa42a3e6ef26247da787bf34030ed772c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa42a3e6ef26247da787bf34030ed772c">&#9670;&nbsp;</a></span>AdaptiveThresholdTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gaa42a3e6ef26247da787bf34030ed772c">cv::AdaptiveThresholdTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adaptive threshold algorithm </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__misc.html#ga8886eaaac71abdcb2a3a212180d70a50" title="Applies an adaptive threshold to an array.">adaptiveThreshold</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaa42a3e6ef26247da787bf34030ed772cad0c5199ae8637a6b195062fea4789fa9"></a>ADAPTIVE_THRESH_MEAN_C&#160;</td><td class="fielddoc"><p>the threshold value <img class="formulaInl" alt="$T(x,y)$" src="form_757.png"/> is a mean of the <img class="formulaInl" alt="$\texttt{blockSize} \times \texttt{blockSize}$" src="form_690.png"/> neighborhood of <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> minus C </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa42a3e6ef26247da787bf34030ed772caf262a01e7a3f112bbab4e8d8e28182dd"></a>ADAPTIVE_THRESH_GAUSSIAN_C&#160;</td><td class="fielddoc"><p>the threshold value <img class="formulaInl" alt="$T(x, y)$" src="form_831.png"/> is a weighted sum (cross-correlation with a Gaussian window) of the <img class="formulaInl" alt="$\texttt{blockSize} \times \texttt{blockSize}$" src="form_690.png"/> neighborhood of <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> minus C . The default sigma (standard deviation) is used for the specified blockSize . See <a class="el" href="group__imgproc__filter.html#ga38a8ea387cfb178559ad3fc4b3fd6c80" title="Returns Gaussian filter coefficients.">getGaussianKernel</a> </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga3fe343d63844c40318ee627bd1c1c42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3fe343d63844c40318ee627bd1c1c42f">&#9670;&nbsp;</a></span>DistanceTransformLabelTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#ga3fe343d63844c40318ee627bd1c1c42f">cv::DistanceTransformLabelTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>distanceTransform algorithm flags </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d"></a>DIST_LABEL_CCOMP&#160;</td><td class="fielddoc"><p>each connected component of zeros in src (as well as all the non-zero pixels closest to the connected component) will be assigned the same label </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3fe343d63844c40318ee627bd1c1c42fa5d291835de98b72caa12a9947c2cd92a"></a>DIST_LABEL_PIXEL&#160;</td><td class="fielddoc"><p>each zero pixel (and all the non-zero pixels closest to it) gets its own label. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaaa68392323ccf7fad87570e41259b497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa68392323ccf7fad87570e41259b497">&#9670;&nbsp;</a></span>DistanceTransformMasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gaaa68392323ccf7fad87570e41259b497">cv::DistanceTransformMasks</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mask size for distance transform. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaaa68392323ccf7fad87570e41259b497a520d4f90e1e37d13d7592fd295a6b5b2"></a>DIST_MASK_3&#160;</td><td class="fielddoc"><p>mask=3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaa68392323ccf7fad87570e41259b497a8a8b17ed6012f6ce42e56f302c07d481"></a>DIST_MASK_5&#160;</td><td class="fielddoc"><p>mask=5 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaa68392323ccf7fad87570e41259b497a71e13e06c1d12eabd2acd2669f94f9ca"></a>DIST_MASK_PRECISE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa2bfbebbc5c320526897996aafa1d8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2bfbebbc5c320526897996aafa1d8eb">&#9670;&nbsp;</a></span>DistanceTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gaa2bfbebbc5c320526897996aafa1d8eb">cv::DistanceTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Distance types for Distance Transform and M-estimators </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__misc.html#ga07d54f4fc17d60465e4ca1b024afa70f">distanceTransform</a>, <a class="el" href="group__imgproc__shape.html#gae3f6f1bb89e74a970294c6a6d3db4995" title="Fits a line to a 2D or 3D point set.">fitLine</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebaa0bb8d897ba16dbf5a3ca96c71219a32"></a>DIST_USER&#160;</td><td class="fielddoc"><p>User defined distance. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86"></a>DIST_L1&#160;</td><td class="fielddoc"><p>distance = |x1-x2| + |y1-y2| </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96"></a>DIST_L2&#160;</td><td class="fielddoc"><p>the simple euclidean distance </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8eba507b16eb5ef95ea784ca1b3cb7b0d7ee"></a>DIST_C&#160;</td><td class="fielddoc"><p>distance = max(|x1-x2|,|y1-y2|) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8eba8f3c18d37e99f7cc58d3605f5c6f9ce9"></a>DIST_L12&#160;</td><td class="fielddoc"><p>L1-L2 metric: distance = 2(sqrt(1+x*x/2) - 1)) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebaea158f5abd2b5e2b4e79b79f55297079"></a>DIST_FAIR&#160;</td><td class="fielddoc"><p>distance = c^2(|x|/c-log(1+|x|/c)), c = 1.3998 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebaba5e4b3600852b7a59e78e3041be840e"></a>DIST_WELSCH&#160;</td><td class="fielddoc"><p>distance = c^2/2(1-exp(-(x/c)^2)), c = 2.9846 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa2bfbebbc5c320526897996aafa1d8ebad701f5622a12450d3b8c85c052e7c520"></a>DIST_HUBER&#160;</td><td class="fielddoc"><p>distance = |x|&lt;c ? x^2/2 : c(|x|-c/2), c=1.345 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gab87810a476a9cb660435a4cd7871c9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab87810a476a9cb660435a4cd7871c9eb">&#9670;&nbsp;</a></span>FloodFillFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gab87810a476a9cb660435a4cd7871c9eb">cv::FloodFillFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>floodfill algorithm flags </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggab87810a476a9cb660435a4cd7871c9eba8aafb7a6a87df91c7624d44f4b092fe3"></a>FLOODFILL_FIXED_RANGE&#160;</td><td class="fielddoc"><p>If set, the difference between the current pixel and seed pixel is considered. Otherwise, the difference between neighbor pixels is considered (that is, the range is floating). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab87810a476a9cb660435a4cd7871c9eba7161dca1d0b9e84e5208c7e8021b4d3a"></a>FLOODFILL_MASK_ONLY&#160;</td><td class="fielddoc"><p>If set, the function does not change the image ( newVal is ignored), and only fills the mask with the value specified in bits 8-16 of flags as described above. This option only make sense in function variants that have the mask parameter. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gad43d3e4208d3cf025d8304156b02ba38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad43d3e4208d3cf025d8304156b02ba38">&#9670;&nbsp;</a></span>GrabCutClasses</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gad43d3e4208d3cf025d8304156b02ba38">cv::GrabCutClasses</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>class of the pixel in GrabCut algorithm </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggad43d3e4208d3cf025d8304156b02ba38a889f1ce109543e8aed80a7abbc6dcb39"></a>GC_BGD&#160;</td><td class="fielddoc"><p>an obvious background pixels </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad43d3e4208d3cf025d8304156b02ba38a4757c1f0587bcf6e53e86dee7689a649"></a>GC_FGD&#160;</td><td class="fielddoc"><p>an obvious foreground (object) pixel </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad43d3e4208d3cf025d8304156b02ba38af748414821c7f39fab3493f9eed1eedf"></a>GC_PR_BGD&#160;</td><td class="fielddoc"><p>a possible background pixel </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad43d3e4208d3cf025d8304156b02ba38ad33184b73cb87e08d29e0a3411b7c863"></a>GC_PR_FGD&#160;</td><td class="fielddoc"><p>a possible foreground pixel </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf8b5832ba85e59fc7a98a2afd034e558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8b5832ba85e59fc7a98a2afd034e558">&#9670;&nbsp;</a></span>GrabCutModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gaf8b5832ba85e59fc7a98a2afd034e558">cv::GrabCutModes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GrabCut algorithm flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaf8b5832ba85e59fc7a98a2afd034e558a5f8853c1e5a89c4aa2687d1f78a7e550"></a>GC_INIT_WITH_RECT&#160;</td><td class="fielddoc"><p>The function initializes the state and the mask using the provided rectangle. After that it runs iterCount iterations of the algorithm. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf8b5832ba85e59fc7a98a2afd034e558ab01527c7effb50fd1c54d8c4e671ed22"></a>GC_INIT_WITH_MASK&#160;</td><td class="fielddoc"><p>The function initializes the state using the provided mask. Note that GC_INIT_WITH_RECT and GC_INIT_WITH_MASK can be combined. Then, all the pixels outside of the ROI are automatically initialized with GC_BGD . </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf8b5832ba85e59fc7a98a2afd034e558aef3752e3c27c4af9445d0b5590b6aa05"></a>GC_EVAL&#160;</td><td class="fielddoc"><p>The value means that the algorithm should just resume. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf8b5832ba85e59fc7a98a2afd034e558a98122ab15c638309a71a1856c3f43a09"></a>GC_EVAL_FREEZE_MODEL&#160;</td><td class="fielddoc"><p>The value means that the algorithm should just run the grabCut algorithm (a single iteration) with the fixed model </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa9e58d2860d4afa658ef70a9b1115576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9e58d2860d4afa658ef70a9b1115576">&#9670;&nbsp;</a></span>ThresholdTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576">cv::ThresholdTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>type of the threshold operation <img src="pics/threshold.png" alt="threshold types" class="inline"/> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a147222a96556ebc1d948b372bcd7ac59"></a>THRESH_BINARY&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \fork{\texttt{maxval}}{if \&zwj;(\texttt{src}(x,y) &gt; \texttt{thresh}\&zwj;)}{0}{otherwise}\]" src="form_826.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754"></a>THRESH_BINARY_INV&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \fork{0}{if \&zwj;(\texttt{src}(x,y) &gt; \texttt{thresh}\&zwj;)}{\texttt{maxval}}{otherwise}\]" src="form_827.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576ac7e89a5e95490116e7d2082b3096b2b8"></a>THRESH_TRUNC&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \fork{\texttt{threshold}}{if \&zwj;(\texttt{src}(x,y) &gt; \texttt{thresh}\&zwj;)}{\texttt{src}(x,y)}{otherwise}\]" src="form_828.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a0e50a338a4b711a8c48f06a6b105dd98"></a>THRESH_TOZERO&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \fork{\texttt{src}(x,y)}{if \&zwj;(\texttt{src}(x,y) &gt; \texttt{thresh}\&zwj;)}{0}{otherwise}\]" src="form_829.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a47518a30aae90d799035bdcf0bb39a50"></a>THRESH_TOZERO_INV&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \fork{0}{if \&zwj;(\texttt{src}(x,y) &gt; \texttt{thresh}\&zwj;)}{\texttt{src}(x,y)}{otherwise}\]" src="form_830.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a8e723ef461a5349c391032aee325fe15"></a>THRESH_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff"></a>THRESH_OTSU&#160;</td><td class="fielddoc"><p>flag, use Otsu algorithm to choose the optimal threshold value </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa9e58d2860d4afa658ef70a9b1115576a22ffcf680811aed95be6c7f5cd809621"></a>THRESH_TRIANGLE&#160;</td><td class="fielddoc"><p>flag, use Triangle algorithm to choose the optimal threshold value </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga8886eaaac71abdcb2a3a212180d70a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8886eaaac71abdcb2a3a212180d70a50">&#9670;&nbsp;</a></span>adaptiveThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::adaptiveThreshold </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>maxValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>adaptiveMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>thresholdType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies an adaptive threshold to an array. </p>
+<p>The function transforms a grayscale image to a binary image according to the formulae:</p><ul>
+<li><b>THRESH_BINARY</b> <p class="formulaDsp">
+<img class="formulaDsp" alt="\[dst(x,y) = \fork{\texttt{maxValue}}{if \&zwj;(src(x,y) &gt; T(x,y)\&zwj;)}{0}{otherwise}\]" src="form_755.png"/>
+</p>
+</li>
+<li><b>THRESH_BINARY_INV</b> <p class="formulaDsp">
+<img class="formulaDsp" alt="\[dst(x,y) = \fork{0}{if \&zwj;(src(x,y) &gt; T(x,y)\&zwj;)}{\texttt{maxValue}}{otherwise}\]" src="form_756.png"/>
+</p>
+ where <img class="formulaInl" alt="$T(x,y)$" src="form_757.png"/> is a threshold calculated individually for each pixel (see adaptiveMethod parameter).</li>
+</ul>
+<p>The function can process the image in-place.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source 8-bit single-channel image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and the same type as src. </td></tr>
+    <tr><td class="paramname">maxValue</td><td>Non-zero value assigned to the pixels for which the condition is satisfied </td></tr>
+    <tr><td class="paramname">adaptiveMethod</td><td>Adaptive thresholding algorithm to use, see <a class="el" href="group__imgproc__misc.html#gaa42a3e6ef26247da787bf34030ed772c">AdaptiveThresholdTypes</a>. The <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aa1de4cff95e3377d6d0cbe7569bd4e9f" title="aaaaaa|abcdefgh|hhhhhhh">BORDER_REPLICATE</a> | <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a4fcb77ae62e1e1336c1c2b24a441995c" title="do not look outside of ROI">BORDER_ISOLATED</a> is used to process boundaries. </td></tr>
+    <tr><td class="paramname">thresholdType</td><td>Thresholding type that must be either <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a147222a96556ebc1d948b372bcd7ac59">THRESH_BINARY</a> or <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754">THRESH_BINARY_INV</a>, see <a class="el" href="group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576">ThresholdTypes</a>. </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Size of a pixel neighborhood that is used to calculate a threshold value for the pixel: 3, 5, 7, and so on. </td></tr>
+    <tr><td class="paramname">C</td><td>Constant subtracted from the mean or weighted mean (see the details below). Normally, it is positive but may be zero or negative as well.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf" title="Applies a fixed-level threshold to each array element.">threshold</a>, <a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">blur</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9d7910f4d2ab5abc71b14ebf76d01296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d7910f4d2ab5abc71b14ebf76d01296">&#9670;&nbsp;</a></span>blendLinear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::blendLinear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>weights1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>weights2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Performs linear blending of two images: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \texttt{dst}(i,j) = \texttt{weights1}(i,j)*\texttt{src1}(i,j) + \texttt{weights2}(i,j)*\texttt{src2}(i,j) \]" src="form_785.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>It has a type of <a class="el" href="group__core__hal__interface.html#ga78c5506f62d99edd7e83aba259250394">CV_8UC(n)</a> or <a class="el" href="group__core__hal__interface.html#ga56e67b727727f2f9b73a4b62f0c4b2b5">CV_32FC(n)</a>, where n is a positive integer. </td></tr>
+    <tr><td class="paramname">src2</td><td>It has the same type and size as src1. </td></tr>
+    <tr><td class="paramname">weights1</td><td>It has a type of CV_32FC1 and the same size with src1. </td></tr>
+    <tr><td class="paramname">weights2</td><td>It has a type of CV_32FC1 and the same size with src1. </td></tr>
+    <tr><td class="paramname">dst</td><td>It is created if it does not have the same size and type with src1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga022265a5fdb204c8580ef95382cfd9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga022265a5fdb204c8580ef95382cfd9d0">&#9670;&nbsp;</a></span>CV_EXPORTS_AS() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CV_EXPORTS_AS </td>
+          <td>(</td>
+          <td class="paramtype">distanceTransformWithLabels&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the distance to the closest zero pixel for each pixel of the source image. </p>
+<p>The function <a class="el" href="group__imgproc__misc.html#ga07d54f4fc17d60465e4ca1b024afa70f">cv::distanceTransform</a> calculates the approximate or precise distance from every binary image pixel to the nearest zero pixel. For zero image pixels, the distance will obviously be zero.</p>
+<p>When maskSize == <a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a71e13e06c1d12eabd2acd2669f94f9ca">DIST_MASK_PRECISE</a> and distanceType == <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96" title="the simple euclidean distance">DIST_L2</a> , the function runs the algorithm described in <b>[Felzenszwalb04]</b> . This algorithm is parallelized with the TBB library.</p>
+<p>In other cases, the algorithm <b>[Borgefors86]</b> is used. This means that for a pixel the function finds the shortest path to the nearest zero pixel consisting of basic shifts: horizontal, vertical, diagonal, or knight's move (the latest is available for a <img class="formulaInl" alt="$5\times 5$" src="form_774.png"/> mask). The overall distance is calculated as a sum of these basic distances. Since the distance function should be symmetric, all of the horizontal and vertical shifts must have the same cost (denoted as a ), all the diagonal shifts must have the same cost (denoted as <code>b</code>), and all knight's moves must have the same cost (denoted as <code>c</code>). For the <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8eba507b16eb5ef95ea784ca1b3cb7b0d7ee" title="distance = max(|x1-x2|,|y1-y2|)">DIST_C</a> and <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86" title="distance = |x1-x2| + |y1-y2|">DIST_L1</a> types, the distance is calculated precisely, whereas for <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96" title="the simple euclidean distance">DIST_L2</a> (Euclidean distance) the distance can be calculated only with a relative error (a <img class="formulaInl" alt="$5\times 5$" src="form_774.png"/> mask gives more accurate results). For <code>a</code>,<code>b</code>, and <code>c</code>, OpenCV uses the values suggested in the original paper:</p><ul>
+<li>DIST_L1: <code>a = 1, b = 2</code></li>
+<li>DIST_L2:<ul>
+<li><code>3 x 3</code>: <code>a=0.955, b=1.3693</code></li>
+<li><code>5 x 5</code>: <code>a=1, b=1.4, c=2.1969</code></li>
+</ul>
+</li>
+<li>DIST_C: <code>a = 1, b = 1</code></li>
+</ul>
+<p>Typically, for a fast, coarse distance estimation <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96" title="the simple euclidean distance">DIST_L2</a>, a <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> mask is used. For a more accurate distance estimation <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebaff0d1f5be0fc152a56a9b9716d158b96" title="the simple euclidean distance">DIST_L2</a>, a <img class="formulaInl" alt="$5\times 5$" src="form_774.png"/> mask or the precise algorithm is used. Note that both the precise and the approximate algorithms are linear on the number of pixels.</p>
+<p>This variant of the function does not only compute the minimum distance for each pixel <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> but also identifies the nearest connected component consisting of zero pixels (labelType==<a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d">DIST_LABEL_CCOMP</a>) or the nearest zero pixel (labelType==<a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa5d291835de98b72caa12a9947c2cd92a">DIST_LABEL_PIXEL</a>). Index of the component/pixel is stored in <code>labels(x, y)</code>. When labelType==<a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d">DIST_LABEL_CCOMP</a>, the function automatically finds connected components of zero pixels in the input image and marks them with distinct labels. When labelType==<a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa5d291835de98b72caa12a9947c2cd92a">DIST_LABEL_PIXEL</a>, the function scans through the input image and marks all the zero pixels with distinct labels.</p>
+<p>In this mode, the complexity is still linear. That is, the function provides a very fast way to compute the Voronoi diagram for a binary image. Currently, the second variant can use only the approximate distance transform algorithm, i.e. maskSize=<a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a71e13e06c1d12eabd2acd2669f94f9ca">DIST_MASK_PRECISE</a> is not supported yet.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>8-bit, single-channel (binary) source image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Output image with calculated distances. It is a 8-bit or 32-bit floating-point, single-channel image of the same size as src. </td></tr>
+    <tr><td class="paramname">labels</td><td>Output 2D array of labels (the discrete Voronoi diagram). It has the type CV_32SC1 and the same size as src. </td></tr>
+    <tr><td class="paramname">distanceType</td><td>Type of distance, see <a class="el" href="group__imgproc__misc.html#gaa2bfbebbc5c320526897996aafa1d8eb">DistanceTypes</a> </td></tr>
+    <tr><td class="paramname">maskSize</td><td>Size of the distance transform mask, see <a class="el" href="group__imgproc__misc.html#gaaa68392323ccf7fad87570e41259b497" title="Mask size for distance transform.">DistanceTransformMasks</a>. <a class="el" href="group__imgproc__misc.html#ggaaa68392323ccf7fad87570e41259b497a71e13e06c1d12eabd2acd2669f94f9ca">DIST_MASK_PRECISE</a> is not supported by this variant. In case of the <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86" title="distance = |x1-x2| + |y1-y2|">DIST_L1</a> or <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8eba507b16eb5ef95ea784ca1b3cb7b0d7ee" title="distance = max(|x1-x2|,|y1-y2|)">DIST_C</a> distance type, the parameter is forced to 3 because a <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> mask gives the same result as <img class="formulaInl" alt="$5\times 5$" src="form_774.png"/> or any larger aperture. </td></tr>
+    <tr><td class="paramname">labelType</td><td>Type of the label array to build, see <a class="el" href="group__imgproc__misc.html#ga3fe343d63844c40318ee627bd1c1c42f" title="distanceTransform algorithm flags">DistanceTransformLabelTypes</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga99c08064272b90ad3f7e863c5045aa71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99c08064272b90ad3f7e863c5045aa71">&#9670;&nbsp;</a></span>CV_EXPORTS_AS() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CV_EXPORTS_AS </td>
+          <td>(</td>
+          <td class="paramtype">integral2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="gaac8ec7c52a21ddf70b61f177265db7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac8ec7c52a21ddf70b61f177265db7d7">&#9670;&nbsp;</a></span>CV_EXPORTS_AS() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CV_EXPORTS_AS </td>
+          <td>(</td>
+          <td class="paramtype">integral3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the integral of an image. </p>
+<p>The function calculates one or more integral images for the source image as follows:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{sum} (X,Y) = \sum _{x&lt;X,y&lt;Y} \texttt{image} (x,y)\]" src="form_587.png"/>
+</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{sqsum} (X,Y) = \sum _{x&lt;X,y&lt;Y} \texttt{image} (x,y)^2\]" src="form_588.png"/>
+</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{tilted} (X,Y) = \sum _{y&lt;Y,abs(x-X+1) \leq Y-y-1} \texttt{image} (x,y)\]" src="form_743.png"/>
+</p>
+<p>Using these integral images, you can calculate sum, mean, and standard deviation over a specific up-right or rotated rectangular region of the image in a constant time, for example:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sum _{x_1 \leq x &lt; x_2, \, y_1 \leq y &lt; y_2} \texttt{image} (x,y) = \texttt{sum} (x_2,y_2)- \texttt{sum} (x_1,y_2)- \texttt{sum} (x_2,y_1)+ \texttt{sum} (x_1,y_1)\]" src="form_744.png"/>
+</p>
+<p>It makes possible to do a fast blurring or fast block correlation with a variable window size, for example. In case of multi-channel images, sums for each channel are accumulated independently.</p>
+<p>As a practical example, the next figure shows the calculation of the integral of a straight rectangle Rect(3,3,3,2) and of a tilted rectangle Rect(5,1,2,3) . The selected pixels in the original image are shown, as well as the relative pixels in the integral images sum and tilted .</p>
+<p><img src="pics/integral.png" alt="integral calculation example" class="inline"/></p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image as <img class="formulaInl" alt="$W \times H$" src="form_745.png"/>, 8-bit or floating-point (32f or 64f). </td></tr>
+    <tr><td class="paramname">sum</td><td>integral image as <img class="formulaInl" alt="$(W+1)\times (H+1)$" src="form_589.png"/> , 32-bit integer or floating-point (32f or 64f). </td></tr>
+    <tr><td class="paramname">sqsum</td><td>integral image for squared pixel values; it is <img class="formulaInl" alt="$(W+1)\times (H+1)$" src="form_589.png"/>, double-precision floating-point (64f) array. </td></tr>
+    <tr><td class="paramname">tilted</td><td>integral for the image rotated by 45 degrees; it is <img class="formulaInl" alt="$(W+1)\times (H+1)$" src="form_589.png"/> array with the same data type as sum. </td></tr>
+    <tr><td class="paramname">sdepth</td><td>desired depth of the integral and the tilted integral images, CV_32S, CV_32F, or CV_64F. </td></tr>
+    <tr><td class="paramname">sqdepth</td><td>desired depth of the integral image of squared pixel values, CV_32F or CV_64F. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga07d54f4fc17d60465e4ca1b024afa70f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07d54f4fc17d60465e4ca1b024afa70f">&#9670;&nbsp;</a></span>distanceTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::distanceTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>distanceType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maskSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dstType</em> = <code><a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>8-bit, single-channel (binary) source image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Output image with calculated distances. It is a 8-bit or 32-bit floating-point, single-channel image of the same size as src . </td></tr>
+    <tr><td class="paramname">distanceType</td><td>Type of distance, see <a class="el" href="group__imgproc__misc.html#gaa2bfbebbc5c320526897996aafa1d8eb">DistanceTypes</a> </td></tr>
+    <tr><td class="paramname">maskSize</td><td>Size of the distance transform mask, see <a class="el" href="group__imgproc__misc.html#gaaa68392323ccf7fad87570e41259b497" title="Mask size for distance transform.">DistanceTransformMasks</a>. In case of the <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86" title="distance = |x1-x2| + |y1-y2|">DIST_L1</a> or <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8eba507b16eb5ef95ea784ca1b3cb7b0d7ee" title="distance = max(|x1-x2|,|y1-y2|)">DIST_C</a> distance type, the parameter is forced to 3 because a <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> mask gives the same result as <img class="formulaInl" alt="$5\times 5$" src="form_774.png"/> or any larger aperture. </td></tr>
+    <tr><td class="paramname">dstType</td><td>Type of output image. It can be CV_8U or CV_32F. Type CV_8U can be used only for the first variant of the function and distanceType == <a class="el" href="group__imgproc__misc.html#ggaa2bfbebbc5c320526897996aafa1d8ebae5b2dfaf2ba5024d7ce47885001fad86" title="distance = |x1-x2| + |y1-y2|">DIST_L1</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4fb66063d2a6ffb118fa30454661aaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fb66063d2a6ffb118fa30454661aaf7">&#9670;&nbsp;</a></span>floodFill() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::floodFill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>seedPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>newVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> *&#160;</td>
+          <td class="paramname"><em>rect</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>loDiff</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>upDiff</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills a connected component with the given color. </p>
+<p>The function <a class="el" href="group__imgproc__misc.html#gacdc2a3a7d3c5587cbbe6d2144133f8cf">cv::floodFill</a> fills a connected component starting from the seed point with the specified color. The connectivity is determined by the color/brightness closeness of the neighbor pixels. The pixel at <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/> is considered to belong to the repainted domain if:</p>
+<ul>
+<li>in case of a grayscale image and floating range <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} (x',y')- \texttt{loDiff} \leq \texttt{src} (x,y) \leq \texttt{src} (x',y')+ \texttt{upDiff}\]" src="form_775.png"/>
+</p>
+</li>
+<li>in case of a grayscale image and fixed range <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)- \texttt{loDiff} \leq \texttt{src} (x,y) \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)+ \texttt{upDiff}\]" src="form_776.png"/>
+</p>
+</li>
+<li>in case of a color image and floating range <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} (x',y')_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} (x',y')_r+ \texttt{upDiff} _r,\]" src="form_777.png"/>
+</p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} (x',y')_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} (x',y')_g+ \texttt{upDiff} _g\]" src="form_778.png"/>
+</p>
+ and <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} (x',y')_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} (x',y')_b+ \texttt{upDiff} _b\]" src="form_779.png"/>
+</p>
+</li>
+<li>in case of a color image and fixed range <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r+ \texttt{upDiff} _r,\]" src="form_780.png"/>
+</p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g+ \texttt{upDiff} _g\]" src="form_781.png"/>
+</p>
+ and <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b+ \texttt{upDiff} _b\]" src="form_782.png"/>
+</p>
+</li>
+</ul>
+<p>where <img class="formulaInl" alt="$src(x',y')$" src="form_783.png"/> is the value of one of pixel neighbors that is already known to belong to the component. That is, to be added to the connected component, a color/brightness of the pixel should be close enough to:</p><ul>
+<li>Color/brightness of one of its neighbors that already belong to the connected component in case of a floating range.</li>
+<li>Color/brightness of the seed point in case of a fixed range.</li>
+</ul>
+<p>Use these functions to either mark a connected component with the specified color in-place, or build a mask and then extract the contour, or copy the region to another image, and so on.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Input/output 1- or 3-channel, 8-bit, or floating-point image. It is modified by the function unless the <a class="el" href="group__imgproc__misc.html#ggab87810a476a9cb660435a4cd7871c9eba7161dca1d0b9e84e5208c7e8021b4d3a">FLOODFILL_MASK_ONLY</a> flag is set in the second variant of the function. See the details below. </td></tr>
+    <tr><td class="paramname">mask</td><td>Operation mask that should be a single-channel 8-bit image, 2 pixels wider and 2 pixels taller than image. Since this is both an input and output parameter, you must take responsibility of initializing it. Flood-filling cannot go across non-zero pixels in the input mask. For example, an edge detector output can be used as a mask to stop filling at edges. On output, pixels in the mask corresponding to filled pixels in the image are set to 1 or to the a value specified in flags as described below. Additionally, the function fills the border of the mask with ones to simplify internal processing. It is therefore possible to use the same mask in multiple calls to the function to make sure the filled areas do not overlap. </td></tr>
+    <tr><td class="paramname">seedPoint</td><td>Starting point. </td></tr>
+    <tr><td class="paramname">newVal</td><td>New value of the repainted domain pixels. </td></tr>
+    <tr><td class="paramname">loDiff</td><td>Maximal lower brightness/color difference between the currently observed pixel and one of its neighbors belonging to the component, or a seed pixel being added to the component. </td></tr>
+    <tr><td class="paramname">upDiff</td><td>Maximal upper brightness/color difference between the currently observed pixel and one of its neighbors belonging to the component, or a seed pixel being added to the component. </td></tr>
+    <tr><td class="paramname">rect</td><td>Optional output parameter set by the function to the minimum bounding rectangle of the repainted domain. </td></tr>
+    <tr><td class="paramname">flags</td><td>Operation flags. The first 8 bits contain a connectivity value. The default value of 4 means that only the four nearest neighbor pixels (those that share an edge) are considered. A connectivity value of 8 means that the eight nearest neighbor pixels (those that share a corner) will be considered. The next 8 bits (8-16) contain a value between 1 and 255 with which to fill the mask (the default value is 1). For example, 4 | ( 255 &lt;&lt; 8 ) will consider 4 nearest neighbours and fill the mask with a value of 255. The following additional options occupy higher bits and therefore may be further combined with the connectivity and mask fill values using bit-wise or (|), see <a class="el" href="group__imgproc__misc.html#gab87810a476a9cb660435a4cd7871c9eb" title="floodfill algorithm flags">FloodFillFlags</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Since the mask is larger than the filled image, a pixel <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> in image corresponds to the pixel <img class="formulaInl" alt="$(x+1, y+1)$" src="form_784.png"/> in the mask .</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__shape.html#ga147082e5debe02358905ac3cf6d69622" title="Finds contours in a binary image.">findContours</a> </dd></dl>
+
+</div>
+</div>
+<a id="gacdc2a3a7d3c5587cbbe6d2144133f8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdc2a3a7d3c5587cbbe6d2144133f8cf">&#9670;&nbsp;</a></span>floodFill() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::floodFill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>seedPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>newVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> *&#160;</td>
+          <td class="paramname"><em>rect</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>loDiff</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>&#160;</td>
+          <td class="paramname"><em>upDiff</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>variant without <code>mask</code> parameter </p>
+
+</div>
+</div>
+<a id="ga8c8c810ec34c3defe07c1fb6bdc74ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c8c810ec34c3defe07c1fb6bdc74ce4">&#9670;&nbsp;</a></span>grabCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::grabCut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>bgdModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>fgdModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>iterCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558aef3752e3c27c4af9445d0b5590b6aa05">GC_EVAL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs the GrabCut algorithm. </p>
+<p>The function implements the <a href="http://en.wikipedia.org/wiki/GrabCut">GrabCut image segmentation algorithm</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>Input 8-bit 3-channel image. </td></tr>
+    <tr><td class="paramname">mask</td><td>Input/output 8-bit single-channel mask. The mask is initialized by the function when mode is set to <a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558a5f8853c1e5a89c4aa2687d1f78a7e550">GC_INIT_WITH_RECT</a>. Its elements may have one of the <a class="el" href="group__imgproc__misc.html#gad43d3e4208d3cf025d8304156b02ba38" title="class of the pixel in GrabCut algorithm">GrabCutClasses</a>. </td></tr>
+    <tr><td class="paramname">rect</td><td>ROI containing a segmented object. The pixels outside of the ROI are marked as "obvious background". The parameter is only used when mode==<a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558a5f8853c1e5a89c4aa2687d1f78a7e550">GC_INIT_WITH_RECT</a> . </td></tr>
+    <tr><td class="paramname">bgdModel</td><td>Temporary array for the background model. Do not modify it while you are processing the same image. </td></tr>
+    <tr><td class="paramname">fgdModel</td><td>Temporary arrays for the foreground model. Do not modify it while you are processing the same image. </td></tr>
+    <tr><td class="paramname">iterCount</td><td>Number of iterations the algorithm should make before returning the result. Note that the result can be refined with further calls with mode==<a class="el" href="group__imgproc__misc.html#ggaf8b5832ba85e59fc7a98a2afd034e558ab01527c7effb50fd1c54d8c4e671ed22">GC_INIT_WITH_MASK</a> or mode==GC_EVAL . </td></tr>
+    <tr><td class="paramname">mode</td><td>Operation mode that could be one of the <a class="el" href="group__imgproc__misc.html#gaf8b5832ba85e59fc7a98a2afd034e558" title="GrabCut algorithm flags.">GrabCutModes</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7ab63567aec107648ebf3000e4da2645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ab63567aec107648ebf3000e4da2645">&#9670;&nbsp;</a></span>integral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::integral </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>sum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>sdepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="gabd93e7119f2b85135109ab4b1f4f9eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabd93e7119f2b85135109ab4b1f4f9eaf">&#9670;&nbsp;</a></span>threshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double cv::threshold </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>thresh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>maxval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a fixed-level threshold to each array element. </p>
+<p>The function applies fixed-level thresholding to a multiple-channel array. The function is typically used to get a bi-level (binary) image out of a grayscale image ( <a class="el" href="group__core__array.html#ga6f61888c094a15a3e3c668174df9c37d" title="Performs the per-element comparison of two arrays or an array and scalar value.">compare</a> could be also used for this purpose) or for removing a noise, that is, filtering out pixels with too small or too large values. There are several types of thresholding supported by the function. They are determined by type parameter.</p>
+<p>Also, the special values <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff" title="flag, use Otsu algorithm to choose the optimal threshold value">THRESH_OTSU</a> or <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a22ffcf680811aed95be6c7f5cd809621" title="flag, use Triangle algorithm to choose the optimal threshold value">THRESH_TRIANGLE</a> may be combined with one of the above values. In these cases, the function determines the optimal threshold value using the Otsu's or Triangle algorithm and uses it instead of the specified thresh.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Currently, the Otsu's and Triangle methods are implemented only for 8-bit single-channel images.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input array (multiple-channel, 8-bit or 32-bit floating point). </td></tr>
+    <tr><td class="paramname">dst</td><td>output array of the same size and type and the same number of channels as src. </td></tr>
+    <tr><td class="paramname">thresh</td><td>threshold value. </td></tr>
+    <tr><td class="paramname">maxval</td><td>maximum value to use with the <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a147222a96556ebc1d948b372bcd7ac59">THRESH_BINARY</a> and <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754">THRESH_BINARY_INV</a> thresholding types. </td></tr>
+    <tr><td class="paramname">type</td><td>thresholding type (see <a class="el" href="group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576">ThresholdTypes</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>the computed threshold value if Otsu's or Triangle methods used.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__misc.html#ga8886eaaac71abdcb2a3a212180d70a50" title="Applies an adaptive threshold to an array.">adaptiveThreshold</a>, <a class="el" href="group__imgproc__shape.html#ga147082e5debe02358905ac3cf6d69622" title="Finds contours in a binary image.">findContours</a>, <a class="el" href="group__core__array.html#ga6f61888c094a15a3e3c668174df9c37d" title="Performs the per-element comparison of two arrays or an array and scalar value.">compare</a>, <a class="el" href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379" title="Min and Max functions.">min</a>, <a class="el" href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">max</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2ca35988e63d61ad5ef85769e612205d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ca35988e63d61ad5ef85769e612205d">&#9670;&nbsp;</a></span>watershed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::watershed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>markers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a marker-based image segmentation using the watershed algorithm. </p>
+<p>The function implements one of the variants of watershed, non-parametric marker-based segmentation algorithm, described in <b>[Meyer92]</b> .</p>
+<p>Before passing the image to the function, you have to roughly outline the desired regions in the image markers with positive (&gt;0) indices. So, every region is represented as one or more connected components with the pixel values 1, 2, 3, and so on. Such markers can be retrieved from a binary mask using <a class="el" href="group__imgproc__shape.html#ga147082e5debe02358905ac3cf6d69622" title="Finds contours in a binary image.">findContours</a> and <a class="el" href="group__imgproc__draw.html#ga5c4357637401fc66f1ca4ff52e09939d" title="Draws contours outlines or filled contours.">drawContours</a> (see the watershed.cpp demo). The markers are "seeds" of the future image regions. All the other pixels in markers , whose relation to the outlined regions is not known and should be defined by the algorithm, should be set to 0's. In the function output, each pixel in markers is set to a value of the "seed" components or to -1 at boundaries between the regions.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Any two neighbor connected components are not necessarily separated by a watershed boundary (-1's pixels); for example, they can touch each other in the initial marker image passed to the function.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Input 8-bit 3-channel image. </td></tr>
+    <tr><td class="paramname">markers</td><td>Input/output 32-bit single-channel image (map) of markers. It should have the same size as image .</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__shape.html#ga147082e5debe02358905ac3cf6d69622" title="Finds contours in a binary image.">findContours</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ga9c6d4e411e56286cff1b6713af55ee37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c6d4e411e56286cff1b6713af55ee37">&#9670;&nbsp;</a></span>distanceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::distanceType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga52bb929b38b35664f16102ee054f0b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52bb929b38b35664f16102ee054f0b3d">&#9670;&nbsp;</a></span>dst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> cv::dst</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa75358e6ed91336d607ff7a9a5991251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa75358e6ed91336d607ff7a9a5991251">&#9670;&nbsp;</a></span>labels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> cv::labels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7766611410594c80d27622896cd90f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7766611410594c80d27622896cd90f8e">&#9670;&nbsp;</a></span>labelType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::labelType = <a class="el" href="group__imgproc__misc.html#gga3fe343d63844c40318ee627bd1c1c42fa631de3e838ee72d6a9d991b8fbce4c1d">DIST_LABEL_CCOMP</a> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga13bbafa1ea9a5073b7fe97cf4f413369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13bbafa1ea9a5073b7fe97cf4f413369">&#9670;&nbsp;</a></span>maskSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::maskSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0f262b67b82b080bffaa407d07522cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f262b67b82b080bffaa407d07522cad">&#9670;&nbsp;</a></span>sdepth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::sdepth = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1d89ef6260c8b91efb54ab2a92690c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d89ef6260c8b91efb54ab2a92690c71">&#9670;&nbsp;</a></span>sqdepth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::sqdepth = -1 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0bd30d74bcc3d062f08aca5eb296c05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0bd30d74bcc3d062f08aca5eb296c05e">&#9670;&nbsp;</a></span>sqsum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> cv::sqsum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa012757b1a6536a1a3ef813a0aba1c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa012757b1a6536a1a3ef813a0aba1c1e">&#9670;&nbsp;</a></span>sum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> cv::sum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4870865602cfcaa9ec49ef774d0a721b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4870865602cfcaa9ec49ef774d0a721b">&#9670;&nbsp;</a></span>tilted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> cv::tilted</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

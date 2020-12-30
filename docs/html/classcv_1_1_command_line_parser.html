@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::CommandLineParser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_command_line_parser.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classcv_1_1_command_line_parser-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::CommandLineParser<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__utils.html">Utility and system functions and macros</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Designed for command line parsing.  
+ <a href="classcv_1_1_command_line_parser.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_2utility_8hpp_source.html">utility.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad0bb71c0bc9800e90bfdc44ff406293e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#ad0bb71c0bc9800e90bfdc44ff406293e">CommandLineParser</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga4ee2a7de047a0a236fe118a35e8f76a4">argc</a>, const char *const <a class="el" href="group__highgui__c.html#ga1b5d2a82062528707ab3855772528912">argv</a>[], const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;keys)</td></tr>
+<tr class="memdesc:ad0bb71c0bc9800e90bfdc44ff406293e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classcv_1_1_command_line_parser.html#ad0bb71c0bc9800e90bfdc44ff406293e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad0bb71c0bc9800e90bfdc44ff406293e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614095229293b2ab780cadd41a83313a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a614095229293b2ab780cadd41a83313a">CommandLineParser</a> (const <a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a> &amp;parser)</td></tr>
+<tr class="memdesc:a614095229293b2ab780cadd41a83313a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="classcv_1_1_command_line_parser.html#a614095229293b2ab780cadd41a83313a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a614095229293b2ab780cadd41a83313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7982e6ea32e8653ae0543ff0a81354"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a1b7982e6ea32e8653ae0543ff0a81354">operator=</a> (const <a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a> &amp;parser)</td></tr>
+<tr class="memdesc:a1b7982e6ea32e8653ae0543ff0a81354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="classcv_1_1_command_line_parser.html#a1b7982e6ea32e8653ae0543ff0a81354">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1b7982e6ea32e8653ae0543ff0a81354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92bf68d8b036aad6164d1a5ee51ded01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a92bf68d8b036aad6164d1a5ee51ded01">~CommandLineParser</a> ()</td></tr>
+<tr class="memdesc:a92bf68d8b036aad6164d1a5ee51ded01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classcv_1_1_command_line_parser.html#a92bf68d8b036aad6164d1a5ee51ded01">Подробнее...</a><br /></td></tr>
+<tr class="separator:a92bf68d8b036aad6164d1a5ee51ded01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19086a9bc59b7e3d943ea13b0a9fcb7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a19086a9bc59b7e3d943ea13b0a9fcb7e">getPathToApplication</a> () const</td></tr>
+<tr class="memdesc:a19086a9bc59b7e3d943ea13b0a9fcb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns application path.  <a href="classcv_1_1_command_line_parser.html#a19086a9bc59b7e3d943ea13b0a9fcb7e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a19086a9bc59b7e3d943ea13b0a9fcb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190215863579a6d244dccfd261ee0224"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a190215863579a6d244dccfd261ee0224"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a190215863579a6d244dccfd261ee0224">get</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name, bool space_delete=true) const</td></tr>
+<tr class="memdesc:a190215863579a6d244dccfd261ee0224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access arguments by name.  <a href="classcv_1_1_command_line_parser.html#a190215863579a6d244dccfd261ee0224">Подробнее...</a><br /></td></tr>
+<tr class="separator:a190215863579a6d244dccfd261ee0224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f2b13d84edfc54aed723fb170478b9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a60f2b13d84edfc54aed723fb170478b9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a60f2b13d84edfc54aed723fb170478b9">get</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#ga750b5d744c39a06bfb13e6eb010e35d0">index</a>, bool space_delete=true) const</td></tr>
+<tr class="memdesc:a60f2b13d84edfc54aed723fb170478b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access positional arguments by index.  <a href="classcv_1_1_command_line_parser.html#a60f2b13d84edfc54aed723fb170478b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60f2b13d84edfc54aed723fb170478b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c41cf242b2ad8c0472e3b57893ef200"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a8c41cf242b2ad8c0472e3b57893ef200">has</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name) const</td></tr>
+<tr class="memdesc:a8c41cf242b2ad8c0472e3b57893ef200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if field was provided in the command line.  <a href="classcv_1_1_command_line_parser.html#a8c41cf242b2ad8c0472e3b57893ef200">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8c41cf242b2ad8c0472e3b57893ef200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b244a52f3b90da6fc463341c8a486f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#ad6b244a52f3b90da6fc463341c8a486f">check</a> () const</td></tr>
+<tr class="memdesc:ad6b244a52f3b90da6fc463341c8a486f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for parsing errors.  <a href="classcv_1_1_command_line_parser.html#ad6b244a52f3b90da6fc463341c8a486f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad6b244a52f3b90da6fc463341c8a486f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e11e779047efded23f75d9c5c5dd82e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a2e11e779047efded23f75d9c5c5dd82e">about</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;message)</td></tr>
+<tr class="memdesc:a2e11e779047efded23f75d9c5c5dd82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the about message.  <a href="classcv_1_1_command_line_parser.html#a2e11e779047efded23f75d9c5c5dd82e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2e11e779047efded23f75d9c5c5dd82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cda3794b765332bfe43bf8367222fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a84cda3794b765332bfe43bf8367222fb">printMessage</a> () const</td></tr>
+<tr class="memdesc:a84cda3794b765332bfe43bf8367222fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print help message.  <a href="classcv_1_1_command_line_parser.html#a84cda3794b765332bfe43bf8367222fb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84cda3794b765332bfe43bf8367222fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c31969ec5259b8c093d11a80c34f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a70c31969ec5259b8c093d11a80c34f9f">printErrors</a> () const</td></tr>
+<tr class="memdesc:a70c31969ec5259b8c093d11a80c34f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print list of errors occurred.  <a href="classcv_1_1_command_line_parser.html#a70c31969ec5259b8c093d11a80c34f9f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70c31969ec5259b8c093d11a80c34f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aafea72a2d5d225a40e78679cdc89cefb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#aafea72a2d5d225a40e78679cdc89cefb">getByName</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name, bool space_delete, <a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">Param</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>) const</td></tr>
+<tr class="separator:aafea72a2d5d225a40e78679cdc89cefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbf3174ab2291e3643be49f5cfb09e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a5bbf3174ab2291e3643be49f5cfb09e6">getByIndex</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#ga750b5d744c39a06bfb13e6eb010e35d0">index</a>, bool space_delete, <a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">Param</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>) const</td></tr>
+<tr class="separator:a5bbf3174ab2291e3643be49f5cfb09e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a4f1f41fd43c10f0fd10e631f5dc60b6c"><td class="memItemLeft" align="right" valign="top">Impl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_command_line_parser.html#a4f1f41fd43c10f0fd10e631f5dc60b6c">impl</a></td></tr>
+<tr class="separator:a4f1f41fd43c10f0fd10e631f5dc60b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Designed for command line parsing. </p>
+<p>The sample below demonstrates how to use <a class="el" href="classcv_1_1_command_line_parser.html" title="Designed for command line parsing.">CommandLineParser</a>: </p><div class="fragment"><div class="line"><a class="code" href="classcv_1_1_command_line_parser.html#ad0bb71c0bc9800e90bfdc44ff406293e">CommandLineParser</a> parser(<a class="code" href="group__highgui__c.html#ga4ee2a7de047a0a236fe118a35e8f76a4">argc</a>, <a class="code" href="group__highgui__c.html#ga1b5d2a82062528707ab3855772528912">argv</a>, keys);</div>
+<div class="line">parser.about(<span class="stringliteral">&quot;Application name v1.0.0&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;help&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    parser.printMessage();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> N = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;N&quot;</span>);</div>
+<div class="line"><span class="keywordtype">double</span> <a class="code" href="group__videoio__c.html#gadbca5b692e9ace76ccf02d9c621ee228">fps</a> = parser.get&lt;<span class="keywordtype">double</span>&gt;(<span class="stringliteral">&quot;fps&quot;</span>);</div>
+<div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> path = parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(<span class="stringliteral">&quot;path&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">use_time_stamp = parser.has(<span class="stringliteral">&quot;timestamp&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> img1 = parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(0);</div>
+<div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> <a class="code" href="group__features2d__draw.html#ga90c11ede268971f34650f8d2b1defcc8">img2</a> = parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(1);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="group__core__array.html#ga9402c7c265201d5bba80e048e1fdf3cf">repeat</a> = parser.get&lt;<span class="keywordtype">int</span>&gt;(2);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!parser.check())</div>
+<div class="line">{</div>
+<div class="line">    parser.printErrors();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasscv_1_1_command_line_parser_html_ad0bb71c0bc9800e90bfdc44ff406293e"><div class="ttname"><a href="classcv_1_1_command_line_parser.html#ad0bb71c0bc9800e90bfdc44ff406293e">cv::CommandLineParser::CommandLineParser</a></div><div class="ttdeci">CommandLineParser(int argc, const char *const argv[], const String &amp;keys)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="agroup__core__array_html_ga9402c7c265201d5bba80e048e1fdf3cf"><div class="ttname"><a href="group__core__array.html#ga9402c7c265201d5bba80e048e1fdf3cf">cv::repeat</a></div><div class="ttdeci">CV_EXPORTS_W void repeat(InputArray src, int ny, int nx, OutputArray dst)</div><div class="ttdoc">Fills the output array with repeated copies of the input array.</div></div>
+<div class="ttc" id="agroup__core__basic_html_ga1f6634802eeadfd7245bc75cf3e216c2"><div class="ttname"><a href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">cv::String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> cvstd.hpp:152</div></div>
+<div class="ttc" id="agroup__features2d__draw_html_ga90c11ede268971f34650f8d2b1defcc8"><div class="ttname"><a href="group__features2d__draw.html#ga90c11ede268971f34650f8d2b1defcc8">cv::img2</a></div><div class="ttdeci">const std::vector&lt; KeyPoint &gt; InputArray img2</div><div class="ttdef"><b>Definition:</b> features2d.hpp:1359</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga1b5d2a82062528707ab3855772528912"><div class="ttname"><a href="group__highgui__c.html#ga1b5d2a82062528707ab3855772528912">argv</a></div><div class="ttdeci">char * argv[]</div><div class="ttdef"><b>Definition:</b> highgui_c.h:86</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga4ee2a7de047a0a236fe118a35e8f76a4"><div class="ttname"><a href="group__highgui__c.html#ga4ee2a7de047a0a236fe118a35e8f76a4">argc</a></div><div class="ttdeci">char int argc</div><div class="ttdef"><b>Definition:</b> highgui_c.h:86</div></div>
+<div class="ttc" id="agroup__videoio__c_html_gadbca5b692e9ace76ccf02d9c621ee228"><div class="ttname"><a href="group__videoio__c.html#gadbca5b692e9ace76ccf02d9c621ee228">fps</a></div><div class="ttdeci">int double fps</div><div class="ttdef"><b>Definition:</b> videoio_c.h:126</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md39"></a>
+Keys syntax</h3>
+<p>The keys parameter is a string containing several blocks, each one is enclosed in curly braces and describes one argument. Each argument contains three parts separated by the <code>|</code> symbol:</p>
+<ol type="1">
+<li>argument names is a space-separated list of option synonyms (to mark argument as positional, prefix it with the <code>@</code> symbol)</li>
+<li>default value will be used if the argument was not provided (can be empty)</li>
+<li>help message (can be empty)</li>
+</ol>
+<p>For example:</p>
+<div class="fragment"><div class="line">    <span class="keyword">const</span> <a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> keys =</div>
+<div class="line">        <span class="stringliteral">&quot;{help h usage ? |      | print this message   }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{@image1        |      | image1 for compare   }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{@image2        |&lt;none&gt;| image2 for compare   }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{@repeat        |1     | number               }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{path           |.     | path to file         }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{fps            | -1.0 | fps for output video }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{N count        |100   | count of objects     }&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;{ts timestamp   |      | use time stamp       }&quot;</span></div>
+<div class="line">        ;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note that there are no default values for <code>help</code> and <code>timestamp</code> so we can check their presence using the <code><a class="el" href="classcv_1_1_command_line_parser.html#a8c41cf242b2ad8c0472e3b57893ef200" title="Check if field was provided in the command line.">has()</a></code> method. Arguments with default values are considered to be always present. Use the <code><a class="el" href="classcv_1_1_command_line_parser.html#a190215863579a6d244dccfd261ee0224" title="Access arguments by name.">get()</a></code> method in these cases to check their actual value instead.</p>
+<p>String keys like <code>get&lt;String&gt;("@image1")</code> return the empty string <code>""</code> by default - even with an empty default value. Use the special <code>&lt;none&gt;</code> default value to enforce that the returned string must not be empty. (like in <code>get&lt;String&gt;("@image2")</code>)</p>
+<h3><a class="anchor" id="autotoc_md40"></a>
+Usage</h3>
+<p>For the described keys:</p>
+<div class="fragment"><div class="line"># Good call (3 positional parameters: image1, image2 and repeat; N is 200, ts is true)</div>
+<div class="line">$ ./app -N=200 1.png 2.jpg 19 -ts</div>
+<div class="line"> </div>
+<div class="line"># Bad call</div>
+<div class="line">$ ./app -fps=aaa</div>
+<div class="line">ERRORS:</div>
+<div class="line">Parameter &#39;fps&#39;: can not convert: [aaa] to [double]</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ad0bb71c0bc9800e90bfdc44ff406293e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0bb71c0bc9800e90bfdc44ff406293e">&#9670;&nbsp;</a></span>CommandLineParser() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CommandLineParser::CommandLineParser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Initializes command line parser object</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>number of command line arguments (from <a class="el" href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>) </td></tr>
+    <tr><td class="paramname">argv</td><td>array of command line arguments (from <a class="el" href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>) </td></tr>
+    <tr><td class="paramname">keys</td><td>string describing acceptable command line parameters (see class description for syntax) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a614095229293b2ab780cadd41a83313a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614095229293b2ab780cadd41a83313a">&#9670;&nbsp;</a></span>CommandLineParser() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CommandLineParser::CommandLineParser </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a> &amp;&#160;</td>
+          <td class="paramname"><em>parser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="a92bf68d8b036aad6164d1a5ee51ded01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92bf68d8b036aad6164d1a5ee51ded01">&#9670;&nbsp;</a></span>~CommandLineParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CommandLineParser::~CommandLineParser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2e11e779047efded23f75d9c5c5dd82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e11e779047efded23f75d9c5c5dd82e">&#9670;&nbsp;</a></span>about()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CommandLineParser::about </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the about message. </p>
+<p>The about message will be shown when <a class="el" href="classcv_1_1_command_line_parser.html#a84cda3794b765332bfe43bf8367222fb">printMessage</a> is called, right before arguments table. </p>
+
+</div>
+</div>
+<a id="ad6b244a52f3b90da6fc463341c8a486f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b244a52f3b90da6fc463341c8a486f">&#9670;&nbsp;</a></span>check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::CommandLineParser::check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for parsing errors. </p>
+<p>Returns false if error occurred while accessing the parameters (bad conversion, missing arguments, etc.). Call <a class="el" href="classcv_1_1_command_line_parser.html#a70c31969ec5259b8c093d11a80c34f9f">printErrors</a> to print error messages list. </p>
+
+</div>
+</div>
+<a id="a190215863579a6d244dccfd261ee0224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190215863579a6d244dccfd261ee0224">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> cv::CommandLineParser::get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_delete</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access arguments by name. </p>
+<p>Returns argument converted to selected type. If the argument is not known or can not be converted to selected type, the error flag is set (can be checked with <a class="el" href="classcv_1_1_command_line_parser.html#ad6b244a52f3b90da6fc463341c8a486f">check</a>).</p>
+<p>For example, define: </p><div class="fragment"><div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> keys = <span class="stringliteral">&quot;{N count||}&quot;</span>;</div>
+</div><!-- fragment --><p>Call: </p><div class="fragment"><div class="line">$ ./my-app -N=20</div>
+<div class="line"># or</div>
+<div class="line">$ ./my-app --count=20</div>
+</div><!-- fragment --><p>Access: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> N = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;N&quot;</span>);</div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>name of the argument </td></tr>
+    <tr><td class="paramname">space_delete</td><td>remove spaces from the left and right of the string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the argument will be converted to this type if possible</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>You can access positional arguments by their <code>@</code>-prefixed name: <div class="fragment"><div class="line">parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(<span class="stringliteral">&quot;@image&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a60f2b13d84edfc54aed723fb170478b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f2b13d84edfc54aed723fb170478b9">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> cv::CommandLineParser::get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_delete</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access positional arguments by index. </p>
+<p>Returns argument converted to selected type. Indexes are counted from zero.</p>
+<p>For example, define: </p><div class="fragment"><div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> keys = <span class="stringliteral">&quot;{@arg1||}{@arg2||}&quot;</span></div>
+</div><!-- fragment --><p>Call: </p><div class="fragment"><div class="line">./my-app abc qwe</div>
+</div><!-- fragment --><p>Access arguments: </p><div class="fragment"><div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> val_1 = parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(0); <span class="comment">// returns &quot;abc&quot;, arg1</span></div>
+<div class="line"><a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> val_2 = parser.get&lt;<a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt;(1); <span class="comment">// returns &quot;qwe&quot;, arg2</span></div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of the argument </td></tr>
+    <tr><td class="paramname">space_delete</td><td>remove spaces from the left and right of the string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the argument will be converted to this type if possible </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5bbf3174ab2291e3643be49f5cfb09e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbf3174ab2291e3643be49f5cfb09e6">&#9670;&nbsp;</a></span>getByIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CommandLineParser::getByIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_delete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">Param</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafea72a2d5d225a40e78679cdc89cefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafea72a2d5d225a40e78679cdc89cefb">&#9670;&nbsp;</a></span>getByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CommandLineParser::getByName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_delete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">Param</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19086a9bc59b7e3d943ea13b0a9fcb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19086a9bc59b7e3d943ea13b0a9fcb7e">&#9670;&nbsp;</a></span>getPathToApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> cv::CommandLineParser::getPathToApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns application path. </p>
+<p>This method returns the path to the executable from the command line (<code>argv[0]</code>).</p>
+<p>For example, if the application has been started with such a command: </p><div class="fragment"><div class="line">$ ./bin/my-executable</div>
+</div><!-- fragment --><p> this method will return <code>./bin</code>. </p>
+
+</div>
+</div>
+<a id="a8c41cf242b2ad8c0472e3b57893ef200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c41cf242b2ad8c0472e3b57893ef200">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::CommandLineParser::has </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if field was provided in the command line. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>argument name to check </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b7982e6ea32e8653ae0543ff0a81354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7982e6ea32e8653ae0543ff0a81354">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a>&amp; cv::CommandLineParser::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a> &amp;&#160;</td>
+          <td class="paramname"><em>parser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+</div>
+</div>
+<a id="a70c31969ec5259b8c093d11a80c34f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c31969ec5259b8c093d11a80c34f9f">&#9670;&nbsp;</a></span>printErrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CommandLineParser::printErrors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print list of errors occurred. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_command_line_parser.html#ad6b244a52f3b90da6fc463341c8a486f" title="Check for parsing errors.">check</a> </dd></dl>
+
+</div>
+</div>
+<a id="a84cda3794b765332bfe43bf8367222fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84cda3794b765332bfe43bf8367222fb">&#9670;&nbsp;</a></span>printMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CommandLineParser::printMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print help message. </p>
+<p>This method will print standard help message containing the about message and arguments description.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_command_line_parser.html#a2e11e779047efded23f75d9c5c5dd82e" title="Set the about message.">about</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a4f1f41fd43c10f0fd10e631f5dc60b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1f41fd43c10f0fd10e631f5dc60b6c">&#9670;&nbsp;</a></span>impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Impl* cv::CommandLineParser::impl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2utility_8hpp_source.html">utility.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_command_line_parser.html">CommandLineParser</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::GComputation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_g_computation.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classcv_1_1_g_computation-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::GComputation<div class="ingroups"><a class="el" href="group__gapi.html">G-API framework</a> &raquo; <a class="el" href="group__gapi__main__classes.html">G-API Main Classes</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> class represents a captured computation graph. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> objects form boundaries for expression code user writes with G-API, allowing to compile and execute it.  
+ <a href="classcv_1_1_g_computation.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="gcomputation_8hpp_source.html">gcomputation.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a28abdcac12137b03f6c4a4eb3ea504ee"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="classcv_1_1_g_computation.html">GComputation</a>()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a28abdcac12137b03f6c4a4eb3ea504ee">Generator</a></td></tr>
+<tr class="separator:a28abdcac12137b03f6c4a4eb3ea504ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a40c06a5481ce8e9277b7ac870c275351"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a40c06a5481ce8e9277b7ac870c275351">GComputation</a> (const <a class="el" href="classcv_1_1_g_computation.html#a28abdcac12137b03f6c4a4eb3ea504ee">Generator</a> &amp;gen)</td></tr>
+<tr class="memdesc:a40c06a5481ce8e9277b7ac870c275351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a computation using a generator function.  <a href="classcv_1_1_g_computation.html#a40c06a5481ce8e9277b7ac870c275351">Подробнее...</a><br /></td></tr>
+<tr class="separator:a40c06a5481ce8e9277b7ac870c275351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066ac0afde476a16178268aef300aa58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a066ac0afde476a16178268aef300aa58">GComputation</a> (<a class="el" href="namespacecv.html#a94492d40d5a1d1b65cd7c1feca85a2ac">GProtoInputArgs</a> &amp;&amp;ins, <a class="el" href="namespacecv.html#a55216f8dcda54eef1b70f5c2063117af">GProtoOutputArgs</a> &amp;&amp;outs)</td></tr>
+<tr class="memdesc:a066ac0afde476a16178268aef300aa58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> constructor.  <a href="classcv_1_1_g_computation.html#a066ac0afde476a16178268aef300aa58">Подробнее...</a><br /></td></tr>
+<tr class="separator:a066ac0afde476a16178268aef300aa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb88a918758ebab829d2775750fd237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a9fb88a918758ebab829d2775750fd237">GComputation</a> (<a class="el" href="classcv_1_1_g_mat.html">GMat</a> in, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> out)</td></tr>
+<tr class="memdesc:a9fb88a918758ebab829d2775750fd237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an unary (one input &ndash; one output) computation.  <a href="classcv_1_1_g_computation.html#a9fb88a918758ebab829d2775750fd237">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9fb88a918758ebab829d2775750fd237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147325170a3941d9d4d3b29bef5dfb36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a147325170a3941d9d4d3b29bef5dfb36">GComputation</a> (<a class="el" href="classcv_1_1_g_mat.html">GMat</a> in, <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> out)</td></tr>
+<tr class="memdesc:a147325170a3941d9d4d3b29bef5dfb36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an unary (one input &ndash; one output) computation.  <a href="classcv_1_1_g_computation.html#a147325170a3941d9d4d3b29bef5dfb36">Подробнее...</a><br /></td></tr>
+<tr class="separator:a147325170a3941d9d4d3b29bef5dfb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5fba1995ca2d0a86a34d862ec7cc71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a6d5fba1995ca2d0a86a34d862ec7cc71">GComputation</a> (<a class="el" href="classcv_1_1_g_mat.html">GMat</a> in1, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> in2, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> out)</td></tr>
+<tr class="memdesc:a6d5fba1995ca2d0a86a34d862ec7cc71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a binary (two inputs &ndash; one output) computation.  <a href="classcv_1_1_g_computation.html#a6d5fba1995ca2d0a86a34d862ec7cc71">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d5fba1995ca2d0a86a34d862ec7cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa1d7ef9fe93241cdb0cc119ccdce4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aefa1d7ef9fe93241cdb0cc119ccdce4b">GComputation</a> (<a class="el" href="classcv_1_1_g_mat.html">GMat</a> in1, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> in2, <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> out)</td></tr>
+<tr class="memdesc:aefa1d7ef9fe93241cdb0cc119ccdce4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a binary (two inputs &ndash; one output) computation.  <a href="classcv_1_1_g_computation.html#aefa1d7ef9fe93241cdb0cc119ccdce4b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aefa1d7ef9fe93241cdb0cc119ccdce4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20ff09a9522ef4203266d3bc5bb52e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#ad20ff09a9522ef4203266d3bc5bb52e9">GComputation</a> (const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;ins, const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;outs)</td></tr>
+<tr class="memdesc:ad20ff09a9522ef4203266d3bc5bb52e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a computation with arbitrary input/output number.  <a href="classcv_1_1_g_computation.html#ad20ff09a9522ef4203266d3bc5bb52e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad20ff09a9522ef4203266d3bc5bb52e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25bc73f7cba9bb2f9992edaa248f868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868">apply</a> (<a class="el" href="namespacecv.html#a3d9c032e5fe7892151570efc6ac08e51">GRunArgs</a> &amp;&amp;ins, <a class="el" href="namespacecv.html#a54832d96bd6bdd570c7ceb4127f6cad1">GRunArgsP</a> &amp;&amp;outs, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:aa25bc73f7cba9bb2f9992edaa248f868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile graph on-the-fly and immediately execute it on the inputs data vectors.  <a href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa25bc73f7cba9bb2f9992edaa248f868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd7a4d5103eafc398ebd15564ee059e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aafd7a4d5103eafc398ebd15564ee059e">apply</a> (<a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in, <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;out, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:aafd7a4d5103eafc398ebd15564ee059e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an unary computation (with compilation on the fly)  <a href="classcv_1_1_g_computation.html#aafd7a4d5103eafc398ebd15564ee059e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aafd7a4d5103eafc398ebd15564ee059e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12fd86d3cc5140df37d6a8aa0a0f7230"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a12fd86d3cc5140df37d6a8aa0a0f7230">apply</a> (<a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;out, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:a12fd86d3cc5140df37d6a8aa0a0f7230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an unary computation (with compilation on the fly)  <a href="classcv_1_1_g_computation.html#a12fd86d3cc5140df37d6a8aa0a0f7230">Подробнее...</a><br /></td></tr>
+<tr class="separator:a12fd86d3cc5140df37d6a8aa0a0f7230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35660e432c5ec676fe2830eb8a9651b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#ad35660e432c5ec676fe2830eb8a9651b">apply</a> (<a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in1, <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in2, <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;out, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:ad35660e432c5ec676fe2830eb8a9651b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a binary computation (with compilation on the fly)  <a href="classcv_1_1_g_computation.html#ad35660e432c5ec676fe2830eb8a9651b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad35660e432c5ec676fe2830eb8a9651b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb4b830d5cdf6891470a3b111b0e619"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a4eb4b830d5cdf6891470a3b111b0e619">apply</a> (<a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in1, <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> in2, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;out, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:a4eb4b830d5cdf6891470a3b111b0e619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an binary computation (with compilation on the fly)  <a href="classcv_1_1_g_computation.html#a4eb4b830d5cdf6891470a3b111b0e619">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4eb4b830d5cdf6891470a3b111b0e619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacdf438026f43ec0db3d84e5b02d340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#acacdf438026f43ec0db3d84e5b02d340">apply</a> (const std::vector&lt; <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &gt; &amp;ins, std::vector&lt; <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &gt; &amp;outs, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:acacdf438026f43ec0db3d84e5b02d340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a computation with arbitrary number of inputs/outputs (with compilation on-the-fly).  <a href="classcv_1_1_g_computation.html#acacdf438026f43ec0db3d84e5b02d340">Подробнее...</a><br /></td></tr>
+<tr class="separator:acacdf438026f43ec0db3d84e5b02d340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11bcc0578f9aa5ec8f8eaf6cda0dfa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8">compile</a> (<a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;in_metas, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:ab11bcc0578f9aa5ec8f8eaf6cda0dfa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the computation for specific input format(s).  <a href="classcv_1_1_g_computation.html#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab11bcc0578f9aa5ec8f8eaf6cda0dfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c996ca8f04d5809b82191aae04a34ac"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a3c996ca8f04d5809b82191aae04a34ac"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a3c996ca8f04d5809b82191aae04a34ac">compile</a> (const Ts &amp;... metas) -&gt; typename std::enable_if&lt; <a class="el" href="namespacecv_1_1detail.html#aa9a2d974aa7c71968bfd9649ee903a36">detail::are_meta_descrs</a>&lt; Ts... &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a> &gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a></td></tr>
+<tr class="separator:a3c996ca8f04d5809b82191aae04a34ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a31579919bfba49316f27093829abc"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a86a31579919bfba49316f27093829abc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a86a31579919bfba49316f27093829abc">compile</a> (const Ts &amp;... meta_and_compile_args) -&gt; typename std::enable_if&lt; <a class="el" href="namespacecv_1_1detail.html#a573723d31cccc765fe39151fe46a3649">detail::are_meta_descrs_but_last</a>&lt; Ts... &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a> &amp;&amp;std::is_same&lt; <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a>, <a class="el" href="namespacecv_1_1detail.html#a54c86c866fa8c3de8a26cbbeaa22927f">detail::last_type_t</a>&lt; Ts... &gt; &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a> &gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a></td></tr>
+<tr class="separator:a86a31579919bfba49316f27093829abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca95fd621853e8a77eff5515bc1a4c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aca95fd621853e8a77eff5515bc1a4c75">compileStreaming</a> (<a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;in_metas, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:aca95fd621853e8a77eff5515bc1a4c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the computation for streaming mode.  <a href="classcv_1_1_g_computation.html#aca95fd621853e8a77eff5515bc1a4c75">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca95fd621853e8a77eff5515bc1a4c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0eedf58f125efd3fe9ce61cebe6cfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aad0eedf58f125efd3fe9ce61cebe6cfa">compileStreaming</a> (<a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args={})</td></tr>
+<tr class="memdesc:aad0eedf58f125efd3fe9ce61cebe6cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the computation for streaming mode.  <a href="classcv_1_1_g_computation.html#aad0eedf58f125efd3fe9ce61cebe6cfa">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad0eedf58f125efd3fe9ce61cebe6cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadc813c176e6a992c76e51d07090cef"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:aaadc813c176e6a992c76e51d07090cef"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aaadc813c176e6a992c76e51d07090cef">compileStreaming</a> (const Ts &amp;... metas) -&gt; typename std::enable_if&lt; <a class="el" href="namespacecv_1_1detail.html#aa9a2d974aa7c71968bfd9649ee903a36">detail::are_meta_descrs</a>&lt; Ts... &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a> &gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a></td></tr>
+<tr class="separator:aaadc813c176e6a992c76e51d07090cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a3cae818b02d21ace48f348cb88a0a"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:aa2a3cae818b02d21ace48f348cb88a0a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#aa2a3cae818b02d21ace48f348cb88a0a">compileStreaming</a> (const Ts &amp;... meta_and_compile_args) -&gt; typename std::enable_if&lt; <a class="el" href="namespacecv_1_1detail.html#a573723d31cccc765fe39151fe46a3649">detail::are_meta_descrs_but_last</a>&lt; Ts... &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a> &amp;&amp;std::is_same&lt; <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a>, <a class="el" href="namespacecv_1_1detail.html#a54c86c866fa8c3de8a26cbbeaa22927f">detail::last_type_t</a>&lt; Ts... &gt; &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a> &gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a></td></tr>
+<tr class="separator:aa2a3cae818b02d21ace48f348cb88a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a731e812ec6ba458983dc10cc0df40325"><td class="memTemplParams" colspan="2">template&lt;typename... Ts, int... IIs&gt; </td></tr>
+<tr class="memitem:a731e812ec6ba458983dc10cc0df40325"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a731e812ec6ba458983dc10cc0df40325">compileStreaming</a> (const std::tuple&lt; Ts... &gt; &amp;meta_and_compile_args, detail::Seq&lt; IIs... &gt;)</td></tr>
+<tr class="separator:a731e812ec6ba458983dc10cc0df40325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81667be7e7b03f8bcc534fa35e8e475e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_computation.html#a81667be7e7b03f8bcc534fa35e8e475e">recompile</a> (<a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;in_metas, <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;args)</td></tr>
+<tr class="separator:a81667be7e7b03f8bcc534fa35e8e475e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> class represents a captured computation graph. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> objects form boundaries for expression code user writes with G-API, allowing to compile and execute it. </p>
+<p>G-API computations are defined with input/output data objects. G-API will track automatically which operations connect specified outputs to the inputs, forming up a call graph to be executed. The below example expresses calculation of Sobel operator for edge detection ( <img class="formulaInl" alt="$G = \sqrt{G_x^2 + G_y^2}$" src="form_605.png"/>):</p>
+<div class="fragment"></div><!-- fragment --><p> Full pipeline can be now captured with this object declaration:</p>
+<div class="fragment"></div><!-- fragment --><p> Input/output data objects on which a call graph should be reconstructed are passed using special wrappers <a class="el" href="namespacecv.html#a8e40d34081b18c79ba4c3cfb9fd0634f">cv::GIn</a> and <a class="el" href="namespacecv.html#adaa9a308669926cecc4793c6e4449629">cv::GOut</a>. G-API will track automatically which operations form a path from inputs to outputs and build the execution graph appropriately.</p>
+<p>Note that <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">cv::GComputation</a> doesn't take ownership on data objects it is defined. Moreover, multiple <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> objects may be defined on the same expressions, e.g. a smaller pipeline which expects that image gradients are already pre-calculated may be defined like this:</p>
+<div class="fragment"></div><!-- fragment --><p> The resulting graph would expect two inputs and produce one output. In this case, it doesn't matter if gx/gy data objects are results of <a class="el" href="group__gapi__filters.html#ga62e05c074bb893d0bed2b22961cca59e" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">cv::gapi::Sobel</a> operators &ndash; G-API will stop unrolling expressions and building the underlying graph one reaching this data objects.</p>
+<p>The way how <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> is defined is important as its definition specifies graph <em>protocol</em> &ndash; the way how the graph should be used. Protocol is defined by number of inputs, number of outputs, and shapes of inputs and outputs.</p>
+<p>In the above example, sobelEdge expects one <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> on input and produces one <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>; while sobelEdgeSub expects two Mats on input and produces one <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a>'s protocol defines how other computation methods should be used &ndash; <a class="el" href="classcv_1_1_g_computation.html#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8" title="Compile the computation for specific input format(s).">cv::GComputation::compile()</a> and <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">cv::GComputation::apply()</a>. For example, if a graph is defined on two <a class="el" href="classcv_1_1_g_mat.html">GMat</a> inputs, two <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> objects have to be passed to <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">apply()</a> for execution. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> checks protocol correctness in runtime so passing a different number of objects in <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">apply()</a> or passing <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> instead of <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> there would compile well as a C++ source but raise an exception in run-time. G-API also comes with a typed wrapper cv::GComputationT&lt;&gt; which introduces this type-checking in compile-time.</p>
+<p><a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">cv::GComputation</a> itself is a thin object which just captures what the graph is. The compiled graph (which actually process data) is represented by class <a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a>. Use <a class="el" href="classcv_1_1_g_computation.html#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8" title="Compile the computation for specific input format(s).">compile()</a> method to generate a compiled graph with given compile options. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">cv::GComputation</a> can also be used to process data with implicit graph compilation on-the-fly, see <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">apply()</a> for details.</p>
+<p><a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> is a reference-counted object &ndash; once defined, all its copies will refer to the same instance.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a> </dd></dl>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a28abdcac12137b03f6c4a4eb3ea504ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28abdcac12137b03f6c4a4eb3ea504ee">&#9670;&nbsp;</a></span>Generator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;<a class="el" href="classcv_1_1_g_computation.html">GComputation</a>()&gt; <a class="el" href="classcv_1_1_g_computation.html#a28abdcac12137b03f6c4a4eb3ea504ee">cv::GComputation::Generator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a40c06a5481ce8e9277b7ac870c275351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c06a5481ce8e9277b7ac870c275351">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_computation.html#a28abdcac12137b03f6c4a4eb3ea504ee">Generator</a> &amp;&#160;</td>
+          <td class="paramname"><em>gen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a computation using a generator function. </p>
+<p>Graph can be defined in-place directly at the moment of its construction with a lambda:</p>
+<div class="fragment"></div><!-- fragment --><p> This may be useful since all temporary objects (cv::GMats) and namespaces can be localized to scope of lambda, without contaminating the parent scope with probably unnecessary objects and information.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gen</td><td>generator function which returns a <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">cv::GComputation</a>, see Generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a066ac0afde476a16178268aef300aa58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066ac0afde476a16178268aef300aa58">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a94492d40d5a1d1b65cd7c1feca85a2ac">GProtoInputArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>ins</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a55216f8dcda54eef1b70f5c2063117af">GProtoOutputArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>outs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generic <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a> constructor. </p>
+<p>Constructs a new graph with a given protocol, specified as a flow of operations connecting input/output objects. Throws if the passed boundaries are invalid, e.g. if there's no functional dependency (path) between given outputs and inputs.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ins</td><td>Input data vector. </td></tr>
+    <tr><td class="paramname">outs</td><td>Output data vector.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Don't construct GProtoInputArgs/GProtoOutputArgs objects directly, use <a class="el" href="namespacecv.html#a8e40d34081b18c79ba4c3cfb9fd0634f">cv::GIn()</a>/cv<a class="el" href="namespacecv.html#adaa9a308669926cecc4793c6e4449629">GOut()</a> wrapper functions instead.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__data__objects.html">G-API Data Types</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9fb88a918758ebab829d2775750fd237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb88a918758ebab829d2775750fd237">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines an unary (one input &ndash; one output) computation. </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined unary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined unary computation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a147325170a3941d9d4d3b29bef5dfb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147325170a3941d9d4d3b29bef5dfb36">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines an unary (one input &ndash; one output) computation. </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined unary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> of the defined unary computation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d5fba1995ca2d0a86a34d862ec7cc71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5fba1995ca2d0a86a34d862ec7cc71">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a binary (two inputs &ndash; one output) computation. </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>first input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined binary computation </td></tr>
+    <tr><td class="paramname">in2</td><td>second input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined binary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined binary computation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefa1d7ef9fe93241cdb0cc119ccdce4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa1d7ef9fe93241cdb0cc119ccdce4b">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a binary (two inputs &ndash; one output) computation. </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>first input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined binary computation </td></tr>
+    <tr><td class="paramname">in2</td><td>second input <a class="el" href="classcv_1_1_g_mat.html">GMat</a> of the defined binary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> of the defined binary computation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad20ff09a9522ef4203266d3bc5bb52e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20ff09a9522ef4203266d3bc5bb52e9">&#9670;&nbsp;</a></span>GComputation() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::GComputation::GComputation </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ins</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a computation with arbitrary input/output number. </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ins</td><td>vector of inputs GMats for this computation </td></tr>
+    <tr><td class="paramname">outs</td><td>vector of outputs GMats for this computation</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Use this overload for cases when number of computation inputs/outputs is not known in compile-time &ndash; e.g. when graph is programmatically generated to build an image pyramid with the given number of levels, etc. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="acacdf438026f43ec0db3d84e5b02d340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acacdf438026f43ec0db3d84e5b02d340">&#9670;&nbsp;</a></span>apply() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ins</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute a computation with arbitrary number of inputs/outputs (with compilation on-the-fly). </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ins</td><td>vector of input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> objects to process by the computation. </td></tr>
+    <tr><td class="paramname">outs</td><td>vector of output <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> objects to produce by the computation. </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for underlying compilation process.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Numbers of elements in ins/outs vectors must match numbers of inputs/outputs which were used to define this <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a>. </p>
+
+</div>
+</div>
+<a id="aafd7a4d5103eafc398ebd15564ee059e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd7a4d5103eafc398ebd15564ee059e">&#9670;&nbsp;</a></span>apply() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute an unary computation (with compilation on the fly) </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for unary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for unary computation </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for underlying compilation process. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12fd86d3cc5140df37d6a8aa0a0f7230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12fd86d3cc5140df37d6a8aa0a0f7230">&#9670;&nbsp;</a></span>apply() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute an unary computation (with compilation on the fly) </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for unary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> for unary computation </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for underlying compilation process. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad35660e432c5ec676fe2830eb8a9651b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35660e432c5ec676fe2830eb8a9651b">&#9670;&nbsp;</a></span>apply() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute a binary computation (with compilation on the fly) </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>first input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for binary computation </td></tr>
+    <tr><td class="paramname">in2</td><td>second input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for binary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for binary computation </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for underlying compilation process. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4eb4b830d5cdf6891470a3b111b0e619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb4b830d5cdf6891470a3b111b0e619">&#9670;&nbsp;</a></span>apply() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a>&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute an binary computation (with compilation on the fly) </p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>first input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for binary computation </td></tr>
+    <tr><td class="paramname">in2</td><td>second input <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for binary computation </td></tr>
+    <tr><td class="paramname">out</td><td>output <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> for binary computation </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for underlying compilation process. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa25bc73f7cba9bb2f9992edaa248f868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25bc73f7cba9bb2f9992edaa248f868">&#9670;&nbsp;</a></span>apply() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a3d9c032e5fe7892151570efc6ac08e51">GRunArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>ins</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a54832d96bd6bdd570c7ceb4127f6cad1">GRunArgsP</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>outs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile graph on-the-fly and immediately execute it on the inputs data vectors. </p>
+<p>Number of input/output data objects must match <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">GComputation</a>'s protocol, also types of host data objects (<a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a>, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a>) must match the shapes of data objects from protocol (<a class="el" href="classcv_1_1_g_mat.html">cv::GMat</a>, <a class="el" href="classcv_1_1_g_scalar.html">cv::GScalar</a>). If there's a mismatch, a run-time exception will be generated.</p>
+<p>Internally, a <a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">cv::GCompiled</a> object is created for the given input format configuration, which then is executed on the input data immediately. <a class="el" href="classcv_1_1_g_computation.html" title="GComputation class represents a captured computation graph. GComputation objects form boundaries for ...">cv::GComputation</a> caches compiled objects produced within <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">apply()</a> &ndash; if this method would be called next time with the same input parameters (image formats, image resolution, etc), the underlying compiled graph will be reused without recompilation. If new metadata doesn't match the cached one, the underlying compiled graph is regenerated.</p>
+<dl class="section note"><dt>Заметки</dt><dd><a class="el" href="classcv_1_1_g_computation.html#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8" title="Compile the computation for specific input format(s).">compile()</a> always triggers a compilation process and produces a new <a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a> object regardless if a similar one has been cached via <a class="el" href="classcv_1_1_g_computation.html#aa25bc73f7cba9bb2f9992edaa248f868" title="Compile graph on-the-fly and immediately execute it on the inputs data vectors.">apply()</a> or not.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ins</td><td>vector of input data to process. Don't create GRunArgs object manually, use <a class="el" href="namespacecv.html#a4941eb8cbe70b8c7187bc8459af7653b">cv::gin()</a> wrapper instead. </td></tr>
+    <tr><td class="paramname">outs</td><td>vector of output data to fill results in. <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> objects may be empty in this vector, G-API will automatically initialize it with the required format &amp; dimensions. Don't create GRunArgsP object manually, use <a class="el" href="namespacecv.html#ac82b8a261b82157293b603b55c096a9e">cv::gout()</a> wrapper instead. </td></tr>
+    <tr><td class="paramname">args</td><td>a list of compilation arguments to pass to the underlying compilation process. Don't create GCompileArgs object manually, use <a class="el" href="group__gapi__compile__args.html#ga3ccf2a52953f18bb3e4c01243cc4e679" title="Wraps a list of arguments (a parameter pack) into a vector of compilation arguments (cv::GCompileArg)...">cv::compile_args()</a> wrapper instead.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__data__objects.html">G-API Data Types</a>, <a class="el" href="group__gapi__compile__args.html">G-API Graph Compilation Arguments</a> </dd></dl>
+
+</div>
+</div>
+<a id="a86a31579919bfba49316f27093829abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86a31579919bfba49316f27093829abc">&#9670;&nbsp;</a></span>compile() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cv::GComputation::compile </td>
+          <td>(</td>
+          <td class="paramtype">const Ts &amp;...&#160;</td>
+          <td class="paramname"><em>meta_and_compile_args</em></td><td>)</td>
+          <td> -&gt; typename std::enable_if&lt;<a class="el" href="namespacecv_1_1detail.html#a573723d31cccc765fe39151fe46a3649">detail::are_meta_descrs_but_last</a>&lt;Ts...&gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>
+                                &amp;&amp; std::is_same&lt;<a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a>, <a class="el" href="namespacecv_1_1detail.html#a54c86c866fa8c3de8a26cbbeaa22927f">detail::last_type_t</a>&lt;Ts...&gt; &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>,
+                                <a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a>&gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced, followed by GCompileArgs object representing compilation arguments for this process.</p>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a>, an executable computation compiled specifically for the given input parameters. </dd></dl>
+
+</div>
+</div>
+<a id="a3c996ca8f04d5809b82191aae04a34ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c996ca8f04d5809b82191aae04a34ac">&#9670;&nbsp;</a></span>compile() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cv::GComputation::compile </td>
+          <td>(</td>
+          <td class="paramtype">const Ts &amp;...&#160;</td>
+          <td class="paramname"><em>metas</em></td><td>)</td>
+          <td> -&gt; typename std::enable_if&lt;<a class="el" href="namespacecv_1_1detail.html#aa9a2d974aa7c71968bfd9649ee903a36">detail::are_meta_descrs</a>&lt;Ts...&gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a>&gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced.</p>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a>, an executable computation compiled specifically for the given input parameters. </dd></dl>
+
+</div>
+</div>
+<a id="ab11bcc0578f9aa5ec8f8eaf6cda0dfa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11bcc0578f9aa5ec8f8eaf6cda0dfa8">&#9670;&nbsp;</a></span>compile() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_g_compiled.html">GCompiled</a> cv::GComputation::compile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in_metas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile the computation for specific input format(s). </p>
+<p>This method triggers compilation process and produces a new <a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a> object which then can process data of the given format. Passing data with different format to the compiled computation will generate a run-time exception.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_metas</td><td>vector of input metadata configuration. Grab metadata from real data objects (like <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> or <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a>) using <a class="el" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">cv::descr_of()</a>, or create it on your own. </td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_compiled.html" title="Represents a compiled computation (graph). Can only be used with image / data formats &amp; resolutions i...">GCompiled</a>, an executable computation compiled specifically for the given input parameters.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__compile__args.html">G-API Graph Compilation Arguments</a> </dd></dl>
+
+</div>
+</div>
+<a id="a731e812ec6ba458983dc10cc0df40325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731e812ec6ba458983dc10cc0df40325">&#9670;&nbsp;</a></span>compileStreaming() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts, int... IIs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a> cv::GComputation::compileStreaming </td>
+          <td>(</td>
+          <td class="paramtype">const std::tuple&lt; Ts... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meta_and_compile_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">detail::Seq&lt; IIs... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2a3cae818b02d21ace48f348cb88a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a3cae818b02d21ace48f348cb88a0a">&#9670;&nbsp;</a></span>compileStreaming() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cv::GComputation::compileStreaming </td>
+          <td>(</td>
+          <td class="paramtype">const Ts &amp;...&#160;</td>
+          <td class="paramname"><em>meta_and_compile_args</em></td><td>)</td>
+          <td> -&gt; typename std::enable_if&lt;<a class="el" href="namespacecv_1_1detail.html#a573723d31cccc765fe39151fe46a3649">detail::are_meta_descrs_but_last</a>&lt;Ts...&gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>
+                                &amp;&amp; std::is_same&lt;<a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a>, <a class="el" href="namespacecv_1_1detail.html#a54c86c866fa8c3de8a26cbbeaa22927f">detail::last_type_t</a>&lt;Ts...&gt; &gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>,
+                                <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a>&gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced, followed by GCompileArgs object representing compilation arguments for this process.</p>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a>, a streaming-oriented executable computation compiled specifically for the given input parameters. </dd></dl>
+
+</div>
+</div>
+<a id="aaadc813c176e6a992c76e51d07090cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaadc813c176e6a992c76e51d07090cef">&#9670;&nbsp;</a></span>compileStreaming() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cv::GComputation::compileStreaming </td>
+          <td>(</td>
+          <td class="paramtype">const Ts &amp;...&#160;</td>
+          <td class="paramname"><em>metas</em></td><td>)</td>
+          <td> -&gt; typename std::enable_if&lt;<a class="el" href="namespacecv_1_1detail.html#aa9a2d974aa7c71968bfd9649ee903a36">detail::are_meta_descrs</a>&lt;Ts...&gt;::<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a>&gt;::<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>
+    </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced.</p>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a>, a streaming-oriented executable computation compiled specifically for the given input parameters. </dd></dl>
+
+</div>
+</div>
+<a id="aad0eedf58f125efd3fe9ce61cebe6cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0eedf58f125efd3fe9ce61cebe6cfa">&#9670;&nbsp;</a></span>compileStreaming() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a> cv::GComputation::compileStreaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile the computation for streaming mode. </p>
+<p>This method triggers compilation process and produces a new <a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a> object which then can process video stream data in any format. Underlying mechanisms will be adjusted to every new input video stream automatically, but please note that <em>not all</em> existing backends support this (see reshape()).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a>, a streaming-oriented executable computation compiled for any input image format.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__compile__args.html">G-API Graph Compilation Arguments</a> </dd></dl>
+
+</div>
+</div>
+<a id="aca95fd621853e8a77eff5515bc1a4c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca95fd621853e8a77eff5515bc1a4c75">&#9670;&nbsp;</a></span>compileStreaming() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> <a class="el" href="classcv_1_1_g_streaming_compiled.html">GStreamingCompiled</a> cv::GComputation::compileStreaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in_metas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile the computation for streaming mode. </p>
+<p>This method triggers compilation process and produces a new <a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a> object which then can process video stream data of the given format. Passing a stream in a different format to the compiled computation will generate a run-time exception.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_metas</td><td>vector of input metadata configuration. Grab metadata from real data objects (like <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> or <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a>) using <a class="el" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">cv::descr_of()</a>, or create it on your own.</td></tr>
+    <tr><td class="paramname">args</td><td>compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_g_streaming_compiled.html" title="Represents a computation (graph) compiled for streaming.">GStreamingCompiled</a>, a streaming-oriented executable computation compiled specifically for the given input parameters.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__compile__args.html">G-API Graph Compilation Arguments</a> </dd></dl>
+
+</div>
+</div>
+<a id="a81667be7e7b03f8bcc534fa35e8e475e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81667be7e7b03f8bcc534fa35e8e475e">&#9670;&nbsp;</a></span>recompile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GComputation::recompile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in_metas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">GCompileArgs</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/gapi/<a class="el" href="gcomputation_8hpp_source.html">gcomputation.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_g_computation.html">GComputation</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

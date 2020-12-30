@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: HDR imaging</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__photo__hdr.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">HDR imaging<div class="ingroups"><a class="el" href="group__photo.html">Computational Photography</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tonemap.html">cv::Tonemap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for tonemapping algorithms - tools that are used to map HDR image to 8-bit range.  <a href="classcv_1_1_tonemap.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tonemap_drago.html">cv::TonemapDrago</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in logarithmic domain.  <a href="classcv_1_1_tonemap_drago.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tonemap_reinhard.html">cv::TonemapReinhard</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a global tonemapping operator that models human visual system.  <a href="classcv_1_1_tonemap_reinhard.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tonemap_mantiuk.html">cv::TonemapMantiuk</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid, transforms contrast values to HVS response and scales the response. After this the image is reconstructed from new contrast values.  <a href="classcv_1_1_tonemap_mantiuk.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_exposures.html">cv::AlignExposures</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for algorithms that align images of the same scene with different exposures.  <a href="classcv_1_1_align_exposures.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html">cv::AlignMTB</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations.  <a href="classcv_1_1_align_m_t_b.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_calibrate_c_r_f.html">cv::CalibrateCRF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for camera response calibration algorithms.  <a href="classcv_1_1_calibrate_c_r_f.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_calibrate_debevec.html">cv::CalibrateDebevec</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. Objective function is constructed using pixel values on the same position in all images, extra term is added to make the result smoother.  <a href="classcv_1_1_calibrate_debevec.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_calibrate_robertson.html">cv::CalibrateRobertson</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. This algorithm uses all image pixels.  <a href="classcv_1_1_calibrate_robertson.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_merge_exposures.html">cv::MergeExposures</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class algorithms that can merge exposure sequence to a single image.  <a href="classcv_1_1_merge_exposures.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_merge_debevec.html">cv::MergeDebevec</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resulting HDR image is calculated as weighted average of the exposures considering exposure values and camera response.  <a href="classcv_1_1_merge_debevec.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_merge_mertens.html">cv::MergeMertens</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixels are weighted using contrast, saturation and well-exposedness measures, than images are combined using laplacian pyramids.  <a href="classcv_1_1_merge_mertens.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_merge_robertson.html">cv::MergeRobertson</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resulting HDR image is calculated as weighted average of the exposures considering exposure values and camera response.  <a href="classcv_1_1_merge_robertson.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga93c7ba4307987c238509c9fb73a6b27d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__photo__hdr.html#gga93c7ba4307987c238509c9fb73a6b27da11377cb33f0a607d50cdc65e529529a1">cv::LDR_SIZE</a> = 256
+ }</td></tr>
+<tr class="separator:ga93c7ba4307987c238509c9fb73a6b27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga60551dd8cd027ec9cdc14c87673052ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_tonemap.html">Tonemap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga60551dd8cd027ec9cdc14c87673052ec">cv::createTonemap</a> (float <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>=1.0f)</td></tr>
+<tr class="memdesc:ga60551dd8cd027ec9cdc14c87673052ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates simple linear mapper with gamma correction.  <a href="group__photo__hdr.html#ga60551dd8cd027ec9cdc14c87673052ec">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga60551dd8cd027ec9cdc14c87673052ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5e0b73b41c7b37737773302f0030748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_tonemap_drago.html">TonemapDrago</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#gad5e0b73b41c7b37737773302f0030748">cv::createTonemapDrago</a> (float <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>=1.0f, float saturation=1.0f, float bias=0.85f)</td></tr>
+<tr class="memdesc:gad5e0b73b41c7b37737773302f0030748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_tonemap_drago.html" title="Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in logarith...">TonemapDrago</a> object.  <a href="group__photo__hdr.html#gad5e0b73b41c7b37737773302f0030748">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad5e0b73b41c7b37737773302f0030748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa53dbfb8ad3b69d57db5913b1e3f6020"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_tonemap_reinhard.html">TonemapReinhard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#gaa53dbfb8ad3b69d57db5913b1e3f6020">cv::createTonemapReinhard</a> (float <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>=1.0f, float intensity=0.0f, float light_adapt=1.0f, float color_adapt=0.0f)</td></tr>
+<tr class="memdesc:gaa53dbfb8ad3b69d57db5913b1e3f6020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_tonemap_reinhard.html" title="This is a global tonemapping operator that models human visual system.">TonemapReinhard</a> object.  <a href="group__photo__hdr.html#gaa53dbfb8ad3b69d57db5913b1e3f6020">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa53dbfb8ad3b69d57db5913b1e3f6020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80d7491e6697dad6679e627bfc9d542d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_tonemap_mantiuk.html">TonemapMantiuk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga80d7491e6697dad6679e627bfc9d542d">cv::createTonemapMantiuk</a> (float <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>=1.0f, float <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=0.7f, float saturation=1.0f)</td></tr>
+<tr class="memdesc:ga80d7491e6697dad6679e627bfc9d542d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_tonemap_mantiuk.html" title="This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid,...">TonemapMantiuk</a> object.  <a href="group__photo__hdr.html#ga80d7491e6697dad6679e627bfc9d542d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga80d7491e6697dad6679e627bfc9d542d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga285471e17682dede9db18058603b1995"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_align_m_t_b.html">AlignMTB</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga285471e17682dede9db18058603b1995">cv::createAlignMTB</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> max_bits=6, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> exclude_range=4, bool cut=true)</td></tr>
+<tr class="memdesc:ga285471e17682dede9db18058603b1995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_align_m_t_b.html" title="This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminan...">AlignMTB</a> object.  <a href="group__photo__hdr.html#ga285471e17682dede9db18058603b1995">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga285471e17682dede9db18058603b1995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada8a241e469c2250416f26e5419ac15b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_calibrate_debevec.html">CalibrateDebevec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#gada8a241e469c2250416f26e5419ac15b">cv::createCalibrateDebevec</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> samples=70, float lambda=10.0f, bool random=false)</td></tr>
+<tr class="memdesc:gada8a241e469c2250416f26e5419ac15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_calibrate_debevec.html" title="Inverse camera response function is extracted for each brightness value by minimizing an objective fu...">CalibrateDebevec</a> object.  <a href="group__photo__hdr.html#gada8a241e469c2250416f26e5419ac15b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gada8a241e469c2250416f26e5419ac15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebdf5c3a076e388d17edfb75b6b56bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_calibrate_robertson.html">CalibrateRobertson</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#gaebdf5c3a076e388d17edfb75b6b56bca">cv::createCalibrateRobertson</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> max_iter=30, float <a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">threshold</a>=0.01f)</td></tr>
+<tr class="memdesc:gaebdf5c3a076e388d17edfb75b6b56bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_calibrate_robertson.html" title="Inverse camera response function is extracted for each brightness value by minimizing an objective fu...">CalibrateRobertson</a> object.  <a href="group__photo__hdr.html#gaebdf5c3a076e388d17edfb75b6b56bca">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaebdf5c3a076e388d17edfb75b6b56bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17f516a19359659933b11ff211b4ea28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_merge_debevec.html">MergeDebevec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga17f516a19359659933b11ff211b4ea28">cv::createMergeDebevec</a> ()</td></tr>
+<tr class="memdesc:ga17f516a19359659933b11ff211b4ea28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_merge_debevec.html" title="The resulting HDR image is calculated as weighted average of the exposures considering exposure value...">MergeDebevec</a> object.  <a href="group__photo__hdr.html#ga17f516a19359659933b11ff211b4ea28">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga17f516a19359659933b11ff211b4ea28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b23375002c8f08abdf332e82937a8a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_merge_mertens.html">MergeMertens</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga9b23375002c8f08abdf332e82937a8a5">cv::createMergeMertens</a> (float contrast_weight=1.0f, float saturation_weight=1.0f, float exposure_weight=0.0f)</td></tr>
+<tr class="memdesc:ga9b23375002c8f08abdf332e82937a8a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_merge_mertens.html" title="Pixels are weighted using contrast, saturation and well-exposedness measures, than images are combine...">MergeMertens</a> object.  <a href="group__photo__hdr.html#ga9b23375002c8f08abdf332e82937a8a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9b23375002c8f08abdf332e82937a8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04d9fde8574d522646739362dbda0218"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_merge_robertson.html">MergeRobertson</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga04d9fde8574d522646739362dbda0218">cv::createMergeRobertson</a> ()</td></tr>
+<tr class="memdesc:ga04d9fde8574d522646739362dbda0218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_merge_robertson.html" title="The resulting HDR image is calculated as weighted average of the exposures considering exposure value...">MergeRobertson</a> object.  <a href="group__photo__hdr.html#ga04d9fde8574d522646739362dbda0218">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga04d9fde8574d522646739362dbda0218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>This section describes high dynamic range imaging algorithms namely tonemapping, exposure alignment, camera calibration with multiple exposures and exposure fusion. </p><pre class="fragment">@defgroup photo_decolor Contrast Preserving Decolorization
+</pre><p> Useful links:</p>
+<p><a href="http://www.cse.cuhk.edu.hk/leojia/projects/color2gray/index.html">http://www.cse.cuhk.edu.hk/leojia/projects/color2gray/index.html</a> </p><pre class="fragment">@defgroup photo_clone Seamless Cloning
+</pre><p> Useful links:</p>
+<p><a href="https://www.learnopencv.com/seamless-cloning-using-opencv-python-cpp">https://www.learnopencv.com/seamless-cloning-using-opencv-python-cpp</a> </p><pre class="fragment">@defgroup photo_render Non-Photorealistic Rendering
+</pre><p> Useful links:</p>
+<p><a href="http://www.inf.ufrgs.br/~eslgastal/DomainTransform">http://www.inf.ufrgs.br/~eslgastal/DomainTransform</a></p>
+<p><a href="https://www.learnopencv.com/non-photorealistic-rendering-using-opencv-python-c/">https://www.learnopencv.com/non-photorealistic-rendering-using-opencv-python-c/</a> </p><pre class="fragment">@defgroup photo_c C API
+</pre> <h2 class="groupheader">Перечисления</h2>
+<a id="ga93c7ba4307987c238509c9fb73a6b27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93c7ba4307987c238509c9fb73a6b27d">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga93c7ba4307987c238509c9fb73a6b27da11377cb33f0a607d50cdc65e529529a1"></a>LDR_SIZE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga285471e17682dede9db18058603b1995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga285471e17682dede9db18058603b1995">&#9670;&nbsp;</a></span>createAlignMTB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_align_m_t_b.html">AlignMTB</a>&gt; cv::createAlignMTB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>max_bits</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>exclude_range</em> = <code>4</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cut</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_align_m_t_b.html" title="This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminan...">AlignMTB</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_bits</td><td>logarithm to the base 2 of maximal shift in each dimension. Values of 5 and 6 are usually good enough (31 and 63 pixels shift respectively). </td></tr>
+    <tr><td class="paramname">exclude_range</td><td>range for exclusion bitmap that is constructed to suppress noise around the median value. </td></tr>
+    <tr><td class="paramname">cut</td><td>if true cuts images, otherwise fills the new regions with zeros. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gada8a241e469c2250416f26e5419ac15b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada8a241e469c2250416f26e5419ac15b">&#9670;&nbsp;</a></span>createCalibrateDebevec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_calibrate_debevec.html">CalibrateDebevec</a>&gt; cv::createCalibrateDebevec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>samples</em> = <code>70</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lambda</em> = <code>10.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>random</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_calibrate_debevec.html" title="Inverse camera response function is extracted for each brightness value by minimizing an objective fu...">CalibrateDebevec</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">samples</td><td>number of pixel locations to use </td></tr>
+    <tr><td class="paramname">lambda</td><td>smoothness term weight. Greater values produce smoother results, but can alter the response. </td></tr>
+    <tr><td class="paramname">random</td><td>if true sample pixel locations are chosen at random, otherwise they form a rectangular grid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaebdf5c3a076e388d17edfb75b6b56bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebdf5c3a076e388d17edfb75b6b56bca">&#9670;&nbsp;</a></span>createCalibrateRobertson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_calibrate_robertson.html">CalibrateRobertson</a>&gt; cv::createCalibrateRobertson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>max_iter</em> = <code>30</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>threshold</em> = <code>0.01f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_calibrate_robertson.html" title="Inverse camera response function is extracted for each brightness value by minimizing an objective fu...">CalibrateRobertson</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_iter</td><td>maximal number of Gauss-Seidel solver iterations. </td></tr>
+    <tr><td class="paramname">threshold</td><td>target difference between results of two successive steps of the minimization. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga17f516a19359659933b11ff211b4ea28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17f516a19359659933b11ff211b4ea28">&#9670;&nbsp;</a></span>createMergeDebevec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_merge_debevec.html">MergeDebevec</a>&gt; cv::createMergeDebevec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_merge_debevec.html" title="The resulting HDR image is calculated as weighted average of the exposures considering exposure value...">MergeDebevec</a> object. </p>
+
+</div>
+</div>
+<a id="ga9b23375002c8f08abdf332e82937a8a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b23375002c8f08abdf332e82937a8a5">&#9670;&nbsp;</a></span>createMergeMertens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_merge_mertens.html">MergeMertens</a>&gt; cv::createMergeMertens </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>contrast_weight</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>saturation_weight</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>exposure_weight</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_merge_mertens.html" title="Pixels are weighted using contrast, saturation and well-exposedness measures, than images are combine...">MergeMertens</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contrast_weight</td><td>contrast measure weight. See <a class="el" href="classcv_1_1_merge_mertens.html" title="Pixels are weighted using contrast, saturation and well-exposedness measures, than images are combine...">MergeMertens</a>. </td></tr>
+    <tr><td class="paramname">saturation_weight</td><td>saturation measure weight </td></tr>
+    <tr><td class="paramname">exposure_weight</td><td>well-exposedness measure weight </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga04d9fde8574d522646739362dbda0218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04d9fde8574d522646739362dbda0218">&#9670;&nbsp;</a></span>createMergeRobertson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_merge_robertson.html">MergeRobertson</a>&gt; cv::createMergeRobertson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_merge_robertson.html" title="The resulting HDR image is calculated as weighted average of the exposures considering exposure value...">MergeRobertson</a> object. </p>
+
+</div>
+</div>
+<a id="ga60551dd8cd027ec9cdc14c87673052ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60551dd8cd027ec9cdc14c87673052ec">&#9670;&nbsp;</a></span>createTonemap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_tonemap.html">Tonemap</a>&gt; cv::createTonemap </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gamma</em> = <code>1.0f</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates simple linear mapper with gamma correction. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>positive value for gamma correction. Gamma value of 1.0 implies no correction, gamma equal to 2.2f is suitable for most displays. Generally gamma &gt; 1 brightens the image and gamma &lt; 1 darkens it. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad5e0b73b41c7b37737773302f0030748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5e0b73b41c7b37737773302f0030748">&#9670;&nbsp;</a></span>createTonemapDrago()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_tonemap_drago.html">TonemapDrago</a>&gt; cv::createTonemapDrago </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gamma</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>saturation</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bias</em> = <code>0.85f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_tonemap_drago.html" title="Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in logarith...">TonemapDrago</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>gamma value for gamma correction. See createTonemap </td></tr>
+    <tr><td class="paramname">saturation</td><td>positive saturation enhancement value. 1.0 preserves saturation, values greater than 1 increase saturation and values less than 1 decrease it. </td></tr>
+    <tr><td class="paramname">bias</td><td>value for bias function in [0, 1] range. Values from 0.7 to 0.9 usually give best results, default value is 0.85. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga80d7491e6697dad6679e627bfc9d542d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80d7491e6697dad6679e627bfc9d542d">&#9670;&nbsp;</a></span>createTonemapMantiuk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_tonemap_mantiuk.html">TonemapMantiuk</a>&gt; cv::createTonemapMantiuk </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gamma</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>0.7f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>saturation</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_tonemap_mantiuk.html" title="This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid,...">TonemapMantiuk</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>gamma value for gamma correction. See createTonemap </td></tr>
+    <tr><td class="paramname">scale</td><td>contrast scale factor. HVS response is multiplied by this parameter, thus compressing dynamic range. Values from 0.6 to 0.9 produce best results. </td></tr>
+    <tr><td class="paramname">saturation</td><td>saturation enhancement value. See createTonemapDrago </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa53dbfb8ad3b69d57db5913b1e3f6020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa53dbfb8ad3b69d57db5913b1e3f6020">&#9670;&nbsp;</a></span>createTonemapReinhard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_tonemap_reinhard.html">TonemapReinhard</a>&gt; cv::createTonemapReinhard </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gamma</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>intensity</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>light_adapt</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>color_adapt</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_tonemap_reinhard.html" title="This is a global tonemapping operator that models human visual system.">TonemapReinhard</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>gamma value for gamma correction. See createTonemap </td></tr>
+    <tr><td class="paramname">intensity</td><td>result intensity in [-8, 8] range. Greater intensity produces brighter results. </td></tr>
+    <tr><td class="paramname">light_adapt</td><td>light adaptation in [0, 1] range. If 1 adaptation is based only on pixel value, if 0 it's global, otherwise it's a weighted mean of this two cases. </td></tr>
+    <tr><td class="paramname">color_adapt</td><td>chromatic adaptation in [0, 1] range. If 1 channels are treated independently, if 0 adaptation level is the same for each channel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

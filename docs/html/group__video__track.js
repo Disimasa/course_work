@@ -1,0 +1,146 @@
+var group__video__track =
+[
+    [ "KalmanFilter", "classcv_1_1_kalman_filter.html", [
+      [ "KalmanFilter", "classcv_1_1_kalman_filter.html#ab8ee22bea52cf66b0b72581d66d7a87f", null ],
+      [ "KalmanFilter", "classcv_1_1_kalman_filter.html#a02122ed395a1cd3234a569be48fefdd3", null ],
+      [ "correct", "classcv_1_1_kalman_filter.html#a42ff8ff675a76850295776e521a2eeb1", null ],
+      [ "init", "classcv_1_1_kalman_filter.html#a4f136c39c016d3530c7c5801dd1ddb3b", null ],
+      [ "predict", "classcv_1_1_kalman_filter.html#a93fca2f23322ae31df3395ba45fa9127", null ],
+      [ "controlMatrix", "classcv_1_1_kalman_filter.html#aee161cf5a49e185226b26f7eb8d23507", null ],
+      [ "errorCovPost", "classcv_1_1_kalman_filter.html#a1c2b134601f674ef8e244901fd5b9270", null ],
+      [ "errorCovPre", "classcv_1_1_kalman_filter.html#a02618fb7e9b00d41f995881e8928abdb", null ],
+      [ "gain", "classcv_1_1_kalman_filter.html#a9707479d87cb792ff7395342db2da120", null ],
+      [ "measurementMatrix", "classcv_1_1_kalman_filter.html#a44b6f3e23cc21b5b4fe7d62e4eb9d3d6", null ],
+      [ "measurementNoiseCov", "classcv_1_1_kalman_filter.html#ac99ba610755d681b9f57fd772c91f798", null ],
+      [ "processNoiseCov", "classcv_1_1_kalman_filter.html#a09290054b1cd30baa89fc7768e68a806", null ],
+      [ "statePost", "classcv_1_1_kalman_filter.html#a29dc3ac940dbce14a0824017395994b4", null ],
+      [ "statePre", "classcv_1_1_kalman_filter.html#a3d261f125a6bce49730a30b4e3635698", null ],
+      [ "temp1", "classcv_1_1_kalman_filter.html#aa3d064a9194c2815dbe19c056b6dc763", null ],
+      [ "temp2", "classcv_1_1_kalman_filter.html#a14866bd506668eb0ed57b3974b3a1ee7", null ],
+      [ "temp3", "classcv_1_1_kalman_filter.html#afdbe36066a7d7f560aa02abe6be114d8", null ],
+      [ "temp4", "classcv_1_1_kalman_filter.html#a84342f2d9dec1e6389025ad229401809", null ],
+      [ "temp5", "classcv_1_1_kalman_filter.html#a846c2a6222c6e5d8b1385dfbccc83ae0", null ],
+      [ "transitionMatrix", "classcv_1_1_kalman_filter.html#aed23bd543479c99dd03b88c6c964aad2", null ]
+    ] ],
+    [ "DenseOpticalFlow", "classcv_1_1_dense_optical_flow.html", [
+      [ "calc", "classcv_1_1_dense_optical_flow.html#a33d04e9e04c579ea5afa8db7a9573eb4", null ],
+      [ "collectGarbage", "classcv_1_1_dense_optical_flow.html#afe197612925c85f08fcd27732b223e79", null ]
+    ] ],
+    [ "SparseOpticalFlow", "classcv_1_1_sparse_optical_flow.html", [
+      [ "calc", "classcv_1_1_sparse_optical_flow.html#ae758a8728646f693f064552e1089ae67", null ]
+    ] ],
+    [ "FarnebackOpticalFlow", "classcv_1_1_farneback_optical_flow.html", [
+      [ "getFastPyramids", "classcv_1_1_farneback_optical_flow.html#aa590d6d4871c7c4ea85f83068fa771b2", null ],
+      [ "getFlags", "classcv_1_1_farneback_optical_flow.html#afca9943a754a2edd10b5d8f2e200e6c7", null ],
+      [ "getNumIters", "classcv_1_1_farneback_optical_flow.html#acc67680ad19060fcaaa888353785be7a", null ],
+      [ "getNumLevels", "classcv_1_1_farneback_optical_flow.html#a119e4ec874baa19b7164d3603f23f83d", null ],
+      [ "getPolyN", "classcv_1_1_farneback_optical_flow.html#a461c9ac4e0724ed88b92fc38e92df5ff", null ],
+      [ "getPolySigma", "classcv_1_1_farneback_optical_flow.html#ac818973cf220461ff844ca26a1b40cf3", null ],
+      [ "getPyrScale", "classcv_1_1_farneback_optical_flow.html#ab82982890b14bd3be5661e1d11d94cc9", null ],
+      [ "getWinSize", "classcv_1_1_farneback_optical_flow.html#ac319ef560796bb97e4f615d9eb8bdaaa", null ],
+      [ "setFastPyramids", "classcv_1_1_farneback_optical_flow.html#a0ceebaec2456fceebca5dff3a11a56a9", null ],
+      [ "setFlags", "classcv_1_1_farneback_optical_flow.html#a50b962a81ad2455711ed4a5fe54d7901", null ],
+      [ "setNumIters", "classcv_1_1_farneback_optical_flow.html#a1f26a38ac76521384c86227bf6187506", null ],
+      [ "setNumLevels", "classcv_1_1_farneback_optical_flow.html#a46e42359c7b46efc7531797016a7a76d", null ],
+      [ "setPolyN", "classcv_1_1_farneback_optical_flow.html#ae415990c8bbab9050b1e0bc71f1ddf9c", null ],
+      [ "setPolySigma", "classcv_1_1_farneback_optical_flow.html#a711425a29ebced3beef46d156a05b03e", null ],
+      [ "setPyrScale", "classcv_1_1_farneback_optical_flow.html#add919cfbdb9585c2257c391b925ca093", null ],
+      [ "setWinSize", "classcv_1_1_farneback_optical_flow.html#a9a838c3b933bbfa661fdc0af77452a26", null ]
+    ] ],
+    [ "VariationalRefinement", "classcv_1_1_variational_refinement.html", [
+      [ "calcUV", "classcv_1_1_variational_refinement.html#ab8ff17427b2cb2a544ff3710dac72c60", null ],
+      [ "getAlpha", "classcv_1_1_variational_refinement.html#af3bfd9c0c606c82b8c6050caa6d9dd25", null ],
+      [ "getDelta", "classcv_1_1_variational_refinement.html#a4324df073d019bcff07f9a8a6f3cea7b", null ],
+      [ "getFixedPointIterations", "classcv_1_1_variational_refinement.html#a3aef8c94b29f0190fa3545e94cf0d9b9", null ],
+      [ "getGamma", "classcv_1_1_variational_refinement.html#a0e8ee2177182b9714eeccc8a0e2cdc15", null ],
+      [ "getOmega", "classcv_1_1_variational_refinement.html#aea80726bb36d160e246a26c8f468fea2", null ],
+      [ "getSorIterations", "classcv_1_1_variational_refinement.html#a0efba1731656ac42677d19fc80a85b92", null ],
+      [ "setAlpha", "classcv_1_1_variational_refinement.html#ae9ebec42cfc3858ec0196fe9df6912f1", null ],
+      [ "setDelta", "classcv_1_1_variational_refinement.html#af1a936bc2ff35f85e822a7d4f6bef21f", null ],
+      [ "setFixedPointIterations", "classcv_1_1_variational_refinement.html#a45c5df63e687644b6923a21df4bf56c0", null ],
+      [ "setGamma", "classcv_1_1_variational_refinement.html#a4c5a9d710b7c0751e3d19a7ae7375154", null ],
+      [ "setOmega", "classcv_1_1_variational_refinement.html#a65eef55822d6f67653de5191801efaf0", null ],
+      [ "setSorIterations", "classcv_1_1_variational_refinement.html#a880b05ea5a8213795cdf551f84199ac0", null ]
+    ] ],
+    [ "DISOpticalFlow", "classcv_1_1_d_i_s_optical_flow.html", [
+      [ "getFinestScale", "classcv_1_1_d_i_s_optical_flow.html#ab03e609d92b4fed10cb56e94a389bc47", null ],
+      [ "getGradientDescentIterations", "classcv_1_1_d_i_s_optical_flow.html#aacbf10b941dfabe5934486e5975f949a", null ],
+      [ "getPatchSize", "classcv_1_1_d_i_s_optical_flow.html#a583492c6ffb9ad12f8221a4a99bea8a6", null ],
+      [ "getPatchStride", "classcv_1_1_d_i_s_optical_flow.html#a73964c319f1a342a42cb9cc7981b6e64", null ],
+      [ "getUseMeanNormalization", "classcv_1_1_d_i_s_optical_flow.html#a9e973ed54fea91f4b3f8a50bd02b2d6b", null ],
+      [ "getUseSpatialPropagation", "classcv_1_1_d_i_s_optical_flow.html#a9db2a4c8bf90afeeb894c45d139c51e3", null ],
+      [ "getVariationalRefinementAlpha", "classcv_1_1_d_i_s_optical_flow.html#a603f75be2dba3e7fc36e677d74035da0", null ],
+      [ "getVariationalRefinementDelta", "classcv_1_1_d_i_s_optical_flow.html#a0998187dd97042cef2ff6a154020843d", null ],
+      [ "getVariationalRefinementGamma", "classcv_1_1_d_i_s_optical_flow.html#ab1f5e95203b7f1bd026f76373de9e03a", null ],
+      [ "getVariationalRefinementIterations", "classcv_1_1_d_i_s_optical_flow.html#a8c04a919f524f453028ffb49fb2b6e22", null ],
+      [ "setFinestScale", "classcv_1_1_d_i_s_optical_flow.html#a6c42d546f3058fb50b941396fb939f06", null ],
+      [ "setGradientDescentIterations", "classcv_1_1_d_i_s_optical_flow.html#a4251adb61e3d7b09f8a421606242ca4d", null ],
+      [ "setPatchSize", "classcv_1_1_d_i_s_optical_flow.html#a91c087cfa41d7da98edc8926941fd962", null ],
+      [ "setPatchStride", "classcv_1_1_d_i_s_optical_flow.html#a723b6cd7ece643fc9ef7efa423960a75", null ],
+      [ "setUseMeanNormalization", "classcv_1_1_d_i_s_optical_flow.html#afa82ed03e030ba4bc15bb95af76ab647", null ],
+      [ "setUseSpatialPropagation", "classcv_1_1_d_i_s_optical_flow.html#ade61d901d1b405f99677745c16103ae3", null ],
+      [ "setVariationalRefinementAlpha", "classcv_1_1_d_i_s_optical_flow.html#a5de615da1406b6f5ecb134814801ab9e", null ],
+      [ "setVariationalRefinementDelta", "classcv_1_1_d_i_s_optical_flow.html#a5a8f83f980cddc1d761c66a5b0e2fe31", null ],
+      [ "setVariationalRefinementGamma", "classcv_1_1_d_i_s_optical_flow.html#a70ff8fc82ca30e41cc2f954392042a1b", null ],
+      [ "setVariationalRefinementIterations", "classcv_1_1_d_i_s_optical_flow.html#a03825d4952a75b4cf9d0069b4029e380", null ]
+    ] ],
+    [ "SparsePyrLKOpticalFlow", "classcv_1_1_sparse_pyr_l_k_optical_flow.html", [
+      [ "getFlags", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#af5139b52a04633e8a6bb7bfe5484484d", null ],
+      [ "getMaxLevel", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#a02d12ba063579f985aeb2e44f2d0de11", null ],
+      [ "getMinEigThreshold", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#a55566ad8bad3e017616337b389a371fa", null ],
+      [ "getTermCriteria", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#acc9897276b1071a4cbacacfb8b7dad3b", null ],
+      [ "getWinSize", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#a0e36eb514d0b87ad3fa943f043cff547", null ],
+      [ "setFlags", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#a8e1f761615736a85459065bcfe1cddd4", null ],
+      [ "setMaxLevel", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#abed0adf7e7d27140ef04210b91f92977", null ],
+      [ "setMinEigThreshold", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#aa46e3d16da1d39710834e6f9ccbbf979", null ],
+      [ "setTermCriteria", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#ab9b595b6d0e8dd511b1add379b2e70dc", null ],
+      [ "setWinSize", "classcv_1_1_sparse_pyr_l_k_optical_flow.html#a7c1237ccc3b3ff24db1f1389be38456d", null ]
+    ] ],
+    [ "Tracker", "classcv_1_1_tracker.html", [
+      [ "Tracker", "classcv_1_1_tracker.html#a5fc97b90636155b2f0c576cfe15b0f4d", null ],
+      [ "~Tracker", "classcv_1_1_tracker.html#a22cb8a580dbbf280ceef21a04463c307", null ],
+      [ "init", "classcv_1_1_tracker.html#afa9b6d9e15276e68ddc1d0c523b91b1e", null ],
+      [ "update", "classcv_1_1_tracker.html#aae8c65f86a0ea808c1f6fdc38316c1cb", null ]
+    ] ],
+    [ "TrackerMIL", "classcv_1_1_tracker_m_i_l.html", [
+      [ "Params", "structcv_1_1_tracker_m_i_l_1_1_params.html", [
+        [ "Params", "structcv_1_1_tracker_m_i_l_1_1_params.html#ac261a5f95ddec45de6bf60877f3bc27e", null ],
+        [ "featureSetNumFeatures", "structcv_1_1_tracker_m_i_l_1_1_params.html#ae85d1ee4938035d78e69c5bc1dcebfb2", null ],
+        [ "samplerInitInRadius", "structcv_1_1_tracker_m_i_l_1_1_params.html#aafbf61b15598b1d4b79b8cdf32978473", null ],
+        [ "samplerInitMaxNegNum", "structcv_1_1_tracker_m_i_l_1_1_params.html#a8119274dca2e8256b756bdb450dce0e8", null ],
+        [ "samplerSearchWinSize", "structcv_1_1_tracker_m_i_l_1_1_params.html#ae56206691eb67e5a20c878d229540462", null ],
+        [ "samplerTrackInRadius", "structcv_1_1_tracker_m_i_l_1_1_params.html#a3af8f700101703c44175255bb9aba5fa", null ],
+        [ "samplerTrackMaxNegNum", "structcv_1_1_tracker_m_i_l_1_1_params.html#a5a61c52e6cf16ab724ed92332dec0532", null ],
+        [ "samplerTrackMaxPosNum", "structcv_1_1_tracker_m_i_l_1_1_params.html#a9df1eddd94873cb9e57f887ecbdc2a90", null ]
+      ] ],
+      [ "TrackerMIL", "classcv_1_1_tracker_m_i_l.html#afbeda664e50f1d07dc7e0b41e72a93c3", null ],
+      [ "~TrackerMIL", "classcv_1_1_tracker_m_i_l.html#af68b872ce8efbef1865ddbea1bae7bc5", null ]
+    ] ],
+    [ "TrackerGOTURN", "classcv_1_1_tracker_g_o_t_u_r_n.html", [
+      [ "Params", "structcv_1_1_tracker_g_o_t_u_r_n_1_1_params.html", [
+        [ "Params", "structcv_1_1_tracker_g_o_t_u_r_n_1_1_params.html#aa9062d5084ca9c952f9fe63c9dd957b4", null ],
+        [ "modelBin", "structcv_1_1_tracker_g_o_t_u_r_n_1_1_params.html#ae85d7c935a48ac76bb3a316b79875e65", null ],
+        [ "modelTxt", "structcv_1_1_tracker_g_o_t_u_r_n_1_1_params.html#a902afa038dfa21cfacea189940140441", null ]
+      ] ],
+      [ "TrackerGOTURN", "classcv_1_1_tracker_g_o_t_u_r_n.html#aad30432d285b1fc293e4b89fd25cc77d", null ],
+      [ "~TrackerGOTURN", "classcv_1_1_tracker_g_o_t_u_r_n.html#a9cb7c929284c59356a8b5a4e701d2552", null ],
+      [ "OPTFLOW_USE_INITIAL_FLOW", "group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daa9d4430ac75199af0cf6fcdefba30eafe", null ],
+      [ "OPTFLOW_LK_GET_MIN_EIGENVALS", "group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daadd75f0bd85d1bd739b39b8900bc12c58", null ],
+      [ "OPTFLOW_FARNEBACK_GAUSSIAN", "group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daa4ffe37adbc548e44a61025a26a1914aa", null ],
+      [ "MOTION_TRANSLATION", "group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca01106d6d20122b782ff25eaeffe9a5be", null ],
+      [ "MOTION_EUCLIDEAN", "group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca075fb2a93001cb4cc1ba1b22af1e8848", null ],
+      [ "MOTION_AFFINE", "group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6caa22eb135b6afe090a8a0d228fd62634a", null ],
+      [ "MOTION_HOMOGRAPHY", "group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca81a5e999a7fde5656ce1ca0458741b27", null ]
+    ] ],
+    [ "buildOpticalFlowPyramid", "group__video__track.html#ga7e3266bdcb0a36d60d4907c22da66be8", null ],
+    [ "calcOpticalFlowFarneback", "group__video__track.html#ga663ddb1d76d1fcb2d7dd9e58f1e75e50", null ],
+    [ "calcOpticalFlowPyrLK", "group__video__track.html#gae0e989a246b6c81ee407cb4bc06d0ee8", null ],
+    [ "CamShift", "group__video__track.html#ga05dd4cddf6c65245acd02db17e33b229", null ],
+    [ "computeECC", "group__video__track.html#gaac319473e0ec4de4a50c1e332200751f", null ],
+    [ "estimateRigidTransform", "group__video__track.html#gafe52fd3986a2ba6ba0628ebb6a6e8b95", null ],
+    [ "findTransformECC", "group__video__track.html#gaa27e5de74898ae80985ae1fd281fe2bb", null ],
+    [ "findTransformECC", "group__video__track.html#gadb07e9b454988007f70abc28a7504a97", null ],
+    [ "meanShift", "group__video__track.html#ga7d73bea676486ed2607d80f7970bc01a", null ],
+    [ "readOpticalFlow", "group__video__track.html#gad29820e8993c67253785ec84f6c7af70", null ],
+    [ "writeOpticalFlow", "group__video__track.html#gaf39c359623cf0d025467e2d36bc32dab", null ]
+];

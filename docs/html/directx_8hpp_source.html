@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/core/directx.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('directx_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">directx.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="directx_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                           License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//   * The name of the copyright holders may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors as is and</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// In no event shall the copyright holders or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifndef OPENCV_CORE_DIRECTX_HPP</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define OPENCV_CORE_DIRECTX_HPP</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gapi_2own_2mat_8hpp.html">mat.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ocl_8hpp.html">ocl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#if !defined(__d3d11_h__)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">struct </span>ID3D11Device;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">struct </span>ID3D11Texture2D;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if !defined(__d3d10_h__)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">struct </span>ID3D10Device;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">struct </span>ID3D10Texture2D;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if !defined(_D3D9_H_)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">struct </span>IDirect3DDevice9;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">struct </span>IDirect3DDevice9Ex;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">struct </span>IDirect3DSurface9;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacecv_1_1directx.html">   65</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> { <span class="keyword">namespace </span>directx {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespacecv_1_1directx_1_1ocl.html">   67</a></span>&#160;<span class="keyword">namespace </span>ocl {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv_1_1ocl.html">cv::ocl</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// This section describes OpenCL and DirectX interoperability.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// To enable DirectX support, configure OpenCV using CMake with WITH_DIRECTX=ON . Note, DirectX is</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// supported only on Windows.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// To use OpenCL functionality you should first initialize OpenCL context from DirectX resource.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// TODO static functions in the Context class</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga1e8d441930e3b43bd37f94fa906d3322">   85</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1ocl_1_1_context.html">Context</a>&amp; <a class="code" href="group__core__directx.html#ga1e8d441930e3b43bd37f94fa906d3322">initializeContextFromD3D11Device</a>(ID3D11Device* pD3D11Device);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="group__core__directx.html#gae02512ab37f89d365461e3bbfaa0d138">   91</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1ocl_1_1_context.html">Context</a>&amp; <a class="code" href="group__core__directx.html#gae02512ab37f89d365461e3bbfaa0d138">initializeContextFromD3D10Device</a>(ID3D10Device* pD3D10Device);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga105a7b3567433ae20bad339361a80d28">   97</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1ocl_1_1_context.html">Context</a>&amp; <a class="code" href="group__core__directx.html#ga105a7b3567433ae20bad339361a80d28">initializeContextFromDirect3DDevice9Ex</a>(IDirect3DDevice9Ex* pDirect3DDevice9Ex);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga6481ae933e8139750e43eec25bbaa56a">  103</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1ocl_1_1_context.html">Context</a>&amp; <a class="code" href="group__core__directx.html#ga6481ae933e8139750e43eec25bbaa56a">initializeContextFromDirect3DDevice9</a>(IDirect3DDevice9* pDirect3DDevice9);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace cv::directx::ocl</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga6d7588a4eb8b9e438c831f73af6d1046">  120</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#ga6d7588a4eb8b9e438c831f73af6d1046">convertToD3D11Texture2D</a>(<a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, ID3D11Texture2D* pD3D11Texture2D);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="group__core__directx.html#gadb8f502cf93a92f91ef6fd8992ab24ee">  130</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#gadb8f502cf93a92f91ef6fd8992ab24ee">convertFromD3D11Texture2D</a>(ID3D11Texture2D* pD3D11Texture2D, <a class="code" href="classcv_1_1___output_array.html">OutputArray</a> <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="group__core__directx.html#gabd9dc6033bc04273fcfe5e262511c69d">  139</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#gabd9dc6033bc04273fcfe5e262511c69d">convertToD3D10Texture2D</a>(<a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, ID3D10Texture2D* pD3D10Texture2D);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga674840dc511de38f2e273f4d1e5faee6">  148</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#ga674840dc511de38f2e273f4d1e5faee6">convertFromD3D10Texture2D</a>(ID3D10Texture2D* pD3D10Texture2D, <a class="code" href="classcv_1_1___output_array.html">OutputArray</a> <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga445003f2242b54e6ec88da03e3852c94">  158</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#ga445003f2242b54e6ec88da03e3852c94">convertToDirect3DSurface9</a>(<a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, IDirect3DSurface9* pDirect3DSurface9, <span class="keywordtype">void</span>* surfaceSharedHandle = NULL);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga8acd33c2520f52b284340637344d137d">  168</a></span>&#160;<span class="comment"></span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">void</span> <a class="code" href="group__core__directx.html#ga8acd33c2520f52b284340637344d137d">convertFromDirect3DSurface9</a>(IDirect3DSurface9* pDirect3DSurface9, <a class="code" href="classcv_1_1___output_array.html">OutputArray</a> <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <span class="keywordtype">void</span>* surfaceSharedHandle = NULL);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="group__core__directx.html#gac9796626fd44bcc538a57d8ba0b82168">  173</a></span>&#160;<a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">int</span> <a class="code" href="group__core__directx.html#gac9796626fd44bcc538a57d8ba0b82168">getTypeFromDXGI_FORMAT</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> iDXGI_FORMAT); <span class="comment">// enum DXGI_FORMAT for D3D10/D3D11</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="group__core__directx.html#ga9c986621ddda5362cf375c4fb91bc6f9">  178</a></span>&#160;<a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <span class="keywordtype">int</span> <a class="code" href="group__core__directx.html#ga9c986621ddda5362cf375c4fb91bc6f9">getTypeFromD3DFORMAT</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> iD3DFORMAT); <span class="comment">// enum D3DTYPE for D3D9</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;} } <span class="comment">// namespace cv::directx</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_CORE_DIRECTX_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1___output_array_html"><div class="ttname"><a href="classcv_1_1___output_array.html">cv::_OutputArray</a></div><div class="ttdoc">This type is very similar to InputArray except that it is used for input/output and output function p...</div><div class="ttdef"><b>Definition:</b> mat.hpp:291</div></div>
+<div class="ttc" id="aclasscv_1_1ocl_1_1_context_html"><div class="ttname"><a href="classcv_1_1ocl_1_1_context.html">cv::ocl::Context</a></div><div class="ttdef"><b>Definition:</b> ocl.hpp:246</div></div>
+<div class="ttc" id="agapi_2own_2mat_8hpp_html"><div class="ttname"><a href="gapi_2own_2mat_8hpp.html">mat.hpp</a></div></div>
+<div class="ttc" id="agroup__core__basic_html_gab1371a23c90d5f4725ea98240377d7a1"><div class="ttname"><a href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">cv::InputArray</a></div><div class="ttdeci">CV__DEBUG_NS_END typedef const _InputArray &amp; InputArray</div><div class="ttdef"><b>Definition:</b> mat.hpp:437</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga105a7b3567433ae20bad339361a80d28"><div class="ttname"><a href="group__core__directx.html#ga105a7b3567433ae20bad339361a80d28">cv::directx::ocl::initializeContextFromDirect3DDevice9Ex</a></div><div class="ttdeci">CV_EXPORTS Context &amp; initializeContextFromDirect3DDevice9Ex(IDirect3DDevice9Ex *pDirect3DDevice9Ex)</div><div class="ttdoc">Creates OpenCL context from Direct3DDevice9Ex device.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga1e8d441930e3b43bd37f94fa906d3322"><div class="ttname"><a href="group__core__directx.html#ga1e8d441930e3b43bd37f94fa906d3322">cv::directx::ocl::initializeContextFromD3D11Device</a></div><div class="ttdeci">CV_EXPORTS Context &amp; initializeContextFromD3D11Device(ID3D11Device *pD3D11Device)</div><div class="ttdoc">Creates OpenCL context from D3D11 device.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga445003f2242b54e6ec88da03e3852c94"><div class="ttname"><a href="group__core__directx.html#ga445003f2242b54e6ec88da03e3852c94">cv::directx::convertToDirect3DSurface9</a></div><div class="ttdeci">CV_EXPORTS void convertToDirect3DSurface9(InputArray src, IDirect3DSurface9 *pDirect3DSurface9, void *surfaceSharedHandle=NULL)</div><div class="ttdoc">Converts InputArray to IDirect3DSurface9.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga6481ae933e8139750e43eec25bbaa56a"><div class="ttname"><a href="group__core__directx.html#ga6481ae933e8139750e43eec25bbaa56a">cv::directx::ocl::initializeContextFromDirect3DDevice9</a></div><div class="ttdeci">CV_EXPORTS Context &amp; initializeContextFromDirect3DDevice9(IDirect3DDevice9 *pDirect3DDevice9)</div><div class="ttdoc">Creates OpenCL context from Direct3DDevice9 device.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga674840dc511de38f2e273f4d1e5faee6"><div class="ttname"><a href="group__core__directx.html#ga674840dc511de38f2e273f4d1e5faee6">cv::directx::convertFromD3D10Texture2D</a></div><div class="ttdeci">CV_EXPORTS void convertFromD3D10Texture2D(ID3D10Texture2D *pD3D10Texture2D, OutputArray dst)</div><div class="ttdoc">Converts ID3D10Texture2D to OutputArray.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga6d7588a4eb8b9e438c831f73af6d1046"><div class="ttname"><a href="group__core__directx.html#ga6d7588a4eb8b9e438c831f73af6d1046">cv::directx::convertToD3D11Texture2D</a></div><div class="ttdeci">CV_EXPORTS void convertToD3D11Texture2D(InputArray src, ID3D11Texture2D *pD3D11Texture2D)</div><div class="ttdoc">Converts InputArray to ID3D11Texture2D. If destination texture format is DXGI_FORMAT_NV12 then input ...</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga8acd33c2520f52b284340637344d137d"><div class="ttname"><a href="group__core__directx.html#ga8acd33c2520f52b284340637344d137d">cv::directx::convertFromDirect3DSurface9</a></div><div class="ttdeci">CV_EXPORTS void convertFromDirect3DSurface9(IDirect3DSurface9 *pDirect3DSurface9, OutputArray dst, void *surfaceSharedHandle=NULL)</div><div class="ttdoc">Converts IDirect3DSurface9 to OutputArray.</div></div>
+<div class="ttc" id="agroup__core__directx_html_ga9c986621ddda5362cf375c4fb91bc6f9"><div class="ttname"><a href="group__core__directx.html#ga9c986621ddda5362cf375c4fb91bc6f9">cv::directx::getTypeFromD3DFORMAT</a></div><div class="ttdeci">CV_EXPORTS int getTypeFromD3DFORMAT(const int iD3DFORMAT)</div><div class="ttdoc">Get OpenCV type from DirectX type.</div></div>
+<div class="ttc" id="agroup__core__directx_html_gabd9dc6033bc04273fcfe5e262511c69d"><div class="ttname"><a href="group__core__directx.html#gabd9dc6033bc04273fcfe5e262511c69d">cv::directx::convertToD3D10Texture2D</a></div><div class="ttdeci">CV_EXPORTS void convertToD3D10Texture2D(InputArray src, ID3D10Texture2D *pD3D10Texture2D)</div><div class="ttdoc">Converts InputArray to ID3D10Texture2D.</div></div>
+<div class="ttc" id="agroup__core__directx_html_gac9796626fd44bcc538a57d8ba0b82168"><div class="ttname"><a href="group__core__directx.html#gac9796626fd44bcc538a57d8ba0b82168">cv::directx::getTypeFromDXGI_FORMAT</a></div><div class="ttdeci">CV_EXPORTS int getTypeFromDXGI_FORMAT(const int iDXGI_FORMAT)</div><div class="ttdoc">Get OpenCV type from DirectX type.</div></div>
+<div class="ttc" id="agroup__core__directx_html_gadb8f502cf93a92f91ef6fd8992ab24ee"><div class="ttname"><a href="group__core__directx.html#gadb8f502cf93a92f91ef6fd8992ab24ee">cv::directx::convertFromD3D11Texture2D</a></div><div class="ttdeci">CV_EXPORTS void convertFromD3D11Texture2D(ID3D11Texture2D *pD3D11Texture2D, OutputArray dst)</div><div class="ttdoc">Converts ID3D11Texture2D to OutputArray. If input texture format is DXGI_FORMAT_NV12 then data will b...</div></div>
+<div class="ttc" id="agroup__core__directx_html_gae02512ab37f89d365461e3bbfaa0d138"><div class="ttname"><a href="group__core__directx.html#gae02512ab37f89d365461e3bbfaa0d138">cv::directx::ocl::initializeContextFromD3D10Device</a></div><div class="ttdeci">CV_EXPORTS Context &amp; initializeContextFromD3D10Device(ID3D10Device *pD3D10Device)</div><div class="ttdoc">Creates OpenCL context from D3D10 device.</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__imgproc__misc_html_ga52bb929b38b35664f16102ee054f0b3d"><div class="ttname"><a href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">cv::dst</a></div><div class="ttdeci">OutputArray dst</div><div class="ttdef"><b>Definition:</b> imgproc.hpp:3394</div></div>
+<div class="ttc" id="anamespacecv_1_1ocl_html"><div class="ttname"><a href="namespacecv_1_1ocl.html">cv::ocl</a></div><div class="ttdef"><b>Definition:</b> ocl.hpp:47</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="aocl_8hpp_html"><div class="ttname"><a href="ocl_8hpp.html">ocl.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="directx_8hpp.html">directx.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

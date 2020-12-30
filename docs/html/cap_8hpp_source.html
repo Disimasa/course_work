@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/streaming/cap.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('cap_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cap.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cap_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2019 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_STREAMING_CAP_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_STREAMING_CAP_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="opencv2_2videoio_8hpp.html">opencv2/videoio.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="garg_8hpp.html">opencv2/gapi/garg.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="meta_8hpp.html">opencv2/gapi/streaming/meta.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>gapi {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>wip {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html">GCaptureSource</a>: <span class="keyword">public</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_i_stream_source.html">IStreamSource</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3c245c12c5b6f6fcf1a44383d61a5356">   50</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3c245c12c5b6f6fcf1a44383d61a5356">GCaptureSource</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) : <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>(id) { <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a609ad8dfcb829ed321a48bc9392444cd">prep</a>(); }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#adc611172b83cd5aefe3edc2b3bf8e03c">   51</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#adc611172b83cd5aefe3edc2b3bf8e03c">GCaptureSource</a>(<span class="keyword">const</span> std::string &amp;path) : <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>(path) { <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a609ad8dfcb829ed321a48bc9392444cd">prep</a>(); }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// TODO: Add more constructor overloads to make it</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// fully compatible with VideoCapture&#39;s interface.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">   57</a></span>&#160;    <a class="code" href="classcv_1_1_video_capture.html">cv::VideoCapture</a> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">   58</a></span>&#160;    <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a097a5707f5b992ae3418ca0cb55c76fb">   59</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a097a5707f5b992ae3418ca0cb55c76fb">first_pulled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#afc9ba6cb30bb6a548a0bcf1b4d9e99e8">   60</a></span>&#160;    int64_t <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#afc9ba6cb30bb6a548a0bcf1b4d9e99e8">counter</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a609ad8dfcb829ed321a48bc9392444cd">   62</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a609ad8dfcb829ed321a48bc9392444cd">prep</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// Prepare first frame to report its meta to engine</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// when needed</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>.<a class="code" href="classcv_1_1_mat.html#abbec3525a852e77998aba034813fded4">empty</a>());</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> tmp;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>.<a class="code" href="classcv_1_1_video_capture.html#abcdbcc58007262532753169542d2ee4e">read</a>(tmp))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Couldn&#39;t grab the very first frame&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// NOTE: Some decode/media VideoCapture backends continue</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// owning the video buffer under cv::Mat so in order to</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// process it safely in a highly concurrent pipeline, clone()</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// is the only right way.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a> = tmp.<a class="code" href="classcv_1_1_mat.html#adff2ea98da45eae0833e73582dd4a660">clone</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a51e5143c603dd8ca571ab6dd91215ec6">   79</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a51e5143c603dd8ca571ab6dd91215ec6">pull</a>(<a class="code" href="structcv_1_1gapi_1_1wip_1_1_data.html">cv::gapi::wip::Data</a> &amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a097a5707f5b992ae3418ca0cb55c76fb">first_pulled</a>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>.<a class="code" href="classcv_1_1_mat.html#abbec3525a852e77998aba034813fded4">empty</a>());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a097a5707f5b992ae3418ca0cb55c76fb">first_pulled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a> = <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>; <span class="comment">// no need to clone here since it was cloned already</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>.<a class="code" href="classcv_1_1_video_capture.html#a66ab56406b19b8e20bf621da341df9a3">isOpened</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> <a class="code" href="group__core__c.html#ga0430deaafd9043e478f306e33961299d">frame</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cap</a>.<a class="code" href="classcv_1_1_video_capture.html#abcdbcc58007262532753169542d2ee4e">read</a>(<a class="code" href="group__core__c.html#ga0430deaafd9043e478f306e33961299d">frame</a>))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="comment">// end-of-stream happened</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Same reason to clone as in prep()</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a> = <a class="code" href="group__core__c.html#ga0430deaafd9043e478f306e33961299d">frame</a>.clone();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// Tag data with seq_id/ts</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> now = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dur = std::chrono::duration_cast&lt;std::chrono::microseconds&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            (now.time_since_epoch());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.meta[cv::gapi::streaming::meta_tag::timestamp] = int64_t{dur.count()};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.meta[cv::gapi::streaming::meta_tag::seq_id]    = int64_t{<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#afc9ba6cb30bb6a548a0bcf1b4d9e99e8">counter</a>++};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#ad92fceb8177f0fb129137f35d50dce93">  109</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classcv_1_1util_1_1variant.html">GMetaArg</a> <a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#ad92fceb8177f0fb129137f35d50dce93">descr_of</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(!<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>.<a class="code" href="classcv_1_1_mat.html#abbec3525a852e77998aba034813fded4">empty</a>());</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classcv_1_1util_1_1variant.html">cv::GMetaArg</a>{<a class="code" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">cv::descr_of</a>(<a class="code" href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">first</a>)};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// NB: Overload for using from python</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1wip.html#a4bd80e0507736192cdfb76cd96bed47b">  117</a></span>&#160;<a class="code" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;IStreamSource&gt;</a> <span class="keyword">inline</span> <a class="code" href="namespacecv_1_1gapi_1_1wip.html#a4bd80e0507736192cdfb76cd96bed47b">make_capture_src</a>(<span class="keyword">const</span> std::string&amp; path)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> make_src&lt;GCaptureSource&gt;(path);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">// namespace wip</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace gapi</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_STREAMING_CAP_HPP</span></div>
+<div class="ttc" id="aassert_8hpp_html_ac7ff15c806f547ae531e8d0984c685ae"><div class="ttname"><a href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a></div><div class="ttdeci">#define GAPI_Assert</div><div class="ttdef"><b>Definition:</b> assert.hpp:20</div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html"><div class="ttname"><a href="classcv_1_1_mat.html">cv::Mat</a></div><div class="ttdoc">n-dimensional dense array class</div><div class="ttdef"><b>Definition:</b> mat.hpp:798</div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html_abbec3525a852e77998aba034813fded4"><div class="ttname"><a href="classcv_1_1_mat.html#abbec3525a852e77998aba034813fded4">cv::Mat::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Returns true if the array has no elements.</div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html_adff2ea98da45eae0833e73582dd4a660"><div class="ttname"><a href="classcv_1_1_mat.html#adff2ea98da45eae0833e73582dd4a660">cv::Mat::clone</a></div><div class="ttdeci">Mat clone() const CV_NODISCARD</div><div class="ttdoc">Creates a full copy of the array and the underlying data.</div></div>
+<div class="ttc" id="aclasscv_1_1_video_capture_html"><div class="ttname"><a href="classcv_1_1_video_capture.html">cv::VideoCapture</a></div><div class="ttdoc">Class for video capturing from video files, image sequences or cameras.</div><div class="ttdef"><b>Definition:</b> videoio.hpp:628</div></div>
+<div class="ttc" id="aclasscv_1_1_video_capture_html_a66ab56406b19b8e20bf621da341df9a3"><div class="ttname"><a href="classcv_1_1_video_capture.html#a66ab56406b19b8e20bf621da341df9a3">cv::VideoCapture::isOpened</a></div><div class="ttdeci">virtual CV_WRAP bool isOpened() const</div><div class="ttdoc">Returns true if video capturing has been initialized already.</div></div>
+<div class="ttc" id="aclasscv_1_1_video_capture_html_abcdbcc58007262532753169542d2ee4e"><div class="ttname"><a href="classcv_1_1_video_capture.html#abcdbcc58007262532753169542d2ee4e">cv::VideoCapture::read</a></div><div class="ttdeci">virtual CV_WRAP bool read(OutputArray image)</div><div class="ttdoc">Grabs, decodes and returns the next video frame.</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html">cv::gapi::wip::GCaptureSource</a></div><div class="ttdoc">OpenCV's VideoCapture-based streaming source.</div><div class="ttdef"><b>Definition:</b> cap.hpp:48</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_a097a5707f5b992ae3418ca0cb55c76fb"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a097a5707f5b992ae3418ca0cb55c76fb">cv::gapi::wip::GCaptureSource::first_pulled</a></div><div class="ttdeci">bool first_pulled</div><div class="ttdef"><b>Definition:</b> cap.hpp:59</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_a3a21970aea469f6b388be220c20feaff"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3a21970aea469f6b388be220c20feaff">cv::gapi::wip::GCaptureSource::first</a></div><div class="ttdeci">cv::Mat first</div><div class="ttdef"><b>Definition:</b> cap.hpp:58</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_a3c245c12c5b6f6fcf1a44383d61a5356"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a3c245c12c5b6f6fcf1a44383d61a5356">cv::gapi::wip::GCaptureSource::GCaptureSource</a></div><div class="ttdeci">GCaptureSource(int id)</div><div class="ttdef"><b>Definition:</b> cap.hpp:50</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_a51e5143c603dd8ca571ab6dd91215ec6"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a51e5143c603dd8ca571ab6dd91215ec6">cv::gapi::wip::GCaptureSource::pull</a></div><div class="ttdeci">virtual bool pull(cv::gapi::wip::Data &amp;data) override</div><div class="ttdef"><b>Definition:</b> cap.hpp:79</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_a609ad8dfcb829ed321a48bc9392444cd"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#a609ad8dfcb829ed321a48bc9392444cd">cv::gapi::wip::GCaptureSource::prep</a></div><div class="ttdeci">void prep()</div><div class="ttdef"><b>Definition:</b> cap.hpp:62</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_aa2cb96618d16f46f6a8765d7b7368901"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#aa2cb96618d16f46f6a8765d7b7368901">cv::gapi::wip::GCaptureSource::cap</a></div><div class="ttdeci">cv::VideoCapture cap</div><div class="ttdef"><b>Definition:</b> cap.hpp:57</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_ad92fceb8177f0fb129137f35d50dce93"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#ad92fceb8177f0fb129137f35d50dce93">cv::gapi::wip::GCaptureSource::descr_of</a></div><div class="ttdeci">virtual GMetaArg descr_of() const override</div><div class="ttdef"><b>Definition:</b> cap.hpp:109</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_adc611172b83cd5aefe3edc2b3bf8e03c"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#adc611172b83cd5aefe3edc2b3bf8e03c">cv::gapi::wip::GCaptureSource::GCaptureSource</a></div><div class="ttdeci">GCaptureSource(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> cap.hpp:51</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_g_capture_source_html_afc9ba6cb30bb6a548a0bcf1b4d9e99e8"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_g_capture_source.html#afc9ba6cb30bb6a548a0bcf1b4d9e99e8">cv::gapi::wip::GCaptureSource::counter</a></div><div class="ttdeci">int64_t counter</div><div class="ttdef"><b>Definition:</b> cap.hpp:60</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1wip_1_1_i_stream_source_html"><div class="ttname"><a href="classcv_1_1gapi_1_1wip_1_1_i_stream_source.html">cv::gapi::wip::IStreamSource</a></div><div class="ttdoc">Abstract streaming pipeline source.</div><div class="ttdef"><b>Definition:</b> source.hpp:40</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html"><div class="ttname"><a href="classcv_1_1util_1_1variant.html">cv::util::variant</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:65</div></div>
+<div class="ttc" id="aexports_8hpp_html_ab1afad8a2eab141789b23a68a47ab31e"><div class="ttname"><a href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a></div><div class="ttdeci">#define GAPI_EXPORTS_W</div><div class="ttdef"><b>Definition:</b> exports.hpp:22</div></div>
+<div class="ttc" id="agarg_8hpp_html"><div class="ttname"><a href="garg_8hpp.html">garg.hpp</a></div></div>
+<div class="ttc" id="agroup__core__c_html_ga0430deaafd9043e478f306e33961299d"><div class="ttname"><a href="group__core__c.html#ga0430deaafd9043e478f306e33961299d">frame</a></div><div class="ttdeci">void void * frame</div><div class="ttdef"><b>Definition:</b> core_c.h:1910</div></div>
+<div class="ttc" id="agroup__core__c_html_gacd1647952fba31484ea63d6f1140e509"><div class="ttname"><a href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> core_c.h:424</div></div>
+<div class="ttc" id="agroup__gapi__meta__args_html_ga0d1b4f7d1dbc43b5ac9ddd6454348f0c"><div class="ttname"><a href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">cv::descr_of</a></div><div class="ttdeci">GArrayDesc descr_of(const std::vector&lt; U &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> garray.hpp:44</div></div>
+<div class="ttc" id="ameta_8hpp_html"><div class="ttname"><a href="meta_8hpp.html">meta.hpp</a></div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1wip_html_a4bd80e0507736192cdfb76cd96bed47b"><div class="ttname"><a href="namespacecv_1_1gapi_1_1wip.html#a4bd80e0507736192cdfb76cd96bed47b">cv::gapi::wip::make_capture_src</a></div><div class="ttdeci">GAPI_EXPORTS_W cv::Ptr&lt; IStreamSource &gt; make_capture_src(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> cap.hpp:117</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="aopencv2_2videoio_8hpp_html"><div class="ttname"><a href="opencv2_2videoio_8hpp.html">videoio.hpp</a></div></div>
+<div class="ttc" id="astructcv_1_1_ptr_html"><div class="ttname"><a href="structcv_1_1_ptr.html">cv::Ptr</a></div><div class="ttdef"><b>Definition:</b> cvstd_wrapper.hpp:74</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1wip_1_1_data_html"><div class="ttname"><a href="structcv_1_1gapi_1_1wip_1_1_data.html">cv::gapi::wip::Data</a></div><div class="ttdoc">This aggregate type represents all types which G-API can handle (via variant).</div><div class="ttdef"><b>Definition:</b> garg.hpp:196</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_274c9307de7401f1cfe070d87cb6e1f6.html">streaming</a></li><li class="navelem"><a class="el" href="cap_8hpp.html">cap.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/gcompoundkernel.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gcompoundkernel_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gcompoundkernel.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gcompoundkernel_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2018-2019 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_GCOMPOUNDKERNEL_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_GCOMPOUNDKERNEL_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="opencv__includes_8hpp.html">opencv2/gapi/opencv_includes.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gcommon_8hpp.html">opencv2/gapi/gcommon.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gkernel_8hpp.html">opencv2/gapi/gkernel.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="garg_8hpp.html">opencv2/gapi/garg.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>gapi</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1compound.html">   19</a></span>&#160;<span class="keyword">namespace </span>compound</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// FIXME User does not need to know about this function</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Needs that user may define compound kernels(as cpu kernels)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1compound.html#a033ddaef7df5ce9a837196d0e25b2494">   23</a></span>&#160;    <a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="namespacecv_1_1gapi_1_1compound.html#a033ddaef7df5ce9a837196d0e25b2494">backend</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <span class="comment">// namespace compound</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <span class="comment">// namespace gapi</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_context.html">   30</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_context.html#ae6f637cda114783e83a315be6db2287e">   32</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#ae6f637cda114783e83a315be6db2287e">GCompoundContext</a>(<span class="keyword">const</span> <a class="code" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a>&amp; in_args);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_context.html#ada1625c10da81a26710a2a56ce8e4c9a">   34</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#ada1625c10da81a26710a2a56ce8e4c9a">inArg</a>(<span class="keywordtype">int</span> input) { <span class="keywordflow">return</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">m_args</a>.at(input).get&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;(); }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">   36</a></span>&#160;    <a class="code" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> <a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">m_args</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_context.html#a4e30a09af05c443277154abcc9ccea1c">   37</a></span>&#160;    <a class="code" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> <a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a4e30a09af05c443277154abcc9ccea1c">m_results</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html">GCompoundKernel</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// Compound kernel must use all of it&#39;s inputs</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel.html#ab6a98f0b9046b9dfe060203c360d4da8">   44</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#ab6a98f0b9046b9dfe060203c360d4da8">F</a> = std::function&lt;<a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a>&amp; ctx)&gt;;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel.html#ade84b64ad469e1daa704883dbca11706">   46</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#ade84b64ad469e1daa704883dbca11706">GCompoundKernel</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#ab6a98f0b9046b9dfe060203c360d4da8">F</a>&amp; f);</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel.html#aed2335850dcab6603305c09ba05f79e2">   47</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#aed2335850dcab6603305c09ba05f79e2">apply</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a>&amp; ctx);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel.html#ad44620562bc6c1d1d2086a14bab97646">   50</a></span>&#160;    <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#ab6a98f0b9046b9dfe060203c360d4da8">F</a> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html#ad44620562bc6c1d1d2086a14bab97646">m_f</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in.html">   53</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1get__compound__in.html">get_compound_in</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in.html#a38b794a6624fad95edb6290d4e4edd82">   55</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> <a class="code" href="structcv_1_1detail_1_1get__compound__in.html#a38b794a6624fad95edb6290d4e4edd82">get</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#ada1625c10da81a26710a2a56ce8e4c9a">inArg</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>); }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html">   58</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1get__compound__in.html">get_compound_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_array.html">GArray</a>&lt;U&gt;&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a3d5e1ba1c9a891ce08b139e314839555">   60</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_array.html">cv::GArray&lt;U&gt;</a> <a class="code" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a3d5e1ba1c9a891ce08b139e314839555">get</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">auto</span> array = <a class="code" href="classcv_1_1_g_array.html">cv::GArray&lt;U&gt;</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        ctx.<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">m_args</a>[<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>] = <a class="code" href="classcv_1_1_g_arg.html">GArg</a>(array);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> array;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html">   68</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1get__compound__in.html">get_compound_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_opaque.html">GOpaque</a>&lt;U&gt;&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a63dd6ebb7a3ab1530981b8a35d5a4198">   70</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_opaque.html">cv::GOpaque&lt;U&gt;</a> <a class="code" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a63dd6ebb7a3ab1530981b8a35d5a4198">get</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">auto</span> opaq = <a class="code" href="classcv_1_1_g_opaque.html">cv::GOpaque&lt;U&gt;</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        ctx.<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">m_args</a>[<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>] = <a class="code" href="classcv_1_1_g_arg.html">GArg</a>(opaq);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> opaq;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_mat_p_01_4.html">   78</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1get__compound__in.html">get_compound_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_mat_p.html">GMatP</a>&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_mat_p_01_4.html#a15963ff576bff7fcd9fa0c88e41ecbd6">   80</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_mat_p.html">cv::GMatP</a> <a class="code" href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_mat_p_01_4.html#a15963ff576bff7fcd9fa0c88e41ecbd6">get</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">auto</span> <a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a> = <a class="code" href="classcv_1_1_g_mat_p.html">cv::GMatP</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ctx.<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">m_args</a>[<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>] = <a class="code" href="classcv_1_1_g_arg.html">GArg</a>(<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_call_helper.html">   89</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper.html">GCompoundCallHelper</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Impl, <span class="keyword">typename</span>... Ins, <span class="keyword">typename</span>... Outs&gt;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html">   92</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper.html">GCompoundCallHelper</a>&lt;Impl, <a class="code" href="namespacestd.html">std</a>::tuple&lt;Ins...&gt;, std::tuple&lt;Outs...&gt; &gt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span>... IIs, <span class="keywordtype">int</span>... OIs&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a316f2951af9e7448ebc5ab4e81df3b0d">   95</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a316f2951af9e7448ebc5ab4e81df3b0d">expand_impl</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx, detail::Seq&lt;IIs...&gt;, detail::Seq&lt;OIs...&gt;)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">auto</span> <a class="code" href="group__core__c.html#gadf46fee3107905e425f34254cbce0d9a">result</a> = Impl::expand(<a class="code" href="structcv_1_1detail_1_1get__compound__in.html">get_compound_in&lt;Ins&gt;::get</a>(ctx, IIs)...);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">auto</span> tuple_return = tuple_wrap_helper&lt;decltype(<a class="code" href="group__core__c.html#gadf46fee3107905e425f34254cbce0d9a">result</a>)&gt;<a class="code" href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">::get</a>(std::move(<a class="code" href="group__core__c.html#gadf46fee3107905e425f34254cbce0d9a">result</a>));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        ctx.<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html#a4e30a09af05c443277154abcc9ccea1c">m_results</a> = { <a class="code" href="classcv_1_1_g_arg.html">cv::GArg</a>(std::get&lt;OIs&gt;(tuple_return))... };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a3088ea01f13ee8d581eeb189670388b7">  102</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a3088ea01f13ee8d581eeb189670388b7">expand</a>(<a class="code" href="structcv_1_1detail_1_1_g_compound_context.html">GCompoundContext</a> &amp;ctx)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        expand_impl(ctx,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keyword">typename</span> detail::MkSeq&lt;<span class="keyword">sizeof</span>...(Ins)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>(),</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keyword">typename</span> detail::MkSeq&lt;<span class="keyword">sizeof</span>...(Outs)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>());</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Impl, <span class="keyword">class</span> K&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html">  111</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html">GCompoundKernelImpl</a>: <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper.html">cv::detail::GCompoundCallHelper</a>&lt;Impl, typename K::InArgs, typename K::OutArgs&gt;,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                           <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_kernel_tag.html">cv::detail::KernelTag</a></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper.html">P</a> = <a class="code" href="structcv_1_1detail_1_1_g_compound_call_helper.html">cv::detail::GCompoundCallHelper&lt;Impl, typename K::InArgs, typename K::OutArgs&gt;</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#a0118297d188a70c35b4071109d9921ca">  117</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#a0118297d188a70c35b4071109d9921ca">API</a> = K;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac6e29ba60e8dfe181eab4152cf6f9d4c">  119</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac6e29ba60e8dfe181eab4152cf6f9d4c">backend</a>() { <span class="keywordflow">return</span> <a class="code" href="namespacecv_1_1gapi_1_1compound.html#a033ddaef7df5ce9a837196d0e25b2494">cv::gapi::compound::backend</a>(); }</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac20bbde4cd0b865cc0eed17d10334b55">  120</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html">GCompoundKernel</a>    <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac20bbde4cd0b865cc0eed17d10334b55">kernel</a>()  { <span class="keywordflow">return</span> <a class="code" href="classcv_1_1detail_1_1_g_compound_kernel.html">GCompoundKernel</a>(&amp;P::expand);   }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="gcompoundkernel_8hpp.html#ad55e42d2657e9063c4888f109cdff78f">  134</a></span>&#160;<span class="preprocessor">#define GAPI_COMPOUND_KERNEL(Name, API) \</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">    struct Name: public cv::detail::GCompoundKernelImpl&lt;Name, API&gt;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_GCOMPOUNDKERNEL_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_g_arg_html"><div class="ttname"><a href="classcv_1_1_g_arg.html">cv::GArg</a></div><div class="ttdef"><b>Definition:</b> garg.hpp:47</div></div>
+<div class="ttc" id="aclasscv_1_1_g_array_html"><div class="ttname"><a href="classcv_1_1_g_array.html">cv::GArray</a></div><div class="ttdef"><b>Definition:</b> garray.hpp:338</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_p_html"><div class="ttname"><a href="classcv_1_1_g_mat_p.html">cv::GMatP</a></div><div class="ttdef"><b>Definition:</b> gmat.hpp:63</div></div>
+<div class="ttc" id="aclasscv_1_1_g_opaque_html"><div class="ttname"><a href="classcv_1_1_g_opaque.html">cv::GOpaque</a></div><div class="ttdef"><b>Definition:</b> gopaque.hpp:309</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_html"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel.html">cv::detail::GCompoundKernel</a></div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:41</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_html_ab6a98f0b9046b9dfe060203c360d4da8"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel.html#ab6a98f0b9046b9dfe060203c360d4da8">cv::detail::GCompoundKernel::F</a></div><div class="ttdeci">std::function&lt; void(GCompoundContext &amp;ctx)&gt; F</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:44</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_html_ad44620562bc6c1d1d2086a14bab97646"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel.html#ad44620562bc6c1d1d2086a14bab97646">cv::detail::GCompoundKernel::m_f</a></div><div class="ttdeci">F m_f</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:50</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_html_ade84b64ad469e1daa704883dbca11706"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel.html#ade84b64ad469e1daa704883dbca11706">cv::detail::GCompoundKernel::GCompoundKernel</a></div><div class="ttdeci">GCompoundKernel(const F &amp;f)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_html_aed2335850dcab6603305c09ba05f79e2"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel.html#aed2335850dcab6603305c09ba05f79e2">cv::detail::GCompoundKernel::apply</a></div><div class="ttdeci">void apply(GCompoundContext &amp;ctx)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_impl_html"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel_impl.html">cv::detail::GCompoundKernelImpl</a></div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:113</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_impl_html_a0118297d188a70c35b4071109d9921ca"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#a0118297d188a70c35b4071109d9921ca">cv::detail::GCompoundKernelImpl::API</a></div><div class="ttdeci">K API</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:117</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_impl_html_ac20bbde4cd0b865cc0eed17d10334b55"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac20bbde4cd0b865cc0eed17d10334b55">cv::detail::GCompoundKernelImpl::kernel</a></div><div class="ttdeci">static GCompoundKernel kernel()</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:120</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_g_compound_kernel_impl_html_ac6e29ba60e8dfe181eab4152cf6f9d4c"><div class="ttname"><a href="classcv_1_1detail_1_1_g_compound_kernel_impl.html#ac6e29ba60e8dfe181eab4152cf6f9d4c">cv::detail::GCompoundKernelImpl::backend</a></div><div class="ttdeci">static cv::gapi::GBackend backend()</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:119</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1_g_backend_html"><div class="ttname"><a href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a></div><div class="ttdef"><b>Definition:</b> gkernel.hpp:375</div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="agarg_8hpp_html"><div class="ttname"><a href="garg_8hpp.html">garg.hpp</a></div></div>
+<div class="ttc" id="agcommon_8hpp_html"><div class="ttname"><a href="gcommon_8hpp.html">gcommon.hpp</a></div></div>
+<div class="ttc" id="agkernel_8hpp_html"><div class="ttname"><a href="gkernel_8hpp.html">gkernel.hpp</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga1fc9a530e4f9c60ea61e1e7a68cfb639"><div class="ttname"><a href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">cv::T</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray InputOutputArray T</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_ga5c7c842f447336aa2f10826df65a28b3"><div class="ttname"><a href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a></div><div class="ttdeci">const int * idx</div><div class="ttdef"><b>Definition:</b> core_c.h:665</div></div>
+<div class="ttc" id="agroup__core__c_html_ga61fed56cb531d5cdb7d162007cc02132"><div class="ttname"><a href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a></div><div class="ttdeci">CvArr const CvMat * mat</div><div class="ttdef"><b>Definition:</b> core_c.h:1305</div></div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__core__c_html_gadf46fee3107905e425f34254cbce0d9a"><div class="ttname"><a href="group__core__c.html#gadf46fee3107905e425f34254cbce0d9a">result</a></div><div class="ttdeci">const CvArr const CvArr CvArr * result</div><div class="ttdef"><b>Definition:</b> core_c.h:1420</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1compound_html_a033ddaef7df5ce9a837196d0e25b2494"><div class="ttname"><a href="namespacecv_1_1gapi_1_1compound.html#a033ddaef7df5ce9a837196d0e25b2494">cv::gapi::compound::backend</a></div><div class="ttdeci">GAPI_EXPORTS cv::gapi::GBackend backend()</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a71f02f915a836dd4fa73b9dbc76d297b"><div class="ttname"><a href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">cv::util::get</a></div><div class="ttdeci">T &amp; get(util::variant&lt; Types... &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> variant.hpp:388</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_a70eaaa55b0e94b6867242fbfb9c9dede"><div class="ttname"><a href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">cv::GArgs</a></div><div class="ttdeci">std::vector&lt; GArg &gt; GArgs</div><div class="ttdef"><b>Definition:</b> garg.hpp:94</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:266</div></div>
+<div class="ttc" id="aopencv__includes_8hpp_html"><div class="ttname"><a href="opencv__includes_8hpp.html">opencv_includes.hpp</a></div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a1dabed62d2d603302ed85878c743e251"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void(CL_CALLBACK *)(cl_program</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e_html_a3088ea01f13ee8d581eeb189670388b7"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a3088ea01f13ee8d581eeb189670388b7">cv::detail::GCompoundCallHelper&lt; Impl, std::tuple&lt; Ins... &gt;, std::tuple&lt; Outs... &gt; &gt;::expand</a></div><div class="ttdeci">static void expand(GCompoundContext &amp;ctx)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:102</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e_html_a316f2951af9e7448ebc5ab4e81df3b0d"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_003145c52867801952b171caaa7881970e.html#a316f2951af9e7448ebc5ab4e81df3b0d">cv::detail::GCompoundCallHelper&lt; Impl, std::tuple&lt; Ins... &gt;, std::tuple&lt; Outs... &gt; &gt;::expand_impl</a></div><div class="ttdeci">static void expand_impl(GCompoundContext &amp;ctx, detail::Seq&lt; IIs... &gt;, detail::Seq&lt; OIs... &gt;)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:95</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_call_helper_html"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_call_helper.html">cv::detail::GCompoundCallHelper</a></div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:89</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_context_html"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_context.html">cv::detail::GCompoundContext</a></div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:31</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_context_html_a4e30a09af05c443277154abcc9ccea1c"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_context.html#a4e30a09af05c443277154abcc9ccea1c">cv::detail::GCompoundContext::m_results</a></div><div class="ttdeci">GArgs m_results</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:37</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_context_html_a76b3b5f7095b7d1cce1fbcde9ad1a539"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_context.html#a76b3b5f7095b7d1cce1fbcde9ad1a539">cv::detail::GCompoundContext::m_args</a></div><div class="ttdeci">GArgs m_args</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:36</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_context_html_ada1625c10da81a26710a2a56ce8e4c9a"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_context.html#ada1625c10da81a26710a2a56ce8e4c9a">cv::detail::GCompoundContext::inArg</a></div><div class="ttdeci">const T &amp; inArg(int input)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:34</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_g_compound_context_html_ae6f637cda114783e83a315be6db2287e"><div class="ttname"><a href="structcv_1_1detail_1_1_g_compound_context.html#ae6f637cda114783e83a315be6db2287e">cv::detail::GCompoundContext::GCompoundContext</a></div><div class="ttdeci">GCompoundContext(const GArgs &amp;in_args)</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_kernel_tag_html"><div class="ttname"><a href="structcv_1_1detail_1_1_kernel_tag.html">cv::detail::KernelTag</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:36</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4_html_a3d5e1ba1c9a891ce08b139e314839555"><div class="ttname"><a href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a3d5e1ba1c9a891ce08b139e314839555">cv::detail::get_compound_in&lt; cv::GArray&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static cv::GArray&lt; U &gt; get(GCompoundContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:60</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_mat_p_01_4_html_a15963ff576bff7fcd9fa0c88e41ecbd6"><div class="ttname"><a href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_mat_p_01_4.html#a15963ff576bff7fcd9fa0c88e41ecbd6">cv::detail::get_compound_in&lt; cv::GMatP &gt;::get</a></div><div class="ttdeci">static cv::GMatP get(GCompoundContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:80</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4_html_a63dd6ebb7a3ab1530981b8a35d5a4198"><div class="ttname"><a href="structcv_1_1detail_1_1get__compound__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a63dd6ebb7a3ab1530981b8a35d5a4198">cv::detail::get_compound_in&lt; cv::GOpaque&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static cv::GOpaque&lt; U &gt; get(GCompoundContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:70</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1get__compound__in_html"><div class="ttname"><a href="structcv_1_1detail_1_1get__compound__in.html">cv::detail::get_compound_in</a></div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:54</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1get__compound__in_html_a38b794a6624fad95edb6290d4e4edd82"><div class="ttname"><a href="structcv_1_1detail_1_1get__compound__in.html#a38b794a6624fad95edb6290d4e4edd82">cv::detail::get_compound_in::get</a></div><div class="ttdeci">static T get(GCompoundContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> gcompoundkernel.hpp:55</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="gcompoundkernel_8hpp.html">gcompoundkernel.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

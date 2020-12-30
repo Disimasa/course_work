@@ -1,0 +1,2207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Basic structures</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__core__basic.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Basic structures<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_default_deleter.html">cv::DefaultDeleter&lt; Y &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1has__custom__delete.html">cv::has_custom_delete&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1has__custom__delete_3_01_t_00_01typename_01std_1_1enable__if_3_01sfinae_1_1has__pare7a91cf2ae9e9208ae5dd1e38b6bcbf52.html">cv::has_custom_delete&lt; T, typename std::enable_if&lt; sfinae::has_parenthesis_operator&lt; DefaultDeleter&lt; T &gt;, void, T * &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1___input_array.html">cv::_InputArray</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the proxy class for passing read-only input arrays into OpenCV functions.  <a href="classcv_1_1___input_array.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1___output_array.html">cv::_OutputArray</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This type is very similar to InputArray except that it is used for input/output and output function parameters.  <a href="classcv_1_1___output_array.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1___input_output_array.html">cv::_InputOutputArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_allocator.html">cv::MatAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom array allocator.  <a href="classcv_1_1_mat_allocator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_comma_initializer__.html">cv::MatCommaInitializer_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comma-separated Matrix Initializer.  <a href="classcv_1_1_mat_comma_initializer__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_u_mat_data.html">cv::UMatData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_mat_size.html">cv::MatSize</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_mat_step.html">cv::MatStep</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat.html">cv::Mat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">n-dimensional dense array class<a class="anchor" id="CVMat_Details"></a> <a href="classcv_1_1_mat.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat__.html">cv::Mat_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template matrix class derived from <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>.  <a href="classcv_1_1_mat__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat.html">cv::SparseMat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class <a class="el" href="classcv_1_1_sparse_mat.html" title="The class SparseMat represents multi-dimensional sparse numerical arrays.">SparseMat</a> represents multi-dimensional sparse numerical arrays.  <a href="classcv_1_1_sparse_mat.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat__.html">cv::SparseMat_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template sparse n-dimensional array class derived from <a class="el" href="classcv_1_1_sparse_mat.html" title="The class SparseMat represents multi-dimensional sparse numerical arrays.">SparseMat</a>.  <a href="classcv_1_1_sparse_mat__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_const_iterator.html">cv::MatConstIterator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_const_iterator__.html">cv::MatConstIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix read-only iterator.  <a href="classcv_1_1_mat_const_iterator__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_iterator__.html">cv::MatIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix read-write iterator.  <a href="classcv_1_1_mat_iterator__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">cv::SparseMatConstIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-Only Sparse Matrix Iterator.  <a href="classcv_1_1_sparse_mat_const_iterator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator.html">cv::SparseMatIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-write Sparse Matrix Iterator.  <a href="classcv_1_1_sparse_mat_iterator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">cv::SparseMatConstIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template Read-Only Sparse Matrix Iterator Class.  <a href="classcv_1_1_sparse_mat_const_iterator__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template Read-Write Sparse Matrix Iterator Class.  <a href="classcv_1_1_sparse_mat_iterator__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_n_ary_mat_iterator.html">cv::NAryMatIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">n-ary multi-dimensional array iterator.  <a href="classcv_1_1_n_ary_mat_iterator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html">cv::MatOp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_expr.html">cv::MatExpr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix expression representation <a class="anchor" id="MatrixExpressions"></a>This is a list of implemented matrix operations that can be combined in arbitrary complex expressions (here A, B stand for matrices ( <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> ), s for a scalar ( Scalar ), alpha for a real-valued scalar ( double )):  <a href="classcv_1_1_mat_expr.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html">cv::Matx&lt; _Tp, m, n &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for small matrices whose type and size are known at compilation time.  <a href="classcv_1_1_matx.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_matx_3_01___tp_00_01m_00_01n_01_4_01_4.html">cv::DataType&lt; Matx&lt; _Tp, m, n &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx_comma_initializer.html">cv::MatxCommaInitializer&lt; _Tp, m, n &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comma-separated Matrix Initializer.  <a href="classcv_1_1_matx_comma_initializer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_vec.html">cv::Vec&lt; _Tp, cn &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for short numerical vectors, a partial case of <a class="el" href="classcv_1_1_matx.html" title="Template class for small matrices whose type and size are known at compilation time.">Matx</a>.  <a href="classcv_1_1_vec.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_vec_3_01___tp_00_01cn_01_4_01_4.html">cv::DataType&lt; Vec&lt; _Tp, cn &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_vec_comma_initializer.html">cv::VecCommaInitializer&lt; _Tp, m &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comma-separated <a class="el" href="classcv_1_1_vec.html" title="Template class for short numerical vectors, a partial case of Matx.">Vec</a> Initializer.  <a href="classcv_1_1_vec_comma_initializer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type.html">cv::DataType&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template "trait" class for OpenCV primitive data types.  <a href="classcv_1_1_data_type.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01bool_01_4.html">cv::DataType&lt; bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01uchar_01_4.html">cv::DataType&lt; uchar &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01schar_01_4.html">cv::DataType&lt; schar &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01char_01_4.html">cv::DataType&lt; char &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01ushort_01_4.html">cv::DataType&lt; ushort &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01short_01_4.html">cv::DataType&lt; short &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01int_01_4.html">cv::DataType&lt; int &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01float_01_4.html">cv::DataType&lt; float &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01double_01_4.html">cv::DataType&lt; double &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01float16__t_01_4.html">cv::DataType&lt; float16_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_depth.html">cv::DataDepth&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper class for <a class="el" href="classcv_1_1_data_type.html" title="Template &quot;trait&quot; class for OpenCV primitive data types.">cv::DataType</a>.  <a href="classcv_1_1_data_depth.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_complex.html">cv::Complex&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A complex number class.  <a href="classcv_1_1_complex.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_complex_3_01___tp_01_4_01_4.html">cv::DataType&lt; Complex&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_point__.html">cv::Point_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for 2D points specified by its coordinates <code>x</code> and <code>y</code>.  <a href="classcv_1_1_point__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_point___3_01___tp_01_4_01_4.html">cv::DataType&lt; Point_&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_point3__.html">cv::Point3_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for 3D points specified by its coordinates <code>x</code>, <code>y</code> and <code>z</code>.  <a href="classcv_1_1_point3__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_point3___3_01___tp_01_4_01_4.html">cv::DataType&lt; Point3_&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_size__.html">cv::Size_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for specifying the size of an image or rectangle.  <a href="classcv_1_1_size__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_size___3_01___tp_01_4_01_4.html">cv::DataType&lt; Size_&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_rect__.html">cv::Rect_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for 2D rectangles.  <a href="classcv_1_1_rect__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_rect___3_01___tp_01_4_01_4.html">cv::DataType&lt; Rect_&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_rotated_rect.html">cv::RotatedRect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class represents rotated (i.e. not up-right) rectangles on a plane.  <a href="classcv_1_1_rotated_rect.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_rotated_rect_01_4.html">cv::DataType&lt; RotatedRect &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_range.html">cv::Range</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class specifying a continuous subsequence (slice) of a sequence.  <a href="classcv_1_1_range.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_range_01_4.html">cv::DataType&lt; Range &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_scalar__.html">cv::Scalar_&lt; _Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template class for a 4-element vector derived from <a class="el" href="classcv_1_1_vec.html" title="Template class for short numerical vectors, a partial case of Matx.">Vec</a>.  <a href="classcv_1_1_scalar__.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_data_type_3_01_scalar___3_01___tp_01_4_01_4.html">cv::DataType&lt; Scalar_&lt; _Tp &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_key_point.html">cv::KeyPoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure for salient point detectors.  <a href="classcv_1_1_key_point.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_match.html">cv::DMatch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for matching keypoint descriptors.  <a href="classcv_1_1_d_match.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_term_criteria.html">cv::TermCriteria</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class defining termination criteria for iterative algorithms.  <a href="classcv_1_1_term_criteria.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_formatted.html">cv::Formatted</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_formatter.html">cv::Formatter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type.html">cv::ParamType&lt; _Tp, _EnumTp &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a base class for all more or less complex algorithms in OpenCV.  <a href="classcv_1_1_algorithm.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01bool_01_4.html">cv::ParamType&lt; bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01int_01_4.html">cv::ParamType&lt; int &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01double_01_4.html">cv::ParamType&lt; double &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01_string_01_4.html">cv::ParamType&lt; String &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01_mat_01_4.html">cv::ParamType&lt; Mat &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01std_1_1vector_3_01_mat_01_4_01_4.html">cv::ParamType&lt; std::vector&lt; Mat &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01_algorithm_01_4.html">cv::ParamType&lt; Algorithm &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01float_01_4.html">cv::ParamType&lt; float &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01unsigned_01_4.html">cv::ParamType&lt; unsigned &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01uint64_01_4.html">cv::ParamType&lt; uint64 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01uchar_01_4.html">cv::ParamType&lt; uchar &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01_scalar_01_4.html">cv::ParamType&lt; Scalar &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_param_type_3_01___tp_00_01typename_01std_1_1enable__if_3_01std_1_1is__enum_3_01___t5e0dc426b1b7a3e9231c07f7c045c4cd.html">cv::ParamType&lt; _Tp, typename std::enable_if&lt; std::is_enum&lt; _Tp &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga1f6634802eeadfd7245bc75cf3e216c2"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">cv::String</a></td></tr>
+<tr class="separator:ga1f6634802eeadfd7245bc75cf3e216c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga606feabe3b50ab6838f1ba89727aa07a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">cv::InputArrayOfArrays</a></td></tr>
+<tr class="separator:ga606feabe3b50ab6838f1ba89727aa07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad17fda1d0f0d1ee069aebb1df2913c0"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classcv_1_1___output_array.html">_OutputArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">cv::OutputArray</a></td></tr>
+<tr class="separator:gaad17fda1d0f0d1ee069aebb1df2913c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga889a09549b98223016170d9b613715de"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">cv::OutputArrayOfArrays</a></td></tr>
+<tr class="separator:ga889a09549b98223016170d9b613715de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf77c9a14ef956c50c1efd4547f444e63"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classcv_1_1___input_output_array.html">_InputOutputArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">cv::InputOutputArray</a></td></tr>
+<tr class="separator:gaf77c9a14ef956c50c1efd4547f444e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8899575c0929a56ab8bdd01cf34ebcb1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8899575c0929a56ab8bdd01cf34ebcb1">cv::InputOutputArrayOfArrays</a></td></tr>
+<tr class="separator:ga8899575c0929a56ab8bdd01cf34ebcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d355af1bc5c7241588bdb3600951515"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga1d355af1bc5c7241588bdb3600951515">cv::Mat1b</a></td></tr>
+<tr class="separator:ga1d355af1bc5c7241588bdb3600951515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7e98a9c920ba16ba08b99bb53c52224"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga595458e63aa1443ddd5c51fa71d70e2a">Vec2b</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf7e98a9c920ba16ba08b99bb53c52224">cv::Mat2b</a></td></tr>
+<tr class="separator:gaf7e98a9c920ba16ba08b99bb53c52224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7198dbdcacbcde70f7c7d1209d57146a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga7e6060c0b8d48459964df6e1eb524c03">Vec3b</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7198dbdcacbcde70f7c7d1209d57146a">cv::Mat3b</a></td></tr>
+<tr class="separator:ga7198dbdcacbcde70f7c7d1209d57146a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38bd307d9a0cac4c335e648ef8b63a3e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#gac8e7c61fdf0d8d9f6e8be7c25dc36584">Vec4b</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga38bd307d9a0cac4c335e648ef8b63a3e">cv::Mat4b</a></td></tr>
+<tr class="separator:ga38bd307d9a0cac4c335e648ef8b63a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c456856506ff905ce035acec092ef9f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga0c456856506ff905ce035acec092ef9f">cv::Mat1s</a></td></tr>
+<tr class="separator:ga0c456856506ff905ce035acec092ef9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf945be4c317df201188e50e578e1fa75"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga8c8616b035cf33c4b2b02fd7b89d6335">Vec2s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf945be4c317df201188e50e578e1fa75">cv::Mat2s</a></td></tr>
+<tr class="separator:gaf945be4c317df201188e50e578e1fa75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c3cec2bb940613dec561e59b0948801"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga2a2f4663171710b47944de9a74383dd0">Vec3s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga4c3cec2bb940613dec561e59b0948801">cv::Mat3s</a></td></tr>
+<tr class="separator:ga4c3cec2bb940613dec561e59b0948801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7de7f3b26b41d7326e85ab2e5d9eb1c4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga40acb05e3e183aabebc77a235389b582">Vec4s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7de7f3b26b41d7326e85ab2e5d9eb1c4">cv::Mat4s</a></td></tr>
+<tr class="separator:ga7de7f3b26b41d7326e85ab2e5d9eb1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4895c2ba170884f13b4a1b1c80fea8ff"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga4895c2ba170884f13b4a1b1c80fea8ff">cv::Mat1w</a></td></tr>
+<tr class="separator:ga4895c2ba170884f13b4a1b1c80fea8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb96ec2e3fd29bc27da746681e692b60"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga622811ee01673a858f41b4fbfd4b1043">Vec2w</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaeb96ec2e3fd29bc27da746681e692b60">cv::Mat2w</a></td></tr>
+<tr class="separator:gaeb96ec2e3fd29bc27da746681e692b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5574e954e5acfdb4e1e03e1dbd8bab6a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#gac2ca2e7d93b15bc56b379fd5c42c0932">Vec3w</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga5574e954e5acfdb4e1e03e1dbd8bab6a">cv::Mat3w</a></td></tr>
+<tr class="separator:ga5574e954e5acfdb4e1e03e1dbd8bab6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66c490bf66285c5cb0b5a21696d0cd03"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga50f51484537d86bd43ff14c681ee3abd">Vec4w</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga66c490bf66285c5cb0b5a21696d0cd03">cv::Mat4w</a></td></tr>
+<tr class="separator:ga66c490bf66285c5cb0b5a21696d0cd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87332e283de569e7bb029d4f4b401dcc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga87332e283de569e7bb029d4f4b401dcc">cv::Mat1i</a></td></tr>
+<tr class="separator:ga87332e283de569e7bb029d4f4b401dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ee6db17208ebd8bef5749d81267bf17"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga121402b88177c336b18945dd71d96ae0">Vec2i</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga1ee6db17208ebd8bef5749d81267bf17">cv::Mat2i</a></td></tr>
+<tr class="separator:ga1ee6db17208ebd8bef5749d81267bf17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89d566f26821c717c666d31bcfc6bf35"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga55864bca2bbede9731df5baa0d1be763">Vec3i</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga89d566f26821c717c666d31bcfc6bf35">cv::Mat3i</a></td></tr>
+<tr class="separator:ga89d566f26821c717c666d31bcfc6bf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8895fd82b424209f63bf9713fd5259a2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga94ce799099ae6cdd66685e3fd0cad7d7">Vec4i</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8895fd82b424209f63bf9713fd5259a2">cv::Mat4i</a></td></tr>
+<tr class="separator:ga8895fd82b424209f63bf9713fd5259a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9747ac59f97cbb93ddd719c4fb3e2d5d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga9747ac59f97cbb93ddd719c4fb3e2d5d">cv::Mat1f</a></td></tr>
+<tr class="separator:ga9747ac59f97cbb93ddd719c4fb3e2d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d6e8769d5f6a8b21eb59137e643f095"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga392bb4f8a6b9e0dde07f31dc28e73319">Vec2f</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga5d6e8769d5f6a8b21eb59137e643f095">cv::Mat2f</a></td></tr>
+<tr class="separator:ga5d6e8769d5f6a8b21eb59137e643f095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ee031423ba0ecb65fef2bc40abd970e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#gab9e0ab642a3e01742916763173b72232">Vec3f</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8ee031423ba0ecb65fef2bc40abd970e">cv::Mat3f</a></td></tr>
+<tr class="separator:ga8ee031423ba0ecb65fef2bc40abd970e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga781cc98063ecb8e02e3576140714842f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga4f29b2178d21a471ee688b14d66d6567">Vec4f</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga781cc98063ecb8e02e3576140714842f">cv::Mat4f</a></td></tr>
+<tr class="separator:ga781cc98063ecb8e02e3576140714842f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8dc8a9e248a8885bb3c61d35f07b61ed"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8dc8a9e248a8885bb3c61d35f07b61ed">cv::Mat1d</a></td></tr>
+<tr class="separator:ga8dc8a9e248a8885bb3c61d35f07b61ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04278ad1d5a287e15c07239d6119fe0a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#gaf20d857c2077c986d3b303e3d58bbc54">Vec2d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga04278ad1d5a287e15c07239d6119fe0a">cv::Mat2d</a></td></tr>
+<tr class="separator:ga04278ad1d5a287e15c07239d6119fe0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf14b1aa52fc952072c0b653f916ffac8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">Vec3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf14b1aa52fc952072c0b653f916ffac8">cv::Mat3d</a></td></tr>
+<tr class="separator:gaf14b1aa52fc952072c0b653f916ffac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7781ee46e4a6148e037be23217201dc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt; <a class="el" href="group__core__basic.html#ga41502c424d368098331a348dc26141bf">Vec4d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gab7781ee46e4a6148e037be23217201dc">cv::Mat4d</a></td></tr>
+<tr class="separator:gab7781ee46e4a6148e037be23217201dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a2cc9d733bf60e0200fa46196805153"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 1, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3a2cc9d733bf60e0200fa46196805153">cv::Matx12f</a></td></tr>
+<tr class="separator:ga3a2cc9d733bf60e0200fa46196805153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e67dac932ed81c0c90e3d658c0f7033"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 1, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga2e67dac932ed81c0c90e3d658c0f7033">cv::Matx12d</a></td></tr>
+<tr class="separator:ga2e67dac932ed81c0c90e3d658c0f7033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0af99d4dbb40a817429f3039700f8a33"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 1, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga0af99d4dbb40a817429f3039700f8a33">cv::Matx13f</a></td></tr>
+<tr class="separator:ga0af99d4dbb40a817429f3039700f8a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga765ff587743f231c87ffa708f6f76b96"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 1, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga765ff587743f231c87ffa708f6f76b96">cv::Matx13d</a></td></tr>
+<tr class="separator:ga765ff587743f231c87ffa708f6f76b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1a460d05e81b372d31b50169ec289d6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 1, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf1a460d05e81b372d31b50169ec289d6">cv::Matx14f</a></td></tr>
+<tr class="separator:gaf1a460d05e81b372d31b50169ec289d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a3e911d56f0e29d34cca18548bfdbbf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 1, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3a3e911d56f0e29d34cca18548bfdbbf">cv::Matx14d</a></td></tr>
+<tr class="separator:ga3a3e911d56f0e29d34cca18548bfdbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7cf48157727556c640df2854f11ff91a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 1, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7cf48157727556c640df2854f11ff91a">cv::Matx16f</a></td></tr>
+<tr class="separator:ga7cf48157727556c640df2854f11ff91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3afc2be04e64e50bd58296878ec38a1b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 1, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3afc2be04e64e50bd58296878ec38a1b">cv::Matx16d</a></td></tr>
+<tr class="separator:ga3afc2be04e64e50bd58296878ec38a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37e9c8ab7c9ccf91d4b512c656664886"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 2, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga37e9c8ab7c9ccf91d4b512c656664886">cv::Matx21f</a></td></tr>
+<tr class="separator:ga37e9c8ab7c9ccf91d4b512c656664886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga088ad84a55a0fa104ccb9f828dc38299"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 2, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga088ad84a55a0fa104ccb9f828dc38299">cv::Matx21d</a></td></tr>
+<tr class="separator:ga088ad84a55a0fa104ccb9f828dc38299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1625ab2c70d7f06d259f245cb5f5f4f8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 3, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga1625ab2c70d7f06d259f245cb5f5f4f8">cv::Matx31f</a></td></tr>
+<tr class="separator:ga1625ab2c70d7f06d259f245cb5f5f4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga778f9bbae8b0fe95271de44ac24083b0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 3, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga778f9bbae8b0fe95271de44ac24083b0">cv::Matx31d</a></td></tr>
+<tr class="separator:ga778f9bbae8b0fe95271de44ac24083b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a196e7bdf588d7c685edbb330f74423"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 4, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga9a196e7bdf588d7c685edbb330f74423">cv::Matx41f</a></td></tr>
+<tr class="separator:ga9a196e7bdf588d7c685edbb330f74423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb03ffa6748e6d6e53e997e4975c6404"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 4, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gafb03ffa6748e6d6e53e997e4975c6404">cv::Matx41d</a></td></tr>
+<tr class="separator:gafb03ffa6748e6d6e53e997e4975c6404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga449bf946575de9dc943e74566a0c5e7e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 6, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga449bf946575de9dc943e74566a0c5e7e">cv::Matx61f</a></td></tr>
+<tr class="separator:ga449bf946575de9dc943e74566a0c5e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95ed8b37f47393d8d9a50d9571c7be48"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 6, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga95ed8b37f47393d8d9a50d9571c7be48">cv::Matx61d</a></td></tr>
+<tr class="separator:ga95ed8b37f47393d8d9a50d9571c7be48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f480b4b705baac0f2bc1a7db43809ce"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 2, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8f480b4b705baac0f2bc1a7db43809ce">cv::Matx22f</a></td></tr>
+<tr class="separator:ga8f480b4b705baac0f2bc1a7db43809ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10d0d07f3ac00f086e0fc532790ccc8c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 2, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga10d0d07f3ac00f086e0fc532790ccc8c">cv::Matx22d</a></td></tr>
+<tr class="separator:ga10d0d07f3ac00f086e0fc532790ccc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa52e0258d92b0ff1be1644b061e65f66"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 2, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaa52e0258d92b0ff1be1644b061e65f66">cv::Matx23f</a></td></tr>
+<tr class="separator:gaa52e0258d92b0ff1be1644b061e65f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga392a6836e5dbc164888f4e39c7d9d9af"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 2, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga392a6836e5dbc164888f4e39c7d9d9af">cv::Matx23d</a></td></tr>
+<tr class="separator:ga392a6836e5dbc164888f4e39c7d9d9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d016ebac929fa7bb2fa4f3ebdb9e953"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 3, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga6d016ebac929fa7bb2fa4f3ebdb9e953">cv::Matx32f</a></td></tr>
+<tr class="separator:ga6d016ebac929fa7bb2fa4f3ebdb9e953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d13e4d37f158c9e3f2d3a047849e626"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 3, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga0d13e4d37f158c9e3f2d3a047849e626">cv::Matx32d</a></td></tr>
+<tr class="separator:ga0d13e4d37f158c9e3f2d3a047849e626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga118a383f60581636c7c8ab180cbb155e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga118a383f60581636c7c8ab180cbb155e">cv::Matx33f</a></td></tr>
+<tr class="separator:ga118a383f60581636c7c8ab180cbb155e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff0100a48f049fb15584a4a657eae838"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaff0100a48f049fb15584a4a657eae838">cv::Matx33d</a></td></tr>
+<tr class="separator:gaff0100a48f049fb15584a4a657eae838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec7e9859876e96fe9ee16e01b6f359b1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 3, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaec7e9859876e96fe9ee16e01b6f359b1">cv::Matx34f</a></td></tr>
+<tr class="separator:gaec7e9859876e96fe9ee16e01b6f359b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ac31d988d1a8b5fb959d395dba89890"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 3, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga2ac31d988d1a8b5fb959d395dba89890">cv::Matx34d</a></td></tr>
+<tr class="separator:ga2ac31d988d1a8b5fb959d395dba89890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6f34340fe75178e5a11a77150a3303d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 4, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gac6f34340fe75178e5a11a77150a3303d">cv::Matx43f</a></td></tr>
+<tr class="separator:gac6f34340fe75178e5a11a77150a3303d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7db1c513c2dfacc11b83ed8a8c500304"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 4, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7db1c513c2dfacc11b83ed8a8c500304">cv::Matx43d</a></td></tr>
+<tr class="separator:ga7db1c513c2dfacc11b83ed8a8c500304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaccfdd6e633076501c97b6ba4e792f53"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaaccfdd6e633076501c97b6ba4e792f53">cv::Matx44f</a></td></tr>
+<tr class="separator:gaaccfdd6e633076501c97b6ba4e792f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga366070cdc95233a6b6db521dfd99e713"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga366070cdc95233a6b6db521dfd99e713">cv::Matx44d</a></td></tr>
+<tr class="separator:ga366070cdc95233a6b6db521dfd99e713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1482aa6880dc74dad16683fd0ecc11e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; float, 6, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf1482aa6880dc74dad16683fd0ecc11e">cv::Matx66f</a></td></tr>
+<tr class="separator:gaf1482aa6880dc74dad16683fd0ecc11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafeab5cbf4078b280e11c59338435cd5c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; double, 6, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gafeab5cbf4078b280e11c59338435cd5c">cv::Matx66d</a></td></tr>
+<tr class="separator:gafeab5cbf4078b280e11c59338435cd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab0325d447419758daf5de162ffb051f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_complex.html">Complex</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaab0325d447419758daf5de162ffb051f">cv::Complexf</a></td></tr>
+<tr class="separator:gaab0325d447419758daf5de162ffb051f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a5d93a0cbc1d360dbd3abf218bbb4ae"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_complex.html">Complex</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3a5d93a0cbc1d360dbd3abf218bbb4ae">cv::Complexd</a></td></tr>
+<tr class="separator:ga3a5d93a0cbc1d360dbd3abf218bbb4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f70b52f0c0b119f7ed2448ffebdc144"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga0f70b52f0c0b119f7ed2448ffebdc144">cv::Point2i</a></td></tr>
+<tr class="separator:ga0f70b52f0c0b119f7ed2448ffebdc144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f6c21f7cbd3a08bfc6467fd20df2f7e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt; <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga2f6c21f7cbd3a08bfc6467fd20df2f7e">cv::Point2l</a></td></tr>
+<tr class="separator:ga2f6c21f7cbd3a08bfc6467fd20df2f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d080aa40de011e4410bca63385ffe2a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">cv::Point2f</a></td></tr>
+<tr class="separator:ga7d080aa40de011e4410bca63385ffe2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32986d8c6fd05949688352abd112509f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga32986d8c6fd05949688352abd112509f">cv::Point2d</a></td></tr>
+<tr class="separator:ga32986d8c6fd05949688352abd112509f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e83eafb2d26b3c93f09e8338bcab192"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#ga0f70b52f0c0b119f7ed2448ffebdc144">Point2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a></td></tr>
+<tr class="separator:ga1e83eafb2d26b3c93f09e8338bcab192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4ae8f2fb37ecb4b5d9268f17e46a18e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gac4ae8f2fb37ecb4b5d9268f17e46a18e">cv::Point3i</a></td></tr>
+<tr class="separator:gac4ae8f2fb37ecb4b5d9268f17e46a18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d79ceeb4419bccd0308dfdf1cd31435"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3d79ceeb4419bccd0308dfdf1cd31435">cv::Point3f</a></td></tr>
+<tr class="separator:ga3d79ceeb4419bccd0308dfdf1cd31435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17f8af95b76535bd387f4909850c8810"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga17f8af95b76535bd387f4909850c8810">cv::Point3d</a></td></tr>
+<tr class="separator:ga17f8af95b76535bd387f4909850c8810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ef7f5978948e0cb3c3a3d4172594aec"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga5ef7f5978948e0cb3c3a3d4172594aec">cv::Size2i</a></td></tr>
+<tr class="separator:ga5ef7f5978948e0cb3c3a3d4172594aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga153b6b90ce30f84239c9a39613e836d3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt; <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga153b6b90ce30f84239c9a39613e836d3">cv::Size2l</a></td></tr>
+<tr class="separator:ga153b6b90ce30f84239c9a39613e836d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab34496d2466b5f69930ab74c70f117d4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gab34496d2466b5f69930ab74c70f117d4">cv::Size2f</a></td></tr>
+<tr class="separator:gab34496d2466b5f69930ab74c70f117d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff96e5bec8019ca9917fd1e4c0cf8267"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaff96e5bec8019ca9917fd1e4c0cf8267">cv::Size2d</a></td></tr>
+<tr class="separator:gaff96e5bec8019ca9917fd1e4c0cf8267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga346f563897249351a34549137c8532a0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#ga5ef7f5978948e0cb3c3a3d4172594aec">Size2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a></td></tr>
+<tr class="separator:ga346f563897249351a34549137c8532a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa87c8f580952d28b4127261994bce7d8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaa87c8f580952d28b4127261994bce7d8">cv::Rect2i</a></td></tr>
+<tr class="separator:gaa87c8f580952d28b4127261994bce7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d6c1acbbb651cf626f138748aac3d02"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga2d6c1acbbb651cf626f138748aac3d02">cv::Rect2f</a></td></tr>
+<tr class="separator:ga2d6c1acbbb651cf626f138748aac3d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga894fe0940d40d4d65f008a2ca4e616bd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga894fe0940d40d4d65f008a2ca4e616bd">cv::Rect2d</a></td></tr>
+<tr class="separator:ga894fe0940d40d4d65f008a2ca4e616bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11d95de507098e90bad732b9345402e8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__core__basic.html#gaa87c8f580952d28b4127261994bce7d8">Rect2i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a></td></tr>
+<tr class="separator:ga11d95de507098e90bad732b9345402e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga599fe92e910c027be274233eccad7beb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_scalar__.html">Scalar_</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a></td></tr>
+<tr class="separator:ga599fe92e910c027be274233eccad7beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga6226c29c7b0e7bda7aff72e96ba8e1df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">cv::AccessFlag</a> { <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga6226c29c7b0e7bda7aff72e96ba8e1dfa39d5f615d02cac084ab1dd0cb4f7c221">cv::ACCESS_READ</a> =1&lt;&lt;24
+, <a class="el" href="group__core__basic.html#gga6226c29c7b0e7bda7aff72e96ba8e1dfafcb8f7013ace1726cd1bbeea800bc7b6">cv::ACCESS_WRITE</a> =1&lt;&lt;25
+, <a class="el" href="group__core__basic.html#gga6226c29c7b0e7bda7aff72e96ba8e1dfaf44732c797cd59f5940e426ecd62f45f">cv::ACCESS_RW</a> =3&lt;&lt;24
+, <a class="el" href="group__core__basic.html#gga6226c29c7b0e7bda7aff72e96ba8e1dfadc26a0b8f5374d205eb2e30c0f7f90fc">cv::ACCESS_MASK</a> =ACCESS_RW
+, <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga6226c29c7b0e7bda7aff72e96ba8e1dfa0a404dec4617d7d1fe1f14767b8e379b">cv::ACCESS_FAST</a> =1&lt;&lt;26
+<br />
+ }</td></tr>
+<tr class="separator:ga6226c29c7b0e7bda7aff72e96ba8e1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5681439dda418431eb0a672697135ed2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">cv::UMatUsageFlags</a> { <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">cv::USAGE_DEFAULT</a> = 0
+, <a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2a37b195428a7ac50f293765907fa43ad9">cv::USAGE_ALLOCATE_HOST_MEMORY</a> = 1 &lt;&lt; 0
+, <a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2aeeff47f93f4e35ffed58e1b7de649dab">cv::USAGE_ALLOCATE_DEVICE_MEMORY</a> = 1 &lt;&lt; 1
+, <a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2a0c30cfff62017d086c6ec4052589b569">cv::USAGE_ALLOCATE_SHARED_MEMORY</a> = 1 &lt;&lt; 2
+, <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2a46b027b92f5210fce74197d5a1439da9">cv::__UMAT_USAGE_FLAGS_32BIT</a> = 0x7fffffff
+<br />
+ }</td></tr>
+<tr class="memdesc:ga5681439dda418431eb0a672697135ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usage flags for allocator.  <a href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5681439dda418431eb0a672697135ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8af2ae1e077644d1dd232d29d988b79a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">cv::Param</a> { <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa53f93baa3057821107c750323892fa92">cv::INT</a> =0
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aac48d5da12d702e73d6966069f2687376">cv::BOOLEAN</a> =1
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa8cf125b0e31559ba75a9d9b4f818a554">cv::REAL</a> =2
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa63b588d5559f64f89a416e656880b949">cv::STRING</a> =3
+, <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aaf0c2c0ca864067cc6e21a7ea2c1b1fdd">cv::MAT</a> =4
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aac4f6db46662589f21d34d4abafdf8fb7">cv::MAT_VECTOR</a> =5
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aacc42f38c94fd1898b9e8a14132d94261">cv::ALGORITHM</a> =6
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aae738c26bf4ce1037fa81b039a915cbf6">cv::FLOAT</a> =7
+, <br />
+&#160;&#160;<a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa9ba5b3da1d35e22e1680ddbe52d36ed5">cv::UNSIGNED_INT</a> =8
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa6de7acf711860176ba606e9aa2b85d5f">cv::UINT64</a> =9
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa56283e7d906f746d62e95c8ba7814c3f">cv::UCHAR</a> =11
+, <a class="el" href="group__core__basic.html#gga8af2ae1e077644d1dd232d29d988b79aa8f3d9a4b6a7b7f2c7afa61ca113d0db9">cv::SCALAR</a> =12
+<br />
+ }</td></tr>
+<tr class="separator:ga8af2ae1e077644d1dd232d29d988b79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga5d41a4929a976a8869632e76ce83211e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">cv::noArray</a> ()</td></tr>
+<tr class="separator:ga5d41a4929a976a8869632e76ce83211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:gab1371a23c90d5f4725ea98240377d7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gaf1094185326a278e77b9dae90a81498a">CV__DEBUG_NS_END</a> typedef const <a class="el" href="classcv_1_1___input_array.html">_InputArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">cv::InputArray</a></td></tr>
+<tr class="separator:gab1371a23c90d5f4725ea98240377d7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e09aa518f21325f801b2f5d23aef4d0"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga9e09aa518f21325f801b2f5d23aef4d0">cv::FileNode</a></td></tr>
+<tr class="separator:ga9e09aa518f21325f801b2f5d23aef4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47bf74192ca6fdc3beb596f02d3544ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gad557724ee9c07e56906f61c576b19e91">CV__DEBUG_NS_BEGIN</a> class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga47bf74192ca6fdc3beb596f02d3544ed">cv::_OutputArray</a></td></tr>
+<tr class="separator:ga47bf74192ca6fdc3beb596f02d3544ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefafc9f27fc6af8375fbf13e72878990"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaefafc9f27fc6af8375fbf13e72878990">cv::UMatData</a></td></tr>
+<tr class="separator:gaefafc9f27fc6af8375fbf13e72878990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe4552126e778850001d6a50a5c28560"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gabe4552126e778850001d6a50a5c28560">cv::Algorithm</a></td></tr>
+<tr class="separator:gabe4552126e778850001d6a50a5c28560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Shorter aliases for the most popular specializations of Vec&lt;T,n&gt;</h2></td></tr>
+<tr class="memitem:ga595458e63aa1443ddd5c51fa71d70e2a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga595458e63aa1443ddd5c51fa71d70e2a">cv::Vec2b</a></td></tr>
+<tr class="separator:ga595458e63aa1443ddd5c51fa71d70e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e6060c0b8d48459964df6e1eb524c03"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga7e6060c0b8d48459964df6e1eb524c03">cv::Vec3b</a></td></tr>
+<tr class="separator:ga7e6060c0b8d48459964df6e1eb524c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8e7c61fdf0d8d9f6e8be7c25dc36584"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gac8e7c61fdf0d8d9f6e8be7c25dc36584">cv::Vec4b</a></td></tr>
+<tr class="separator:gac8e7c61fdf0d8d9f6e8be7c25dc36584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c8616b035cf33c4b2b02fd7b89d6335"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; short, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga8c8616b035cf33c4b2b02fd7b89d6335">cv::Vec2s</a></td></tr>
+<tr class="separator:ga8c8616b035cf33c4b2b02fd7b89d6335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a2f4663171710b47944de9a74383dd0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; short, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga2a2f4663171710b47944de9a74383dd0">cv::Vec3s</a></td></tr>
+<tr class="separator:ga2a2f4663171710b47944de9a74383dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40acb05e3e183aabebc77a235389b582"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; short, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga40acb05e3e183aabebc77a235389b582">cv::Vec4s</a></td></tr>
+<tr class="separator:ga40acb05e3e183aabebc77a235389b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga622811ee01673a858f41b4fbfd4b1043"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga622811ee01673a858f41b4fbfd4b1043">cv::Vec2w</a></td></tr>
+<tr class="separator:ga622811ee01673a858f41b4fbfd4b1043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2ca2e7d93b15bc56b379fd5c42c0932"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gac2ca2e7d93b15bc56b379fd5c42c0932">cv::Vec3w</a></td></tr>
+<tr class="separator:gac2ca2e7d93b15bc56b379fd5c42c0932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50f51484537d86bd43ff14c681ee3abd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga50f51484537d86bd43ff14c681ee3abd">cv::Vec4w</a></td></tr>
+<tr class="separator:ga50f51484537d86bd43ff14c681ee3abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga121402b88177c336b18945dd71d96ae0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga121402b88177c336b18945dd71d96ae0">cv::Vec2i</a></td></tr>
+<tr class="separator:ga121402b88177c336b18945dd71d96ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55864bca2bbede9731df5baa0d1be763"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga55864bca2bbede9731df5baa0d1be763">cv::Vec3i</a></td></tr>
+<tr class="separator:ga55864bca2bbede9731df5baa0d1be763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94ce799099ae6cdd66685e3fd0cad7d7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga94ce799099ae6cdd66685e3fd0cad7d7">cv::Vec4i</a></td></tr>
+<tr class="separator:ga94ce799099ae6cdd66685e3fd0cad7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1e413135207def5004c5297bd2f5a61"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf1e413135207def5004c5297bd2f5a61">cv::Vec6i</a></td></tr>
+<tr class="separator:gaf1e413135207def5004c5297bd2f5a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c0eb56d15c13ca6708f168919af3a6a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga3c0eb56d15c13ca6708f168919af3a6a">cv::Vec8i</a></td></tr>
+<tr class="separator:ga3c0eb56d15c13ca6708f168919af3a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga392bb4f8a6b9e0dde07f31dc28e73319"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; float, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga392bb4f8a6b9e0dde07f31dc28e73319">cv::Vec2f</a></td></tr>
+<tr class="separator:ga392bb4f8a6b9e0dde07f31dc28e73319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9e0ab642a3e01742916763173b72232"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; float, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gab9e0ab642a3e01742916763173b72232">cv::Vec3f</a></td></tr>
+<tr class="separator:gab9e0ab642a3e01742916763173b72232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f29b2178d21a471ee688b14d66d6567"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; float, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga4f29b2178d21a471ee688b14d66d6567">cv::Vec4f</a></td></tr>
+<tr class="separator:ga4f29b2178d21a471ee688b14d66d6567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74b819dd94c6a8c6f3d8cc39aeaa4992"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; float, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga74b819dd94c6a8c6f3d8cc39aeaa4992">cv::Vec6f</a></td></tr>
+<tr class="separator:ga74b819dd94c6a8c6f3d8cc39aeaa4992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf20d857c2077c986d3b303e3d58bbc54"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#gaf20d857c2077c986d3b303e3d58bbc54">cv::Vec2d</a></td></tr>
+<tr class="separator:gaf20d857c2077c986d3b303e3d58bbc54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga370d94209693b5b13437ab4991cabf73"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">cv::Vec3d</a></td></tr>
+<tr class="separator:ga370d94209693b5b13437ab4991cabf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41502c424d368098331a348dc26141bf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga41502c424d368098331a348dc26141bf">cv::Vec4d</a></td></tr>
+<tr class="separator:ga41502c424d368098331a348dc26141bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07a801beb07134f7090e3d789ca7c324"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; double, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html#ga07a801beb07134f7090e3d789ca7c324">cv::Vec6d</a></td></tr>
+<tr class="separator:ga07a801beb07134f7090e3d789ca7c324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Типы</h2>
+<a id="ga3a5d93a0cbc1d360dbd3abf218bbb4ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a5d93a0cbc1d360dbd3abf218bbb4ae">&#9670;&nbsp;</a></span>Complexd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_complex.html">Complex</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga3a5d93a0cbc1d360dbd3abf218bbb4ae">cv::Complexd</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaab0325d447419758daf5de162ffb051f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab0325d447419758daf5de162ffb051f">&#9670;&nbsp;</a></span>Complexf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_complex.html">Complex</a>&lt;float&gt; <a class="el" href="group__core__basic.html#gaab0325d447419758daf5de162ffb051f">cv::Complexf</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga606feabe3b50ab6838f1ba89727aa07a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga606feabe3b50ab6838f1ba89727aa07a">&#9670;&nbsp;</a></span>InputArrayOfArrays</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">cv::InputArrayOfArrays</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf77c9a14ef956c50c1efd4547f444e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf77c9a14ef956c50c1efd4547f444e63">&#9670;&nbsp;</a></span>InputOutputArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classcv_1_1___input_output_array.html">_InputOutputArray</a>&amp; <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">cv::InputOutputArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8899575c0929a56ab8bdd01cf34ebcb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8899575c0929a56ab8bdd01cf34ebcb1">&#9670;&nbsp;</a></span>InputOutputArrayOfArrays</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__core__basic.html#ga8899575c0929a56ab8bdd01cf34ebcb1">cv::InputOutputArrayOfArrays</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1d355af1bc5c7241588bdb3600951515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d355af1bc5c7241588bdb3600951515">&#9670;&nbsp;</a></span>Mat1b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>&gt; <a class="el" href="group__core__basic.html#ga1d355af1bc5c7241588bdb3600951515">cv::Mat1b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8dc8a9e248a8885bb3c61d35f07b61ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8dc8a9e248a8885bb3c61d35f07b61ed">&#9670;&nbsp;</a></span>Mat1d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga8dc8a9e248a8885bb3c61d35f07b61ed">cv::Mat1d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9747ac59f97cbb93ddd719c4fb3e2d5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9747ac59f97cbb93ddd719c4fb3e2d5d">&#9670;&nbsp;</a></span>Mat1f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;float&gt; <a class="el" href="group__core__basic.html#ga9747ac59f97cbb93ddd719c4fb3e2d5d">cv::Mat1f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga87332e283de569e7bb029d4f4b401dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87332e283de569e7bb029d4f4b401dcc">&#9670;&nbsp;</a></span>Mat1i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__basic.html#ga87332e283de569e7bb029d4f4b401dcc">cv::Mat1i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0c456856506ff905ce035acec092ef9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c456856506ff905ce035acec092ef9f">&#9670;&nbsp;</a></span>Mat1s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;short&gt; <a class="el" href="group__core__basic.html#ga0c456856506ff905ce035acec092ef9f">cv::Mat1s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4895c2ba170884f13b4a1b1c80fea8ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4895c2ba170884f13b4a1b1c80fea8ff">&#9670;&nbsp;</a></span>Mat1w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>&gt; <a class="el" href="group__core__basic.html#ga4895c2ba170884f13b4a1b1c80fea8ff">cv::Mat1w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf7e98a9c920ba16ba08b99bb53c52224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7e98a9c920ba16ba08b99bb53c52224">&#9670;&nbsp;</a></span>Mat2b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga595458e63aa1443ddd5c51fa71d70e2a">Vec2b</a>&gt; <a class="el" href="group__core__basic.html#gaf7e98a9c920ba16ba08b99bb53c52224">cv::Mat2b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga04278ad1d5a287e15c07239d6119fe0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04278ad1d5a287e15c07239d6119fe0a">&#9670;&nbsp;</a></span>Mat2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#gaf20d857c2077c986d3b303e3d58bbc54">Vec2d</a>&gt; <a class="el" href="group__core__basic.html#ga04278ad1d5a287e15c07239d6119fe0a">cv::Mat2d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5d6e8769d5f6a8b21eb59137e643f095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d6e8769d5f6a8b21eb59137e643f095">&#9670;&nbsp;</a></span>Mat2f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga392bb4f8a6b9e0dde07f31dc28e73319">Vec2f</a>&gt; <a class="el" href="group__core__basic.html#ga5d6e8769d5f6a8b21eb59137e643f095">cv::Mat2f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1ee6db17208ebd8bef5749d81267bf17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ee6db17208ebd8bef5749d81267bf17">&#9670;&nbsp;</a></span>Mat2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga121402b88177c336b18945dd71d96ae0">Vec2i</a>&gt; <a class="el" href="group__core__basic.html#ga1ee6db17208ebd8bef5749d81267bf17">cv::Mat2i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf945be4c317df201188e50e578e1fa75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf945be4c317df201188e50e578e1fa75">&#9670;&nbsp;</a></span>Mat2s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga8c8616b035cf33c4b2b02fd7b89d6335">Vec2s</a>&gt; <a class="el" href="group__core__basic.html#gaf945be4c317df201188e50e578e1fa75">cv::Mat2s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaeb96ec2e3fd29bc27da746681e692b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb96ec2e3fd29bc27da746681e692b60">&#9670;&nbsp;</a></span>Mat2w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga622811ee01673a858f41b4fbfd4b1043">Vec2w</a>&gt; <a class="el" href="group__core__basic.html#gaeb96ec2e3fd29bc27da746681e692b60">cv::Mat2w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7198dbdcacbcde70f7c7d1209d57146a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7198dbdcacbcde70f7c7d1209d57146a">&#9670;&nbsp;</a></span>Mat3b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga7e6060c0b8d48459964df6e1eb524c03">Vec3b</a>&gt; <a class="el" href="group__core__basic.html#ga7198dbdcacbcde70f7c7d1209d57146a">cv::Mat3b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf14b1aa52fc952072c0b653f916ffac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf14b1aa52fc952072c0b653f916ffac8">&#9670;&nbsp;</a></span>Mat3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">Vec3d</a>&gt; <a class="el" href="group__core__basic.html#gaf14b1aa52fc952072c0b653f916ffac8">cv::Mat3d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8ee031423ba0ecb65fef2bc40abd970e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ee031423ba0ecb65fef2bc40abd970e">&#9670;&nbsp;</a></span>Mat3f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#gab9e0ab642a3e01742916763173b72232">Vec3f</a>&gt; <a class="el" href="group__core__basic.html#ga8ee031423ba0ecb65fef2bc40abd970e">cv::Mat3f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga89d566f26821c717c666d31bcfc6bf35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89d566f26821c717c666d31bcfc6bf35">&#9670;&nbsp;</a></span>Mat3i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga55864bca2bbede9731df5baa0d1be763">Vec3i</a>&gt; <a class="el" href="group__core__basic.html#ga89d566f26821c717c666d31bcfc6bf35">cv::Mat3i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4c3cec2bb940613dec561e59b0948801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c3cec2bb940613dec561e59b0948801">&#9670;&nbsp;</a></span>Mat3s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga2a2f4663171710b47944de9a74383dd0">Vec3s</a>&gt; <a class="el" href="group__core__basic.html#ga4c3cec2bb940613dec561e59b0948801">cv::Mat3s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5574e954e5acfdb4e1e03e1dbd8bab6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5574e954e5acfdb4e1e03e1dbd8bab6a">&#9670;&nbsp;</a></span>Mat3w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#gac2ca2e7d93b15bc56b379fd5c42c0932">Vec3w</a>&gt; <a class="el" href="group__core__basic.html#ga5574e954e5acfdb4e1e03e1dbd8bab6a">cv::Mat3w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga38bd307d9a0cac4c335e648ef8b63a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga38bd307d9a0cac4c335e648ef8b63a3e">&#9670;&nbsp;</a></span>Mat4b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#gac8e7c61fdf0d8d9f6e8be7c25dc36584">Vec4b</a>&gt; <a class="el" href="group__core__basic.html#ga38bd307d9a0cac4c335e648ef8b63a3e">cv::Mat4b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab7781ee46e4a6148e037be23217201dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7781ee46e4a6148e037be23217201dc">&#9670;&nbsp;</a></span>Mat4d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga41502c424d368098331a348dc26141bf">Vec4d</a>&gt; <a class="el" href="group__core__basic.html#gab7781ee46e4a6148e037be23217201dc">cv::Mat4d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga781cc98063ecb8e02e3576140714842f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga781cc98063ecb8e02e3576140714842f">&#9670;&nbsp;</a></span>Mat4f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga4f29b2178d21a471ee688b14d66d6567">Vec4f</a>&gt; <a class="el" href="group__core__basic.html#ga781cc98063ecb8e02e3576140714842f">cv::Mat4f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8895fd82b424209f63bf9713fd5259a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8895fd82b424209f63bf9713fd5259a2">&#9670;&nbsp;</a></span>Mat4i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga94ce799099ae6cdd66685e3fd0cad7d7">Vec4i</a>&gt; <a class="el" href="group__core__basic.html#ga8895fd82b424209f63bf9713fd5259a2">cv::Mat4i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7de7f3b26b41d7326e85ab2e5d9eb1c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7de7f3b26b41d7326e85ab2e5d9eb1c4">&#9670;&nbsp;</a></span>Mat4s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga40acb05e3e183aabebc77a235389b582">Vec4s</a>&gt; <a class="el" href="group__core__basic.html#ga7de7f3b26b41d7326e85ab2e5d9eb1c4">cv::Mat4s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga66c490bf66285c5cb0b5a21696d0cd03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66c490bf66285c5cb0b5a21696d0cd03">&#9670;&nbsp;</a></span>Mat4w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_mat__.html">Mat_</a>&lt;<a class="el" href="group__core__basic.html#ga50f51484537d86bd43ff14c681ee3abd">Vec4w</a>&gt; <a class="el" href="group__core__basic.html#ga66c490bf66285c5cb0b5a21696d0cd03">cv::Mat4w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2e67dac932ed81c0c90e3d658c0f7033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e67dac932ed81c0c90e3d658c0f7033">&#9670;&nbsp;</a></span>Matx12d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 1, 2&gt; <a class="el" href="group__core__basic.html#ga2e67dac932ed81c0c90e3d658c0f7033">cv::Matx12d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3a2cc9d733bf60e0200fa46196805153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a2cc9d733bf60e0200fa46196805153">&#9670;&nbsp;</a></span>Matx12f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 1, 2&gt; <a class="el" href="group__core__basic.html#ga3a2cc9d733bf60e0200fa46196805153">cv::Matx12f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga765ff587743f231c87ffa708f6f76b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga765ff587743f231c87ffa708f6f76b96">&#9670;&nbsp;</a></span>Matx13d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 1, 3&gt; <a class="el" href="group__core__basic.html#ga765ff587743f231c87ffa708f6f76b96">cv::Matx13d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0af99d4dbb40a817429f3039700f8a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0af99d4dbb40a817429f3039700f8a33">&#9670;&nbsp;</a></span>Matx13f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 1, 3&gt; <a class="el" href="group__core__basic.html#ga0af99d4dbb40a817429f3039700f8a33">cv::Matx13f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3a3e911d56f0e29d34cca18548bfdbbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a3e911d56f0e29d34cca18548bfdbbf">&#9670;&nbsp;</a></span>Matx14d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 1, 4&gt; <a class="el" href="group__core__basic.html#ga3a3e911d56f0e29d34cca18548bfdbbf">cv::Matx14d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf1a460d05e81b372d31b50169ec289d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1a460d05e81b372d31b50169ec289d6">&#9670;&nbsp;</a></span>Matx14f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 1, 4&gt; <a class="el" href="group__core__basic.html#gaf1a460d05e81b372d31b50169ec289d6">cv::Matx14f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3afc2be04e64e50bd58296878ec38a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3afc2be04e64e50bd58296878ec38a1b">&#9670;&nbsp;</a></span>Matx16d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 1, 6&gt; <a class="el" href="group__core__basic.html#ga3afc2be04e64e50bd58296878ec38a1b">cv::Matx16d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7cf48157727556c640df2854f11ff91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7cf48157727556c640df2854f11ff91a">&#9670;&nbsp;</a></span>Matx16f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 1, 6&gt; <a class="el" href="group__core__basic.html#ga7cf48157727556c640df2854f11ff91a">cv::Matx16f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga088ad84a55a0fa104ccb9f828dc38299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga088ad84a55a0fa104ccb9f828dc38299">&#9670;&nbsp;</a></span>Matx21d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 2, 1&gt; <a class="el" href="group__core__basic.html#ga088ad84a55a0fa104ccb9f828dc38299">cv::Matx21d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga37e9c8ab7c9ccf91d4b512c656664886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37e9c8ab7c9ccf91d4b512c656664886">&#9670;&nbsp;</a></span>Matx21f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 2, 1&gt; <a class="el" href="group__core__basic.html#ga37e9c8ab7c9ccf91d4b512c656664886">cv::Matx21f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga10d0d07f3ac00f086e0fc532790ccc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10d0d07f3ac00f086e0fc532790ccc8c">&#9670;&nbsp;</a></span>Matx22d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 2, 2&gt; <a class="el" href="group__core__basic.html#ga10d0d07f3ac00f086e0fc532790ccc8c">cv::Matx22d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8f480b4b705baac0f2bc1a7db43809ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f480b4b705baac0f2bc1a7db43809ce">&#9670;&nbsp;</a></span>Matx22f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 2, 2&gt; <a class="el" href="group__core__basic.html#ga8f480b4b705baac0f2bc1a7db43809ce">cv::Matx22f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga392a6836e5dbc164888f4e39c7d9d9af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga392a6836e5dbc164888f4e39c7d9d9af">&#9670;&nbsp;</a></span>Matx23d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 2, 3&gt; <a class="el" href="group__core__basic.html#ga392a6836e5dbc164888f4e39c7d9d9af">cv::Matx23d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa52e0258d92b0ff1be1644b061e65f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa52e0258d92b0ff1be1644b061e65f66">&#9670;&nbsp;</a></span>Matx23f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 2, 3&gt; <a class="el" href="group__core__basic.html#gaa52e0258d92b0ff1be1644b061e65f66">cv::Matx23f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga778f9bbae8b0fe95271de44ac24083b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga778f9bbae8b0fe95271de44ac24083b0">&#9670;&nbsp;</a></span>Matx31d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 3, 1&gt; <a class="el" href="group__core__basic.html#ga778f9bbae8b0fe95271de44ac24083b0">cv::Matx31d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1625ab2c70d7f06d259f245cb5f5f4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1625ab2c70d7f06d259f245cb5f5f4f8">&#9670;&nbsp;</a></span>Matx31f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 3, 1&gt; <a class="el" href="group__core__basic.html#ga1625ab2c70d7f06d259f245cb5f5f4f8">cv::Matx31f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0d13e4d37f158c9e3f2d3a047849e626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d13e4d37f158c9e3f2d3a047849e626">&#9670;&nbsp;</a></span>Matx32d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 3, 2&gt; <a class="el" href="group__core__basic.html#ga0d13e4d37f158c9e3f2d3a047849e626">cv::Matx32d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6d016ebac929fa7bb2fa4f3ebdb9e953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d016ebac929fa7bb2fa4f3ebdb9e953">&#9670;&nbsp;</a></span>Matx32f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 3, 2&gt; <a class="el" href="group__core__basic.html#ga6d016ebac929fa7bb2fa4f3ebdb9e953">cv::Matx32f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaff0100a48f049fb15584a4a657eae838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff0100a48f049fb15584a4a657eae838">&#9670;&nbsp;</a></span>Matx33d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 3, 3&gt; <a class="el" href="group__core__basic.html#gaff0100a48f049fb15584a4a657eae838">cv::Matx33d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga118a383f60581636c7c8ab180cbb155e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga118a383f60581636c7c8ab180cbb155e">&#9670;&nbsp;</a></span>Matx33f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 3, 3&gt; <a class="el" href="group__core__basic.html#ga118a383f60581636c7c8ab180cbb155e">cv::Matx33f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2ac31d988d1a8b5fb959d395dba89890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ac31d988d1a8b5fb959d395dba89890">&#9670;&nbsp;</a></span>Matx34d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 3, 4&gt; <a class="el" href="group__core__basic.html#ga2ac31d988d1a8b5fb959d395dba89890">cv::Matx34d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaec7e9859876e96fe9ee16e01b6f359b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec7e9859876e96fe9ee16e01b6f359b1">&#9670;&nbsp;</a></span>Matx34f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 3, 4&gt; <a class="el" href="group__core__basic.html#gaec7e9859876e96fe9ee16e01b6f359b1">cv::Matx34f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafb03ffa6748e6d6e53e997e4975c6404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb03ffa6748e6d6e53e997e4975c6404">&#9670;&nbsp;</a></span>Matx41d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 4, 1&gt; <a class="el" href="group__core__basic.html#gafb03ffa6748e6d6e53e997e4975c6404">cv::Matx41d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9a196e7bdf588d7c685edbb330f74423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a196e7bdf588d7c685edbb330f74423">&#9670;&nbsp;</a></span>Matx41f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 4, 1&gt; <a class="el" href="group__core__basic.html#ga9a196e7bdf588d7c685edbb330f74423">cv::Matx41f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7db1c513c2dfacc11b83ed8a8c500304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7db1c513c2dfacc11b83ed8a8c500304">&#9670;&nbsp;</a></span>Matx43d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 4, 3&gt; <a class="el" href="group__core__basic.html#ga7db1c513c2dfacc11b83ed8a8c500304">cv::Matx43d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac6f34340fe75178e5a11a77150a3303d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6f34340fe75178e5a11a77150a3303d">&#9670;&nbsp;</a></span>Matx43f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 4, 3&gt; <a class="el" href="group__core__basic.html#gac6f34340fe75178e5a11a77150a3303d">cv::Matx43f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga366070cdc95233a6b6db521dfd99e713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga366070cdc95233a6b6db521dfd99e713">&#9670;&nbsp;</a></span>Matx44d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 4, 4&gt; <a class="el" href="group__core__basic.html#ga366070cdc95233a6b6db521dfd99e713">cv::Matx44d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaaccfdd6e633076501c97b6ba4e792f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaccfdd6e633076501c97b6ba4e792f53">&#9670;&nbsp;</a></span>Matx44f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 4, 4&gt; <a class="el" href="group__core__basic.html#gaaccfdd6e633076501c97b6ba4e792f53">cv::Matx44f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga95ed8b37f47393d8d9a50d9571c7be48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95ed8b37f47393d8d9a50d9571c7be48">&#9670;&nbsp;</a></span>Matx61d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 6, 1&gt; <a class="el" href="group__core__basic.html#ga95ed8b37f47393d8d9a50d9571c7be48">cv::Matx61d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga449bf946575de9dc943e74566a0c5e7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga449bf946575de9dc943e74566a0c5e7e">&#9670;&nbsp;</a></span>Matx61f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 6, 1&gt; <a class="el" href="group__core__basic.html#ga449bf946575de9dc943e74566a0c5e7e">cv::Matx61f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafeab5cbf4078b280e11c59338435cd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafeab5cbf4078b280e11c59338435cd5c">&#9670;&nbsp;</a></span>Matx66d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;double, 6, 6&gt; <a class="el" href="group__core__basic.html#gafeab5cbf4078b280e11c59338435cd5c">cv::Matx66d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf1482aa6880dc74dad16683fd0ecc11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1482aa6880dc74dad16683fd0ecc11e">&#9670;&nbsp;</a></span>Matx66f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;float, 6, 6&gt; <a class="el" href="group__core__basic.html#gaf1482aa6880dc74dad16683fd0ecc11e">cv::Matx66f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaad17fda1d0f0d1ee069aebb1df2913c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad17fda1d0f0d1ee069aebb1df2913c0">&#9670;&nbsp;</a></span>OutputArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classcv_1_1___output_array.html">_OutputArray</a>&amp; <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">cv::OutputArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga889a09549b98223016170d9b613715de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga889a09549b98223016170d9b613715de">&#9670;&nbsp;</a></span>OutputArrayOfArrays</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">cv::OutputArrayOfArrays</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1e83eafb2d26b3c93f09e8338bcab192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e83eafb2d26b3c93f09e8338bcab192">&#9670;&nbsp;</a></span>Point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#ga0f70b52f0c0b119f7ed2448ffebdc144">Point2i</a> <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga32986d8c6fd05949688352abd112509f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32986d8c6fd05949688352abd112509f">&#9670;&nbsp;</a></span>Point2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga32986d8c6fd05949688352abd112509f">cv::Point2d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7d080aa40de011e4410bca63385ffe2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d080aa40de011e4410bca63385ffe2a">&#9670;&nbsp;</a></span>Point2f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt;float&gt; <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">cv::Point2f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0f70b52f0c0b119f7ed2448ffebdc144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f70b52f0c0b119f7ed2448ffebdc144">&#9670;&nbsp;</a></span>Point2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__basic.html#ga0f70b52f0c0b119f7ed2448ffebdc144">cv::Point2i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2f6c21f7cbd3a08bfc6467fd20df2f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f6c21f7cbd3a08bfc6467fd20df2f7e">&#9670;&nbsp;</a></span>Point2l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point__.html">Point_</a>&lt;<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&gt; <a class="el" href="group__core__basic.html#ga2f6c21f7cbd3a08bfc6467fd20df2f7e">cv::Point2l</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga17f8af95b76535bd387f4909850c8810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17f8af95b76535bd387f4909850c8810">&#9670;&nbsp;</a></span>Point3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga17f8af95b76535bd387f4909850c8810">cv::Point3d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3d79ceeb4419bccd0308dfdf1cd31435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d79ceeb4419bccd0308dfdf1cd31435">&#9670;&nbsp;</a></span>Point3f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt;float&gt; <a class="el" href="group__core__basic.html#ga3d79ceeb4419bccd0308dfdf1cd31435">cv::Point3f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac4ae8f2fb37ecb4b5d9268f17e46a18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4ae8f2fb37ecb4b5d9268f17e46a18e">&#9670;&nbsp;</a></span>Point3i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_point3__.html">Point3_</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__basic.html#gac4ae8f2fb37ecb4b5d9268f17e46a18e">cv::Point3i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga11d95de507098e90bad732b9345402e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11d95de507098e90bad732b9345402e8">&#9670;&nbsp;</a></span>Rect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#gaa87c8f580952d28b4127261994bce7d8">Rect2i</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga894fe0940d40d4d65f008a2ca4e616bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga894fe0940d40d4d65f008a2ca4e616bd">&#9670;&nbsp;</a></span>Rect2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga894fe0940d40d4d65f008a2ca4e616bd">cv::Rect2d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2d6c1acbbb651cf626f138748aac3d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d6c1acbbb651cf626f138748aac3d02">&#9670;&nbsp;</a></span>Rect2f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt;float&gt; <a class="el" href="group__core__basic.html#ga2d6c1acbbb651cf626f138748aac3d02">cv::Rect2f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa87c8f580952d28b4127261994bce7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa87c8f580952d28b4127261994bce7d8">&#9670;&nbsp;</a></span>Rect2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_rect__.html">Rect_</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__basic.html#gaa87c8f580952d28b4127261994bce7d8">cv::Rect2i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga599fe92e910c027be274233eccad7beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga599fe92e910c027be274233eccad7beb">&#9670;&nbsp;</a></span>Scalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_scalar__.html">Scalar_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga346f563897249351a34549137c8532a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga346f563897249351a34549137c8532a0">&#9670;&nbsp;</a></span>Size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__core__basic.html#ga5ef7f5978948e0cb3c3a3d4172594aec">Size2i</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaff96e5bec8019ca9917fd1e4c0cf8267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff96e5bec8019ca9917fd1e4c0cf8267">&#9670;&nbsp;</a></span>Size2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt;double&gt; <a class="el" href="group__core__basic.html#gaff96e5bec8019ca9917fd1e4c0cf8267">cv::Size2d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab34496d2466b5f69930ab74c70f117d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab34496d2466b5f69930ab74c70f117d4">&#9670;&nbsp;</a></span>Size2f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt;float&gt; <a class="el" href="group__core__basic.html#gab34496d2466b5f69930ab74c70f117d4">cv::Size2f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5ef7f5978948e0cb3c3a3d4172594aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ef7f5978948e0cb3c3a3d4172594aec">&#9670;&nbsp;</a></span>Size2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__basic.html#ga5ef7f5978948e0cb3c3a3d4172594aec">cv::Size2i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga153b6b90ce30f84239c9a39613e836d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga153b6b90ce30f84239c9a39613e836d3">&#9670;&nbsp;</a></span>Size2l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_size__.html">Size_</a>&lt;<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&gt; <a class="el" href="group__core__basic.html#ga153b6b90ce30f84239c9a39613e836d3">cv::Size2l</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1f6634802eeadfd7245bc75cf3e216c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f6634802eeadfd7245bc75cf3e216c2">&#9670;&nbsp;</a></span>String</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">cv::String</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga595458e63aa1443ddd5c51fa71d70e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga595458e63aa1443ddd5c51fa71d70e2a">&#9670;&nbsp;</a></span>Vec2b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 2&gt; <a class="el" href="group__core__basic.html#ga595458e63aa1443ddd5c51fa71d70e2a">cv::Vec2b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf20d857c2077c986d3b303e3d58bbc54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf20d857c2077c986d3b303e3d58bbc54">&#9670;&nbsp;</a></span>Vec2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;double, 2&gt; <a class="el" href="group__core__basic.html#gaf20d857c2077c986d3b303e3d58bbc54">cv::Vec2d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga392bb4f8a6b9e0dde07f31dc28e73319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga392bb4f8a6b9e0dde07f31dc28e73319">&#9670;&nbsp;</a></span>Vec2f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;float, 2&gt; <a class="el" href="group__core__basic.html#ga392bb4f8a6b9e0dde07f31dc28e73319">cv::Vec2f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga121402b88177c336b18945dd71d96ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga121402b88177c336b18945dd71d96ae0">&#9670;&nbsp;</a></span>Vec2i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 2&gt; <a class="el" href="group__core__basic.html#ga121402b88177c336b18945dd71d96ae0">cv::Vec2i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8c8616b035cf33c4b2b02fd7b89d6335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c8616b035cf33c4b2b02fd7b89d6335">&#9670;&nbsp;</a></span>Vec2s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;short, 2&gt; <a class="el" href="group__core__basic.html#ga8c8616b035cf33c4b2b02fd7b89d6335">cv::Vec2s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga622811ee01673a858f41b4fbfd4b1043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga622811ee01673a858f41b4fbfd4b1043">&#9670;&nbsp;</a></span>Vec2w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 2&gt; <a class="el" href="group__core__basic.html#ga622811ee01673a858f41b4fbfd4b1043">cv::Vec2w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7e6060c0b8d48459964df6e1eb524c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e6060c0b8d48459964df6e1eb524c03">&#9670;&nbsp;</a></span>Vec3b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 3&gt; <a class="el" href="group__core__basic.html#ga7e6060c0b8d48459964df6e1eb524c03">cv::Vec3b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga370d94209693b5b13437ab4991cabf73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga370d94209693b5b13437ab4991cabf73">&#9670;&nbsp;</a></span>Vec3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;double, 3&gt; <a class="el" href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">cv::Vec3d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab9e0ab642a3e01742916763173b72232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab9e0ab642a3e01742916763173b72232">&#9670;&nbsp;</a></span>Vec3f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;float, 3&gt; <a class="el" href="group__core__basic.html#gab9e0ab642a3e01742916763173b72232">cv::Vec3f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga55864bca2bbede9731df5baa0d1be763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55864bca2bbede9731df5baa0d1be763">&#9670;&nbsp;</a></span>Vec3i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 3&gt; <a class="el" href="group__core__basic.html#ga55864bca2bbede9731df5baa0d1be763">cv::Vec3i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2a2f4663171710b47944de9a74383dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a2f4663171710b47944de9a74383dd0">&#9670;&nbsp;</a></span>Vec3s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;short, 3&gt; <a class="el" href="group__core__basic.html#ga2a2f4663171710b47944de9a74383dd0">cv::Vec3s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac2ca2e7d93b15bc56b379fd5c42c0932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2ca2e7d93b15bc56b379fd5c42c0932">&#9670;&nbsp;</a></span>Vec3w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 3&gt; <a class="el" href="group__core__basic.html#gac2ca2e7d93b15bc56b379fd5c42c0932">cv::Vec3w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac8e7c61fdf0d8d9f6e8be7c25dc36584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8e7c61fdf0d8d9f6e8be7c25dc36584">&#9670;&nbsp;</a></span>Vec4b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 4&gt; <a class="el" href="group__core__basic.html#gac8e7c61fdf0d8d9f6e8be7c25dc36584">cv::Vec4b</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga41502c424d368098331a348dc26141bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41502c424d368098331a348dc26141bf">&#9670;&nbsp;</a></span>Vec4d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;double, 4&gt; <a class="el" href="group__core__basic.html#ga41502c424d368098331a348dc26141bf">cv::Vec4d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4f29b2178d21a471ee688b14d66d6567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f29b2178d21a471ee688b14d66d6567">&#9670;&nbsp;</a></span>Vec4f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;float, 4&gt; <a class="el" href="group__core__basic.html#ga4f29b2178d21a471ee688b14d66d6567">cv::Vec4f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga94ce799099ae6cdd66685e3fd0cad7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94ce799099ae6cdd66685e3fd0cad7d7">&#9670;&nbsp;</a></span>Vec4i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 4&gt; <a class="el" href="group__core__basic.html#ga94ce799099ae6cdd66685e3fd0cad7d7">cv::Vec4i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga40acb05e3e183aabebc77a235389b582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40acb05e3e183aabebc77a235389b582">&#9670;&nbsp;</a></span>Vec4s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;short, 4&gt; <a class="el" href="group__core__basic.html#ga40acb05e3e183aabebc77a235389b582">cv::Vec4s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga50f51484537d86bd43ff14c681ee3abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50f51484537d86bd43ff14c681ee3abd">&#9670;&nbsp;</a></span>Vec4w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 4&gt; <a class="el" href="group__core__basic.html#ga50f51484537d86bd43ff14c681ee3abd">cv::Vec4w</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga07a801beb07134f7090e3d789ca7c324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07a801beb07134f7090e3d789ca7c324">&#9670;&nbsp;</a></span>Vec6d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;double, 6&gt; <a class="el" href="group__core__basic.html#ga07a801beb07134f7090e3d789ca7c324">cv::Vec6d</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga74b819dd94c6a8c6f3d8cc39aeaa4992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74b819dd94c6a8c6f3d8cc39aeaa4992">&#9670;&nbsp;</a></span>Vec6f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;float, 6&gt; <a class="el" href="group__core__basic.html#ga74b819dd94c6a8c6f3d8cc39aeaa4992">cv::Vec6f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf1e413135207def5004c5297bd2f5a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1e413135207def5004c5297bd2f5a61">&#9670;&nbsp;</a></span>Vec6i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 6&gt; <a class="el" href="group__core__basic.html#gaf1e413135207def5004c5297bd2f5a61">cv::Vec6i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3c0eb56d15c13ca6708f168919af3a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c0eb56d15c13ca6708f168919af3a6a">&#9670;&nbsp;</a></span>Vec8i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>, 8&gt; <a class="el" href="group__core__basic.html#ga3c0eb56d15c13ca6708f168919af3a6a">cv::Vec8i</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga6226c29c7b0e7bda7aff72e96ba8e1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6226c29c7b0e7bda7aff72e96ba8e1df">&#9670;&nbsp;</a></span>AccessFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">cv::AccessFlag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga6226c29c7b0e7bda7aff72e96ba8e1dfa39d5f615d02cac084ab1dd0cb4f7c221"></a>ACCESS_READ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga6226c29c7b0e7bda7aff72e96ba8e1dfafcb8f7013ace1726cd1bbeea800bc7b6"></a>ACCESS_WRITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga6226c29c7b0e7bda7aff72e96ba8e1dfaf44732c797cd59f5940e426ecd62f45f"></a>ACCESS_RW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga6226c29c7b0e7bda7aff72e96ba8e1dfadc26a0b8f5374d205eb2e30c0f7f90fc"></a>ACCESS_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga6226c29c7b0e7bda7aff72e96ba8e1dfa0a404dec4617d7d1fe1f14767b8e379b"></a>ACCESS_FAST&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga8af2ae1e077644d1dd232d29d988b79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8af2ae1e077644d1dd232d29d988b79a">&#9670;&nbsp;</a></span>Param</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core__basic.html#ga8af2ae1e077644d1dd232d29d988b79a">cv::Param</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa53f93baa3057821107c750323892fa92"></a>INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aac48d5da12d702e73d6966069f2687376"></a>BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa8cf125b0e31559ba75a9d9b4f818a554"></a>REAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa63b588d5559f64f89a416e656880b949"></a>STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aaf0c2c0ca864067cc6e21a7ea2c1b1fdd"></a>MAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aac4f6db46662589f21d34d4abafdf8fb7"></a>MAT_VECTOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aacc42f38c94fd1898b9e8a14132d94261"></a>ALGORITHM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aae738c26bf4ce1037fa81b039a915cbf6"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa9ba5b3da1d35e22e1680ddbe52d36ed5"></a>UNSIGNED_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa6de7acf711860176ba606e9aa2b85d5f"></a>UINT64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa56283e7d906f746d62e95c8ba7814c3f"></a>UCHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8af2ae1e077644d1dd232d29d988b79aa8f3d9a4b6a7b7f2c7afa61ca113d0db9"></a>SCALAR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga5681439dda418431eb0a672697135ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5681439dda418431eb0a672697135ed2">&#9670;&nbsp;</a></span>UMatUsageFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">cv::UMatUsageFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Usage flags for allocator. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893"></a>USAGE_DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5681439dda418431eb0a672697135ed2a37b195428a7ac50f293765907fa43ad9"></a>USAGE_ALLOCATE_HOST_MEMORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5681439dda418431eb0a672697135ed2aeeff47f93f4e35ffed58e1b7de649dab"></a>USAGE_ALLOCATE_DEVICE_MEMORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5681439dda418431eb0a672697135ed2a0c30cfff62017d086c6ec4052589b569"></a>USAGE_ALLOCATE_SHARED_MEMORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5681439dda418431eb0a672697135ed2a46b027b92f5210fce74197d5a1439da9"></a>__UMAT_USAGE_FLAGS_32BIT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga5d41a4929a976a8869632e76ce83211e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d41a4929a976a8869632e76ce83211e">&#9670;&nbsp;</a></span>noArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> cv::noArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ga47bf74192ca6fdc3beb596f02d3544ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47bf74192ca6fdc3beb596f02d3544ed">&#9670;&nbsp;</a></span>_OutputArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gad557724ee9c07e56906f61c576b19e91">CV__DEBUG_NS_BEGIN</a> class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1___output_array.html">cv::_OutputArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe4552126e778850001d6a50a5c28560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe4552126e778850001d6a50a5c28560">&#9670;&nbsp;</a></span>Algorithm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9e09aa518f21325f801b2f5d23aef4d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e09aa518f21325f801b2f5d23aef4d0">&#9670;&nbsp;</a></span>FileNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_file_node.html">cv::FileNode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab1371a23c90d5f4725ea98240377d7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1371a23c90d5f4725ea98240377d7a1">&#9670;&nbsp;</a></span>InputArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gaf1094185326a278e77b9dae90a81498a">CV__DEBUG_NS_END</a> typedef const <a class="el" href="classcv_1_1___input_array.html">_InputArray</a>&amp; cv::InputArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaefafc9f27fc6af8375fbf13e72878990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefafc9f27fc6af8375fbf13e72878990">&#9670;&nbsp;</a></span>UMatData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="structcv_1_1_u_mat_data.html">cv::UMatData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Object Detection</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__objdetect.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Object Detection</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:group__objdetect__c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect__c.html">C API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html">cv::DetectionBasedTracker</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_similar_rects.html">cv::SimilarRects</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_default_deleter_3_01_cv_haar_classifier_cascade_01_4.html">cv::DefaultDeleter&lt; CvHaarClassifierCascade &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_base_cascade_classifier.html">cv::BaseCascadeClassifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html">cv::CascadeClassifier</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cascade classifier class for object detection.  <a href="classcv_1_1_cascade_classifier.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_detection_r_o_i.html">cv::DetectionROI</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct for detection region of interest (ROI)  <a href="structcv_1_1_detection_r_o_i.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_h_o_g_descriptor.html">cv::HOGDescriptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of HOG (Histogram of Oriented Gradients) descriptor and object detector.  <a href="structcv_1_1_h_o_g_descriptor.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_q_r_code_detector.html">cv::QRCodeDetector</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gaf454b747a111dc9819419b99807ae7ac"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__objdetect.html#ggaf454b747a111dc9819419b99807ae7aca04a050084d81a4a05abe92b7fc9ef210">cv::CASCADE_DO_CANNY_PRUNING</a> = 1
+, <a class="el" href="group__objdetect.html#ggaf454b747a111dc9819419b99807ae7aca1d35c5234686c05c075d224efc91d673">cv::CASCADE_SCALE_IMAGE</a> = 2
+, <a class="el" href="group__objdetect.html#ggaf454b747a111dc9819419b99807ae7aca3ecc6a38e196bd80afb57ac7b116c7fc">cv::CASCADE_FIND_BIGGEST_OBJECT</a> = 4
+, <a class="el" href="group__objdetect.html#ggaf454b747a111dc9819419b99807ae7aca54f9abc96125f942117c847bc8fa9b83">cv::CASCADE_DO_ROUGH_SEARCH</a> = 8
+ }</td></tr>
+<tr class="separator:gaf454b747a111dc9819419b99807ae7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gad723e309f23cf7f5a3cfd0a04fc15254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#gad723e309f23cf7f5a3cfd0a04fc15254">cv::groupRectangles</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;rectList, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> groupThreshold, double <a class="el" href="group__imgproc__c.html#gaabece9d4af1ab09d2f85ade473757e32">eps</a>=0.2)</td></tr>
+<tr class="memdesc:gad723e309f23cf7f5a3cfd0a04fc15254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Groups the object candidate rectangles.  <a href="group__objdetect.html#gad723e309f23cf7f5a3cfd0a04fc15254">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad723e309f23cf7f5a3cfd0a04fc15254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe147526d4d71539720aa1f542d73559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#gabe147526d4d71539720aa1f542d73559">cv::groupRectangles</a> (<a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;rectList, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;weights, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> groupThreshold, double <a class="el" href="group__imgproc__c.html#gaabece9d4af1ab09d2f85ade473757e32">eps</a>=0.2)</td></tr>
+<tr class="separator:gabe147526d4d71539720aa1f542d73559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c49f6bb2b621e4444a6686706866b74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#ga6c49f6bb2b621e4444a6686706866b74">cv::groupRectangles</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;rectList, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> groupThreshold, double <a class="el" href="group__imgproc__c.html#gaabece9d4af1ab09d2f85ade473757e32">eps</a>, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; *weights, std::vector&lt; double &gt; *levelWeights)</td></tr>
+<tr class="separator:ga6c49f6bb2b621e4444a6686706866b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8445b9ba73d0ef81a61cbe8f3494bfb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#ga8445b9ba73d0ef81a61cbe8f3494bfb4">cv::groupRectangles</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;rectList, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;rejectLevels, std::vector&lt; double &gt; &amp;levelWeights, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> groupThreshold, double <a class="el" href="group__imgproc__c.html#gaabece9d4af1ab09d2f85ade473757e32">eps</a>=0.2)</td></tr>
+<tr class="separator:ga8445b9ba73d0ef81a61cbe8f3494bfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36c6ecea0dba87ecaf9570dc8474713f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#ga36c6ecea0dba87ecaf9570dc8474713f">cv::groupRectangles_meanshift</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;rectList, std::vector&lt; double &gt; &amp;foundWeights, std::vector&lt; double &gt; &amp;foundScales, double detectThreshold=0.0, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> winDetSize=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(64, 128))</td></tr>
+<tr class="separator:ga36c6ecea0dba87ecaf9570dc8474713f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40cf5929b87fdf63da56614b212a0a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__objdetect.html#ga40cf5929b87fdf63da56614b212a0a6d">cv::createFaceDetectionMaskGenerator</a> ()</td></tr>
+<tr class="separator:ga40cf5929b87fdf63da56614b212a0a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2><a class="anchor" id="autotoc_md42"></a>
+Haar Feature-based Cascade Classifier for Object Detection</h2>
+<p>The object detector described below has been initially proposed by Paul Viola <b>[Viola01]</b> and improved by Rainer Lienhart <b>[Lienhart02]</b> .</p>
+<p>First, a classifier (namely a <em>cascade of boosted classifiers working with haar-like features</em>) is trained with a few hundred sample views of a particular object (i.e., a face or a car), called positive examples, that are scaled to the same size (say, 20x20), and negative examples - arbitrary images of the same size.</p>
+<p>After a classifier is trained, it can be applied to a region of interest (of the same size as used during the training) in an input image. The classifier outputs a "1" if the region is likely to show the object (i.e., face/car), and "0" otherwise. To search for the object in the whole image one can move the search window across the image and check every location using the classifier. The classifier is designed so that it can be easily "resized" in order to be able to find the objects of interest at different sizes, which is more efficient than resizing the image itself. So, to find an object of an unknown size in the image the scan procedure should be done several times at different scales.</p>
+<p>The word "cascade" in the classifier name means that the resultant classifier consists of several simpler classifiers (<em>stages</em>) that are applied subsequently to a region of interest until at some stage the candidate is rejected or all the stages are passed. The word "boosted" means that the classifiers at every stage of the cascade are complex themselves and they are built out of basic classifiers using one of four different boosting techniques (weighted voting). Currently Discrete Adaboost, Real Adaboost, Gentle Adaboost and Logitboost are supported. The basic classifiers are decision-tree classifiers with at least 2 leaves. Haar-like features are the input to the basic classifiers, and are calculated as described below. The current algorithm uses the following Haar-like features:</p>
+<p><img src="pics/haarfeatures.png" alt="image" class="inline"/></p>
+<p>The feature used in a particular classifier is specified by its shape (1a, 2b etc.), position within the region of interest and the scale (this scale is not the same as the scale used at the detection stage, though these two scales are multiplied). For example, in the case of the third line feature (2c) the response is calculated as the difference between the sum of image pixels under the rectangle covering the whole feature (including the two white stripes and the black stripe in the middle) and the sum of the image pixels under the black stripe multiplied by 3 in order to compensate for the differences in the size of areas. The sums of pixel values over a rectangular regions are calculated rapidly using integral images (see below and the integral description).</p>
+<p>To see the object detector at work, have a look at the facedetect demo: <a href="https://github.com/opencv/opencv/tree/master/samples/cpp/dbt_face_detection.cpp">https://github.com/opencv/opencv/tree/master/samples/cpp/dbt_face_detection.cpp</a></p>
+<p>The following reference is for the detection part only. There is a separate application called opencv_traincascade that can train a cascade of boosted classifiers from a set of samples.</p>
+<dl class="section note"><dt>Заметки</dt><dd>In the new C++ interface it is also possible to use LBP (local binary pattern) features in addition to Haar-like features. .. [Viola01] Paul Viola and Michael J. Jones. Rapid Object Detection using a Boosted Cascade of Simple Features. IEEE CVPR, 2001. The paper is available online at <a href="http://research.microsoft.com/en-us/um/people/viola/Pubs/Detect/violaJones_CVPR2001.pdf">http://research.microsoft.com/en-us/um/people/viola/Pubs/Detect/violaJones_CVPR2001.pdf</a> </dd></dl>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gaf454b747a111dc9819419b99807ae7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf454b747a111dc9819419b99807ae7ac">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggaf454b747a111dc9819419b99807ae7aca04a050084d81a4a05abe92b7fc9ef210"></a>CASCADE_DO_CANNY_PRUNING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf454b747a111dc9819419b99807ae7aca1d35c5234686c05c075d224efc91d673"></a>CASCADE_SCALE_IMAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf454b747a111dc9819419b99807ae7aca3ecc6a38e196bd80afb57ac7b116c7fc"></a>CASCADE_FIND_BIGGEST_OBJECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf454b747a111dc9819419b99807ae7aca54f9abc96125f942117c847bc8fa9b83"></a>CASCADE_DO_ROUGH_SEARCH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga40cf5929b87fdf63da56614b212a0a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40cf5929b87fdf63da56614b212a0a6d">&#9670;&nbsp;</a></span>createFaceDetectionMaskGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a>&gt; cv::createFaceDetectionMaskGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe147526d4d71539720aa1f542d73559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe147526d4d71539720aa1f542d73559">&#9670;&nbsp;</a></span>groupRectangles() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::groupRectangles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rectList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>groupThreshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eps</em> = <code>0.2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ga6c49f6bb2b621e4444a6686706866b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c49f6bb2b621e4444a6686706866b74">&#9670;&nbsp;</a></span>groupRectangles() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::groupRectangles </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rectList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>groupThreshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; *&#160;</td>
+          <td class="paramname"><em>levelWeights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="gad723e309f23cf7f5a3cfd0a04fc15254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad723e309f23cf7f5a3cfd0a04fc15254">&#9670;&nbsp;</a></span>groupRectangles() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::groupRectangles </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rectList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>groupThreshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eps</em> = <code>0.2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Groups the object candidate rectangles. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rectList</td><td>Input/output vector of rectangles. Output vector includes retained and grouped rectangles. (The Python list is not modified in place.) </td></tr>
+    <tr><td class="paramname">groupThreshold</td><td>Minimum possible number of rectangles minus 1. The threshold is used in a group of rectangles to retain it. </td></tr>
+    <tr><td class="paramname">eps</td><td>Relative difference between sides of the rectangles to merge them into a group.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function is a wrapper for the generic function partition . It clusters all the input rectangles using the rectangle equivalence criteria that combines rectangles with similar sizes and similar locations. The similarity is defined by eps. When eps=0 , no clustering is done at all. If <img class="formulaInl" alt="$\texttt{eps}\rightarrow +\inf$" src="form_851.png"/> , all the rectangles are put in one cluster. Then, the small clusters containing less than or equal to groupThreshold rectangles are rejected. In each other cluster, the average rectangle is computed and put into the output rectangle list. </p>
+
+</div>
+</div>
+<a id="ga8445b9ba73d0ef81a61cbe8f3494bfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8445b9ba73d0ef81a61cbe8f3494bfb4">&#9670;&nbsp;</a></span>groupRectangles() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::groupRectangles </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rectList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rejectLevels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>levelWeights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>groupThreshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eps</em> = <code>0.2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ga36c6ecea0dba87ecaf9570dc8474713f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36c6ecea0dba87ecaf9570dc8474713f">&#9670;&nbsp;</a></span>groupRectangles_meanshift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::groupRectangles_meanshift </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rectList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>foundWeights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>foundScales</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>detectThreshold</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>winDetSize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(64,&#160;128)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

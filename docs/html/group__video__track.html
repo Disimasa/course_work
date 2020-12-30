@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Object Tracking</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__video__track.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Object Tracking<div class="ingroups"><a class="el" href="group__video.html">Video Analysis</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html">cv::KalmanFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kalman filter class.  <a href="classcv_1_1_kalman_filter.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_dense_optical_flow.html">cv::DenseOpticalFlow</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_optical_flow.html">cv::SparseOpticalFlow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base interface for sparse optical flow algorithms.  <a href="classcv_1_1_sparse_optical_flow.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_farneback_optical_flow.html">cv::FarnebackOpticalFlow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class computing a dense optical flow using the Gunnar Farneback's algorithm.  <a href="classcv_1_1_farneback_optical_flow.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_variational_refinement.html">cv::VariationalRefinement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variational optical flow refinement.  <a href="classcv_1_1_variational_refinement.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html">cv::DISOpticalFlow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">DIS optical flow algorithm.  <a href="classcv_1_1_d_i_s_optical_flow.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_pyr_l_k_optical_flow.html">cv::SparsePyrLKOpticalFlow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class used for calculating a sparse optical flow.  <a href="classcv_1_1_sparse_pyr_l_k_optical_flow.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tracker.html">cv::Tracker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base abstract class for the long-term tracker.  <a href="classcv_1_1_tracker.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tracker_m_i_l.html">cv::TrackerMIL</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The MIL algorithm trains a classifier in an online manner to separate the object from the background.  <a href="classcv_1_1_tracker_m_i_l.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_tracker_g_o_t_u_r_n.html">cv::TrackerGOTURN</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">the GOTURN (Generic Object Tracking Using Regression Networks) tracker  <a href="classcv_1_1_tracker_g_o_t_u_r_n.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gad3c7afd06d698dd0a307b61cff2211da"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daa9d4430ac75199af0cf6fcdefba30eafe">cv::OPTFLOW_USE_INITIAL_FLOW</a> = 4
+, <a class="el" href="group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daadd75f0bd85d1bd739b39b8900bc12c58">cv::OPTFLOW_LK_GET_MIN_EIGENVALS</a> = 8
+, <a class="el" href="group__video__track.html#ggad3c7afd06d698dd0a307b61cff2211daa4ffe37adbc548e44a61025a26a1914aa">cv::OPTFLOW_FARNEBACK_GAUSSIAN</a> = 256
+ }</td></tr>
+<tr class="separator:gad3c7afd06d698dd0a307b61cff2211da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d00a609cfb78d81b39ecd57f023fa6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca01106d6d20122b782ff25eaeffe9a5be">cv::MOTION_TRANSLATION</a> = 0
+, <a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca075fb2a93001cb4cc1ba1b22af1e8848">cv::MOTION_EUCLIDEAN</a> = 1
+, <a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6caa22eb135b6afe090a8a0d228fd62634a">cv::MOTION_AFFINE</a> = 2
+, <a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6ca81a5e999a7fde5656ce1ca0458741b27">cv::MOTION_HOMOGRAPHY</a> = 3
+ }</td></tr>
+<tr class="separator:ga8d00a609cfb78d81b39ecd57f023fa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga05dd4cddf6c65245acd02db17e33b229"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_rotated_rect.html">RotatedRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#ga05dd4cddf6c65245acd02db17e33b229">cv::CamShift</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> probImage, <a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;window, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>)</td></tr>
+<tr class="memdesc:ga05dd4cddf6c65245acd02db17e33b229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an object center, size, and orientation.  <a href="group__video__track.html#ga05dd4cddf6c65245acd02db17e33b229">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga05dd4cddf6c65245acd02db17e33b229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d73bea676486ed2607d80f7970bc01a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#ga7d73bea676486ed2607d80f7970bc01a">cv::meanShift</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> probImage, <a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;window, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>)</td></tr>
+<tr class="memdesc:ga7d73bea676486ed2607d80f7970bc01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an object on a back projection image.  <a href="group__video__track.html#ga7d73bea676486ed2607d80f7970bc01a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7d73bea676486ed2607d80f7970bc01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e3266bdcb0a36d60d4907c22da66be8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#ga7e3266bdcb0a36d60d4907c22da66be8">cv::buildOpticalFlowPyramid</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img, <a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a> pyramid, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> winSize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxLevel, bool withDerivatives=true, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> pyrBorder=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5ab3c5a6143d8120b95005fa7105a10bb4">BORDER_REFLECT_101</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> derivBorder=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a>, bool tryReuseInputImage=true)</td></tr>
+<tr class="memdesc:ga7e3266bdcb0a36d60d4907c22da66be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.  <a href="group__video__track.html#ga7e3266bdcb0a36d60d4907c22da66be8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7e3266bdcb0a36d60d4907c22da66be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0e989a246b6c81ee407cb4bc06d0ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gae0e989a246b6c81ee407cb4bc06d0ee8">cv::calcOpticalFlowPyrLK</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> prevImg, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> nextImg, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> prevPts, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> nextPts, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> status, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> err, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> winSize=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(21, 21), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxLevel=3, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>=<a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57aeb9da694ea67b3ef7d524521b580867d">TermCriteria::COUNT</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>, 30, 0.01), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=0, double minEigThreshold=1e-4)</td></tr>
+<tr class="memdesc:gae0e989a246b6c81ee407cb4bc06d0ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids.  <a href="group__video__track.html#gae0e989a246b6c81ee407cb4bc06d0ee8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae0e989a246b6c81ee407cb4bc06d0ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga663ddb1d76d1fcb2d7dd9e58f1e75e50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#ga663ddb1d76d1fcb2d7dd9e58f1e75e50">cv::calcOpticalFlowFarneback</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> prev, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> next, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__imgproc__hist.html#ga06c76f73a0186dbcfbaba14ab0baca86">flow</a>, double pyr_scale, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> levels, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> winsize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> iterations, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> poly_n, double poly_sigma, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>)</td></tr>
+<tr class="memdesc:ga663ddb1d76d1fcb2d7dd9e58f1e75e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a dense optical flow using the Gunnar Farneback's algorithm.  <a href="group__video__track.html#ga663ddb1d76d1fcb2d7dd9e58f1e75e50">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga663ddb1d76d1fcb2d7dd9e58f1e75e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe52fd3986a2ba6ba0628ebb6a6e8b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gafe52fd3986a2ba6ba0628ebb6a6e8b95">cv::estimateRigidTransform</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, bool fullAffine)</td></tr>
+<tr class="memdesc:gafe52fd3986a2ba6ba0628ebb6a6e8b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an optimal affine transformation between two 2D point sets.  <a href="group__video__track.html#gafe52fd3986a2ba6ba0628ebb6a6e8b95">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafe52fd3986a2ba6ba0628ebb6a6e8b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac319473e0ec4de4a50c1e332200751f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gaac319473e0ec4de4a50c1e332200751f">cv::computeECC</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> templateImage, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputImage, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputMask=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="memdesc:gaac319473e0ec4de4a50c1e332200751f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Enhanced Correlation Coefficient value between two images <b>[EP08]</b> .  <a href="group__video__track.html#gaac319473e0ec4de4a50c1e332200751f">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaac319473e0ec4de4a50c1e332200751f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa27e5de74898ae80985ae1fd281fe2bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gaa27e5de74898ae80985ae1fd281fe2bb">cv::findTransformECC</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> templateImage, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputImage, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> warpMatrix, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> motionType, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputMask, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> gaussFiltSize)</td></tr>
+<tr class="memdesc:gaa27e5de74898ae80985ae1fd281fe2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the geometric transform (warp) between two images in terms of the ECC criterion <b>[EP08]</b> .  <a href="group__video__track.html#gaa27e5de74898ae80985ae1fd281fe2bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa27e5de74898ae80985ae1fd281fe2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb07e9b454988007f70abc28a7504a97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gadb07e9b454988007f70abc28a7504a97">cv::findTransformECC</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> templateImage, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputImage, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> warpMatrix, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> motionType=<a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6caa22eb135b6afe090a8a0d228fd62634a">MOTION_AFFINE</a>, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>=<a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57aeb9da694ea67b3ef7d524521b580867d">TermCriteria::COUNT</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>, 50, 0.001), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> inputMask=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="separator:gadb07e9b454988007f70abc28a7504a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad29820e8993c67253785ec84f6c7af70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gad29820e8993c67253785ec84f6c7af70">cv::readOpticalFlow</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;path)</td></tr>
+<tr class="memdesc:gad29820e8993c67253785ec84f6c7af70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a .flo file.  <a href="group__video__track.html#gad29820e8993c67253785ec84f6c7af70">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad29820e8993c67253785ec84f6c7af70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf39c359623cf0d025467e2d36bc32dab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video__track.html#gaf39c359623cf0d025467e2d36bc32dab">cv::writeOpticalFlow</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;path, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__hist.html#ga06c76f73a0186dbcfbaba14ab0baca86">flow</a>)</td></tr>
+<tr class="memdesc:gaf39c359623cf0d025467e2d36bc32dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a .flo to disk.  <a href="group__video__track.html#gaf39c359623cf0d025467e2d36bc32dab">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf39c359623cf0d025467e2d36bc32dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gad3c7afd06d698dd0a307b61cff2211da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3c7afd06d698dd0a307b61cff2211da">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggad3c7afd06d698dd0a307b61cff2211daa9d4430ac75199af0cf6fcdefba30eafe"></a>OPTFLOW_USE_INITIAL_FLOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggad3c7afd06d698dd0a307b61cff2211daadd75f0bd85d1bd739b39b8900bc12c58"></a>OPTFLOW_LK_GET_MIN_EIGENVALS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggad3c7afd06d698dd0a307b61cff2211daa4ffe37adbc548e44a61025a26a1914aa"></a>OPTFLOW_FARNEBACK_GAUSSIAN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga8d00a609cfb78d81b39ecd57f023fa6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8d00a609cfb78d81b39ecd57f023fa6c">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga8d00a609cfb78d81b39ecd57f023fa6ca01106d6d20122b782ff25eaeffe9a5be"></a>MOTION_TRANSLATION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8d00a609cfb78d81b39ecd57f023fa6ca075fb2a93001cb4cc1ba1b22af1e8848"></a>MOTION_EUCLIDEAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8d00a609cfb78d81b39ecd57f023fa6caa22eb135b6afe090a8a0d228fd62634a"></a>MOTION_AFFINE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga8d00a609cfb78d81b39ecd57f023fa6ca81a5e999a7fde5656ce1ca0458741b27"></a>MOTION_HOMOGRAPHY&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga7e3266bdcb0a36d60d4907c22da66be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e3266bdcb0a36d60d4907c22da66be8">&#9670;&nbsp;</a></span>buildOpticalFlowPyramid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::buildOpticalFlowPyramid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>pyramid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>winSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withDerivatives</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>pyrBorder</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5ab3c5a6143d8120b95005fa7105a10bb4">BORDER_REFLECT_101</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>derivBorder</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tryReuseInputImage</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>8-bit input image. </td></tr>
+    <tr><td class="paramname">pyramid</td><td>output pyramid. </td></tr>
+    <tr><td class="paramname">winSize</td><td>window size of optical flow algorithm. Must be not less than winSize argument of calcOpticalFlowPyrLK. It is needed to calculate required padding for pyramid levels. </td></tr>
+    <tr><td class="paramname">maxLevel</td><td>0-based maximal pyramid level number. </td></tr>
+    <tr><td class="paramname">withDerivatives</td><td>set to precompute gradients for the every pyramid level. If pyramid is constructed without the gradients then calcOpticalFlowPyrLK will calculate them internally. </td></tr>
+    <tr><td class="paramname">pyrBorder</td><td>the border mode for pyramid layers. </td></tr>
+    <tr><td class="paramname">derivBorder</td><td>the border mode for gradients. </td></tr>
+    <tr><td class="paramname">tryReuseInputImage</td><td>put ROI of input image into the pyramid if possible. You can pass false to force data copying. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>number of levels in constructed pyramid. Can be less than maxLevel. </dd></dl>
+
+</div>
+</div>
+<a id="ga663ddb1d76d1fcb2d7dd9e58f1e75e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga663ddb1d76d1fcb2d7dd9e58f1e75e50">&#9670;&nbsp;</a></span>calcOpticalFlowFarneback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::calcOpticalFlowFarneback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>prev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>flow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pyr_scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>levels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>winsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>iterations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>poly_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>poly_sigma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a dense optical flow using the Gunnar Farneback's algorithm. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prev</td><td>first 8-bit single-channel input image. </td></tr>
+    <tr><td class="paramname">next</td><td>second input image of the same size and the same type as prev. </td></tr>
+    <tr><td class="paramname">flow</td><td>computed flow image that has the same size as prev and type CV_32FC2. </td></tr>
+    <tr><td class="paramname">pyr_scale</td><td>parameter, specifying the image scale (&lt;1) to build pyramids for each image; pyr_scale=0.5 means a classical pyramid, where each next layer is twice smaller than the previous one. </td></tr>
+    <tr><td class="paramname">levels</td><td>number of pyramid layers including the initial image; levels=1 means that no extra layers are created and only the original images are used. </td></tr>
+    <tr><td class="paramname">winsize</td><td>averaging window size; larger values increase the algorithm robustness to image noise and give more chances for fast motion detection, but yield more blurred motion field. </td></tr>
+    <tr><td class="paramname">iterations</td><td>number of iterations the algorithm does at each pyramid level. </td></tr>
+    <tr><td class="paramname">poly_n</td><td>size of the pixel neighborhood used to find polynomial expansion in each pixel; larger values mean that the image will be approximated with smoother surfaces, yielding more robust algorithm and more blurred motion field, typically poly_n =5 or 7. </td></tr>
+    <tr><td class="paramname">poly_sigma</td><td>standard deviation of the Gaussian that is used to smooth derivatives used as a basis for the polynomial expansion; for poly_n=5, you can set poly_sigma=1.1, for poly_n=7, a good value would be poly_sigma=1.5. </td></tr>
+    <tr><td class="paramname">flags</td><td>operation flags that can be a combination of the following:<ul>
+<li><b>OPTFLOW_USE_INITIAL_FLOW</b> uses the input flow as an initial flow approximation.</li>
+<li><b>OPTFLOW_FARNEBACK_GAUSSIAN</b> uses the Gaussian <img class="formulaInl" alt="$\texttt{winsize}\times\texttt{winsize}$" src="form_860.png"/> filter instead of a box filter of the same size for optical flow estimation; usually, this option gives z more accurate flow than with a box filter, at the cost of lower speed; normally, winsize for a Gaussian window should be set to a larger value to achieve the same level of robustness.</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function finds an optical flow for each prev pixel using the <b>[Farneback2003]</b> algorithm so that</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{prev} (y,x) \sim \texttt{next} ( y + \texttt{flow} (y,x)[1], x + \texttt{flow} (y,x)[0])\]" src="form_861.png"/>
+</p>
+<dl class="section note"><dt>Заметки</dt><dd></dd></dl>
+<ul>
+<li>An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/cpp/fback.cpp</li>
+<li>(Python) An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/python/opt_flow.py </li>
+</ul>
+
+</div>
+</div>
+<a id="gae0e989a246b6c81ee407cb4bc06d0ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0e989a246b6c81ee407cb4bc06d0ee8">&#9670;&nbsp;</a></span>calcOpticalFlowPyrLK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::calcOpticalFlowPyrLK </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>prevImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>nextImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>prevPts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>nextPts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>winSize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(21,&#160;21)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxLevel</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em> = <code><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57aeb9da694ea67b3ef7d524521b580867d">TermCriteria::COUNT</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>,&#160;30,&#160;0.01)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minEigThreshold</em> = <code>1e-4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prevImg</td><td>first 8-bit input image or pyramid constructed by buildOpticalFlowPyramid. </td></tr>
+    <tr><td class="paramname">nextImg</td><td>second input image or pyramid of the same size and the same type as prevImg. </td></tr>
+    <tr><td class="paramname">prevPts</td><td>vector of 2D points for which the flow needs to be found; point coordinates must be single-precision floating-point numbers. </td></tr>
+    <tr><td class="paramname">nextPts</td><td>output vector of 2D points (with single-precision floating-point coordinates) containing the calculated new positions of input features in the second image; when OPTFLOW_USE_INITIAL_FLOW flag is passed, the vector must have the same size as in the input. </td></tr>
+    <tr><td class="paramname">status</td><td>output status vector (of unsigned chars); each element of the vector is set to 1 if the flow for the corresponding features has been found, otherwise, it is set to 0. </td></tr>
+    <tr><td class="paramname">err</td><td>output vector of errors; each element of the vector is set to an error for the corresponding feature, type of the error measure can be set in flags parameter; if the flow wasn't found then the error is not defined (use the status parameter to find such cases). </td></tr>
+    <tr><td class="paramname">winSize</td><td>size of the search window at each pyramid level. </td></tr>
+    <tr><td class="paramname">maxLevel</td><td>0-based maximal pyramid level number; if set to 0, pyramids are not used (single level), if set to 1, two levels are used, and so on; if pyramids are passed to input then algorithm will use as many levels as pyramids have but no more than maxLevel. </td></tr>
+    <tr><td class="paramname">criteria</td><td>parameter, specifying the termination criteria of the iterative search algorithm (after the specified maximum number of iterations criteria.maxCount or when the search window moves by less than criteria.epsilon. </td></tr>
+    <tr><td class="paramname">flags</td><td>operation flags:<ul>
+<li><b>OPTFLOW_USE_INITIAL_FLOW</b> uses initial estimations, stored in nextPts; if the flag is not set, then prevPts is copied to nextPts and is considered the initial estimate.</li>
+<li><b>OPTFLOW_LK_GET_MIN_EIGENVALS</b> use minimum eigen values as an error measure (see minEigThreshold description); if the flag is not set, then <a class="el" href="structcv_1_1_l1.html">L1</a> distance between patches around the original and a moved point, divided by number of pixels in a window, is used as a error measure. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">minEigThreshold</td><td>the algorithm calculates the minimum eigen value of a 2x2 normal matrix of optical flow equations (this matrix is called a spatial gradient matrix in <b>[Bouguet00]</b>), divided by number of pixels in a window; if this value is less than minEigThreshold, then a corresponding feature is filtered out and its flow is not processed, so it allows to remove bad points and get a performance boost.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function implements a sparse iterative version of the Lucas-Kanade optical flow in pyramids. See <b>[Bouguet00]</b> . The function is parallelized with the TBB library.</p>
+<dl class="section note"><dt>Заметки</dt><dd></dd></dl>
+<ul>
+<li>An example using the Lucas-Kanade optical flow algorithm can be found at opencv_source_code/samples/cpp/lkdemo.cpp</li>
+<li>(Python) An example using the Lucas-Kanade optical flow algorithm can be found at opencv_source_code/samples/python/lk_track.py</li>
+<li>(Python) An example using the Lucas-Kanade tracker for homography matching can be found at opencv_source_code/samples/python/lk_homography.py </li>
+</ul>
+
+</div>
+</div>
+<a id="ga05dd4cddf6c65245acd02db17e33b229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05dd4cddf6c65245acd02db17e33b229">&#9670;&nbsp;</a></span>CamShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_rotated_rect.html">RotatedRect</a> cv::CamShift </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>probImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds an object center, size, and orientation. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">probImage</td><td>Back projection of the object histogram. See calcBackProject. </td></tr>
+    <tr><td class="paramname">window</td><td>Initial search window. </td></tr>
+    <tr><td class="paramname">criteria</td><td>Stop criteria for the underlying meanShift. returns (in old interfaces) Number of iterations CAMSHIFT took to converge The function implements the CAMSHIFT object tracking algorithm <b>[Bradski98]</b> . First, it finds an object center using meanShift and then adjusts the window size and finds the optimal rotation. The function returns the rotated rectangle structure that includes the object position, size, and orientation. The next position of the search window can be obtained with <a class="el" href="classcv_1_1_rotated_rect.html#a055a5d35e50bce65e3b1dee318dd3044" title="returns the minimal up-right integer rectangle containing the rotated rectangle">RotatedRect::boundingRect()</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>See the OpenCV sample camshiftdemo.c that tracks colored objects.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>(Python) A sample explaining the camshift tracking algorithm can be found at opencv_source_code/samples/python/camshift.py </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="gaac319473e0ec4de4a50c1e332200751f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac319473e0ec4de4a50c1e332200751f">&#9670;&nbsp;</a></span>computeECC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double cv::computeECC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>templateImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputMask</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the Enhanced Correlation Coefficient value between two images <b>[EP08]</b> . </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">templateImage</td><td>single-channel template image; CV_8U or CV_32F array. </td></tr>
+    <tr><td class="paramname">inputImage</td><td>single-channel input image to be warped to provide an image similar to templateImage, same type as templateImage. </td></tr>
+    <tr><td class="paramname">inputMask</td><td>An optional mask to indicate valid values of inputImage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__video__track.html#gaa27e5de74898ae80985ae1fd281fe2bb" title="Finds the geometric transform (warp) between two images in terms of the ECC criterion  .">findTransformECC</a> </dd></dl>
+
+</div>
+</div>
+<a id="gafe52fd3986a2ba6ba0628ebb6a6e8b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe52fd3986a2ba6ba0628ebb6a6e8b95">&#9670;&nbsp;</a></span>estimateRigidTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::estimateRigidTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullAffine</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes an optimal affine transformation between two 2D point sets. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>First input 2D point set stored in std::vector or <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>, or an image stored in <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>. </td></tr>
+    <tr><td class="paramname">dst</td><td>Second input 2D point set of the same size and the same type as A, or another image. </td></tr>
+    <tr><td class="paramname">fullAffine</td><td>If true, the function finds an optimal affine transformation with no additional restrictions (6 degrees of freedom). Otherwise, the class of transformations to choose from is limited to combinations of translation, rotation, and uniform scaling (4 degrees of freedom).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function finds an optimal affine transform <em>[A|b]</em> (a 2 x 3 floating-point matrix) that approximates best the affine transformation between: </p><pre class="fragment">Two point sets
+Two raster images. In this case, the function first finds some features in the src image and
+finds the corresponding features in dst image. After that, the problem is reduced to the first
+case.
+</pre><p> In case of point sets, the problem is formulated as follows: you need to find a 2x2 matrix <em>A</em> and 2x1 vector <em>b</em> so that:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[[A^*|b^*] = arg \min _{[A|b]} \sum _i \| \texttt{dst}[i] - A { \texttt{src}[i]}^T - b \| ^2\]" src="form_862.png"/>
+</p>
+<p> where src[i] and dst[i] are the i-th points in src and dst, respectively <img class="formulaInl" alt="$[A|b]$" src="form_863.png"/> can be either arbitrary (when fullAffine=true ) or have a form of </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{bmatrix} a_{11} &amp; a_{12} &amp; b_1 \\ -a_{12} &amp; a_{11} &amp; b_2 \end{bmatrix}\]" src="form_864.png"/>
+</p>
+<p> when fullAffine=false.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000057">Уст.:</a></b></dt><dd>Use <a class="el" href="group__calib3d.html#gad25ad3c0165e31d2d1ea40cfb53d7e52" title="Computes an optimal affine transformation between two 2D point sets.">cv::estimateAffine2D</a>, <a class="el" href="group__calib3d.html#ga756dcd87483938fa43c0ad98f2ae6561" title="Computes an optimal limited affine transformation with 4 degrees of freedom between two 2D point sets...">cv::estimateAffinePartial2D</a> instead. If you are using this function with images, extract points using <a class="el" href="group__video__track.html#gae0e989a246b6c81ee407cb4bc06d0ee8" title="Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyra...">cv::calcOpticalFlowPyrLK</a> and then use the estimation functions.</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__calib3d.html#gad25ad3c0165e31d2d1ea40cfb53d7e52" title="Computes an optimal affine transformation between two 2D point sets.">estimateAffine2D</a>, <a class="el" href="group__calib3d.html#ga756dcd87483938fa43c0ad98f2ae6561" title="Computes an optimal limited affine transformation with 4 degrees of freedom between two 2D point sets...">estimateAffinePartial2D</a>, <a class="el" href="group__imgproc__transform.html#ga2f52608043f85e81d60af16f78c75985" title="Calculates an affine transform from three pairs of the corresponding points.">getAffineTransform</a>, <a class="el" href="group__imgproc__transform.html#ga21cd7144988d7e3f51cc597a172601ab" title="Calculates a perspective transform from four pairs of the corresponding points.">getPerspectiveTransform</a>, <a class="el" href="group__calib3d.html#ga8853d4e1edcbcc86429f7268d471563f" title="Finds a perspective transformation between two planes.">findHomography</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa27e5de74898ae80985ae1fd281fe2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa27e5de74898ae80985ae1fd281fe2bb">&#9670;&nbsp;</a></span>findTransformECC() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> double cv::findTransformECC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>templateImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>warpMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>motionType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>gaussFiltSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the geometric transform (warp) between two images in terms of the ECC criterion <b>[EP08]</b> . </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">templateImage</td><td>single-channel template image; CV_8U or CV_32F array. </td></tr>
+    <tr><td class="paramname">inputImage</td><td>single-channel input image which should be warped with the final warpMatrix in order to provide an image similar to templateImage, same type as templateImage. </td></tr>
+    <tr><td class="paramname">warpMatrix</td><td>floating-point <img class="formulaInl" alt="$2\times 3$" src="form_604.png"/> or <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> mapping matrix (warp). </td></tr>
+    <tr><td class="paramname">motionType</td><td>parameter, specifying the type of motion:<ul>
+<li><b>MOTION_TRANSLATION</b> sets a translational motion model; warpMatrix is <img class="formulaInl" alt="$2\times 3$" src="form_604.png"/> with the first <img class="formulaInl" alt="$2\times 2$" src="form_865.png"/> part being the unity matrix and the rest two parameters being estimated.</li>
+<li><b>MOTION_EUCLIDEAN</b> sets a Euclidean (rigid) transformation as motion model; three parameters are estimated; warpMatrix is <img class="formulaInl" alt="$2\times 3$" src="form_604.png"/>.</li>
+<li><b>MOTION_AFFINE</b> sets an affine motion model (DEFAULT); six parameters are estimated; warpMatrix is <img class="formulaInl" alt="$2\times 3$" src="form_604.png"/>.</li>
+<li><b>MOTION_HOMOGRAPHY</b> sets a homography as a motion model; eight parameters are estimated;`warpMatrix` is <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/>. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">criteria</td><td>parameter, specifying the termination criteria of the ECC algorithm; criteria.epsilon defines the threshold of the increment in the correlation coefficient between two iterations (a negative criteria.epsilon makes criteria.maxcount the only termination criterion). Default values are shown in the declaration above. </td></tr>
+    <tr><td class="paramname">inputMask</td><td>An optional mask to indicate valid values of inputImage. </td></tr>
+    <tr><td class="paramname">gaussFiltSize</td><td>An optional value indicating size of gaussian blur filter; (DEFAULT: 5)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function estimates the optimum transformation (warpMatrix) with respect to ECC criterion (<b>[EP08]</b>), that is</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{warpMatrix} = \arg\max_{W} \texttt{ECC}(\texttt{templateImage}(x,y),\texttt{inputImage}(x',y'))\]" src="form_866.png"/>
+</p>
+<p>where</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{bmatrix} x' \\ y' \end{bmatrix} = W \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}\]" src="form_867.png"/>
+</p>
+<p>(the equation holds with homogeneous coordinates for homography). It returns the final enhanced correlation coefficient, that is the correlation coefficient between the template image and the final warped input image. When a <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> matrix is given with motionType =0, 1 or 2, the third row is ignored.</p>
+<p>Unlike findHomography and estimateRigidTransform, the function findTransformECC implements an area-based alignment that builds on intensity similarities. In essence, the function updates the initial transformation that roughly aligns the images. If this information is missing, the identity warp (unity matrix) is used as an initialization. Note that if images undergo strong displacements/rotations, an initial transformation that roughly aligns the images is necessary (e.g., a simple euclidean/similarity transform that allows for the images showing the same image content approximately). Use inverse warping in the second image to take an image close to the first one, i.e. use the flag WARP_INVERSE_MAP with warpAffine or warpPerspective. See also the OpenCV sample image_alignment.cpp that demonstrates the use of the function. Note that the function throws an exception if algorithm does not converges.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__video__track.html#gaac319473e0ec4de4a50c1e332200751f" title="Computes the Enhanced Correlation Coefficient value between two images  .">computeECC</a>, <a class="el" href="group__calib3d.html#gad25ad3c0165e31d2d1ea40cfb53d7e52" title="Computes an optimal affine transformation between two 2D point sets.">estimateAffine2D</a>, <a class="el" href="group__calib3d.html#ga756dcd87483938fa43c0ad98f2ae6561" title="Computes an optimal limited affine transformation with 4 degrees of freedom between two 2D point sets...">estimateAffinePartial2D</a>, <a class="el" href="group__calib3d.html#ga8853d4e1edcbcc86429f7268d471563f" title="Finds a perspective transformation between two planes.">findHomography</a> </dd></dl>
+
+</div>
+</div>
+<a id="gadb07e9b454988007f70abc28a7504a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb07e9b454988007f70abc28a7504a97">&#9670;&nbsp;</a></span>findTransformECC() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> double cv::findTransformECC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>templateImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>warpMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>motionType</em> = <code><a class="el" href="group__video__track.html#gga8d00a609cfb78d81b39ecd57f023fa6caa22eb135b6afe090a8a0d228fd62634a">MOTION_AFFINE</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em> = <code><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57aeb9da694ea67b3ef7d524521b580867d">TermCriteria::COUNT</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>,&#160;50,&#160;0.001)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>inputMask</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ga7d73bea676486ed2607d80f7970bc01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d73bea676486ed2607d80f7970bc01a">&#9670;&nbsp;</a></span>meanShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::meanShift </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>probImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds an object on a back projection image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">probImage</td><td>Back projection of the object histogram. See calcBackProject for details. </td></tr>
+    <tr><td class="paramname">window</td><td>Initial search window. </td></tr>
+    <tr><td class="paramname">criteria</td><td>Stop criteria for the iterative search algorithm. returns : Number of iterations CAMSHIFT took to converge. The function implements the iterative object search algorithm. It takes the input back projection of an object and the initial position. The mass center in window of the back projection image is computed and the search window center shifts to the mass center. The procedure is repeated until the specified number of iterations criteria.maxCount is done or until the window center shifts by less than criteria.epsilon. The algorithm is used inside CamShift and, unlike CamShift , the search window size or orientation do not change during the search. You can simply pass the output of calcBackProject to this function. But better results can be obtained if you pre-filter the back projection and remove the noise. For example, you can do this by retrieving connected components with findContours , throwing away contours with small area ( contourArea ), and rendering the remaining contours with drawContours. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad29820e8993c67253785ec84f6c7af70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad29820e8993c67253785ec84f6c7af70">&#9670;&nbsp;</a></span>readOpticalFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::readOpticalFlow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a .flo file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to the file to be loaded</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function readOpticalFlow loads a flow field from a file and returns it as a single matrix. Resulting <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> has a type CV_32FC2 - floating-point, 2-channel. First channel corresponds to the flow in the horizontal direction (u), second - vertical (v). </p>
+
+</div>
+</div>
+<a id="gaf39c359623cf0d025467e2d36bc32dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf39c359623cf0d025467e2d36bc32dab">&#9670;&nbsp;</a></span>writeOpticalFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::writeOpticalFlow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a .flo to disk. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to the file to be written </td></tr>
+    <tr><td class="paramname">flow</td><td>Flow field to be stored</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function stores a flow field in a file, returns true on success, false otherwise. The flow field must be a 2-channel, floating-point matrix (CV_32FC2). First channel corresponds to the flow in the horizontal direction (u), second - vertical (v). </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

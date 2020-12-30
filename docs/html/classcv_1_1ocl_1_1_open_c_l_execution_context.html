@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::ocl::OpenCLExecutionContext</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1ocl_1_1_open_c_l_execution_context.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classcv_1_1ocl_1_1_open_c_l_execution_context-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::ocl::OpenCLExecutionContext<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__opencl.html">OpenCL support</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac6af8e4cf012090c19898515e4dcbf0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#ac6af8e4cf012090c19898515e4dcbf0b">OpenCLExecutionContext</a> ()=default</td></tr>
+<tr class="separator:ac6af8e4cf012090c19898515e4dcbf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75788f3fddb08d9054e8ed839f7a5e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#ae75788f3fddb08d9054e8ed839f7a5e6">~OpenCLExecutionContext</a> ()=default</td></tr>
+<tr class="separator:ae75788f3fddb08d9054e8ed839f7a5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bad663c3febd65e64e19e538019a06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#ac2bad663c3febd65e64e19e538019a06">OpenCLExecutionContext</a> (const <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;)=default</td></tr>
+<tr class="separator:ac2bad663c3febd65e64e19e538019a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc756921aa0d8ce916ea37eae0d988f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#affc756921aa0d8ce916ea37eae0d988f">OpenCLExecutionContext</a> (<a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:affc756921aa0d8ce916ea37eae0d988f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295bc24395def56f9093496136b9f952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a295bc24395def56f9093496136b9f952">operator=</a> (const <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;)=default</td></tr>
+<tr class="separator:a295bc24395def56f9093496136b9f952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93de46d864dae3f7c44684c5bcae8f9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a93de46d864dae3f7c44684c5bcae8f9a">operator=</a> (<a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a93de46d864dae3f7c44684c5bcae8f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410b0e9d2c1f33072ee2495590b7981d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a410b0e9d2c1f33072ee2495590b7981d">getContext</a> () const</td></tr>
+<tr class="separator:a410b0e9d2c1f33072ee2495590b7981d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13045284b5d228745d1856863e7e692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#ae13045284b5d228745d1856863e7e692">getDevice</a> () const</td></tr>
+<tr class="separator:ae13045284b5d228745d1856863e7e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bd43106061c7bad8eb93f12a796717"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a21bd43106061c7bad8eb93f12a796717">getQueue</a> () const</td></tr>
+<tr class="separator:a21bd43106061c7bad8eb93f12a796717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7a11a8edc5ade6b9d858dc8b5c0acb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a0f7a11a8edc5ade6b9d858dc8b5c0acb">useOpenCL</a> () const</td></tr>
+<tr class="separator:a0f7a11a8edc5ade6b9d858dc8b5c0acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54fd377871f285d98fa4dff938b379d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a54fd377871f285d98fa4dff938b379d0">setUseOpenCL</a> (bool flag)</td></tr>
+<tr class="separator:a54fd377871f285d98fa4dff938b379d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b5bca72706e8875c581fd6e55d0782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a48b5bca72706e8875c581fd6e55d0782">bind</a> () const</td></tr>
+<tr class="separator:a48b5bca72706e8875c581fd6e55d0782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9920daf9d466369fbc4f87792fa72179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a9920daf9d466369fbc4f87792fa72179">cloneWithNewQueue</a> (const <a class="el" href="classcv_1_1ocl_1_1_queue.html">ocl::Queue</a> &amp;q) const</td></tr>
+<tr class="separator:a9920daf9d466369fbc4f87792fa72179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02177128cd0fdcb4e7605145944681f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a02177128cd0fdcb4e7605145944681f4">cloneWithNewQueue</a> () const</td></tr>
+<tr class="separator:a02177128cd0fdcb4e7605145944681f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c626e6579c65d10af592f4eeb31a112"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a0c626e6579c65d10af592f4eeb31a112">empty</a> () const</td></tr>
+<tr class="separator:a0c626e6579c65d10af592f4eeb31a112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8420514ef03983363809720a7fe1902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#aa8420514ef03983363809720a7fe1902">release</a> ()</td></tr>
+<tr class="separator:aa8420514ef03983363809720a7fe1902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ab1434a5c18187205185432164533ec90"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#ab1434a5c18187205185432164533ec90">getCurrent</a> ()</td></tr>
+<tr class="separator:ab1434a5c18187205185432164533ec90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d44d4d233f1e540cb41aade63cf2b0f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a0d44d4d233f1e540cb41aade63cf2b0f">getCurrentRef</a> ()</td></tr>
+<tr class="separator:a0d44d4d233f1e540cb41aade63cf2b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2c9987340f44950865b8ece48e2d34"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a0c2c9987340f44950865b8ece48e2d34">create</a> (const std::string &amp;platformName, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *platformID, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *context, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *deviceID)</td></tr>
+<tr class="memdesc:a0c2c9987340f44950865b8ece48e2d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates OpenCL execution context OpenCV will check if available OpenCL platform has platformName name, then assign context to OpenCV and call <code>clRetainContext</code> function. The deviceID device will be used as target device and new command queue will be created.  <a href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a0c2c9987340f44950865b8ece48e2d34">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c2c9987340f44950865b8ece48e2d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380c3c8148cdc293d440526737d289c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a380c3c8148cdc293d440526737d289c0">create</a> (const <a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;context, const <a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a> &amp;device, const <a class="el" href="classcv_1_1ocl_1_1_queue.html">ocl::Queue</a> &amp;queue)</td></tr>
+<tr class="memdesc:a380c3c8148cdc293d440526737d289c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates OpenCL execution context.  <a href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a380c3c8148cdc293d440526737d289c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a380c3c8148cdc293d440526737d289c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2890cfb4b198f7621590a2c0de4465fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a2890cfb4b198f7621590a2c0de4465fc">create</a> (const <a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;context, const <a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a> &amp;device)</td></tr>
+<tr class="separator:a2890cfb4b198f7621590a2c0de4465fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a87ec75eef7e01598b52383dc03e2b4b3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html#a87ec75eef7e01598b52383dc03e2b4b3">p</a></td></tr>
+<tr class="separator:a87ec75eef7e01598b52383dc03e2b4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac6af8e4cf012090c19898515e4dcbf0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6af8e4cf012090c19898515e4dcbf0b">&#9670;&nbsp;</a></span>OpenCLExecutionContext() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::OpenCLExecutionContext::OpenCLExecutionContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae75788f3fddb08d9054e8ed839f7a5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75788f3fddb08d9054e8ed839f7a5e6">&#9670;&nbsp;</a></span>~OpenCLExecutionContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::OpenCLExecutionContext::~OpenCLExecutionContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2bad663c3febd65e64e19e538019a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2bad663c3febd65e64e19e538019a06">&#9670;&nbsp;</a></span>OpenCLExecutionContext() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::OpenCLExecutionContext::OpenCLExecutionContext </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affc756921aa0d8ce916ea37eae0d988f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc756921aa0d8ce916ea37eae0d988f">&#9670;&nbsp;</a></span>OpenCLExecutionContext() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::OpenCLExecutionContext::OpenCLExecutionContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a48b5bca72706e8875c581fd6e55d0782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b5bca72706e8875c581fd6e55d0782">&#9670;&nbsp;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::OpenCLExecutionContext::bind </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind this OpenCL execution context to current thread.</p>
+<p><a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> can't be empty.</p>
+<dl class="section note"><dt>Заметки</dt><dd>clFinish is not called for queue of previous execution context </dd></dl>
+
+</div>
+</div>
+<a id="a02177128cd0fdcb4e7605145944681f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02177128cd0fdcb4e7605145944681f4">&#9670;&nbsp;</a></span>cloneWithNewQueue() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> cv::ocl::OpenCLExecutionContext::cloneWithNewQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a9920daf9d466369fbc4f87792fa72179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9920daf9d466369fbc4f87792fa72179">&#9670;&nbsp;</a></span>cloneWithNewQueue() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> cv::ocl::OpenCLExecutionContext::cloneWithNewQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_queue.html">ocl::Queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates new execution context with same OpenCV context and device</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>OpenCL queue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2890cfb4b198f7621590a2c0de4465fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2890cfb4b198f7621590a2c0de4465fc">&#9670;&nbsp;</a></span>create() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> cv::ocl::OpenCLExecutionContext::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a> &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a380c3c8148cdc293d440526737d289c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380c3c8148cdc293d440526737d289c0">&#9670;&nbsp;</a></span>create() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> cv::ocl::OpenCLExecutionContext::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a> &amp;&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_queue.html">ocl::Queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates OpenCL execution context. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>non-empty OpenCL context </td></tr>
+    <tr><td class="paramname">device</td><td>non-empty OpenCL device (must be a part of context) </td></tr>
+    <tr><td class="paramname">queue</td><td>non-empty OpenCL queue for provided context and device </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c2c9987340f44950865b8ece48e2d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2c9987340f44950865b8ece48e2d34">&#9670;&nbsp;</a></span>create() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> cv::ocl::OpenCLExecutionContext::create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>platformName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>platformID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>deviceID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates OpenCL execution context OpenCV will check if available OpenCL platform has platformName name, then assign context to OpenCV and call <code>clRetainContext</code> function. The deviceID device will be used as target device and new command queue will be created. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Lifetime of passed handles is transferred to OpenCV wrappers on success</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">platformName</td><td>name of OpenCL platform to attach, this string is used to check if platform is available to OpenCV at runtime </td></tr>
+    <tr><td class="paramname">platformID</td><td>ID of platform attached context was created for (cl_platform_id) </td></tr>
+    <tr><td class="paramname">context</td><td>OpenCL context to be attached to OpenCV (cl_context) </td></tr>
+    <tr><td class="paramname">deviceID</td><td>OpenCL device (cl_device_id) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c626e6579c65d10af592f4eeb31a112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c626e6579c65d10af592f4eeb31a112">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::OpenCLExecutionContext::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a410b0e9d2c1f33072ee2495590b7981d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410b0e9d2c1f33072ee2495590b7981d">&#9670;&nbsp;</a></span>getContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a>&amp; cv::ocl::OpenCLExecutionContext::getContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get associated <a class="el" href="classcv_1_1ocl_1_1_context.html">ocl::Context</a> </p>
+
+</div>
+</div>
+<a id="ab1434a5c18187205185432164533ec90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1434a5c18187205185432164533ec90">&#9670;&nbsp;</a></span>getCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&amp; cv::ocl::OpenCLExecutionContext::getCurrent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get OpenCL execution context of current thread.</p>
+<p>Initialize OpenCL execution context if it is empty</p><ul>
+<li>create new</li>
+<li>reuse context of the main thread (threadID = 0) </li>
+</ul>
+
+</div>
+</div>
+<a id="a0d44d4d233f1e540cb41aade63cf2b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d44d4d233f1e540cb41aade63cf2b0f">&#9670;&nbsp;</a></span>getCurrentRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&amp; cv::ocl::OpenCLExecutionContext::getCurrentRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get OpenCL execution context of current thread (can be empty) </p>
+
+</div>
+</div>
+<a id="ae13045284b5d228745d1856863e7e692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13045284b5d228745d1856863e7e692">&#9670;&nbsp;</a></span>getDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_device.html">Device</a>&amp; cv::ocl::OpenCLExecutionContext::getDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the single default associated <a class="el" href="classcv_1_1ocl_1_1_device.html">ocl::Device</a> </p>
+
+</div>
+</div>
+<a id="a21bd43106061c7bad8eb93f12a796717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bd43106061c7bad8eb93f12a796717">&#9670;&nbsp;</a></span>getQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>&amp; cv::ocl::OpenCLExecutionContext::getQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the single <a class="el" href="classcv_1_1ocl_1_1_queue.html">ocl::Queue</a> that is associated with the <a class="el" href="classcv_1_1ocl_1_1_context.html">ocl::Context</a> and the single default <a class="el" href="classcv_1_1ocl_1_1_device.html">ocl::Device</a> </p>
+
+</div>
+</div>
+<a id="a295bc24395def56f9093496136b9f952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295bc24395def56f9093496136b9f952">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&amp; cv::ocl::OpenCLExecutionContext::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93de46d864dae3f7c44684c5bcae8f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93de46d864dae3f7c44684c5bcae8f9a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a>&amp; cv::ocl::OpenCLExecutionContext::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8420514ef03983363809720a7fe1902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8420514ef03983363809720a7fe1902">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::OpenCLExecutionContext::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54fd377871f285d98fa4dff938b379d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54fd377871f285d98fa4dff938b379d0">&#9670;&nbsp;</a></span>setUseOpenCL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::OpenCLExecutionContext::setUseOpenCL </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f7a11a8edc5ade6b9d858dc8b5c0acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7a11a8edc5ade6b9d858dc8b5c0acb">&#9670;&nbsp;</a></span>useOpenCL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::OpenCLExecutionContext::useOpenCL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a87ec75eef7e01598b52383dc03e2b4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ec75eef7e01598b52383dc03e2b4b3">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;Impl&gt; cv::ocl::OpenCLExecutionContext::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1ocl.html">ocl</a></li><li class="navelem"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">OpenCLExecutionContext</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

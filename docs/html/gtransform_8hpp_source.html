@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/gtransform.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gtransform_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gtransform.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gtransform_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2019 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_GTRANSFORM_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_GTRANSFORM_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gcommon_8hpp.html">opencv2/gapi/gcommon.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gapi_2util_2util_8hpp.html">opencv2/gapi/util/util.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="garg_8hpp.html">opencv2/gapi/garg.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gtype__traits_8hpp.html">opencv2/gapi/gtype_traits.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="compiler__hints_8hpp.html">opencv2/gapi/util/compiler_hints.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gcomputation_8hpp.html">opencv2/gapi/gcomputation.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_transform.html">GTransform</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// FIXME: consider another simplified</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// class instead of GComputation</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">   28</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">F</a> = std::function&lt;<a class="code" href="classcv_1_1_g_computation.html">GComputation</a>()&gt;;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html#a729d054f574159f6df0566c3441e316a">   30</a></span>&#160;    std::string <a class="code" href="structcv_1_1_g_transform.html#a729d054f574159f6df0566c3441e316a">description</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html#ad21c88ff36d3cb622e84df46cc06355c">   31</a></span>&#160;    <a class="code" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">F</a> <a class="code" href="structcv_1_1_g_transform.html#ad21c88ff36d3cb622e84df46cc06355c">pattern</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html#a65db27befeb10beae9cd452d04bcc589">   32</a></span>&#160;    <a class="code" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">F</a> <a class="code" href="structcv_1_1_g_transform.html#a65db27befeb10beae9cd452d04bcc589">substitute</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structcv_1_1_g_transform.html#a24585b2f805734ef23658248f89eeb40">   34</a></span>&#160;    <a class="code" href="structcv_1_1_g_transform.html#a24585b2f805734ef23658248f89eeb40">GTransform</a>(<span class="keyword">const</span> std::string&amp; d, <span class="keyword">const</span> <a class="code" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">F</a> &amp;p, <span class="keyword">const</span> <a class="code" href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">F</a> &amp;s) : <a class="code" href="group__core__c.html#ga569cd9e3d41be27382e80e6d9f880ef3">description</a>(d), pattern(p), substitute(s){};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_trans_helper.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_trans_helper.html">TransHelper</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span>... Ins, <span class="keyword">typename</span> Out&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html">   44</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_trans_helper.html">TransHelper</a>&lt;K, <a class="code" href="namespacestd.html">std</a>::tuple&lt;Ins...&gt;, Out&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callable, <span class="keywordtype">int</span>... IIs, <span class="keywordtype">int</span>... OIs&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#ad6af4ecc182a5d4beac040ff4c373290">   47</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_computation.html">GComputation</a> <a class="code" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#ad6af4ecc182a5d4beac040ff4c373290">invoke</a>(Callable f, Seq&lt;IIs...&gt;, Seq&lt;OIs...&gt;)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">const</span> std::tuple&lt;Ins...&gt; ins;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a> = <a class="code" href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">tuple_wrap_helper&lt;Out&gt;::get</a>(f(std::get&lt;IIs&gt;(ins)...));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classcv_1_1_g_computation.html">GComputation</a>(<a class="code" href="namespacecv.html#a8e40d34081b18c79ba4c3cfb9fd0634f">cv::GIn</a>(std::get&lt;IIs&gt;(ins)...),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                            <a class="code" href="namespacecv.html#adaa9a308669926cecc4793c6e4449629">cv::GOut</a>(std::get&lt;OIs&gt;(<a class="code" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>)...));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3304f318b8cf10408fb0e17b5160b2e8">   55</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_computation.html">GComputation</a> <a class="code" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3304f318b8cf10408fb0e17b5160b2e8">get_pattern</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> invoke(K::pattern, <span class="keyword">typename</span> MkSeq&lt;<span class="keyword">sizeof</span>...(Ins)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>(),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                      <span class="keyword">typename</span> MkSeq&lt;std::tuple_size&lt;<span class="keyword">typename</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">tuple_wrap_helper&lt;Out&gt;::type</a>&gt;::<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3b7fd99b5a4b77f386985dbb8c15cdc3">   60</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_computation.html">GComputation</a> <a class="code" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3b7fd99b5a4b77f386985dbb8c15cdc3">get_substitute</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> invoke(K::substitute, <span class="keyword">typename</span> MkSeq&lt;<span class="keyword">sizeof</span>...(Ins)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>(),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                      <span class="keyword">typename</span> MkSeq&lt;std::tuple_size&lt;<span class="keyword">typename</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">tuple_wrap_helper&lt;Out&gt;::type</a>&gt;::<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>());</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classcv_1_1_g_transform_impl.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_g_transform_impl.html">GTransformImpl</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_g_transform_impl.html">GTransformImpl</a>&lt;K, <a class="code" href="namespacestd.html">std</a>::function&lt;R(Args...)&gt;&gt; : <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_trans_helper.html">cv::detail::TransHelper</a>&lt;K, std::tuple&lt;Args...&gt;, R&gt;,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                     <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_transform_tag.html">cv::detail::TransformTag</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// FIXME: currently there is no check that transformations&#39; signatures are unique</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// and won&#39;t be any intersection in graph compilation stage</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#a9c44d6f37621f1442c9ead63a30fb67f">   78</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#a9c44d6f37621f1442c9ead63a30fb67f">API</a> = K;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#ad8a474251aeaec92fa67bf0fe0353e41">   80</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="structcv_1_1_g_transform.html">GTransform</a> <a class="code" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#ad8a474251aeaec92fa67bf0fe0353e41">transformation</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structcv_1_1_g_transform.html">GTransform</a>(K::descr(), &amp;K::get_pattern, &amp;K::get_substitute);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="gtransform_8hpp.html#a8941f40c0520cce89daf301a638523ca">   87</a></span>&#160;<span class="preprocessor">#define G_DESCR_HELPER_CLASS(Class) Class##DescrHelper</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="gtransform_8hpp.html#a94d5c8fab0b9f3f44683c9bc549c56a6">   89</a></span>&#160;<span class="preprocessor">#define G_DESCR_HELPER_BODY(Class, Descr)                       \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">    namespace detail                                            \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">    {                                                           \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">    struct G_DESCR_HELPER_CLASS(Class)                          \</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">    {                                                           \</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">        static constexpr const char *descr() { return Descr; }; \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">    };                                                          \</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">    }</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="gtransform_8hpp.html#a66240341d57d2545f517dc7aa6408eab">   98</a></span>&#160;<span class="preprocessor">#define GAPI_TRANSFORM(Class, API, Descr)                                     \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">    G_DESCR_HELPER_BODY(Class, Descr)                                         \</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">    struct Class final : public cv::GTransformImpl&lt;Class, std::function API&gt;, \</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">                         public detail::G_DESCR_HELPER_CLASS(Class)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_GTRANSFORM_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_g_computation_html"><div class="ttname"><a href="classcv_1_1_g_computation.html">cv::GComputation</a></div><div class="ttdoc">GComputation class represents a captured computation graph. GComputation objects form boundaries for ...</div><div class="ttdef"><b>Definition:</b> gcomputation.hpp:120</div></div>
+<div class="ttc" id="aclasscv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4_html_a9c44d6f37621f1442c9ead63a30fb67f"><div class="ttname"><a href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#a9c44d6f37621f1442c9ead63a30fb67f">cv::GTransformImpl&lt; K, std::function&lt; R(Args...)&gt; &gt;::API</a></div><div class="ttdeci">K API</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:78</div></div>
+<div class="ttc" id="aclasscv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4_html_ad8a474251aeaec92fa67bf0fe0353e41"><div class="ttname"><a href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html#ad8a474251aeaec92fa67bf0fe0353e41">cv::GTransformImpl&lt; K, std::function&lt; R(Args...)&gt; &gt;::transformation</a></div><div class="ttdeci">static GTransform transformation()</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:80</div></div>
+<div class="ttc" id="aclasscv_1_1_g_transform_impl_html"><div class="ttname"><a href="classcv_1_1_g_transform_impl.html">cv::GTransformImpl</a></div><div class="ttdef"><b>Definition:</b> gtransform.hpp:69</div></div>
+<div class="ttc" id="acompiler__hints_8hpp_html"><div class="ttname"><a href="compiler__hints_8hpp.html">compiler_hints.hpp</a></div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="agapi_2util_2util_8hpp_html"><div class="ttname"><a href="gapi_2util_2util_8hpp.html">util.hpp</a></div></div>
+<div class="ttc" id="agarg_8hpp_html"><div class="ttname"><a href="garg_8hpp.html">garg.hpp</a></div></div>
+<div class="ttc" id="agcommon_8hpp_html"><div class="ttname"><a href="gcommon_8hpp.html">gcommon.hpp</a></div></div>
+<div class="ttc" id="agcomputation_8hpp_html"><div class="ttname"><a href="gcomputation_8hpp.html">gcomputation.hpp</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga9fa0a7485e7bb36239bbd36b93c5f28a"><div class="ttname"><a href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">cv::R</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray R</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_ga569cd9e3d41be27382e80e6d9f880ef3"><div class="ttname"><a href="group__core__c.html#ga569cd9e3d41be27382e80e6d9f880ef3">description</a></div><div class="ttdeci">const char ** description</div><div class="ttdef"><b>Definition:</b> core_c.h:2626</div></div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__core__c_html_ga9550b1803662fe5c2e7f2f7f1f382af5"><div class="ttname"><a href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a></div><div class="ttdeci">int CvScalar value</div><div class="ttdef"><b>Definition:</b> core_c.h:717</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_ga54709f3b06b33b66763f1613cc7fb571"><div class="ttname"><a href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a></div><div class="ttdeci">CvRect r</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:976</div></div>
+<div class="ttc" id="agtype__traits_8hpp_html"><div class="ttname"><a href="gtype__traits_8hpp.html">gtype_traits.hpp</a></div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a71f02f915a836dd4fa73b9dbc76d297b"><div class="ttname"><a href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">cv::util::get</a></div><div class="ttdeci">T &amp; get(util::variant&lt; Types... &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> variant.hpp:388</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_a8e40d34081b18c79ba4c3cfb9fd0634f"><div class="ttname"><a href="namespacecv.html#a8e40d34081b18c79ba4c3cfb9fd0634f">cv::GIn</a></div><div class="ttdeci">GProtoInputArgs GIn(Ts &amp;&amp;... ts)</div><div class="ttdef"><b>Definition:</b> gproto.hpp:96</div></div>
+<div class="ttc" id="anamespacecv_html_adaa9a308669926cecc4793c6e4449629"><div class="ttname"><a href="namespacecv.html#adaa9a308669926cecc4793c6e4449629">cv::GOut</a></div><div class="ttdeci">GProtoOutputArgs GOut(Ts &amp;&amp;... ts)</div><div class="ttdef"><b>Definition:</b> gproto.hpp:101</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:266</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html"><div class="ttname"><a href="structcv_1_1_g_transform.html">cv::GTransform</a></div><div class="ttdef"><b>Definition:</b> gtransform.hpp:25</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html_a13e5a25158bdea74c7ed03b53df23237"><div class="ttname"><a href="structcv_1_1_g_transform.html#a13e5a25158bdea74c7ed03b53df23237">cv::GTransform::F</a></div><div class="ttdeci">std::function&lt; GComputation()&gt; F</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:28</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html_a24585b2f805734ef23658248f89eeb40"><div class="ttname"><a href="structcv_1_1_g_transform.html#a24585b2f805734ef23658248f89eeb40">cv::GTransform::GTransform</a></div><div class="ttdeci">GTransform(const std::string &amp;d, const F &amp;p, const F &amp;s)</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:34</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html_a65db27befeb10beae9cd452d04bcc589"><div class="ttname"><a href="structcv_1_1_g_transform.html#a65db27befeb10beae9cd452d04bcc589">cv::GTransform::substitute</a></div><div class="ttdeci">F substitute</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:32</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html_a729d054f574159f6df0566c3441e316a"><div class="ttname"><a href="structcv_1_1_g_transform.html#a729d054f574159f6df0566c3441e316a">cv::GTransform::description</a></div><div class="ttdeci">std::string description</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:30</div></div>
+<div class="ttc" id="astructcv_1_1_g_transform_html_ad21c88ff36d3cb622e84df46cc06355c"><div class="ttname"><a href="structcv_1_1_g_transform.html#ad21c88ff36d3cb622e84df46cc06355c">cv::GTransform::pattern</a></div><div class="ttdeci">F pattern</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:31</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4_html_a3304f318b8cf10408fb0e17b5160b2e8"><div class="ttname"><a href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3304f318b8cf10408fb0e17b5160b2e8">cv::detail::TransHelper&lt; K, std::tuple&lt; Ins... &gt;, Out &gt;::get_pattern</a></div><div class="ttdeci">static GComputation get_pattern()</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:55</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4_html_a3b7fd99b5a4b77f386985dbb8c15cdc3"><div class="ttname"><a href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#a3b7fd99b5a4b77f386985dbb8c15cdc3">cv::detail::TransHelper&lt; K, std::tuple&lt; Ins... &gt;, Out &gt;::get_substitute</a></div><div class="ttdeci">static GComputation get_substitute()</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:60</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4_html_ad6af4ecc182a5d4beac040ff4c373290"><div class="ttname"><a href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html#ad6af4ecc182a5d4beac040ff4c373290">cv::detail::TransHelper&lt; K, std::tuple&lt; Ins... &gt;, Out &gt;::invoke</a></div><div class="ttdeci">static GComputation invoke(Callable f, Seq&lt; IIs... &gt;, Seq&lt; OIs... &gt;)</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:47</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_trans_helper_html"><div class="ttname"><a href="structcv_1_1detail_1_1_trans_helper.html">cv::detail::TransHelper</a></div><div class="ttdef"><b>Definition:</b> gtransform.hpp:41</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_transform_tag_html"><div class="ttname"><a href="structcv_1_1detail_1_1_transform_tag.html">cv::detail::TransformTag</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="gtransform_8hpp.html">gtransform.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/imgproc/hal/interface.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('imgproc_2hal_2interface_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">interface.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="imgproc_2hal_2interface_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OPENCV_IMGPROC_HAL_INTERFACE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OPENCV_IMGPROC_HAL_INTERFACE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gac6862c3a30586769772f9bcf6c101e51">   10</a></span>&#160;<span class="preprocessor">#define CV_HAL_INTER_NEAREST 0</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga599fa5267c51a2ee34c85c5a00fd3f38">   11</a></span>&#160;<span class="preprocessor">#define CV_HAL_INTER_LINEAR 1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga14ed09fb7a39dd19245c920adc5aa47e">   12</a></span>&#160;<span class="preprocessor">#define CV_HAL_INTER_CUBIC 2</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga77f7cdfec1040def4426412675e2da9b">   13</a></span>&#160;<span class="preprocessor">#define CV_HAL_INTER_AREA 3</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga399c36867fcaf48e5473a96b12ffa707">   14</a></span>&#160;<span class="preprocessor">#define CV_HAL_INTER_LANCZOS4 4</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gacd3f32dbd0217a16fd3b53b95639f9c7">   20</a></span>&#160;<span class="preprocessor">#define CV_HAL_MORPH_ERODE 0</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga0d3708d45fedd7e3afd7ac781378c2e8">   21</a></span>&#160;<span class="preprocessor">#define CV_HAL_MORPH_DILATE 1</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga7e35f5977ef41b9b47b46da9ae7dd24c">   27</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_BINARY      0</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga200ccb40963ea81a1498356eee242bf1">   28</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_BINARY_INV  1</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gae7aae846407b885a630cfb7880d7aa4f">   29</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_TRUNC       2</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga9f080d3d91f0bd546b6b439d48cda156">   30</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_TOZERO      3</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gaf760a73438e51d098a00af56f6d4d488">   31</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_TOZERO_INV  4</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gaa86c222e08bcdb56855c9823b7288679">   32</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_MASK        7</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga9176dcc2a4dbfac509576892a8f30c62">   33</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_OTSU        8</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gae0b3440780681724816d63c5f7d9a3cb">   34</a></span>&#160;<span class="preprocessor">#define CV_HAL_THRESH_TRIANGLE    16</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#gaf442d7a7493d440c1dffb8348a8aa7e5">   40</a></span>&#160;<span class="preprocessor">#define CV_HAL_ADAPTIVE_THRESH_MEAN_C     0</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group__imgproc__hal__interface.html#ga41f0056129266c49a0fb2187ceff7675">   41</a></span>&#160;<span class="preprocessor">#define CV_HAL_ADAPTIVE_THRESH_GAUSSIAN_C 1</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_aac30ea00d82a4c350254e617d62fea6.html">imgproc</a></li><li class="navelem"><a class="el" href="dir_c9277466fadff543630ecae4e8956530.html">hal</a></li><li class="navelem"><a class="el" href="imgproc_2hal_2interface_8h.html">interface.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

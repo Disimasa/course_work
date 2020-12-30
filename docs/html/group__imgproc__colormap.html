@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Imgproc_colormap</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgproc__colormap.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Imgproc_colormap<div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga9a805d8262bcbe273f16be9ea2055a65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__colormap.html#ga9a805d8262bcbe273f16be9ea2055a65">cv::ColormapTypes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a5d4a709cda1130bfa3cc4b4c5ae8f82a">cv::COLORMAP_AUTUMN</a> = 0
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a91d58e66f015ea030150bdc8545d3b41">cv::COLORMAP_BONE</a> = 1
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65ab3f207661ddf74511b002b1acda5ec09">cv::COLORMAP_JET</a> = 2
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a66b53e69b9d61792e57008962dbef670">cv::COLORMAP_WINTER</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65af7f0add024009b0e43f8c83f3ca0b923">cv::COLORMAP_RAINBOW</a> = 4
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a8c4210cb135b2555ba95e2db97f65ace">cv::COLORMAP_OCEAN</a> = 5
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a5e032add919a3c2c447182f0815d2a6f">cv::COLORMAP_SUMMER</a> = 6
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65afde88b0caed8acc01447906d700b99fb">cv::COLORMAP_SPRING</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a16c23a6bf984dc0f7a9704bd16fd6917">cv::COLORMAP_COOL</a> = 8
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a141ad9bfece7aa670ff3bddd38fac98e">cv::COLORMAP_HSV</a> = 9
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a84213aa42eaa8fcadacde9fc33a4d88b">cv::COLORMAP_PINK</a> = 10
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65aef83628a5b46e23bf823000ff0270304">cv::COLORMAP_HOT</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a48cbda63f52a232eea096a54f2a7572d">cv::COLORMAP_PARULA</a> = 12
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65ad4b00db72c380f9227c3f48b32121eb7">cv::COLORMAP_MAGMA</a> = 13
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65ab5e0464f3ac7083a8f030a45f24005fa">cv::COLORMAP_INFERNO</a> = 14
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a732a833f9939122143cfb7772cabd10d">cv::COLORMAP_PLASMA</a> = 15
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65afdb81862da35ea4912a75f0e8f274aeb">cv::COLORMAP_VIRIDIS</a> = 16
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a9742bb11678692f9ba22c7c0c0fa1abd">cv::COLORMAP_CIVIDIS</a> = 17
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a2785d360bb7875d9a7127b3a7304f688">cv::COLORMAP_TWILIGHT</a> = 18
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65ae0deafa5ab38bd25d34b620c1778e52c">cv::COLORMAP_TWILIGHT_SHIFTED</a> = 19
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a61e4747e35b5775ea2ca27ac1484ad94">cv::COLORMAP_TURBO</a> = 20
+, <a class="el" href="group__imgproc__colormap.html#gga9a805d8262bcbe273f16be9ea2055a65a8426eb1eeddc369deb7ca49a57ba87dd">cv::COLORMAP_DEEPGREEN</a> = 21
+<br />
+ }</td></tr>
+<tr class="memdesc:ga9a805d8262bcbe273f16be9ea2055a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">GNU Octave/MATLAB equivalent colormaps.  <a href="group__imgproc__colormap.html#ga9a805d8262bcbe273f16be9ea2055a65">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9a805d8262bcbe273f16be9ea2055a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga50674f13ec8b7d97cebc72ff27433d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__colormap.html#ga50674f13ec8b7d97cebc72ff27433d8a">cv::applyColorMap</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> colormap)</td></tr>
+<tr class="memdesc:ga50674f13ec8b7d97cebc72ff27433d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a GNU Octave/MATLAB equivalent colormap on a given image.  <a href="group__imgproc__colormap.html#ga50674f13ec8b7d97cebc72ff27433d8a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga50674f13ec8b7d97cebc72ff27433d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga889f655f7c8e997476e69537a2d3d14c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__colormap.html#ga889f655f7c8e997476e69537a2d3d14c">cv::applyColorMap</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> userColor)</td></tr>
+<tr class="memdesc:ga889f655f7c8e997476e69537a2d3d14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a user colormap on a given image.  <a href="group__imgproc__colormap.html#ga889f655f7c8e997476e69537a2d3d14c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga889f655f7c8e997476e69537a2d3d14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga9a805d8262bcbe273f16be9ea2055a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a805d8262bcbe273f16be9ea2055a65">&#9670;&nbsp;</a></span>ColormapTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__colormap.html#ga9a805d8262bcbe273f16be9ea2055a65">cv::ColormapTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GNU Octave/MATLAB equivalent colormaps. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a5d4a709cda1130bfa3cc4b4c5ae8f82a"></a>COLORMAP_AUTUMN&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_autumn.jpg" alt="autumn" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a91d58e66f015ea030150bdc8545d3b41"></a>COLORMAP_BONE&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_bone.jpg" alt="bone" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65ab3f207661ddf74511b002b1acda5ec09"></a>COLORMAP_JET&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_jet.jpg" alt="jet" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a66b53e69b9d61792e57008962dbef670"></a>COLORMAP_WINTER&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_winter.jpg" alt="winter" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65af7f0add024009b0e43f8c83f3ca0b923"></a>COLORMAP_RAINBOW&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_rainbow.jpg" alt="rainbow" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a8c4210cb135b2555ba95e2db97f65ace"></a>COLORMAP_OCEAN&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_ocean.jpg" alt="ocean" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a5e032add919a3c2c447182f0815d2a6f"></a>COLORMAP_SUMMER&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_summer.jpg" alt="summer" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65afde88b0caed8acc01447906d700b99fb"></a>COLORMAP_SPRING&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_spring.jpg" alt="spring" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a16c23a6bf984dc0f7a9704bd16fd6917"></a>COLORMAP_COOL&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_cool.jpg" alt="cool" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a141ad9bfece7aa670ff3bddd38fac98e"></a>COLORMAP_HSV&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_hsv.jpg" alt="HSV" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a84213aa42eaa8fcadacde9fc33a4d88b"></a>COLORMAP_PINK&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_pink.jpg" alt="pink" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65aef83628a5b46e23bf823000ff0270304"></a>COLORMAP_HOT&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_hot.jpg" alt="hot" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a48cbda63f52a232eea096a54f2a7572d"></a>COLORMAP_PARULA&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_parula.jpg" alt="parula" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65ad4b00db72c380f9227c3f48b32121eb7"></a>COLORMAP_MAGMA&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_magma.jpg" alt="magma" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65ab5e0464f3ac7083a8f030a45f24005fa"></a>COLORMAP_INFERNO&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_inferno.jpg" alt="inferno" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a732a833f9939122143cfb7772cabd10d"></a>COLORMAP_PLASMA&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_plasma.jpg" alt="plasma" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65afdb81862da35ea4912a75f0e8f274aeb"></a>COLORMAP_VIRIDIS&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_viridis.jpg" alt="viridis" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a9742bb11678692f9ba22c7c0c0fa1abd"></a>COLORMAP_CIVIDIS&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_cividis.jpg" alt="cividis" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a2785d360bb7875d9a7127b3a7304f688"></a>COLORMAP_TWILIGHT&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_twilight.jpg" alt="twilight" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65ae0deafa5ab38bd25d34b620c1778e52c"></a>COLORMAP_TWILIGHT_SHIFTED&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_twilight_shifted.jpg" alt="twilight shifted" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a61e4747e35b5775ea2ca27ac1484ad94"></a>COLORMAP_TURBO&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_turbo.jpg" alt="turbo" class="inline"/> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9a805d8262bcbe273f16be9ea2055a65a8426eb1eeddc369deb7ca49a57ba87dd"></a>COLORMAP_DEEPGREEN&#160;</td><td class="fielddoc"><p><img src="pics/colormaps/colorscale_deepgreen.jpg" alt="deepgreen" class="inline"/> </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga889f655f7c8e997476e69537a2d3d14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga889f655f7c8e997476e69537a2d3d14c">&#9670;&nbsp;</a></span>applyColorMap() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::applyColorMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>userColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a user colormap on a given image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source image, grayscale or colored of type CV_8UC1 or CV_8UC3. </td></tr>
+    <tr><td class="paramname">dst</td><td>The result is the colormapped source image. Note: <a class="el" href="classcv_1_1_mat.html#a55ced2c8d844d683ea9a725c60037ad0" title="Allocates new array data if needed.">Mat::create</a> is called on dst. </td></tr>
+    <tr><td class="paramname">userColor</td><td>The colormap to apply of type CV_8UC1 or CV_8UC3 and size 256 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga50674f13ec8b7d97cebc72ff27433d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50674f13ec8b7d97cebc72ff27433d8a">&#9670;&nbsp;</a></span>applyColorMap() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::applyColorMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>colormap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a GNU Octave/MATLAB equivalent colormap on a given image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source image, grayscale or colored of type CV_8UC1 or CV_8UC3. </td></tr>
+    <tr><td class="paramname">dst</td><td>The result is the colormapped source image. Note: <a class="el" href="classcv_1_1_mat.html#a55ced2c8d844d683ea9a725c60037ad0" title="Allocates new array data if needed.">Mat::create</a> is called on dst. </td></tr>
+    <tr><td class="paramname">colormap</td><td>The colormap to apply, see <a class="el" href="group__imgproc__colormap.html#ga9a805d8262bcbe273f16be9ea2055a65" title="GNU Octave/MATLAB equivalent colormaps.">ColormapTypes</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

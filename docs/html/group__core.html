@@ -1,0 +1,1215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Core functionality</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__core.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Core functionality</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:group__core__basic"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__basic.html">Basic structures</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__c.html">C structures and operations</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__array"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__array.html">Operations on arrays</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__async"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__async.html">Asynchronous API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__xml"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__xml.html">XML/YAML Persistence</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__cluster"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__cluster.html">Clustering</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__utils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__utils.html">Utility and system functions and macros</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__opengl"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opengl.html">OpenGL interoperability</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__ipp"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__ipp.html">Intel IPP Asynchronous C/C++ Converters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__optim"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__optim.html">Optimization Algorithms</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__directx"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__directx.html">DirectX interoperability</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__eigen"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__eigen.html">Eigen support</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__opencl"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html">OpenCL support</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__va__intel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__va__intel.html">Intel VA-API/OpenCL (CL-VA) interoperability</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__core__hal"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal.html">Hardware Acceleration Layer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_buffer_pool_controller.html">cv::BufferPoolController</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_quat.html">cv::Quat&lt; _Tp &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga649715908b1dc7fc2496df48dd5fff64"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">cv::Quatd</a> = <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; double &gt;</td></tr>
+<tr class="separator:ga649715908b1dc7fc2496df48dd5fff64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0a5d5b9880b016c8995411a572353e2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gab0a5d5b9880b016c8995411a572353e2">cv::Quatf</a> = <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; float &gt;</td></tr>
+<tr class="separator:gab0a5d5b9880b016c8995411a572353e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga935c8234953e2a2c8557c019ad8d509e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">cv::QuatAssumeType</a> { <a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">cv::QUAT_ASSUME_NOT_UNIT</a>
+, <a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697">cv::QUAT_ASSUME_UNIT</a>
+ }</td></tr>
+<tr class="memdesc:ga935c8234953e2a2c8557c019ad8d509e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit quaternion flag.  <a href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga935c8234953e2a2c8557c019ad8d509e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga719ebd4a73f30f4fab258ab7616d0f0f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga719ebd4a73f30f4fab258ab7616d0f0f">cv::CovarFlags</a> { <br />
+&#160;&#160;<a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fa6fb4e6e0255e4fe67972a00d1c7936d6">cv::COVAR_SCRAMBLED</a> = 0
+, <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fa5ff1530be25ae14f9a652788a4c26a92">cv::COVAR_NORMAL</a> = 1
+, <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fa460c69e5ccfb86ea54c61222ab62dea6">cv::COVAR_USE_AVG</a> = 2
+, <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fac9b7943fc9402898978cbfa22717441c">cv::COVAR_SCALE</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fadbac775ac8245aad5bfef994731c635f">cv::COVAR_ROWS</a> = 8
+, <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fac8cc5a80914e18d6100184a2829aa3c0">cv::COVAR_COLS</a> = 16
+<br />
+ }</td></tr>
+<tr class="memdesc:ga719ebd4a73f30f4fab258ab7616d0f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Covariation flags.  <a href="group__core.html#ga719ebd4a73f30f4fab258ab7616d0f0f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga719ebd4a73f30f4fab258ab7616d0f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga2c4455e18bf344ab22a377027494507e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga2c4455e18bf344ab22a377027494507e"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga2c4455e18bf344ab22a377027494507e">cv::operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; _Tp &gt; &amp;)</td></tr>
+<tr class="separator:ga2c4455e18bf344ab22a377027494507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafaf5d86a8c4a462790c81f2959fe5941"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gafaf5d86a8c4a462790c81f2959fe5941"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gafaf5d86a8c4a462790c81f2959fe5941">cv::inv</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q, <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit=<a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a>)</td></tr>
+<tr class="separator:gafaf5d86a8c4a462790c81f2959fe5941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8201286a9e4db514b71f97c9f265f524"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8201286a9e4db514b71f97c9f265f524"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga8201286a9e4db514b71f97c9f265f524">cv::sinh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga8201286a9e4db514b71f97c9f265f524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacebb73e7dfa756a34ac415c850a40e17"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gacebb73e7dfa756a34ac415c850a40e17"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gacebb73e7dfa756a34ac415c850a40e17">cv::cosh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:gacebb73e7dfa756a34ac415c850a40e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c3ad52668041ecd803d1c0fc0b643c8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1c3ad52668041ecd803d1c0fc0b643c8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga1c3ad52668041ecd803d1c0fc0b643c8">cv::tanh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga1c3ad52668041ecd803d1c0fc0b643c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53a8656033a51db64caa72ee9d4e93b4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga53a8656033a51db64caa72ee9d4e93b4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga53a8656033a51db64caa72ee9d4e93b4">cv::sin</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga53a8656033a51db64caa72ee9d4e93b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0f2fe47183d063fb7415097fbadb570"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaf0f2fe47183d063fb7415097fbadb570"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaf0f2fe47183d063fb7415097fbadb570">cv::cos</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:gaf0f2fe47183d063fb7415097fbadb570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46494f350417a0795f89645f45f1f4f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga46494f350417a0795f89645f45f1f4f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga46494f350417a0795f89645f45f1f4f3">cv::tan</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga46494f350417a0795f89645f45f1f4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0cfa077470cefb85b297223f6d8dd5dd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga0cfa077470cefb85b297223f6d8dd5dd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga0cfa077470cefb85b297223f6d8dd5dd">cv::asinh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga0cfa077470cefb85b297223f6d8dd5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga225baf94a87d765bbe4930c8b0ea2dd5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga225baf94a87d765bbe4930c8b0ea2dd5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga225baf94a87d765bbe4930c8b0ea2dd5">cv::acosh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga225baf94a87d765bbe4930c8b0ea2dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad537654ff648d1d48ea3e0a0808263d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gad537654ff648d1d48ea3e0a0808263d1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gad537654ff648d1d48ea3e0a0808263d1">cv::atanh</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:gad537654ff648d1d48ea3e0a0808263d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fc601123d390aadc313aaaa0261c7d9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga6fc601123d390aadc313aaaa0261c7d9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga6fc601123d390aadc313aaaa0261c7d9">cv::asin</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga6fc601123d390aadc313aaaa0261c7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga318bbf6d2b3f59044437bfa5205bac96"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga318bbf6d2b3f59044437bfa5205bac96"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga318bbf6d2b3f59044437bfa5205bac96">cv::acos</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga318bbf6d2b3f59044437bfa5205bac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga698c37839d751aaee3331d62fd13528b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga698c37839d751aaee3331d62fd13528b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga698c37839d751aaee3331d62fd13528b">cv::atan</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga698c37839d751aaee3331d62fd13528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18f51c22dcd55f668c25cc3b919366ed"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga18f51c22dcd55f668c25cc3b919366ed"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">cv::power</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q, const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;p, <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit=<a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a>)</td></tr>
+<tr class="separator:ga18f51c22dcd55f668c25cc3b919366ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96ff82d32417d677722a7e786425c98e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga96ff82d32417d677722a7e786425c98e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga96ff82d32417d677722a7e786425c98e">cv::exp</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga96ff82d32417d677722a7e786425c98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4eba02a849f926ee1764acde47108753"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga4eba02a849f926ee1764acde47108753"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga4eba02a849f926ee1764acde47108753">cv::log</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q, <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit=<a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a>)</td></tr>
+<tr class="separator:ga4eba02a849f926ee1764acde47108753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3ff963036a5acc11e9816e62452a5dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gae3ff963036a5acc11e9816e62452a5dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gae3ff963036a5acc11e9816e62452a5dc">cv::power</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q, const <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> <a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit=<a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a>)</td></tr>
+<tr class="separator:gae3ff963036a5acc11e9816e62452a5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64ec21e57dd2eccc25c25b5911a7ff3b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga64ec21e57dd2eccc25c25b5911a7ff3b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga64ec21e57dd2eccc25c25b5911a7ff3b">cv::crossProduct</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;p, const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;q)</td></tr>
+<tr class="separator:ga64ec21e57dd2eccc25c25b5911a7ff3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9070b6a3f093dd952d973819b06f4906"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:ga9070b6a3f093dd952d973819b06f4906"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga9070b6a3f093dd952d973819b06f4906">cv::sqrt</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; S &gt; &amp;q, <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit=<a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a>)</td></tr>
+<tr class="separator:ga9070b6a3f093dd952d973819b06f4906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62d7e23fa9ea214d2ad6f92364cdb5a3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga62d7e23fa9ea214d2ad6f92364cdb5a3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga62d7e23fa9ea214d2ad6f92364cdb5a3">cv::operator*</a> (const <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;)</td></tr>
+<tr class="separator:ga62d7e23fa9ea214d2ad6f92364cdb5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3a71bd72f94ad46b5694ffaff3d729a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gad3a71bd72f94ad46b5694ffaff3d729a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gad3a71bd72f94ad46b5694ffaff3d729a">cv::operator*</a> (const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;, const <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>)</td></tr>
+<tr class="separator:gad3a71bd72f94ad46b5694ffaff3d729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7fe4c56d24204b2abf7715baa7c8a031"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:ga7fe4c56d24204b2abf7715baa7c8a031"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga7fe4c56d24204b2abf7715baa7c8a031">cv::operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; S &gt; &amp;)</td></tr>
+<tr class="separator:ga7fe4c56d24204b2abf7715baa7c8a031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee66fd35ceb08e5e93177b123481a25e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaee66fd35ceb08e5e93177b123481a25e">cv::swap</a> (<a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;a, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;b)</td></tr>
+<tr class="memdesc:gaee66fd35ceb08e5e93177b123481a25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps two matrices.  <a href="group__core.html#gaee66fd35ceb08e5e93177b123481a25e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaee66fd35ceb08e5e93177b123481a25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8da78ea70c62d1697b708cc3dcbdc782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga8da78ea70c62d1697b708cc3dcbdc782">cv::swap</a> (<a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;a, <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;b)</td></tr>
+<tr class="separator:ga8da78ea70c62d1697b708cc3dcbdc782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Типы</h2>
+<a id="ga649715908b1dc7fc2496df48dd5fff64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga649715908b1dc7fc2496df48dd5fff64">&#9670;&nbsp;</a></span>Quatd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">cv::Quatd</a> = typedef <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab0a5d5b9880b016c8995411a572353e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0a5d5b9880b016c8995411a572353e2">&#9670;&nbsp;</a></span>Quatf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gab0a5d5b9880b016c8995411a572353e2">cv::Quatf</a> = typedef <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;float&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga719ebd4a73f30f4fab258ab7616d0f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga719ebd4a73f30f4fab258ab7616d0f0f">&#9670;&nbsp;</a></span>CovarFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core.html#ga719ebd4a73f30f4fab258ab7616d0f0f">cv::CovarFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Covariation flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fa6fb4e6e0255e4fe67972a00d1c7936d6"></a>COVAR_SCRAMBLED&#160;</td><td class="fielddoc"><p>The output covariance matrix is calculated as: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{scale} \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...]^T \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...],\]" src="form_504.png"/>
+</p>
+<p> The covariance matrix will be nsamples x nsamples. Such an unusual covariance matrix is used for fast <a class="el" href="classcv_1_1_p_c_a.html" title="Principal Component Analysis.">PCA</a> of a set of very large vectors (see, for example, the EigenFaces technique for face recognition). Eigenvalues of this "scrambled" matrix match the eigenvalues of the true covariance matrix. The "true" eigenvectors can be easily calculated from the eigenvectors of the "scrambled" covariance matrix. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fa5ff1530be25ae14f9a652788a4c26a92"></a>COVAR_NORMAL&#160;</td><td class="fielddoc"><p>The output covariance matrix is calculated as: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{scale} \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...] \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...]^T,\]" src="form_505.png"/>
+</p>
+<p> covar will be a square matrix of the same size as the total number of elements in each input vector. One and only one of <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fa6fb4e6e0255e4fe67972a00d1c7936d6">COVAR_SCRAMBLED</a> and <a class="el" href="group__core.html#gga719ebd4a73f30f4fab258ab7616d0f0fa5ff1530be25ae14f9a652788a4c26a92">COVAR_NORMAL</a> must be specified. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fa460c69e5ccfb86ea54c61222ab62dea6"></a>COVAR_USE_AVG&#160;</td><td class="fielddoc"><p>If the flag is specified, the function does not calculate mean from the input vectors but, instead, uses the passed mean vector. This is useful if mean has been pre-calculated or known in advance, or if the covariance matrix is calculated by parts. In this case, mean is not a mean vector of the input sub-set of vectors but rather the mean vector of the whole set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fac9b7943fc9402898978cbfa22717441c"></a>COVAR_SCALE&#160;</td><td class="fielddoc"><p>If the flag is specified, the covariance matrix is scaled. In the "normal" mode, scale is 1./nsamples . In the "scrambled" mode, scale is the reciprocal of the total number of elements in each input vector. By default (if the flag is not specified), the covariance matrix is not scaled ( scale=1 ). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fadbac775ac8245aad5bfef994731c635f"></a>COVAR_ROWS&#160;</td><td class="fielddoc"><p>If the flag is specified, all the input vectors are stored as rows of the samples matrix. mean should be a single-row vector in this case. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga719ebd4a73f30f4fab258ab7616d0f0fac8cc5a80914e18d6100184a2829aa3c0"></a>COVAR_COLS&#160;</td><td class="fielddoc"><p>If the flag is specified, all the input vectors are stored as columns of the samples matrix. mean should be a single-column vector in this case. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga935c8234953e2a2c8557c019ad8d509e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga935c8234953e2a2c8557c019ad8d509e">&#9670;&nbsp;</a></span>QuatAssumeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">cv::QuatAssumeType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unit quaternion flag. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f"></a>QUAT_ASSUME_NOT_UNIT&#160;</td><td class="fielddoc"><p>This flag is specified by default. If this flag is specified, the input quaternions are assumed to be not unit quaternions. It can guarantee the correctness of the calculations, although the calculation speed will be slower than the flag QUAT_ASSUME_UNIT. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697"></a>QUAT_ASSUME_UNIT&#160;</td><td class="fielddoc"><p>If this flag is specified, the input quaternions are assumed to be unit quaternions which will save some computations. However, if this flag is specified without unit quaternion, the program correctness of the result will not be guaranteed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga318bbf6d2b3f59044437bfa5205bac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga318bbf6d2b3f59044437bfa5205bac96">&#9670;&nbsp;</a></span>acos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::acos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\arccos(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arccosh(q)\]" src="form_322.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga318bbf6d2b3f59044437bfa5205bac96">acos</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga318bbf6d2b3f59044437bfa5205bac96"><div class="ttname"><a href="group__core.html#ga318bbf6d2b3f59044437bfa5205bac96">cv::acos</a></div><div class="ttdeci">Quat&lt; T &gt; acos(const Quat&lt; T &gt; &amp;q)</div></div>
+<div class="ttc" id="agroup__core_html_ga649715908b1dc7fc2496df48dd5fff64"><div class="ttname"><a href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">cv::Quatd</a></div><div class="ttdeci">Quat&lt; double &gt; Quatd</div><div class="ttdef"><b>Definition:</b> quaternion.hpp:1507</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga225baf94a87d765bbe4930c8b0ea2dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga225baf94a87d765bbe4930c8b0ea2dd5">&#9670;&nbsp;</a></span>acosh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::acosh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[arccosh(q) = \ln(q + \sqrt{q^2 - 1})\]" src="form_325.png"/>
+</p>
+<p>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga225baf94a87d765bbe4930c8b0ea2dd5">acosh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga225baf94a87d765bbe4930c8b0ea2dd5"><div class="ttname"><a href="group__core.html#ga225baf94a87d765bbe4930c8b0ea2dd5">cv::acosh</a></div><div class="ttdeci">Quat&lt; T &gt; acosh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga6fc601123d390aadc313aaaa0261c7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fc601123d390aadc313aaaa0261c7d9">&#9670;&nbsp;</a></span>asin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::asin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\arcsin(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arcsinh(q\frac{\boldsymbol{v}}{||\boldsymbol{v}||})\]" src="form_321.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga6fc601123d390aadc313aaaa0261c7d9">asin</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga6fc601123d390aadc313aaaa0261c7d9"><div class="ttname"><a href="group__core.html#ga6fc601123d390aadc313aaaa0261c7d9">cv::asin</a></div><div class="ttdeci">Quat&lt; T &gt; asin(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga0cfa077470cefb85b297223f6d8dd5dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0cfa077470cefb85b297223f6d8dd5dd">&#9670;&nbsp;</a></span>asinh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::asinh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[arcsinh(q) = \ln(q + \sqrt{q^2 + 1})\]" src="form_324.png"/>
+</p>
+<p>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga0cfa077470cefb85b297223f6d8dd5dd">asinh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga0cfa077470cefb85b297223f6d8dd5dd"><div class="ttname"><a href="group__core.html#ga0cfa077470cefb85b297223f6d8dd5dd">cv::asinh</a></div><div class="ttdeci">Quat&lt; T &gt; asinh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga698c37839d751aaee3331d62fd13528b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga698c37839d751aaee3331d62fd13528b">&#9670;&nbsp;</a></span>atan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::atan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\arctan(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arctanh(q\frac{\boldsymbol{v}}{||\boldsymbol{v}||})\]" src="form_323.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga698c37839d751aaee3331d62fd13528b">atan</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga698c37839d751aaee3331d62fd13528b"><div class="ttname"><a href="group__core.html#ga698c37839d751aaee3331d62fd13528b">cv::atan</a></div><div class="ttdeci">Quat&lt; T &gt; atan(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gad537654ff648d1d48ea3e0a0808263d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad537654ff648d1d48ea3e0a0808263d1">&#9670;&nbsp;</a></span>atanh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::atanh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[arctanh(q) = \frac{\ln(q + 1) - \ln(1 - q)}{2}\]" src="form_327.png"/>
+</p>
+<p>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#gad537654ff648d1d48ea3e0a0808263d1">atanh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_gad537654ff648d1d48ea3e0a0808263d1"><div class="ttname"><a href="group__core.html#gad537654ff648d1d48ea3e0a0808263d1">cv::atanh</a></div><div class="ttdeci">Quat&lt; T &gt; atanh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gaf0f2fe47183d063fb7415097fbadb570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0f2fe47183d063fb7415097fbadb570">&#9670;&nbsp;</a></span>cos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::cos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\cos(p) = \cos(w) * \cosh(||\boldsymbol{v}||) - \sin(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sinh(||\boldsymbol{v}||)\]" src="form_319.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#gaf0f2fe47183d063fb7415097fbadb570">cos</a>(q);</div>
+<div class="ttc" id="agroup__core_html_gaf0f2fe47183d063fb7415097fbadb570"><div class="ttname"><a href="group__core.html#gaf0f2fe47183d063fb7415097fbadb570">cv::cos</a></div><div class="ttdeci">Quat&lt; T &gt; cos(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gacebb73e7dfa756a34ac415c850a40e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacebb73e7dfa756a34ac415c850a40e17">&#9670;&nbsp;</a></span>cosh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::cosh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\cosh(p) = \cosh(w) * \cos(||\boldsymbol{v}||) + \sinh(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sin(||\boldsymbol{v}||)\]" src="form_315.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#gacebb73e7dfa756a34ac415c850a40e17">cosh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_gacebb73e7dfa756a34ac415c850a40e17"><div class="ttname"><a href="group__core.html#gacebb73e7dfa756a34ac415c850a40e17">cv::cosh</a></div><div class="ttdeci">Quat&lt; T &gt; cosh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga64ec21e57dd2eccc25c25b5911a7ff3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64ec21e57dd2eccc25c25b5911a7ff3b">&#9670;&nbsp;</a></span>crossProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::crossProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[p \times q = \frac{pq- qp}{2}\]" src="form_302.png"/>
+</p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[p \times q = \boldsymbol{u} \times \boldsymbol{v}\]" src="form_303.png"/>
+</p>
+ <p class="formulaDsp">
+<img class="formulaDsp" alt="\[p \times q = (cz-dy)i + (dx-bz)j + (by-xc)k \]" src="form_304.png"/>
+</p>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q{1,2,3,4};</div>
+<div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> p{5,6,7,8};</div>
+<div class="line"><a class="code" href="group__core.html#ga64ec21e57dd2eccc25c25b5911a7ff3b">crossProduct</a>(p, q);</div>
+<div class="ttc" id="agroup__core_html_ga64ec21e57dd2eccc25c25b5911a7ff3b"><div class="ttname"><a href="group__core.html#ga64ec21e57dd2eccc25c25b5911a7ff3b">cv::crossProduct</a></div><div class="ttdeci">Quat&lt; T &gt; crossProduct(const Quat&lt; T &gt; &amp;p, const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga96ff82d32417d677722a7e786425c98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96ff82d32417d677722a7e786425c98e">&#9670;&nbsp;</a></span>exp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::exp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\exp(q) = e^w (\cos||\boldsymbol{v}||+ \frac{v}{||\boldsymbol{v}||})\sin||\boldsymbol{v}||\]" src="form_291.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example: </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q{1,2,3,4};</div>
+<div class="line">cout &lt;&lt; <a class="code" href="group__core.html#ga96ff82d32417d677722a7e786425c98e">exp</a>(q) &lt;&lt; endl;</div>
+<div class="ttc" id="agroup__core_html_ga96ff82d32417d677722a7e786425c98e"><div class="ttname"><a href="group__core.html#ga96ff82d32417d677722a7e786425c98e">cv::exp</a></div><div class="ttdeci">Quat&lt; T &gt; exp(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gafaf5d86a8c4a462790c81f2959fe5941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaf5d86a8c4a462790c81f2959fe5941">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::inv </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a>&#160;</td>
+          <td class="paramname"><em>assumeUnit</em> = <code><a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion. </td></tr>
+    <tr><td class="paramname">assumeUnit</td><td>if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#gafaf5d86a8c4a462790c81f2959fe5941">inv</a>(q);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit = <a class="code" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697">QUAT_ASSUME_UNIT</a>;</div>
+<div class="line">q = q.normalize();</div>
+<div class="line"><a class="code" href="group__core.html#gafaf5d86a8c4a462790c81f2959fe5941">inv</a>(q, assumeUnit);<span class="comment">//This assumeUnit means p is a unit quaternion</span></div>
+<div class="ttc" id="agroup__core_html_ga935c8234953e2a2c8557c019ad8d509e"><div class="ttname"><a href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">cv::QuatAssumeType</a></div><div class="ttdeci">QuatAssumeType</div><div class="ttdoc">Unit quaternion flag.</div><div class="ttdef"><b>Definition:</b> quaternion.hpp:38</div></div>
+<div class="ttc" id="agroup__core_html_gafaf5d86a8c4a462790c81f2959fe5941"><div class="ttname"><a href="group__core.html#gafaf5d86a8c4a462790c81f2959fe5941">cv::inv</a></div><div class="ttdeci">Quat&lt; T &gt; inv(const Quat&lt; T &gt; &amp;q, QuatAssumeType assumeUnit=QUAT_ASSUME_NOT_UNIT)</div></div>
+<div class="ttc" id="agroup__core_html_gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697"><div class="ttname"><a href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697">cv::QUAT_ASSUME_UNIT</a></div><div class="ttdeci">@ QUAT_ASSUME_UNIT</div><div class="ttdef"><b>Definition:</b> quaternion.hpp:51</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga4eba02a849f926ee1764acde47108753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4eba02a849f926ee1764acde47108753">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a>&#160;</td>
+          <td class="paramname"><em>assumeUnit</em> = <code><a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\ln(q) = \ln||q|| + \frac{\boldsymbol{v}}{||\boldsymbol{v}||}\arccos\frac{w}{||q||}.\]" src="form_294.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion. </td></tr>
+    <tr><td class="paramname">assumeUnit</td><td>if QUAT_ASSUME_UNIT, q assume to be a unit quaternion and this function will save some computations.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q1{1,2,3,4};</div>
+<div class="line">cout &lt;&lt; <a class="code" href="group__core.html#ga4eba02a849f926ee1764acde47108753">log</a>(q1) &lt;&lt; endl;</div>
+<div class="ttc" id="agroup__core_html_ga4eba02a849f926ee1764acde47108753"><div class="ttname"><a href="group__core.html#ga4eba02a849f926ee1764acde47108753">cv::log</a></div><div class="ttdeci">Quat&lt; T &gt; log(const Quat&lt; T &gt; &amp;q, QuatAssumeType assumeUnit=QUAT_ASSUME_NOT_UNIT)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gad3a71bd72f94ad46b5694ffaff3d729a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3a71bd72f94ad46b5694ffaff3d729a">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const&#160;</td>
+          <td class="paramname"><em>T</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga62d7e23fa9ea214d2ad6f92364cdb5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62d7e23fa9ea214d2ad6f92364cdb5a3">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2c4455e18bf344ab22a377027494507e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c4455e18bf344ab22a377027494507e">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; cv::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; _Tp &gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7fe4c56d24204b2abf7715baa7c8a031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7fe4c56d24204b2abf7715baa7c8a031">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; cv::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; S &gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga18f51c22dcd55f668c25cc3b919366ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18f51c22dcd55f668c25cc3b919366ed">&#9670;&nbsp;</a></span>power() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::power </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a>&#160;</td>
+          <td class="paramname"><em>assumeUnit</em> = <code><a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[p^q = e^{q\ln(p)}.\]" src="form_299.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>base quaternion of power function. </td></tr>
+    <tr><td class="paramname">q</td><td>index quaternion of power function. </td></tr>
+    <tr><td class="paramname">assumeUnit</td><td>if QUAT_ASSUME_UNIT, quaternion <img class="formulaInl" alt="$p$" src="form_1.png"/> assume to be a unit quaternion and this function will save some computations.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> p(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(5,6,7,8);</div>
+<div class="line"><a class="code" href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">power</a>(p, q);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit = <a class="code" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697">QUAT_ASSUME_UNIT</a>;</div>
+<div class="line">p = p.normalize();</div>
+<div class="line"><a class="code" href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">power</a>(p, q, assumeUnit); <span class="comment">//This assumeUnit means p is a unit quaternion</span></div>
+<div class="ttc" id="agroup__core_html_ga18f51c22dcd55f668c25cc3b919366ed"><div class="ttname"><a href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">cv::power</a></div><div class="ttdeci">Quat&lt; T &gt; power(const Quat&lt; T &gt; &amp;q, const Quat&lt; T &gt; &amp;p, QuatAssumeType assumeUnit=QUAT_ASSUME_NOT_UNIT)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gae3ff963036a5acc11e9816e62452a5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3ff963036a5acc11e9816e62452a5dc">&#9670;&nbsp;</a></span>power() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::power </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a>&#160;</td>
+          <td class="paramname"><em>assumeUnit</em> = <code><a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[q^x = ||q||(cos(x\theta) + \boldsymbol{u}sin(x\theta))).\]" src="form_296.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion. </td></tr>
+    <tr><td class="paramname">x</td><td>index of exponentiation. </td></tr>
+    <tr><td class="paramname">assumeUnit</td><td>if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">power</a>(q, 2.0);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a> assumeUnit = <a class="code" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea87af033c2248f7a0b4548ffa56afc697">QUAT_ASSUME_UNIT</a>;</div>
+<div class="line"><span class="keywordtype">double</span> <a class="code" href="group__core__c.html#ga00147158cd32c0f762ad7d5917e6d8fd">angle</a> = <a class="code" href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a>;</div>
+<div class="line"><a class="code" href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">Vec3d</a> axis{0, 0, 1};</div>
+<div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q1 = <a class="code" href="classcv_1_1_quat.html#ab9b2bcb68e895895e61c826223e1ab55">Quatd::createFromAngleAxis</a>(<a class="code" href="group__core__c.html#ga00147158cd32c0f762ad7d5917e6d8fd">angle</a>, axis); <span class="comment">//generate a unit quat by axis and angle</span></div>
+<div class="line"><a class="code" href="group__core.html#ga18f51c22dcd55f668c25cc3b919366ed">power</a>(q1, 2.0, assumeUnit);<span class="comment">//This assumeUnit means q1 is a unit quaternion.</span></div>
+<div class="ttc" id="aclasscv_1_1_quat_html_ab9b2bcb68e895895e61c826223e1ab55"><div class="ttname"><a href="classcv_1_1_quat.html#ab9b2bcb68e895895e61c826223e1ab55">cv::Quat::createFromAngleAxis</a></div><div class="ttdeci">static Quat&lt; _Tp &gt; createFromAngleAxis(const _Tp angle, const Vec&lt; _Tp, 3 &gt; &amp;axis)</div><div class="ttdoc">from an angle, axis. Axis will be normalized in this function. And it generates</div></div>
+<div class="ttc" id="agroup__core__basic_html_ga370d94209693b5b13437ab4991cabf73"><div class="ttname"><a href="group__core__basic.html#ga370d94209693b5b13437ab4991cabf73">cv::Vec3d</a></div><div class="ttdeci">Vec&lt; double, 3 &gt; Vec3d</div><div class="ttdef"><b>Definition:</b> matx.hpp:433</div></div>
+<div class="ttc" id="agroup__core__c_html_ga00147158cd32c0f762ad7d5917e6d8fd"><div class="ttname"><a href="group__core__c.html#ga00147158cd32c0f762ad7d5917e6d8fd">angle</a></div><div class="ttdeci">const CvArr * angle</div><div class="ttdef"><b>Definition:</b> core_c.h:1191</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga677b89fae9308b340ddaebf0dba8455f"><div class="ttname"><a href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a></div><div class="ttdeci">#define CV_PI</div><div class="ttdef"><b>Definition:</b> cvdef.h:354</div></div>
+</div><!-- fragment --> <dl class="section note"><dt>Заметки</dt><dd>the type of the index should be the same as the quaternion. </dd></dl>
+
+</div>
+</div>
+<a id="ga53a8656033a51db64caa72ee9d4e93b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53a8656033a51db64caa72ee9d4e93b4">&#9670;&nbsp;</a></span>sin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::sin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sin(p) = \sin(w) * \cosh(||\boldsymbol{v}||) + \cos(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sinh(||\boldsymbol{v}||)\]" src="form_318.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga53a8656033a51db64caa72ee9d4e93b4">sin</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga53a8656033a51db64caa72ee9d4e93b4"><div class="ttname"><a href="group__core.html#ga53a8656033a51db64caa72ee9d4e93b4">cv::sin</a></div><div class="ttdeci">Quat&lt; T &gt; sin(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga8201286a9e4db514b71f97c9f265f524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8201286a9e4db514b71f97c9f265f524">&#9670;&nbsp;</a></span>sinh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::sinh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sinh(p) = \sin(w)\cos(||\boldsymbol{v}||) + \cosh(w)\frac{v}{||\boldsymbol{v}||}\sin||\boldsymbol{v}||\]" src="form_313.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$\boldsymbol{v} = [x, y, z].$" src="form_292.png"/> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga8201286a9e4db514b71f97c9f265f524">sinh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga8201286a9e4db514b71f97c9f265f524"><div class="ttname"><a href="group__core.html#ga8201286a9e4db514b71f97c9f265f524">cv::sinh</a></div><div class="ttdeci">Quat&lt; T &gt; sinh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga9070b6a3f093dd952d973819b06f4906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9070b6a3f093dd952d973819b06f4906">&#9670;&nbsp;</a></span>sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;S&gt; cv::sqrt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; S &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga935c8234953e2a2c8557c019ad8d509e">QuatAssumeType</a>&#160;</td>
+          <td class="paramname"><em>assumeUnit</em> = <code><a class="el" href="group__core.html#gga935c8234953e2a2c8557c019ad8d509ea786f758552bf7be9ee5f12ca2157cf8f">QUAT_ASSUME_NOT_UNIT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaee66fd35ceb08e5e93177b123481a25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee66fd35ceb08e5e93177b123481a25e">&#9670;&nbsp;</a></span>swap() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swaps two matrices. </p>
+
+</div>
+</div>
+<a id="ga8da78ea70c62d1697b708cc3dcbdc782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8da78ea70c62d1697b708cc3dcbdc782">&#9670;&nbsp;</a></span>swap() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ga46494f350417a0795f89645f45f1f4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46494f350417a0795f89645f45f1f4f3">&#9670;&nbsp;</a></span>tan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::tan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\tan(q) = \frac{\sin(q)}{\cos(q)}.\]" src="form_320.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga46494f350417a0795f89645f45f1f4f3">tan</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga46494f350417a0795f89645f45f1f4f3"><div class="ttname"><a href="group__core.html#ga46494f350417a0795f89645f45f1f4f3">cv::tan</a></div><div class="ttdeci">Quat&lt; T &gt; tan(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga1c3ad52668041ecd803d1c0fc0b643c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c3ad52668041ecd803d1c0fc0b643c8">&#9670;&nbsp;</a></span>tanh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_quat.html">Quat</a>&lt;<a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; cv::tanh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_quat.html">Quat</a>&lt; <a class="el" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \tanh(q) = \frac{\sinh(q)}{\cosh(q)}.\]" src="form_317.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>a quaternion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example </p><div class="fragment"><div class="line"><a class="code" href="group__core.html#ga649715908b1dc7fc2496df48dd5fff64">Quatd</a> q(1,2,3,4);</div>
+<div class="line"><a class="code" href="group__core.html#ga1c3ad52668041ecd803d1c0fc0b643c8">tanh</a>(q);</div>
+<div class="ttc" id="agroup__core_html_ga1c3ad52668041ecd803d1c0fc0b643c8"><div class="ttname"><a href="group__core.html#ga1c3ad52668041ecd803d1c0fc0b643c8">cv::tanh</a></div><div class="ttdeci">Quat&lt; T &gt; tanh(const Quat&lt; T &gt; &amp;q)</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__core.html#ga8201286a9e4db514b71f97c9f265f524">sinh</a>, <a class="el" href="group__core.html#gacebb73e7dfa756a34ac415c850a40e17">cosh</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

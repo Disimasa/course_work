@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::DISOpticalFlow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_d_i_s_optical_flow.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classcv_1_1_d_i_s_optical_flow-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::DISOpticalFlow<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__video.html">Video Analysis</a> &raquo; <a class="el" href="group__video__track.html">Object Tracking</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>DIS optical flow algorithm.  
+ <a href="classcv_1_1_d_i_s_optical_flow.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tracking_8hpp_source.html">tracking.hpp</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classcv_1_1_dense_optical_flow.html">cv::DenseOpticalFlow</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ad25e0050e836180b9aecad9fe3c500d5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ad25e0050e836180b9aecad9fe3c500d5a9f90dcf9da43619e3c401f0c0956f998">PRESET_ULTRAFAST</a> = 0
+, <a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ad25e0050e836180b9aecad9fe3c500d5acac18d130d259ee7dcdd6a874508b047">PRESET_FAST</a> = 1
+, <a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ad25e0050e836180b9aecad9fe3c500d5a2ed2f21190ccc2e47a480615407d61aa">PRESET_MEDIUM</a> = 2
+ }</td></tr>
+<tr class="separator:ad25e0050e836180b9aecad9fe3c500d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab03e609d92b4fed10cb56e94a389bc47"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ab03e609d92b4fed10cb56e94a389bc47">getFinestScale</a> () const =0</td></tr>
+<tr class="memdesc:ab03e609d92b4fed10cb56e94a389bc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.  <a href="classcv_1_1_d_i_s_optical_flow.html#ab03e609d92b4fed10cb56e94a389bc47">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab03e609d92b4fed10cb56e94a389bc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c42d546f3058fb50b941396fb939f06"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a6c42d546f3058fb50b941396fb939f06">setFinestScale</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> val)=0</td></tr>
+<tr class="memdesc:a6c42d546f3058fb50b941396fb939f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.  <a href="classcv_1_1_d_i_s_optical_flow.html#a6c42d546f3058fb50b941396fb939f06">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c42d546f3058fb50b941396fb939f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583492c6ffb9ad12f8221a4a99bea8a6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a583492c6ffb9ad12f8221a4a99bea8a6">getPatchSize</a> () const =0</td></tr>
+<tr class="memdesc:a583492c6ffb9ad12f8221a4a99bea8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.  <a href="classcv_1_1_d_i_s_optical_flow.html#a583492c6ffb9ad12f8221a4a99bea8a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a583492c6ffb9ad12f8221a4a99bea8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c087cfa41d7da98edc8926941fd962"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a91c087cfa41d7da98edc8926941fd962">setPatchSize</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> val)=0</td></tr>
+<tr class="memdesc:a91c087cfa41d7da98edc8926941fd962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.  <a href="classcv_1_1_d_i_s_optical_flow.html#a91c087cfa41d7da98edc8926941fd962">Подробнее...</a><br /></td></tr>
+<tr class="separator:a91c087cfa41d7da98edc8926941fd962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73964c319f1a342a42cb9cc7981b6e64"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a73964c319f1a342a42cb9cc7981b6e64">getPatchStride</a> () const =0</td></tr>
+<tr class="memdesc:a73964c319f1a342a42cb9cc7981b6e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.  <a href="classcv_1_1_d_i_s_optical_flow.html#a73964c319f1a342a42cb9cc7981b6e64">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73964c319f1a342a42cb9cc7981b6e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723b6cd7ece643fc9ef7efa423960a75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a723b6cd7ece643fc9ef7efa423960a75">setPatchStride</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> val)=0</td></tr>
+<tr class="memdesc:a723b6cd7ece643fc9ef7efa423960a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.  <a href="classcv_1_1_d_i_s_optical_flow.html#a723b6cd7ece643fc9ef7efa423960a75">Подробнее...</a><br /></td></tr>
+<tr class="separator:a723b6cd7ece643fc9ef7efa423960a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacbf10b941dfabe5934486e5975f949a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#aacbf10b941dfabe5934486e5975f949a">getGradientDescentIterations</a> () const =0</td></tr>
+<tr class="memdesc:aacbf10b941dfabe5934486e5975f949a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.  <a href="classcv_1_1_d_i_s_optical_flow.html#aacbf10b941dfabe5934486e5975f949a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacbf10b941dfabe5934486e5975f949a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4251adb61e3d7b09f8a421606242ca4d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a4251adb61e3d7b09f8a421606242ca4d">setGradientDescentIterations</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> val)=0</td></tr>
+<tr class="memdesc:a4251adb61e3d7b09f8a421606242ca4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.  <a href="classcv_1_1_d_i_s_optical_flow.html#a4251adb61e3d7b09f8a421606242ca4d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4251adb61e3d7b09f8a421606242ca4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c04a919f524f453028ffb49fb2b6e22"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a8c04a919f524f453028ffb49fb2b6e22">getVariationalRefinementIterations</a> () const =0</td></tr>
+<tr class="memdesc:a8c04a919f524f453028ffb49fb2b6e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of fixed point iterations of variational refinement per scale. Set to zero to disable variational refinement completely. Higher values will typically result in more smooth and high-quality flow.  <a href="classcv_1_1_d_i_s_optical_flow.html#a8c04a919f524f453028ffb49fb2b6e22">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8c04a919f524f453028ffb49fb2b6e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03825d4952a75b4cf9d0069b4029e380"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a03825d4952a75b4cf9d0069b4029e380">setVariationalRefinementIterations</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> val)=0</td></tr>
+<tr class="memdesc:a03825d4952a75b4cf9d0069b4029e380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.  <a href="classcv_1_1_d_i_s_optical_flow.html#a03825d4952a75b4cf9d0069b4029e380">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03825d4952a75b4cf9d0069b4029e380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603f75be2dba3e7fc36e677d74035da0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a603f75be2dba3e7fc36e677d74035da0">getVariationalRefinementAlpha</a> () const =0</td></tr>
+<tr class="memdesc:a603f75be2dba3e7fc36e677d74035da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the smoothness term.  <a href="classcv_1_1_d_i_s_optical_flow.html#a603f75be2dba3e7fc36e677d74035da0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a603f75be2dba3e7fc36e677d74035da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de615da1406b6f5ecb134814801ab9e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a5de615da1406b6f5ecb134814801ab9e">setVariationalRefinementAlpha</a> (float val)=0</td></tr>
+<tr class="memdesc:a5de615da1406b6f5ecb134814801ab9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the smoothness term.  <a href="classcv_1_1_d_i_s_optical_flow.html#a5de615da1406b6f5ecb134814801ab9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5de615da1406b6f5ecb134814801ab9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0998187dd97042cef2ff6a154020843d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a0998187dd97042cef2ff6a154020843d">getVariationalRefinementDelta</a> () const =0</td></tr>
+<tr class="memdesc:a0998187dd97042cef2ff6a154020843d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the color constancy term.  <a href="classcv_1_1_d_i_s_optical_flow.html#a0998187dd97042cef2ff6a154020843d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0998187dd97042cef2ff6a154020843d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8f83f980cddc1d761c66a5b0e2fe31"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a5a8f83f980cddc1d761c66a5b0e2fe31">setVariationalRefinementDelta</a> (float val)=0</td></tr>
+<tr class="memdesc:a5a8f83f980cddc1d761c66a5b0e2fe31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the color constancy term.  <a href="classcv_1_1_d_i_s_optical_flow.html#a5a8f83f980cddc1d761c66a5b0e2fe31">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5a8f83f980cddc1d761c66a5b0e2fe31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f5e95203b7f1bd026f76373de9e03a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ab1f5e95203b7f1bd026f76373de9e03a">getVariationalRefinementGamma</a> () const =0</td></tr>
+<tr class="memdesc:ab1f5e95203b7f1bd026f76373de9e03a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the gradient constancy term.  <a href="classcv_1_1_d_i_s_optical_flow.html#ab1f5e95203b7f1bd026f76373de9e03a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab1f5e95203b7f1bd026f76373de9e03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ff8fc82ca30e41cc2f954392042a1b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a70ff8fc82ca30e41cc2f954392042a1b">setVariationalRefinementGamma</a> (float val)=0</td></tr>
+<tr class="memdesc:a70ff8fc82ca30e41cc2f954392042a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of the gradient constancy term.  <a href="classcv_1_1_d_i_s_optical_flow.html#a70ff8fc82ca30e41cc2f954392042a1b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70ff8fc82ca30e41cc2f954392042a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e973ed54fea91f4b3f8a50bd02b2d6b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a9e973ed54fea91f4b3f8a50bd02b2d6b">getUseMeanNormalization</a> () const =0</td></tr>
+<tr class="memdesc:a9e973ed54fea91f4b3f8a50bd02b2d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.  <a href="classcv_1_1_d_i_s_optical_flow.html#a9e973ed54fea91f4b3f8a50bd02b2d6b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e973ed54fea91f4b3f8a50bd02b2d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa82ed03e030ba4bc15bb95af76ab647"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#afa82ed03e030ba4bc15bb95af76ab647">setUseMeanNormalization</a> (bool val)=0</td></tr>
+<tr class="memdesc:afa82ed03e030ba4bc15bb95af76ab647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.  <a href="classcv_1_1_d_i_s_optical_flow.html#afa82ed03e030ba4bc15bb95af76ab647">Подробнее...</a><br /></td></tr>
+<tr class="separator:afa82ed03e030ba4bc15bb95af76ab647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db2a4c8bf90afeeb894c45d139c51e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a9db2a4c8bf90afeeb894c45d139c51e3">getUseSpatialPropagation</a> () const =0</td></tr>
+<tr class="memdesc:a9db2a4c8bf90afeeb894c45d139c51e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.  <a href="classcv_1_1_d_i_s_optical_flow.html#a9db2a4c8bf90afeeb894c45d139c51e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9db2a4c8bf90afeeb894c45d139c51e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade61d901d1b405f99677745c16103ae3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ade61d901d1b405f99677745c16103ae3">setUseSpatialPropagation</a> (bool val)=0</td></tr>
+<tr class="memdesc:ade61d901d1b405f99677745c16103ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.  <a href="classcv_1_1_d_i_s_optical_flow.html#ade61d901d1b405f99677745c16103ae3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade61d901d1b405f99677745c16103ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_dense_optical_flow"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_dense_optical_flow')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_dense_optical_flow.html">cv::DenseOpticalFlow</a></td></tr>
+<tr class="memitem:a33d04e9e04c579ea5afa8db7a9573eb4 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_dense_optical_flow.html#a33d04e9e04c579ea5afa8db7a9573eb4">calc</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> I0, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> I1, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__imgproc__hist.html#ga06c76f73a0186dbcfbaba14ab0baca86">flow</a>)=0</td></tr>
+<tr class="memdesc:a33d04e9e04c579ea5afa8db7a9573eb4 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an optical flow.  <a href="classcv_1_1_dense_optical_flow.html#a33d04e9e04c579ea5afa8db7a9573eb4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a33d04e9e04c579ea5afa8db7a9573eb4 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe197612925c85f08fcd27732b223e79 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_dense_optical_flow.html#afe197612925c85f08fcd27732b223e79">collectGarbage</a> ()=0</td></tr>
+<tr class="memdesc:afe197612925c85f08fcd27732b223e79 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases all inner buffers.  <a href="classcv_1_1_dense_optical_flow.html#afe197612925c85f08fcd27732b223e79">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe197612925c85f08fcd27732b223e79 inherit pub_methods_classcv_1_1_dense_optical_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a827c8b2781ed17574805f373e6054ff1">Algorithm</a> ()</td></tr>
+<tr class="separator:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8ae826127fa0f1f8d10a24841bd376f8">~Algorithm</a> ()</td></tr>
+<tr class="separator:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">clear</a> ()</td></tr>
+<tr class="memdesc:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the algorithm state.  <a href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">write</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="memdesc:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores algorithm parameters in a file storage.  <a href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">write</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &gt; &amp;fs, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()) const</td></tr>
+<tr class="memdesc:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">simplified API for language bindings Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm parameters from a file storage.  <a href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">empty</a> () const</td></tr>
+<tr class="memdesc:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classcv_1_1_algorithm.html" title="This is a base class for all more or less complex algorithms in OpenCV.">Algorithm</a> is empty (e.g. in the very beginning or after unsuccessful read.  <a href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#af5584a693c6fe6a3b8e0fcdd6c25d1fd">save</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>) const</td></tr>
+<tr class="separator:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a6ec6ed12df12de3ae03f50fcd2118cd7">getDefaultName</a> () const</td></tr>
+<tr class="separator:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa8ae0e4941c3726cc44b2e92df8d603e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_d_i_s_optical_flow.html">DISOpticalFlow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#aa8ae0e4941c3726cc44b2e92df8d603e">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> preset=<a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ad25e0050e836180b9aecad9fe3c500d5acac18d130d259ee7dcdd6a874508b047">DISOpticalFlow::PRESET_FAST</a>)</td></tr>
+<tr class="memdesc:aa8ae0e4941c3726cc44b2e92df8d603e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of <a class="el" href="classcv_1_1_d_i_s_optical_flow.html" title="DIS optical flow algorithm.">DISOpticalFlow</a>.  <a href="classcv_1_1_d_i_s_optical_flow.html#aa8ae0e4941c3726cc44b2e92df8d603e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8ae0e4941c3726cc44b2e92df8d603e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm from the file node.  <a href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">load</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from the file.  <a href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">loadFromString</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;strModel, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from a String.  <a href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a68eeca71617474ad3d4561786f0289d2">writeFormat</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="separator:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>DIS optical flow algorithm. </p>
+<p>This class implements the Dense Inverse Search (DIS) optical flow algorithm. More details about the algorithm can be found at <b>[Kroeger2016]</b> . Includes three presets with preselected parameters to provide reasonable trade-off between speed and quality. However, even the slowest preset is still relatively fast, use DeepFlow if you need better quality and don't care about speed.</p>
+<p>This implementation includes several additional features compared to the algorithm described in the paper, including spatial propagation of flow vectors (<a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a9db2a4c8bf90afeeb894c45d139c51e3">getUseSpatialPropagation</a>), as well as an option to utilize an initial flow approximation passed to <a class="el" href="classcv_1_1_dense_optical_flow.html#a33d04e9e04c579ea5afa8db7a9573eb4">calc</a> (which is, essentially, temporal propagation, if the previous frame's flow field is passed). </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="ad25e0050e836180b9aecad9fe3c500d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25e0050e836180b9aecad9fe3c500d5">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ad25e0050e836180b9aecad9fe3c500d5a9f90dcf9da43619e3c401f0c0956f998"></a>PRESET_ULTRAFAST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad25e0050e836180b9aecad9fe3c500d5acac18d130d259ee7dcdd6a874508b047"></a>PRESET_FAST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad25e0050e836180b9aecad9fe3c500d5a2ed2f21190ccc2e47a480615407d61aa"></a>PRESET_MEDIUM&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aa8ae0e4941c3726cc44b2e92df8d603e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ae0e4941c3726cc44b2e92df8d603e">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_d_i_s_optical_flow.html">DISOpticalFlow</a>&gt; cv::DISOpticalFlow::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>preset</em> = <code><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ad25e0050e836180b9aecad9fe3c500d5acac18d130d259ee7dcdd6a874508b047">DISOpticalFlow::PRESET_FAST</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates an instance of <a class="el" href="classcv_1_1_d_i_s_optical_flow.html" title="DIS optical flow algorithm.">DISOpticalFlow</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">preset</td><td>one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab03e609d92b4fed10cb56e94a389bc47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03e609d92b4fed10cb56e94a389bc47">&#9670;&nbsp;</a></span>getFinestScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DISOpticalFlow::getFinestScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a6c42d546f3058fb50b941396fb939f06" title="Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the ori...">setFinestScale</a> </dd></dl>
+
+</div>
+</div>
+<a id="aacbf10b941dfabe5934486e5975f949a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacbf10b941dfabe5934486e5975f949a">&#9670;&nbsp;</a></span>getGradientDescentIterations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DISOpticalFlow::getGradientDescentIterations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a4251adb61e3d7b09f8a421606242ca4d" title="Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may im...">setGradientDescentIterations</a> </dd></dl>
+
+</div>
+</div>
+<a id="a583492c6ffb9ad12f8221a4a99bea8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583492c6ffb9ad12f8221a4a99bea8a6">&#9670;&nbsp;</a></span>getPatchSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DISOpticalFlow::getPatchSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a91c087cfa41d7da98edc8926941fd962" title="Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in mo...">setPatchSize</a> </dd></dl>
+
+</div>
+</div>
+<a id="a73964c319f1a342a42cb9cc7981b6e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73964c319f1a342a42cb9cc7981b6e64">&#9670;&nbsp;</a></span>getPatchStride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DISOpticalFlow::getPatchStride </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a723b6cd7ece643fc9ef7efa423960a75" title="Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow...">setPatchStride</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9e973ed54fea91f4b3f8a50bd02b2d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e973ed54fea91f4b3f8a50bd02b2d6b">&#9670;&nbsp;</a></span>getUseMeanNormalization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::DISOpticalFlow::getUseMeanNormalization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#afa82ed03e030ba4bc15bb95af76ab647" title="Whether to use mean-normalization of patches when computing patch distance. It is turned on by defaul...">setUseMeanNormalization</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9db2a4c8bf90afeeb894c45d139c51e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db2a4c8bf90afeeb894c45d139c51e3">&#9670;&nbsp;</a></span>getUseSpatialPropagation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::DISOpticalFlow::getUseSpatialPropagation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ade61d901d1b405f99677745c16103ae3" title="Whether to use spatial propagation of good optical flow vectors. This option is turned on by default,...">setUseSpatialPropagation</a> </dd></dl>
+
+</div>
+</div>
+<a id="a603f75be2dba3e7fc36e677d74035da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603f75be2dba3e7fc36e677d74035da0">&#9670;&nbsp;</a></span>getVariationalRefinementAlpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float cv::DISOpticalFlow::getVariationalRefinementAlpha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the smoothness term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a5de615da1406b6f5ecb134814801ab9e" title="Weight of the smoothness term.">setVariationalRefinementAlpha</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0998187dd97042cef2ff6a154020843d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0998187dd97042cef2ff6a154020843d">&#9670;&nbsp;</a></span>getVariationalRefinementDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float cv::DISOpticalFlow::getVariationalRefinementDelta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the color constancy term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a5a8f83f980cddc1d761c66a5b0e2fe31" title="Weight of the color constancy term.">setVariationalRefinementDelta</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab1f5e95203b7f1bd026f76373de9e03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f5e95203b7f1bd026f76373de9e03a">&#9670;&nbsp;</a></span>getVariationalRefinementGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> float cv::DISOpticalFlow::getVariationalRefinementGamma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the gradient constancy term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a70ff8fc82ca30e41cc2f954392042a1b" title="Weight of the gradient constancy term.">setVariationalRefinementGamma</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8c04a919f524f453028ffb49fb2b6e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c04a919f524f453028ffb49fb2b6e22">&#9670;&nbsp;</a></span>getVariationalRefinementIterations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DISOpticalFlow::getVariationalRefinementIterations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of fixed point iterations of variational refinement per scale. Set to zero to disable variational refinement completely. Higher values will typically result in more smooth and high-quality flow. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a4251adb61e3d7b09f8a421606242ca4d" title="Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may im...">setGradientDescentIterations</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6c42d546f3058fb50b941396fb939f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c42d546f3058fb50b941396fb939f06">&#9670;&nbsp;</a></span>setFinestScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setFinestScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ab03e609d92b4fed10cb56e94a389bc47" title="Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the ori...">getFinestScale</a> </dd></dl>
+
+</div>
+</div>
+<a id="a4251adb61e3d7b09f8a421606242ca4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4251adb61e3d7b09f8a421606242ca4d">&#9670;&nbsp;</a></span>setGradientDescentIterations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setGradientDescentIterations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#aacbf10b941dfabe5934486e5975f949a" title="Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may im...">getGradientDescentIterations</a> </dd></dl>
+
+</div>
+</div>
+<a id="a91c087cfa41d7da98edc8926941fd962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c087cfa41d7da98edc8926941fd962">&#9670;&nbsp;</a></span>setPatchSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setPatchSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a583492c6ffb9ad12f8221a4a99bea8a6" title="Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in mo...">getPatchSize</a> </dd></dl>
+
+</div>
+</div>
+<a id="a723b6cd7ece643fc9ef7efa423960a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723b6cd7ece643fc9ef7efa423960a75">&#9670;&nbsp;</a></span>setPatchStride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setPatchStride </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a73964c319f1a342a42cb9cc7981b6e64" title="Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow...">getPatchStride</a> </dd></dl>
+
+</div>
+</div>
+<a id="afa82ed03e030ba4bc15bb95af76ab647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa82ed03e030ba4bc15bb95af76ab647">&#9670;&nbsp;</a></span>setUseMeanNormalization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setUseMeanNormalization </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a9e973ed54fea91f4b3f8a50bd02b2d6b" title="Whether to use mean-normalization of patches when computing patch distance. It is turned on by defaul...">getUseMeanNormalization</a> </dd></dl>
+
+</div>
+</div>
+<a id="ade61d901d1b405f99677745c16103ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade61d901d1b405f99677745c16103ae3">&#9670;&nbsp;</a></span>setUseSpatialPropagation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setUseSpatialPropagation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a9db2a4c8bf90afeeb894c45d139c51e3" title="Whether to use spatial propagation of good optical flow vectors. This option is turned on by default,...">getUseSpatialPropagation</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5de615da1406b6f5ecb134814801ab9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de615da1406b6f5ecb134814801ab9e">&#9670;&nbsp;</a></span>setVariationalRefinementAlpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setVariationalRefinementAlpha </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the smoothness term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a603f75be2dba3e7fc36e677d74035da0" title="Weight of the smoothness term.">getVariationalRefinementAlpha</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5a8f83f980cddc1d761c66a5b0e2fe31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8f83f980cddc1d761c66a5b0e2fe31">&#9670;&nbsp;</a></span>setVariationalRefinementDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setVariationalRefinementDelta </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the color constancy term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#a0998187dd97042cef2ff6a154020843d" title="Weight of the color constancy term.">getVariationalRefinementDelta</a> </dd></dl>
+
+</div>
+</div>
+<a id="a70ff8fc82ca30e41cc2f954392042a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ff8fc82ca30e41cc2f954392042a1b">&#9670;&nbsp;</a></span>setVariationalRefinementGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setVariationalRefinementGamma </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weight of the gradient constancy term. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#ab1f5e95203b7f1bd026f76373de9e03a" title="Weight of the gradient constancy term.">getVariationalRefinementGamma</a> </dd></dl>
+
+</div>
+</div>
+<a id="a03825d4952a75b4cf9d0069b4029e380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03825d4952a75b4cf9d0069b4029e380">&#9670;&nbsp;</a></span>setVariationalRefinementIterations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DISOpticalFlow::setVariationalRefinementIterations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_d_i_s_optical_flow.html#aacbf10b941dfabe5934486e5975f949a" title="Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may im...">getGradientDescentIterations</a> </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/video/<a class="el" href="tracking_8hpp_source.html">tracking.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_d_i_s_optical_flow.html">DISOpticalFlow</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

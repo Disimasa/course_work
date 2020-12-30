@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::cuda::TargetArchs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1cuda_1_1_target_archs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classcv_1_1cuda_1_1_target_archs-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::cuda::TargetArchs<div class="ingroups"><a class="el" href="group__cuda.html">CUDA-accelerated Computer Vision</a> &raquo; <a class="el" href="group__cudacore.html">Core part</a> &raquo; <a class="el" href="group__cudacore__init.html">Initialization and Information</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class providing a set of static methods to check what NVIDIA* card architecture the CUDA module was built for.  
+ <a href="classcv_1_1cuda_1_1_target_archs.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a228153530879a3330507db98984b8eff"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#a228153530879a3330507db98984b8eff">builtWith</a> (<a class="el" href="group__cudacore__init.html#ga776cf8e0301b18e19be4782754274fe0">FeatureSet</a> feature_set)</td></tr>
+<tr class="memdesc:a228153530879a3330507db98984b8eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The following method checks whether the module was built with the support of the given feature:  <a href="classcv_1_1cuda_1_1_target_archs.html#a228153530879a3330507db98984b8eff">Подробнее...</a><br /></td></tr>
+<tr class="separator:a228153530879a3330507db98984b8eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa343ae39789494e009bef9a9ae174c68"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#aa343ae39789494e009bef9a9ae174c68">has</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="memdesc:aa343ae39789494e009bef9a9ae174c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">There is a set of methods to check whether the module contains intermediate (PTX) or binary CUDA code for the given architecture(s):  <a href="classcv_1_1cuda_1_1_target_archs.html#aa343ae39789494e009bef9a9ae174c68">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa343ae39789494e009bef9a9ae174c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45dfb823ecb040df14f0ac6f0b32ed47"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#a45dfb823ecb040df14f0ac6f0b32ed47">hasPtx</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:a45dfb823ecb040df14f0ac6f0b32ed47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab458ef002ebd68a5c186098bd416edf7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#ab458ef002ebd68a5c186098bd416edf7">hasBin</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:ab458ef002ebd68a5c186098bd416edf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437647285b0d4c18f748e795488d4d9b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#a437647285b0d4c18f748e795488d4d9b">hasEqualOrLessPtx</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:a437647285b0d4c18f748e795488d4d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1521a06a8eef7677bf54f6b9ec0b5c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#ac1521a06a8eef7677bf54f6b9ec0b5c9">hasEqualOrGreater</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:ac1521a06a8eef7677bf54f6b9ec0b5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb2f067b198350f0f5474038b1229e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#a9cb2f067b198350f0f5474038b1229e6">hasEqualOrGreaterPtx</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:a9cb2f067b198350f0f5474038b1229e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2fd3e01be00c1de5c081ee97a56530"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html#a6f2fd3e01be00c1de5c081ee97a56530">hasEqualOrGreaterBin</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> major, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minor)</td></tr>
+<tr class="separator:a6f2fd3e01be00c1de5c081ee97a56530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Class providing a set of static methods to check what NVIDIA* card architecture the CUDA module was built for. </p>
+<p>According to the CUDA C Programming Guide Version 3.2: "PTX code produced for some specific compute
+capability can always be compiled to binary code of greater or equal compute capability". </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a228153530879a3330507db98984b8eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228153530879a3330507db98984b8eff">&#9670;&nbsp;</a></span>builtWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool cv::cuda::TargetArchs::builtWith </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cudacore__init.html#ga776cf8e0301b18e19be4782754274fe0">FeatureSet</a>&#160;</td>
+          <td class="paramname"><em>feature_set</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The following method checks whether the module was built with the support of the given feature: </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">feature_set</td><td>Features to be checked. See :ocvcuda::FeatureSet. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa343ae39789494e009bef9a9ae174c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa343ae39789494e009bef9a9ae174c68">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::has </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>There is a set of methods to check whether the module contains intermediate (PTX) or binary CUDA code for the given architecture(s): </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">major</td><td>Major compute capability version. </td></tr>
+    <tr><td class="paramname">minor</td><td>Minor compute capability version. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab458ef002ebd68a5c186098bd416edf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab458ef002ebd68a5c186098bd416edf7">&#9670;&nbsp;</a></span>hasBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasBin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1521a06a8eef7677bf54f6b9ec0b5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1521a06a8eef7677bf54f6b9ec0b5c9">&#9670;&nbsp;</a></span>hasEqualOrGreater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasEqualOrGreater </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2fd3e01be00c1de5c081ee97a56530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2fd3e01be00c1de5c081ee97a56530">&#9670;&nbsp;</a></span>hasEqualOrGreaterBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasEqualOrGreaterBin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cb2f067b198350f0f5474038b1229e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb2f067b198350f0f5474038b1229e6">&#9670;&nbsp;</a></span>hasEqualOrGreaterPtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasEqualOrGreaterPtx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a437647285b0d4c18f748e795488d4d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437647285b0d4c18f748e795488d4d9b">&#9670;&nbsp;</a></span>hasEqualOrLessPtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasEqualOrLessPtx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45dfb823ecb040df14f0ac6f0b32ed47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45dfb823ecb040df14f0ac6f0b32ed47">&#9670;&nbsp;</a></span>hasPtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::cuda::TargetArchs::hasPtx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1cuda.html">cuda</a></li><li class="navelem"><a class="el" href="classcv_1_1cuda_1_1_target_archs.html">TargetArchs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

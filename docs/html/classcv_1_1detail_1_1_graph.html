@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::detail::Graph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1detail_1_1_graph.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1detail_1_1_graph-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::detail::Graph<div class="ingroups"><a class="el" href="group__stitching.html">Images stitching</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="stitching_2detail_2util_8hpp_source.html">util.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a28af321e16d2ff278f0ee8ca5ff93eb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#a28af321e16d2ff278f0ee8ca5ff93eb9">Graph</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> num_vertices=0)</td></tr>
+<tr class="separator:a28af321e16d2ff278f0ee8ca5ff93eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36812f283b56ba6cbeec3cf3c3db3883"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#a36812f283b56ba6cbeec3cf3c3db3883">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> num_vertices)</td></tr>
+<tr class="separator:a36812f283b56ba6cbeec3cf3c3db3883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f71b977899774233d495be13a3d400b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#a8f71b977899774233d495be13a3d400b">numVertices</a> () const</td></tr>
+<tr class="separator:a8f71b977899774233d495be13a3d400b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71aed62d6713b3dc9c2833a42686fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#ab71aed62d6713b3dc9c2833a42686fdc">addEdge</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> from, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> to, float weight)</td></tr>
+<tr class="separator:ab71aed62d6713b3dc9c2833a42686fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae240a8d6ee21deaee7617e459597b042"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
+<tr class="memitem:ae240a8d6ee21deaee7617e459597b042"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#ae240a8d6ee21deaee7617e459597b042">forEach</a> (<a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> body) const</td></tr>
+<tr class="separator:ae240a8d6ee21deaee7617e459597b042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0adb7331b3c3d89b9ec630ba860308a"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
+<tr class="memitem:aa0adb7331b3c3d89b9ec630ba860308a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html#aa0adb7331b3c3d89b9ec630ba860308a">walkBreadthFirst</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> from, <a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> body) const</td></tr>
+<tr class="separator:aa0adb7331b3c3d89b9ec630ba860308a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a28af321e16d2ff278f0ee8ca5ff93eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28af321e16d2ff278f0ee8ca5ff93eb9">&#9670;&nbsp;</a></span>Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::detail::Graph::Graph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>num_vertices</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab71aed62d6713b3dc9c2833a42686fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71aed62d6713b3dc9c2833a42686fdc">&#9670;&nbsp;</a></span>addEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::detail::Graph::addEdge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36812f283b56ba6cbeec3cf3c3db3883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36812f283b56ba6cbeec3cf3c3db3883">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::detail::Graph::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>num_vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae240a8d6ee21deaee7617e459597b042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae240a8d6ee21deaee7617e459597b042">&#9670;&nbsp;</a></span>forEach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> cv::detail::Graph::forEach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f71b977899774233d495be13a3d400b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f71b977899774233d495be13a3d400b">&#9670;&nbsp;</a></span>numVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::detail::Graph::numVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0adb7331b3c3d89b9ec630ba860308a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0adb7331b3c3d89b9ec630ba860308a">&#9670;&nbsp;</a></span>walkBreadthFirst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> cv::detail::Graph::walkBreadthFirst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>&#160;</td>
+          <td class="paramname"><em>body</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/stitching/detail/<a class="el" href="stitching_2detail_2util_8hpp_source.html">util.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcv_1_1detail_1_1_graph.html">Graph</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

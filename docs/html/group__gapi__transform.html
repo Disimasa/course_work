@@ -1,0 +1,1158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Graph API: Image and channel composition functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__gapi__transform.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Graph API: Image and channel composition functions<div class="ingroups"><a class="el" href="group__gapi__core.html">G-API Core functionality</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gaedc5644eed6ef7c7487ebf85186c29f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9">cv::gapi::resize</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dsize, double fx=0, double fy=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> interpolation=<a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">INTER_LINEAR</a>)</td></tr>
+<tr class="memdesc:gaedc5644eed6ef7c7487ebf85186c29f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes an image.  <a href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaedc5644eed6ef7c7487ebf85186c29f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a3eb9e7562d87fd5822f7ea8f8be3cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat_p.html">GMatP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga6a3eb9e7562d87fd5822f7ea8f8be3cf">cv::gapi::resizeP</a> (const <a class="el" href="classcv_1_1_g_mat_p.html">GMatP</a> &amp;src, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dsize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> interpolation=<a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a>)</td></tr>
+<tr class="memdesc:ga6a3eb9e7562d87fd5822f7ea8f8be3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes a planar image.  <a href="group__gapi__transform.html#ga6a3eb9e7562d87fd5822f7ea8f8be3cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6a3eb9e7562d87fd5822f7ea8f8be3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga657781c866d12b38dbcc6fbd99b05a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga657781c866d12b38dbcc6fbd99b05a82">cv::gapi::merge4</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga311f39c2d5ee53342a493cbed3d77de3">src3</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src4)</td></tr>
+<tr class="memdesc:ga657781c866d12b38dbcc6fbd99b05a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates one 4-channel matrix out of 4 single-channel ones.  <a href="group__gapi__transform.html#ga657781c866d12b38dbcc6fbd99b05a82">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga657781c866d12b38dbcc6fbd99b05a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3452de19b83ad409cd53f8c4a324df56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga3452de19b83ad409cd53f8c4a324df56">cv::gapi::merge3</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga311f39c2d5ee53342a493cbed3d77de3">src3</a>)</td></tr>
+<tr class="memdesc:ga3452de19b83ad409cd53f8c4a324df56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates one 3-channel matrix out of 3 single-channel ones.  <a href="group__gapi__transform.html#ga3452de19b83ad409cd53f8c4a324df56">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3452de19b83ad409cd53f8c4a324df56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc8100e107cd663685328f97a4cb3315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gadc8100e107cd663685328f97a4cb3315">cv::gapi::split4</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:gadc8100e107cd663685328f97a4cb3315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides a 4-channel matrix into 4 single-channel matrices.  <a href="group__gapi__transform.html#gadc8100e107cd663685328f97a4cb3315">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadc8100e107cd663685328f97a4cb3315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa74fa34ff1f102dda12ac419dcf73a88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gaa74fa34ff1f102dda12ac419dcf73a88">cv::gapi::split3</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:gaa74fa34ff1f102dda12ac419dcf73a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides a 3-channel matrix into 3 single-channel matrices.  <a href="group__gapi__transform.html#gaa74fa34ff1f102dda12ac419dcf73a88">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa74fa34ff1f102dda12ac419dcf73a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed0f225327703ac5074ab0a419670f79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79">cv::gapi::remap</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;map1, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;map2, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> interpolation, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderMode=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>())</td></tr>
+<tr class="memdesc:gaed0f225327703ac5074ab0a419670f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a generic geometrical transformation to an image.  <a href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaed0f225327703ac5074ab0a419670f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3d20465d90211aa55da6afb75e23b76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gad3d20465d90211aa55da6afb75e23b76">cv::gapi::flip</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> flipCode)</td></tr>
+<tr class="memdesc:gad3d20465d90211aa55da6afb75e23b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips a 2D matrix around vertical, horizontal, or both axes.  <a href="group__gapi__transform.html#gad3d20465d90211aa55da6afb75e23b76">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad3d20465d90211aa55da6afb75e23b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c3de1731178e80f118abe55bd3047ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga7c3de1731178e80f118abe55bd3047ff">cv::gapi::crop</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;<a class="el" href="group__core__c.html#ga530a78d59bfb8d13c3013626ebb95c2e">rect</a>)</td></tr>
+<tr class="memdesc:ga7c3de1731178e80f118abe55bd3047ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crops a 2D matrix.  <a href="group__gapi__transform.html#ga7c3de1731178e80f118abe55bd3047ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7c3de1731178e80f118abe55bd3047ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66678166eed2ba6bb1d8bae922004927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga66678166eed2ba6bb1d8bae922004927">cv::gapi::concatHor</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>)</td></tr>
+<tr class="memdesc:ga66678166eed2ba6bb1d8bae922004927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies horizontal concatenation to given matrices.  <a href="group__gapi__transform.html#ga66678166eed2ba6bb1d8bae922004927">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga66678166eed2ba6bb1d8bae922004927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78e7555bc4ab419ef745ed967624906f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga78e7555bc4ab419ef745ed967624906f">cv::gapi::concatHor</a> (const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;v)</td></tr>
+<tr class="separator:ga78e7555bc4ab419ef745ed967624906f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae343f298786d78c990772b79e2201ca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gae343f298786d78c990772b79e2201ca5">cv::gapi::concatVert</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>)</td></tr>
+<tr class="memdesc:gae343f298786d78c990772b79e2201ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies vertical concatenation to given matrices.  <a href="group__gapi__transform.html#gae343f298786d78c990772b79e2201ca5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae343f298786d78c990772b79e2201ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5be4e6042e1507f9a430006460f71c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gab5be4e6042e1507f9a430006460f71c8">cv::gapi::concatVert</a> (const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;v)</td></tr>
+<tr class="separator:gab5be4e6042e1507f9a430006460f71c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f3d44d0458577ddfbd19cdd7b74e921"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga8f3d44d0458577ddfbd19cdd7b74e921">cv::gapi::LUT</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;<a class="el" href="group__core__c.html#gac0182572699c7759eba7ba1d6b8e32d6">lut</a>)</td></tr>
+<tr class="memdesc:ga8f3d44d0458577ddfbd19cdd7b74e921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a look-up table transform of a matrix.  <a href="group__gapi__transform.html#ga8f3d44d0458577ddfbd19cdd7b74e921">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8f3d44d0458577ddfbd19cdd7b74e921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16e8e7bbefc8401d1c9b9e36122eb597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga16e8e7bbefc8401d1c9b9e36122eb597">cv::gapi::convertTo</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rdepth, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>=1, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>=0)</td></tr>
+<tr class="memdesc:ga16e8e7bbefc8401d1c9b9e36122eb597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a matrix to another data depth with optional scaling.  <a href="group__gapi__transform.html#ga16e8e7bbefc8401d1c9b9e36122eb597">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga16e8e7bbefc8401d1c9b9e36122eb597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29644962014ea5945a4bd86023df3057"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga29644962014ea5945a4bd86023df3057">cv::gapi::normalize</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> norm_type, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga29644962014ea5945a4bd86023df3057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the norm or value range of an array.  <a href="group__gapi__transform.html#ga29644962014ea5945a4bd86023df3057">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga29644962014ea5945a4bd86023df3057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78c54d1f49389cc3a957c50235e0d269"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga78c54d1f49389cc3a957c50235e0d269">cv::gapi::warpPerspective</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;<a class="el" href="group__imgproc__c.html#ga404a4d60c53041fc1a1cd804d1c07cbb">M</a>, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dsize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=<a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderMode=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">cv::BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>())</td></tr>
+<tr class="memdesc:ga78c54d1f49389cc3a957c50235e0d269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a perspective transformation to an image.  <a href="group__gapi__transform.html#ga78c54d1f49389cc3a957c50235e0d269">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga78c54d1f49389cc3a957c50235e0d269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff73e711bc41b1ab7407726b3a0745f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gaff73e711bc41b1ab7407726b3a0745f4">cv::gapi::warpAffine</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;<a class="el" href="group__imgproc__c.html#ga404a4d60c53041fc1a1cd804d1c07cbb">M</a>, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dsize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=<a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderMode=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">cv::BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>())</td></tr>
+<tr class="memdesc:gaff73e711bc41b1ab7407726b3a0745f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an affine transformation to an image.  <a href="group__gapi__transform.html#gaff73e711bc41b1ab7407726b3a0745f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaff73e711bc41b1ab7407726b3a0745f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga840c1b32b4e83d641273b19705fce272"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#ga840c1b32b4e83d641273b19705fce272">cv::gapi::copy</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;in)</td></tr>
+<tr class="memdesc:ga840c1b32b4e83d641273b19705fce272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a copy of the input image. Note that this copy may be not real (no actual data copied). Use this function to maintain graph contracts, e.g when graph's input needs to be passed directly to output, like in Streaming mode.  <a href="group__gapi__transform.html#ga840c1b32b4e83d641273b19705fce272">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga840c1b32b4e83d641273b19705fce272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf85e69ac9400e532940f413bc4daf064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_frame.html">GFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__transform.html#gaf85e69ac9400e532940f413bc4daf064">cv::gapi::copy</a> (const <a class="el" href="classcv_1_1_g_frame.html">GFrame</a> &amp;in)</td></tr>
+<tr class="memdesc:gaf85e69ac9400e532940f413bc4daf064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a copy of the input frame. Note that this copy may be not real (no actual data copied). Use this function to maintain graph contracts, e.g when graph's input needs to be passed directly to output, like in Streaming mode.  <a href="group__gapi__transform.html#gaf85e69ac9400e532940f413bc4daf064">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf85e69ac9400e532940f413bc4daf064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga66678166eed2ba6bb1d8bae922004927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66678166eed2ba6bb1d8bae922004927">&#9670;&nbsp;</a></span>concatHor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::concatHor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies horizontal concatenation to given matrices. </p>
+<p>The function horizontally concatenates two <a class="el" href="classcv_1_1_g_mat.html">GMat</a> matrices (with the same number of rows). </p><div class="fragment"><div class="line">GMat A = { 1, 4,</div>
+<div class="line">           2, 5,</div>
+<div class="line">           3, 6 };</div>
+<div class="line">GMat <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> = { 7, 10,</div>
+<div class="line">           8, 11,</div>
+<div class="line">           9, 12 };</div>
+<div class="line"> </div>
+<div class="line">GMat C = <a class="code" href="group__gapi__transform.html#ga66678166eed2ba6bb1d8bae922004927">gapi::concatHor</a>(A, <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>);</div>
+<div class="line"><span class="comment">//C:</span></div>
+<div class="line"><span class="comment">//[1, 4, 7, 10;</span></div>
+<div class="line"><span class="comment">// 2, 5, 8, 11;</span></div>
+<div class="line"><span class="comment">// 3, 6, 9, 12]</span></div>
+<div class="ttc" id="agroup__core__c_html_gaa51ff7457205fc6e7de24356f7a5db6d"><div class="ttname"><a href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a></div><div class="ttdeci">const CvArr const CvArr const CvArr * B</div><div class="ttdef"><b>Definition:</b> core_c.h:1338</div></div>
+<div class="ttc" id="agroup__gapi__transform_html_ga66678166eed2ba6bb1d8bae922004927"><div class="ttname"><a href="group__gapi__transform.html#ga66678166eed2ba6bb1d8bae922004927">cv::gapi::concatHor</a></div><div class="ttdeci">GAPI_EXPORTS GMat concatHor(const GMat &amp;src1, const GMat &amp;src2)</div><div class="ttdoc">Applies horizontal concatenation to given matrices.</div></div>
+</div><!-- fragment --><p> Output matrix must the same number of rows and depth as the src1 and src2, and the sum of cols of the src1 and src2. Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.imgproc.transform.concatHor"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix to be considered for horizontal concatenation. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix to be considered for horizontal concatenation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gae343f298786d78c990772b79e2201ca5" title="Applies vertical concatenation to given matrices.">concatVert</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga78e7555bc4ab419ef745ed967624906f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78e7555bc4ab419ef745ed967624906f">&#9670;&nbsp;</a></span>concatHor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::concatHor </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. The function horizontally concatenates given number of <a class="el" href="classcv_1_1_g_mat.html">GMat</a> matrices (with the same number of columns). Output matrix must the same number of columns and depth as the input matrices, and the sum of rows of input matrices.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>vector of input matrices to be concatenated horizontally. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae343f298786d78c990772b79e2201ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae343f298786d78c990772b79e2201ca5">&#9670;&nbsp;</a></span>concatVert() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::concatVert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies vertical concatenation to given matrices. </p>
+<p>The function vertically concatenates two <a class="el" href="classcv_1_1_g_mat.html">GMat</a> matrices (with the same number of cols). </p><div class="fragment"><div class="line">GMat A = { 1, 7,</div>
+<div class="line">           2, 8,</div>
+<div class="line">           3, 9 };</div>
+<div class="line">GMat <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> = { 4, 10,</div>
+<div class="line">           5, 11,</div>
+<div class="line">           6, 12 };</div>
+<div class="line"> </div>
+<div class="line">GMat C = <a class="code" href="group__gapi__transform.html#gae343f298786d78c990772b79e2201ca5">gapi::concatVert</a>(A, <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>);</div>
+<div class="line"><span class="comment">//C:</span></div>
+<div class="line"><span class="comment">//[1, 7;</span></div>
+<div class="line"><span class="comment">// 2, 8;</span></div>
+<div class="line"><span class="comment">// 3, 9;</span></div>
+<div class="line"><span class="comment">// 4, 10;</span></div>
+<div class="line"><span class="comment">// 5, 11;</span></div>
+<div class="line"><span class="comment">// 6, 12]</span></div>
+<div class="ttc" id="agroup__gapi__transform_html_gae343f298786d78c990772b79e2201ca5"><div class="ttname"><a href="group__gapi__transform.html#gae343f298786d78c990772b79e2201ca5">cv::gapi::concatVert</a></div><div class="ttdeci">GAPI_EXPORTS GMat concatVert(const GMat &amp;src1, const GMat &amp;src2)</div><div class="ttdoc">Applies vertical concatenation to given matrices.</div></div>
+</div><!-- fragment --><p>Output matrix must the same number of cols and depth as the src1 and src2, and the sum of rows of the src1 and src2. Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.imgproc.transform.concatVert"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix to be considered for vertical concatenation. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix to be considered for vertical concatenation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#ga66678166eed2ba6bb1d8bae922004927" title="Applies horizontal concatenation to given matrices.">concatHor</a> </dd></dl>
+
+</div>
+</div>
+<a id="gab5be4e6042e1507f9a430006460f71c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5be4e6042e1507f9a430006460f71c8">&#9670;&nbsp;</a></span>concatVert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::concatVert </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. The function vertically concatenates given number of <a class="el" href="classcv_1_1_g_mat.html">GMat</a> matrices (with the same number of columns). Output matrix must the same number of columns and depth as the input matrices, and the sum of rows of input matrices.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>vector of input matrices to be concatenated vertically. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga16e8e7bbefc8401d1c9b9e36122eb597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16e8e7bbefc8401d1c9b9e36122eb597">&#9670;&nbsp;</a></span>convertTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::convertTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rdepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a matrix to another data depth with optional scaling. </p>
+<p>The method converts source pixel values to the target data depth. saturate_cast&lt;&gt; is applied at the end to avoid possible overflows:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[m(x,y) = saturate \_ cast&lt;rType&gt;( \alpha (*this)(x,y) + \beta )\]" src="form_259.png"/>
+</p>
+<p> Output matrix must be of the same size as input one.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.convertTo" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix to be converted from. </td></tr>
+    <tr><td class="paramname">rdepth</td><td>desired output matrix depth or, rather, the depth since the number of channels are the same as the input has; if rdepth is negative, the output matrix will have the same depth as the input. </td></tr>
+    <tr><td class="paramname">alpha</td><td>optional scale factor. </td></tr>
+    <tr><td class="paramname">beta</td><td>optional delta added to the scaled values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf85e69ac9400e532940f413bc4daf064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf85e69ac9400e532940f413bc4daf064">&#9670;&nbsp;</a></span>copy() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_frame.html">GFrame</a> cv::gapi::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_frame.html">GFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes a copy of the input frame. Note that this copy may be not real (no actual data copied). Use this function to maintain graph contracts, e.g when graph's input needs to be passed directly to output, like in Streaming mode. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.streaming.copy"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input frame </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Copy of the input </dd></dl>
+
+</div>
+</div>
+<a id="ga840c1b32b4e83d641273b19705fce272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga840c1b32b4e83d641273b19705fce272">&#9670;&nbsp;</a></span>copy() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes a copy of the input image. Note that this copy may be not real (no actual data copied). Use this function to maintain graph contracts, e.g when graph's input needs to be passed directly to output, like in Streaming mode. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.streaming.copy"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Copy of the input </dd></dl>
+
+</div>
+</div>
+<a id="ga7c3de1731178e80f118abe55bd3047ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c3de1731178e80f118abe55bd3047ff">&#9670;&nbsp;</a></span>crop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::crop </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crops a 2D matrix. </p>
+<p>The function crops the matrix by given <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a>.</p>
+<p>Output matrix must be of the same depth as input one, size is specified by given rect size.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.crop"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">rect</td><td>a rect to crop a matrix to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9" title="Resizes an image.">resize</a> </dd></dl>
+
+</div>
+</div>
+<a id="gad3d20465d90211aa55da6afb75e23b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3d20465d90211aa55da6afb75e23b76">&#9670;&nbsp;</a></span>flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::flip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flipCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flips a 2D matrix around vertical, horizontal, or both axes. </p>
+<p>The function flips the matrix in one of three different ways (row and column indices are 0-based): </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} _{ij} = \left\{ \begin{array}{l l} \texttt{src} _{\texttt{src.rows}-i-1,j} &amp; if\; \texttt{flipCode} = 0 \\ \texttt{src} _{i, \texttt{src.cols} -j-1} &amp; if\; \texttt{flipCode} &gt; 0 \\ \texttt{src} _{ \texttt{src.rows} -i-1, \texttt{src.cols} -j-1} &amp; if\; \texttt{flipCode} &lt; 0 \\ \end{array} \right.\]" src="form_431.png"/>
+</p>
+<p> The example scenarios of using the function are the following: Vertical flipping of the image (flipCode == 0) to switch between top-left and bottom-left image origin. This is a typical operation in video processing on Microsoft Windows* OS. Horizontal flipping of the image with the subsequent horizontal shift and absolute difference calculation to check for a vertical-axis symmetry (flipCode &gt; 0). Simultaneous horizontal and vertical flipping of the image with the subsequent shift and absolute difference calculation to check for a central symmetry (flipCode &lt; 0). Reversing the order of point arrays (flipCode &gt; 0 or flipCode == 0). Output image must be of the same depth as input one, size should be correct for given flipCode.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.flip"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">flipCode</td><td>a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79" title="Applies a generic geometrical transformation to an image.">remap</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga8f3d44d0458577ddfbd19cdd7b74e921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f3d44d0458577ddfbd19cdd7b74e921">&#9670;&nbsp;</a></span>LUT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::LUT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>lut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a look-up table transform of a matrix. </p>
+<p>The function LUT fills the output matrix with values from the look-up table. Indices of the entries are taken from the input matrix. That is, the function processes each element of src as follows: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I) \leftarrow \texttt{lut(src(I))}\]" src="form_599.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>. Output is a matrix of the same size and number of channels as src, and the same depth as lut.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.LUT"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix of 8-bit elements. </td></tr>
+    <tr><td class="paramname">lut</td><td>look-up table of 256 elements; in case of multi-channel input array, the table should either have a single channel (in this case the same table is used for all channels) or the same number of channels as in the input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3452de19b83ad409cd53f8c4a324df56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3452de19b83ad409cd53f8c4a324df56">&#9670;&nbsp;</a></span>merge3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::merge3 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates one 3-channel matrix out of 3 single-channel ones. </p>
+<p>The function merges several matrices to make a single multi-channel matrix. That is, each element of the output matrix will be a concatenation of the elements of the input matrices, where elements of i-th input matrix are treated as mv[i].<a class="el" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels()</a>-element vectors. Output matrix must be of <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a> type.</p>
+<p>The function split3 does the reverse operation.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>Function textual ID is "org.opencv.core.transform.merge3"</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+    <tr><td class="paramname">src3</td><td>third input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#ga657781c866d12b38dbcc6fbd99b05a82" title="Creates one 4-channel matrix out of 4 single-channel ones.">merge4</a>, <a class="el" href="group__gapi__transform.html#gadc8100e107cd663685328f97a4cb3315" title="Divides a 4-channel matrix into 4 single-channel matrices.">split4</a>, <a class="el" href="group__gapi__transform.html#gaa74fa34ff1f102dda12ac419dcf73a88" title="Divides a 3-channel matrix into 3 single-channel matrices.">split3</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga657781c866d12b38dbcc6fbd99b05a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga657781c866d12b38dbcc6fbd99b05a82">&#9670;&nbsp;</a></span>merge4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::merge4 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates one 4-channel matrix out of 4 single-channel ones. </p>
+<p>The function merges several matrices to make a single multi-channel matrix. That is, each element of the output matrix will be a concatenation of the elements of the input matrices, where elements of i-th input matrix are treated as mv[i].<a class="el" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels()</a>-element vectors. Output matrix must be of <a class="el" href="group__core__hal__interface.html#ga4519ad2827f771db8260c61207b782df">CV_8UC4</a> type.</p>
+<p>The function split4 does the reverse operation.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>Function textual ID is "org.opencv.core.transform.merge4"</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+    <tr><td class="paramname">src3</td><td>third input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+    <tr><td class="paramname">src4</td><td>fourth input <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> matrix to be merged. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#ga3452de19b83ad409cd53f8c4a324df56" title="Creates one 3-channel matrix out of 3 single-channel ones.">merge3</a>, <a class="el" href="group__gapi__transform.html#gadc8100e107cd663685328f97a4cb3315" title="Divides a 4-channel matrix into 4 single-channel matrices.">split4</a>, <a class="el" href="group__gapi__transform.html#gaa74fa34ff1f102dda12ac419dcf73a88" title="Divides a 3-channel matrix into 3 single-channel matrices.">split3</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga29644962014ea5945a4bd86023df3057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29644962014ea5945a4bd86023df3057">&#9670;&nbsp;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::normalize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>norm_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normalizes the norm or value range of an array. </p>
+<p>The function normalizes scale and shift the input array elements so that </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\| \texttt{dst} \| _{L_p}= \texttt{alpha}\]" src="form_428.png"/>
+</p>
+<p> (where p=Inf, 1 or 2) when normType=NORM_INF, NORM_L1, or NORM_L2, respectively; or so that </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\min _I \texttt{dst} (I)= \texttt{alpha} , \, \, \max _I \texttt{dst} (I)= \texttt{beta}\]" src="form_429.png"/>
+</p>
+<p> when normType=NORM_MINMAX (for dense arrays only).</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.normalize"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input array. </td></tr>
+    <tr><td class="paramname">alpha</td><td>norm value to normalize to or the lower range boundary in case of the range normalization. </td></tr>
+    <tr><td class="paramname">beta</td><td>upper range boundary in case of the range normalization; it is not used for the norm normalization. </td></tr>
+    <tr><td class="paramname">norm_type</td><td>normalization type (see <a class="el" href="group__core__array.html#gad12cefbcb5291cf958a85b4b67b6149f">cv::NormTypes</a>). </td></tr>
+    <tr><td class="paramname">ddepth</td><td>when negative, the output array has the same type as src; otherwise, it has the same number of channels as src and the depth =ddepth. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd>norm, <a class="el" href="classcv_1_1_mat.html#adf88c60c5b4980e05bb556080916978b" title="Converts an array to another data type with optional scaling.">Mat::convertTo</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaed0f225327703ac5074ab0a419670f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed0f225327703ac5074ab0a419670f79">&#9670;&nbsp;</a></span>remap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::remap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>map1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>map2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>interpolation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderMode</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a generic geometrical transformation to an image. </p>
+<p>The function remap transforms the source image using the specified map:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \texttt{src} (map_x(x,y),map_y(x,y))\]" src="form_594.png"/>
+</p>
+<p>where values of pixels with non-integer coordinates are computed using one of available interpolation methods. <img class="formulaInl" alt="$map_x$" src="form_595.png"/> and <img class="formulaInl" alt="$map_y$" src="form_596.png"/> can be encoded as separate floating-point maps in <img class="formulaInl" alt="$map_1$" src="form_597.png"/> and <img class="formulaInl" alt="$map_2$" src="form_598.png"/> respectively, or interleaved floating-point maps of <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/> in <img class="formulaInl" alt="$map_1$" src="form_597.png"/>, or fixed-point maps created by using convertMaps. The reason you might want to convert from floating to fixed-point representations of a map is that they can yield much faster (2x) remapping operations. In the converted case, <img class="formulaInl" alt="$map_1$" src="form_597.png"/> contains pairs (cvFloor(x), cvFloor(y)) and <img class="formulaInl" alt="$map_2$" src="form_598.png"/> contains indices in a table of interpolation coefficients. Output image must be of the same size and depth as input one.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>Function textual ID is "org.opencv.core.transform.remap"</li>
+<li>Due to current implementation limitations the size of an input and output images should be less than 32767x32767.</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image. </td></tr>
+    <tr><td class="paramname">map1</td><td>The first map of either (x,y) points or just x values having the type CV_16SC2, CV_32FC1, or CV_32FC2. </td></tr>
+    <tr><td class="paramname">map2</td><td>The second map of y values having the type CV_16UC1, CV_32FC1, or none (empty map if map1 is (x,y) points), respectively. </td></tr>
+    <tr><td class="paramname">interpolation</td><td>Interpolation method (see <a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121" title="interpolation algorithm">cv::InterpolationFlags</a>). The methods <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121acf959dca2480cc694ca016b81b442ceb">INTER_AREA</a> and <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac00f4a8155563cdc23437fc0959da935">INTER_LINEAR_EXACT</a> are not supported by this function. </td></tr>
+    <tr><td class="paramname">borderMode</td><td>Pixel extrapolation method (see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">cv::BorderTypes</a>). When borderMode=BORDER_TRANSPARENT, it means that the pixels in the destination image that corresponds to the "outliers" in the source image are not modified by the function. </td></tr>
+    <tr><td class="paramname">borderValue</td><td>Value used in case of a constant border. By default, it is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaedc5644eed6ef7c7487ebf85186c29f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedc5644eed6ef7c7487ebf85186c29f9">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::resize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fx</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fy</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>interpolation</em> = <code><a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">INTER_LINEAR</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resizes an image. </p>
+<p>The function resizes the image src down to or up to the specified size.</p>
+<p>Output image size will have the size dsize (when dsize is non-zero) or the size computed from src.size(), fx, and fy; the depth of output is the same as of src.</p>
+<p>If you want to resize src so that it fits the pre-created dst, you may call the function as follows: </p><div class="fragment"><div class="line"><span class="comment">// explicitly specify dsize=dst.size(); fx and fy will be computed from that.</span></div>
+<div class="line"><a class="code" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9">resize</a>(src, <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>.<a class="code" href="classcv_1_1___input_array.html#a0d8ed64f7bbbda6d34e3289681ffdff0">size</a>(), 0, 0, interpolation);</div>
+<div class="ttc" id="aclasscv_1_1___input_array_html_a0d8ed64f7bbbda6d34e3289681ffdff0"><div class="ttname"><a href="classcv_1_1___input_array.html#a0d8ed64f7bbbda6d34e3289681ffdff0">cv::_InputArray::size</a></div><div class="ttdeci">Size size(int i=-1) const</div></div>
+<div class="ttc" id="agroup__gapi__transform_html_gaedc5644eed6ef7c7487ebf85186c29f9"><div class="ttname"><a href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9">cv::gapi::resize</a></div><div class="ttdeci">GAPI_EXPORTS GMat resize(const GMat &amp;src, const Size &amp;dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR)</div><div class="ttdoc">Resizes an image.</div></div>
+<div class="ttc" id="agroup__imgproc__misc_html_ga52bb929b38b35664f16102ee054f0b3d"><div class="ttname"><a href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">cv::dst</a></div><div class="ttdeci">OutputArray dst</div><div class="ttdef"><b>Definition:</b> imgproc.hpp:3394</div></div>
+</div><!-- fragment --><p> If you want to decimate the image by factor of 2 in each direction, you can call the function this way: </p><div class="fragment"><div class="line"><span class="comment">// specify fx and fy and let the function compute the destination image size.</span></div>
+<div class="line"><a class="code" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9">resize</a>(src, <a class="code" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="code" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), 0.5, 0.5, interpolation);</div>
+<div class="ttc" id="agroup__core__basic_html_ga346f563897249351a34549137c8532a0"><div class="ttname"><a href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a></div><div class="ttdeci">Size2i Size</div><div class="ttdef"><b>Definition:</b> types.hpp:347</div></div>
+</div><!-- fragment --><p> To shrink an image, it will generally look best with <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121acf959dca2480cc694ca016b81b442ceb">cv::INTER_AREA</a> interpolation, whereas to enlarge an image, it will generally look best with <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121a55e404e7fa9684af79fe9827f36a5dc1">cv::INTER_CUBIC</a> (slow) or <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a> (faster but still looks OK).</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.resize"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dsize</td><td>output image size; if it equals zero, it is computed as: <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}\]" src="form_591.png"/>
+</p>
+ Either dsize or both fx and fy must be non-zero. </td></tr>
+    <tr><td class="paramname">fx</td><td>scale factor along the horizontal axis; when it equals 0, it is computed as <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{(double)dsize.width/src.cols}\]" src="form_592.png"/>
+</p>
+ </td></tr>
+    <tr><td class="paramname">fy</td><td>scale factor along the vertical axis; when it equals 0, it is computed as <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{(double)dsize.height/src.rows}\]" src="form_593.png"/>
+</p>
+ </td></tr>
+    <tr><td class="paramname">interpolation</td><td>interpolation method, see <a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121" title="interpolation algorithm">cv::InterpolationFlags</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaff73e711bc41b1ab7407726b3a0745f4" title="Applies an affine transformation to an image.">warpAffine</a>, <a class="el" href="group__gapi__transform.html#ga78c54d1f49389cc3a957c50235e0d269" title="Applies a perspective transformation to an image.">warpPerspective</a>, <a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79" title="Applies a generic geometrical transformation to an image.">remap</a>, <a class="el" href="group__gapi__transform.html#ga6a3eb9e7562d87fd5822f7ea8f8be3cf" title="Resizes a planar image.">resizeP</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6a3eb9e7562d87fd5822f7ea8f8be3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a3eb9e7562d87fd5822f7ea8f8be3cf">&#9670;&nbsp;</a></span>resizeP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat_p.html">GMatP</a> cv::gapi::resizeP </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat_p.html">GMatP</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>interpolation</em> = <code><a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resizes a planar image. </p>
+<p>The function resizes the image src down to or up to the specified size. Planar image memory layout is three planes laying in the memory contiguously, so the image height should be plane_height*plane_number, image type is <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>.</p>
+<p>Output image size will have the size dsize, the depth of output is the same as of src.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.transform.resizeP"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image, must be of <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> type; </td></tr>
+    <tr><td class="paramname">dsize</td><td>output image size; </td></tr>
+    <tr><td class="paramname">interpolation</td><td>interpolation method, only <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a> is supported at the moment</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaff73e711bc41b1ab7407726b3a0745f4" title="Applies an affine transformation to an image.">warpAffine</a>, <a class="el" href="group__gapi__transform.html#ga78c54d1f49389cc3a957c50235e0d269" title="Applies a perspective transformation to an image.">warpPerspective</a>, <a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79" title="Applies a generic geometrical transformation to an image.">remap</a>, <a class="el" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9" title="Resizes an image.">resize</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa74fa34ff1f102dda12ac419dcf73a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa74fa34ff1f102dda12ac419dcf73a88">&#9670;&nbsp;</a></span>split3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&gt; cv::gapi::split3 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divides a 3-channel matrix into 3 single-channel matrices. </p>
+<p>The function splits a 3-channel matrix into 3 single-channel matrices: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{mv} [c](I) = \texttt{src} (I)_c\]" src="form_430.png"/>
+</p>
+<p>All output matrices must be of <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> type.</p>
+<p>The function merge3 does the reverse operation.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>Function textual ID is "org.opencv.core.transform.split3"</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a> matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gadc8100e107cd663685328f97a4cb3315" title="Divides a 4-channel matrix into 4 single-channel matrices.">split4</a>, <a class="el" href="group__gapi__transform.html#ga3452de19b83ad409cd53f8c4a324df56" title="Creates one 3-channel matrix out of 3 single-channel ones.">merge3</a>, <a class="el" href="group__gapi__transform.html#ga657781c866d12b38dbcc6fbd99b05a82" title="Creates one 4-channel matrix out of 4 single-channel ones.">merge4</a> </dd></dl>
+
+</div>
+</div>
+<a id="gadc8100e107cd663685328f97a4cb3315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc8100e107cd663685328f97a4cb3315">&#9670;&nbsp;</a></span>split4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>,<a class="el" href="classcv_1_1_g_mat.html">GMat</a>&gt; cv::gapi::split4 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divides a 4-channel matrix into 4 single-channel matrices. </p>
+<p>The function splits a 4-channel matrix into 4 single-channel matrices: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{mv} [c](I) = \texttt{src} (I)_c\]" src="form_430.png"/>
+</p>
+<p>All output matrices must be of <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a> type.</p>
+<p>The function merge4 does the reverse operation.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>Function textual ID is "org.opencv.core.transform.split4"</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input <a class="el" href="group__core__hal__interface.html#ga4519ad2827f771db8260c61207b782df">CV_8UC4</a> matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaa74fa34ff1f102dda12ac419dcf73a88" title="Divides a 3-channel matrix into 3 single-channel matrices.">split3</a>, <a class="el" href="group__gapi__transform.html#ga3452de19b83ad409cd53f8c4a324df56" title="Creates one 3-channel matrix out of 3 single-channel ones.">merge3</a>, <a class="el" href="group__gapi__transform.html#ga657781c866d12b38dbcc6fbd99b05a82" title="Creates one 4-channel matrix out of 4 single-channel ones.">merge4</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaff73e711bc41b1ab7407726b3a0745f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff73e711bc41b1ab7407726b3a0745f4">&#9670;&nbsp;</a></span>warpAffine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::warpAffine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderMode</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">cv::BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies an affine transformation to an image. </p>
+<p>The function warpAffine transforms the source image using the specified matrix:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \texttt{src} ( \texttt{M} _{11} x + \texttt{M} _{12} y + \texttt{M} _{13}, \texttt{M} _{21} x + \texttt{M} _{22} y + \texttt{M} _{23})\]" src="form_603.png"/>
+</p>
+<p>when the flag <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121aa48be1c433186c4eae1ea86aa0ca75ba">WARP_INVERSE_MAP</a> is set. Otherwise, the transformation is first inverted with <a class="el" href="group__imgproc__transform.html#gafb757c0b5d35351d455ac0e603315cd1" title="Inverts an affine transformation.">invertAffineTransform</a> and then put in the formula above instead of M. The function cannot operate in-place.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">M</td><td><img class="formulaInl" alt="$2\times 3$" src="form_604.png"/> transformation matrix. </td></tr>
+    <tr><td class="paramname">dsize</td><td>size of the output image. </td></tr>
+    <tr><td class="paramname">flags</td><td>combination of interpolation methods (see <a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121" title="interpolation algorithm">InterpolationFlags</a>) and the optional flag <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121aa48be1c433186c4eae1ea86aa0ca75ba">WARP_INVERSE_MAP</a> that means that M is the inverse transformation ( <img class="formulaInl" alt="$\texttt{dst}\rightarrow\texttt{src}$" src="form_602.png"/> ). </td></tr>
+    <tr><td class="paramname">borderMode</td><td>pixel extrapolation method (see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>); borderMode=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a886a5eb6b466854d63f9e742d5c8eefe" title="uvwxyz|abcdefgh|ijklmno">BORDER_TRANSPARENT</a> isn't supported </td></tr>
+    <tr><td class="paramname">borderValue</td><td>value used in case of a constant border; by default, it is 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#ga78c54d1f49389cc3a957c50235e0d269" title="Applies a perspective transformation to an image.">warpPerspective</a>, <a class="el" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9" title="Resizes an image.">resize</a>, <a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79" title="Applies a generic geometrical transformation to an image.">remap</a>, <a class="el" href="group__imgproc__transform.html#gaed86cdbae22f3e635204da86f4b87a9a" title="Retrieves a pixel rectangle from an image with sub-pixel accuracy.">getRectSubPix</a>, <a class="el" href="group__core__array.html#ga1fde6d7b2bc077001501b8c201f2ec09" title="Performs the matrix transformation of every array element.">transform</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga78c54d1f49389cc3a957c50235e0d269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78c54d1f49389cc3a957c50235e0d269">&#9670;&nbsp;</a></span>warpPerspective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::warpPerspective </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">cv::INTER_LINEAR</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderMode</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">cv::BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a perspective transformation to an image. </p>
+<p>The function warpPerspective transforms the source image using the specified matrix:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \texttt{src} \left ( \frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} , \frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} \right )\]" src="form_600.png"/>
+</p>
+<p>when the flag <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121aa48be1c433186c4eae1ea86aa0ca75ba">WARP_INVERSE_MAP</a> is set. Otherwise, the transformation is first inverted with invert and then put in the formula above instead of M. The function cannot operate in-place.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">M</td><td><img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> transformation matrix. </td></tr>
+    <tr><td class="paramname">dsize</td><td>size of the output image. </td></tr>
+    <tr><td class="paramname">flags</td><td>combination of interpolation methods (<a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121ac97d8e4880d8b5d509e96825c7522deb">INTER_LINEAR</a> or <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121aa5521d8e080972c762467c45f3b70e6c">INTER_NEAREST</a>) and the optional flag <a class="el" href="group__imgproc__transform.html#gga5bb5a1fea74ea38e1a5445ca803ff121aa48be1c433186c4eae1ea86aa0ca75ba">WARP_INVERSE_MAP</a>, that sets M as the inverse transformation ( <img class="formulaInl" alt="$\texttt{dst}\rightarrow\texttt{src}$" src="form_602.png"/> ). </td></tr>
+    <tr><td class="paramname">borderMode</td><td>pixel extrapolation method (<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838" title="iiiiii|abcdefgh|iiiiiii with some specified i">BORDER_CONSTANT</a> or <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aa1de4cff95e3377d6d0cbe7569bd4e9f" title="aaaaaa|abcdefgh|hhhhhhh">BORDER_REPLICATE</a>). </td></tr>
+    <tr><td class="paramname">borderValue</td><td>value used in case of a constant border; by default, it equals 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__transform.html#gaff73e711bc41b1ab7407726b3a0745f4" title="Applies an affine transformation to an image.">warpAffine</a>, <a class="el" href="group__gapi__transform.html#gaedc5644eed6ef7c7487ebf85186c29f9" title="Resizes an image.">resize</a>, <a class="el" href="group__gapi__transform.html#gaed0f225327703ac5074ab0a419670f79" title="Applies a generic geometrical transformation to an image.">remap</a>, <a class="el" href="group__imgproc__transform.html#gaed86cdbae22f3e635204da86f4b87a9a" title="Retrieves a pixel rectangle from an image with sub-pixel accuracy.">getRectSubPix</a>, <a class="el" href="group__core__array.html#gae8d88cf62250eb5bbb40a7b3576eb152" title="Performs the perspective matrix transformation of vectors.">perspectiveTransform</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

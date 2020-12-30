@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::MatOp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_mat_op.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1_mat_op-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::MatOp<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__basic.html">Basic structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac6eeff02c5ef401a8c1dcd150551f004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#ac6eeff02c5ef401a8c1dcd150551f004">MatOp</a> ()</td></tr>
+<tr class="separator:ac6eeff02c5ef401a8c1dcd150551f004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accafea4060e8980f95a37f37bee9310e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#accafea4060e8980f95a37f37bee9310e">~MatOp</a> ()</td></tr>
+<tr class="separator:accafea4060e8980f95a37f37bee9310e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeadefd8cf1e2d0b6734c16d084b1e6e7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#aeadefd8cf1e2d0b6734c16d084b1e6e7">elementWise</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr) const</td></tr>
+<tr class="separator:aeadefd8cf1e2d0b6734c16d084b1e6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655357fd7395545f8e16638fe53678d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a655357fd7395545f8e16638fe53678d0">assign</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_mat_op.html#ac9fe29306a3f2243d2596180a37f4281">type</a>=-1) const =0</td></tr>
+<tr class="separator:a655357fd7395545f8e16638fe53678d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a39d30a977f213f196420244fe1708b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a4a39d30a977f213f196420244fe1708b">roi</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;rowRange, const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;colRange, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a4a39d30a977f213f196420244fe1708b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f7b6420807bae20997866f8a6ab31d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a45f7b6420807bae20997866f8a6ab31d">diag</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> d, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a45f7b6420807bae20997866f8a6ab31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1fe46a1ea6c41cf63d809b0ce548d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#aef1fe46a1ea6c41cf63d809b0ce548d0">augAssignAdd</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:aef1fe46a1ea6c41cf63d809b0ce548d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd99639183ba7ee3b0b341c79cfac6b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a3fd99639183ba7ee3b0b341c79cfac6b">augAssignSubtract</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:a3fd99639183ba7ee3b0b341c79cfac6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e52d774d4302c606fbc17d644eacce3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a2e52d774d4302c606fbc17d644eacce3">augAssignMultiply</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:a2e52d774d4302c606fbc17d644eacce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec933b6b67e03715da4dfce17d57ce15"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#aec933b6b67e03715da4dfce17d57ce15">augAssignDivide</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:aec933b6b67e03715da4dfce17d57ce15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fae0add0d6e798ce92e557db2eeee2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a37fae0add0d6e798ce92e557db2eeee2">augAssignAnd</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:a37fae0add0d6e798ce92e557db2eeee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32c6465441d60c7f4822fb206a426eb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#aa32c6465441d60c7f4822fb206a426eb">augAssignOr</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:aa32c6465441d60c7f4822fb206a426eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f3b1d244a55aa5b48c56478e587899"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a56f3b1d244a55aa5b48c56478e587899">augAssignXor</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;m) const</td></tr>
+<tr class="separator:a56f3b1d244a55aa5b48c56478e587899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3f8e10e50175134dce2bde93049f63"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#afc3f8e10e50175134dce2bde93049f63">add</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr2, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:afc3f8e10e50175134dce2bde93049f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25141a35abeec27b5eb33e4130a7b51"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#ad25141a35abeec27b5eb33e4130a7b51">add</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:ad25141a35abeec27b5eb33e4130a7b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3a27e2d042073f2d765522c3f2c870"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#adf3a27e2d042073f2d765522c3f2c870">subtract</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr2, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:adf3a27e2d042073f2d765522c3f2c870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ace3bec7c07ca07a159c4c6f058ef1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a29ace3bec7c07ca07a159c4c6f058ef1">subtract</a> (const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a29ace3bec7c07ca07a159c4c6f058ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a4ac08519b8229bfa99fba68f3bdc2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#ac5a4ac08519b8229bfa99fba68f3bdc2">multiply</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr2, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1) const</td></tr>
+<tr class="separator:ac5a4ac08519b8229bfa99fba68f3bdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c992cafa34003955815dcaf95f5e745"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a5c992cafa34003955815dcaf95f5e745">multiply</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, double s, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a5c992cafa34003955815dcaf95f5e745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b2962155ee09a215639c59c50340f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#aa8b2962155ee09a215639c59c50340f4">divide</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr2, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1) const</td></tr>
+<tr class="separator:aa8b2962155ee09a215639c59c50340f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a646bfe227f9731f502e97d728b3b7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a26a646bfe227f9731f502e97d728b3b7">divide</a> (double s, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a26a646bfe227f9731f502e97d728b3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f820ed2ffca67359f02ac8351e8e7ab"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a1f820ed2ffca67359f02ac8351e8e7ab">abs</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a1f820ed2ffca67359f02ac8351e8e7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6293cc8922e39419ca4a91e9343f51b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#ad6293cc8922e39419ca4a91e9343f51b">transpose</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:ad6293cc8922e39419ca4a91e9343f51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcfaf5b1087ec3359583a9a7a38f9f0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#affcfaf5b1087ec3359583a9a7a38f9f0">matmul</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr1, const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr2, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:affcfaf5b1087ec3359583a9a7a38f9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bc65dedc2b1a9b626b277b49493bc0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a33bc65dedc2b1a9b626b277b49493bc0">invert</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>, <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;res) const</td></tr>
+<tr class="separator:a33bc65dedc2b1a9b626b277b49493bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80309fab69773987e1c740279b82abd1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#a80309fab69773987e1c740279b82abd1">size</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr) const</td></tr>
+<tr class="separator:a80309fab69773987e1c740279b82abd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fe29306a3f2243d2596180a37f4281"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_mat_op.html#ac9fe29306a3f2243d2596180a37f4281">type</a> (const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;expr) const</td></tr>
+<tr class="separator:ac9fe29306a3f2243d2596180a37f4281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac6eeff02c5ef401a8c1dcd150551f004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6eeff02c5ef401a8c1dcd150551f004">&#9670;&nbsp;</a></span>MatOp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::MatOp::MatOp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accafea4060e8980f95a37f37bee9310e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accafea4060e8980f95a37f37bee9310e">&#9670;&nbsp;</a></span>~MatOp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::MatOp::~MatOp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1f820ed2ffca67359f02ac8351e8e7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f820ed2ffca67359f02ac8351e8e7ab">&#9670;&nbsp;</a></span>abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::abs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc3f8e10e50175134dce2bde93049f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3f8e10e50175134dce2bde93049f63">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad25141a35abeec27b5eb33e4130a7b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25141a35abeec27b5eb33e4130a7b51">&#9670;&nbsp;</a></span>add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a655357fd7395545f8e16638fe53678d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655357fd7395545f8e16638fe53678d0">&#9670;&nbsp;</a></span>assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::assign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef1fe46a1ea6c41cf63d809b0ce548d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1fe46a1ea6c41cf63d809b0ce548d0">&#9670;&nbsp;</a></span>augAssignAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignAdd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37fae0add0d6e798ce92e557db2eeee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37fae0add0d6e798ce92e557db2eeee2">&#9670;&nbsp;</a></span>augAssignAnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignAnd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec933b6b67e03715da4dfce17d57ce15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec933b6b67e03715da4dfce17d57ce15">&#9670;&nbsp;</a></span>augAssignDivide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignDivide </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e52d774d4302c606fbc17d644eacce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e52d774d4302c606fbc17d644eacce3">&#9670;&nbsp;</a></span>augAssignMultiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignMultiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa32c6465441d60c7f4822fb206a426eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32c6465441d60c7f4822fb206a426eb">&#9670;&nbsp;</a></span>augAssignOr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignOr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fd99639183ba7ee3b0b341c79cfac6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd99639183ba7ee3b0b341c79cfac6b">&#9670;&nbsp;</a></span>augAssignSubtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignSubtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56f3b1d244a55aa5b48c56478e587899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f3b1d244a55aa5b48c56478e587899">&#9670;&nbsp;</a></span>augAssignXor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::augAssignXor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45f7b6420807bae20997866f8a6ab31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f7b6420807bae20997866f8a6ab31d">&#9670;&nbsp;</a></span>diag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::diag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8b2962155ee09a215639c59c50340f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b2962155ee09a215639c59c50340f4">&#9670;&nbsp;</a></span>divide() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::divide </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26a646bfe227f9731f502e97d728b3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a646bfe227f9731f502e97d728b3b7">&#9670;&nbsp;</a></span>divide() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::divide </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeadefd8cf1e2d0b6734c16d084b1e6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeadefd8cf1e2d0b6734c16d084b1e6e7">&#9670;&nbsp;</a></span>elementWise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool cv::MatOp::elementWise </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33bc65dedc2b1a9b626b277b49493bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bc65dedc2b1a9b626b277b49493bc0">&#9670;&nbsp;</a></span>invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::invert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affcfaf5b1087ec3359583a9a7a38f9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affcfaf5b1087ec3359583a9a7a38f9f0">&#9670;&nbsp;</a></span>matmul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::matmul </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5a4ac08519b8229bfa99fba68f3bdc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a4ac08519b8229bfa99fba68f3bdc2">&#9670;&nbsp;</a></span>multiply() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c992cafa34003955815dcaf95f5e745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c992cafa34003955815dcaf95f5e745">&#9670;&nbsp;</a></span>multiply() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a39d30a977f213f196420244fe1708b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a39d30a977f213f196420244fe1708b">&#9670;&nbsp;</a></span>roi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::roi </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>rowRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>colRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80309fab69773987e1c740279b82abd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80309fab69773987e1c740279b82abd1">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::MatOp::size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf3a27e2d042073f2d765522c3f2c870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3a27e2d042073f2d765522c3f2c870">&#9670;&nbsp;</a></span>subtract() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29ace3bec7c07ca07a159c4c6f058ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ace3bec7c07ca07a159c4c6f058ef1">&#9670;&nbsp;</a></span>subtract() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6293cc8922e39419ca4a91e9343f51b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6293cc8922e39419ca4a91e9343f51b">&#9670;&nbsp;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::MatOp::transpose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9fe29306a3f2243d2596180a37f4281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fe29306a3f2243d2596180a37f4281">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::MatOp::type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat_expr.html">MatExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_mat_op.html">MatOp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

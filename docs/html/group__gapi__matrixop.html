@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Graph API: Operations on matrices</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__gapi__matrixop.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Graph API: Operations on matrices<div class="ingroups"><a class="el" href="group__gapi__core.html">G-API Core functionality</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga41b5151ede5d72db53ff17fcb894e2d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5">cv::gapi::min</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>)</td></tr>
+<tr class="memdesc:ga41b5151ede5d72db53ff17fcb894e2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates per-element minimum of two matrices.  <a href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga41b5151ede5d72db53ff17fcb894e2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82c0c4c077981e3a20f66985cc14fd7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b">cv::gapi::max</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>)</td></tr>
+<tr class="memdesc:ga82c0c4c077981e3a20f66985cc14fd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates per-element maximum of two matrices.  <a href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga82c0c4c077981e3a20f66985cc14fd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94767794c27b8fb68b9d0681b4d80e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga94767794c27b8fb68b9d0681b4d80e9d">cv::gapi::absDiff</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>)</td></tr>
+<tr class="memdesc:ga94767794c27b8fb68b9d0681b4d80e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element absolute difference between two matrices.  <a href="group__gapi__matrixop.html#ga94767794c27b8fb68b9d0681b4d80e9d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga94767794c27b8fb68b9d0681b4d80e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c7efaed2e2e165bcb746be7377ab4a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga6c7efaed2e2e165bcb746be7377ab4a2">cv::gapi::absDiffC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;c)</td></tr>
+<tr class="memdesc:ga6c7efaed2e2e165bcb746be7377ab4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates absolute value of matrix elements.  <a href="group__gapi__matrixop.html#ga6c7efaed2e2e165bcb746be7377ab4a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6c7efaed2e2e165bcb746be7377ab4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga971f453892da82cd370376686ad84628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga971f453892da82cd370376686ad84628">cv::gapi::sum</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga971f453892da82cd370376686ad84628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates sum of all matrix elements.  <a href="group__gapi__matrixop.html#ga971f453892da82cd370376686ad84628">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga971f453892da82cd370376686ad84628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5adbd0c875e1c097800a095b66ea7587"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_opaque.html">GOpaque</a>&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga5adbd0c875e1c097800a095b66ea7587">cv::gapi::countNonZero</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga5adbd0c875e1c097800a095b66ea7587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts non-zero array elements.  <a href="group__gapi__matrixop.html#ga5adbd0c875e1c097800a095b66ea7587">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5adbd0c875e1c097800a095b66ea7587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0595801e238e1f51ea4dde38fb32dcd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2">cv::gapi::addWeighted</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>, double <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga0595801e238e1f51ea4dde38fb32dcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the weighted sum of two matrices.  <a href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0595801e238e1f51ea4dde38fb32dcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1c603ebe3345e4a5736cb1bb04a8810"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#gaa1c603ebe3345e4a5736cb1bb04a8810">cv::gapi::normL1</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:gaa1c603ebe3345e4a5736cb1bb04a8810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the absolute <a class="el" href="structcv_1_1_l1.html">L1</a> norm of a matrix.  <a href="group__gapi__matrixop.html#gaa1c603ebe3345e4a5736cb1bb04a8810">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa1c603ebe3345e4a5736cb1bb04a8810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4990f09c21f66d7bd310fab927f078ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga4990f09c21f66d7bd310fab927f078ee">cv::gapi::normL2</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga4990f09c21f66d7bd310fab927f078ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the absolute <a class="el" href="structcv_1_1_l2.html">L2</a> norm of a matrix.  <a href="group__gapi__matrixop.html#ga4990f09c21f66d7bd310fab927f078ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4990f09c21f66d7bd310fab927f078ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64ed336e98862aa7b60e61075c59f522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga64ed336e98862aa7b60e61075c59f522">cv::gapi::normInf</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga64ed336e98862aa7b60e61075c59f522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the absolute infinite norm of a matrix.  <a href="group__gapi__matrixop.html#ga64ed336e98862aa7b60e61075c59f522">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga64ed336e98862aa7b60e61075c59f522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfee5fdbf0ea96c245b4db310455bb88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#gabfee5fdbf0ea96c245b4db310455bb88">cv::gapi::integral</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga0f262b67b82b080bffaa407d07522cad">sdepth</a>=-1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga1d89ef6260c8b91efb54ab2a92690c71">sqdepth</a>=-1)</td></tr>
+<tr class="memdesc:gabfee5fdbf0ea96c245b4db310455bb88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the integral of an image.  <a href="group__gapi__matrixop.html#gabfee5fdbf0ea96c245b4db310455bb88">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabfee5fdbf0ea96c245b4db310455bb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade23ba28c40b37eb433a85ff3b2bfee4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#gade23ba28c40b37eb433a85ff3b2bfee4">cv::gapi::threshold</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;thresh, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;<a class="el" href="group__highgui__c.html#ga90c530b00018f984f641cb89bb7bf577">maxval</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="memdesc:gade23ba28c40b37eb433a85ff3b2bfee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a fixed-level threshold to each matrix element.  <a href="group__gapi__matrixop.html#gade23ba28c40b37eb433a85ff3b2bfee4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gade23ba28c40b37eb433a85ff3b2bfee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa31c3541fe1a04f00f591e1af88264f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#gaa31c3541fe1a04f00f591e1af88264f3">cv::gapi::threshold</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;<a class="el" href="group__highgui__c.html#ga90c530b00018f984f641cb89bb7bf577">maxval</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="separator:gaa31c3541fe1a04f00f591e1af88264f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23198d0510edfc653426e90dd13dc8fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__matrixop.html#ga23198d0510edfc653426e90dd13dc8fa">cv::gapi::inRange</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;threshLow, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;threshUp)</td></tr>
+<tr class="memdesc:ga23198d0510edfc653426e90dd13dc8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a range-level threshold to each matrix element.  <a href="group__gapi__matrixop.html#ga23198d0510edfc653426e90dd13dc8fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga23198d0510edfc653426e90dd13dc8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga94767794c27b8fb68b9d0681b4d80e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94767794c27b8fb68b9d0681b4d80e9d">&#9670;&nbsp;</a></span>absDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::absDiff </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element absolute difference between two matrices. </p>
+<p>The function absDiff calculates absolute difference between two matrices of the same size and depth: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1}(I) - \texttt{src2}(I)|)\]" src="form_443.png"/>
+</p>
+<p> where I is a multi-dimensional index of matrix elements. In case of multi-channel matrices, each channel is processed independently. Output matrix must have the same size and depth as input matrices.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.absdiff" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_mat_expr.html#a1c85ca423d45c6e54b179431097e086f" title="Calculates an absolute value of each matrix element.">abs</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6c7efaed2e2e165bcb746be7377ab4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c7efaed2e2e165bcb746be7377ab4a2">&#9670;&nbsp;</a></span>absDiffC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::absDiffC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates absolute value of matrix elements. </p>
+<p>The function abs calculates absolute difference between matrix elements and given scalar value: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1}(I) - \texttt{matC}(I)|)\]" src="form_578.png"/>
+</p>
+<p> where matC is constructed from given scalar c and has the same sizes and depth as input matrix src.</p>
+<p>Output matrix must be of the same size and depth as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.absdiffC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">c</td><td>scalar to be subtracted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga0595801e238e1f51ea4dde38fb32dcd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0595801e238e1f51ea4dde38fb32dcd2">&#9670;&nbsp;</a></span>addWeighted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::addWeighted </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gamma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the weighted sum of two matrices. </p>
+<p>The function addWeighted calculates the weighted sum of two matrices as follows: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I)* \texttt{alpha} + \texttt{src2} (I)* \texttt{beta} + \texttt{gamma} )\]" src="form_409.png"/>
+</p>
+<p> where I is a multi-dimensional index of array elements. In case of multi-channel matrices, each channel is processed independently.</p>
+<p>The function can be replaced with a matrix expression: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst}(I) = \texttt{alpha} * \texttt{src1}(I) - \texttt{beta} * \texttt{src2}(I) + \texttt{gamma} \]" src="form_579.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.addweighted" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">alpha</td><td>weight of the first matrix elements. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix of the same size and channel number as src1. </td></tr>
+    <tr><td class="paramname">beta</td><td>weight of the second matrix elements. </td></tr>
+    <tr><td class="paramname">gamma</td><td>scalar added to each sum. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga5adbd0c875e1c097800a095b66ea7587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5adbd0c875e1c097800a095b66ea7587">&#9670;&nbsp;</a></span>countNonZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_opaque.html">GOpaque</a>&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; cv::gapi::countNonZero </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts non-zero array elements. </p>
+<p>The function returns the number of non-zero elements in src : </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sum _{I: \; \texttt{src} (I) \ne0 } 1\]" src="form_413.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.countNonZero" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input single-channel matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga1f7d190675212e9226127dceb76fc8d1" title="Calculates an average (mean) of matrix elements.">mean</a>, <a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga23198d0510edfc653426e90dd13dc8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23198d0510edfc653426e90dd13dc8fa">&#9670;&nbsp;</a></span>inRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::inRange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>threshLow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>threshUp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a range-level threshold to each matrix element. </p>
+<p>The function applies range-level thresholding to a single- or multiple-channel matrix. It sets output pixel value to OxFF if the corresponding pixel value of input matrix is in specified range,or 0 otherwise.</p>
+<p>Input and output matrices must be CV_8UC1.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.inRange"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix (CV_8UC1). </td></tr>
+    <tr><td class="paramname">threshLow</td><td>lower boundary value. </td></tr>
+    <tr><td class="paramname">threshUp</td><td>upper boundary value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#gade23ba28c40b37eb433a85ff3b2bfee4" title="Applies a fixed-level threshold to each matrix element.">threshold</a> </dd></dl>
+
+</div>
+</div>
+<a id="gabfee5fdbf0ea96c245b4db310455bb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabfee5fdbf0ea96c245b4db310455bb88">&#9670;&nbsp;</a></span>integral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&gt; cv::gapi::integral </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>sdepth</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>sqdepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the integral of an image. </p>
+<p>The function calculates one or more integral images for the source image as follows:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{sum} (X,Y) = \sum _{x&lt;X,y&lt;Y} \texttt{image} (x,y)\]" src="form_587.png"/>
+</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{sqsum} (X,Y) = \sum _{x&lt;X,y&lt;Y} \texttt{image} (x,y)^2\]" src="form_588.png"/>
+</p>
+<p>The function return integral image as <img class="formulaInl" alt="$(W+1)\times (H+1)$" src="form_589.png"/> , 32-bit integer or floating-point (32f or 64f) and integral image for squared pixel values; it is <img class="formulaInl" alt="$(W+1)\times (H+)$" src="form_590.png"/>, double-precision floating-point (64f) array.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.integral"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">sdepth</td><td>desired depth of the integral and the tilted integral images, CV_32S, CV_32F, or CV_64F. </td></tr>
+    <tr><td class="paramname">sqdepth</td><td>desired depth of the integral image of squared pixel values, CV_32F or CV_64F. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga82c0c4c077981e3a20f66985cc14fd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82c0c4c077981e3a20f66985cc14fd7b">&#9670;&nbsp;</a></span>max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::max </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates per-element maximum of two matrices. </p>
+<p>The function max calculates the per-element maximum of two matrices of the same size, number of channels and depth: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{src2} (I))\]" src="form_453.png"/>
+</p>
+<p> where I is a multi-dimensional index of matrix elements. In case of multi-channel matrices, each channel is processed independently. Output matrix must be of the same size and depth as src1.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.max" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix of the same size and depth as src1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__core__array.html#ga6f61888c094a15a3e3c668174df9c37d" title="Performs the per-element comparison of two arrays or an array and scalar value.">compare</a>, <a class="el" href="group__gapi__pixelwise.html#gafbdb95cf2a54f9c698b6d290ba0ac993" title="Performs the per-element comparison of two matrices checking if elements from first matrix are equal ...">cmpEQ</a>, <a class="el" href="group__gapi__pixelwise.html#ga38b9687e232d17bcd8ca9cafb6205551" title="Performs the per-element comparison of two matrices checking if elements from first matrix are greate...">cmpGT</a>, <a class="el" href="group__gapi__pixelwise.html#gabed26effeee2d0be58abb292474790bd" title="Performs the per-element comparison of two matrices checking if elements from first matrix are greate...">cmpGE</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga41b5151ede5d72db53ff17fcb894e2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41b5151ede5d72db53ff17fcb894e2d5">&#9670;&nbsp;</a></span>min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::min </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates per-element minimum of two matrices. </p>
+<p>The function min calculates the per-element minimum of two matrices of the same size, number of channels and depth: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{src2} (I))\]" src="form_451.png"/>
+</p>
+<p> where I is a multi-dimensional index of matrix elements. In case of multi-channel matrices, each channel is processed independently. Output matrix must be of the same size and depth as src1.</p>
+<p>Supported input matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.min" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix of the same size and depth as src1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a>, <a class="el" href="group__gapi__pixelwise.html#gafbdb95cf2a54f9c698b6d290ba0ac993" title="Performs the per-element comparison of two matrices checking if elements from first matrix are equal ...">cmpEQ</a>, <a class="el" href="group__gapi__pixelwise.html#gae13466777b47822242dd14699060c48c" title="Performs the per-element comparison of two matrices checking if elements from first matrix are less t...">cmpLT</a>, <a class="el" href="group__gapi__pixelwise.html#ga94238f44384c9d77b13257f668febbce" title="Performs the per-element comparison of two matrices checking if elements from first matrix are less o...">cmpLE</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga64ed336e98862aa7b60e61075c59f522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64ed336e98862aa7b60e61075c59f522">&#9670;&nbsp;</a></span>normInf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> cv::gapi::normInf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the absolute infinite norm of a matrix. </p>
+<p>This version of normInf calculates the absolute infinite norm of src.</p>
+<p>As example for one array consider the function <img class="formulaInl" alt="$r(x)= \begin{pmatrix} x \\ 1-x \end{pmatrix}, x \in [-1;1]$" src="form_416.png"/>. The <img class="formulaInl" alt="$ L_{\infty} $" src="form_418.png"/> norm for the sample value <img class="formulaInl" alt="$r(-1) = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$" src="form_419.png"/> is calculated as follows </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(-1) \|_{L_\infty} &amp;= \max(|-1|,|2|) = 2 \end{align*}" src="form_585.png"/>
+</p>
+<p> and for <img class="formulaInl" alt="$r(0.5) = \begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$" src="form_421.png"/> the calculation is </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(0.5) \|_{L_\infty} &amp;= \max(|0.5|,|0.5|) = 0.5. \end{align*}" src="form_586.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.norminf" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#gaa1c603ebe3345e4a5736cb1bb04a8810" title="Calculates the absolute L1 norm of a matrix.">normL1</a>, <a class="el" href="group__gapi__matrixop.html#ga4990f09c21f66d7bd310fab927f078ee" title="Calculates the absolute L2 norm of a matrix.">normL2</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa1c603ebe3345e4a5736cb1bb04a8810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1c603ebe3345e4a5736cb1bb04a8810">&#9670;&nbsp;</a></span>normL1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> cv::gapi::normL1 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the absolute <a class="el" href="structcv_1_1_l1.html">L1</a> norm of a matrix. </p>
+<p>This version of normL1 calculates the absolute <a class="el" href="structcv_1_1_l1.html">L1</a> norm of src.</p>
+<p>As example for one array consider the function <img class="formulaInl" alt="$r(x)= \begin{pmatrix} x \\ 1-x \end{pmatrix}, x \in [-1;1]$" src="form_416.png"/>. The <img class="formulaInl" alt="$ L_{1} $" src="form_425.png"/> norm for the sample value <img class="formulaInl" alt="$r(-1) = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$" src="form_419.png"/> is calculated as follows </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(-1) \|_{L_1} &amp;= |-1| + |2| = 3 \\ \end{align*}" src="form_580.png"/>
+</p>
+<p> and for <img class="formulaInl" alt="$r(0.5) = \begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$" src="form_421.png"/> the calculation is </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(0.5) \|_{L_1} &amp;= |0.5| + |0.5| = 1 \\ \end{align*}" src="form_581.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.norml1" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga4990f09c21f66d7bd310fab927f078ee" title="Calculates the absolute L2 norm of a matrix.">normL2</a>, <a class="el" href="group__gapi__matrixop.html#ga64ed336e98862aa7b60e61075c59f522" title="Calculates the absolute infinite norm of a matrix.">normInf</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga4990f09c21f66d7bd310fab927f078ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4990f09c21f66d7bd310fab927f078ee">&#9670;&nbsp;</a></span>normL2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> cv::gapi::normL2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the absolute <a class="el" href="structcv_1_1_l2.html">L2</a> norm of a matrix. </p>
+<p>This version of normL2 calculates the absolute <a class="el" href="structcv_1_1_l2.html">L2</a> norm of src.</p>
+<p>As example for one array consider the function <img class="formulaInl" alt="$r(x)= \begin{pmatrix} x \\ 1-x \end{pmatrix}, x \in [-1;1]$" src="form_416.png"/>. The <img class="formulaInl" alt="$ L_{2} $" src="form_582.png"/> norm for the sample value <img class="formulaInl" alt="$r(-1) = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$" src="form_419.png"/> is calculated as follows </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(-1) \|_{L_2} &amp;= \sqrt{(-1)^{2} + (2)^{2}} = \sqrt{5} \\ \end{align*}" src="form_583.png"/>
+</p>
+<p> and for <img class="formulaInl" alt="$r(0.5) = \begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$" src="form_421.png"/> the calculation is </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{align*} \| r(0.5) \|_{L_2} &amp;= \sqrt{(0.5)^{2} + (0.5)^{2}} = \sqrt{0.5} \\ \end{align*}" src="form_584.png"/>
+</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>. </p><dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.norml2" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#gaa1c603ebe3345e4a5736cb1bb04a8810" title="Calculates the absolute L1 norm of a matrix.">normL1</a>, <a class="el" href="group__gapi__matrixop.html#ga64ed336e98862aa7b60e61075c59f522" title="Calculates the absolute infinite norm of a matrix.">normInf</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga971f453892da82cd370376686ad84628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga971f453892da82cd370376686ad84628">&#9670;&nbsp;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> cv::gapi::sum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates sum of all matrix elements. </p>
+<p>The function sum calculates sum of all matrix elements, independently for each channel.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.sum" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga5adbd0c875e1c097800a095b66ea7587" title="Counts non-zero array elements.">countNonZero</a>, <a class="el" href="group__gapi__math.html#ga1f7d190675212e9226127dceb76fc8d1" title="Calculates an average (mean) of matrix elements.">mean</a>, <a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa31c3541fe1a04f00f591e1af88264f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa31c3541fe1a04f00f591e1af88264f3">&#9670;&nbsp;</a></span>threshold() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&gt; cv::gapi::threshold </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>maxval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. This function applicable for all threshold types except CV_THRESH_OTSU and CV_THRESH_TRIANGLE </p><dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.thresholdOT" </dd></dl>
+
+</div>
+</div>
+<a id="gade23ba28c40b37eb433a85ff3b2bfee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade23ba28c40b37eb433a85ff3b2bfee4">&#9670;&nbsp;</a></span>threshold() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::threshold </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>thresh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>maxval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a fixed-level threshold to each matrix element. </p>
+<p>The function applies fixed-level thresholding to a single- or multiple-channel matrix. The function is typically used to get a bi-level (binary) image out of a grayscale image ( cmp functions could be also used for this purpose) or for removing a noise, that is, filtering out pixels with too small or too large values. There are several types of thresholding supported by the function. They are determined by type parameter.</p>
+<p>Also, the special values <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff" title="flag, use Otsu algorithm to choose the optimal threshold value">cv::THRESH_OTSU</a> or <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a22ffcf680811aed95be6c7f5cd809621" title="flag, use Triangle algorithm to choose the optimal threshold value">cv::THRESH_TRIANGLE</a> may be combined with one of the above values. In these cases, the function determines the optimal threshold value using the Otsu's or Triangle algorithm and uses it instead of the specified thresh . The function returns the computed threshold value in addititon to thresholded matrix. The Otsu's and Triangle methods are implemented only for 8-bit matrices.</p>
+<p>Input image should be single channel only in case of <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a95251923e8e22f368ffa86ba8bce87ff" title="flag, use Otsu algorithm to choose the optimal threshold value">cv::THRESH_OTSU</a> or <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a22ffcf680811aed95be6c7f5cd809621" title="flag, use Triangle algorithm to choose the optimal threshold value">cv::THRESH_TRIANGLE</a> flags. Output matrix must be of the same size and depth as src.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.matrixop.threshold"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix (<a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, or <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>). </td></tr>
+    <tr><td class="paramname">thresh</td><td>threshold value. </td></tr>
+    <tr><td class="paramname">maxval</td><td>maximum value to use with the <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a147222a96556ebc1d948b372bcd7ac59">cv::THRESH_BINARY</a> and <a class="el" href="group__imgproc__misc.html#ggaa9e58d2860d4afa658ef70a9b1115576a19120b1a11d8067576cc24f4d2f03754">cv::THRESH_BINARY_INV</a> thresholding types. </td></tr>
+    <tr><td class="paramname">type</td><td>thresholding type (see the <a class="el" href="group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576">cv::ThresholdTypes</a>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a>, <a class="el" href="group__gapi__pixelwise.html#ga38b9687e232d17bcd8ca9cafb6205551" title="Performs the per-element comparison of two matrices checking if elements from first matrix are greate...">cmpGT</a>, <a class="el" href="group__gapi__pixelwise.html#ga94238f44384c9d77b13257f668febbce" title="Performs the per-element comparison of two matrices checking if elements from first matrix are less o...">cmpLE</a>, <a class="el" href="group__gapi__pixelwise.html#gabed26effeee2d0be58abb292474790bd" title="Performs the per-element comparison of two matrices checking if elements from first matrix are greate...">cmpGE</a>, <a class="el" href="group__gapi__pixelwise.html#gae13466777b47822242dd14699060c48c" title="Performs the per-element comparison of two matrices checking if elements from first matrix are less t...">cmpLT</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

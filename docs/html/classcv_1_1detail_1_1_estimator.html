@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::detail::Estimator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1detail_1_1_estimator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classcv_1_1detail_1_1_estimator-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::detail::Estimator<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__stitching.html">Images stitching</a> &raquo; <a class="el" href="group__stitching__rotation.html">Rotation Estimation</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rotation estimator base class.  
+ <a href="classcv_1_1detail_1_1_estimator.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="motion__estimators_8hpp_source.html">motion_estimators.hpp</a>&gt;</code></p>
+
+<p>Производные классы:<a class="el" href="classcv_1_1detail_1_1_affine_based_estimator.html">cv::detail::AffineBasedEstimator</a>, <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">cv::detail::BundleAdjusterBase</a> и <a class="el" href="classcv_1_1detail_1_1_homography_based_estimator.html">cv::detail::HomographyBasedEstimator</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab542b893998bd59ad667c408bde5db4b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_estimator.html#ab542b893998bd59ad667c408bde5db4b">~Estimator</a> ()</td></tr>
+<tr class="separator:ab542b893998bd59ad667c408bde5db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba004679908bb92ed8a2c8b8bae71c76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_estimator.html#aba004679908bb92ed8a2c8b8bae71c76">CV_WRAP_AS</a> (apply) bool operator()(const std</td></tr>
+<tr class="memdesc:aba004679908bb92ed8a2c8b8bae71c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera parameters.  <a href="classcv_1_1detail_1_1_estimator.html#aba004679908bb92ed8a2c8b8bae71c76">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba004679908bb92ed8a2c8b8bae71c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a84e44d3507da3e2015df9d06ad1e6c4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_estimator.html#a84e44d3507da3e2015df9d06ad1e6c4d">estimate</a> (const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_image_features.html">ImageFeatures</a> &gt; &amp;<a class="el" href="group__stitching__match.html#ga9abb80158a01f6f8cd3a1a782075f481">features</a>, const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;pairwise_matches, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_camera_params.html">CameraParams</a> &gt; &amp;cameras)=0</td></tr>
+<tr class="memdesc:a84e44d3507da3e2015df9d06ad1e6c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must implement camera parameters estimation logic in order to make the wrapper detail::Estimator::operator()_ work.  <a href="classcv_1_1detail_1_1_estimator.html#a84e44d3507da3e2015df9d06ad1e6c4d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84e44d3507da3e2015df9d06ad1e6c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Rotation estimator base class. </p>
+<p>It takes features of all images, pairwise matches between all images and estimates rotations of all cameras.</p>
+<dl class="section note"><dt>Заметки</dt><dd>The coordinate system origin is implementation-dependent, but you can always normalize the rotations in respect to the first camera, for instance. : </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab542b893998bd59ad667c408bde5db4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab542b893998bd59ad667c408bde5db4b">&#9670;&nbsp;</a></span>~Estimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::detail::Estimator::~Estimator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aba004679908bb92ed8a2c8b8bae71c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba004679908bb92ed8a2c8b8bae71c76">&#9670;&nbsp;</a></span>CV_WRAP_AS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::detail::Estimator::CV_WRAP_AS </td>
+          <td>(</td>
+          <td class="paramtype">apply&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estimates camera parameters. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>Features of images </td></tr>
+    <tr><td class="paramname">pairwise_matches</td><td>Pairwise matches of images </td></tr>
+    <tr><td class="paramname">cameras</td><td>Estimated camera parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True in case of success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a84e44d3507da3e2015df9d06ad1e6c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e44d3507da3e2015df9d06ad1e6c4d">&#9670;&nbsp;</a></span>estimate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool cv::detail::Estimator::estimate </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_image_features.html">ImageFeatures</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pairwise_matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_camera_params.html">CameraParams</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cameras</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method must implement camera parameters estimation logic in order to make the wrapper detail::Estimator::operator()_ work. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>Features of images </td></tr>
+    <tr><td class="paramname">pairwise_matches</td><td>Pairwise matches of images </td></tr>
+    <tr><td class="paramname">cameras</td><td>Estimated camera parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True in case of success, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/stitching/detail/<a class="el" href="motion__estimators_8hpp_source.html">motion_estimators.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcv_1_1detail_1_1_estimator.html">Estimator</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

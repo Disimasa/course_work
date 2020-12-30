@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Шаблон класса cv::flann::GenericIndex&lt; Distance &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1flann_1_1_generic_index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1flann_1_1_generic_index-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса cv::flann::GenericIndex&lt; Distance &gt;<div class="ingroups"><a class="el" href="group__flann.html">Clustering and Search in Multi-Dimensional Spaces</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The FLANN nearest neighbor index class. This class is templated with the type of elements for which the index is built.  
+ <a href="classcv_1_1flann_1_1_generic_index.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2flann_8hpp_source.html">flann.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a02a5a5a197e139b8969c505c9a6c9859"><td class="memItemLeft" align="right" valign="top">typedef Distance::ElementType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a></td></tr>
+<tr class="separator:a02a5a5a197e139b8969c505c9a6c9859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7623b6f2ebc7c1dc406460cd0cee02"><td class="memItemLeft" align="right" valign="top">typedef Distance::ResultType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a></td></tr>
+<tr class="separator:a4b7623b6f2ebc7c1dc406460cd0cee02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a8fff14185f9f3d2f2311b528f65b146c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a8fff14185f9f3d2f2311b528f65b146c">GenericIndex</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;features, const ::cvflann::IndexParams &amp;params, Distance distance=Distance())</td></tr>
+<tr class="memdesc:a8fff14185f9f3d2f2311b528f65b146c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a nearest neighbor search index for a given dataset.  <a href="classcv_1_1flann_1_1_generic_index.html#a8fff14185f9f3d2f2311b528f65b146c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8fff14185f9f3d2f2311b528f65b146c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c56f72d0ab22c48d1773121a1fc82e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a15c56f72d0ab22c48d1773121a1fc82e">~GenericIndex</a> ()</td></tr>
+<tr class="separator:a15c56f72d0ab22c48d1773121a1fc82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c3ce570adfb7b19c7cda4a320a3d9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a50c3ce570adfb7b19c7cda4a320a3d9e">knnSearch</a> (const std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a> &gt; &amp;query, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;indices, std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> &gt; &amp;dists, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> knn, const ::cvflann::SearchParams &amp;params)</td></tr>
+<tr class="memdesc:a50c3ce570adfb7b19c7cda4a320a3d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a K-nearest neighbor search for a given query point using the index.  <a href="classcv_1_1flann_1_1_generic_index.html#a50c3ce570adfb7b19c7cda4a320a3d9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a50c3ce570adfb7b19c7cda4a320a3d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32640ad9c77e4ff85a1a8ac399b13e53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a32640ad9c77e4ff85a1a8ac399b13e53">knnSearch</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;queries, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;indices, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;dists, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> knn, const ::cvflann::SearchParams &amp;params)</td></tr>
+<tr class="separator:a32640ad9c77e4ff85a1a8ac399b13e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd40ca52fdc5e0dd3d82445cc71a478b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#abd40ca52fdc5e0dd3d82445cc71a478b">radiusSearch</a> (const std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a> &gt; &amp;query, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;indices, std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> &gt; &amp;dists, <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> <a class="el" href="group__imgproc__c.html#ga7bea932e1cd0c79d103a7870a1921a4e">radius</a>, const ::cvflann::SearchParams &amp;params)</td></tr>
+<tr class="memdesc:abd40ca52fdc5e0dd3d82445cc71a478b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a radius nearest neighbor search for a given query point using the index.  <a href="classcv_1_1flann_1_1_generic_index.html#abd40ca52fdc5e0dd3d82445cc71a478b">Подробнее...</a><br /></td></tr>
+<tr class="separator:abd40ca52fdc5e0dd3d82445cc71a478b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc05dd06931731c9d5260b42f62072d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#afc05dd06931731c9d5260b42f62072d6">radiusSearch</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;query, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;indices, <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;dists, <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> <a class="el" href="group__imgproc__c.html#ga7bea932e1cd0c79d103a7870a1921a4e">radius</a>, const ::cvflann::SearchParams &amp;params)</td></tr>
+<tr class="separator:afc05dd06931731c9d5260b42f62072d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42cc01f395c948fd9c7cb57fb7793671"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a42cc01f395c948fd9c7cb57fb7793671">save</a> (<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> <a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="separator:a42cc01f395c948fd9c7cb57fb7793671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e8e412d2743612d626d4280ad9483d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a51e8e412d2743612d626d4280ad9483d">veclen</a> () const</td></tr>
+<tr class="separator:a51e8e412d2743612d626d4280ad9483d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe04ca85a1e20d655ad972ba9b3d72a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#affe04ca85a1e20d655ad972ba9b3d72a">size</a> () const</td></tr>
+<tr class="separator:affe04ca85a1e20d655ad972ba9b3d72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99472345811cf94c9084b907487f0a08"><td class="memItemLeft" align="right" valign="top">::cvflann::IndexParams&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a99472345811cf94c9084b907487f0a08">getParameters</a> ()</td></tr>
+<tr class="separator:a99472345811cf94c9084b907487f0a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c30d3c89ca4ac07fc517097b2a9d59"><td class="memItemLeft" align="right" valign="top">CV_DEPRECATEDconst ::cvflann::IndexParams *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a73c30d3c89ca4ac07fc517097b2a9d59">getIndexParameters</a> ()</td></tr>
+<tr class="separator:a73c30d3c89ca4ac07fc517097b2a9d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename Distance&gt;<br />
+class cv::flann::GenericIndex&lt; Distance &gt;</h3>
+
+<p>The FLANN nearest neighbor index class. This class is templated with the type of elements for which the index is built. </p>
+<p><code>Distance</code> functor specifies the metric to be used to calculate the distance between two points. There are several <code>Distance</code> functors that are readily available:</p>
+<p>cv::cvflann::L2_Simple - Squared Euclidean distance functor. This is the simpler, unrolled version. This is preferable for very low dimensionality data (eg 3D points)</p>
+<p>cv::flann::L2 - Squared Euclidean distance functor, optimized version.</p>
+<p>cv::flann::L1 - Manhattan distance functor, optimized version.</p>
+<p>cv::flann::MinkowskiDistance - The Minkowsky distance functor. This is highly optimised with loop unrolling. The computation of squared root at the end is omitted for efficiency.</p>
+<p>cv::flann::MaxDistance - The max distance functor. It computes the maximum distance between two vectors. This distance is not a valid kdtree distance, it's not dimensionwise additive.</p>
+<p>cv::flann::HammingLUT - Hamming distance functor. It counts the bit differences between two strings using a lookup table implementation.</p>
+<p>cv::flann::Hamming - Hamming distance functor. Population count is performed using library calls, if available. Lookup table implementation is used as a fallback.</p>
+<p>cv::flann::Hamming2 - Hamming distance functor. Population count is implemented in 12 arithmetic operations (one of which is multiplication).</p>
+<p>cv::flann::DNAmmingLUT - Adaptation of the <a class="el" href="structcv_1_1_hamming.html">Hamming</a> distance functor to DNA comparison. As the four bases A, C, G, T of the DNA (or A, G, C, U for RNA) can be coded on 2 bits, it counts the bits pairs differences between two sequences using a lookup table implementation.</p>
+<p>cv::flann::DNAmming2 - Adaptation of the <a class="el" href="structcv_1_1_hamming.html">Hamming</a> distance functor to DNA comparison. Bases differences count are vectorised thanks to arithmetic operations using standard registers (AVX2 and AVX-512 should come in a near future).</p>
+<p>cv::flann::HistIntersectionDistance - The histogram intersection distance functor.</p>
+<p>cv::flann::HellingerDistance - The Hellinger distance functor.</p>
+<p>cv::flann::ChiSquareDistance - The chi-square distance functor.</p>
+<p>cv::flann::KL_Divergence - The Kullback-Leibler divergence functor.</p>
+<p>Although the provided implementations cover a vast range of cases, it is also possible to use a custom implementation. The distance functor is a class whose <code>operator()</code> computes the distance between two features. If the distance is also a kd-tree compatible distance, it should also provide an <code>accum_dist()</code> method that computes the distance between individual feature dimensions.</p>
+<p>In addition to <code>operator()</code> and <code>accum_dist()</code>, a distance functor should also define the <code>ElementType</code> and the <code>ResultType</code> as the types of the elements it operates on and the type of the result it computes. If a distance functor can be used as a kd-tree distance (meaning that the full distance between a pair of features can be accumulated from the partial distances between the individual dimensions) a typedef <code>is_kdtree_distance</code> should be present inside the distance functor. If the distance is not a kd-tree distance, but it's a distance in a vector space (the individual dimensions of the elements it operates on can be accessed independently) a typedef <code>is_vector_space_distance</code> should be defined inside the functor. If neither typedef is defined, the distance is assumed to be a metric distance and will only be used with indexes operating on generic metric distances. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a4b7623b6f2ebc7c1dc406460cd0cee02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7623b6f2ebc7c1dc406460cd0cee02">&#9670;&nbsp;</a></span>DistanceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Distance::ResultType <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::<a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02a5a5a197e139b8969c505c9a6c9859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a5a5a197e139b8969c505c9a6c9859">&#9670;&nbsp;</a></span>ElementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Distance::ElementType <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::<a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a8fff14185f9f3d2f2311b528f65b146c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fff14185f9f3d2f2311b528f65b146c">&#9670;&nbsp;</a></span>GenericIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::<a class="el" href="classcv_1_1flann_1_1_generic_index.html">GenericIndex</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::cvflann::IndexParams &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Distance&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>Distance()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a nearest neighbor search index for a given dataset. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>Matrix of containing the features(points) to index. The size of the matrix is num_features x feature_dimensionality and the data type of the elements in the matrix must coincide with the type of the index. </td></tr>
+    <tr><td class="paramname">params</td><td>Structure containing the index parameters. The type of index that will be constructed depends on the type of this parameter. See the description. </td></tr>
+    <tr><td class="paramname">distance</td><td>The method constructs a fast search structure from a set of features using the specified algorithm with specified parameters, as defined by params. params is a reference to one of the following class IndexParams descendants:</td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li><b>LinearIndexParams</b> When passing an object of this type, the index will perform a linear, brute-force search. : <div class="fragment"><div class="line"><span class="keyword">struct </span>LinearIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>KDTreeIndexParams</b> When passing an object of this type the index constructed will consist of a set of randomized kd-trees which will be searched in parallel. : <div class="fragment"><div class="line"><span class="keyword">struct </span>KDTreeIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    KDTreeIndexParams( <span class="keywordtype">int</span> trees = 4 );</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>HierarchicalClusteringIndexParams</b> When passing an object of this type the index constructed will be a hierarchical tree of clusters, dividing each set of points into n clusters whose centers are picked among the points without further refinement of their position. This algorithm fits both floating, integer and binary vectors. : <div class="fragment"><div class="line"><span class="keyword">struct </span>HierarchicalClusteringIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    HierarchicalClusteringIndexParams(</div>
+<div class="line">        <span class="keywordtype">int</span> branching = 32,</div>
+<div class="line">        flann_centers_init_t centers_init = CENTERS_RANDOM,</div>
+<div class="line">        <span class="keywordtype">int</span> trees = 4,</div>
+<div class="line">        <span class="keywordtype">int</span> leaf_size = 100);</div>
+<div class="line"> </div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>KMeansIndexParams</b> When passing an object of this type the index constructed will be a hierarchical k-means tree (one tree by default), dividing each set of points into n clusters whose barycenters are refined iteratively. Note that this algorithm has been extended to the support of binary vectors as an alternative to LSH when knn search speed is the criterium. It will also outperform LSH when processing directly (i.e. without the use of MCA/PCA) datasets whose points share mostly the same values for most of the dimensions. It is recommended to set more than one tree with binary data. : <div class="fragment"><div class="line"><span class="keyword">struct </span>KMeansIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    KMeansIndexParams(</div>
+<div class="line">        <span class="keywordtype">int</span> branching = 32,</div>
+<div class="line">        <span class="keywordtype">int</span> iterations = 11,</div>
+<div class="line">        flann_centers_init_t centers_init = CENTERS_RANDOM,</div>
+<div class="line">        <span class="keywordtype">float</span> cb_index = 0.2,</div>
+<div class="line">        <span class="keywordtype">int</span> trees = 1);</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>CompositeIndexParams</b> When using a parameters object of this type the index created combines the randomized kd-trees and the hierarchical k-means tree. : <div class="fragment"><div class="line"><span class="keyword">struct </span>CompositeIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    CompositeIndexParams(</div>
+<div class="line">        <span class="keywordtype">int</span> trees = 4,</div>
+<div class="line">        <span class="keywordtype">int</span> branching = 32,</div>
+<div class="line">        <span class="keywordtype">int</span> iterations = 11,</div>
+<div class="line">        flann_centers_init_t centers_init = CENTERS_RANDOM,</div>
+<div class="line">        <span class="keywordtype">float</span> cb_index = 0.2 );</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>LshIndexParams</b> When using a parameters object of this type the index created uses multi-probe LSH (by Multi-Probe LSH: Efficient Indexing for High-Dimensional Similarity Search by Qin Lv, William Josephson, Zhe Wang, Moses Charikar, Kai Li., Proceedings of the 33rd International Conference on Very Large Data Bases (VLDB). Vienna, Austria. September 2007). This algorithm is designed for binary vectors. : <div class="fragment"><div class="line"><span class="keyword">struct </span>LshIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    LshIndexParams(</div>
+<div class="line">        <span class="keywordtype">int</span> table_number,</div>
+<div class="line">        <span class="keywordtype">int</span> key_size,</div>
+<div class="line">        <span class="keywordtype">int</span> multi_probe_level );</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>AutotunedIndexParams</b> When passing an object of this type the index created is automatically tuned to offer the best performance, by choosing the optimal index type (randomized kd-trees, hierarchical kmeans, linear) and parameters for the dataset provided. : <div class="fragment"><div class="line"><span class="keyword">struct </span>AutotunedIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    AutotunedIndexParams(</div>
+<div class="line">        <span class="keywordtype">float</span> target_precision = 0.9,</div>
+<div class="line">        <span class="keywordtype">float</span> build_weight = 0.01,</div>
+<div class="line">        <span class="keywordtype">float</span> memory_weight = 0,</div>
+<div class="line">        <span class="keywordtype">float</span> sample_fraction = 0.1 );</div>
+<div class="line">};</div>
+</div><!-- fragment --></li>
+<li><b>SavedIndexParams</b> This object type is used for loading a previously saved index from the disk. : <div class="fragment"><div class="line"><span class="keyword">struct </span>SavedIndexParams : <span class="keyword">public</span> IndexParams</div>
+<div class="line">{</div>
+<div class="line">    SavedIndexParams( <a class="code" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> <a class="code" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a> );</div>
+<div class="line">};</div>
+<div class="ttc" id="agroup__core__basic_html_ga1f6634802eeadfd7245bc75cf3e216c2"><div class="ttname"><a href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">cv::String</a></div><div class="ttdeci">std::string String</div><div class="ttdef"><b>Definition:</b> cvstd.hpp:152</div></div>
+<div class="ttc" id="agroup__core__c_html_gacc427f35f3bd9f865d39012657cc42f8"><div class="ttname"><a href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a></div><div class="ttdeci">const char const char ** filename</div><div class="ttdef"><b>Definition:</b> core_c.h:2627</div></div>
+</div><!-- fragment --> </li>
+</ul>
+
+</div>
+</div>
+<a id="a15c56f72d0ab22c48d1773121a1fc82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c56f72d0ab22c48d1773121a1fc82e">&#9670;&nbsp;</a></span>~GenericIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::~<a class="el" href="classcv_1_1flann_1_1_generic_index.html">GenericIndex</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a73c30d3c89ca4ac07fc517097b2a9d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c30d3c89ca4ac07fc517097b2a9d59">&#9670;&nbsp;</a></span>getIndexParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CV_DEPRECATEDconst ::cvflann::IndexParams* <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::getIndexParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99472345811cf94c9084b907487f0a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99472345811cf94c9084b907487f0a08">&#9670;&nbsp;</a></span>getParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::cvflann::IndexParams <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::getParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32640ad9c77e4ff85a1a8ac399b13e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32640ad9c77e4ff85a1a8ac399b13e53">&#9670;&nbsp;</a></span>knnSearch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::knnSearch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>queries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>knn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::cvflann::SearchParams &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50c3ce570adfb7b19c7cda4a320a3d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c3ce570adfb7b19c7cda4a320a3d9e">&#9670;&nbsp;</a></span>knnSearch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::knnSearch </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>knn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::cvflann::SearchParams &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a K-nearest neighbor search for a given query point using the index. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>The query point </td></tr>
+    <tr><td class="paramname">indices</td><td>Vector that will contain the indices of the K-nearest neighbors found. It must have at least knn size. </td></tr>
+    <tr><td class="paramname">dists</td><td>Vector that will contain the distances to the K-nearest neighbors found. It must have at least knn size. </td></tr>
+    <tr><td class="paramname">knn</td><td>Number of nearest neighbors to search for. </td></tr>
+    <tr><td class="paramname">params</td><td>SearchParams </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc05dd06931731c9d5260b42f62072d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc05dd06931731c9d5260b42f62072d6">&#9670;&nbsp;</a></span>radiusSearch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::radiusSearch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a>&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::cvflann::SearchParams &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd40ca52fdc5e0dd3d82445cc71a478b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd40ca52fdc5e0dd3d82445cc71a478b">&#9670;&nbsp;</a></span>radiusSearch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::radiusSearch </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a02a5a5a197e139b8969c505c9a6c9859">ElementType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1flann_1_1_generic_index.html#a4b7623b6f2ebc7c1dc406460cd0cee02">DistanceType</a>&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::cvflann::SearchParams &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a radius nearest neighbor search for a given query point using the index. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>The query point. </td></tr>
+    <tr><td class="paramname">indices</td><td>Vector that will contain the indices of the nearest neighbors found. </td></tr>
+    <tr><td class="paramname">dists</td><td>Vector that will contain the distances to the nearest neighbors found. It has the same number of elements as indices. </td></tr>
+    <tr><td class="paramname">radius</td><td>The search radius. </td></tr>
+    <tr><td class="paramname">params</td><td>SearchParams</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function returns the number of nearest neighbors found. </p>
+
+</div>
+</div>
+<a id="a42cc01f395c948fd9c7cb57fb7793671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42cc01f395c948fd9c7cb57fb7793671">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affe04ca85a1e20d655ad972ba9b3d72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe04ca85a1e20d655ad972ba9b3d72a">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51e8e412d2743612d626d4280ad9483d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e8e412d2743612d626d4280ad9483d">&#9670;&nbsp;</a></span>veclen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Distance &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1flann_1_1_generic_index.html">cv::flann::GenericIndex</a>&lt; Distance &gt;::veclen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2flann_8hpp_source.html">flann.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1flann.html">flann</a></li><li class="navelem"><a class="el" href="classcv_1_1flann_1_1_generic_index.html">GenericIndex</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::StereoBM</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_stereo_b_m.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classcv_1_1_stereo_b_m-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::StereoBM<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__calib3d.html">Camera Calibration and 3D Reconstruction</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class for computing stereo correspondence using the block matching algorithm, introduced and contributed to OpenCV by K. Konolige.  
+ <a href="classcv_1_1_stereo_b_m.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2calib3d_8hpp_source.html">calib3d.hpp</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classcv_1_1_stereo_matcher.html">cv::StereoMatcher</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a879113dd8efbb7aaf9cdce2a2ad442ac"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_stereo_b_m.html#a879113dd8efbb7aaf9cdce2a2ad442aca9b5f32162b35799e3c29e1bfd73e93df">PREFILTER_NORMALIZED_RESPONSE</a> = 0
+, <a class="el" href="classcv_1_1_stereo_b_m.html#a879113dd8efbb7aaf9cdce2a2ad442acabf381e03e290b2b94541738193a6abd6">PREFILTER_XSOBEL</a> = 1
+ }</td></tr>
+<tr class="separator:a879113dd8efbb7aaf9cdce2a2ad442ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classcv_1_1_stereo_matcher"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcv_1_1_stereo_matcher')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classcv_1_1_stereo_matcher.html">cv::StereoMatcher</a></td></tr>
+<tr class="memitem:a40f6c524aa876fa57abee166ea6ae4a9 inherit pub_types_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_stereo_matcher.html#a40f6c524aa876fa57abee166ea6ae4a9a6aadf3b0bd4503bde2531592e5f90e0b">DISP_SHIFT</a> = 4
+, <a class="el" href="classcv_1_1_stereo_matcher.html#a40f6c524aa876fa57abee166ea6ae4a9a5b4b128a781d8002c3bc2640912295a4">DISP_SCALE</a> = (1 &lt;&lt; DISP_SHIFT)
+ }</td></tr>
+<tr class="separator:a40f6c524aa876fa57abee166ea6ae4a9 inherit pub_types_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afbaaa52528059baae40fbc5ab75927ed"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#afbaaa52528059baae40fbc5ab75927ed">getPreFilterType</a> () const =0</td></tr>
+<tr class="separator:afbaaa52528059baae40fbc5ab75927ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d37d73bfebdcb1d3e6542c5a6046216"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a2d37d73bfebdcb1d3e6542c5a6046216">setPreFilterType</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> preFilterType)=0</td></tr>
+<tr class="separator:a2d37d73bfebdcb1d3e6542c5a6046216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbf21ee2cb86b89bf81c0388aa03128"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a8cbf21ee2cb86b89bf81c0388aa03128">getPreFilterSize</a> () const =0</td></tr>
+<tr class="separator:a8cbf21ee2cb86b89bf81c0388aa03128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6661d4d283af962bbb6f28f39c9f75c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#af6661d4d283af962bbb6f28f39c9f75c">setPreFilterSize</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> preFilterSize)=0</td></tr>
+<tr class="separator:af6661d4d283af962bbb6f28f39c9f75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ced7f1b07f131c930c9aa7467e27915"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a1ced7f1b07f131c930c9aa7467e27915">getPreFilterCap</a> () const =0</td></tr>
+<tr class="separator:a1ced7f1b07f131c930c9aa7467e27915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cfe5ed960986ebf55eede77e36c500"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a63cfe5ed960986ebf55eede77e36c500">setPreFilterCap</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> preFilterCap)=0</td></tr>
+<tr class="separator:a63cfe5ed960986ebf55eede77e36c500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7301ec0ce729733338ce4fc1447cd1aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a7301ec0ce729733338ce4fc1447cd1aa">getTextureThreshold</a> () const =0</td></tr>
+<tr class="separator:a7301ec0ce729733338ce4fc1447cd1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5f6c3e069d3f80d70cd20c68042d63"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#abc5f6c3e069d3f80d70cd20c68042d63">setTextureThreshold</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> textureThreshold)=0</td></tr>
+<tr class="separator:abc5f6c3e069d3f80d70cd20c68042d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cd5f6f47ffa004252a2a9988e305e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a25cd5f6f47ffa004252a2a9988e305e3">getUniquenessRatio</a> () const =0</td></tr>
+<tr class="separator:a25cd5f6f47ffa004252a2a9988e305e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad372acbc766d3e1902e10f68eabf462c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#ad372acbc766d3e1902e10f68eabf462c">setUniquenessRatio</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> uniquenessRatio)=0</td></tr>
+<tr class="separator:ad372acbc766d3e1902e10f68eabf462c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6d928c1ffd54fd70dae51dcaee7e4e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a7b6d928c1ffd54fd70dae51dcaee7e4e">getSmallerBlockSize</a> () const =0</td></tr>
+<tr class="separator:a7b6d928c1ffd54fd70dae51dcaee7e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc7fab8310637e067c2820287be0309"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a8dc7fab8310637e067c2820287be0309">setSmallerBlockSize</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize)=0</td></tr>
+<tr class="separator:a8dc7fab8310637e067c2820287be0309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0438712b774c73faff4a9359abbd3272"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a0438712b774c73faff4a9359abbd3272">getROI1</a> () const =0</td></tr>
+<tr class="separator:a0438712b774c73faff4a9359abbd3272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dbdd38bb65078f895fd37dd7a8af6e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a0dbdd38bb65078f895fd37dd7a8af6e1">setROI1</a> (<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> roi1)=0</td></tr>
+<tr class="separator:a0dbdd38bb65078f895fd37dd7a8af6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea65e36a3596fb3759f9af899d62709a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#aea65e36a3596fb3759f9af899d62709a">getROI2</a> () const =0</td></tr>
+<tr class="separator:aea65e36a3596fb3759f9af899d62709a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492dcde02f8f463d496a5f6044e9da7d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a492dcde02f8f463d496a5f6044e9da7d">setROI2</a> (<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> roi2)=0</td></tr>
+<tr class="separator:a492dcde02f8f463d496a5f6044e9da7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_stereo_matcher"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_stereo_matcher')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_stereo_matcher.html">cv::StereoMatcher</a></td></tr>
+<tr class="memitem:a00aba25ff64a8372da49ff24fdc89224 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a00aba25ff64a8372da49ff24fdc89224">compute</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> left, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> right, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> disparity)=0</td></tr>
+<tr class="memdesc:a00aba25ff64a8372da49ff24fdc89224 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes disparity map for the specified stereo pair.  <a href="classcv_1_1_stereo_matcher.html#a00aba25ff64a8372da49ff24fdc89224">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00aba25ff64a8372da49ff24fdc89224 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af972783d739f5467e7104fc1cb6eaa inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a4af972783d739f5467e7104fc1cb6eaa">getMinDisparity</a> () const =0</td></tr>
+<tr class="separator:a4af972783d739f5467e7104fc1cb6eaa inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fba7d4adad338411cf35b10a9b2fbbf inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a3fba7d4adad338411cf35b10a9b2fbbf">setMinDisparity</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minDisparity)=0</td></tr>
+<tr class="separator:a3fba7d4adad338411cf35b10a9b2fbbf inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2940ef1c7ef37b8ec7bf356ee730083 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#ae2940ef1c7ef37b8ec7bf356ee730083">getNumDisparities</a> () const =0</td></tr>
+<tr class="separator:ae2940ef1c7ef37b8ec7bf356ee730083 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6ab931603daefc3b47f7b3f213745c inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#aca6ab931603daefc3b47f7b3f213745c">setNumDisparities</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> numDisparities)=0</td></tr>
+<tr class="separator:aca6ab931603daefc3b47f7b3f213745c inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8c5cef885164a9be52f70784ad96ae inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#acb8c5cef885164a9be52f70784ad96ae">getBlockSize</a> () const =0</td></tr>
+<tr class="separator:acb8c5cef885164a9be52f70784ad96ae inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca9b3ea61e0d2568adf7632aa1edacf inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a1ca9b3ea61e0d2568adf7632aa1edacf">setBlockSize</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize)=0</td></tr>
+<tr class="separator:a1ca9b3ea61e0d2568adf7632aa1edacf inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94ce00b42694343a0ecd31b05f60305 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#ab94ce00b42694343a0ecd31b05f60305">getSpeckleWindowSize</a> () const =0</td></tr>
+<tr class="separator:ab94ce00b42694343a0ecd31b05f60305 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47443270bb22ccd01ab38b25fff60366 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a47443270bb22ccd01ab38b25fff60366">setSpeckleWindowSize</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> speckleWindowSize)=0</td></tr>
+<tr class="separator:a47443270bb22ccd01ab38b25fff60366 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f27843d92a26cb87e1124d832cc25f inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#af0f27843d92a26cb87e1124d832cc25f">getSpeckleRange</a> () const =0</td></tr>
+<tr class="separator:af0f27843d92a26cb87e1124d832cc25f inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217a3c796afa369fb1e542bc6b4b40b8 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a217a3c796afa369fb1e542bc6b4b40b8">setSpeckleRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> speckleRange)=0</td></tr>
+<tr class="separator:a217a3c796afa369fb1e542bc6b4b40b8 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a49d154f8fc752727f43d92697c32ef inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#a8a49d154f8fc752727f43d92697c32ef">getDisp12MaxDiff</a> () const =0</td></tr>
+<tr class="separator:a8a49d154f8fc752727f43d92697c32ef inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af507243dbcf906b78c2aaae5f8adeac8 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_matcher.html#af507243dbcf906b78c2aaae5f8adeac8">setDisp12MaxDiff</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> disp12MaxDiff)=0</td></tr>
+<tr class="separator:af507243dbcf906b78c2aaae5f8adeac8 inherit pub_methods_classcv_1_1_stereo_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a827c8b2781ed17574805f373e6054ff1">Algorithm</a> ()</td></tr>
+<tr class="separator:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8ae826127fa0f1f8d10a24841bd376f8">~Algorithm</a> ()</td></tr>
+<tr class="separator:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">clear</a> ()</td></tr>
+<tr class="memdesc:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the algorithm state.  <a href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">write</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="memdesc:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores algorithm parameters in a file storage.  <a href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">write</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &gt; &amp;fs, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()) const</td></tr>
+<tr class="memdesc:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">simplified API for language bindings Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm parameters from a file storage.  <a href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">empty</a> () const</td></tr>
+<tr class="memdesc:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classcv_1_1_algorithm.html" title="This is a base class for all more or less complex algorithms in OpenCV.">Algorithm</a> is empty (e.g. in the very beginning or after unsuccessful read.  <a href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#af5584a693c6fe6a3b8e0fcdd6c25d1fd">save</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>) const</td></tr>
+<tr class="separator:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a6ec6ed12df12de3ae03f50fcd2118cd7">getDefaultName</a> () const</td></tr>
+<tr class="separator:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a87cc2f8b00de380b6665eb88019b15b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_stereo_b_m.html">StereoBM</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stereo_b_m.html#a87cc2f8b00de380b6665eb88019b15b7">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> numDisparities=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize=21)</td></tr>
+<tr class="memdesc:a87cc2f8b00de380b6665eb88019b15b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="classcv_1_1_stereo_b_m.html" title="Class for computing stereo correspondence using the block matching algorithm, introduced and contribu...">StereoBM</a> object.  <a href="classcv_1_1_stereo_b_m.html#a87cc2f8b00de380b6665eb88019b15b7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a87cc2f8b00de380b6665eb88019b15b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm from the file node.  <a href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">load</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from the file.  <a href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">loadFromString</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;strModel, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from a String.  <a href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a68eeca71617474ad3d4561786f0289d2">writeFormat</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="separator:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Class for computing stereo correspondence using the block matching algorithm, introduced and contributed to OpenCV by K. Konolige. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a879113dd8efbb7aaf9cdce2a2ad442ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879113dd8efbb7aaf9cdce2a2ad442ac">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a879113dd8efbb7aaf9cdce2a2ad442aca9b5f32162b35799e3c29e1bfd73e93df"></a>PREFILTER_NORMALIZED_RESPONSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a879113dd8efbb7aaf9cdce2a2ad442acabf381e03e290b2b94541738193a6abd6"></a>PREFILTER_XSOBEL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a87cc2f8b00de380b6665eb88019b15b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87cc2f8b00de380b6665eb88019b15b7">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_stereo_b_m.html">StereoBM</a>&gt; cv::StereoBM::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>numDisparities</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em> = <code>21</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates <a class="el" href="classcv_1_1_stereo_b_m.html" title="Class for computing stereo correspondence using the block matching algorithm, introduced and contribu...">StereoBM</a> object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numDisparities</td><td>the disparity search range. For each pixel algorithm will find the best disparity from 0 (default minimum disparity) to numDisparities. The search range can then be shifted by changing the minimum disparity. </td></tr>
+    <tr><td class="paramname">blockSize</td><td>the linear size of the blocks compared by the algorithm. The size should be odd (as the block is centered at the current pixel). Larger block size implies smoother, though less accurate disparity map. Smaller block size gives more detailed disparity map, but there is higher chance for algorithm to find a wrong correspondence.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function create <a class="el" href="classcv_1_1_stereo_b_m.html" title="Class for computing stereo correspondence using the block matching algorithm, introduced and contribu...">StereoBM</a> object. You can then call <a class="el" href="classcv_1_1_stereo_matcher.html#a00aba25ff64a8372da49ff24fdc89224" title="Computes disparity map for the specified stereo pair.">StereoBM::compute()</a> to compute disparity for a specific stereo pair. </p>
+
+</div>
+</div>
+<a id="a1ced7f1b07f131c930c9aa7467e27915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ced7f1b07f131c930c9aa7467e27915">&#9670;&nbsp;</a></span>getPreFilterCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getPreFilterCap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cbf21ee2cb86b89bf81c0388aa03128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbf21ee2cb86b89bf81c0388aa03128">&#9670;&nbsp;</a></span>getPreFilterSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getPreFilterSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbaaa52528059baae40fbc5ab75927ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbaaa52528059baae40fbc5ab75927ed">&#9670;&nbsp;</a></span>getPreFilterType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getPreFilterType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0438712b774c73faff4a9359abbd3272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0438712b774c73faff4a9359abbd3272">&#9670;&nbsp;</a></span>getROI1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::StereoBM::getROI1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea65e36a3596fb3759f9af899d62709a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea65e36a3596fb3759f9af899d62709a">&#9670;&nbsp;</a></span>getROI2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::StereoBM::getROI2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b6d928c1ffd54fd70dae51dcaee7e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6d928c1ffd54fd70dae51dcaee7e4e">&#9670;&nbsp;</a></span>getSmallerBlockSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getSmallerBlockSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7301ec0ce729733338ce4fc1447cd1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7301ec0ce729733338ce4fc1447cd1aa">&#9670;&nbsp;</a></span>getTextureThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getTextureThreshold </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25cd5f6f47ffa004252a2a9988e305e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cd5f6f47ffa004252a2a9988e305e3">&#9670;&nbsp;</a></span>getUniquenessRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::StereoBM::getUniquenessRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63cfe5ed960986ebf55eede77e36c500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cfe5ed960986ebf55eede77e36c500">&#9670;&nbsp;</a></span>setPreFilterCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setPreFilterCap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>preFilterCap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6661d4d283af962bbb6f28f39c9f75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6661d4d283af962bbb6f28f39c9f75c">&#9670;&nbsp;</a></span>setPreFilterSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setPreFilterSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>preFilterSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d37d73bfebdcb1d3e6542c5a6046216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d37d73bfebdcb1d3e6542c5a6046216">&#9670;&nbsp;</a></span>setPreFilterType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setPreFilterType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>preFilterType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dbdd38bb65078f895fd37dd7a8af6e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbdd38bb65078f895fd37dd7a8af6e1">&#9670;&nbsp;</a></span>setROI1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setROI1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td>
+          <td class="paramname"><em>roi1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a492dcde02f8f463d496a5f6044e9da7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492dcde02f8f463d496a5f6044e9da7d">&#9670;&nbsp;</a></span>setROI2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setROI2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td>
+          <td class="paramname"><em>roi2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dc7fab8310637e067c2820287be0309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc7fab8310637e067c2820287be0309">&#9670;&nbsp;</a></span>setSmallerBlockSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setSmallerBlockSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc5f6c3e069d3f80d70cd20c68042d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5f6c3e069d3f80d70cd20c68042d63">&#9670;&nbsp;</a></span>setTextureThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setTextureThreshold </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>textureThreshold</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad372acbc766d3e1902e10f68eabf462c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad372acbc766d3e1902e10f68eabf462c">&#9670;&nbsp;</a></span>setUniquenessRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::StereoBM::setUniquenessRatio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>uniquenessRatio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2calib3d_8hpp_source.html">calib3d.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_stereo_b_m.html">StereoBM</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

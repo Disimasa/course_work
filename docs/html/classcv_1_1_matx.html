@@ -1,0 +1,3136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Шаблон класса cv::Matx&lt; _Tp, m, n &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_matx.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1_matx-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса cv::Matx&lt; _Tp, m, n &gt;<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__basic.html">Basic structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Template class for small matrices whose type and size are known at compilation time.  
+ <a href="classcv_1_1_matx.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="matx_8hpp_source.html">matx.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:af90d695ad086f9a1a0452a9ee7367dde"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddea883ccff445b70d8c5673612fcea63374">rows</a> = m
+, <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddea0be112b36f43fbfe06e8f9d1361f51b6">cols</a> = n
+, <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddea9844959a8fb66345ef70c06ec8938f82">channels</a> = rows*cols
+, <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddeae18e575d92a15cffb078249823e5d9ac">shortdim</a> = (m &lt; n ? m : n)
+ }</td></tr>
+<tr class="separator:af90d695ad086f9a1a0452a9ee7367dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413a1bcfbd47601b2336a9eff1d39b51"><td class="memItemLeft" align="right" valign="top">typedef _Tp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a413a1bcfbd47601b2336a9eff1d39b51">value_type</a></td></tr>
+<tr class="separator:a413a1bcfbd47601b2336a9eff1d39b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa55844d27a10c24f9879df52d30ef93"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aaa55844d27a10c24f9879df52d30ef93">mat_type</a></td></tr>
+<tr class="separator:aaa55844d27a10c24f9879df52d30ef93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ecf9ed18e29806025b5febbabcbeb9b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddeae18e575d92a15cffb078249823e5d9ac">shortdim</a>, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a></td></tr>
+<tr class="separator:a6ecf9ed18e29806025b5febbabcbeb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a03e916d291e4922a0e96ea638b32066e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a03e916d291e4922a0e96ea638b32066e">Matx</a> ()</td></tr>
+<tr class="memdesc:a03e916d291e4922a0e96ea638b32066e"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="classcv_1_1_matx.html#a03e916d291e4922a0e96ea638b32066e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03e916d291e4922a0e96ea638b32066e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72dba1f2b11abbd120989faeca002005"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a72dba1f2b11abbd120989faeca002005">Matx</a> (_Tp v0)</td></tr>
+<tr class="memdesc:a72dba1f2b11abbd120989faeca002005"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x1 matrix  <a href="classcv_1_1_matx.html#a72dba1f2b11abbd120989faeca002005">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72dba1f2b11abbd120989faeca002005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6773f6cd5b17bc4b4acaa450f17c0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a9b6773f6cd5b17bc4b4acaa450f17c0f">Matx</a> (_Tp v0, _Tp v1)</td></tr>
+<tr class="memdesc:a9b6773f6cd5b17bc4b4acaa450f17c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x2 or 2x1 matrix  <a href="classcv_1_1_matx.html#a9b6773f6cd5b17bc4b4acaa450f17c0f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b6773f6cd5b17bc4b4acaa450f17c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cb206e86adfffa63b9d0474ded3f56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a00cb206e86adfffa63b9d0474ded3f56">Matx</a> (_Tp v0, _Tp v1, _Tp v2)</td></tr>
+<tr class="memdesc:a00cb206e86adfffa63b9d0474ded3f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x3 or 3x1 matrix  <a href="classcv_1_1_matx.html#a00cb206e86adfffa63b9d0474ded3f56">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00cb206e86adfffa63b9d0474ded3f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea79655491a8e300aa2946d32915510"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a9ea79655491a8e300aa2946d32915510">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3)</td></tr>
+<tr class="memdesc:a9ea79655491a8e300aa2946d32915510"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x4, 2x2 or 4x1 matrix  <a href="classcv_1_1_matx.html#a9ea79655491a8e300aa2946d32915510">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9ea79655491a8e300aa2946d32915510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7156978618601cb86c3f45c8074976dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7156978618601cb86c3f45c8074976dc">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4)</td></tr>
+<tr class="memdesc:a7156978618601cb86c3f45c8074976dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x5 or 5x1 matrix  <a href="classcv_1_1_matx.html#a7156978618601cb86c3f45c8074976dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7156978618601cb86c3f45c8074976dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa16146cd3c5a9dc5ef684f8950576a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a8fa16146cd3c5a9dc5ef684f8950576a">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5)</td></tr>
+<tr class="memdesc:a8fa16146cd3c5a9dc5ef684f8950576a"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x6, 2x3, 3x2 or 6x1 matrix  <a href="classcv_1_1_matx.html#a8fa16146cd3c5a9dc5ef684f8950576a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8fa16146cd3c5a9dc5ef684f8950576a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d77fad0d4b799bbeb508708a0adc125"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7d77fad0d4b799bbeb508708a0adc125">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6)</td></tr>
+<tr class="memdesc:a7d77fad0d4b799bbeb508708a0adc125"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x7 or 7x1 matrix  <a href="classcv_1_1_matx.html#a7d77fad0d4b799bbeb508708a0adc125">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d77fad0d4b799bbeb508708a0adc125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd526d29f010fced07fac0f40910e9c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#acd526d29f010fced07fac0f40910e9c8">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7)</td></tr>
+<tr class="memdesc:acd526d29f010fced07fac0f40910e9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x8, 2x4, 4x2 or 8x1 matrix  <a href="classcv_1_1_matx.html#acd526d29f010fced07fac0f40910e9c8">Подробнее...</a><br /></td></tr>
+<tr class="separator:acd526d29f010fced07fac0f40910e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece2123f4f5ee3b2feef5b2040f5a10b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aece2123f4f5ee3b2feef5b2040f5a10b">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7, _Tp v8)</td></tr>
+<tr class="memdesc:aece2123f4f5ee3b2feef5b2040f5a10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x9, 3x3 or 9x1 matrix  <a href="classcv_1_1_matx.html#aece2123f4f5ee3b2feef5b2040f5a10b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aece2123f4f5ee3b2feef5b2040f5a10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db0ee3454c39f74096161652b4754cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7db0ee3454c39f74096161652b4754cd">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7, _Tp v8, _Tp v9)</td></tr>
+<tr class="memdesc:a7db0ee3454c39f74096161652b4754cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x10, 2x5 or 5x2 or 10x1 matrix  <a href="classcv_1_1_matx.html#a7db0ee3454c39f74096161652b4754cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7db0ee3454c39f74096161652b4754cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063f4e2a8351fcfade27f01834918f00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a063f4e2a8351fcfade27f01834918f00">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7, _Tp v8, _Tp v9, _Tp v10, _Tp v11)</td></tr>
+<tr class="memdesc:a063f4e2a8351fcfade27f01834918f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x12, 2x6, 3x4, 4x3, 6x2 or 12x1 matrix  <a href="classcv_1_1_matx.html#a063f4e2a8351fcfade27f01834918f00">Подробнее...</a><br /></td></tr>
+<tr class="separator:a063f4e2a8351fcfade27f01834918f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b928985c6849d798b9dda2da8206539"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a0b928985c6849d798b9dda2da8206539">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7, _Tp v8, _Tp v9, _Tp v10, _Tp v11, _Tp v12, _Tp v13)</td></tr>
+<tr class="memdesc:a0b928985c6849d798b9dda2da8206539"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x14, 2x7, 7x2 or 14x1 matrix  <a href="classcv_1_1_matx.html#a0b928985c6849d798b9dda2da8206539">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0b928985c6849d798b9dda2da8206539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6414aaa86e104f325da7be04260a8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a8d6414aaa86e104f325da7be04260a8b">Matx</a> (_Tp v0, _Tp v1, _Tp v2, _Tp v3, _Tp v4, _Tp v5, _Tp v6, _Tp v7, _Tp v8, _Tp v9, _Tp v10, _Tp v11, _Tp v12, _Tp v13, _Tp v14, _Tp v15)</td></tr>
+<tr class="memdesc:a8d6414aaa86e104f325da7be04260a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">1x16, 4x4 or 16x1 matrix  <a href="classcv_1_1_matx.html#a8d6414aaa86e104f325da7be04260a8b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d6414aaa86e104f325da7be04260a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7be06c6ddc6da806b56e7be192fb07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#abd7be06c6ddc6da806b56e7be192fb07">Matx</a> (const _Tp *vals)</td></tr>
+<tr class="memdesc:abd7be06c6ddc6da806b56e7be192fb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize from a plain array  <a href="classcv_1_1_matx.html#abd7be06c6ddc6da806b56e7be192fb07">Подробнее...</a><br /></td></tr>
+<tr class="separator:abd7be06c6ddc6da806b56e7be192fb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae747ae36b477e01422db61a3b3c47ead"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ae747ae36b477e01422db61a3b3c47ead">Matx</a> (std::initializer_list&lt; _Tp &gt;)</td></tr>
+<tr class="memdesc:ae747ae36b477e01422db61a3b3c47ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize from an initializer list  <a href="classcv_1_1_matx.html#ae747ae36b477e01422db61a3b3c47ead">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae747ae36b477e01422db61a3b3c47ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0ce90dadd68822c348b0bbae4a5f2a"><td class="memItemLeft" align="right" valign="top">_Tp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aff0ce90dadd68822c348b0bbae4a5f2a">dot</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;v) const</td></tr>
+<tr class="memdesc:aff0ce90dadd68822c348b0bbae4a5f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">dot product computed with the default precision  <a href="classcv_1_1_matx.html#aff0ce90dadd68822c348b0bbae4a5f2a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aff0ce90dadd68822c348b0bbae4a5f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36bff6ac4f8daa72099d7e1578b2370"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ad36bff6ac4f8daa72099d7e1578b2370">ddot</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;v) const</td></tr>
+<tr class="memdesc:ad36bff6ac4f8daa72099d7e1578b2370"><td class="mdescLeft">&#160;</td><td class="mdescRight">dot product computed in double-precision arithmetics  <a href="classcv_1_1_matx.html#ad36bff6ac4f8daa72099d7e1578b2370">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad36bff6ac4f8daa72099d7e1578b2370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52462c5d76a61e63881055bc96fcc711"><td class="memTemplParams" colspan="2">template&lt;typename T2 &gt; </td></tr>
+<tr class="memitem:a52462c5d76a61e63881055bc96fcc711"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a52462c5d76a61e63881055bc96fcc711">operator Matx&lt; T2, m, n &gt;</a> () const</td></tr>
+<tr class="memdesc:a52462c5d76a61e63881055bc96fcc711"><td class="mdescLeft">&#160;</td><td class="mdescRight">conversion to another data type  <a href="classcv_1_1_matx.html#a52462c5d76a61e63881055bc96fcc711">Подробнее...</a><br /></td></tr>
+<tr class="separator:a52462c5d76a61e63881055bc96fcc711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e9d03a3e0a555a8b763ad2bf0383fe"><td class="memTemplParams" colspan="2">template&lt;int m1, int n1&gt; </td></tr>
+<tr class="memitem:a38e9d03a3e0a555a8b763ad2bf0383fe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a38e9d03a3e0a555a8b763ad2bf0383fe">reshape</a> () const</td></tr>
+<tr class="memdesc:a38e9d03a3e0a555a8b763ad2bf0383fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the matrix shape  <a href="classcv_1_1_matx.html#a38e9d03a3e0a555a8b763ad2bf0383fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38e9d03a3e0a555a8b763ad2bf0383fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e180104b35cf9a24d129619ba18aba7"><td class="memTemplParams" colspan="2">template&lt;int m1, int n1&gt; </td></tr>
+<tr class="memitem:a3e180104b35cf9a24d129619ba18aba7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a3e180104b35cf9a24d129619ba18aba7">get_minor</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> base_row, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> base_col) const</td></tr>
+<tr class="memdesc:a3e180104b35cf9a24d129619ba18aba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract part of the matrix  <a href="classcv_1_1_matx.html#a3e180104b35cf9a24d129619ba18aba7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e180104b35cf9a24d129619ba18aba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84eb6938d3a7b91504e16b9a633bfae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, 1, n &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a84eb6938d3a7b91504e16b9a633bfae9">row</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i) const</td></tr>
+<tr class="memdesc:a84eb6938d3a7b91504e16b9a633bfae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the matrix row  <a href="classcv_1_1_matx.html#a84eb6938d3a7b91504e16b9a633bfae9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84eb6938d3a7b91504e16b9a633bfae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7291adaf84ce172b2ac2f4211aa296fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7291adaf84ce172b2ac2f4211aa296fc">col</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i) const</td></tr>
+<tr class="memdesc:a7291adaf84ce172b2ac2f4211aa296fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the matrix column  <a href="classcv_1_1_matx.html#a7291adaf84ce172b2ac2f4211aa296fc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7291adaf84ce172b2ac2f4211aa296fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3606f80ef046e79628cd8b5fc54fb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aae3606f80ef046e79628cd8b5fc54fb8">diag</a> () const</td></tr>
+<tr class="memdesc:aae3606f80ef046e79628cd8b5fc54fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the matrix diagonal  <a href="classcv_1_1_matx.html#aae3606f80ef046e79628cd8b5fc54fb8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae3606f80ef046e79628cd8b5fc54fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b9da36b5cc4b85c4cb1f55678c6af2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, n, m &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ae3b9da36b5cc4b85c4cb1f55678c6af2">t</a> () const</td></tr>
+<tr class="memdesc:ae3b9da36b5cc4b85c4cb1f55678c6af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">transpose the matrix  <a href="classcv_1_1_matx.html#ae3b9da36b5cc4b85c4cb1f55678c6af2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae3b9da36b5cc4b85c4cb1f55678c6af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6891a002ccb92af0859cf393a25451f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, n, m &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a6891a002ccb92af0859cf393a25451f4">inv</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>=<a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a>, bool *p_is_ok=NULL) const</td></tr>
+<tr class="memdesc:a6891a002ccb92af0859cf393a25451f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">invert the matrix  <a href="classcv_1_1_matx.html#a6891a002ccb92af0859cf393a25451f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6891a002ccb92af0859cf393a25451f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c7233acc9a0431c3908f3b99b482c1"><td class="memTemplParams" colspan="2">template&lt;int l&gt; </td></tr>
+<tr class="memitem:a94c7233acc9a0431c3908f3b99b482c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, n, l &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a94c7233acc9a0431c3908f3b99b482c1">solve</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;rhs, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=<a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a>) const</td></tr>
+<tr class="memdesc:a94c7233acc9a0431c3908f3b99b482c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve linear system  <a href="classcv_1_1_matx.html#a94c7233acc9a0431c3908f3b99b482c1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a94c7233acc9a0431c3908f3b99b482c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897c4b796831e77328ad9577184e9cfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, n &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a897c4b796831e77328ad9577184e9cfa">solve</a> (const <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, m &gt; &amp;rhs, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>) const</td></tr>
+<tr class="separator:a897c4b796831e77328ad9577184e9cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1da25627683af42e0a878a25679af9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#afd1da25627683af42e0a878a25679af9">mul</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a) const</td></tr>
+<tr class="memdesc:afd1da25627683af42e0a878a25679af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply two matrices element-wise  <a href="classcv_1_1_matx.html#afd1da25627683af42e0a878a25679af9">Подробнее...</a><br /></td></tr>
+<tr class="separator:afd1da25627683af42e0a878a25679af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75fdbce4c1e5627b2729175bdb6eaf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ac75fdbce4c1e5627b2729175bdb6eaf1">div</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a) const</td></tr>
+<tr class="memdesc:ac75fdbce4c1e5627b2729175bdb6eaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">divide two matrices element-wise  <a href="classcv_1_1_matx.html#ac75fdbce4c1e5627b2729175bdb6eaf1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac75fdbce4c1e5627b2729175bdb6eaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755a3ab99c555fde38f41746c68d6055"><td class="memItemLeft" align="right" valign="top">const _Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a755a3ab99c555fde38f41746c68d6055">operator()</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_matx.html#a84eb6938d3a7b91504e16b9a633bfae9">row</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_matx.html#a7291adaf84ce172b2ac2f4211aa296fc">col</a>) const</td></tr>
+<tr class="memdesc:a755a3ab99c555fde38f41746c68d6055"><td class="mdescLeft">&#160;</td><td class="mdescRight">element access  <a href="classcv_1_1_matx.html#a755a3ab99c555fde38f41746c68d6055">Подробнее...</a><br /></td></tr>
+<tr class="separator:a755a3ab99c555fde38f41746c68d6055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42afe924b158e8777b5b39810b5a1825"><td class="memItemLeft" align="right" valign="top">_Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a42afe924b158e8777b5b39810b5a1825">operator()</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_matx.html#a84eb6938d3a7b91504e16b9a633bfae9">row</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_matx.html#a7291adaf84ce172b2ac2f4211aa296fc">col</a>)</td></tr>
+<tr class="separator:a42afe924b158e8777b5b39810b5a1825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605f3bd68541387226627fd6a9f706bb"><td class="memItemLeft" align="right" valign="top">const _Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a605f3bd68541387226627fd6a9f706bb">operator()</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i) const</td></tr>
+<tr class="memdesc:a605f3bd68541387226627fd6a9f706bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">1D element access  <a href="classcv_1_1_matx.html#a605f3bd68541387226627fd6a9f706bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a605f3bd68541387226627fd6a9f706bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686d4530a3baaf2640520c8aa9222439"><td class="memItemLeft" align="right" valign="top">_Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a686d4530a3baaf2640520c8aa9222439">operator()</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i)</td></tr>
+<tr class="separator:a686d4530a3baaf2640520c8aa9222439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f960898eebb4f9592486fc81840978f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a3f960898eebb4f9592486fc81840978f">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b, Matx_AddOp)</td></tr>
+<tr class="separator:a3f960898eebb4f9592486fc81840978f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf035b49c0479f965a64831ffc610d75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#adf035b49c0479f965a64831ffc610d75">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b, Matx_SubOp)</td></tr>
+<tr class="separator:adf035b49c0479f965a64831ffc610d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1293b20fb445c78451ec743a2bebabb"><td class="memTemplParams" colspan="2">template&lt;typename _T2 &gt; </td></tr>
+<tr class="memitem:ab1293b20fb445c78451ec743a2bebabb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ab1293b20fb445c78451ec743a2bebabb">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, _T2 <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, Matx_ScaleOp)</td></tr>
+<tr class="separator:ab1293b20fb445c78451ec743a2bebabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b01f413b8f5db2dfee89fd449e5711d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a0b01f413b8f5db2dfee89fd449e5711d">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b, Matx_MulOp)</td></tr>
+<tr class="separator:a0b01f413b8f5db2dfee89fd449e5711d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae776dbc8f7256e7a644b71cd9d996c79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ae776dbc8f7256e7a644b71cd9d996c79">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b, Matx_DivOp)</td></tr>
+<tr class="separator:ae776dbc8f7256e7a644b71cd9d996c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059fd9255b0922cddb4a14c6bf10390b"><td class="memTemplParams" colspan="2">template&lt;int l&gt; </td></tr>
+<tr class="memitem:a059fd9255b0922cddb4a14c6bf10390b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a059fd9255b0922cddb4a14c6bf10390b">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, l, n &gt; &amp;b, Matx_MatMulOp)</td></tr>
+<tr class="separator:a059fd9255b0922cddb4a14c6bf10390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf880ba8218784d49391802b69198810"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#abf880ba8218784d49391802b69198810">Matx</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, n, m &gt; &amp;a, Matx_TOp)</td></tr>
+<tr class="separator:abf880ba8218784d49391802b69198810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa72b89d5454c4b0b66b5667e1999e35a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aa72b89d5454c4b0b66b5667e1999e35a">all</a> (_Tp <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:aa72b89d5454c4b0b66b5667e1999e35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ffe2c9013d6e12757bb9b3f125a669"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a81ffe2c9013d6e12757bb9b3f125a669">zeros</a> ()</td></tr>
+<tr class="separator:a81ffe2c9013d6e12757bb9b3f125a669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb0a502e5ac9c4511e953e78a45ed19"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a0eb0a502e5ac9c4511e953e78a45ed19">ones</a> ()</td></tr>
+<tr class="separator:a0eb0a502e5ac9c4511e953e78a45ed19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8633b16f0c8296bcee707815abe18b0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a8633b16f0c8296bcee707815abe18b0e">eye</a> ()</td></tr>
+<tr class="separator:a8633b16f0c8296bcee707815abe18b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d1c97702e18608ef7279a70cffa4cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a66d1c97702e18608ef7279a70cffa4cf">diag</a> (const <a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a> &amp;d)</td></tr>
+<tr class="separator:a66d1c97702e18608ef7279a70cffa4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b4e9aac9b91a2ac8dddba01031becb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ac1b4e9aac9b91a2ac8dddba01031becb">randu</a> (_Tp a, _Tp b)</td></tr>
+<tr class="memdesc:ac1b4e9aac9b91a2ac8dddba01031becb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates uniformly distributed random numbers.  <a href="classcv_1_1_matx.html#ac1b4e9aac9b91a2ac8dddba01031becb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac1b4e9aac9b91a2ac8dddba01031becb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11190acab093fb84483a90f3da059ca0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a11190acab093fb84483a90f3da059ca0">randn</a> (_Tp a, _Tp b)</td></tr>
+<tr class="memdesc:a11190acab093fb84483a90f3da059ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates normally distributed random numbers.  <a href="classcv_1_1_matx.html#a11190acab093fb84483a90f3da059ca0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a11190acab093fb84483a90f3da059ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:afa9ad3bc5b09ebcdfc6f98f44c15191d"><td class="memItemLeft" align="right" valign="top">_Tp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#afa9ad3bc5b09ebcdfc6f98f44c15191d">val</a> [m *n]</td></tr>
+<tr class="separator:afa9ad3bc5b09ebcdfc6f98f44c15191d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
+Относящиеся к классу функции</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>(не члены класса) </p>
+</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a7731f5b2caea69ec7ec478bcf4a0ec55"><td class="memTemplParams" colspan="2">template&lt;typename _Tp1 , typename _Tp2 , int m, int n&gt; </td></tr>
+<tr class="memitem:a7731f5b2caea69ec7ec478bcf4a0ec55"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7731f5b2caea69ec7ec478bcf4a0ec55">operator+=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp2, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:a7731f5b2caea69ec7ec478bcf4a0ec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d208fa179aeab2d36e96613ba784c7e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp1 , typename _Tp2 , int m, int n&gt; </td></tr>
+<tr class="memitem:a3d208fa179aeab2d36e96613ba784c7e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a3d208fa179aeab2d36e96613ba784c7e">operator-=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp2, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:a3d208fa179aeab2d36e96613ba784c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0acac01a6f4e811b6e593fcd9145c096"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a0acac01a6f4e811b6e593fcd9145c096"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a0acac01a6f4e811b6e593fcd9145c096">operator+</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:a0acac01a6f4e811b6e593fcd9145c096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cae966ac2a36de66db53723ff5061ab"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a1cae966ac2a36de66db53723ff5061ab"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a1cae966ac2a36de66db53723ff5061ab">operator-</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:a1cae966ac2a36de66db53723ff5061ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d2fcfafe7be7c992746435a70cb5e6"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:ab7d2fcfafe7be7c992746435a70cb5e6"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ab7d2fcfafe7be7c992746435a70cb5e6">operator*=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:ab7d2fcfafe7be7c992746435a70cb5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8570101df25bc81d1c86ec71c55d3a70"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a8570101df25bc81d1c86ec71c55d3a70"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a8570101df25bc81d1c86ec71c55d3a70">operator*=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, float <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a8570101df25bc81d1c86ec71c55d3a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758df4032a73ab3edd89ab7ba027632e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a758df4032a73ab3edd89ab7ba027632e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a758df4032a73ab3edd89ab7ba027632e">operator*=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a758df4032a73ab3edd89ab7ba027632e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18f4c37e7b9f39d690f836bc0ed4101"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:ad18f4c37e7b9f39d690f836bc0ed4101"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ad18f4c37e7b9f39d690f836bc0ed4101">operator*</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:ad18f4c37e7b9f39d690f836bc0ed4101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d329d0dadd008dd86b678e284e83fb7"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a7d329d0dadd008dd86b678e284e83fb7"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7d329d0dadd008dd86b678e284e83fb7">operator*</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, float <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a7d329d0dadd008dd86b678e284e83fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d1570d4ea5feddfb331ae5cbf2e02e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:ad6d1570d4ea5feddfb331ae5cbf2e02e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#ad6d1570d4ea5feddfb331ae5cbf2e02e">operator*</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:ad6d1570d4ea5feddfb331ae5cbf2e02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b3c8fb6327ee0013f3fa0621003f74"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a07b3c8fb6327ee0013f3fa0621003f74"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a07b3c8fb6327ee0013f3fa0621003f74">operator*</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a)</td></tr>
+<tr class="separator:a07b3c8fb6327ee0013f3fa0621003f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40633694e3f47c3673b60a45603b920e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a40633694e3f47c3673b60a45603b920e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a40633694e3f47c3673b60a45603b920e">operator*</a> (float <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a)</td></tr>
+<tr class="separator:a40633694e3f47c3673b60a45603b920e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fe3ea0a6daeca226f434b3fc63b27f"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:aa4fe3ea0a6daeca226f434b3fc63b27f"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#aa4fe3ea0a6daeca226f434b3fc63b27f">operator*</a> (double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a)</td></tr>
+<tr class="separator:aa4fe3ea0a6daeca226f434b3fc63b27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62eec3681b4fe65134a8a562cce08dac"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a62eec3681b4fe65134a8a562cce08dac"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a62eec3681b4fe65134a8a562cce08dac">operator/=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, float <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a62eec3681b4fe65134a8a562cce08dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460b7f73dd4b1654fcc5a99da179618b"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a460b7f73dd4b1654fcc5a99da179618b"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a460b7f73dd4b1654fcc5a99da179618b">operator/=</a> (<a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a460b7f73dd4b1654fcc5a99da179618b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e06b0b097075fee40183fd9b8f8d2e0"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a4e06b0b097075fee40183fd9b8f8d2e0"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a4e06b0b097075fee40183fd9b8f8d2e0">operator/</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, float <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a4e06b0b097075fee40183fd9b8f8d2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b7f602a5cfd05c24661af2b30e2e6e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a76b7f602a5cfd05c24661af2b30e2e6e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a76b7f602a5cfd05c24661af2b30e2e6e">operator/</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>)</td></tr>
+<tr class="separator:a76b7f602a5cfd05c24661af2b30e2e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b0ff0245ad1c22139cac5d62c3c0ab"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a70b0ff0245ad1c22139cac5d62c3c0ab"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a70b0ff0245ad1c22139cac5d62c3c0ab">operator-</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a)</td></tr>
+<tr class="separator:a70b0ff0245ad1c22139cac5d62c3c0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7344c95f9767d94430094ae30eb34ecf"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n, int l&gt; </td></tr>
+<tr class="memitem:a7344c95f9767d94430094ae30eb34ecf"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a7344c95f9767d94430094ae30eb34ecf">operator*</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, l, n &gt; &amp;b)</td></tr>
+<tr class="separator:a7344c95f9767d94430094ae30eb34ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80aca6dc4eab4062e83183cacc5ee952"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a80aca6dc4eab4062e83183cacc5ee952"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, m &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a80aca6dc4eab4062e83183cacc5ee952">operator*</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:a80aca6dc4eab4062e83183cacc5ee952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf03dafd994f8de41007596ab747186"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:adaf03dafd994f8de41007596ab747186"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#adaf03dafd994f8de41007596ab747186">operator==</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:adaf03dafd994f8de41007596ab747186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1f52fa09b2b5e2c440363a74cd156b"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int m, int n&gt; </td></tr>
+<tr class="memitem:a6d1f52fa09b2b5e2c440363a74cd156b"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_matx.html#a6d1f52fa09b2b5e2c440363a74cd156b">operator!=</a> (const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;a, const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;b)</td></tr>
+<tr class="separator:a6d1f52fa09b2b5e2c440363a74cd156b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename _Tp, int m, int n&gt;<br />
+class cv::Matx&lt; _Tp, m, n &gt;</h3>
+
+<p>Template class for small matrices whose type and size are known at compilation time. </p>
+<p>If you need a more flexible type, use <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> . The elements of the matrix M are accessible using the M(i,j) notation. Most of the common matrix operations (see also <a class="el" href="classcv_1_1_mat_expr.html#MatrixExpressions">MatrixExpressions</a> ) are available. To do an operation on <a class="el" href="classcv_1_1_matx.html" title="Template class for small matrices whose type and size are known at compilation time.">Matx</a> that is not implemented, you can easily convert the matrix to <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> and backwards: </p><div class="fragment"><div class="line"><a class="code" href="group__core__basic.html#ga118a383f60581636c7c8ab180cbb155e">Matx33f</a> m(1, 2, 3,</div>
+<div class="line">          4, 5, 6,</div>
+<div class="line">          7, 8, 9);</div>
+<div class="line">cout &lt;&lt; <a class="code" href="group__imgproc__misc.html#gaa012757b1a6536a1a3ef813a0aba1c1e">sum</a>(Mat(m*m.t())) &lt;&lt; endl;</div>
+<div class="ttc" id="agroup__core__basic_html_ga118a383f60581636c7c8ab180cbb155e"><div class="ttname"><a href="group__core__basic.html#ga118a383f60581636c7c8ab180cbb155e">cv::Matx33f</a></div><div class="ttdeci">Matx&lt; float, 3, 3 &gt; Matx33f</div><div class="ttdef"><b>Definition:</b> matx.hpp:246</div></div>
+<div class="ttc" id="agroup__imgproc__misc_html_gaa012757b1a6536a1a3ef813a0aba1c1e"><div class="ttname"><a href="group__imgproc__misc.html#gaa012757b1a6536a1a3ef813a0aba1c1e">cv::sum</a></div><div class="ttdeci">OutputArray sum</div><div class="ttdef"><b>Definition:</b> imgproc.hpp:2713</div></div>
+</div><!-- fragment --><p> Except of the plain constructor which takes a list of elements, <a class="el" href="classcv_1_1_matx.html" title="Template class for small matrices whose type and size are known at compilation time.">Matx</a> can be initialized from a C-array: </p><div class="fragment"><div class="line"><span class="keywordtype">float</span> values[] = { 1, 2, 3};</div>
+<div class="line"><a class="code" href="group__core__basic.html#ga1625ab2c70d7f06d259f245cb5f5f4f8">Matx31f</a> m(values);</div>
+<div class="ttc" id="agroup__core__basic_html_ga1625ab2c70d7f06d259f245cb5f5f4f8"><div class="ttname"><a href="group__core__basic.html#ga1625ab2c70d7f06d259f245cb5f5f4f8">cv::Matx31f</a></div><div class="ttdeci">Matx&lt; float, 3, 1 &gt; Matx31f</div><div class="ttdef"><b>Definition:</b> matx.hpp:232</div></div>
+</div><!-- fragment --><p> In case if C++11 features are available, std::initializer_list can be also used to initialize <a class="el" href="classcv_1_1_matx.html" title="Template class for small matrices whose type and size are known at compilation time.">Matx</a>: </p><div class="fragment"><div class="line"><a class="code" href="group__core__basic.html#ga1625ab2c70d7f06d259f245cb5f5f4f8">Matx31f</a> m = { 1, 2, 3};</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Определения типов</h2>
+<a id="a6ecf9ed18e29806025b5febbabcbeb9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ecf9ed18e29806025b5febbabcbeb9b">&#9670;&nbsp;</a></span>diag_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, <a class="el" href="classcv_1_1_matx.html#af90d695ad086f9a1a0452a9ee7367ddeae18e575d92a15cffb078249823e5d9ac">shortdim</a>, 1&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa55844d27a10c24f9879df52d30ef93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa55844d27a10c24f9879df52d30ef93">&#9670;&nbsp;</a></span>mat_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m, n&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html#aaa55844d27a10c24f9879df52d30ef93">mat_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a413a1bcfbd47601b2336a9eff1d39b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413a1bcfbd47601b2336a9eff1d39b51">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef _Tp <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html#a413a1bcfbd47601b2336a9eff1d39b51">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="af90d695ad086f9a1a0452a9ee7367dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af90d695ad086f9a1a0452a9ee7367dde">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="af90d695ad086f9a1a0452a9ee7367ddea883ccff445b70d8c5673612fcea63374"></a>rows&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af90d695ad086f9a1a0452a9ee7367ddea0be112b36f43fbfe06e8f9d1361f51b6"></a>cols&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af90d695ad086f9a1a0452a9ee7367ddea9844959a8fb66345ef70c06ec8938f82"></a>channels&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af90d695ad086f9a1a0452a9ee7367ddeae18e575d92a15cffb078249823e5d9ac"></a>shortdim&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a03e916d291e4922a0e96ea638b32066e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e916d291e4922a0e96ea638b32066e">&#9670;&nbsp;</a></span>Matx() <span class="overload">[1/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>default constructor </p>
+
+</div>
+</div>
+<a id="a72dba1f2b11abbd120989faeca002005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72dba1f2b11abbd120989faeca002005">&#9670;&nbsp;</a></span>Matx() <span class="overload">[2/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>1x1 matrix </p>
+
+</div>
+</div>
+<a id="a9b6773f6cd5b17bc4b4acaa450f17c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6773f6cd5b17bc4b4acaa450f17c0f">&#9670;&nbsp;</a></span>Matx() <span class="overload">[3/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x2 or 2x1 matrix </p>
+
+</div>
+</div>
+<a id="a00cb206e86adfffa63b9d0474ded3f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cb206e86adfffa63b9d0474ded3f56">&#9670;&nbsp;</a></span>Matx() <span class="overload">[4/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x3 or 3x1 matrix </p>
+
+</div>
+</div>
+<a id="a9ea79655491a8e300aa2946d32915510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea79655491a8e300aa2946d32915510">&#9670;&nbsp;</a></span>Matx() <span class="overload">[5/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x4, 2x2 or 4x1 matrix </p>
+
+</div>
+</div>
+<a id="a7156978618601cb86c3f45c8074976dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7156978618601cb86c3f45c8074976dc">&#9670;&nbsp;</a></span>Matx() <span class="overload">[6/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x5 or 5x1 matrix </p>
+
+</div>
+</div>
+<a id="a8fa16146cd3c5a9dc5ef684f8950576a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa16146cd3c5a9dc5ef684f8950576a">&#9670;&nbsp;</a></span>Matx() <span class="overload">[7/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x6, 2x3, 3x2 or 6x1 matrix </p>
+
+</div>
+</div>
+<a id="a7d77fad0d4b799bbeb508708a0adc125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d77fad0d4b799bbeb508708a0adc125">&#9670;&nbsp;</a></span>Matx() <span class="overload">[8/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x7 or 7x1 matrix </p>
+
+</div>
+</div>
+<a id="acd526d29f010fced07fac0f40910e9c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd526d29f010fced07fac0f40910e9c8">&#9670;&nbsp;</a></span>Matx() <span class="overload">[9/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x8, 2x4, 4x2 or 8x1 matrix </p>
+
+</div>
+</div>
+<a id="aece2123f4f5ee3b2feef5b2040f5a10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece2123f4f5ee3b2feef5b2040f5a10b">&#9670;&nbsp;</a></span>Matx() <span class="overload">[10/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v8</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x9, 3x3 or 9x1 matrix </p>
+
+</div>
+</div>
+<a id="a7db0ee3454c39f74096161652b4754cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db0ee3454c39f74096161652b4754cd">&#9670;&nbsp;</a></span>Matx() <span class="overload">[11/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v8</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v9</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x10, 2x5 or 5x2 or 10x1 matrix </p>
+
+</div>
+</div>
+<a id="a063f4e2a8351fcfade27f01834918f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063f4e2a8351fcfade27f01834918f00">&#9670;&nbsp;</a></span>Matx() <span class="overload">[12/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v8</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v9</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v11</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x12, 2x6, 3x4, 4x3, 6x2 or 12x1 matrix </p>
+
+</div>
+</div>
+<a id="a0b928985c6849d798b9dda2da8206539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b928985c6849d798b9dda2da8206539">&#9670;&nbsp;</a></span>Matx() <span class="overload">[13/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v8</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v9</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v11</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v12</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v13</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x14, 2x7, 7x2 or 14x1 matrix </p>
+
+</div>
+</div>
+<a id="a8d6414aaa86e104f325da7be04260a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6414aaa86e104f325da7be04260a8b">&#9670;&nbsp;</a></span>Matx() <span class="overload">[14/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v7</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v8</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v9</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v11</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v12</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v13</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v14</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>v15</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1x16, 4x4 or 16x1 matrix </p>
+
+</div>
+</div>
+<a id="abd7be06c6ddc6da806b56e7be192fb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7be06c6ddc6da806b56e7be192fb07">&#9670;&nbsp;</a></span>Matx() <span class="overload">[15/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const _Tp *&#160;</td>
+          <td class="paramname"><em>vals</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialize from a plain array </p>
+
+</div>
+</div>
+<a id="ae747ae36b477e01422db61a3b3c47ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae747ae36b477e01422db61a3b3c47ead">&#9670;&nbsp;</a></span>Matx() <span class="overload">[16/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; _Tp &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize from an initializer list </p>
+
+</div>
+</div>
+<a id="a3f960898eebb4f9592486fc81840978f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f960898eebb4f9592486fc81840978f">&#9670;&nbsp;</a></span>Matx() <span class="overload">[17/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_AddOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf035b49c0479f965a64831ffc610d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf035b49c0479f965a64831ffc610d75">&#9670;&nbsp;</a></span>Matx() <span class="overload">[18/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_SubOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1293b20fb445c78451ec743a2bebabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1293b20fb445c78451ec743a2bebabb">&#9670;&nbsp;</a></span>Matx() <span class="overload">[19/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;typename _T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_T2&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_ScaleOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b01f413b8f5db2dfee89fd449e5711d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b01f413b8f5db2dfee89fd449e5711d">&#9670;&nbsp;</a></span>Matx() <span class="overload">[20/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_MulOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae776dbc8f7256e7a644b71cd9d996c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae776dbc8f7256e7a644b71cd9d996c79">&#9670;&nbsp;</a></span>Matx() <span class="overload">[21/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_DivOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a059fd9255b0922cddb4a14c6bf10390b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059fd9255b0922cddb4a14c6bf10390b">&#9670;&nbsp;</a></span>Matx() <span class="overload">[22/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;int l&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, l, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_MatMulOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf880ba8218784d49391802b69198810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf880ba8218784d49391802b69198810">&#9670;&nbsp;</a></span>Matx() <span class="overload">[23/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::<a class="el" href="classcv_1_1_matx.html">Matx</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, n, m &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matx_TOp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aa72b89d5454c4b0b66b5667e1999e35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72b89d5454c4b0b66b5667e1999e35a">&#9670;&nbsp;</a></span>all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::all </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7291adaf84ce172b2ac2f4211aa296fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7291adaf84ce172b2ac2f4211aa296fc">&#9670;&nbsp;</a></span>col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m, 1&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::col </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extract the matrix column </p>
+
+</div>
+</div>
+<a id="ad36bff6ac4f8daa72099d7e1578b2370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad36bff6ac4f8daa72099d7e1578b2370">&#9670;&nbsp;</a></span>ddot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::ddot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dot product computed in double-precision arithmetics </p>
+
+</div>
+</div>
+<a id="aae3606f80ef046e79628cd8b5fc54fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae3606f80ef046e79628cd8b5fc54fb8">&#9670;&nbsp;</a></span>diag() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::diag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extract the matrix diagonal </p>
+
+</div>
+</div>
+<a id="a66d1c97702e18608ef7279a70cffa4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d1c97702e18608ef7279a70cffa4cf">&#9670;&nbsp;</a></span>diag() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::diag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html#a6ecf9ed18e29806025b5febbabcbeb9b">diag_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac75fdbce4c1e5627b2729175bdb6eaf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75fdbce4c1e5627b2729175bdb6eaf1">&#9670;&nbsp;</a></span>div()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m, n&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::div </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>divide two matrices element-wise </p>
+
+</div>
+</div>
+<a id="aff0ce90dadd68822c348b0bbae4a5f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0ce90dadd68822c348b0bbae4a5f2a">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dot product computed with the default precision </p>
+
+</div>
+</div>
+<a id="a8633b16f0c8296bcee707815abe18b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8633b16f0c8296bcee707815abe18b0e">&#9670;&nbsp;</a></span>eye()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::eye </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e180104b35cf9a24d129619ba18aba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e180104b35cf9a24d129619ba18aba7">&#9670;&nbsp;</a></span>get_minor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;int m1, int n1&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m1, n1&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::get_minor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>base_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>base_col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extract part of the matrix </p>
+
+</div>
+</div>
+<a id="a6891a002ccb92af0859cf393a25451f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6891a002ccb92af0859cf393a25451f4">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, n, m&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::inv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em> = <code><a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>p_is_ok</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>invert the matrix </p>
+
+</div>
+</div>
+<a id="afd1da25627683af42e0a878a25679af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1da25627683af42e0a878a25679af9">&#9670;&nbsp;</a></span>mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m, n&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::mul </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>multiply two matrices element-wise </p>
+
+</div>
+</div>
+<a id="a0eb0a502e5ac9c4511e953e78a45ed19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb0a502e5ac9c4511e953e78a45ed19">&#9670;&nbsp;</a></span>ones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::ones </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52462c5d76a61e63881055bc96fcc711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52462c5d76a61e63881055bc96fcc711">&#9670;&nbsp;</a></span>operator Matx&lt; T2, m, n &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::operator <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; T2, m, n &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>conversion to another data type </p>
+
+</div>
+</div>
+<a id="a686d4530a3baaf2640520c8aa9222439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686d4530a3baaf2640520c8aa9222439">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp&amp; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a605f3bd68541387226627fd6a9f706bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605f3bd68541387226627fd6a9f706bb">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const _Tp&amp; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1D element access </p>
+
+</div>
+</div>
+<a id="a42afe924b158e8777b5b39810b5a1825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42afe924b158e8777b5b39810b5a1825">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp&amp; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a755a3ab99c555fde38f41746c68d6055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755a3ab99c555fde38f41746c68d6055">&#9670;&nbsp;</a></span>operator()() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const _Tp&amp; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>element access </p>
+
+</div>
+</div>
+<a id="a11190acab093fb84483a90f3da059ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11190acab093fb84483a90f3da059ca0">&#9670;&nbsp;</a></span>randn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::randn </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates normally distributed random numbers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Mean value. </td></tr>
+    <tr><td class="paramname">b</td><td>Standard deviation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac1b4e9aac9b91a2ac8dddba01031becb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b4e9aac9b91a2ac8dddba01031becb">&#9670;&nbsp;</a></span>randu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::randu </td>
+          <td>(</td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Tp&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates uniformly distributed random numbers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="classcv_1_1_range.html" title="Template class specifying a continuous subsequence (slice) of a sequence.">Range</a> boundary. </td></tr>
+    <tr><td class="paramname">b</td><td>The other range boundary (boundaries don't have to be ordered, the lower boundary is inclusive, the upper one is exclusive). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38e9d03a3e0a555a8b763ad2bf0383fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e9d03a3e0a555a8b763ad2bf0383fe">&#9670;&nbsp;</a></span>reshape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;int m1, int n1&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, m1, n1&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::reshape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>change the matrix shape </p>
+
+</div>
+</div>
+<a id="a84eb6938d3a7b91504e16b9a633bfae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84eb6938d3a7b91504e16b9a633bfae9">&#9670;&nbsp;</a></span>row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, 1, n&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extract the matrix row </p>
+
+</div>
+</div>
+<a id="a94c7233acc9a0431c3908f3b99b482c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c7233acc9a0431c3908f3b99b482c1">&#9670;&nbsp;</a></span>solve() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<div class="memtemplate">
+template&lt;int l&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, n, l&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::solve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>solve linear system </p>
+
+</div>
+</div>
+<a id="a897c4b796831e77328ad9577184e9cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a897c4b796831e77328ad9577184e9cfa">&#9670;&nbsp;</a></span>solve() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_vec.html">Vec</a>&lt;_Tp, n&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::solve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, m &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3b9da36b5cc4b85c4cb1f55678c6af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b9da36b5cc4b85c4cb1f55678c6af2">&#9670;&nbsp;</a></span>t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt;_Tp, n, m&gt; <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>transpose the matrix </p>
+
+</div>
+</div>
+<a id="a81ffe2c9013d6e12757bb9b3f125a669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ffe2c9013d6e12757bb9b3f125a669">&#9670;&nbsp;</a></span>zeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a> <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::zeros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="a6d1f52fa09b2b5e2c440363a74cd156b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1f52fa09b2b5e2c440363a74cd156b">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7344c95f9767d94430094ae30eb34ecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7344c95f9767d94430094ae30eb34ecf">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n, int l&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, l &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, l, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80aca6dc4eab4062e83183cacc5ee952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80aca6dc4eab4062e83183cacc5ee952">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, m &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_vec.html">Vec</a>&lt; _Tp, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6d1570d4ea5feddfb331ae5cbf2e02e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d1570d4ea5feddfb331ae5cbf2e02e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d329d0dadd008dd86b678e284e83fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d329d0dadd008dd86b678e284e83fb7">&#9670;&nbsp;</a></span>operator*() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad18f4c37e7b9f39d690f836bc0ed4101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18f4c37e7b9f39d690f836bc0ed4101">&#9670;&nbsp;</a></span>operator*() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4fe3ea0a6daeca226f434b3fc63b27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fe3ea0a6daeca226f434b3fc63b27f">&#9670;&nbsp;</a></span>operator*() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40633694e3f47c3673b60a45603b920e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40633694e3f47c3673b60a45603b920e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07b3c8fb6327ee0013f3fa0621003f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b3c8fb6327ee0013f3fa0621003f74">&#9670;&nbsp;</a></span>operator*() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a758df4032a73ab3edd89ab7ba027632e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758df4032a73ab3edd89ab7ba027632e">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8570101df25bc81d1c86ec71c55d3a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8570101df25bc81d1c86ec71c55d3a70">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7d2fcfafe7be7c992746435a70cb5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d2fcfafe7be7c992746435a70cb5e6">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0acac01a6f4e811b6e593fcd9145c096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acac01a6f4e811b6e593fcd9145c096">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7731f5b2caea69ec7ec478bcf4a0ec55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7731f5b2caea69ec7ec478bcf4a0ec55">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp1 , typename _Tp2 , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp2, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70b0ff0245ad1c22139cac5d62c3c0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b0ff0245ad1c22139cac5d62c3c0ab">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cae966ac2a36de66db53723ff5061ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cae966ac2a36de66db53723ff5061ab">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d208fa179aeab2d36e96613ba784c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d208fa179aeab2d36e96613ba784c7e">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp1 , typename _Tp2 , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp1, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp2, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76b7f602a5cfd05c24661af2b30e2e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b7f602a5cfd05c24661af2b30e2e6e">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e06b0b097075fee40183fd9b8f8d2e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e06b0b097075fee40183fd9b8f8d2e0">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a460b7f73dd4b1654fcc5a99da179618b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460b7f73dd4b1654fcc5a99da179618b">&#9670;&nbsp;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62eec3681b4fe65134a8a562cce08dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62eec3681b4fe65134a8a562cce08dac">&#9670;&nbsp;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaf03dafd994f8de41007596ab747186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf03dafd994f8de41007596ab747186">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_matx.html">Matx</a>&lt; _Tp, m, n &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="afa9ad3bc5b09ebcdfc6f98f44c15191d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9ad3bc5b09ebcdfc6f98f44c15191d">&#9670;&nbsp;</a></span>val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp , int m, int n&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp <a class="el" href="classcv_1_1_matx.html">cv::Matx</a>&lt; _Tp, m, n &gt;::val[m *n]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="matx_8hpp_source.html">matx.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_matx.html">Matx</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

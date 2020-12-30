@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/gapi/s11n.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('s11n_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл s11n.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;<a class="el" href="gapi_2s11n_2base_8hpp_source.html">opencv2/gapi/s11n/base.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gcomputation_8hpp_source.html">opencv2/gapi/gcomputation.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rmat_8hpp_source.html">opencv2/gapi/rmat.hpp</a>&gt;</code><br />
+</div>
+<p><a href="s11n_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1s11n_1_1_i_o_stream.html">cv::gapi::s11n::IOStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1s11n_1_1_i_i_stream.html">cv::gapi::s11n::IIStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1detail_1_1try__deserialize__comparg_3_01std_1_1tuple_3_4_01_4.html">cv::gapi::detail::try_deserialize_comparg&lt; std::tuple&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1detail_1_1try__deserialize__comparg_3_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html">cv::gapi::detail::try_deserialize_comparg&lt; std::tuple&lt; T, Types... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1detail_1_1deserialize__runarg.html">cv::gapi::detail::deserialize_runarg&lt; RMatAdapterType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1gapi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html">cv::gapi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1gapi_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html">cv::gapi::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1gapi_1_1s11n"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html">cv::gapi::s11n</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1gapi_1_1s11n_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html">cv::gapi::s11n::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a102c71c41d2b4a0913815fb5863ba9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_computation.html">cv::GComputation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#a102c71c41d2b4a0913815fb5863ba9f4">cv::gapi::detail::getGraph</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:a102c71c41d2b4a0913815fb5863ba9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28402f5e13e6ab35cc8e34c7acc89216"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">cv::GMetaArgs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#a28402f5e13e6ab35cc8e34c7acc89216">cv::gapi::detail::getMetaArgs</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:a28402f5e13e6ab35cc8e34c7acc89216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d94e5f6fa60e1d6695e2937da94a87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="namespacecv.html#a3d9c032e5fe7892151570efc6ac08e51">cv::GRunArgs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#ad2d94e5f6fa60e1d6695e2937da94a87">cv::gapi::detail::getRunArgs</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:ad2d94e5f6fa60e1d6695e2937da94a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3ceb20d4c72790967527357cb6c70a"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
+<tr class="memitem:aec3ceb20d4c72790967527357cb6c70a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">cv::GCompileArgs</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#aec3ceb20d4c72790967527357cb6c70a">cv::gapi::detail::getCompileArgs</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:aec3ceb20d4c72790967527357cb6c70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30c9e4aa2c709f9236bf6ee8b19aceb"><td class="memTemplParams" colspan="2">template&lt;typename RMatAdapterType &gt; </td></tr>
+<tr class="memitem:ae30c9e4aa2c709f9236bf6ee8b19aceb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#a3d9c032e5fe7892151570efc6ac08e51">cv::GRunArgs</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#ae30c9e4aa2c709f9236bf6ee8b19aceb">cv::gapi::detail::getRunArgsWithRMats</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:ae30c9e4aa2c709f9236bf6ee8b19aceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76ff1617cacce4c1e1e907d21cbe946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html#ac76ff1617cacce4c1e1e907d21cbe946">cv::gapi::serialize</a> (const <a class="el" href="classcv_1_1_g_computation.html">cv::GComputation</a> &amp;c)</td></tr>
+<tr class="separator:ac76ff1617cacce4c1e1e907d21cbe946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28718746f37d10d2e0e68e82322f758"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html#aa28718746f37d10d2e0e68e82322f758">cv::gapi::serialize</a> (const <a class="el" href="group__gapi__compile__args.html#gaa4f8db4f55770e56cca42c38dacf8ffd">cv::GCompileArgs</a> &amp;)</td></tr>
+<tr class="separator:aa28718746f37d10d2e0e68e82322f758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea625d6b1d09d0987b92b33676d124c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html#acea625d6b1d09d0987b92b33676d124c">cv::gapi::serialize</a> (const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">cv::GMetaArgs</a> &amp;)</td></tr>
+<tr class="separator:acea625d6b1d09d0987b92b33676d124c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930ca65f760db1cf2afcedba0b6de8cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html#a930ca65f760db1cf2afcedba0b6de8cd">cv::gapi::serialize</a> (const <a class="el" href="namespacecv.html#a3d9c032e5fe7892151570efc6ac08e51">cv::GRunArgs</a> &amp;)</td></tr>
+<tr class="separator:a930ca65f760db1cf2afcedba0b6de8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242b4ff40c3c4a8d01e3d91be9f25b47"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a242b4ff40c3c4a8d01e3d91be9f25b47"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_g_computation.html">cv::GComputation</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi.html#a242b4ff40c3c4a8d01e3d91be9f25b47">cv::gapi::deserialize</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:a242b4ff40c3c4a8d01e3d91be9f25b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098e27638217ae1594a16d4c759ffc94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::unique_ptr&lt; IIStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html#a098e27638217ae1594a16d4c759ffc94">cv::gapi::s11n::detail::getInStream</a> (const std::vector&lt; char &gt; &amp;p)</td></tr>
+<tr class="separator:a098e27638217ae1594a16d4c759ffc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e56bd4ea4fff10307dc40afe81d5a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a17e56bd4ea4fff10307dc40afe81d5a3">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>)</td></tr>
+<tr class="separator:a17e56bd4ea4fff10307dc40afe81d5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad104e46e5c688138b668052aa9871197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ad104e46e5c688138b668052aa9871197">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>)</td></tr>
+<tr class="separator:ad104e46e5c688138b668052aa9871197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada26f4808c1445eb63b297f1d29debd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ada26f4808c1445eb63b297f1d29debd8">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">cv::Point2f</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>)</td></tr>
+<tr class="separator:ada26f4808c1445eb63b297f1d29debd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b54a97d47e7475c00452d95cfbfce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ac0b54a97d47e7475c00452d95cfbfce6">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">cv::Point2f</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>)</td></tr>
+<tr class="separator:ac0b54a97d47e7475c00452d95cfbfce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b01a1dfb477c9fc6aeed586ca2ae36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a95b01a1dfb477c9fc6aeed586ca2ae36">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;sz)</td></tr>
+<tr class="separator:a95b01a1dfb477c9fc6aeed586ca2ae36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fafbf3246bd9701e9a4e3ba1ae7cac5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a4fafbf3246bd9701e9a4e3ba1ae7cac5">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;sz)</td></tr>
+<tr class="separator:a4fafbf3246bd9701e9a4e3ba1ae7cac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef5f467618220313186f799f223337b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a0ef5f467618220313186f799f223337b">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;rc)</td></tr>
+<tr class="separator:a0ef5f467618220313186f799f223337b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07c7c84e98865fa7445371d3e9e688d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#af07c7c84e98865fa7445371d3e9e688d">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;rc)</td></tr>
+<tr class="separator:af07c7c84e98865fa7445371d3e9e688d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea261708093729c489e2f036b3a6e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a0ea261708093729c489e2f036b3a6e72">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;s)</td></tr>
+<tr class="separator:a0ea261708093729c489e2f036b3a6e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb6f38c9172a2e0f0374f600af832bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a9eb6f38c9172a2e0f0374f600af832bb">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;s)</td></tr>
+<tr class="separator:a9eb6f38c9172a2e0f0374f600af832bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cab993b7479b5a4eae94b9d1636b39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a88cab993b7479b5a4eae94b9d1636b39">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;m)</td></tr>
+<tr class="separator:a88cab993b7479b5a4eae94b9d1636b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad431ade04ac9d2892471fc5a59d0d754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ad431ade04ac9d2892471fc5a59d0d754">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;m)</td></tr>
+<tr class="separator:ad431ade04ac9d2892471fc5a59d0d754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d20b0d24427570ee50a50b3ed47ce9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a88d20b0d24427570ee50a50b3ed47ce9">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;)</td></tr>
+<tr class="separator:a88d20b0d24427570ee50a50b3ed47ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae013edbe0753c07cce76ce707445aed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ae013edbe0753c07cce76ce707445aed8">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;)</td></tr>
+<tr class="separator:ae013edbe0753c07cce76ce707445aed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8be6bbae4d640049f1e89d607df8ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ad8be6bbae4d640049f1e89d607df8ee6">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1_r_mat.html">cv::RMat</a> &amp;<a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>)</td></tr>
+<tr class="separator:ad8be6bbae4d640049f1e89d607df8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc9df4d45c998a2244bf966dfacffbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#aebc9df4d45c998a2244bf966dfacffbb">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1_r_mat.html">cv::RMat</a> &amp;<a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>)</td></tr>
+<tr class="separator:aebc9df4d45c998a2244bf966dfacffbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d74661b081a7c7709903b6a401e0031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a5d74661b081a7c7709903b6a401e0031">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1gapi_1_1wip_1_1_i_stream_source.html#afa9caf180bca701df9b10a6974eaa8ff">cv::gapi::wip::IStreamSource::Ptr</a> &amp;)</td></tr>
+<tr class="separator:a5d74661b081a7c7709903b6a401e0031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3c4af2866d4b743aaf9d680db9cf6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a3e3c4af2866d4b743aaf9d680db9cf6e">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1gapi_1_1wip_1_1_i_stream_source.html#afa9caf180bca701df9b10a6974eaa8ff">cv::gapi::wip::IStreamSource::Ptr</a> &amp;)</td></tr>
+<tr class="separator:a3e3c4af2866d4b743aaf9d680db9cf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab741b3b734d0f3c54933401283ee5a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ab741b3b734d0f3c54933401283ee5a16">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1detail_1_1_vector_ref.html">cv::detail::VectorRef</a> &amp;)</td></tr>
+<tr class="separator:ab741b3b734d0f3c54933401283ee5a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc2ac2c351ccc79ba276e48fd4d25db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a9dc2ac2c351ccc79ba276e48fd4d25db">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1detail_1_1_vector_ref.html">cv::detail::VectorRef</a> &amp;)</td></tr>
+<tr class="separator:a9dc2ac2c351ccc79ba276e48fd4d25db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bbe77fe937831c178303b043ded122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a25bbe77fe937831c178303b043ded122">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1detail_1_1_opaque_ref.html">cv::detail::OpaqueRef</a> &amp;)</td></tr>
+<tr class="separator:a25bbe77fe937831c178303b043ded122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41a66aaa3ca75046bdfeeeba4b763aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ab41a66aaa3ca75046bdfeeeba4b763aa">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1detail_1_1_opaque_ref.html">cv::detail::OpaqueRef</a> &amp;)</td></tr>
+<tr class="separator:ab41a66aaa3ca75046bdfeeeba4b763aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f93fead00e0207435ff79118f5e2d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IOStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a3f93fead00e0207435ff79118f5e2d6a">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1_media_frame.html">cv::MediaFrame</a> &amp;)</td></tr>
+<tr class="separator:a3f93fead00e0207435ff79118f5e2d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b1f7aee5d17cfd7dd549a909bb26de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> IIStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ab6b1f7aee5d17cfd7dd549a909bb26de">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1_media_frame.html">cv::MediaFrame</a> &amp;)</td></tr>
+<tr class="separator:ab6b1f7aee5d17cfd7dd549a909bb26de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e378fb8cbdf7d53588efb42115c991"><td class="memTemplParams" colspan="2">template&lt;typename K , typename V &gt; </td></tr>
+<tr class="memitem:a53e378fb8cbdf7d53588efb42115c991"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a53e378fb8cbdf7d53588efb42115c991">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const std::map&lt; K, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &gt; &amp;m)</td></tr>
+<tr class="separator:a53e378fb8cbdf7d53588efb42115c991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15548851cea77745147e10a5c721172"><td class="memTemplParams" colspan="2">template&lt;typename K , typename V &gt; </td></tr>
+<tr class="memitem:ad15548851cea77745147e10a5c721172"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ad15548851cea77745147e10a5c721172">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, std::map&lt; K, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &gt; &amp;m)</td></tr>
+<tr class="separator:ad15548851cea77745147e10a5c721172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c719c72a1e306629e46d10de2ea089"><td class="memTemplParams" colspan="2">template&lt;typename K , typename V &gt; </td></tr>
+<tr class="memitem:ac9c719c72a1e306629e46d10de2ea089"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ac9c719c72a1e306629e46d10de2ea089">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const std::unordered_map&lt; K, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &gt; &amp;m)</td></tr>
+<tr class="separator:ac9c719c72a1e306629e46d10de2ea089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092aeaf499e77dd8afef34f402eeba7c"><td class="memTemplParams" colspan="2">template&lt;typename K , typename V &gt; </td></tr>
+<tr class="memitem:a092aeaf499e77dd8afef34f402eeba7c"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a092aeaf499e77dd8afef34f402eeba7c">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, std::unordered_map&lt; K, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &gt; &amp;m)</td></tr>
+<tr class="separator:a092aeaf499e77dd8afef34f402eeba7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117ae8f9674b902984c8c0999519bb20"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a117ae8f9674b902984c8c0999519bb20"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a117ae8f9674b902984c8c0999519bb20">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const std::vector&lt; T &gt; &amp;ts)</td></tr>
+<tr class="separator:a117ae8f9674b902984c8c0999519bb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d91c57fd7a3591e9b48df4e6c13674"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a75d91c57fd7a3591e9b48df4e6c13674"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a75d91c57fd7a3591e9b48df4e6c13674">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, std::vector&lt; T &gt; &amp;ts)</td></tr>
+<tr class="separator:a75d91c57fd7a3591e9b48df4e6c13674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfa6291b3855fc67752ddda0b2af3d4"><td class="memTemplParams" colspan="2">template&lt;typename V &gt; </td></tr>
+<tr class="memitem:afcfa6291b3855fc67752ddda0b2af3d4"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html#afcfa6291b3855fc67752ddda0b2af3d4">cv::gapi::s11n::detail::put_v</a> (IOStream &amp;, const <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &amp;, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a>)</td></tr>
+<tr class="separator:afcfa6291b3855fc67752ddda0b2af3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fa5ea07ee91ae7b9934d2c7e1c0011"><td class="memTemplParams" colspan="2">template&lt;typename V , typename X , typename... Xs&gt; </td></tr>
+<tr class="memitem:a92fa5ea07ee91ae7b9934d2c7e1c0011"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html#a92fa5ea07ee91ae7b9934d2c7e1c0011">cv::gapi::s11n::detail::put_v</a> (IOStream &amp;os, const <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &amp;v, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>)</td></tr>
+<tr class="separator:a92fa5ea07ee91ae7b9934d2c7e1c0011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ab1df7f4a4afff6d876d5a9c683917"><td class="memTemplParams" colspan="2">template&lt;typename V &gt; </td></tr>
+<tr class="memitem:a69ab1df7f4a4afff6d876d5a9c683917"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html#a69ab1df7f4a4afff6d876d5a9c683917">cv::gapi::s11n::detail::get_v</a> (IIStream &amp;, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &amp;, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a>)</td></tr>
+<tr class="separator:a69ab1df7f4a4afff6d876d5a9c683917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49eebbd50027d08055326b97c916a85a"><td class="memTemplParams" colspan="2">template&lt;typename V , typename X , typename... Xs&gt; </td></tr>
+<tr class="memitem:a49eebbd50027d08055326b97c916a85a"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n_1_1detail.html#a49eebbd50027d08055326b97c916a85a">cv::gapi::s11n::detail::get_v</a> (IIStream &amp;is, <a class="el" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> &amp;v, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> i, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> gi)</td></tr>
+<tr class="separator:a49eebbd50027d08055326b97c916a85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade50bfaad976df8b45df10d39303a638"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:ade50bfaad976df8b45df10d39303a638"><td class="memTemplItemLeft" align="right" valign="top">IOStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ade50bfaad976df8b45df10d39303a638">cv::gapi::s11n::operator&lt;&lt;</a> (IOStream &amp;os, const <a class="el" href="classcv_1_1util_1_1variant.html">cv::util::variant</a>&lt; Ts... &gt; &amp;v)</td></tr>
+<tr class="separator:ade50bfaad976df8b45df10d39303a638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad435dcf52afea7c91ff740f6feda439b"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:ad435dcf52afea7c91ff740f6feda439b"><td class="memTemplItemLeft" align="right" valign="top">IIStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#ad435dcf52afea7c91ff740f6feda439b">cv::gapi::s11n::operator&gt;&gt;</a> (IIStream &amp;is, <a class="el" href="classcv_1_1util_1_1variant.html">cv::util::variant</a>&lt; Ts... &gt; &amp;v)</td></tr>
+<tr class="separator:ad435dcf52afea7c91ff740f6feda439b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6adc672b12fa752fa220f9690a008c52"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a6adc672b12fa752fa220f9690a008c52"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1s11n.html#a6adc672b12fa752fa220f9690a008c52">cv::gapi::s11n::getRunArgByIdx</a> (IIStream &amp;is, <a class="el" href="classcv_1_1util_1_1variant.html">cv::util::variant</a>&lt; Ts... &gt; &amp;v, uint32_t <a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:a6adc672b12fa752fa220f9690a008c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8184ba14f1bea4bae6858298b4e89b"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
+<tr class="memitem:adb8184ba14f1bea4bae6858298b4e89b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1util_1_1optional.html">cv::util::optional</a>&lt; GCompileArg &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv_1_1gapi_1_1detail.html#adb8184ba14f1bea4bae6858298b4e89b">cv::gapi::detail::tryDeserializeCompArg</a> (const std::string &amp;tag, const std::vector&lt; char &gt; &amp;sArg)</td></tr>
+<tr class="separator:adb8184ba14f1bea4bae6858298b4e89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="s11n_8hpp.html">s11n.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

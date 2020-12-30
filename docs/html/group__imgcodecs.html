@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Image file reading and writing</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgcodecs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Image file reading and writing</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:group__imgcodecs__c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs__c.html">C API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__imgcodecs__flags"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs__flags.html">Flags used for image file reading and writing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__imgcodecs__ios"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs__ios.html">iOS glue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__imgcodecs__macosx"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs__macosx.html">MacOS(OSX) glue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gab32ee19e22660912565f8140d0f675a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8">cv::imread</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=<a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80af660544735200cbe942eea09232eb822">IMREAD_COLOR</a>)</td></tr>
+<tr class="memdesc:gab32ee19e22660912565f8140d0f675a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an image from a file.  <a href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab32ee19e22660912565f8140d0f675a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaeb5e219c706fd6aa1ec6cf17b172080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#gaaeb5e219c706fd6aa1ec6cf17b172080">cv::imreadmulti</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;mats, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=<a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80ab6573b69300c092b61800222fe555953">IMREAD_ANYCOLOR</a>)</td></tr>
+<tr class="memdesc:gaaeb5e219c706fd6aa1ec6cf17b172080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a multi-page image from a file.  <a href="group__imgcodecs.html#gaaeb5e219c706fd6aa1ec6cf17b172080">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaeb5e219c706fd6aa1ec6cf17b172080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ac397bd09e48851665edbe12aa28f25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#ga8ac397bd09e48851665edbe12aa28f25">cv::imwrite</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img, const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;params=std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;())</td></tr>
+<tr class="memdesc:ga8ac397bd09e48851665edbe12aa28f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves an image to a specified file.  <a href="group__imgcodecs.html#ga8ac397bd09e48851665edbe12aa28f25">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8ac397bd09e48851665edbe12aa28f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad518fe65098fd32446bd5b9c4f8b531"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#gaad518fe65098fd32446bd5b9c4f8b531">cv::imdecode</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> buf, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>)</td></tr>
+<tr class="memdesc:gaad518fe65098fd32446bd5b9c4f8b531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an image from a buffer in memory.  <a href="group__imgcodecs.html#gaad518fe65098fd32446bd5b9c4f8b531">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaad518fe65098fd32446bd5b9c4f8b531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac59719b6f250046ea133ffb4f6e4d620"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#gac59719b6f250046ea133ffb4f6e4d620">cv::imdecode</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> buf, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>, <a class="el" href="classcv_1_1_mat.html">Mat</a> *<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)</td></tr>
+<tr class="separator:gac59719b6f250046ea133ffb4f6e4d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e9883ae1f619bcbe875b7038520ea78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#ga4e9883ae1f619bcbe875b7038520ea78">cv::imencode</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;ext, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;buf, const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;params=std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;())</td></tr>
+<tr class="memdesc:ga4e9883ae1f619bcbe875b7038520ea78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes an image into a memory buffer.  <a href="group__imgcodecs.html#ga4e9883ae1f619bcbe875b7038520ea78">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4e9883ae1f619bcbe875b7038520ea78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65d3569d8845d1210e1aeab8c199031c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#ga65d3569d8845d1210e1aeab8c199031c">cv::haveImageReader</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="memdesc:ga65d3569d8845d1210e1aeab8c199031c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the specified image can be decoded by OpenCV.  <a href="group__imgcodecs.html#ga65d3569d8845d1210e1aeab8c199031c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga65d3569d8845d1210e1aeab8c199031c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4fa9c4c32b58c55059752c0490d3f20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgcodecs.html#gac4fa9c4c32b58c55059752c0490d3f20">cv::haveImageWriter</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="memdesc:gac4fa9c4c32b58c55059752c0490d3f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if an image with the specified filename can be encoded by OpenCV.  <a href="group__imgcodecs.html#gac4fa9c4c32b58c55059752c0490d3f20">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac4fa9c4c32b58c55059752c0490d3f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga65d3569d8845d1210e1aeab8c199031c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65d3569d8845d1210e1aeab8c199031c">&#9670;&nbsp;</a></span>haveImageReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::haveImageReader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the specified image can be decoded by OpenCV. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>File name of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac4fa9c4c32b58c55059752c0490d3f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4fa9c4c32b58c55059752c0490d3f20">&#9670;&nbsp;</a></span>haveImageWriter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::haveImageWriter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if an image with the specified filename can be encoded by OpenCV. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>File name of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaad518fe65098fd32446bd5b9c4f8b531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad518fe65098fd32446bd5b9c4f8b531">&#9670;&nbsp;</a></span>imdecode() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::imdecode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads an image from a buffer in memory. </p>
+<p>The function imdecode reads an image from the specified buffer in the memory. If the buffer is too short or contains invalid data, the function returns an empty matrix ( <a class="el" href="classcv_1_1_mat.html#a4d33bed1c850265370d2af0ff02e1564" title="pointer to the data">Mat::data</a>==NULL ).</p>
+<p>See <a class="el" href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8" title="Loads an image from a file.">cv::imread</a> for the list of supported formats and flags description.</p>
+<dl class="section note"><dt>Заметки</dt><dd>In the case of color images, the decoded images will have the channels stored in <b>B G R</b> order. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Input array or vector of bytes. </td></tr>
+    <tr><td class="paramname">flags</td><td>The same flags as in <a class="el" href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8" title="Loads an image from a file.">cv::imread</a>, see <a class="el" href="group__imgcodecs__flags.html#ga61d9b0126a3e57d9277ac48327799c80" title="Imread flags.">cv::ImreadModes</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac59719b6f250046ea133ffb4f6e4d620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac59719b6f250046ea133ffb4f6e4d620">&#9670;&nbsp;</a></span>imdecode() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::imdecode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td></td></tr>
+    <tr><td class="paramname">flags</td><td></td></tr>
+    <tr><td class="paramname">dst</td><td>The optional output placeholder for the decoded matrix. It can save the image reallocations when the function is called repeatedly for images of the same size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4e9883ae1f619bcbe875b7038520ea78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e9883ae1f619bcbe875b7038520ea78">&#9670;&nbsp;</a></span>imencode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::imencode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>ext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>params</em> = <code>std::vector&lt;&#160;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;&gt;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encodes an image into a memory buffer. </p>
+<p>The function imencode compresses the image and stores it in the memory buffer that is resized to fit the result. See <a class="el" href="group__imgcodecs.html#ga8ac397bd09e48851665edbe12aa28f25" title="Saves an image to a specified file.">cv::imwrite</a> for the list of supported formats and flags description.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ext</td><td>File extension that defines the output format. </td></tr>
+    <tr><td class="paramname">img</td><td>Image to be written. </td></tr>
+    <tr><td class="paramname">buf</td><td>Output buffer resized to fit the compressed image. </td></tr>
+    <tr><td class="paramname">params</td><td>Format-specific parameters. See <a class="el" href="group__imgcodecs.html#ga8ac397bd09e48851665edbe12aa28f25" title="Saves an image to a specified file.">cv::imwrite</a> and <a class="el" href="group__imgcodecs__flags.html#ga292d81be8d76901bff7988d18d2b42ac" title="Imwrite flags.">cv::ImwriteFlags</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab32ee19e22660912565f8140d0f675a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab32ee19e22660912565f8140d0f675a8">&#9670;&nbsp;</a></span>imread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::imread </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80af660544735200cbe942eea09232eb822">IMREAD_COLOR</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads an image from a file. </p>
+<p><a class="anchor" id="imread"></a> The function imread loads an image from the specified file and returns it. If the image cannot be read (because of missing file, improper permissions, unsupported or invalid format), the function returns an empty matrix ( <a class="el" href="classcv_1_1_mat.html#a4d33bed1c850265370d2af0ff02e1564" title="pointer to the data">Mat::data</a>==NULL ).</p>
+<p>Currently, the following file formats are supported:</p>
+<ul>
+<li>Windows bitmaps - *.bmp, *.dib (always supported)</li>
+<li>JPEG files - *.jpeg, *.jpg, *.jpe (see the <em>Note</em> section)</li>
+<li>JPEG 2000 files - *.jp2 (see the <em>Note</em> section)</li>
+<li>Portable <a class="el" href="class_network.html" title="Главный класс нейронной сети">Network</a> Graphics - *.png (see the <em>Note</em> section)</li>
+<li>WebP - *.webp (see the <em>Note</em> section)</li>
+<li>Portable image format - *.pbm, *.pgm, *.ppm *.pxm, *.pnm (always supported)</li>
+<li>PFM files - *.pfm (see the <em>Note</em> section)</li>
+<li>Sun rasters - *.sr, *.ras (always supported)</li>
+<li>TIFF files - *.tiff, *.tif (see the <em>Note</em> section)</li>
+<li>OpenEXR Image files - *.exr (see the <em>Note</em> section)</li>
+<li>Radiance HDR - *.hdr, *.pic (always supported)</li>
+<li>Raster and Vector geospatial data supported by GDAL (see the <em>Note</em> section)</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>The function determines the type of an image by the content, not by the file extension.</li>
+<li>In the case of color images, the decoded images will have the channels stored in <b>B G R</b> order.</li>
+<li>When using IMREAD_GRAYSCALE, the codec's internal grayscale conversion will be used, if available. Results may differ to the output of <a class="el" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd" title="Converts an image from one color space to another.">cvtColor()</a></li>
+<li>On Microsoft Windows* OS and MacOSX*, the codecs shipped with an OpenCV image (libjpeg, libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs, and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware that currently these native image loaders give images with different pixel values because of the color management embedded into MacOSX.</li>
+<li>On Linux*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for codecs supplied with an OS image. Install the relevant packages (do not forget the development files, for example, "libjpeg-dev", in Debian* and Ubuntu*) to get the codec support or turn on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.</li>
+<li>In the case you set <em>WITH_GDAL</em> flag to true in CMake and <a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80a1b482916f4ffe34f0b90550f267fd896">IMREAD_LOAD_GDAL</a> to load the image, then the <a href="http://www.gdal.org">GDAL</a> driver will be used in order to decode the image, supporting the following formats: <a href="http://www.gdal.org/formats_list.html">Raster</a>, <a href="http://www.gdal.org/ogr_formats.html">Vector</a>.</li>
+<li>If EXIF information is embedded in the image file, the EXIF orientation will be taken into account and thus the image will be rotated accordingly except if the flags <a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80a34f91a514cd95127d8ba900840af548e">IMREAD_IGNORE_ORIENTATION</a> or <a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80aeddd67043ed0df14f9d9a4e66d2b0708">IMREAD_UNCHANGED</a> are passed.</li>
+<li>Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.</li>
+<li>By default number of pixels must be less than 2^30. Limit can be set using system variable OPENCV_IO_MAX_IMAGE_PIXELS</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of file to be loaded. </td></tr>
+    <tr><td class="paramname">flags</td><td>Flag that can take values of <a class="el" href="group__imgcodecs__flags.html#ga61d9b0126a3e57d9277ac48327799c80" title="Imread flags.">cv::ImreadModes</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaeb5e219c706fd6aa1ec6cf17b172080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaeb5e219c706fd6aa1ec6cf17b172080">&#9670;&nbsp;</a></span>imreadmulti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::imreadmulti </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80ab6573b69300c092b61800222fe555953">IMREAD_ANYCOLOR</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a multi-page image from a file. </p>
+<p>The function imreadmulti loads a multi-page image from the specified file into a vector of <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> objects. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of file to be loaded. </td></tr>
+    <tr><td class="paramname">flags</td><td>Flag that can take values of <a class="el" href="group__imgcodecs__flags.html#ga61d9b0126a3e57d9277ac48327799c80" title="Imread flags.">cv::ImreadModes</a>, default with <a class="el" href="group__imgcodecs__flags.html#gga61d9b0126a3e57d9277ac48327799c80ab6573b69300c092b61800222fe555953" title="If set, the image is read in any possible color format.">cv::IMREAD_ANYCOLOR</a>. </td></tr>
+    <tr><td class="paramname">mats</td><td>A vector of <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> objects holding each page, if more than one. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8" title="Loads an image from a file.">cv::imread</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga8ac397bd09e48851665edbe12aa28f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ac397bd09e48851665edbe12aa28f25">&#9670;&nbsp;</a></span>imwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::imwrite </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>params</em> = <code>std::vector&lt;&#160;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;&gt;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves an image to a specified file. </p>
+<p>The function imwrite saves the image to the specified file. The image format is chosen based on the filename extension (see <a class="el" href="group__imgcodecs.html#gab32ee19e22660912565f8140d0f675a8" title="Loads an image from a file.">cv::imread</a> for the list of extensions). In general, only 8-bit single-channel or 3-channel (with 'BGR' channel order) images can be saved using this function, with these exceptions:</p>
+<ul>
+<li>16-bit unsigned (CV_16U) images can be saved in the case of PNG, JPEG 2000, and TIFF formats</li>
+<li>32-bit float (CV_32F) images can be saved in PFM, TIFF, OpenEXR, and Radiance HDR formats; 3-channel (CV_32FC3) TIFF images will be saved using the LogLuv high dynamic range encoding (4 bytes per pixel)</li>
+<li>PNG images with an alpha channel can be saved using this function. To do this, create 8-bit (or 16-bit) 4-channel image BGRA, where the alpha channel goes last. Fully transparent pixels should have alpha set to 0, fully opaque pixels should have alpha set to 255/65535 (see the code sample below).</li>
+<li>Multiple images (vector of <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>) can be saved in TIFF format (see the code sample below).</li>
+</ul>
+<p>If the format, depth or channel order is different, use <a class="el" href="classcv_1_1_mat.html#adf88c60c5b4980e05bb556080916978b" title="Converts an array to another data type with optional scaling.">Mat::convertTo</a> and <a class="el" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd" title="Converts an image from one color space to another.">cv::cvtColor</a> to convert it before saving. Or, use the universal <a class="el" href="classcv_1_1_file_storage.html" title="XML/YAML/JSON file storage class that encapsulates all the information necessary for writing or readi...">FileStorage</a> I/O functions to save the image to XML or YAML format.</p>
+<p>The sample below shows how to create a BGRA image, how to set custom compression parameters and save it to a PNG file. It also demonstrates how to save multiple images in a TIFF file: </p><div class="fragment"></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the file. </td></tr>
+    <tr><td class="paramname">img</td><td>(<a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> or vector of <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>) Image or Images to be saved. </td></tr>
+    <tr><td class="paramname">params</td><td>Format-specific parameters encoded as pairs (paramId_1, paramValue_1, paramId_2, paramValue_2, ... .) see <a class="el" href="group__imgcodecs__flags.html#ga292d81be8d76901bff7988d18d2b42ac" title="Imwrite flags.">cv::ImwriteFlags</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

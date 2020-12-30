@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::ocl::Kernel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1ocl_1_1_kernel.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classcv_1_1ocl_1_1_kernel-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::ocl::Kernel<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__opencl.html">OpenCL support</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4cd0a658f506b1eddb9ccaf51e4a78c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a4cd0a658f506b1eddb9ccaf51e4a78c9">Kernel</a> ()</td></tr>
+<tr class="separator:a4cd0a658f506b1eddb9ccaf51e4a78c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65ad198b5346b5c48e496ff4b2c31fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#ac65ad198b5346b5c48e496ff4b2c31fd">Kernel</a> (const char *kname, const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;prog)</td></tr>
+<tr class="separator:ac65ad198b5346b5c48e496ff4b2c31fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed0338964e0672275ed7fa50f07ff76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a0ed0338964e0672275ed7fa50f07ff76">Kernel</a> (const char *kname, const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;prog, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildopts=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>(), <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> *errmsg=0)</td></tr>
+<tr class="separator:a0ed0338964e0672275ed7fa50f07ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf471adab409b0327615a56aa9ddd59e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#acf471adab409b0327615a56aa9ddd59e">~Kernel</a> ()</td></tr>
+<tr class="separator:acf471adab409b0327615a56aa9ddd59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc037e65a7faf099602e1d959f7f8d23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#afc037e65a7faf099602e1d959f7f8d23">Kernel</a> (const <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;k)</td></tr>
+<tr class="separator:afc037e65a7faf099602e1d959f7f8d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2694f462b29140fd21bc0e6f5380f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#aa2694f462b29140fd21bc0e6f5380f0b">operator=</a> (const <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;k)</td></tr>
+<tr class="separator:aa2694f462b29140fd21bc0e6f5380f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405ff97081b9506249b7f31fd22191d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a405ff97081b9506249b7f31fd22191d6">empty</a> () const</td></tr>
+<tr class="separator:a405ff97081b9506249b7f31fd22191d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c66ae727523e0a1155b9837848e8a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#af4c66ae727523e0a1155b9837848e8a6">create</a> (const char *kname, const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;prog)</td></tr>
+<tr class="separator:af4c66ae727523e0a1155b9837848e8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9374801e94cbfdabdd121e59d1abd73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#ad9374801e94cbfdabdd121e59d1abd73">create</a> (const char *kname, const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;prog, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildopts, <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> *errmsg=0)</td></tr>
+<tr class="separator:ad9374801e94cbfdabdd121e59d1abd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1878c70f71fa758d2a7e72944ae01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a7d1878c70f71fa758d2a7e72944ae01b">set</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> sz)</td></tr>
+<tr class="separator:a7d1878c70f71fa758d2a7e72944ae01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a6c6c3b21e1b1a9259c541f88b48b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a77a6c6c3b21e1b1a9259c541f88b48b7">set</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const <a class="el" href="classcv_1_1ocl_1_1_image2_d.html">Image2D</a> &amp;image2D)</td></tr>
+<tr class="separator:a77a6c6c3b21e1b1a9259c541f88b48b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee13a6f7c087c5611048d97e4b833c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#aee13a6f7c087c5611048d97e4b833c56">set</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m)</td></tr>
+<tr class="separator:aee13a6f7c087c5611048d97e4b833c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6130a2a2f7d6cc61c234c1f062630734"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a6130a2a2f7d6cc61c234c1f062630734">set</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const <a class="el" href="classcv_1_1ocl_1_1_kernel_arg.html">KernelArg</a> &amp;arg)</td></tr>
+<tr class="separator:a6130a2a2f7d6cc61c234c1f062630734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff26198735930885f1f78e1990937475"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:aff26198735930885f1f78e1990937475"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#aff26198735930885f1f78e1990937475">set</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const _Tp &amp;<a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>)</td></tr>
+<tr class="separator:aff26198735930885f1f78e1990937475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a291d5813cca476464022b0f009522741"><td class="memTemplParams" colspan="2">template&lt;typename... _Tps&gt; </td></tr>
+<tr class="memitem:a291d5813cca476464022b0f009522741"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a291d5813cca476464022b0f009522741">args</a> (const _Tps &amp;... kernel_args)</td></tr>
+<tr class="memdesc:a291d5813cca476464022b0f009522741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup OpenCL <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> arguments. Avoid direct using of set(i, ...) methods.  <a href="classcv_1_1ocl_1_1_kernel.html#a291d5813cca476464022b0f009522741">Подробнее...</a><br /></td></tr>
+<tr class="separator:a291d5813cca476464022b0f009522741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce6b92ee1801a96913402483f086e4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a1ce6b92ee1801a96913402483f086e4a">run</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> globalsize[], <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> localsize[], bool sync, const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;q=<a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>())</td></tr>
+<tr class="memdesc:a1ce6b92ee1801a96913402483f086e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the OpenCL kernel.  <a href="classcv_1_1ocl_1_1_kernel.html#a1ce6b92ee1801a96913402483f086e4a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ce6b92ee1801a96913402483f086e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc8795606e2db6d3186d8fb339d4623"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#afdc8795606e2db6d3186d8fb339d4623">runTask</a> (bool sync, const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;q=<a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>())</td></tr>
+<tr class="separator:afdc8795606e2db6d3186d8fb339d4623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3957a938a48d16a665bfc170759461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a9e3957a938a48d16a665bfc170759461">runProfiling</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> globalsize[], <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> localsize[], const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;q=<a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>())</td></tr>
+<tr class="memdesc:a9e3957a938a48d16a665bfc170759461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to synchronized <a class="el" href="classcv_1_1ocl_1_1_kernel.html#a1ce6b92ee1801a96913402483f086e4a" title="Run the OpenCL kernel.">run()</a> call with returning of kernel execution time Separate OpenCL command queue may be used (with CL_QUEUE_PROFILING_ENABLE)  <a href="classcv_1_1ocl_1_1_kernel.html#a9e3957a938a48d16a665bfc170759461">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9e3957a938a48d16a665bfc170759461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d8b8b503683b9ab5764e4faa54984a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#ad4d8b8b503683b9ab5764e4faa54984a">workGroupSize</a> () const</td></tr>
+<tr class="separator:ad4d8b8b503683b9ab5764e4faa54984a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7c188799b17f593647f3476de0ec4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a4c7c188799b17f593647f3476de0ec4f">preferedWorkGroupSizeMultiple</a> () const</td></tr>
+<tr class="separator:a4c7c188799b17f593647f3476de0ec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d1fe80bed5fe85974a83d08c67ca53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a45d1fe80bed5fe85974a83d08c67ca53">compileWorkGroupSize</a> (<a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> wsz[]) const</td></tr>
+<tr class="separator:a45d1fe80bed5fe85974a83d08c67ca53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a22e8dbd4fd080ac2c1946d1bae220c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a9a22e8dbd4fd080ac2c1946d1bae220c">localMemSize</a> () const</td></tr>
+<tr class="separator:a9a22e8dbd4fd080ac2c1946d1bae220c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa89be975dd21c23ee86ff1ad977d2e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#aaa89be975dd21c23ee86ff1ad977d2e2">ptr</a> () const</td></tr>
+<tr class="separator:aaa89be975dd21c23ee86ff1ad977d2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a247492daa0f3be7fe0265a1d19bb8597"><td class="memTemplParams" colspan="2">template&lt;typename _Tp0 &gt; </td></tr>
+<tr class="memitem:a247492daa0f3be7fe0265a1d19bb8597"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a247492daa0f3be7fe0265a1d19bb8597">set_args_</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const _Tp0 &amp;a0)</td></tr>
+<tr class="separator:a247492daa0f3be7fe0265a1d19bb8597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad756885d0824fd781064692a60697708"><td class="memTemplParams" colspan="2">template&lt;typename _Tp0 , typename... _Tps&gt; </td></tr>
+<tr class="memitem:ad756885d0824fd781064692a60697708"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#ad756885d0824fd781064692a60697708">set_args_</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, const _Tp0 &amp;a0, const _Tps &amp;... rest_args)</td></tr>
+<tr class="separator:ad756885d0824fd781064692a60697708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a0275f89c9817453bcc4742b725ed00c4"><td class="memItemLeft" align="right" valign="top">Impl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html#a0275f89c9817453bcc4742b725ed00c4">p</a></td></tr>
+<tr class="separator:a0275f89c9817453bcc4742b725ed00c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4cd0a658f506b1eddb9ccaf51e4a78c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd0a658f506b1eddb9ccaf51e4a78c9">&#9670;&nbsp;</a></span>Kernel() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Kernel::Kernel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac65ad198b5346b5c48e496ff4b2c31fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65ad198b5346b5c48e496ff4b2c31fd">&#9670;&nbsp;</a></span>Kernel() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Kernel::Kernel </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>kname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ed0338964e0672275ed7fa50f07ff76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed0338964e0672275ed7fa50f07ff76">&#9670;&nbsp;</a></span>Kernel() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Kernel::Kernel </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>kname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildopts</em> = <code><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> *&#160;</td>
+          <td class="paramname"><em>errmsg</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf471adab409b0327615a56aa9ddd59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf471adab409b0327615a56aa9ddd59e">&#9670;&nbsp;</a></span>~Kernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Kernel::~Kernel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc037e65a7faf099602e1d959f7f8d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc037e65a7faf099602e1d959f7f8d23">&#9670;&nbsp;</a></span>Kernel() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Kernel::Kernel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a291d5813cca476464022b0f009522741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291d5813cca476464022b0f009522741">&#9670;&nbsp;</a></span>args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Tps&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a>&amp; cv::ocl::Kernel::args </td>
+          <td>(</td>
+          <td class="paramtype">const _Tps &amp;...&#160;</td>
+          <td class="paramname"><em>kernel_args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup OpenCL <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> arguments. Avoid direct using of set(i, ...) methods. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> ok = <a class="code" href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a></div>
+<div class="line">    .args(</div>
+<div class="line">        srcUMat, dstUMat,</div>
+<div class="line">        (<span class="keywordtype">float</span>)some_float_param</div>
+<div class="line">    ).run(ndims, globalSize, localSize);</div>
+<div class="line"><span class="keywordflow">if</span> (!ok) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="ttc" id="agroup__imgproc__c_html_ga863a75780ba6c5de552f5361cb0d2c89"><div class="ttname"><a href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a></div><div class="ttdeci">CvArr const CvMat * kernel</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:131</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a45d1fe80bed5fe85974a83d08c67ca53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d1fe80bed5fe85974a83d08c67ca53">&#9670;&nbsp;</a></span>compileWorkGroupSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::compileWorkGroupSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>wsz</em>[]</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4c66ae727523e0a1155b9837848e8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c66ae727523e0a1155b9837848e8a6">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>kname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9374801e94cbfdabdd121e59d1abd73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9374801e94cbfdabdd121e59d1abd73">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>kname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildopts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> *&#160;</td>
+          <td class="paramname"><em>errmsg</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a405ff97081b9506249b7f31fd22191d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405ff97081b9506249b7f31fd22191d6">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a22e8dbd4fd080ac2c1946d1bae220c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a22e8dbd4fd080ac2c1946d1bae220c">&#9670;&nbsp;</a></span>localMemSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::ocl::Kernel::localMemSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2694f462b29140fd21bc0e6f5380f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2694f462b29140fd21bc0e6f5380f0b">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a>&amp; cv::ocl::Kernel::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c7c188799b17f593647f3476de0ec4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7c188799b17f593647f3476de0ec4f">&#9670;&nbsp;</a></span>preferedWorkGroupSizeMultiple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::ocl::Kernel::preferedWorkGroupSizeMultiple </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa89be975dd21c23ee86ff1ad977d2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa89be975dd21c23ee86ff1ad977d2e2">&#9670;&nbsp;</a></span>ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* cv::ocl::Kernel::ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ce6b92ee1801a96913402483f086e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce6b92ee1801a96913402483f086e4a">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>globalsize</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>localsize</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sync</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em> = <code><a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run the OpenCL kernel. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dims</td><td>the work problem dimensions. It is the length of globalsize and localsize. It can be either 1, 2 or 3. </td></tr>
+    <tr><td class="paramname">globalsize</td><td>work items for each dimension. It is not the final globalsize passed to OpenCL. Each dimension will be adjusted to the nearest integer divisible by the corresponding value in localsize. If localsize is NULL, it will still be adjusted depending on dims. The adjusted values are greater than or equal to the original values. </td></tr>
+    <tr><td class="paramname">localsize</td><td>work-group size for each dimension. </td></tr>
+    <tr><td class="paramname">sync</td><td>specify whether to wait for OpenCL computation to finish before return. </td></tr>
+    <tr><td class="paramname">q</td><td>command queue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e3957a938a48d16a665bfc170759461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3957a938a48d16a665bfc170759461">&#9670;&nbsp;</a></span>runProfiling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::ocl::Kernel::runProfiling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>globalsize</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>localsize</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em> = <code><a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Similar to synchronized <a class="el" href="classcv_1_1ocl_1_1_kernel.html#a1ce6b92ee1801a96913402483f086e4a" title="Run the OpenCL kernel.">run()</a> call with returning of kernel execution time Separate OpenCL command queue may be used (with CL_QUEUE_PROFILING_ENABLE) </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Execution time in nanoseconds or negative number on error </dd></dl>
+
+</div>
+</div>
+<a id="afdc8795606e2db6d3186d8fb339d4623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc8795606e2db6d3186d8fb339d4623">&#9670;&nbsp;</a></span>runTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Kernel::runTask </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sync</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em> = <code><a class="el" href="classcv_1_1ocl_1_1_queue.html">Queue</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff26198735930885f1f78e1990937475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff26198735930885f1f78e1990937475">&#9670;&nbsp;</a></span>set() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const _Tp &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77a6c6c3b21e1b1a9259c541f88b48b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a6c6c3b21e1b1a9259c541f88b48b7">&#9670;&nbsp;</a></span>set() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_image2_d.html">Image2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>image2D</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6130a2a2f7d6cc61c234c1f062630734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6130a2a2f7d6cc61c234c1f062630734">&#9670;&nbsp;</a></span>set() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_kernel_arg.html">KernelArg</a> &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee13a6f7c087c5611048d97e4b833c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee13a6f7c087c5611048d97e4b833c56">&#9670;&nbsp;</a></span>set() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d1878c70f71fa758d2a7e72944ae01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1878c70f71fa758d2a7e72944ae01b">&#9670;&nbsp;</a></span>set() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>sz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a247492daa0f3be7fe0265a1d19bb8597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247492daa0f3be7fe0265a1d19bb8597">&#9670;&nbsp;</a></span>set_args_() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp0 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set_args_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const _Tp0 &amp;&#160;</td>
+          <td class="paramname"><em>a0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad756885d0824fd781064692a60697708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad756885d0824fd781064692a60697708">&#9670;&nbsp;</a></span>set_args_() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp0 , typename... _Tps&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::Kernel::set_args_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const _Tp0 &amp;&#160;</td>
+          <td class="paramname"><em>a0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const _Tps &amp;...&#160;</td>
+          <td class="paramname"><em>rest_args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4d8b8b503683b9ab5764e4faa54984a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d8b8b503683b9ab5764e4faa54984a">&#9670;&nbsp;</a></span>workGroupSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::ocl::Kernel::workGroupSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a0275f89c9817453bcc4742b725ed00c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0275f89c9817453bcc4742b725ed00c4">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Impl* cv::ocl::Kernel::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1ocl.html">ocl</a></li><li class="navelem"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">Kernel</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

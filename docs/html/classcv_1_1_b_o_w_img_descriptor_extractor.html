@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::BOWImgDescriptorExtractor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_b_o_w_img_descriptor_extractor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classcv_1_1_b_o_w_img_descriptor_extractor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::BOWImgDescriptorExtractor<div class="ingroups"><a class="el" href="group__features2d.html">2D Features Framework</a> &raquo; <a class="el" href="group__features2d__category.html">Object Categorization</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class to compute an image descriptor using the <em>bag of visual words</em>.  
+ <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2features2d_8hpp_source.html">features2d.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1fd55e5d6602f25ebc85c6747b8b759a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a1fd55e5d6602f25ebc85c6747b8b759a">BOWImgDescriptorExtractor</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="group__features2d.html#gadd5cf7c76865f14468cfdd9cc08eb990">DescriptorExtractor</a> &gt; &amp;<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#acd0f100ac2f377432931062ce02f16cb">dextractor</a>, const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a> &gt; &amp;<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a43311e57fce860293560e05a7e933424">dmatcher</a>)</td></tr>
+<tr class="memdesc:a1fd55e5d6602f25ebc85c6747b8b759a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a1fd55e5d6602f25ebc85c6747b8b759a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fd55e5d6602f25ebc85c6747b8b759a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37f98c0c292cfb0e9ec23ef4fbb11c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#aa37f98c0c292cfb0e9ec23ef4fbb11c1">BOWImgDescriptorExtractor</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a> &gt; &amp;<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a43311e57fce860293560e05a7e933424">dmatcher</a>)</td></tr>
+<tr class="separator:aa37f98c0c292cfb0e9ec23ef4fbb11c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3697d34894371e4811da4716e4f111"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#abb3697d34894371e4811da4716e4f111">~BOWImgDescriptorExtractor</a> ()</td></tr>
+<tr class="separator:abb3697d34894371e4811da4716e4f111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5a14e8b97459b3e4f0c3a3d7bf24dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#acf5a14e8b97459b3e4f0c3a3d7bf24dd">setVocabulary</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ab5753a53d4f4c6e2c18b61e1b4559b98">vocabulary</a>)</td></tr>
+<tr class="memdesc:acf5a14e8b97459b3e4f0c3a3d7bf24dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a visual vocabulary.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#acf5a14e8b97459b3e4f0c3a3d7bf24dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:acf5a14e8b97459b3e4f0c3a3d7bf24dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9708c95600c785ed17a82520aff39c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a6e9708c95600c785ed17a82520aff39c">getVocabulary</a> () const</td></tr>
+<tr class="memdesc:a6e9708c95600c785ed17a82520aff39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set vocabulary.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a6e9708c95600c785ed17a82520aff39c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6e9708c95600c785ed17a82520aff39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e1019795995a9395aded0a9c1c3ed6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">compute</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, std::vector&lt; <a class="el" href="classcv_1_1_key_point.html">KeyPoint</a> &gt; &amp;<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a0c0dd4e916057d4c90e9e766a12faa11">keypoints</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a9f0de63e8d6377ddbc576457d38ce097">imgDescriptor</a>, std::vector&lt; std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &gt; *pointIdxsOfClusters=0, <a class="el" href="classcv_1_1_mat.html">Mat</a> *descriptors=0)</td></tr>
+<tr class="memdesc:ac4e1019795995a9395aded0a9c1c3ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an image descriptor using the set visual vocabulary.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac4e1019795995a9395aded0a9c1c3ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fd3ce0bbe507644c0979178f2384f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ad6fd3ce0bbe507644c0979178f2384f4">compute</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> keypointDescriptors, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a9f0de63e8d6377ddbc576457d38ce097">imgDescriptor</a>, std::vector&lt; std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &gt; *pointIdxsOfClusters=0)</td></tr>
+<tr class="separator:ad6fd3ce0bbe507644c0979178f2384f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1ec7dbb6c004ebd260293b19196af4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a8b1ec7dbb6c004ebd260293b19196af4">CV_WRAP_AS</a> (<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">compute</a>) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> compute2(const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;<a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a></td></tr>
+<tr class="separator:a8b1ec7dbb6c004ebd260293b19196af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529d1e68460bac037fa01d3a6b64dc52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a529d1e68460bac037fa01d3a6b64dc52">descriptorSize</a> () const</td></tr>
+<tr class="memdesc:a529d1e68460bac037fa01d3a6b64dc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an image descriptor size if the vocabulary is set. Otherwise, it returns 0.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a529d1e68460bac037fa01d3a6b64dc52">Подробнее...</a><br /></td></tr>
+<tr class="separator:a529d1e68460bac037fa01d3a6b64dc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955125dc484faef494a56b9d8c78cb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a955125dc484faef494a56b9d8c78cb6c">descriptorType</a> () const</td></tr>
+<tr class="memdesc:a955125dc484faef494a56b9d8c78cb6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an image descriptor type.  <a href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a955125dc484faef494a56b9d8c78cb6c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a955125dc484faef494a56b9d8c78cb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0c0dd4e916057d4c90e9e766a12faa11"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcv_1_1_key_point.html">KeyPoint</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a0c0dd4e916057d4c90e9e766a12faa11">keypoints</a></td></tr>
+<tr class="separator:a0c0dd4e916057d4c90e9e766a12faa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0de63e8d6377ddbc576457d38ce097"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcv_1_1_key_point.html">KeyPoint</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a9f0de63e8d6377ddbc576457d38ce097">imgDescriptor</a> { <a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">compute</a>(<a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>,<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a0c0dd4e916057d4c90e9e766a12faa11">keypoints</a>,imgDescriptor)</td></tr>
+<tr class="separator:a9f0de63e8d6377ddbc576457d38ce097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ab5753a53d4f4c6e2c18b61e1b4559b98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ab5753a53d4f4c6e2c18b61e1b4559b98">vocabulary</a></td></tr>
+<tr class="separator:ab5753a53d4f4c6e2c18b61e1b4559b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0f100ac2f377432931062ce02f16cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="group__features2d.html#gadd5cf7c76865f14468cfdd9cc08eb990">DescriptorExtractor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#acd0f100ac2f377432931062ce02f16cb">dextractor</a></td></tr>
+<tr class="separator:acd0f100ac2f377432931062ce02f16cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43311e57fce860293560e05a7e933424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a43311e57fce860293560e05a7e933424">dmatcher</a></td></tr>
+<tr class="separator:a43311e57fce860293560e05a7e933424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Class to compute an image descriptor using the <em>bag of visual words</em>. </p>
+<p>Such a computation consists of the following steps:</p>
+<ol type="1">
+<li>Compute descriptors for a given image and its keypoints set.</li>
+<li>Find the nearest visual words from the vocabulary for each keypoint descriptor.</li>
+<li>Compute the bag-of-words image descriptor as is a normalized histogram of vocabulary words encountered in the image. The i-th bin of the histogram is a frequency of i-th word of the vocabulary in the given image. </li>
+</ol>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1fd55e5d6602f25ebc85c6747b8b759a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd55e5d6602f25ebc85c6747b8b759a">&#9670;&nbsp;</a></span>BOWImgDescriptorExtractor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::BOWImgDescriptorExtractor::BOWImgDescriptorExtractor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="group__features2d.html#gadd5cf7c76865f14468cfdd9cc08eb990">DescriptorExtractor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dextractor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dmatcher</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The constructor. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dextractor</td><td>Descriptor extractor that is used to compute descriptors for an input image and its keypoints. </td></tr>
+    <tr><td class="paramname">dmatcher</td><td>Descriptor matcher that is used to find the nearest word of the trained vocabulary for each keypoint descriptor of the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa37f98c0c292cfb0e9ec23ef4fbb11c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37f98c0c292cfb0e9ec23ef4fbb11c1">&#9670;&nbsp;</a></span>BOWImgDescriptorExtractor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::BOWImgDescriptorExtractor::BOWImgDescriptorExtractor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dmatcher</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="abb3697d34894371e4811da4716e4f111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3697d34894371e4811da4716e4f111">&#9670;&nbsp;</a></span>~BOWImgDescriptorExtractor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::BOWImgDescriptorExtractor::~BOWImgDescriptorExtractor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac4e1019795995a9395aded0a9c1c3ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e1019795995a9395aded0a9c1c3ed6">&#9670;&nbsp;</a></span>compute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::BOWImgDescriptorExtractor::compute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1_key_point.html">KeyPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>keypoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>imgDescriptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &gt; *&#160;</td>
+          <td class="paramname"><em>pointIdxsOfClusters</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_mat.html">Mat</a> *&#160;</td>
+          <td class="paramname"><em>descriptors</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes an image descriptor using the set visual vocabulary. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image, for which the descriptor is computed. </td></tr>
+    <tr><td class="paramname">keypoints</td><td>Keypoints detected in the input image. </td></tr>
+    <tr><td class="paramname">imgDescriptor</td><td>Computed output image descriptor. </td></tr>
+    <tr><td class="paramname">pointIdxsOfClusters</td><td>Indices of keypoints that belong to the cluster. This means that pointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary) returned if it is non-zero. </td></tr>
+    <tr><td class="paramname">descriptors</td><td>Descriptors of the image keypoints that are returned if they are non-zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6fd3ce0bbe507644c0979178f2384f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fd3ce0bbe507644c0979178f2384f4">&#9670;&nbsp;</a></span>compute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::BOWImgDescriptorExtractor::compute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>keypointDescriptors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>imgDescriptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &gt; *&#160;</td>
+          <td class="paramname"><em>pointIdxsOfClusters</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keypointDescriptors</td><td>Computed descriptors to match with vocabulary. </td></tr>
+    <tr><td class="paramname">imgDescriptor</td><td>Computed output image descriptor. </td></tr>
+    <tr><td class="paramname">pointIdxsOfClusters</td><td>Indices of keypoints that belong to the cluster. This means that pointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary) returned if it is non-zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b1ec7dbb6c004ebd260293b19196af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1ec7dbb6c004ebd260293b19196af4">&#9670;&nbsp;</a></span>CV_WRAP_AS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::BOWImgDescriptorExtractor::CV_WRAP_AS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">compute</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a529d1e68460bac037fa01d3a6b64dc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529d1e68460bac037fa01d3a6b64dc52">&#9670;&nbsp;</a></span>descriptorSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::BOWImgDescriptorExtractor::descriptorSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an image descriptor size if the vocabulary is set. Otherwise, it returns 0. </p>
+
+</div>
+</div>
+<a id="a955125dc484faef494a56b9d8c78cb6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955125dc484faef494a56b9d8c78cb6c">&#9670;&nbsp;</a></span>descriptorType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::BOWImgDescriptorExtractor::descriptorType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an image descriptor type. </p>
+
+</div>
+</div>
+<a id="a6e9708c95600c785ed17a82520aff39c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9708c95600c785ed17a82520aff39c">&#9670;&nbsp;</a></span>getVocabulary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a>&amp; cv::BOWImgDescriptorExtractor::getVocabulary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the set vocabulary. </p>
+
+</div>
+</div>
+<a id="acf5a14e8b97459b3e4f0c3a3d7bf24dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf5a14e8b97459b3e4f0c3a3d7bf24dd">&#9670;&nbsp;</a></span>setVocabulary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::BOWImgDescriptorExtractor::setVocabulary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>vocabulary</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a visual vocabulary. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vocabulary</td><td>Vocabulary (can be trained using the inheritor of <a class="el" href="classcv_1_1_b_o_w_trainer.html" title="Abstract base class for training the bag of visual words vocabulary from a set of descriptors.">BOWTrainer</a> ). Each row of the vocabulary is a visual word (cluster center). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="acd0f100ac2f377432931062ce02f16cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0f100ac2f377432931062ce02f16cb">&#9670;&nbsp;</a></span>dextractor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="group__features2d.html#gadd5cf7c76865f14468cfdd9cc08eb990">DescriptorExtractor</a>&gt; cv::BOWImgDescriptorExtractor::dextractor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43311e57fce860293560e05a7e933424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43311e57fce860293560e05a7e933424">&#9670;&nbsp;</a></span>dmatcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_descriptor_matcher.html">DescriptorMatcher</a>&gt; cv::BOWImgDescriptorExtractor::dmatcher</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f0de63e8d6377ddbc576457d38ce097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0de63e8d6377ddbc576457d38ce097">&#9670;&nbsp;</a></span>imgDescriptor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classcv_1_1_key_point.html">KeyPoint</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&amp; cv::BOWImgDescriptorExtractor::imgDescriptor { <a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#ac4e1019795995a9395aded0a9c1c3ed6">compute</a>(<a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>,<a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html#a0c0dd4e916057d4c90e9e766a12faa11">keypoints</a>,imgDescriptor)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c0dd4e916057d4c90e9e766a12faa11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0dd4e916057d4c90e9e766a12faa11">&#9670;&nbsp;</a></span>keypoints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classcv_1_1_key_point.html">KeyPoint</a>&gt;&amp; cv::BOWImgDescriptorExtractor::keypoints</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5753a53d4f4c6e2c18b61e1b4559b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5753a53d4f4c6e2c18b61e1b4559b98">&#9670;&nbsp;</a></span>vocabulary</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::BOWImgDescriptorExtractor::vocabulary</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2features2d_8hpp_source.html">features2d.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_b_o_w_img_descriptor_extractor.html">BOWImgDescriptorExtractor</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

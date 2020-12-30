@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: OpenCL support</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__core__opencl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">OpenCL support<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_device.html">cv::ocl::Device</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_context.html">cv::ocl::Context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_platform.html">cv::ocl::Platform</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_queue.html">cv::ocl::Queue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel_arg.html">cv::ocl::KernelArg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_kernel.html">cv::ocl::Kernel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html">cv::ocl::Program</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program_source.html">cv::ocl::ProgramSource</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_platform_info.html">cv::ocl::PlatformInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_image2_d.html">cv::ocl::Image2D</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_timer.html">cv::ocl::Timer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context.html">cv::ocl::OpenCLExecutionContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_open_c_l_execution_context_scope.html">cv::ocl::OpenCLExecutionContextScope</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gae601ac868b72015b583ccbbdd0dec587"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">cv::ocl::OclVectorStrategy</a> { <a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587af4f3dacb8b06545e8e10cdc64d353ed6">cv::ocl::OCL_VECTOR_OWN</a> = 0
+, <a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a3340448a36ad842065ad35c3586a754e">cv::ocl::OCL_VECTOR_MAX</a> = 1
+, <a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e">cv::ocl::OCL_VECTOR_DEFAULT</a> = OCL_VECTOR_OWN
+ }</td></tr>
+<tr class="separator:gae601ac868b72015b583ccbbdd0dec587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga12104022577662e049d9918229f14bf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga12104022577662e049d9918229f14bf0">cv::ocl::haveOpenCL</a> ()</td></tr>
+<tr class="separator:ga12104022577662e049d9918229f14bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff8b8ec1042dde725b05f811dc5eefcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gaff8b8ec1042dde725b05f811dc5eefcd">cv::ocl::useOpenCL</a> ()</td></tr>
+<tr class="separator:gaff8b8ec1042dde725b05f811dc5eefcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06aea1ed717cfe8c6a6f068dae5f5b8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga06aea1ed717cfe8c6a6f068dae5f5b8d">cv::ocl::haveAmdBlas</a> ()</td></tr>
+<tr class="separator:ga06aea1ed717cfe8c6a6f068dae5f5b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga275918c0df2f26b9f999a826360b60f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga275918c0df2f26b9f999a826360b60f4">cv::ocl::haveAmdFft</a> ()</td></tr>
+<tr class="separator:ga275918c0df2f26b9f999a826360b60f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad156cb647d939f81352f52677108020c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gad156cb647d939f81352f52677108020c">cv::ocl::setUseOpenCL</a> (bool flag)</td></tr>
+<tr class="separator:gad156cb647d939f81352f52677108020c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65f8d0e551341814e7d1b0566eec34d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga65f8d0e551341814e7d1b0566eec34d9">cv::ocl::finish</a> ()</td></tr>
+<tr class="separator:ga65f8d0e551341814e7d1b0566eec34d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf60ea3fe8fd70591e0826022b3d63a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gaf60ea3fe8fd70591e0826022b3d63a46">cv::ocl::haveSVM</a> ()</td></tr>
+<tr class="separator:gaf60ea3fe8fd70591e0826022b3d63a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc74c2aa7a7b6bab69ae9f03eb96e3c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gadc74c2aa7a7b6bab69ae9f03eb96e3c1">cv::ocl::attachContext</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;platformName, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *platformID, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *context, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *deviceID)</td></tr>
+<tr class="memdesc:gadc74c2aa7a7b6bab69ae9f03eb96e3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches OpenCL context to OpenCV.  <a href="group__core__opencl.html#gadc74c2aa7a7b6bab69ae9f03eb96e3c1">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadc74c2aa7a7b6bab69ae9f03eb96e3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbeeb23f954a240c82c5fe8b086246e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gafbeeb23f954a240c82c5fe8b086246e8">cv::ocl::convertFromBuffer</a> (<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *cl_mem_buffer, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> <a class="el" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga061459acc9e078fa4699e0e349887215">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#ga4407a60bc4387adae24cee658711f2d9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)</td></tr>
+<tr class="memdesc:gafbeeb23f954a240c82c5fe8b086246e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert OpenCL buffer to <a class="el" href="classcv_1_1_u_mat.html">UMat</a>.  <a href="group__core__opencl.html#gafbeeb23f954a240c82c5fe8b086246e8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafbeeb23f954a240c82c5fe8b086246e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad44d36f99354998d4b7f802b232dbae3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gad44d36f99354998d4b7f802b232dbae3">cv::ocl::convertFromImage</a> (<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *cl_mem_image, <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)</td></tr>
+<tr class="memdesc:gad44d36f99354998d4b7f802b232dbae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert OpenCL image2d_t to <a class="el" href="classcv_1_1_u_mat.html">UMat</a>.  <a href="group__core__opencl.html#gad44d36f99354998d4b7f802b232dbae3">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad44d36f99354998d4b7f802b232dbae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga497674e2f118f367b2fa4decbcdecb15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga497674e2f118f367b2fa4decbcdecb15">cv::ocl::initializeContextFromHandle</a> (<a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;ctx, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *platform, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *context, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *device)</td></tr>
+<tr class="separator:ga497674e2f118f367b2fa4decbcdecb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4489b341a0ec0bf5a2287da346eaf0cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga4489b341a0ec0bf5a2287da346eaf0cd">cv::ocl::convertTypeStr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#ga0f262b67b82b080bffaa407d07522cad">sdepth</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cn, char *buf)</td></tr>
+<tr class="separator:ga4489b341a0ec0bf5a2287da346eaf0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2cc92ff7038372aa43e927a2da76145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gac2cc92ff7038372aa43e927a2da76145">cv::ocl::typeToStr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> t)</td></tr>
+<tr class="separator:gac2cc92ff7038372aa43e927a2da76145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bf192f18d695e3b52ad30eb6503068f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga2bf192f18d695e3b52ad30eb6503068f">cv::ocl::memopTypeToStr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> t)</td></tr>
+<tr class="separator:ga2bf192f18d695e3b52ad30eb6503068f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51a28957ad281663c989e7c8fbea91f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga51a28957ad281663c989e7c8fbea91f7">cv::ocl::vecopTypeToStr</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> t)</td></tr>
+<tr class="separator:ga51a28957ad281663c989e7c8fbea91f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb26ea470820b6dad28ddfeddccac066"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gabb26ea470820b6dad28ddfeddccac066">cv::ocl::getOpenCLErrorString</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> errorCode)</td></tr>
+<tr class="separator:gabb26ea470820b6dad28ddfeddccac066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97d42bef449894394938641e4e5b7180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga97d42bef449894394938641e4e5b7180">cv::ocl::kernelToStr</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> _kernel, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1, const char *name=NULL)</td></tr>
+<tr class="separator:ga97d42bef449894394938641e4e5b7180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f0a3bb28134abd31c4cc35ad51ae33c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga8f0a3bb28134abd31c4cc35ad51ae33c">cv::ocl::getPlatfomsInfo</a> (std::vector&lt; <a class="el" href="classcv_1_1ocl_1_1_platform_info.html">PlatformInfo</a> &gt; &amp;platform_info)</td></tr>
+<tr class="separator:ga8f0a3bb28134abd31c4cc35ad51ae33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44956eda4a05c3d90ea699e5fe5ce841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga44956eda4a05c3d90ea699e5fe5ce841">cv::ocl::predictOptimalVectorWidth</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga311f39c2d5ee53342a493cbed3d77de3">src3</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src4=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src5=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src6=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src7=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src8=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src9=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">OclVectorStrategy</a> strat=<a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e">OCL_VECTOR_DEFAULT</a>)</td></tr>
+<tr class="separator:ga44956eda4a05c3d90ea699e5fe5ce841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e31be9819080ce96cd53f9418f04da8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga7e31be9819080ce96cd53f9418f04da8">cv::ocl::checkOptimalVectorWidth</a> (const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *vectorWidths, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga311f39c2d5ee53342a493cbed3d77de3">src3</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src4=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src5=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src6=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src7=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src8=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src9=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">OclVectorStrategy</a> strat=<a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e">OCL_VECTOR_DEFAULT</a>)</td></tr>
+<tr class="separator:ga7e31be9819080ce96cd53f9418f04da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae68c770f0a6038eee65a2d2b5278f26e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gae68c770f0a6038eee65a2d2b5278f26e">cv::ocl::predictOptimalVectorWidthMax</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#ga311f39c2d5ee53342a493cbed3d77de3">src3</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src4=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src5=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src6=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src7=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src8=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src9=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="separator:gae68c770f0a6038eee65a2d2b5278f26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeafcc76a91341e677276c8f6f13dcd1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gaeafcc76a91341e677276c8f6f13dcd1b">cv::ocl::buildOptionsAddMatrixDescription</a> (<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildOptions, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> _m)</td></tr>
+<tr class="separator:gaeafcc76a91341e677276c8f6f13dcd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedef4d065103912c04d125faf2f0bd4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gaedef4d065103912c04d125faf2f0bd4e">cv::ocl::getOpenCLAllocator</a> ()</td></tr>
+<tr class="separator:gaedef4d065103912c04d125faf2f0bd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:gac57e304a4919230f8af630eb31182d05"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gac57e304a4919230f8af630eb31182d05">cv::ocl::Context</a></td></tr>
+<tr class="separator:gac57e304a4919230f8af630eb31182d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga157cb03840c1a3186916c9805abacf50"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga13d649e3f5582a106caaa98f187dd34b">CV_EXPORTS_W_SIMPLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga157cb03840c1a3186916c9805abacf50">cv::ocl::Device</a></td></tr>
+<tr class="separator:ga157cb03840c1a3186916c9805abacf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae185e7368708018ba2f51709eb4e17c6"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gae185e7368708018ba2f51709eb4e17c6">cv::ocl::Kernel</a></td></tr>
+<tr class="separator:gae185e7368708018ba2f51709eb4e17c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67e1a94e16bd19e0d2acbee863d4555f"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga67e1a94e16bd19e0d2acbee863d4555f">cv::ocl::Program</a></td></tr>
+<tr class="separator:ga67e1a94e16bd19e0d2acbee863d4555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabca48b6887f51146c67dc99cb541651b"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#gabca48b6887f51146c67dc99cb541651b">cv::ocl::ProgramSource</a></td></tr>
+<tr class="separator:gabca48b6887f51146c67dc99cb541651b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36777d43c603d5615b2499288afb726d"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga36777d43c603d5615b2499288afb726d">cv::ocl::Queue</a></td></tr>
+<tr class="separator:ga36777d43c603d5615b2499288afb726d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ad1766068410d2c9f2874b3bf587fbb"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga1ad1766068410d2c9f2874b3bf587fbb">cv::ocl::PlatformInfo</a></td></tr>
+<tr class="separator:ga1ad1766068410d2c9f2874b3bf587fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e71f62630742c6e56c776e3180fcc56"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__opencl.html#ga4e71f62630742c6e56c776e3180fcc56">cv::ocl::Image2D</a></td></tr>
+<tr class="separator:ga4e71f62630742c6e56c776e3180fcc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="gae601ac868b72015b583ccbbdd0dec587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae601ac868b72015b583ccbbdd0dec587">&#9670;&nbsp;</a></span>OclVectorStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">cv::ocl::OclVectorStrategy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggae601ac868b72015b583ccbbdd0dec587af4f3dacb8b06545e8e10cdc64d353ed6"></a>OCL_VECTOR_OWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggae601ac868b72015b583ccbbdd0dec587a3340448a36ad842065ad35c3586a754e"></a>OCL_VECTOR_MAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e"></a>OCL_VECTOR_DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="gadc74c2aa7a7b6bab69ae9f03eb96e3c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc74c2aa7a7b6bab69ae9f03eb96e3c1">&#9670;&nbsp;</a></span>attachContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::attachContext </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>platformName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>platformID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>deviceID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attaches OpenCL context to OpenCV. </p>
+<dl class="section note"><dt>Заметки</dt><dd>OpenCV will check if available OpenCL platform has platformName name, then assign context to OpenCV and call <code>clRetainContext</code> function. The deviceID device will be used as target device and new command queue will be created. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">platformName</td><td>name of OpenCL platform to attach, this string is used to check if platform is available to OpenCV at runtime </td></tr>
+    <tr><td class="paramname">platformID</td><td>ID of platform attached context was created for </td></tr>
+    <tr><td class="paramname">context</td><td>OpenCL context to be attached to OpenCV </td></tr>
+    <tr><td class="paramname">deviceID</td><td>ID of device, must be created from attached context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaeafcc76a91341e677276c8f6f13dcd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeafcc76a91341e677276c8f6f13dcd1b">&#9670;&nbsp;</a></span>buildOptionsAddMatrixDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::buildOptionsAddMatrixDescription </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildOptions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>_m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7e31be9819080ce96cd53f9418f04da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e31be9819080ce96cd53f9418f04da8">&#9670;&nbsp;</a></span>checkOptimalVectorWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::checkOptimalVectorWidth </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>vectorWidths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src2</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src3</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src4</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src5</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src6</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src7</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src8</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src9</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">OclVectorStrategy</a>&#160;</td>
+          <td class="paramname"><em>strat</em> = <code><a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e">OCL_VECTOR_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafbeeb23f954a240c82c5fe8b086246e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbeeb23f954a240c82c5fe8b086246e8">&#9670;&nbsp;</a></span>convertFromBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::convertFromBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>cl_mem_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert OpenCL buffer to <a class="el" href="classcv_1_1_u_mat.html">UMat</a>. </p>
+<dl class="section note"><dt>Заметки</dt><dd>OpenCL buffer (cl_mem_buffer) should contain 2D image data, compatible with OpenCV. Memory content is not copied from <code>clBuffer</code> to <a class="el" href="classcv_1_1_u_mat.html">UMat</a>. Instead, buffer handle assigned to <a class="el" href="classcv_1_1_u_mat.html">UMat</a> and <code>clRetainMemObject</code> is called. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cl_mem_buffer</td><td>source clBuffer handle </td></tr>
+    <tr><td class="paramname">step</td><td>num of bytes in single row </td></tr>
+    <tr><td class="paramname">rows</td><td>number of rows </td></tr>
+    <tr><td class="paramname">cols</td><td>number of cols </td></tr>
+    <tr><td class="paramname">type</td><td>OpenCV type of image </td></tr>
+    <tr><td class="paramname">dst</td><td>destination <a class="el" href="classcv_1_1_u_mat.html">UMat</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad44d36f99354998d4b7f802b232dbae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad44d36f99354998d4b7f802b232dbae3">&#9670;&nbsp;</a></span>convertFromImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::convertFromImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>cl_mem_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert OpenCL image2d_t to <a class="el" href="classcv_1_1_u_mat.html">UMat</a>. </p>
+<dl class="section note"><dt>Заметки</dt><dd>OpenCL <code>image2d_t</code> (cl_mem_image), should be compatible with OpenCV <a class="el" href="classcv_1_1_u_mat.html">UMat</a> formats. Memory content is copied from image to <a class="el" href="classcv_1_1_u_mat.html">UMat</a> with <code>clEnqueueCopyImageToBuffer</code> function. </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cl_mem_image</td><td>source image2d_t handle </td></tr>
+    <tr><td class="paramname">dst</td><td>destination <a class="el" href="classcv_1_1_u_mat.html">UMat</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4489b341a0ec0bf5a2287da346eaf0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4489b341a0ec0bf5a2287da346eaf0cd">&#9670;&nbsp;</a></span>convertTypeStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char* cv::ocl::convertTypeStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>sdepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga65f8d0e551341814e7d1b0566eec34d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65f8d0e551341814e7d1b0566eec34d9">&#9670;&nbsp;</a></span>finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::finish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaedef4d065103912c04d125faf2f0bd4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedef4d065103912c04d125faf2f0bd4e">&#9670;&nbsp;</a></span>getOpenCLAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a>* cv::ocl::getOpenCLAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabb26ea470820b6dad28ddfeddccac066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb26ea470820b6dad28ddfeddccac066">&#9670;&nbsp;</a></span>getOpenCLErrorString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char* cv::ocl::getOpenCLErrorString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>errorCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8f0a3bb28134abd31c4cc35ad51ae33c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f0a3bb28134abd31c4cc35ad51ae33c">&#9670;&nbsp;</a></span>getPlatfomsInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::getPlatfomsInfo </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1ocl_1_1_platform_info.html">PlatformInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>platform_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga06aea1ed717cfe8c6a6f068dae5f5b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06aea1ed717cfe8c6a6f068dae5f5b8d">&#9670;&nbsp;</a></span>haveAmdBlas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::ocl::haveAmdBlas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga275918c0df2f26b9f999a826360b60f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga275918c0df2f26b9f999a826360b60f4">&#9670;&nbsp;</a></span>haveAmdFft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::ocl::haveAmdFft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga12104022577662e049d9918229f14bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12104022577662e049d9918229f14bf0">&#9670;&nbsp;</a></span>haveOpenCL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::ocl::haveOpenCL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf60ea3fe8fd70591e0826022b3d63a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf60ea3fe8fd70591e0826022b3d63a46">&#9670;&nbsp;</a></span>haveSVM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> bool cv::ocl::haveSVM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga497674e2f118f367b2fa4decbcdecb15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga497674e2f118f367b2fa4decbcdecb15">&#9670;&nbsp;</a></span>initializeContextFromHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::initializeContextFromHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1ocl_1_1_context.html">Context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>platform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Уст.:</a></b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ga97d42bef449894394938641e4e5b7180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97d42bef449894394938641e4e5b7180">&#9670;&nbsp;</a></span>kernelToStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> cv::ocl::kernelToStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>_kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2bf192f18d695e3b52ad30eb6503068f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bf192f18d695e3b52ad30eb6503068f">&#9670;&nbsp;</a></span>memopTypeToStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char* cv::ocl::memopTypeToStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga44956eda4a05c3d90ea699e5fe5ce841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44956eda4a05c3d90ea699e5fe5ce841">&#9670;&nbsp;</a></span>predictOptimalVectorWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::predictOptimalVectorWidth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src2</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src3</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src4</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src5</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src6</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src7</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src8</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src9</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__opencl.html#gae601ac868b72015b583ccbbdd0dec587">OclVectorStrategy</a>&#160;</td>
+          <td class="paramname"><em>strat</em> = <code><a class="el" href="group__core__opencl.html#ggae601ac868b72015b583ccbbdd0dec587a566f2a652ca8f26eabf5f6fc50faf59e">OCL_VECTOR_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae68c770f0a6038eee65a2d2b5278f26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae68c770f0a6038eee65a2d2b5278f26e">&#9670;&nbsp;</a></span>predictOptimalVectorWidthMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::ocl::predictOptimalVectorWidthMax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src2</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src3</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src4</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src5</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src6</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src7</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src8</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src9</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad156cb647d939f81352f52677108020c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad156cb647d939f81352f52677108020c">&#9670;&nbsp;</a></span>setUseOpenCL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::setUseOpenCL </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac2cc92ff7038372aa43e927a2da76145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2cc92ff7038372aa43e927a2da76145">&#9670;&nbsp;</a></span>typeToStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char* cv::ocl::typeToStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaff8b8ec1042dde725b05f811dc5eefcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff8b8ec1042dde725b05f811dc5eefcd">&#9670;&nbsp;</a></span>useOpenCL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::ocl::useOpenCL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga51a28957ad281663c989e7c8fbea91f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51a28957ad281663c989e7c8fbea91f7">&#9670;&nbsp;</a></span>vecopTypeToStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> const char* cv::ocl::vecopTypeToStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="gac57e304a4919230f8af630eb31182d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac57e304a4919230f8af630eb31182d05">&#9670;&nbsp;</a></span>Context</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_context.html">cv::ocl::Context</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga157cb03840c1a3186916c9805abacf50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga157cb03840c1a3186916c9805abacf50">&#9670;&nbsp;</a></span>Device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga13d649e3f5582a106caaa98f187dd34b">CV_EXPORTS_W_SIMPLE</a> <a class="el" href="classcv_1_1ocl_1_1_device.html">cv::ocl::Device</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4e71f62630742c6e56c776e3180fcc56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e71f62630742c6e56c776e3180fcc56">&#9670;&nbsp;</a></span>Image2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_image2_d.html">cv::ocl::Image2D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae185e7368708018ba2f51709eb4e17c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae185e7368708018ba2f51709eb4e17c6">&#9670;&nbsp;</a></span>Kernel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_kernel.html">cv::ocl::Kernel</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1ad1766068410d2c9f2874b3bf587fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ad1766068410d2c9f2874b3bf587fbb">&#9670;&nbsp;</a></span>PlatformInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_platform_info.html">cv::ocl::PlatformInfo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga67e1a94e16bd19e0d2acbee863d4555f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67e1a94e16bd19e0d2acbee863d4555f">&#9670;&nbsp;</a></span>Program</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_program.html">cv::ocl::Program</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabca48b6887f51146c67dc99cb541651b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabca48b6887f51146c67dc99cb541651b">&#9670;&nbsp;</a></span>ProgramSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_program_source.html">cv::ocl::ProgramSource</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga36777d43c603d5615b2499288afb726d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36777d43c603d5615b2499288afb726d">&#9670;&nbsp;</a></span>Queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="classcv_1_1ocl_1_1_queue.html">cv::ocl::Queue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

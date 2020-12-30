@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/core/hal/intrin_cpp.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('intrin__cpp_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл intrin_cpp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="core_2saturate_8hpp_source.html">opencv2/core/saturate.hpp</a>&quot;</code><br />
+</div>
+<p><a href="intrin__cpp_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1v__reg.html">cv::v_reg&lt; _Tp, n &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ga0406ce03b40d12ab876ccf643c71985b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0406ce03b40d12ab876ccf643c71985b">CV__HAL_INTRIN_EXPAND_WITH_INTEGER_TYPES</a>(macro_name, ...)</td></tr>
+<tr class="separator:ga0406ce03b40d12ab876ccf643c71985b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92376d81151822bfa5c49a8e3d1f60c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga92376d81151822bfa5c49a8e3d1f60c9">CV__HAL_INTRIN_EXPAND_WITH_FP_TYPES</a>(macro_name, ...)</td></tr>
+<tr class="separator:ga92376d81151822bfa5c49a8e3d1f60c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bc35693cad10a868cf4b418b033bb0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1bc35693cad10a868cf4b418b033bb0c">CV__HAL_INTRIN_EXPAND_WITH_ALL_TYPES</a>(macro_name, ...)</td></tr>
+<tr class="separator:ga1bc35693cad10a868cf4b418b033bb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5949fc71f7396cc48f87edf9c2452e2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga5949fc71f7396cc48f87edf9c2452e2e">CV__HAL_INTRIN_IMPL_BIN_OP_</a>(_Tp,  bin_op)</td></tr>
+<tr class="separator:ga5949fc71f7396cc48f87edf9c2452e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a5a52fa92f756b80463e15f6919481b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0a5a52fa92f756b80463e15f6919481b">CV__HAL_INTRIN_IMPL_BIN_OP</a>(bin_op)&#160;&#160;&#160;<a class="el" href="group__core__hal__intrin.html#ga1bc35693cad10a868cf4b418b033bb0c">CV__HAL_INTRIN_EXPAND_WITH_ALL_TYPES</a>(<a class="el" href="group__core__hal__intrin.html#ga5949fc71f7396cc48f87edf9c2452e2e">CV__HAL_INTRIN_IMPL_BIN_OP_</a>, bin_op)</td></tr>
+<tr class="separator:ga0a5a52fa92f756b80463e15f6919481b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebd4094d6128676d572c8d57280b1d4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaebd4094d6128676d572c8d57280b1d4e">CV__HAL_INTRIN_IMPL_BIT_OP_</a>(_Tp,  bit_op)</td></tr>
+<tr class="separator:gaebd4094d6128676d572c8d57280b1d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dfb38009244145943c4f6ef585bd7fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga3dfb38009244145943c4f6ef585bd7fc">CV__HAL_INTRIN_IMPL_BIT_OP</a>(bit_op)</td></tr>
+<tr class="separator:ga3dfb38009244145943c4f6ef585bd7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a2a3be3f388f58e85288f3072b3b063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0a2a3be3f388f58e85288f3072b3b063">CV__HAL_INTRIN_IMPL_BITWISE_NOT_</a>(_Tp,  dummy)</td></tr>
+<tr class="separator:ga0a2a3be3f388f58e85288f3072b3b063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab5dddc36659025bcf499054aa6ee267"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaab5dddc36659025bcf499054aa6ee267">OPENCV_HAL_IMPL_MATH_FUNC</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc,  _Tp2)</td></tr>
+<tr class="memdesc:gaab5dddc36659025bcf499054aa6ee267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaab5dddc36659025bcf499054aa6ee267">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaab5dddc36659025bcf499054aa6ee267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga806c8c38c74c1e6e9ee64248345707cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga806c8c38c74c1e6e9ee64248345707cd">OPENCV_HAL_IMPL_MATH_FUNC_FLOAT</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc)</td></tr>
+<tr class="memdesc:ga806c8c38c74c1e6e9ee64248345707cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga806c8c38c74c1e6e9ee64248345707cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga806c8c38c74c1e6e9ee64248345707cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa707e5c423dc3b46968f579d25d40d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__cpp_8hpp.html#afa707e5c423dc3b46968f579d25d40d8">OPENCV_HAL_IMPL_MINMAX_FUNC</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc)</td></tr>
+<tr class="separator:afa707e5c423dc3b46968f579d25d40d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fcf2ab9074198d8ea7f2643e891720"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__cpp_8hpp.html#a52fcf2ab9074198d8ea7f2643e891720">OPENCV_HAL_IMPL_REDUCE_MINMAX_FUNC</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc)</td></tr>
+<tr class="separator:a52fcf2ab9074198d8ea7f2643e891720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga24ff6e3ec8d93d9e0dde4f308c8ad0cd">OPENCV_HAL_IMPL_CMP_OP</a>(<a class="el" href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a>)</td></tr>
+<tr class="memdesc:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga24ff6e3ec8d93d9e0dde4f308c8ad0cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gad1e58f5f11e0f285dd9d72aac7216dd8">OPENCV_HAL_IMPL_ARITHM_OP</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  bin_op,  cast_op,  _Tp2)</td></tr>
+<tr class="memdesc:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gad1e58f5f11e0f285dd9d72aac7216dd8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc208994b4622b8ef3e21fdad7e387c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gafc208994b4622b8ef3e21fdad7e387c2">OPENCV_HAL_IMPL_SHIFT_OP</a>(shift_op)</td></tr>
+<tr class="memdesc:gafc208994b4622b8ef3e21fdad7e387c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gafc208994b4622b8ef3e21fdad7e387c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc208994b4622b8ef3e21fdad7e387c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2323457942fdb195a2b1b6aac3bad605"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga2323457942fdb195a2b1b6aac3bad605">OPENCV_HAL_IMPL_ROTATE_SHIFT_OP</a>(suffix,  opA,  opB)</td></tr>
+<tr class="memdesc:ga2323457942fdb195a2b1b6aac3bad605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise shift left.  <a href="group__core__hal__intrin__impl.html#ga2323457942fdb195a2b1b6aac3bad605">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2323457942fdb195a2b1b6aac3bad605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaa61141ff9bbb0448d8a75f41e8df2815">OPENCV_HAL_IMPL_C_INIT_ZERO</a>(_Tpvec,  _Tp,  suffix)&#160;&#160;&#160;inline _Tpvec v_setzero_##suffix() { return _Tpvec::zero(); }</td></tr>
+<tr class="memdesc:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaa61141ff9bbb0448d8a75f41e8df2815">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7962182f93583a3065e7530d887476f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga7962182f93583a3065e7530d887476f7">OPENCV_HAL_IMPL_C_INIT_VAL</a>(_Tpvec,  _Tp,  suffix)&#160;&#160;&#160;inline _Tpvec v_setall_##suffix(_Tp val) { return _Tpvec::all(val); }</td></tr>
+<tr class="memdesc:ga7962182f93583a3065e7530d887476f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga7962182f93583a3065e7530d887476f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7962182f93583a3065e7530d887476f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga61cb06aaad99087d73ed1ed0acc6b450">OPENCV_HAL_IMPL_C_REINTERPRET</a>(_Tpvec,  _Tp,  suffix)</td></tr>
+<tr class="memdesc:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga61cb06aaad99087d73ed1ed0acc6b450">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gad1dc4d73959f133ee2bf9e9a8e562cd5">OPENCV_HAL_IMPL_C_SHIFTL</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gad1dc4d73959f133ee2bf9e9a8e562cd5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7a214c8dd89815cfb209bd930816bf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaf7a214c8dd89815cfb209bd930816bf2">OPENCV_HAL_IMPL_C_SHIFTR</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gaf7a214c8dd89815cfb209bd930816bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaf7a214c8dd89815cfb209bd930816bf2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf7a214c8dd89815cfb209bd930816bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gacd53058c7a7fb7155c3a0c4f0f34ec75">OPENCV_HAL_IMPL_C_RSHIFTR</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gacd53058c7a7fb7155c3a0c4f0f34ec75">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gafc538cc8f8cdd2b0d51b93bdd8f071d2">OPENCV_HAL_IMPL_C_PACK</a>(_Tpvec,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gafc538cc8f8cdd2b0d51b93bdd8f071d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga97c1f8273d7f3e8a78e40143f4f605ab">OPENCV_HAL_IMPL_C_RSHR_PACK</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga97c1f8273d7f3e8a78e40143f4f605ab">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga0008a7a28941bda32a0cdf59b0d0e16c">OPENCV_HAL_IMPL_C_PACK_STORE</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga0008a7a28941bda32a0cdf59b0d0e16c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab467b59cfb166937d5fbaa41e800be79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gab467b59cfb166937d5fbaa41e800be79">OPENCV_HAL_IMPL_C_RSHR_PACK_STORE</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:gab467b59cfb166937d5fbaa41e800be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gab467b59cfb166937d5fbaa41e800be79">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab467b59cfb166937d5fbaa41e800be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga15cd4df600c57ee36d03ccfee5cb9820"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga15cd4df600c57ee36d03ccfee5cb9820">cv::v_uint8x16</a></td></tr>
+<tr class="memdesc:ga15cd4df600c57ee36d03ccfee5cb9820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sixteen 8-bit unsigned integer values.  <a href="group__core__hal__intrin.html#ga15cd4df600c57ee36d03ccfee5cb9820">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga15cd4df600c57ee36d03ccfee5cb9820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga133cdb895b50ab8825455da083d83ede"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; <a class="el" href="group__core__hal__interface.html#ga0fd9ce9d735064461bebfe6037026093">schar</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga133cdb895b50ab8825455da083d83ede">cv::v_int8x16</a></td></tr>
+<tr class="memdesc:ga133cdb895b50ab8825455da083d83ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sixteen 8-bit signed integer values.  <a href="group__core__hal__intrin.html#ga133cdb895b50ab8825455da083d83ede">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga133cdb895b50ab8825455da083d83ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33d7ee7873e4a78bcdf0b0beea3e061b"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga33d7ee7873e4a78bcdf0b0beea3e061b">cv::v_uint16x8</a></td></tr>
+<tr class="memdesc:ga33d7ee7873e4a78bcdf0b0beea3e061b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eight 16-bit unsigned integer values.  <a href="group__core__hal__intrin.html#ga33d7ee7873e4a78bcdf0b0beea3e061b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga33d7ee7873e4a78bcdf0b0beea3e061b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa3957262ebae34fbdf7f4b930cb79ce"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; short, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gafa3957262ebae34fbdf7f4b930cb79ce">cv::v_int16x8</a></td></tr>
+<tr class="memdesc:gafa3957262ebae34fbdf7f4b930cb79ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eight 16-bit signed integer values.  <a href="group__core__hal__intrin.html#gafa3957262ebae34fbdf7f4b930cb79ce">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafa3957262ebae34fbdf7f4b930cb79ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5859d41d20a075cff6b832f0d64ee042"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; unsigned, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga5859d41d20a075cff6b832f0d64ee042">cv::v_uint32x4</a></td></tr>
+<tr class="memdesc:ga5859d41d20a075cff6b832f0d64ee042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four 32-bit unsigned integer values.  <a href="group__core__hal__intrin.html#ga5859d41d20a075cff6b832f0d64ee042">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5859d41d20a075cff6b832f0d64ee042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c6899623e3f4b0d89737817e7f83ff4"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; int, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4c6899623e3f4b0d89737817e7f83ff4">cv::v_int32x4</a></td></tr>
+<tr class="memdesc:ga4c6899623e3f4b0d89737817e7f83ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four 32-bit signed integer values.  <a href="group__core__hal__intrin.html#ga4c6899623e3f4b0d89737817e7f83ff4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4c6899623e3f4b0d89737817e7f83ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1f972902dd8ee6dd7c2ebeb845728d4"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; float, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad1f972902dd8ee6dd7c2ebeb845728d4">cv::v_float32x4</a></td></tr>
+<tr class="memdesc:gad1f972902dd8ee6dd7c2ebeb845728d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four 32-bit floating point values (single precision)  <a href="group__core__hal__intrin.html#gad1f972902dd8ee6dd7c2ebeb845728d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad1f972902dd8ee6dd7c2ebeb845728d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc604f432c648ca88335be4fcc4de25d"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gafc604f432c648ca88335be4fcc4de25d">cv::v_float64x2</a></td></tr>
+<tr class="memdesc:gafc604f432c648ca88335be4fcc4de25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two 64-bit floating point values (double precision)  <a href="group__core__hal__intrin.html#gafc604f432c648ca88335be4fcc4de25d">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc604f432c648ca88335be4fcc4de25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab32d838ec60649d90504438b02beeb40"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gab32d838ec60649d90504438b02beeb40">cv::v_uint64x2</a></td></tr>
+<tr class="memdesc:gab32d838ec60649d90504438b02beeb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two 64-bit unsigned integer values.  <a href="group__core__hal__intrin.html#gab32d838ec60649d90504438b02beeb40">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab32d838ec60649d90504438b02beeb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2448f821d0ad63d2f5f1b474e26aa0bc"><td class="memItemLeft" align="right" valign="top">typedef v_reg&lt; <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga2448f821d0ad63d2f5f1b474e26aa0bc">cv::v_int64x2</a></td></tr>
+<tr class="memdesc:ga2448f821d0ad63d2f5f1b474e26aa0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two 64-bit signed integer values.  <a href="group__core__hal__intrin.html#ga2448f821d0ad63d2f5f1b474e26aa0bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2448f821d0ad63d2f5f1b474e26aa0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga54cbe7d47fa957a398f93c2818608aca"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga54cbe7d47fa957a398f93c2818608aca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga54cbe7d47fa957a398f93c2818608aca">cv::operator+</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga54cbe7d47fa957a398f93c2818608aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add values.  <a href="group__core__hal__intrin.html#ga54cbe7d47fa957a398f93c2818608aca">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga54cbe7d47fa957a398f93c2818608aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9081ea8e30e54c0ec692ed59d87c18c"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gae9081ea8e30e54c0ec692ed59d87c18c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae9081ea8e30e54c0ec692ed59d87c18c">cv::operator+=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:gae9081ea8e30e54c0ec692ed59d87c18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fd8600fa5c8a722f8c048634c2d2ff3"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga1fd8600fa5c8a722f8c048634c2d2ff3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1fd8600fa5c8a722f8c048634c2d2ff3">cv::operator-</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga1fd8600fa5c8a722f8c048634c2d2ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract values.  <a href="group__core__hal__intrin.html#ga1fd8600fa5c8a722f8c048634c2d2ff3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1fd8600fa5c8a722f8c048634c2d2ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga592d8862a5a7b7c69244b9acdf46195f"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga592d8862a5a7b7c69244b9acdf46195f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga592d8862a5a7b7c69244b9acdf46195f">cv::operator-=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:ga592d8862a5a7b7c69244b9acdf46195f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4762795280d9cef8f718a5bd204e8f77"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga4762795280d9cef8f718a5bd204e8f77"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4762795280d9cef8f718a5bd204e8f77">cv::operator*</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga4762795280d9cef8f718a5bd204e8f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply values.  <a href="group__core__hal__intrin.html#ga4762795280d9cef8f718a5bd204e8f77">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4762795280d9cef8f718a5bd204e8f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6de8e20198160a3ff7393fda11d18212"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga6de8e20198160a3ff7393fda11d18212"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga6de8e20198160a3ff7393fda11d18212">cv::operator*=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:ga6de8e20198160a3ff7393fda11d18212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0e1abf41fd88126eab03e671be3ac2c"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gab0e1abf41fd88126eab03e671be3ac2c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gab0e1abf41fd88126eab03e671be3ac2c">cv::operator/</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gab0e1abf41fd88126eab03e671be3ac2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide values.  <a href="group__core__hal__intrin.html#gab0e1abf41fd88126eab03e671be3ac2c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab0e1abf41fd88126eab03e671be3ac2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaade20a92bc6bcb3e6659496e32023899"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gaade20a92bc6bcb3e6659496e32023899"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaade20a92bc6bcb3e6659496e32023899">cv::operator/=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:gaade20a92bc6bcb3e6659496e32023899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7e5addfe8a8921144ef954a516b4b3c"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad7e5addfe8a8921144ef954a516b4b3c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad7e5addfe8a8921144ef954a516b4b3c">cv::operator&amp;</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gad7e5addfe8a8921144ef954a516b4b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise AND.  <a href="group__core__hal__intrin.html#gad7e5addfe8a8921144ef954a516b4b3c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad7e5addfe8a8921144ef954a516b4b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad98ffb4299a413e12eb2ea4dcdc617ff"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad98ffb4299a413e12eb2ea4dcdc617ff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad98ffb4299a413e12eb2ea4dcdc617ff">cv::operator&amp;=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:gad98ffb4299a413e12eb2ea4dcdc617ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b5b4d039da15018405273c53f899cc0"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga1b5b4d039da15018405273c53f899cc0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1b5b4d039da15018405273c53f899cc0">cv::operator|</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga1b5b4d039da15018405273c53f899cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise OR.  <a href="group__core__hal__intrin.html#ga1b5b4d039da15018405273c53f899cc0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1b5b4d039da15018405273c53f899cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfa399eae90217ea8aabdc9649ca3b7a"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gadfa399eae90217ea8aabdc9649ca3b7a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gadfa399eae90217ea8aabdc9649ca3b7a">cv::operator|=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:gadfa399eae90217ea8aabdc9649ca3b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2b873c0fb0ddc132e6332146f1f4702"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gaa2b873c0fb0ddc132e6332146f1f4702"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaa2b873c0fb0ddc132e6332146f1f4702">cv::operator^</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gaa2b873c0fb0ddc132e6332146f1f4702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise XOR.  <a href="group__core__hal__intrin.html#gaa2b873c0fb0ddc132e6332146f1f4702">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa2b873c0fb0ddc132e6332146f1f4702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac796ff181eb697e33e135f2830737ae8"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gac796ff181eb697e33e135f2830737ae8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gac796ff181eb697e33e135f2830737ae8">cv::operator^=</a> (v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="separator:gac796ff181eb697e33e135f2830737ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad39e23c121932297b6b54a8d8c498dd4"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad39e23c121932297b6b54a8d8c498dd4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad39e23c121932297b6b54a8d8c498dd4">cv::operator~</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:gad39e23c121932297b6b54a8d8c498dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise NOT.  <a href="group__core__hal__intrin.html#gad39e23c121932297b6b54a8d8c498dd4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad39e23c121932297b6b54a8d8c498dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33704e2cb5abc6be55e50b2781a01323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga33704e2cb5abc6be55e50b2781a01323">cv::OPENCV_HAL_IMPL_MATH_FUNC</a> (v_abs,(typename V_TypeTraits&lt; _Tp &gt;::abs_type) std::abs, typename V_TypeTraits&lt; _Tp &gt;::abs_type) static const unsigned char popCountTable[]</td></tr>
+<tr class="memdesc:ga33704e2cb5abc6be55e50b2781a01323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square root of elements.  <a href="group__core__hal__intrin__impl.html#ga33704e2cb5abc6be55e50b2781a01323">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga33704e2cb5abc6be55e50b2781a01323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5134b6e116f3c7cdc42386ed265dff37"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga5134b6e116f3c7cdc42386ed265dff37"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::abs_type, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga5134b6e116f3c7cdc42386ed265dff37">cv::v_popcount</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga5134b6e116f3c7cdc42386ed265dff37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the 1 bits in the vector lanes and return result as corresponding unsigned type.  <a href="group__core__hal__intrin.html#ga5134b6e116f3c7cdc42386ed265dff37">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5134b6e116f3c7cdc42386ed265dff37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f953b2e5faca089d44dc41c27c48259"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga4f953b2e5faca089d44dc41c27c48259"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; float, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4f953b2e5faca089d44dc41c27c48259">cv::v_not_nan</a> (const v_reg&lt; float, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga4f953b2e5faca089d44dc41c27c48259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison.  <a href="group__core__hal__intrin.html#ga4f953b2e5faca089d44dc41c27c48259">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4f953b2e5faca089d44dc41c27c48259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d006fddcf8c4a99e6f9cb472107bf49"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga2d006fddcf8c4a99e6f9cb472107bf49"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; double, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga2d006fddcf8c4a99e6f9cb472107bf49">cv::v_not_nan</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:ga2d006fddcf8c4a99e6f9cb472107bf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad56841cd7dd8e5c63c57ccdffa6fc3ed"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad56841cd7dd8e5c63c57ccdffa6fc3ed"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::abs_type, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad56841cd7dd8e5c63c57ccdffa6fc3ed">cv::v_absdiff</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gad56841cd7dd8e5c63c57ccdffa6fc3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add values without saturation.  <a href="group__core__hal__intrin.html#gad56841cd7dd8e5c63c57ccdffa6fc3ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad56841cd7dd8e5c63c57ccdffa6fc3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1767714db3dcadb809e7186824764796"><td class="memItemLeft" align="right" valign="top">v_float32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1767714db3dcadb809e7186824764796">cv::v_absdiff</a> (const v_float32x4 &amp;a, const v_float32x4 &amp;b)</td></tr>
+<tr class="separator:ga1767714db3dcadb809e7186824764796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedcb5a63b95a345d4da1d278b4617547"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaedcb5a63b95a345d4da1d278b4617547">cv::v_absdiff</a> (const v_float64x2 &amp;a, const v_float64x2 &amp;b)</td></tr>
+<tr class="separator:gaedcb5a63b95a345d4da1d278b4617547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae345ff8dce647d059a8aa31550c128ad"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gae345ff8dce647d059a8aa31550c128ad"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae345ff8dce647d059a8aa31550c128ad">cv::v_absdiffs</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gae345ff8dce647d059a8aa31550c128ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturating absolute difference.  <a href="group__core__hal__intrin.html#gae345ff8dce647d059a8aa31550c128ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae345ff8dce647d059a8aa31550c128ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e9fa03f4014a0c0756de5d94f895112"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga0e9fa03f4014a0c0756de5d94f895112"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0e9fa03f4014a0c0756de5d94f895112">cv::v_invsqrt</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga0e9fa03f4014a0c0756de5d94f895112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inversed square root.  <a href="group__core__hal__intrin.html#ga0e9fa03f4014a0c0756de5d94f895112">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0e9fa03f4014a0c0756de5d94f895112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f3a248d8a6078b73be09883bf2a5108"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga3f3a248d8a6078b73be09883bf2a5108"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga3f3a248d8a6078b73be09883bf2a5108">cv::v_magnitude</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga3f3a248d8a6078b73be09883bf2a5108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnitude.  <a href="group__core__hal__intrin.html#ga3f3a248d8a6078b73be09883bf2a5108">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3f3a248d8a6078b73be09883bf2a5108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51374eab401b0ef5b5efc8c31ea777c6"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga51374eab401b0ef5b5efc8c31ea777c6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga51374eab401b0ef5b5efc8c31ea777c6">cv::v_sqr_magnitude</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga51374eab401b0ef5b5efc8c31ea777c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of the magnitude.  <a href="group__core__hal__intrin.html#ga51374eab401b0ef5b5efc8c31ea777c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga51374eab401b0ef5b5efc8c31ea777c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44b69b35f3ec20e27258064ab5d3d1bd"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga44b69b35f3ec20e27258064ab5d3d1bd"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga44b69b35f3ec20e27258064ab5d3d1bd">cv::v_fma</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c)</td></tr>
+<tr class="memdesc:ga44b69b35f3ec20e27258064ab5d3d1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply and add.  <a href="group__core__hal__intrin.html#ga44b69b35f3ec20e27258064ab5d3d1bd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga44b69b35f3ec20e27258064ab5d3d1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60cf2ff062954f9ae2775f42de5ebf76"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga60cf2ff062954f9ae2775f42de5ebf76"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga60cf2ff062954f9ae2775f42de5ebf76">cv::v_muladd</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c)</td></tr>
+<tr class="memdesc:ga60cf2ff062954f9ae2775f42de5ebf76"><td class="mdescLeft">&#160;</td><td class="mdescRight">A synonym for v_fma.  <a href="group__core__hal__intrin.html#ga60cf2ff062954f9ae2775f42de5ebf76">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga60cf2ff062954f9ae2775f42de5ebf76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6b7cdd3073adba3d9f3e0a2bc986809"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gac6b7cdd3073adba3d9f3e0a2bc986809"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gac6b7cdd3073adba3d9f3e0a2bc986809">cv::v_dotprod</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gac6b7cdd3073adba3d9f3e0a2bc986809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product of elements.  <a href="group__core__hal__intrin.html#gac6b7cdd3073adba3d9f3e0a2bc986809">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac6b7cdd3073adba3d9f3e0a2bc986809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d664952bb3effbc3122445be2ea0228"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga0d664952bb3effbc3122445be2ea0228"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0d664952bb3effbc3122445be2ea0228">cv::v_dotprod</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c)</td></tr>
+<tr class="memdesc:ga0d664952bb3effbc3122445be2ea0228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product of elements.  <a href="group__core__hal__intrin.html#ga0d664952bb3effbc3122445be2ea0228">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0d664952bb3effbc3122445be2ea0228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb67b00855f549e8f0a2339bb4abacd6"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gaeb67b00855f549e8f0a2339bb4abacd6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaeb67b00855f549e8f0a2339bb4abacd6">cv::v_dotprod_fast</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gaeb67b00855f549e8f0a2339bb4abacd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Dot product of elements.  <a href="group__core__hal__intrin.html#gaeb67b00855f549e8f0a2339bb4abacd6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaeb67b00855f549e8f0a2339bb4abacd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7150396bc53ae538ae866b6c399f8881"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga7150396bc53ae538ae866b6c399f8881"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga7150396bc53ae538ae866b6c399f8881">cv::v_dotprod_fast</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c)</td></tr>
+<tr class="memdesc:ga7150396bc53ae538ae866b6c399f8881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Dot product of elements.  <a href="group__core__hal__intrin.html#ga7150396bc53ae538ae866b6c399f8881">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7150396bc53ae538ae866b6c399f8881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ed7e3efa7a6e9efdc4169f01e14395d"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga8ed7e3efa7a6e9efdc4169f01e14395d"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga8ed7e3efa7a6e9efdc4169f01e14395d">cv::v_dotprod_expand</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga8ed7e3efa7a6e9efdc4169f01e14395d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product of elements and expand.  <a href="group__core__hal__intrin.html#ga8ed7e3efa7a6e9efdc4169f01e14395d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8ed7e3efa7a6e9efdc4169f01e14395d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab54354da069b354a433713ab8aa911aa"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gab54354da069b354a433713ab8aa911aa"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gab54354da069b354a433713ab8aa911aa">cv::v_dotprod_expand</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt; &amp;c)</td></tr>
+<tr class="memdesc:gab54354da069b354a433713ab8aa911aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product of elements.  <a href="group__core__hal__intrin.html#gab54354da069b354a433713ab8aa911aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab54354da069b354a433713ab8aa911aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12fce245493c002417ba29be0fc4b341"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga12fce245493c002417ba29be0fc4b341"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga12fce245493c002417ba29be0fc4b341">cv::v_dotprod_expand_fast</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga12fce245493c002417ba29be0fc4b341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Dot product of elements and expand.  <a href="group__core__hal__intrin.html#ga12fce245493c002417ba29be0fc4b341">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga12fce245493c002417ba29be0fc4b341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad409160d13abd1e411d6695a0ab2c8af"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad409160d13abd1e411d6695a0ab2c8af"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad409160d13abd1e411d6695a0ab2c8af">cv::v_dotprod_expand_fast</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt; &amp;c)</td></tr>
+<tr class="memdesc:gad409160d13abd1e411d6695a0ab2c8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast Dot product of elements.  <a href="group__core__hal__intrin.html#gad409160d13abd1e411d6695a0ab2c8af">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad409160d13abd1e411d6695a0ab2c8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bb510213a964865860cccf6b1ee42bb"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga8bb510213a964865860cccf6b1ee42bb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga8bb510213a964865860cccf6b1ee42bb">cv::v_mul_expand</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;d)</td></tr>
+<tr class="memdesc:ga8bb510213a964865860cccf6b1ee42bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply and expand.  <a href="group__core__hal__intrin.html#ga8bb510213a964865860cccf6b1ee42bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8bb510213a964865860cccf6b1ee42bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19d7c53307439cbc562df60ce321113c"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga19d7c53307439cbc562df60ce321113c"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga19d7c53307439cbc562df60ce321113c">cv::v_mul_hi</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga19d7c53307439cbc562df60ce321113c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply and extract high part.  <a href="group__core__hal__intrin.html#ga19d7c53307439cbc562df60ce321113c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga19d7c53307439cbc562df60ce321113c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38ffc32658e008a149f259b1637cb0be"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga38ffc32658e008a149f259b1637cb0be"><td class="memTemplItemLeft" align="right" valign="top">V_TypeTraits&lt; _Tp &gt;::sum_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga38ffc32658e008a149f259b1637cb0be">cv::v_reduce_sum</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga38ffc32658e008a149f259b1637cb0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element shift left among vector.  <a href="group__core__hal__intrin.html#ga38ffc32658e008a149f259b1637cb0be">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga38ffc32658e008a149f259b1637cb0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafec4c6d20a68eba604ec1a480f457f34"><td class="memItemLeft" align="right" valign="top">v_float32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gafec4c6d20a68eba604ec1a480f457f34">cv::v_reduce_sum4</a> (const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c, const v_float32x4 &amp;d)</td></tr>
+<tr class="memdesc:gafec4c6d20a68eba604ec1a480f457f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sums all elements of each input vector, returns the vector of sums.  <a href="group__core__hal__intrin.html#gafec4c6d20a68eba604ec1a480f457f34">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafec4c6d20a68eba604ec1a480f457f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga311461f544a1c4e7329f50d5bdc5c734"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga311461f544a1c4e7329f50d5bdc5c734"><td class="memTemplItemLeft" align="right" valign="top">V_TypeTraits&lt; typename V_TypeTraits&lt; _Tp &gt;::abs_type &gt;::sum_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga311461f544a1c4e7329f50d5bdc5c734">cv::v_reduce_sad</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga311461f544a1c4e7329f50d5bdc5c734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum absolute differences of values.  <a href="group__core__hal__intrin.html#ga311461f544a1c4e7329f50d5bdc5c734">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga311461f544a1c4e7329f50d5bdc5c734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga191a888185e95f221c8203884e8d66ec"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga191a888185e95f221c8203884e8d66ec"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga191a888185e95f221c8203884e8d66ec">cv::v_signmask</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga191a888185e95f221c8203884e8d66ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get negative values mask.  <a href="group__core__hal__intrin.html#ga191a888185e95f221c8203884e8d66ec">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga191a888185e95f221c8203884e8d66ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4773b4557d0d9899e175be3f445719ad"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga4773b4557d0d9899e175be3f445719ad"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4773b4557d0d9899e175be3f445719ad">cv::v_scan_forward</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga4773b4557d0d9899e175be3f445719ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get first negative lane index.  <a href="group__core__hal__intrin.html#ga4773b4557d0d9899e175be3f445719ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4773b4557d0d9899e175be3f445719ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4a93a907f23a3e9028172d09b4822f8"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gad4a93a907f23a3e9028172d09b4822f8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad4a93a907f23a3e9028172d09b4822f8">cv::v_check_all</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:gad4a93a907f23a3e9028172d09b4822f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all packed values are less than zero.  <a href="group__core__hal__intrin.html#gad4a93a907f23a3e9028172d09b4822f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad4a93a907f23a3e9028172d09b4822f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03282d0b7c46861f1ecc7329a40634b3"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga03282d0b7c46861f1ecc7329a40634b3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga03282d0b7c46861f1ecc7329a40634b3">cv::v_check_any</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga03282d0b7c46861f1ecc7329a40634b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any of packed values is less than zero.  <a href="group__core__hal__intrin.html#ga03282d0b7c46861f1ecc7329a40634b3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga03282d0b7c46861f1ecc7329a40634b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae440a2520e3b796df0be134e2fe6a7b0"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gae440a2520e3b796df0be134e2fe6a7b0"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae440a2520e3b796df0be134e2fe6a7b0">cv::v_select</a> (const v_reg&lt; _Tp, n &gt; &amp;<a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gae440a2520e3b796df0be134e2fe6a7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-element select (blend operation)  <a href="group__core__hal__intrin.html#gae440a2520e3b796df0be134e2fe6a7b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae440a2520e3b796df0be134e2fe6a7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9eff16d8d73c6ce81122b3cd44a99627"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga9eff16d8d73c6ce81122b3cd44a99627"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga9eff16d8d73c6ce81122b3cd44a99627">cv::v_expand</a> (const v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;b0, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;b1)</td></tr>
+<tr class="memdesc:ga9eff16d8d73c6ce81122b3cd44a99627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand values to the wider pack type.  <a href="group__core__hal__intrin.html#ga9eff16d8d73c6ce81122b3cd44a99627">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9eff16d8d73c6ce81122b3cd44a99627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab177cd2f694d25314817948889945dbe"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gab177cd2f694d25314817948889945dbe"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gab177cd2f694d25314817948889945dbe">cv::v_expand_low</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:gab177cd2f694d25314817948889945dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand lower values to the wider pack type.  <a href="group__core__hal__intrin.html#gab177cd2f694d25314817948889945dbe">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab177cd2f694d25314817948889945dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ddb5e64df5fa0633f13c32bbfac4378"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga0ddb5e64df5fa0633f13c32bbfac4378"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0ddb5e64df5fa0633f13c32bbfac4378">cv::v_expand_high</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga0ddb5e64df5fa0633f13c32bbfac4378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand higher values to the wider pack type.  <a href="group__core__hal__intrin.html#ga0ddb5e64df5fa0633f13c32bbfac4378">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0ddb5e64df5fa0633f13c32bbfac4378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19ef6326f6c132d75c62391cedf7c187"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga19ef6326f6c132d75c62391cedf7c187"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga19ef6326f6c132d75c62391cedf7c187">cv::v_zip</a> (const v_reg&lt; _Tp, n &gt; &amp;a0, const v_reg&lt; _Tp, n &gt; &amp;a1, v_reg&lt; _Tp, n &gt; &amp;b0, v_reg&lt; _Tp, n &gt; &amp;b1)</td></tr>
+<tr class="memdesc:ga19ef6326f6c132d75c62391cedf7c187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interleave two vectors.  <a href="group__core__hal__intrin.html#ga19ef6326f6c132d75c62391cedf7c187">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga19ef6326f6c132d75c62391cedf7c187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05bb5c33c35c2aa1d1c5809b9220d268"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga05bb5c33c35c2aa1d1c5809b9220d268"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga05bb5c33c35c2aa1d1c5809b9220d268">cv::v_load</a> (const _Tp *ptr)</td></tr>
+<tr class="memdesc:ga05bb5c33c35c2aa1d1c5809b9220d268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load register contents from memory.  <a href="group__core__hal__intrin.html#ga05bb5c33c35c2aa1d1c5809b9220d268">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga05bb5c33c35c2aa1d1c5809b9220d268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0f804f8178ea7c695ab666a97d83ad7"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:gae0f804f8178ea7c695ab666a97d83ad7"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae0f804f8178ea7c695ab666a97d83ad7">cv::v_load_aligned</a> (const _Tp *ptr)</td></tr>
+<tr class="memdesc:gae0f804f8178ea7c695ab666a97d83ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load register contents from memory (aligned)  <a href="group__core__hal__intrin.html#gae0f804f8178ea7c695ab666a97d83ad7">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae0f804f8178ea7c695ab666a97d83ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38aa73af4a499c5028d0b1cb1d629faa"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga38aa73af4a499c5028d0b1cb1d629faa"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga38aa73af4a499c5028d0b1cb1d629faa">cv::v_load_low</a> (const _Tp *ptr)</td></tr>
+<tr class="memdesc:ga38aa73af4a499c5028d0b1cb1d629faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load 64-bits of data to lower part (high part is undefined).  <a href="group__core__hal__intrin.html#ga38aa73af4a499c5028d0b1cb1d629faa">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga38aa73af4a499c5028d0b1cb1d629faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6477d5823227e9abc21b62b7ad56f4e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:gaa6477d5823227e9abc21b62b7ad56f4e"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaa6477d5823227e9abc21b62b7ad56f4e">cv::v_load_halves</a> (const _Tp *loptr, const _Tp *hiptr)</td></tr>
+<tr class="memdesc:gaa6477d5823227e9abc21b62b7ad56f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load register contents from two memory blocks.  <a href="group__core__hal__intrin.html#gaa6477d5823227e9abc21b62b7ad56f4e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa6477d5823227e9abc21b62b7ad56f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0378e539a4ce8699b9142646e02784b4"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga0378e539a4ce8699b9142646e02784b4"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, V_TypeTraits&lt; _Tp &gt;::nlanes128/2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0378e539a4ce8699b9142646e02784b4">cv::v_load_expand</a> (const _Tp *ptr)</td></tr>
+<tr class="memdesc:ga0378e539a4ce8699b9142646e02784b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load register contents from memory with double expand.  <a href="group__core__hal__intrin.html#ga0378e539a4ce8699b9142646e02784b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0378e539a4ce8699b9142646e02784b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2003c464365d2bfd792bba3341f6775f"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga2003c464365d2bfd792bba3341f6775f"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, V_TypeTraits&lt; _Tp &gt;::nlanes128/4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga2003c464365d2bfd792bba3341f6775f">cv::v_load_expand_q</a> (const _Tp *ptr)</td></tr>
+<tr class="memdesc:ga2003c464365d2bfd792bba3341f6775f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load register contents from memory with quad expand.  <a href="group__core__hal__intrin.html#ga2003c464365d2bfd792bba3341f6775f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2003c464365d2bfd792bba3341f6775f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd8e859406c66bb5b7d901473265119b"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gafd8e859406c66bb5b7d901473265119b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gafd8e859406c66bb5b7d901473265119b">cv::v_load_deinterleave</a> (const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gafd8e859406c66bb5b7d901473265119b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load and deinterleave (2 channels)  <a href="group__core__hal__intrin.html#gafd8e859406c66bb5b7d901473265119b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafd8e859406c66bb5b7d901473265119b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab364b341969494d47e6a1b173fc46658"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gab364b341969494d47e6a1b173fc46658"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gab364b341969494d47e6a1b173fc46658">cv::v_load_deinterleave</a> (const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;c)</td></tr>
+<tr class="memdesc:gab364b341969494d47e6a1b173fc46658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load and deinterleave (3 channels)  <a href="group__core__hal__intrin.html#gab364b341969494d47e6a1b173fc46658">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab364b341969494d47e6a1b173fc46658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f1f0d87d6210547bb125fd349a10e5d"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga7f1f0d87d6210547bb125fd349a10e5d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga7f1f0d87d6210547bb125fd349a10e5d">cv::v_load_deinterleave</a> (const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;c, v_reg&lt; _Tp, n &gt; &amp;d)</td></tr>
+<tr class="memdesc:ga7f1f0d87d6210547bb125fd349a10e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load and deinterleave (4 channels)  <a href="group__core__hal__intrin.html#ga7f1f0d87d6210547bb125fd349a10e5d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7f1f0d87d6210547bb125fd349a10e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa809d0656c94b2bb24b9be06295f037e"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gaa809d0656c94b2bb24b9be06295f037e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaa809d0656c94b2bb24b9be06295f037e">cv::v_store_interleave</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)</td></tr>
+<tr class="memdesc:gaa809d0656c94b2bb24b9be06295f037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interleave and store (2 channels)  <a href="group__core__hal__intrin.html#gaa809d0656c94b2bb24b9be06295f037e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa809d0656c94b2bb24b9be06295f037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga642197a56fa99a60b9caeee19fed1a61"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga642197a56fa99a60b9caeee19fed1a61"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga642197a56fa99a60b9caeee19fed1a61">cv::v_store_interleave</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)</td></tr>
+<tr class="memdesc:ga642197a56fa99a60b9caeee19fed1a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interleave and store (3 channels)  <a href="group__core__hal__intrin.html#ga642197a56fa99a60b9caeee19fed1a61">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga642197a56fa99a60b9caeee19fed1a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f28a67e567d9f1fee7a16d264fcaa5d"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga7f28a67e567d9f1fee7a16d264fcaa5d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga7f28a67e567d9f1fee7a16d264fcaa5d">cv::v_store_interleave</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c, const v_reg&lt; _Tp, n &gt; &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)</td></tr>
+<tr class="memdesc:ga7f28a67e567d9f1fee7a16d264fcaa5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interleave and store (4 channels)  <a href="group__core__hal__intrin.html#ga7f28a67e567d9f1fee7a16d264fcaa5d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7f28a67e567d9f1fee7a16d264fcaa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga275dfa9c8935f5e9a1031121cde460f4"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga275dfa9c8935f5e9a1031121cde460f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga275dfa9c8935f5e9a1031121cde460f4">cv::v_store</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga275dfa9c8935f5e9a1031121cde460f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store data to memory.  <a href="group__core__hal__intrin.html#ga275dfa9c8935f5e9a1031121cde460f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga275dfa9c8935f5e9a1031121cde460f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaadab93734e4642972bf36918ae7d07"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gabaadab93734e4642972bf36918ae7d07"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gabaadab93734e4642972bf36918ae7d07">cv::v_store</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, hal::StoreMode)</td></tr>
+<tr class="separator:gabaadab93734e4642972bf36918ae7d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cb662d09e37eae1e73043badee69612"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga3cb662d09e37eae1e73043badee69612"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga3cb662d09e37eae1e73043badee69612">cv::v_store_low</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga3cb662d09e37eae1e73043badee69612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store data to memory (lower half)  <a href="group__core__hal__intrin.html#ga3cb662d09e37eae1e73043badee69612">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3cb662d09e37eae1e73043badee69612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1665beb52f3824499d3b6b1203890ada"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga1665beb52f3824499d3b6b1203890ada"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1665beb52f3824499d3b6b1203890ada">cv::v_store_high</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga1665beb52f3824499d3b6b1203890ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store data to memory (higher half)  <a href="group__core__hal__intrin.html#ga1665beb52f3824499d3b6b1203890ada">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1665beb52f3824499d3b6b1203890ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2733377e1bc373657d0e203028c74fc"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gaf2733377e1bc373657d0e203028c74fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaf2733377e1bc373657d0e203028c74fc">cv::v_store_aligned</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:gaf2733377e1bc373657d0e203028c74fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store data to memory (aligned)  <a href="group__core__hal__intrin.html#gaf2733377e1bc373657d0e203028c74fc">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf2733377e1bc373657d0e203028c74fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53aa8640c7a552a45ab2233c2f974e83"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga53aa8640c7a552a45ab2233c2f974e83"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga53aa8640c7a552a45ab2233c2f974e83">cv::v_store_aligned_nocache</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="separator:ga53aa8640c7a552a45ab2233c2f974e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36c04e381bb5c8d16f889dfcc21e902d"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga36c04e381bb5c8d16f889dfcc21e902d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga36c04e381bb5c8d16f889dfcc21e902d">cv::v_store_aligned</a> (_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, hal::StoreMode)</td></tr>
+<tr class="separator:ga36c04e381bb5c8d16f889dfcc21e902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f131fad2680116c10c35b6ee660b190"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga9f131fad2680116c10c35b6ee660b190"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga9f131fad2680116c10c35b6ee660b190">cv::v_combine_low</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga9f131fad2680116c10c35b6ee660b190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine vector from first elements of two vectors.  <a href="group__core__hal__intrin.html#ga9f131fad2680116c10c35b6ee660b190">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9f131fad2680116c10c35b6ee660b190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga283fe35828ae5c7f94059f2f559d454f"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga283fe35828ae5c7f94059f2f559d454f"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga283fe35828ae5c7f94059f2f559d454f">cv::v_combine_high</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga283fe35828ae5c7f94059f2f559d454f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine vector from last elements of two vectors.  <a href="group__core__hal__intrin.html#ga283fe35828ae5c7f94059f2f559d454f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga283fe35828ae5c7f94059f2f559d454f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75a3cb5bb426fc37d9ed2f10e8706997"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga75a3cb5bb426fc37d9ed2f10e8706997"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga75a3cb5bb426fc37d9ed2f10e8706997">cv::v_recombine</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;low, v_reg&lt; _Tp, n &gt; &amp;high)</td></tr>
+<tr class="memdesc:ga75a3cb5bb426fc37d9ed2f10e8706997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine two vectors from lower and higher parts of two other vectors.  <a href="group__core__hal__intrin.html#ga75a3cb5bb426fc37d9ed2f10e8706997">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga75a3cb5bb426fc37d9ed2f10e8706997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87171738bd74551ba3d75be42b01ca35"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga87171738bd74551ba3d75be42b01ca35"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga87171738bd74551ba3d75be42b01ca35">cv::v_reverse</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga87171738bd74551ba3d75be42b01ca35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector reverse order.  <a href="group__core__hal__intrin.html#ga87171738bd74551ba3d75be42b01ca35">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga87171738bd74551ba3d75be42b01ca35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd055cfd7ccb94ebb468a8b79afc819a"><td class="memTemplParams" colspan="2">template&lt;int s, typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gacd055cfd7ccb94ebb468a8b79afc819a"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gacd055cfd7ccb94ebb468a8b79afc819a">cv::v_extract</a> (const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)</td></tr>
+<tr class="memdesc:gacd055cfd7ccb94ebb468a8b79afc819a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector extract.  <a href="group__core__hal__intrin.html#gacd055cfd7ccb94ebb468a8b79afc819a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacd055cfd7ccb94ebb468a8b79afc819a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada1d7857fcf44537eae6a64944aa2c99"><td class="memTemplParams" colspan="2">template&lt;int s, typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:gada1d7857fcf44537eae6a64944aa2c99"><td class="memTemplItemLeft" align="right" valign="top">_Tp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gada1d7857fcf44537eae6a64944aa2c99">cv::v_extract_n</a> (const v_reg&lt; _Tp, n &gt; &amp;v)</td></tr>
+<tr class="memdesc:gada1d7857fcf44537eae6a64944aa2c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector extract.  <a href="group__core__hal__intrin.html#gada1d7857fcf44537eae6a64944aa2c99">Подробнее...</a><br /></td></tr>
+<tr class="separator:gada1d7857fcf44537eae6a64944aa2c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70249e8db96571fe15de8ea11dc899a6"><td class="memTemplParams" colspan="2">template&lt;int i, typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga70249e8db96571fe15de8ea11dc899a6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga70249e8db96571fe15de8ea11dc899a6">cv::v_broadcast_element</a> (const v_reg&lt; _Tp, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga70249e8db96571fe15de8ea11dc899a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast i-th element of vector.  <a href="group__core__hal__intrin.html#ga70249e8db96571fe15de8ea11dc899a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga70249e8db96571fe15de8ea11dc899a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10e8380a09690c5c2de2dafbf1b8e326"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga10e8380a09690c5c2de2dafbf1b8e326"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga10e8380a09690c5c2de2dafbf1b8e326">cv::v_round</a> (const v_reg&lt; float, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga10e8380a09690c5c2de2dafbf1b8e326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Round.  <a href="group__core__hal__intrin.html#ga10e8380a09690c5c2de2dafbf1b8e326">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga10e8380a09690c5c2de2dafbf1b8e326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad77ad4facdb1bb2502f50bc2542c605f"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gad77ad4facdb1bb2502f50bc2542c605f"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad77ad4facdb1bb2502f50bc2542c605f">cv::v_round</a> (const v_reg&lt; double, n &gt; &amp;a, const v_reg&lt; double, n &gt; &amp;b)</td></tr>
+<tr class="separator:gad77ad4facdb1bb2502f50bc2542c605f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c95c494decd17905b43d47028370817"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga6c95c494decd17905b43d47028370817"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga6c95c494decd17905b43d47028370817">cv::v_floor</a> (const v_reg&lt; float, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga6c95c494decd17905b43d47028370817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floor.  <a href="group__core__hal__intrin.html#ga6c95c494decd17905b43d47028370817">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6c95c494decd17905b43d47028370817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaff4ee2a4fab7233fd421a7236ac5c6"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gabaff4ee2a4fab7233fd421a7236ac5c6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gabaff4ee2a4fab7233fd421a7236ac5c6">cv::v_ceil</a> (const v_reg&lt; float, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:gabaff4ee2a4fab7233fd421a7236ac5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ceil.  <a href="group__core__hal__intrin.html#gabaff4ee2a4fab7233fd421a7236ac5c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabaff4ee2a4fab7233fd421a7236ac5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b773c451fe920bfdf3c773860c9f334"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga4b773c451fe920bfdf3c773860c9f334"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4b773c451fe920bfdf3c773860c9f334">cv::v_trunc</a> (const v_reg&lt; float, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga4b773c451fe920bfdf3c773860c9f334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trunc.  <a href="group__core__hal__intrin.html#ga4b773c451fe920bfdf3c773860c9f334">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4b773c451fe920bfdf3c773860c9f334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97980b3f12acb3028558e51231240a4e"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga97980b3f12acb3028558e51231240a4e"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga97980b3f12acb3028558e51231240a4e">cv::v_round</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:ga97980b3f12acb3028558e51231240a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fba933e3c72033673dfcd70cd345f15"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga1fba933e3c72033673dfcd70cd345f15"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1fba933e3c72033673dfcd70cd345f15">cv::v_floor</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:ga1fba933e3c72033673dfcd70cd345f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39fece1cbdac6895c5494ee2c9c097e9"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga39fece1cbdac6895c5494ee2c9c097e9"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga39fece1cbdac6895c5494ee2c9c097e9">cv::v_ceil</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:ga39fece1cbdac6895c5494ee2c9c097e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae347e0d88bcb9168f55043419b1ad6ec"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gae347e0d88bcb9168f55043419b1ad6ec"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae347e0d88bcb9168f55043419b1ad6ec">cv::v_trunc</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:gae347e0d88bcb9168f55043419b1ad6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga140593e5fc051e291791899ad50976a6"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga140593e5fc051e291791899ad50976a6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; float, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga140593e5fc051e291791899ad50976a6">cv::v_cvt_f32</a> (const v_reg&lt; int, n &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga140593e5fc051e291791899ad50976a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to float.  <a href="group__core__hal__intrin.html#ga140593e5fc051e291791899ad50976a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga140593e5fc051e291791899ad50976a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb3900f8a31fbce885403a1bc14739ec"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gabb3900f8a31fbce885403a1bc14739ec"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; float, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gabb3900f8a31fbce885403a1bc14739ec">cv::v_cvt_f32</a> (const v_reg&lt; double, n &gt; &amp;a)</td></tr>
+<tr class="separator:gabb3900f8a31fbce885403a1bc14739ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf4cedbc2894f0659646401dac2b489c"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gabf4cedbc2894f0659646401dac2b489c"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; float, n *2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gabf4cedbc2894f0659646401dac2b489c">cv::v_cvt_f32</a> (const v_reg&lt; double, n &gt; &amp;a, const v_reg&lt; double, n &gt; &amp;b)</td></tr>
+<tr class="separator:gabf4cedbc2894f0659646401dac2b489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93bdd972b181e1f2c8f93da4ac7868d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga93bdd972b181e1f2c8f93da4ac7868d2">cv::v_cvt_f64</a> (const v_reg&lt; int, 4 &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga93bdd972b181e1f2c8f93da4ac7868d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double.  <a href="group__core__hal__intrin.html#ga93bdd972b181e1f2c8f93da4ac7868d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga93bdd972b181e1f2c8f93da4ac7868d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77eaa0a78470129374af3946d7b0ab7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga77eaa0a78470129374af3946d7b0ab7f">cv::v_cvt_f64_high</a> (const v_reg&lt; int, 4 &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga77eaa0a78470129374af3946d7b0ab7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double high part of vector.  <a href="group__core__hal__intrin.html#ga77eaa0a78470129374af3946d7b0ab7f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga77eaa0a78470129374af3946d7b0ab7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00d640d269452923907d2b30264a5b33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga00d640d269452923907d2b30264a5b33">cv::v_cvt_f64</a> (const v_reg&lt; float, 4 &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga00d640d269452923907d2b30264a5b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double.  <a href="group__core__hal__intrin.html#ga00d640d269452923907d2b30264a5b33">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga00d640d269452923907d2b30264a5b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec54613a163a221f3b5138bfa93fdb89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaec54613a163a221f3b5138bfa93fdb89">cv::v_cvt_f64_high</a> (const v_reg&lt; float, 4 &gt; &amp;a)</td></tr>
+<tr class="memdesc:gaec54613a163a221f3b5138bfa93fdb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double high part of vector.  <a href="group__core__hal__intrin.html#gaec54613a163a221f3b5138bfa93fdb89">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaec54613a163a221f3b5138bfa93fdb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7cce85cb45866ea78acfed63199a2b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae7cce85cb45866ea78acfed63199a2b1">cv::v_cvt_f64</a> (const v_reg&lt; <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, 2 &gt; &amp;a)</td></tr>
+<tr class="memdesc:gae7cce85cb45866ea78acfed63199a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double.  <a href="group__core__hal__intrin.html#gae7cce85cb45866ea78acfed63199a2b1">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae7cce85cb45866ea78acfed63199a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga848fa8bcfec2cfa8a208645e8fd3ba45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gafa9cd5d65f77596b7dfb38dd8afe2325">CV_INLINE</a> v_reg&lt; double, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga848fa8bcfec2cfa8a208645e8fd3ba45">cv::v_cvt_f64_high</a> (const v_reg&lt; <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, 2 &gt; &amp;a)</td></tr>
+<tr class="memdesc:ga848fa8bcfec2cfa8a208645e8fd3ba45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to double high part of vector.  <a href="group__core__hal__intrin.html#ga848fa8bcfec2cfa8a208645e8fd3ba45">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga848fa8bcfec2cfa8a208645e8fd3ba45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e5322c518919e8e4b44e1ea56e4cc71"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga0e5322c518919e8e4b44e1ea56e4cc71"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0e5322c518919e8e4b44e1ea56e4cc71">cv::v_lut</a> (const _Tp *tab, const int *<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:ga0e5322c518919e8e4b44e1ea56e4cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88c3a608d18cdea81c13ac6e97cd61ba"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ga88c3a608d18cdea81c13ac6e97cd61ba"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga88c3a608d18cdea81c13ac6e97cd61ba">cv::v_lut_pairs</a> (const _Tp *tab, const int *<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:ga88c3a608d18cdea81c13ac6e97cd61ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf63658f9faee2ba32ef8de6d6775d7c8"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:gaf63658f9faee2ba32ef8de6d6775d7c8"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, V_TypeTraits&lt; _Tp &gt;::nlanes128 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaf63658f9faee2ba32ef8de6d6775d7c8">cv::v_lut_quads</a> (const _Tp *tab, const int *<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:gaf63658f9faee2ba32ef8de6d6775d7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac374da26f917717a3a1ef4d52c1c4403"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gac374da26f917717a3a1ef4d52c1c4403"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; int, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gac374da26f917717a3a1ef4d52c1c4403">cv::v_lut</a> (const int *tab, const v_reg&lt; int, n &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:gac374da26f917717a3a1ef4d52c1c4403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga130ec1e96d7aae1873aed9fcba816de6"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga130ec1e96d7aae1873aed9fcba816de6"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; unsigned, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga130ec1e96d7aae1873aed9fcba816de6">cv::v_lut</a> (const unsigned *tab, const v_reg&lt; int, n &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:ga130ec1e96d7aae1873aed9fcba816de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6557aa0f7b20447ad4f9662178b799d5"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga6557aa0f7b20447ad4f9662178b799d5"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; float, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga6557aa0f7b20447ad4f9662178b799d5">cv::v_lut</a> (const float *tab, const v_reg&lt; int, n &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:ga6557aa0f7b20447ad4f9662178b799d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97d22738a38a7987499dbff95388c8d8"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:ga97d22738a38a7987499dbff95388c8d8"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; double, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga97d22738a38a7987499dbff95388c8d8">cv::v_lut</a> (const double *tab, const v_reg&lt; int, n *2 &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</td></tr>
+<tr class="separator:ga97d22738a38a7987499dbff95388c8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c0e2bf131cc68ab4726bc9db9bda1a5"><td class="memItemLeft" align="right" valign="top">v_int32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga2c0e2bf131cc68ab4726bc9db9bda1a5">cv::v_lut</a> (const int *tab, const v_int32x4 &amp;idxvec)</td></tr>
+<tr class="separator:ga2c0e2bf131cc68ab4726bc9db9bda1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf92cf363ddf4821d60808d0254ed880e"><td class="memItemLeft" align="right" valign="top">v_uint32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaf92cf363ddf4821d60808d0254ed880e">cv::v_lut</a> (const unsigned *tab, const v_int32x4 &amp;idxvec)</td></tr>
+<tr class="separator:gaf92cf363ddf4821d60808d0254ed880e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c72d97f462e12f5e53ed1045e0b7fdb"><td class="memItemLeft" align="right" valign="top">v_float32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga8c72d97f462e12f5e53ed1045e0b7fdb">cv::v_lut</a> (const float *tab, const v_int32x4 &amp;idxvec)</td></tr>
+<tr class="separator:ga8c72d97f462e12f5e53ed1045e0b7fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga545d854f178bc8549b6c09a0077ce49a"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga545d854f178bc8549b6c09a0077ce49a">cv::v_lut</a> (const double *tab, const v_int32x4 &amp;idxvec)</td></tr>
+<tr class="separator:ga545d854f178bc8549b6c09a0077ce49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9d7072e2fed05b076a450a03fa41d3f"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gaa9d7072e2fed05b076a450a03fa41d3f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaa9d7072e2fed05b076a450a03fa41d3f">cv::v_lut_deinterleave</a> (const float *tab, const v_reg&lt; int, n &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>, v_reg&lt; float, n &gt; &amp;<a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>, v_reg&lt; float, n &gt; &amp;<a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>)</td></tr>
+<tr class="separator:gaa9d7072e2fed05b076a450a03fa41d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad08aac715b83d26af9f8d2911f2f8c39"><td class="memTemplParams" colspan="2">template&lt;int n&gt; </td></tr>
+<tr class="memitem:gad08aac715b83d26af9f8d2911f2f8c39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad08aac715b83d26af9f8d2911f2f8c39">cv::v_lut_deinterleave</a> (const double *tab, const v_reg&lt; int, n *2 &gt; &amp;<a class="el" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>, v_reg&lt; double, n &gt; &amp;<a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>, v_reg&lt; double, n &gt; &amp;<a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>)</td></tr>
+<tr class="separator:gad08aac715b83d26af9f8d2911f2f8c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga268234733e5f8a98fbd01e3d189d7cb1"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga268234733e5f8a98fbd01e3d189d7cb1"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga268234733e5f8a98fbd01e3d189d7cb1">cv::v_interleave_pairs</a> (const v_reg&lt; _Tp, n &gt; &amp;vec)</td></tr>
+<tr class="separator:ga268234733e5f8a98fbd01e3d189d7cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57030fedf40683c3e3efcfd25a36f45b"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga57030fedf40683c3e3efcfd25a36f45b"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga57030fedf40683c3e3efcfd25a36f45b">cv::v_interleave_quads</a> (const v_reg&lt; _Tp, n &gt; &amp;vec)</td></tr>
+<tr class="separator:ga57030fedf40683c3e3efcfd25a36f45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f0cc61988de9ae89c7e7649ae1091f4"><td class="memTemplParams" colspan="2">template&lt;typename _Tp , int n&gt; </td></tr>
+<tr class="memitem:ga5f0cc61988de9ae89c7e7649ae1091f4"><td class="memTemplItemLeft" align="right" valign="top">v_reg&lt; _Tp, n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga5f0cc61988de9ae89c7e7649ae1091f4">cv::v_pack_triplets</a> (const v_reg&lt; _Tp, n &gt; &amp;vec)</td></tr>
+<tr class="separator:ga5f0cc61988de9ae89c7e7649ae1091f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8bdcd643d22a9fc9c3f0ed202535928"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:gaf8bdcd643d22a9fc9c3f0ed202535928"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaf8bdcd643d22a9fc9c3f0ed202535928">cv::v_transpose4x4</a> (v_reg&lt; _Tp, 4 &gt; &amp;a0, const v_reg&lt; _Tp, 4 &gt; &amp;a1, const v_reg&lt; _Tp, 4 &gt; &amp;a2, const v_reg&lt; _Tp, 4 &gt; &amp;a3, v_reg&lt; _Tp, 4 &gt; &amp;b0, v_reg&lt; _Tp, 4 &gt; &amp;b1, v_reg&lt; _Tp, 4 &gt; &amp;b2, v_reg&lt; _Tp, 4 &gt; &amp;b3)</td></tr>
+<tr class="memdesc:gaf8bdcd643d22a9fc9c3f0ed202535928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose 4x4 matrix.  <a href="group__core__hal__intrin.html#gaf8bdcd643d22a9fc9c3f0ed202535928">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf8bdcd643d22a9fc9c3f0ed202535928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f53754058cbcd76b98db8525cefe869"><td class="memItemLeft" align="right" valign="top">v_float32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4f53754058cbcd76b98db8525cefe869">cv::v_matmul</a> (const v_float32x4 &amp;v, const v_float32x4 &amp;m0, const v_float32x4 &amp;m1, const v_float32x4 &amp;m2, const v_float32x4 &amp;m3)</td></tr>
+<tr class="memdesc:ga4f53754058cbcd76b98db8525cefe869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix multiplication.  <a href="group__core__hal__intrin.html#ga4f53754058cbcd76b98db8525cefe869">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4f53754058cbcd76b98db8525cefe869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a36df5c9313f6132192c0b9ae2aefb0"><td class="memItemLeft" align="right" valign="top">v_float32x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1a36df5c9313f6132192c0b9ae2aefb0">cv::v_matmuladd</a> (const v_float32x4 &amp;v, const v_float32x4 &amp;m0, const v_float32x4 &amp;m1, const v_float32x4 &amp;m2, const v_float32x4 &amp;m3)</td></tr>
+<tr class="memdesc:ga1a36df5c9313f6132192c0b9ae2aefb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix multiplication and add.  <a href="group__core__hal__intrin.html#ga1a36df5c9313f6132192c0b9ae2aefb0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1a36df5c9313f6132192c0b9ae2aefb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26913f5fe9b1b927b5265c95c9aab585"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga26913f5fe9b1b927b5265c95c9aab585">cv::v_dotprod_expand</a> (const v_int32x4 &amp;a, const v_int32x4 &amp;b)</td></tr>
+<tr class="separator:ga26913f5fe9b1b927b5265c95c9aab585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e86c0ff59c2067e2bb2f8ea42a6735f"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga6e86c0ff59c2067e2bb2f8ea42a6735f">cv::v_dotprod_expand</a> (const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_float64x2 &amp;c)</td></tr>
+<tr class="separator:ga6e86c0ff59c2067e2bb2f8ea42a6735f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c05dfc213d5f9725f63662067f5b836"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga0c05dfc213d5f9725f63662067f5b836">cv::v_dotprod_expand_fast</a> (const v_int32x4 &amp;a, const v_int32x4 &amp;b)</td></tr>
+<tr class="separator:ga0c05dfc213d5f9725f63662067f5b836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2c357a1189ef334f661c190c8615db5"><td class="memItemLeft" align="right" valign="top">v_float64x2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gae2c357a1189ef334f661c190c8615db5">cv::v_dotprod_expand_fast</a> (const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_float64x2 &amp;c)</td></tr>
+<tr class="separator:gae2c357a1189ef334f661c190c8615db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga066ea8316562170403297e4e2c5a8f90"><td class="memItemLeft" align="right" valign="top">v_reg&lt; float, V_TypeTraits&lt; float &gt;::nlanes128 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga066ea8316562170403297e4e2c5a8f90">cv::v_load_expand</a> (const float16_t *ptr)</td></tr>
+<tr class="separator:ga066ea8316562170403297e4e2c5a8f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f98da10cf5736fc2ec18638dce6ba8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga1f98da10cf5736fc2ec18638dce6ba8d">cv::v_pack_store</a> (float16_t *ptr, const v_reg&lt; float, V_TypeTraits&lt; float &gt;::nlanes128 &gt; &amp;v)</td></tr>
+<tr class="separator:ga1f98da10cf5736fc2ec18638dce6ba8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa24f949c3930df676514d3f06f114cb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gaa24f949c3930df676514d3f06f114cb7">cv::v_cleanup</a> ()</td></tr>
+<tr class="separator:gaa24f949c3930df676514d3f06f114cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Pack boolean values</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Pack boolean values from multiple vectors to one unsigned 8-bit integer vector</p>
+<dl class="section note"><dt>Заметки</dt><dd>Must provide valid boolean values to guarantee same result for all architectures. </dd></dl>
+</div></td></tr>
+<tr class="memitem:ga4183265b6f133d0a8a8b6598cfa61fe8"><td class="memItemLeft" align="right" valign="top">v_uint8x16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#ga4183265b6f133d0a8a8b6598cfa61fe8">cv::v_pack_b</a> (const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)</td></tr>
+<tr class="memdesc:ga4183265b6f133d0a8a8b6598cfa61fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">! For 16-bit boolean values  <a href="group__core__hal__intrin.html#ga4183265b6f133d0a8a8b6598cfa61fe8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4183265b6f133d0a8a8b6598cfa61fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7e6ed6c7c6d0cf64f295fd8b86c08f8"><td class="memItemLeft" align="right" valign="top">v_uint8x16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad7e6ed6c7c6d0cf64f295fd8b86c08f8">cv::v_pack_b</a> (const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, const v_uint32x4 &amp;c, const v_uint32x4 &amp;d)</td></tr>
+<tr class="separator:gad7e6ed6c7c6d0cf64f295fd8b86c08f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f237e5e9fd54dfef2590bb4ee686a2"><td class="memItemLeft" align="right" valign="top">v_uint8x16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin.html#gad4f237e5e9fd54dfef2590bb4ee686a2">cv::v_pack_b</a> (const v_uint64x2 &amp;a, const v_uint64x2 &amp;b, const v_uint64x2 &amp;c, const v_uint64x2 &amp;d, const v_uint64x2 &amp;e, const v_uint64x2 &amp;f, const v_uint64x2 &amp;g, const v_uint64x2 &amp;h)</td></tr>
+<tr class="separator:gad4f237e5e9fd54dfef2590bb4ee686a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="afa707e5c423dc3b46968f579d25d40d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa707e5c423dc3b46968f579d25d40d8">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_MINMAX_FUNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_MINMAX_FUNC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cfunc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> v_reg&lt;_Tp, n&gt; <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a, <span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; b) \</div>
+<div class="line">{ \</div>
+<div class="line">    v_reg&lt;_Tp, n&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; n; i++ ) \</div>
+<div class="line">        c.s[i] = cfunc(a.s[i], b.s[i]); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__c_html_ga120677ac732b3c9bfecab149fc978afa"><div class="ttname"><a href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a></div><div class="ttdeci">CvCmpFunc func</div><div class="ttdef"><b>Definition:</b> core_c.h:1709</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a52fcf2ab9074198d8ea7f2643e891720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fcf2ab9074198d8ea7f2643e891720">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_REDUCE_MINMAX_FUNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_REDUCE_MINMAX_FUNC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cfunc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> _Tp <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    _Tp c = a.s[0]; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 1; i &lt; n; i++ ) \</div>
+<div class="line">        c = cfunc(c, a.s[i]); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="dir_9cfd5b47b88c986e548a798da92b3d78.html">hal</a></li><li class="navelem"><a class="el" href="intrin__cpp_8hpp.html">intrin_cpp.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

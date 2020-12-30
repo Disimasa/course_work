@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс CvAbstractCamera</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('interface_cv_abstract_camera.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Методы экземпляра</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="interface_cv_abstract_camera-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс CvAbstractCamera<div class="ingroups"><a class="el" href="group__videoio.html">Video I/O</a> &raquo; <a class="el" href="group__videoio__ios.html">iOS glue for video I/O</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#import &lt;<a class="el" href="cap__ios_8h_source.html">cap_ios.h</a>&gt;</code></p>
+
+<p>Базовые классы:NSObject.</p>
+
+<p>Производные классы:<a class="el" href="interface_cv_photo_camera.html">CvPhotoCamera</a> и <a class="el" href="interface_cv_video_camera.html">CvVideoCamera</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Методы экземпляра</h2></td></tr>
+<tr class="memitem:abfb11f5348247bc930a7ffb953efd166"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="group__core__c.html#ga45314566a84a31f43e6435d1eb24d4ec">start</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#abfb11f5348247bc930a7ffb953efd166">CV_UNUSED</a></td></tr>
+<tr class="separator:abfb11f5348247bc930a7ffb953efd166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b84f8dd9fea5a8080efc43f1d623b12"><td class="memItemLeft" align="right" valign="top">(stop)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a4b84f8dd9fea5a8080efc43f1d623b12">CV_UNUSED</a></td></tr>
+<tr class="separator:a4b84f8dd9fea5a8080efc43f1d623b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13211abaaa4aaab2fcbd584d4be9fc6"><td class="memItemLeft" align="right" valign="top">(switchCameras)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#ab13211abaaa4aaab2fcbd584d4be9fc6">CV_UNUSED</a></td></tr>
+<tr class="separator:ab13211abaaa4aaab2fcbd584d4be9fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45844ae7e6af93e3dcaa97aae70e5cf8"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a45844ae7e6af93e3dcaa97aae70e5cf8">initWithParentView:</a></td></tr>
+<tr class="separator:a45844ae7e6af93e3dcaa97aae70e5cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d17c677ce74defaf3de65fe021f7cbd"><td class="memItemLeft" align="right" valign="top">(createCaptureOutput)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a6d17c677ce74defaf3de65fe021f7cbd">CV_UNUSED</a></td></tr>
+<tr class="separator:a6d17c677ce74defaf3de65fe021f7cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2edc3d0452446a9264ce5d2389bbaeff"><td class="memItemLeft" align="right" valign="top">(createVideoPreviewLayer)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a2edc3d0452446a9264ce5d2389bbaeff">CV_UNUSED</a></td></tr>
+<tr class="separator:a2edc3d0452446a9264ce5d2389bbaeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793ec34ffabea9a55d7136a6110589dd"><td class="memItemLeft" align="right" valign="top">(updateOrientation)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a793ec34ffabea9a55d7136a6110589dd">CV_UNUSED</a></td></tr>
+<tr class="separator:a793ec34ffabea9a55d7136a6110589dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670bce50efd81aa557ddcde80d71dbb1"><td class="memItemLeft" align="right" valign="top">(lockFocus)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a670bce50efd81aa557ddcde80d71dbb1">CV_UNUSED</a></td></tr>
+<tr class="separator:a670bce50efd81aa557ddcde80d71dbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bcefca61d98059885b95473b631112"><td class="memItemLeft" align="right" valign="top">(unlockFocus)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#aa2bcefca61d98059885b95473b631112">CV_UNUSED</a></td></tr>
+<tr class="separator:aa2bcefca61d98059885b95473b631112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364cccdc091b79979398213a1faef497"><td class="memItemLeft" align="right" valign="top">(lockExposure)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#a364cccdc091b79979398213a1faef497">CV_UNUSED</a></td></tr>
+<tr class="separator:a364cccdc091b79979398213a1faef497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48d9c37039275f85a9bcecfc4601e6f"><td class="memItemLeft" align="right" valign="top">(unlockExposure)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#aa48d9c37039275f85a9bcecfc4601e6f">CV_UNUSED</a></td></tr>
+<tr class="separator:aa48d9c37039275f85a9bcecfc4601e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1dc3eb6286fb5d7874773b6a36cbf89"><td class="memItemLeft" align="right" valign="top">(lockBalance)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#ab1dc3eb6286fb5d7874773b6a36cbf89">CV_UNUSED</a></td></tr>
+<tr class="separator:ab1dc3eb6286fb5d7874773b6a36cbf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6894b0fbbc7cbae1e389b33ff0dbf5a"><td class="memItemLeft" align="right" valign="top">(unlockBalance)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_cv_abstract_camera.html#ac6894b0fbbc7cbae1e389b33ff0dbf5a">CV_UNUSED</a></td></tr>
+<tr class="separator:ac6894b0fbbc7cbae1e389b33ff0dbf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:aa46cf6e9afd8398d35b99cef4f3247f7"><td class="memItemLeft" align="right" valign="top">UIDeviceOrientation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#aa46cf6e9afd8398d35b99cef4f3247f7">currentDeviceOrientation</a></td></tr>
+<tr class="separator:aa46cf6e9afd8398d35b99cef4f3247f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd8f1830e5588430db00b66b0361323"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#acfd8f1830e5588430db00b66b0361323">cameraAvailable</a></td></tr>
+<tr class="separator:acfd8f1830e5588430db00b66b0361323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:adb4a93417ac810225829d95718b15187"><td class="memItemLeft" align="right" valign="top">AVCaptureSession *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#adb4a93417ac810225829d95718b15187">captureSession</a></td></tr>
+<tr class="separator:adb4a93417ac810225829d95718b15187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8589c194220aff69cffeb8a363af2f94"><td class="memItemLeft" align="right" valign="top">AVCaptureConnection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a8589c194220aff69cffeb8a363af2f94">videoCaptureConnection</a></td></tr>
+<tr class="separator:a8589c194220aff69cffeb8a363af2f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14f0dc858286d0879c524988eded738"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#ac14f0dc858286d0879c524988eded738">running</a></td></tr>
+<tr class="separator:ac14f0dc858286d0879c524988eded738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0433c6ce2417ab9f6ab3bcb6bf4914e5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a0433c6ce2417ab9f6ab3bcb6bf4914e5">captureSessionLoaded</a></td></tr>
+<tr class="separator:a0433c6ce2417ab9f6ab3bcb6bf4914e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4191912661631d746270dc24a0b9a902"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a4191912661631d746270dc24a0b9a902">defaultFPS</a></td></tr>
+<tr class="separator:a4191912661631d746270dc24a0b9a902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2584923d445cacd3f1bf37bc917a260"><td class="memItemLeft" align="right" valign="top">AVCaptureVideoPreviewLayer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#ab2584923d445cacd3f1bf37bc917a260">captureVideoPreviewLayer</a></td></tr>
+<tr class="separator:ab2584923d445cacd3f1bf37bc917a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038fae0411c8b8fe316c27287a00f745"><td class="memItemLeft" align="right" valign="top">AVCaptureDevicePosition&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a038fae0411c8b8fe316c27287a00f745">defaultAVCaptureDevicePosition</a></td></tr>
+<tr class="separator:a038fae0411c8b8fe316c27287a00f745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3190de91139b32e8bf15d47e8a75e97d"><td class="memItemLeft" align="right" valign="top">AVCaptureVideoOrientation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a3190de91139b32e8bf15d47e8a75e97d">defaultAVCaptureVideoOrientation</a></td></tr>
+<tr class="separator:a3190de91139b32e8bf15d47e8a75e97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583bbd0eb3598f96ad1f42243c63ef99"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a583bbd0eb3598f96ad1f42243c63ef99">useAVCaptureVideoPreviewLayer</a></td></tr>
+<tr class="separator:a583bbd0eb3598f96ad1f42243c63ef99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a3585adb702512e86023aee31607e5"><td class="memItemLeft" align="right" valign="top">NSString *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a53a3585adb702512e86023aee31607e5">defaultAVCaptureSessionPreset</a></td></tr>
+<tr class="separator:a53a3585adb702512e86023aee31607e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce69702c4608e60386884e5f7c233cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a9ce69702c4608e60386884e5f7c233cf">imageWidth</a></td></tr>
+<tr class="separator:a9ce69702c4608e60386884e5f7c233cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aeba5c58aa31e3fc1b61819646d3b85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a3aeba5c58aa31e3fc1b61819646d3b85">imageHeight</a></td></tr>
+<tr class="separator:a3aeba5c58aa31e3fc1b61819646d3b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f073867d25d504a7935ac813180518a"><td class="memItemLeft" align="right" valign="top">UIView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_cv_abstract_camera.html#a1f073867d25d504a7935ac813180518a">parentView</a></td></tr>
+<tr class="separator:a1f073867d25d504a7935ac813180518a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Документация метода</h2>
+<a id="abfb11f5348247bc930a7ffb953efd166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb11f5348247bc930a7ffb953efd166">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[1/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="group__core__c.html#ga45314566a84a31f43e6435d1eb24d4ec">start</a>) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="ac6894b0fbbc7cbae1e389b33ff0dbf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6894b0fbbc7cbae1e389b33ff0dbf5a">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (unlockBalance) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="ab1dc3eb6286fb5d7874773b6a36cbf89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1dc3eb6286fb5d7874773b6a36cbf89">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[3/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (lockBalance) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="aa48d9c37039275f85a9bcecfc4601e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48d9c37039275f85a9bcecfc4601e6f">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[4/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (unlockExposure) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a364cccdc091b79979398213a1faef497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364cccdc091b79979398213a1faef497">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[5/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (lockExposure) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="aa2bcefca61d98059885b95473b631112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bcefca61d98059885b95473b631112">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[6/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (unlockFocus) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a4b84f8dd9fea5a8080efc43f1d623b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b84f8dd9fea5a8080efc43f1d623b12">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[7/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (stop) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a793ec34ffabea9a55d7136a6110589dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793ec34ffabea9a55d7136a6110589dd">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[8/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (updateOrientation) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a2edc3d0452446a9264ce5d2389bbaeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2edc3d0452446a9264ce5d2389bbaeff">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[9/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (createVideoPreviewLayer) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a6d17c677ce74defaf3de65fe021f7cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d17c677ce74defaf3de65fe021f7cbd">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (createCaptureOutput) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a670bce50efd81aa557ddcde80d71dbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a670bce50efd81aa557ddcde80d71dbb1">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[11/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (lockFocus) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="ab13211abaaa4aaab2fcbd584d4be9fc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13211abaaa4aaab2fcbd584d4be9fc6">&#9670;&nbsp;</a></span>CV_UNUSED <span class="overload">[12/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (switchCameras) CV_UNUSED </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="interface_cv_photo_camera.html#a88ca069176e27ed45ed33738a0316477">CvPhotoCamera</a>, <a class="el" href="interface_cv_video_camera.html#aba3829a775c6f93feae0f589fa1f948c">CvVideoCamera</a> и <a class="el" href="interface_cv_video_camera.html#aa7f4cb9d0289b6973e0666fd038cade2">CvVideoCamera</a>.</p>
+
+</div>
+</div>
+<a id="a45844ae7e6af93e3dcaa97aae70e5cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45844ae7e6af93e3dcaa97aae70e5cf8">&#9670;&nbsp;</a></span>initWithParentView:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithParentView: </td>
+          <td></td>
+          <td class="paramtype">(UIView *)&#160;</td>
+          <td class="paramname"><em>parent</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="acfd8f1830e5588430db00b66b0361323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd8f1830e5588430db00b66b0361323">&#9670;&nbsp;</a></span>cameraAvailable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) cameraAvailable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa46cf6e9afd8398d35b99cef4f3247f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46cf6e9afd8398d35b99cef4f3247f7">&#9670;&nbsp;</a></span>currentDeviceOrientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (UIDeviceOrientation) currentDeviceOrientation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="adb4a93417ac810225829d95718b15187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4a93417ac810225829d95718b15187">&#9670;&nbsp;</a></span>captureSession</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (AVCaptureSession*) captureSession</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0433c6ce2417ab9f6ab3bcb6bf4914e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0433c6ce2417ab9f6ab3bcb6bf4914e5">&#9670;&nbsp;</a></span>captureSessionLoaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) captureSessionLoaded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2584923d445cacd3f1bf37bc917a260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2584923d445cacd3f1bf37bc917a260">&#9670;&nbsp;</a></span>captureVideoPreviewLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (AVCaptureVideoPreviewLayer*) captureVideoPreviewLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a038fae0411c8b8fe316c27287a00f745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038fae0411c8b8fe316c27287a00f745">&#9670;&nbsp;</a></span>defaultAVCaptureDevicePosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (AVCaptureDevicePosition) defaultAVCaptureDevicePosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53a3585adb702512e86023aee31607e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a3585adb702512e86023aee31607e5">&#9670;&nbsp;</a></span>defaultAVCaptureSessionPreset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString* const) defaultAVCaptureSessionPreset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3190de91139b32e8bf15d47e8a75e97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3190de91139b32e8bf15d47e8a75e97d">&#9670;&nbsp;</a></span>defaultAVCaptureVideoOrientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (AVCaptureVideoOrientation) defaultAVCaptureVideoOrientation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4191912661631d746270dc24a0b9a902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4191912661631d746270dc24a0b9a902">&#9670;&nbsp;</a></span>defaultFPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) defaultFPS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3aeba5c58aa31e3fc1b61819646d3b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aeba5c58aa31e3fc1b61819646d3b85">&#9670;&nbsp;</a></span>imageHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) imageHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ce69702c4608e60386884e5f7c233cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce69702c4608e60386884e5f7c233cf">&#9670;&nbsp;</a></span>imageWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) imageWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f073867d25d504a7935ac813180518a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f073867d25d504a7935ac813180518a">&#9670;&nbsp;</a></span>parentView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (UIView*) parentView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac14f0dc858286d0879c524988eded738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14f0dc858286d0879c524988eded738">&#9670;&nbsp;</a></span>running</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) running</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a583bbd0eb3598f96ad1f42243c63ef99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583bbd0eb3598f96ad1f42243c63ef99">&#9670;&nbsp;</a></span>useAVCaptureVideoPreviewLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) useAVCaptureVideoPreviewLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8589c194220aff69cffeb8a363af2f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8589c194220aff69cffeb8a363af2f94">&#9670;&nbsp;</a></span>videoCaptureConnection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (AVCaptureConnection*) videoCaptureConnection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/videoio/<a class="el" href="cap__ios_8h_source.html">cap_ios.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="interface_cv_abstract_camera.html">CvAbstractCamera</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

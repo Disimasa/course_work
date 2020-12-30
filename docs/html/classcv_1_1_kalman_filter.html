@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::KalmanFilter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_kalman_filter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1_kalman_filter-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::KalmanFilter<div class="ingroups"><a class="el" href="group__video.html">Video Analysis</a> &raquo; <a class="el" href="group__video__track.html">Object Tracking</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Kalman filter class.  
+ <a href="classcv_1_1_kalman_filter.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tracking_8hpp_source.html">tracking.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab8ee22bea52cf66b0b72581d66d7a87f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#ab8ee22bea52cf66b0b72581d66d7a87f">KalmanFilter</a> ()</td></tr>
+<tr class="separator:ab8ee22bea52cf66b0b72581d66d7a87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02122ed395a1cd3234a569be48fefdd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a02122ed395a1cd3234a569be48fefdd3">KalmanFilter</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dynamParams, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> measureParams, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> controlParams=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="separator:a02122ed395a1cd3234a569be48fefdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f136c39c016d3530c7c5801dd1ddb3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a4f136c39c016d3530c7c5801dd1ddb3b">init</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dynamParams, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> measureParams, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> controlParams=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:a4f136c39c016d3530c7c5801dd1ddb3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-initializes Kalman filter. The previous content is destroyed.  <a href="classcv_1_1_kalman_filter.html#a4f136c39c016d3530c7c5801dd1ddb3b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4f136c39c016d3530c7c5801dd1ddb3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fca2f23322ae31df3395ba45fa9127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a93fca2f23322ae31df3395ba45fa9127">predict</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;control=<a class="el" href="classcv_1_1_mat.html">Mat</a>())</td></tr>
+<tr class="memdesc:a93fca2f23322ae31df3395ba45fa9127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a predicted state.  <a href="classcv_1_1_kalman_filter.html#a93fca2f23322ae31df3395ba45fa9127">Подробнее...</a><br /></td></tr>
+<tr class="separator:a93fca2f23322ae31df3395ba45fa9127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ff8ff675a76850295776e521a2eeb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a42ff8ff675a76850295776e521a2eeb1">correct</a> (const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;measurement)</td></tr>
+<tr class="memdesc:a42ff8ff675a76850295776e521a2eeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the predicted state from the measurement.  <a href="classcv_1_1_kalman_filter.html#a42ff8ff675a76850295776e521a2eeb1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a42ff8ff675a76850295776e521a2eeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a3d261f125a6bce49730a30b4e3635698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a3d261f125a6bce49730a30b4e3635698">statePre</a></td></tr>
+<tr class="memdesc:a3d261f125a6bce49730a30b4e3635698"><td class="mdescLeft">&#160;</td><td class="mdescRight">predicted state (x'(k)): x(k)=A*x(k-1)+B*u(k)  <a href="classcv_1_1_kalman_filter.html#a3d261f125a6bce49730a30b4e3635698">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d261f125a6bce49730a30b4e3635698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29dc3ac940dbce14a0824017395994b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a29dc3ac940dbce14a0824017395994b4">statePost</a></td></tr>
+<tr class="memdesc:a29dc3ac940dbce14a0824017395994b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">corrected state (x(k)): x(k)=x'(k)+K(k)*(z(k)-H*x'(k))  <a href="classcv_1_1_kalman_filter.html#a29dc3ac940dbce14a0824017395994b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a29dc3ac940dbce14a0824017395994b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed23bd543479c99dd03b88c6c964aad2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#aed23bd543479c99dd03b88c6c964aad2">transitionMatrix</a></td></tr>
+<tr class="memdesc:aed23bd543479c99dd03b88c6c964aad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">state transition matrix (A)  <a href="classcv_1_1_kalman_filter.html#aed23bd543479c99dd03b88c6c964aad2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed23bd543479c99dd03b88c6c964aad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee161cf5a49e185226b26f7eb8d23507"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#aee161cf5a49e185226b26f7eb8d23507">controlMatrix</a></td></tr>
+<tr class="memdesc:aee161cf5a49e185226b26f7eb8d23507"><td class="mdescLeft">&#160;</td><td class="mdescRight">control matrix (B) (not used if there is no control)  <a href="classcv_1_1_kalman_filter.html#aee161cf5a49e185226b26f7eb8d23507">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee161cf5a49e185226b26f7eb8d23507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b6f3e23cc21b5b4fe7d62e4eb9d3d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a44b6f3e23cc21b5b4fe7d62e4eb9d3d6">measurementMatrix</a></td></tr>
+<tr class="memdesc:a44b6f3e23cc21b5b4fe7d62e4eb9d3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">measurement matrix (H)  <a href="classcv_1_1_kalman_filter.html#a44b6f3e23cc21b5b4fe7d62e4eb9d3d6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44b6f3e23cc21b5b4fe7d62e4eb9d3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09290054b1cd30baa89fc7768e68a806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a09290054b1cd30baa89fc7768e68a806">processNoiseCov</a></td></tr>
+<tr class="memdesc:a09290054b1cd30baa89fc7768e68a806"><td class="mdescLeft">&#160;</td><td class="mdescRight">process noise covariance matrix (Q)  <a href="classcv_1_1_kalman_filter.html#a09290054b1cd30baa89fc7768e68a806">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09290054b1cd30baa89fc7768e68a806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99ba610755d681b9f57fd772c91f798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#ac99ba610755d681b9f57fd772c91f798">measurementNoiseCov</a></td></tr>
+<tr class="memdesc:ac99ba610755d681b9f57fd772c91f798"><td class="mdescLeft">&#160;</td><td class="mdescRight">measurement noise covariance matrix (R)  <a href="classcv_1_1_kalman_filter.html#ac99ba610755d681b9f57fd772c91f798">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac99ba610755d681b9f57fd772c91f798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02618fb7e9b00d41f995881e8928abdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a02618fb7e9b00d41f995881e8928abdb">errorCovPre</a></td></tr>
+<tr class="memdesc:a02618fb7e9b00d41f995881e8928abdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">priori error estimate covariance matrix (P'(k)): P'(k)=A*P(k-1)*At + Q)*&zwj;/  <a href="classcv_1_1_kalman_filter.html#a02618fb7e9b00d41f995881e8928abdb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a02618fb7e9b00d41f995881e8928abdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9707479d87cb792ff7395342db2da120"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a9707479d87cb792ff7395342db2da120">gain</a></td></tr>
+<tr class="memdesc:a9707479d87cb792ff7395342db2da120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kalman gain matrix (K(k)): K(k)=P'(k)*Ht*inv(H*P'(k)*Ht+R)  <a href="classcv_1_1_kalman_filter.html#a9707479d87cb792ff7395342db2da120">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9707479d87cb792ff7395342db2da120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2b134601f674ef8e244901fd5b9270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a1c2b134601f674ef8e244901fd5b9270">errorCovPost</a></td></tr>
+<tr class="memdesc:a1c2b134601f674ef8e244901fd5b9270"><td class="mdescLeft">&#160;</td><td class="mdescRight">posteriori error estimate covariance matrix (P(k)): P(k)=(I-K(k)*H)*P'(k)  <a href="classcv_1_1_kalman_filter.html#a1c2b134601f674ef8e244901fd5b9270">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c2b134601f674ef8e244901fd5b9270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d064a9194c2815dbe19c056b6dc763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#aa3d064a9194c2815dbe19c056b6dc763">temp1</a></td></tr>
+<tr class="separator:aa3d064a9194c2815dbe19c056b6dc763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14866bd506668eb0ed57b3974b3a1ee7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a14866bd506668eb0ed57b3974b3a1ee7">temp2</a></td></tr>
+<tr class="separator:a14866bd506668eb0ed57b3974b3a1ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbe36066a7d7f560aa02abe6be114d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#afdbe36066a7d7f560aa02abe6be114d8">temp3</a></td></tr>
+<tr class="separator:afdbe36066a7d7f560aa02abe6be114d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84342f2d9dec1e6389025ad229401809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a84342f2d9dec1e6389025ad229401809">temp4</a></td></tr>
+<tr class="separator:a84342f2d9dec1e6389025ad229401809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846c2a6222c6e5d8b1385dfbccc83ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_kalman_filter.html#a846c2a6222c6e5d8b1385dfbccc83ae0">temp5</a></td></tr>
+<tr class="separator:a846c2a6222c6e5d8b1385dfbccc83ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Kalman filter class. </p>
+<p>The class implements a standard Kalman filter <a href="http://en.wikipedia.org/wiki/Kalman_filter">http://en.wikipedia.org/wiki/Kalman_filter</a>, <b>[Welch95]</b> . However, you can modify transitionMatrix, controlMatrix, and measurementMatrix to get an extended Kalman filter functionality. </p><dl class="section note"><dt>Заметки</dt><dd>In C API when CvKalman* kalmanFilter structure is not needed anymore, it should be released with cvReleaseKalman(&amp;kalmanFilter) </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ab8ee22bea52cf66b0b72581d66d7a87f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8ee22bea52cf66b0b72581d66d7a87f">&#9670;&nbsp;</a></span>KalmanFilter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::KalmanFilter::KalmanFilter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02122ed395a1cd3234a569be48fefdd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02122ed395a1cd3234a569be48fefdd3">&#9670;&nbsp;</a></span>KalmanFilter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::KalmanFilter::KalmanFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dynamParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>measureParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>controlParams</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dynamParams</td><td>Dimensionality of the state. </td></tr>
+    <tr><td class="paramname">measureParams</td><td>Dimensionality of the measurement. </td></tr>
+    <tr><td class="paramname">controlParams</td><td>Dimensionality of the control vector. </td></tr>
+    <tr><td class="paramname">type</td><td>Type of the created matrices that should be CV_32F or CV_64F. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a42ff8ff675a76850295776e521a2eeb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ff8ff675a76850295776e521a2eeb1">&#9670;&nbsp;</a></span>correct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a>&amp; cv::KalmanFilter::correct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>measurement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the predicted state from the measurement. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">measurement</td><td>The measured system parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f136c39c016d3530c7c5801dd1ddb3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f136c39c016d3530c7c5801dd1ddb3b">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::KalmanFilter::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dynamParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>measureParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>controlParams</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Re-initializes Kalman filter. The previous content is destroyed. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dynamParams</td><td>Dimensionality of the state. </td></tr>
+    <tr><td class="paramname">measureParams</td><td>Dimensionality of the measurement. </td></tr>
+    <tr><td class="paramname">controlParams</td><td>Dimensionality of the control vector. </td></tr>
+    <tr><td class="paramname">type</td><td>Type of the created matrices that should be CV_32F or CV_64F. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93fca2f23322ae31df3395ba45fa9127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fca2f23322ae31df3395ba45fa9127">&#9670;&nbsp;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> const <a class="el" href="classcv_1_1_mat.html">Mat</a>&amp; cv::KalmanFilter::predict </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>control</em> = <code><a class="el" href="classcv_1_1_mat.html">Mat</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a predicted state. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">control</td><td>The optional input control </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aee161cf5a49e185226b26f7eb8d23507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee161cf5a49e185226b26f7eb8d23507">&#9670;&nbsp;</a></span>controlMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::controlMatrix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>control matrix (B) (not used if there is no control) </p>
+
+</div>
+</div>
+<a id="a1c2b134601f674ef8e244901fd5b9270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2b134601f674ef8e244901fd5b9270">&#9670;&nbsp;</a></span>errorCovPost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::errorCovPost</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>posteriori error estimate covariance matrix (P(k)): P(k)=(I-K(k)*H)*P'(k) </p>
+
+</div>
+</div>
+<a id="a02618fb7e9b00d41f995881e8928abdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02618fb7e9b00d41f995881e8928abdb">&#9670;&nbsp;</a></span>errorCovPre</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::errorCovPre</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>priori error estimate covariance matrix (P'(k)): P'(k)=A*P(k-1)*At + Q)*&zwj;/ </p>
+
+</div>
+</div>
+<a id="a9707479d87cb792ff7395342db2da120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707479d87cb792ff7395342db2da120">&#9670;&nbsp;</a></span>gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::gain</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kalman gain matrix (K(k)): K(k)=P'(k)*Ht*inv(H*P'(k)*Ht+R) </p>
+
+</div>
+</div>
+<a id="a44b6f3e23cc21b5b4fe7d62e4eb9d3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b6f3e23cc21b5b4fe7d62e4eb9d3d6">&#9670;&nbsp;</a></span>measurementMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::measurementMatrix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>measurement matrix (H) </p>
+
+</div>
+</div>
+<a id="ac99ba610755d681b9f57fd772c91f798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99ba610755d681b9f57fd772c91f798">&#9670;&nbsp;</a></span>measurementNoiseCov</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::measurementNoiseCov</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>measurement noise covariance matrix (R) </p>
+
+</div>
+</div>
+<a id="a09290054b1cd30baa89fc7768e68a806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09290054b1cd30baa89fc7768e68a806">&#9670;&nbsp;</a></span>processNoiseCov</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::processNoiseCov</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>process noise covariance matrix (Q) </p>
+
+</div>
+</div>
+<a id="a29dc3ac940dbce14a0824017395994b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29dc3ac940dbce14a0824017395994b4">&#9670;&nbsp;</a></span>statePost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::statePost</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>corrected state (x(k)): x(k)=x'(k)+K(k)*(z(k)-H*x'(k)) </p>
+
+</div>
+</div>
+<a id="a3d261f125a6bce49730a30b4e3635698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d261f125a6bce49730a30b4e3635698">&#9670;&nbsp;</a></span>statePre</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::statePre</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>predicted state (x'(k)): x(k)=A*x(k-1)+B*u(k) </p>
+
+</div>
+</div>
+<a id="aa3d064a9194c2815dbe19c056b6dc763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d064a9194c2815dbe19c056b6dc763">&#9670;&nbsp;</a></span>temp1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::temp1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14866bd506668eb0ed57b3974b3a1ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14866bd506668eb0ed57b3974b3a1ee7">&#9670;&nbsp;</a></span>temp2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::temp2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdbe36066a7d7f560aa02abe6be114d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdbe36066a7d7f560aa02abe6be114d8">&#9670;&nbsp;</a></span>temp3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::temp3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84342f2d9dec1e6389025ad229401809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84342f2d9dec1e6389025ad229401809">&#9670;&nbsp;</a></span>temp4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::temp4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a846c2a6222c6e5d8b1385dfbccc83ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846c2a6222c6e5d8b1385dfbccc83ae0">&#9670;&nbsp;</a></span>temp5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::temp5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed23bd543479c99dd03b88c6c964aad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed23bd543479c99dd03b88c6c964aad2">&#9670;&nbsp;</a></span>transitionMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga9e800d960e0fc30e7f83c67c98e69ed2">CV_PROP_RW</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::KalmanFilter::transitionMatrix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>state transition matrix (A) </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/video/<a class="el" href="tracking_8hpp_source.html">tracking.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_kalman_filter.html">KalmanFilter</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

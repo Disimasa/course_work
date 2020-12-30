@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/imgcodecs/legacy/constants_c.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('imgcodecs_2legacy_2constants__c_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">constants_c.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="imgcodecs_2legacy_2constants__c_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef OPENCV_IMGCODECS_LEGACY_CONSTANTS_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define OPENCV_IMGCODECS_LEGACY_CONSTANTS_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* duplicate of &quot;ImreadModes&quot; enumeration for better compatibility with OpenCV 3.x */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">enum</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* 8bit, color or not */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba7dc9fd0941c4a96edd4dcbacdc98518c">   12</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba7dc9fd0941c4a96edd4dcbacdc98518c">CV_LOAD_IMAGE_UNCHANGED</a>  =-1,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/* 8bit, gray */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba8aade8a83943238942be85119843cd86">   14</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba8aade8a83943238942be85119843cd86">CV_LOAD_IMAGE_GRAYSCALE</a>  =0,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* ?, color */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcbabd58f0790b5a7ff40d394ffce007dbd4">   16</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcbabd58f0790b5a7ff40d394ffce007dbd4">CV_LOAD_IMAGE_COLOR</a>      =1,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/* any depth, ? */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba0e215d6e71f3eaade686785a184fe808">   18</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba0e215d6e71f3eaade686785a184fe808">CV_LOAD_IMAGE_ANYDEPTH</a>   =2,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* ?, any color */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba34d4551fc369a621082820866028de01">   20</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba34d4551fc369a621082820866028de01">CV_LOAD_IMAGE_ANYCOLOR</a>   =4,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* ?, no rotate */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba1ac74c871e79ca8afa03312498d87028">CV_LOAD_IMAGE_IGNORE_ORIENTATION</a>  =128</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba1ac74c871e79ca8afa03312498d87028">   23</a></span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* duplicate of &quot;ImwriteFlags&quot; enumeration for better compatibility with OpenCV 3.x */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">enum</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca71ddd21e510a5ad607c8ac9e89131bd4">   28</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca71ddd21e510a5ad607c8ac9e89131bd4">CV_IMWRITE_JPEG_QUALITY</a> =1,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf427fe1da434ece269b5a49fd9ea4046">   29</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf427fe1da434ece269b5a49fd9ea4046">CV_IMWRITE_JPEG_PROGRESSIVE</a> =2,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca3ca3c367658b54107f924575301f4deb">   30</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca3ca3c367658b54107f924575301f4deb">CV_IMWRITE_JPEG_OPTIMIZE</a> =3,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca6bc35a8c52d666dabaa4f0b0572c8f52">   31</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca6bc35a8c52d666dabaa4f0b0572c8f52">CV_IMWRITE_JPEG_RST_INTERVAL</a> =4,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaeae12610accd09223a745537a7a0223d">   32</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaeae12610accd09223a745537a7a0223d">CV_IMWRITE_JPEG_LUMA_QUALITY</a> =5,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac357138161b95458af152c3aef7044f3">   33</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac357138161b95458af152c3aef7044f3">CV_IMWRITE_JPEG_CHROMA_QUALITY</a> =6,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcae566c9c18d3e14673905079499dd8bfd">   34</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcae566c9c18d3e14673905079499dd8bfd">CV_IMWRITE_PNG_COMPRESSION</a> =16,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca382317691bb4771e955ccc8219dd4549">   35</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca382317691bb4771e955ccc8219dd4549">CV_IMWRITE_PNG_STRATEGY</a> =17,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaed146190d91c19956a5fa25b9b0a7bef">   36</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaed146190d91c19956a5fa25b9b0a7bef">CV_IMWRITE_PNG_BILEVEL</a> =18,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf39363d030027b3a74e9dd6b0c2666cf">   37</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf39363d030027b3a74e9dd6b0c2666cf">CV_IMWRITE_PNG_STRATEGY_DEFAULT</a> =0,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69b0dc3bf3e569dcde80a2dd9b8c7a62">   38</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69b0dc3bf3e569dcde80a2dd9b8c7a62">CV_IMWRITE_PNG_STRATEGY_FILTERED</a> =1,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca7850a228e0fd2ab9e82eba69a24aba35">   39</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca7850a228e0fd2ab9e82eba69a24aba35">CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY</a> =2,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca8260c8cd2d91583cf5f4cad4e00e0e48">   40</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca8260c8cd2d91583cf5f4cad4e00e0e48">CV_IMWRITE_PNG_STRATEGY_RLE</a> =3,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1d684c2467ade35408f9f223a7fad680">   41</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1d684c2467ade35408f9f223a7fad680">CV_IMWRITE_PNG_STRATEGY_FIXED</a> =4,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad8699f12b5f6bec6181f218e02e49b2c">   42</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad8699f12b5f6bec6181f218e02e49b2c">CV_IMWRITE_PXM_BINARY</a> =32,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaa44f2e2e98e71d4e96fc210ce9fe049f">   43</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaa44f2e2e98e71d4e96fc210ce9fe049f">CV_IMWRITE_EXR_TYPE</a> = 48,</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca0c404d22c3c385176f58937ac862722f">   44</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca0c404d22c3c385176f58937ac862722f">CV_IMWRITE_WEBP_QUALITY</a> =64,</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1a65077731da61298f9460710e3ff48e">   45</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1a65077731da61298f9460710e3ff48e">CV_IMWRITE_PAM_TUPLETYPE</a> = 128,</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad0677fc25832ca5ee8be33d9a2bcabbc">   46</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad0677fc25832ca5ee8be33d9a2bcabbc">CV_IMWRITE_PAM_FORMAT_NULL</a> = 0,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca227df6e9cf8506d2c8d80d6c21dd7af1">   47</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca227df6e9cf8506d2c8d80d6c21dd7af1">CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE</a> = 1,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac6553c4de37a8c9c27d8a61683748e81">   48</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac6553c4de37a8c9c27d8a61683748e81">CV_IMWRITE_PAM_FORMAT_GRAYSCALE</a> = 2,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcab9a66005590abbbd7f6304d4472fb254">   49</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcab9a66005590abbbd7f6304d4472fb254">CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA</a> = 3,</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcadd6eed6d1f8dfc9a4560a99382af5c53">   50</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcadd6eed6d1f8dfc9a4560a99382af5c53">CV_IMWRITE_PAM_FORMAT_RGB</a> = 4,</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69910628a102cc3b9b5139accbea3cd0">   51</a></span>&#160;    <a class="code" href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69910628a102cc3b9b5139accbea3cd0">CV_IMWRITE_PAM_FORMAT_RGB_ALPHA</a> = 5,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_IMGCODECS_LEGACY_CONSTANTS_H</span></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcba0e215d6e71f3eaade686785a184fe808"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba0e215d6e71f3eaade686785a184fe808">CV_LOAD_IMAGE_ANYDEPTH</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_ANYDEPTH</div><div class="ttdef"><b>Definition:</b> constants_c.h:18</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcba1ac74c871e79ca8afa03312498d87028"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba1ac74c871e79ca8afa03312498d87028">CV_LOAD_IMAGE_IGNORE_ORIENTATION</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_IGNORE_ORIENTATION</div><div class="ttdef"><b>Definition:</b> constants_c.h:22</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcba34d4551fc369a621082820866028de01"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba34d4551fc369a621082820866028de01">CV_LOAD_IMAGE_ANYCOLOR</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_ANYCOLOR</div><div class="ttdef"><b>Definition:</b> constants_c.h:20</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcba7dc9fd0941c4a96edd4dcbacdc98518c"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba7dc9fd0941c4a96edd4dcbacdc98518c">CV_LOAD_IMAGE_UNCHANGED</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_UNCHANGED</div><div class="ttdef"><b>Definition:</b> constants_c.h:12</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcba8aade8a83943238942be85119843cd86"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcba8aade8a83943238942be85119843cd86">CV_LOAD_IMAGE_GRAYSCALE</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_GRAYSCALE</div><div class="ttdef"><b>Definition:</b> constants_c.h:14</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_a7ee8d0f117a79ca7eb1e0076a9182bcbabd58f0790b5a7ff40d394ffce007dbd4"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#a7ee8d0f117a79ca7eb1e0076a9182bcbabd58f0790b5a7ff40d394ffce007dbd4">CV_LOAD_IMAGE_COLOR</a></div><div class="ttdeci">@ CV_LOAD_IMAGE_COLOR</div><div class="ttdef"><b>Definition:</b> constants_c.h:16</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca0c404d22c3c385176f58937ac862722f"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca0c404d22c3c385176f58937ac862722f">CV_IMWRITE_WEBP_QUALITY</a></div><div class="ttdeci">@ CV_IMWRITE_WEBP_QUALITY</div><div class="ttdef"><b>Definition:</b> constants_c.h:44</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca1a65077731da61298f9460710e3ff48e"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1a65077731da61298f9460710e3ff48e">CV_IMWRITE_PAM_TUPLETYPE</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_TUPLETYPE</div><div class="ttdef"><b>Definition:</b> constants_c.h:45</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca1d684c2467ade35408f9f223a7fad680"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca1d684c2467ade35408f9f223a7fad680">CV_IMWRITE_PNG_STRATEGY_FIXED</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY_FIXED</div><div class="ttdef"><b>Definition:</b> constants_c.h:41</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca227df6e9cf8506d2c8d80d6c21dd7af1"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca227df6e9cf8506d2c8d80d6c21dd7af1">CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE</div><div class="ttdef"><b>Definition:</b> constants_c.h:47</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca382317691bb4771e955ccc8219dd4549"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca382317691bb4771e955ccc8219dd4549">CV_IMWRITE_PNG_STRATEGY</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY</div><div class="ttdef"><b>Definition:</b> constants_c.h:35</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca3ca3c367658b54107f924575301f4deb"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca3ca3c367658b54107f924575301f4deb">CV_IMWRITE_JPEG_OPTIMIZE</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_OPTIMIZE</div><div class="ttdef"><b>Definition:</b> constants_c.h:30</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca69910628a102cc3b9b5139accbea3cd0"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69910628a102cc3b9b5139accbea3cd0">CV_IMWRITE_PAM_FORMAT_RGB_ALPHA</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_RGB_ALPHA</div><div class="ttdef"><b>Definition:</b> constants_c.h:51</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca69b0dc3bf3e569dcde80a2dd9b8c7a62"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca69b0dc3bf3e569dcde80a2dd9b8c7a62">CV_IMWRITE_PNG_STRATEGY_FILTERED</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY_FILTERED</div><div class="ttdef"><b>Definition:</b> constants_c.h:38</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca6bc35a8c52d666dabaa4f0b0572c8f52"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca6bc35a8c52d666dabaa4f0b0572c8f52">CV_IMWRITE_JPEG_RST_INTERVAL</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_RST_INTERVAL</div><div class="ttdef"><b>Definition:</b> constants_c.h:31</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca71ddd21e510a5ad607c8ac9e89131bd4"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca71ddd21e510a5ad607c8ac9e89131bd4">CV_IMWRITE_JPEG_QUALITY</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_QUALITY</div><div class="ttdef"><b>Definition:</b> constants_c.h:28</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca7850a228e0fd2ab9e82eba69a24aba35"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca7850a228e0fd2ab9e82eba69a24aba35">CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY</div><div class="ttdef"><b>Definition:</b> constants_c.h:39</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fca8260c8cd2d91583cf5f4cad4e00e0e48"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fca8260c8cd2d91583cf5f4cad4e00e0e48">CV_IMWRITE_PNG_STRATEGY_RLE</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY_RLE</div><div class="ttdef"><b>Definition:</b> constants_c.h:40</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcaa44f2e2e98e71d4e96fc210ce9fe049f"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaa44f2e2e98e71d4e96fc210ce9fe049f">CV_IMWRITE_EXR_TYPE</a></div><div class="ttdeci">@ CV_IMWRITE_EXR_TYPE</div><div class="ttdef"><b>Definition:</b> constants_c.h:43</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcab9a66005590abbbd7f6304d4472fb254"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcab9a66005590abbbd7f6304d4472fb254">CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA</div><div class="ttdef"><b>Definition:</b> constants_c.h:49</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcac357138161b95458af152c3aef7044f3"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac357138161b95458af152c3aef7044f3">CV_IMWRITE_JPEG_CHROMA_QUALITY</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_CHROMA_QUALITY</div><div class="ttdef"><b>Definition:</b> constants_c.h:33</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcac6553c4de37a8c9c27d8a61683748e81"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcac6553c4de37a8c9c27d8a61683748e81">CV_IMWRITE_PAM_FORMAT_GRAYSCALE</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_GRAYSCALE</div><div class="ttdef"><b>Definition:</b> constants_c.h:48</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcad0677fc25832ca5ee8be33d9a2bcabbc"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad0677fc25832ca5ee8be33d9a2bcabbc">CV_IMWRITE_PAM_FORMAT_NULL</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_NULL</div><div class="ttdef"><b>Definition:</b> constants_c.h:46</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcad8699f12b5f6bec6181f218e02e49b2c"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcad8699f12b5f6bec6181f218e02e49b2c">CV_IMWRITE_PXM_BINARY</a></div><div class="ttdeci">@ CV_IMWRITE_PXM_BINARY</div><div class="ttdef"><b>Definition:</b> constants_c.h:42</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcadd6eed6d1f8dfc9a4560a99382af5c53"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcadd6eed6d1f8dfc9a4560a99382af5c53">CV_IMWRITE_PAM_FORMAT_RGB</a></div><div class="ttdeci">@ CV_IMWRITE_PAM_FORMAT_RGB</div><div class="ttdef"><b>Definition:</b> constants_c.h:50</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcae566c9c18d3e14673905079499dd8bfd"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcae566c9c18d3e14673905079499dd8bfd">CV_IMWRITE_PNG_COMPRESSION</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_COMPRESSION</div><div class="ttdef"><b>Definition:</b> constants_c.h:34</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcaeae12610accd09223a745537a7a0223d"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaeae12610accd09223a745537a7a0223d">CV_IMWRITE_JPEG_LUMA_QUALITY</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_LUMA_QUALITY</div><div class="ttdef"><b>Definition:</b> constants_c.h:32</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcaed146190d91c19956a5fa25b9b0a7bef"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaed146190d91c19956a5fa25b9b0a7bef">CV_IMWRITE_PNG_BILEVEL</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_BILEVEL</div><div class="ttdef"><b>Definition:</b> constants_c.h:36</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcaf39363d030027b3a74e9dd6b0c2666cf"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf39363d030027b3a74e9dd6b0c2666cf">CV_IMWRITE_PNG_STRATEGY_DEFAULT</a></div><div class="ttdeci">@ CV_IMWRITE_PNG_STRATEGY_DEFAULT</div><div class="ttdef"><b>Definition:</b> constants_c.h:37</div></div>
+<div class="ttc" id="aimgcodecs_2legacy_2constants__c_8h_html_ac34c4c978f4130a92a5068f9e21ea9fcaf427fe1da434ece269b5a49fd9ea4046"><div class="ttname"><a href="imgcodecs_2legacy_2constants__c_8h.html#ac34c4c978f4130a92a5068f9e21ea9fcaf427fe1da434ece269b5a49fd9ea4046">CV_IMWRITE_JPEG_PROGRESSIVE</a></div><div class="ttdeci">@ CV_IMWRITE_JPEG_PROGRESSIVE</div><div class="ttdef"><b>Definition:</b> constants_c.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_3c6427478b0cdb00d2288772bb2d8164.html">imgcodecs</a></li><li class="navelem"><a class="el" href="dir_413349e6f62994f41145e89132351164.html">legacy</a></li><li class="navelem"><a class="el" href="imgcodecs_2legacy_2constants__c_8h.html">constants_c.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

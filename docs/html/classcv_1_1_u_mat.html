@@ -1,0 +1,2639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::UMat</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_u_mat.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1_u_mat-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::UMat<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__basic.html">Basic structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a937d5b9bf4ad898d03c5b4448cf948a9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_u_mat.html#a937d5b9bf4ad898d03c5b4448cf948a9a502944660bbb466a4e6b6ce0ec7eddb1">MAGIC_VAL</a> = 0x42FF0000
+, <a class="el" href="classcv_1_1_u_mat.html#a937d5b9bf4ad898d03c5b4448cf948a9a10741a8eaf539b2cb513c134641c940f">AUTO_STEP</a> = 0
+, <a class="el" href="classcv_1_1_u_mat.html#a937d5b9bf4ad898d03c5b4448cf948a9a84000db2750cd83ad01c344b8a5b896e">CONTINUOUS_FLAG</a> = CV_MAT_CONT_FLAG
+, <a class="el" href="classcv_1_1_u_mat.html#a937d5b9bf4ad898d03c5b4448cf948a9a1dadb89fba042bf2b7fb5bca8399aa73">SUBMATRIX_FLAG</a> = CV_SUBMAT_FLAG
+ }</td></tr>
+<tr class="separator:a937d5b9bf4ad898d03c5b4448cf948a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac319f5f3ff6a02a17154f91d5f03d1c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classcv_1_1_u_mat.html#ac319f5f3ff6a02a17154f91d5f03d1c3af10fa455a54f107558b9dbb9efd3959d">MAGIC_MASK</a> = 0xFFFF0000
+, <a class="el" href="classcv_1_1_u_mat.html#ac319f5f3ff6a02a17154f91d5f03d1c3acfda75d2f03eb3b2dc71e9654b5bef46">TYPE_MASK</a> = 0x00000FFF
+, <a class="el" href="classcv_1_1_u_mat.html#ac319f5f3ff6a02a17154f91d5f03d1c3acbabb2648f797b89bd9ddc77cce0c408">DEPTH_MASK</a> = 7
+ }</td></tr>
+<tr class="separator:ac319f5f3ff6a02a17154f91d5f03d1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a63cb4da02e647fb49df1f40aab8ca35b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a63cb4da02e647fb49df1f40aab8ca35b">UMat</a> (<a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="memdesc:a63cb4da02e647fb49df1f40aab8ca35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor  <a href="classcv_1_1_u_mat.html#a63cb4da02e647fb49df1f40aab8ca35b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63cb4da02e647fb49df1f40aab8ca35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0dc0febd6a7b6a7a79a85d41bb17f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#add0dc0febd6a7b6a7a79a85d41bb17f2">UMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="memdesc:add0dc0febd6a7b6a7a79a85d41bb17f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs 2D matrix of the specified size and type  <a href="classcv_1_1_u_mat.html#add0dc0febd6a7b6a7a79a85d41bb17f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:add0dc0febd6a7b6a7a79a85d41bb17f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f0939f54199110a180cf5d8e4c8d725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a1f0939f54199110a180cf5d8e4c8d725">UMat</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:a1f0939f54199110a180cf5d8e4c8d725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a02552218847de2e60ce907b5e904a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a16a02552218847de2e60ce907b5e904a">UMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="memdesc:a16a02552218847de2e60ce907b5e904a"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs 2D matrix and fills it with the specified value _s.  <a href="classcv_1_1_u_mat.html#a16a02552218847de2e60ce907b5e904a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a16a02552218847de2e60ce907b5e904a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e86661d2f62be94ed7648508f1ec07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aa0e86661d2f62be94ed7648508f1ec07">UMat</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:aa0e86661d2f62be94ed7648508f1ec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af159e956ff96c64745c6940a3b1820ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#af159e956ff96c64745c6940a3b1820ba">UMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="memdesc:af159e956ff96c64745c6940a3b1820ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs n-dimensional matrix  <a href="classcv_1_1_u_mat.html#af159e956ff96c64745c6940a3b1820ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:af159e956ff96c64745c6940a3b1820ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1866c206e9c116304a0257bc3a6c50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a5e1866c206e9c116304a0257bc3a6c50">UMat</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:a5e1866c206e9c116304a0257bc3a6c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afe62166cf5634b17ac54bdb16e8379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a6afe62166cf5634b17ac54bdb16e8379">UMat</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m)</td></tr>
+<tr class="memdesc:a6afe62166cf5634b17ac54bdb16e8379"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy constructor  <a href="classcv_1_1_u_mat.html#a6afe62166cf5634b17ac54bdb16e8379">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6afe62166cf5634b17ac54bdb16e8379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeaabd3e9eef98ccef422a81176a4250"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#afeaabd3e9eef98ccef422a81176a4250">UMat</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m, const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;<a class="el" href="classcv_1_1_u_mat.html#a838edd92ae26c7f1cff59beda1b0518b">rowRange</a>, const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;<a class="el" href="classcv_1_1_u_mat.html#adc6ffa253b779dd078638ad996e17c2f">colRange</a>=<a class="el" href="classcv_1_1_range.html#af5a0207f6f98a69077db8e77898abc0f">Range::all</a>())</td></tr>
+<tr class="memdesc:afeaabd3e9eef98ccef422a81176a4250"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a matrix header for a part of the bigger matrix  <a href="classcv_1_1_u_mat.html#afeaabd3e9eef98ccef422a81176a4250">Подробнее...</a><br /></td></tr>
+<tr class="separator:afeaabd3e9eef98ccef422a81176a4250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3fa04bb82fee6026cc2e85df96a796"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aaa3fa04bb82fee6026cc2e85df96a796">UMat</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m, const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;roi)</td></tr>
+<tr class="separator:aaa3fa04bb82fee6026cc2e85df96a796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f381979b76ce63d497e812fd7ec574"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a96f381979b76ce63d497e812fd7ec574">UMat</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m, const <a class="el" href="classcv_1_1_range.html">Range</a> *<a class="el" href="group__imgproc__c.html#gab60fbc54af325f6db106ca96909a8fc0">ranges</a>)</td></tr>
+<tr class="separator:a96f381979b76ce63d497e812fd7ec574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577f91740a6ee96201049cad9b15c22d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a577f91740a6ee96201049cad9b15c22d">UMat</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m, const std::vector&lt; <a class="el" href="classcv_1_1_range.html">Range</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gab60fbc54af325f6db106ca96909a8fc0">ranges</a>)</td></tr>
+<tr class="separator:a577f91740a6ee96201049cad9b15c22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0edcf01672609ffb76bccc84e6039c4b"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a0edcf01672609ffb76bccc84e6039c4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a0edcf01672609ffb76bccc84e6039c4b">UMat</a> (const std::vector&lt; _Tp &gt; &amp;vec, bool copyData=false)</td></tr>
+<tr class="memdesc:a0edcf01672609ffb76bccc84e6039c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">builds matrix from std::vector with or without copying the data  <a href="classcv_1_1_u_mat.html#a0edcf01672609ffb76bccc84e6039c4b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0edcf01672609ffb76bccc84e6039c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6c6c9c85db0fc28f2f8365c2f30985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ace6c6c9c85db0fc28f2f8365c2f30985">~UMat</a> ()</td></tr>
+<tr class="memdesc:ace6c6c9c85db0fc28f2f8365c2f30985"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor - calls <a class="el" href="classcv_1_1_u_mat.html#aa9a894abdfd44e72ef37a4fc10f3481b" title="decreases reference counter;">release()</a>  <a href="classcv_1_1_u_mat.html#ace6c6c9c85db0fc28f2f8365c2f30985">Подробнее...</a><br /></td></tr>
+<tr class="separator:ace6c6c9c85db0fc28f2f8365c2f30985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5e0ed13076c2371fa41d215a49b17f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aac5e0ed13076c2371fa41d215a49b17f">operator=</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m)</td></tr>
+<tr class="memdesc:aac5e0ed13076c2371fa41d215a49b17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">assignment operators  <a href="classcv_1_1_u_mat.html#aac5e0ed13076c2371fa41d215a49b17f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac5e0ed13076c2371fa41d215a49b17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d84c72c06ddd55d35b87c3d222d2674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a3d84c72c06ddd55d35b87c3d222d2674">getMat</a> (<a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">AccessFlag</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>) const</td></tr>
+<tr class="separator:a3d84c72c06ddd55d35b87c3d222d2674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f493829ef460456db42c3b802ebf20f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a4f493829ef460456db42c3b802ebf20f">row</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>) const</td></tr>
+<tr class="memdesc:a4f493829ef460456db42c3b802ebf20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a new matrix header for the specified row  <a href="classcv_1_1_u_mat.html#a4f493829ef460456db42c3b802ebf20f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4f493829ef460456db42c3b802ebf20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa4b7216656ea35c63fcfc745c6995c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aaaa4b7216656ea35c63fcfc745c6995c">col</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) const</td></tr>
+<tr class="memdesc:aaaa4b7216656ea35c63fcfc745c6995c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a new matrix header for the specified column  <a href="classcv_1_1_u_mat.html#aaaa4b7216656ea35c63fcfc745c6995c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaaa4b7216656ea35c63fcfc745c6995c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838edd92ae26c7f1cff59beda1b0518b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a838edd92ae26c7f1cff59beda1b0518b">rowRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> startrow, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> endrow) const</td></tr>
+<tr class="memdesc:a838edd92ae26c7f1cff59beda1b0518b"><td class="mdescLeft">&#160;</td><td class="mdescRight">... for the specified row span  <a href="classcv_1_1_u_mat.html#a838edd92ae26c7f1cff59beda1b0518b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a838edd92ae26c7f1cff59beda1b0518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced43849cffaea0bf71f35edeba6ea1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aced43849cffaea0bf71f35edeba6ea1c">rowRange</a> (const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;<a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>) const</td></tr>
+<tr class="separator:aced43849cffaea0bf71f35edeba6ea1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6ffa253b779dd078638ad996e17c2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#adc6ffa253b779dd078638ad996e17c2f">colRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> startcol, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> endcol) const</td></tr>
+<tr class="memdesc:adc6ffa253b779dd078638ad996e17c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">... for the specified column span  <a href="classcv_1_1_u_mat.html#adc6ffa253b779dd078638ad996e17c2f">Подробнее...</a><br /></td></tr>
+<tr class="separator:adc6ffa253b779dd078638ad996e17c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9f05c6bae4f6de8b24cc71d29f4b8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ade9f05c6bae4f6de8b24cc71d29f4b8a">colRange</a> (const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;<a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>) const</td></tr>
+<tr class="separator:ade9f05c6bae4f6de8b24cc71d29f4b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bac5184c68677463a435e2bee4a8ac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a4bac5184c68677463a435e2bee4a8ac7">diag</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> d=0) const</td></tr>
+<tr class="separator:a4bac5184c68677463a435e2bee4a8ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac63c68170021973b171e94746c253ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aac63c68170021973b171e94746c253ac">clone</a> () const <a class="el" href="group__core__utils.html#ga1a1bf6728a93cfa692a110252c252d03">CV_NODISCARD</a></td></tr>
+<tr class="memdesc:aac63c68170021973b171e94746c253ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns deep copy of the matrix, i.e. the data is copied  <a href="classcv_1_1_u_mat.html#aac63c68170021973b171e94746c253ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:aac63c68170021973b171e94746c253ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f4b02e099696dc0fb43c85c6f4a2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ab9f4b02e099696dc0fb43c85c6f4a2f1">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> m) const</td></tr>
+<tr class="memdesc:ab9f4b02e099696dc0fb43c85c6f4a2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies the matrix content to "m".  <a href="classcv_1_1_u_mat.html#ab9f4b02e099696dc0fb43c85c6f4a2f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab9f4b02e099696dc0fb43c85c6f4a2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f97eb1b8c307b5cd4c17962af27efbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a9f97eb1b8c307b5cd4c17962af27efbf">copyTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> m, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>) const</td></tr>
+<tr class="memdesc:a9f97eb1b8c307b5cd4c17962af27efbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">copies those matrix elements to "m" that are marked with non-zero mask elements.  <a href="classcv_1_1_u_mat.html#a9f97eb1b8c307b5cd4c17962af27efbf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f97eb1b8c307b5cd4c17962af27efbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f11287e53debd8d460fc053dc88feaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a6f11287e53debd8d460fc053dc88feaa">convertTo</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> m, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> rtype, double <a class="el" href="group__imgproc__c.html#ga75620528cfc7d5f1288004fa760804ee">alpha</a>=1, double <a class="el" href="group__core__c.html#ga4bf45595b7df91ad095c49cf02ddee05">beta</a>=0) const</td></tr>
+<tr class="memdesc:a6f11287e53debd8d460fc053dc88feaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts matrix to another datatype with optional scaling. See cvConvertScale.  <a href="classcv_1_1_u_mat.html#a6f11287e53debd8d460fc053dc88feaa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6f11287e53debd8d460fc053dc88feaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef524a90c600f04e1cdd12788c608476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aef524a90c600f04e1cdd12788c608476">assignTo</a> (<a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>=-1) const</td></tr>
+<tr class="separator:aef524a90c600f04e1cdd12788c608476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245c83dba9f05fc44d44d557f86101f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a245c83dba9f05fc44d44d557f86101f1">operator=</a> (const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;s)</td></tr>
+<tr class="memdesc:a245c83dba9f05fc44d44d557f86101f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets every matrix element to s  <a href="classcv_1_1_u_mat.html#a245c83dba9f05fc44d44d557f86101f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a245c83dba9f05fc44d44d557f86101f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57513848cc5e55fe2b40bf98dfc99f08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a57513848cc5e55fe2b40bf98dfc99f08">setTo</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="memdesc:a57513848cc5e55fe2b40bf98dfc99f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets some of the matrix elements to s, according to the mask  <a href="classcv_1_1_u_mat.html#a57513848cc5e55fe2b40bf98dfc99f08">Подробнее...</a><br /></td></tr>
+<tr class="separator:a57513848cc5e55fe2b40bf98dfc99f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ac687266568c8b024debd187c15b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a25ac687266568c8b024debd187c15b9b">reshape</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cn, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>=0) const</td></tr>
+<tr class="memdesc:a25ac687266568c8b024debd187c15b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates alternative matrix header for the same data, with different  <a href="classcv_1_1_u_mat.html#a25ac687266568c8b024debd187c15b9b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a25ac687266568c8b024debd187c15b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac166eaa6eccbeb2f5e9ce593ee156ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ac166eaa6eccbeb2f5e9ce593ee156ef4">reshape</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cn, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> newndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *newsz) const</td></tr>
+<tr class="separator:ac166eaa6eccbeb2f5e9ce593ee156ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18ab17cd8accff358d593e3c79ac1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ac18ab17cd8accff358d593e3c79ac1c3">t</a> () const</td></tr>
+<tr class="memdesc:ac18ab17cd8accff358d593e3c79ac1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">matrix transposition by means of matrix expressions  <a href="classcv_1_1_u_mat.html#ac18ab17cd8accff358d593e3c79ac1c3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac18ab17cd8accff358d593e3c79ac1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb77173e3e661fc3f161f79e5559c5d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#abb77173e3e661fc3f161f79e5559c5d7">inv</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>=<a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a>) const</td></tr>
+<tr class="memdesc:abb77173e3e661fc3f161f79e5559c5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">matrix inversion by means of matrix expressions  <a href="classcv_1_1_u_mat.html#abb77173e3e661fc3f161f79e5559c5d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb77173e3e661fc3f161f79e5559c5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50d8160ca05a304b30c1dd64ae20755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#af50d8160ca05a304b30c1dd64ae20755">mul</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> m, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1) const</td></tr>
+<tr class="memdesc:af50d8160ca05a304b30c1dd64ae20755"><td class="mdescLeft">&#160;</td><td class="mdescRight">per-element matrix multiplication by means of matrix expressions  <a href="classcv_1_1_u_mat.html#af50d8160ca05a304b30c1dd64ae20755">Подробнее...</a><br /></td></tr>
+<tr class="separator:af50d8160ca05a304b30c1dd64ae20755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6daed34dfaccf50a34aca1d1ee5e5027"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a6daed34dfaccf50a34aca1d1ee5e5027">dot</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> m) const</td></tr>
+<tr class="memdesc:a6daed34dfaccf50a34aca1d1ee5e5027"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes dot-product  <a href="classcv_1_1_u_mat.html#a6daed34dfaccf50a34aca1d1ee5e5027">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6daed34dfaccf50a34aca1d1ee5e5027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3063b40dd6c5d8a0054759c1142631"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#afe3063b40dd6c5d8a0054759c1142631">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="memdesc:afe3063b40dd6c5d8a0054759c1142631"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocates new matrix data unless the matrix already has specified size and type.  <a href="classcv_1_1_u_mat.html#afe3063b40dd6c5d8a0054759c1142631">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe3063b40dd6c5d8a0054759c1142631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b2ce3cbd609f68092b8cffa2cc7155"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ac0b2ce3cbd609f68092b8cffa2cc7155">create</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:ac0b2ce3cbd609f68092b8cffa2cc7155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6066cb804ad356c18fd7dc89203b92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a0d6066cb804ad356c18fd7dc89203b92">create</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:a0d6066cb804ad356c18fd7dc89203b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f51b337fe0ee25e7c659502e3fe1022"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a1f51b337fe0ee25e7c659502e3fe1022">create</a> (const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>, <a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> <a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a>=<a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a>)</td></tr>
+<tr class="separator:a1f51b337fe0ee25e7c659502e3fe1022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f87daa635b42c20579ef2e526fc2b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a9f87daa635b42c20579ef2e526fc2b54">addref</a> ()</td></tr>
+<tr class="memdesc:a9f87daa635b42c20579ef2e526fc2b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases the reference counter; use with care to avoid memleaks  <a href="classcv_1_1_u_mat.html#a9f87daa635b42c20579ef2e526fc2b54">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f87daa635b42c20579ef2e526fc2b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a894abdfd44e72ef37a4fc10f3481b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aa9a894abdfd44e72ef37a4fc10f3481b">release</a> ()</td></tr>
+<tr class="memdesc:aa9a894abdfd44e72ef37a4fc10f3481b"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreases reference counter;  <a href="classcv_1_1_u_mat.html#aa9a894abdfd44e72ef37a4fc10f3481b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa9a894abdfd44e72ef37a4fc10f3481b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3716c2b363388bb8e59212a50e6ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a8c3716c2b363388bb8e59212a50e6ba5">deallocate</a> ()</td></tr>
+<tr class="memdesc:a8c3716c2b363388bb8e59212a50e6ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">deallocates the matrix data  <a href="classcv_1_1_u_mat.html#a8c3716c2b363388bb8e59212a50e6ba5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8c3716c2b363388bb8e59212a50e6ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea1c1537ee15db8b22e34218a372f5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a2ea1c1537ee15db8b22e34218a372f5f">copySize</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;m)</td></tr>
+<tr class="memdesc:a2ea1c1537ee15db8b22e34218a372f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal use function; properly re-allocates _size, _step arrays  <a href="classcv_1_1_u_mat.html#a2ea1c1537ee15db8b22e34218a372f5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2ea1c1537ee15db8b22e34218a372f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657631fc34ff89a3e2e921122c45c667"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a657631fc34ff89a3e2e921122c45c667">locateROI</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;wholeSize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &amp;ofs) const</td></tr>
+<tr class="memdesc:a657631fc34ff89a3e2e921122c45c667"><td class="mdescLeft">&#160;</td><td class="mdescRight">locates matrix header within a parent matrix. See below  <a href="classcv_1_1_u_mat.html#a657631fc34ff89a3e2e921122c45c667">Подробнее...</a><br /></td></tr>
+<tr class="separator:a657631fc34ff89a3e2e921122c45c667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d08e2b1d2ee0343bbec632a14fa615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a80d08e2b1d2ee0343bbec632a14fa615">adjustROI</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dtop, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dbottom, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dleft, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dright)</td></tr>
+<tr class="memdesc:a80d08e2b1d2ee0343bbec632a14fa615"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves/resizes the current matrix ROI inside the parent matrix.  <a href="classcv_1_1_u_mat.html#a80d08e2b1d2ee0343bbec632a14fa615">Подробнее...</a><br /></td></tr>
+<tr class="separator:a80d08e2b1d2ee0343bbec632a14fa615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b1f570775c927202a55ab1cccd9542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a84b1f570775c927202a55ab1cccd9542">operator()</a> (<a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1_u_mat.html#a838edd92ae26c7f1cff59beda1b0518b">rowRange</a>, <a class="el" href="classcv_1_1_range.html">Range</a> <a class="el" href="classcv_1_1_u_mat.html#adc6ffa253b779dd078638ad996e17c2f">colRange</a>) const</td></tr>
+<tr class="memdesc:a84b1f570775c927202a55ab1cccd9542"><td class="mdescLeft">&#160;</td><td class="mdescRight">extracts a rectangular sub-matrix  <a href="classcv_1_1_u_mat.html#a84b1f570775c927202a55ab1cccd9542">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84b1f570775c927202a55ab1cccd9542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7679d5bea4421e360b90225d348e3fa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a7679d5bea4421e360b90225d348e3fa3">operator()</a> (const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;roi) const</td></tr>
+<tr class="separator:a7679d5bea4421e360b90225d348e3fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e245fe34228df0f31d3e3fdb6fa89d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a0e245fe34228df0f31d3e3fdb6fa89d3">operator()</a> (const <a class="el" href="classcv_1_1_range.html">Range</a> *<a class="el" href="group__imgproc__c.html#gab60fbc54af325f6db106ca96909a8fc0">ranges</a>) const</td></tr>
+<tr class="separator:a0e245fe34228df0f31d3e3fdb6fa89d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e69198d95654e9fe2bd03dd1feee38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#af4e69198d95654e9fe2bd03dd1feee38">operator()</a> (const std::vector&lt; <a class="el" href="classcv_1_1_range.html">Range</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gab60fbc54af325f6db106ca96909a8fc0">ranges</a>) const</td></tr>
+<tr class="separator:af4e69198d95654e9fe2bd03dd1feee38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f1dc7d12bb762061089e1c3bd77875"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#af9f1dc7d12bb762061089e1c3bd77875">isContinuous</a> () const</td></tr>
+<tr class="memdesc:af9f1dc7d12bb762061089e1c3bd77875"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true iff the matrix data is continuous  <a href="classcv_1_1_u_mat.html#af9f1dc7d12bb762061089e1c3bd77875">Подробнее...</a><br /></td></tr>
+<tr class="separator:af9f1dc7d12bb762061089e1c3bd77875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfba13176eea1e0e3db646a4e7a663a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#acfba13176eea1e0e3db646a4e7a663a5">isSubmatrix</a> () const</td></tr>
+<tr class="memdesc:acfba13176eea1e0e3db646a4e7a663a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if the matrix is a submatrix of another matrix  <a href="classcv_1_1_u_mat.html#acfba13176eea1e0e3db646a4e7a663a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:acfba13176eea1e0e3db646a4e7a663a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391f71d1da637a234701f78d7b0cc9a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a391f71d1da637a234701f78d7b0cc9a5">elemSize</a> () const</td></tr>
+<tr class="memdesc:a391f71d1da637a234701f78d7b0cc9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element size in bytes,  <a href="classcv_1_1_u_mat.html#a391f71d1da637a234701f78d7b0cc9a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a391f71d1da637a234701f78d7b0cc9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318efa69d05f7b4c61488a8ce5125247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a318efa69d05f7b4c61488a8ce5125247">elemSize1</a> () const</td></tr>
+<tr class="memdesc:a318efa69d05f7b4c61488a8ce5125247"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the size of element channel in bytes.  <a href="classcv_1_1_u_mat.html#a318efa69d05f7b4c61488a8ce5125247">Подробнее...</a><br /></td></tr>
+<tr class="separator:a318efa69d05f7b4c61488a8ce5125247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65194dd922bef59b349a4148cd39d675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a> () const</td></tr>
+<tr class="memdesc:a65194dd922bef59b349a4148cd39d675"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element type, similar to CV_MAT_TYPE(cvmat-&gt;type)  <a href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">Подробнее...</a><br /></td></tr>
+<tr class="separator:a65194dd922bef59b349a4148cd39d675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8511e27bd0093e5dd236df1ef111087a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a8511e27bd0093e5dd236df1ef111087a">depth</a> () const</td></tr>
+<tr class="memdesc:a8511e27bd0093e5dd236df1ef111087a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element type, similar to CV_MAT_DEPTH(cvmat-&gt;type)  <a href="classcv_1_1_u_mat.html#a8511e27bd0093e5dd236df1ef111087a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8511e27bd0093e5dd236df1ef111087a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c1b68b2e355c044cf089c9156910c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a58c1b68b2e355c044cf089c9156910c4">channels</a> () const</td></tr>
+<tr class="memdesc:a58c1b68b2e355c044cf089c9156910c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns element type, similar to CV_MAT_CN(cvmat-&gt;type)  <a href="classcv_1_1_u_mat.html#a58c1b68b2e355c044cf089c9156910c4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58c1b68b2e355c044cf089c9156910c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcb8141a5651e69ceeabddf18d8ddfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a5bcb8141a5651e69ceeabddf18d8ddfb">step1</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i=0) const</td></tr>
+<tr class="memdesc:a5bcb8141a5651e69ceeabddf18d8ddfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns step/elemSize1()  <a href="classcv_1_1_u_mat.html#a5bcb8141a5651e69ceeabddf18d8ddfb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5bcb8141a5651e69ceeabddf18d8ddfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0149f2671fd776444301cafa0eff8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a8d0149f2671fd776444301cafa0eff8c">empty</a> () const</td></tr>
+<tr class="memdesc:a8d0149f2671fd776444301cafa0eff8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if matrix data is NULL  <a href="classcv_1_1_u_mat.html#a8d0149f2671fd776444301cafa0eff8c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8d0149f2671fd776444301cafa0eff8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7fd91b67cf90aa90c0845572552030"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#abe7fd91b67cf90aa90c0845572552030">total</a> () const</td></tr>
+<tr class="memdesc:abe7fd91b67cf90aa90c0845572552030"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the total number of matrix elements  <a href="classcv_1_1_u_mat.html#abe7fd91b67cf90aa90c0845572552030">Подробнее...</a><br /></td></tr>
+<tr class="separator:abe7fd91b67cf90aa90c0845572552030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d9972bea2e00ae4a8e2402dfdd5d99a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a3d9972bea2e00ae4a8e2402dfdd5d99a">checkVector</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> elemChannels, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8511e27bd0093e5dd236df1ef111087a">depth</a>=-1, bool requireContinuous=true) const</td></tr>
+<tr class="memdesc:a3d9972bea2e00ae4a8e2402dfdd5d99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns N if the matrix is 1-channel (N x ptdim) or ptdim-channel (1 x N) or (N x 1); negative number otherwise  <a href="classcv_1_1_u_mat.html#a3d9972bea2e00ae4a8e2402dfdd5d99a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d9972bea2e00ae4a8e2402dfdd5d99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e3437a0cddfea4761f2f0d35ca08dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ab2e3437a0cddfea4761f2f0d35ca08dd">UMat</a> (<a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&amp;m)</td></tr>
+<tr class="separator:ab2e3437a0cddfea4761f2f0d35ca08dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561c1a335882bfe799e4235ee8fb67a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a561c1a335882bfe799e4235ee8fb67a6">operator=</a> (<a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&amp;m)</td></tr>
+<tr class="separator:a561c1a335882bfe799e4235ee8fb67a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbe2f205e6bb5475b252b598376188e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#afdbe2f205e6bb5475b252b598376188e">handle</a> (<a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">AccessFlag</a> accessFlags) const</td></tr>
+<tr class="separator:afdbe2f205e6bb5475b252b598376188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf9116d630cafce0bb6465b616e7ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#afaf9116d630cafce0bb6465b616e7ce8">ndoffset</a> (<a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> *ofs) const</td></tr>
+<tr class="separator:afaf9116d630cafce0bb6465b616e7ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b62f88ad844949d0441ddf4160a7b24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a0b62f88ad844949d0441ddf4160a7b24">updateContinuityFlag</a> ()</td></tr>
+<tr class="memdesc:a0b62f88ad844949d0441ddf4160a7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal use method: updates the continuity flag  <a href="classcv_1_1_u_mat.html#a0b62f88ad844949d0441ddf4160a7b24">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0b62f88ad844949d0441ddf4160a7b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a0da02ad901084904580cf4b39d1552e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a0da02ad901084904580cf4b39d1552e9">diag</a> (const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;d)</td></tr>
+<tr class="memdesc:a0da02ad901084904580cf4b39d1552e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs a square diagonal matrix which main diagonal is vector "d"  <a href="classcv_1_1_u_mat.html#a0da02ad901084904580cf4b39d1552e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0da02ad901084904580cf4b39d1552e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab846739615683bbd536d90c06c40c47f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ab846739615683bbd536d90c06c40c47f">zeros</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="memdesc:ab846739615683bbd536d90c06c40c47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matlab-style matrix initialization.  <a href="classcv_1_1_u_mat.html#ab846739615683bbd536d90c06c40c47f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab846739615683bbd536d90c06c40c47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27675e2c0e6a95fea933fe21dbcc17c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ab27675e2c0e6a95fea933fe21dbcc17c">zeros</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:ab27675e2c0e6a95fea933fe21dbcc17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e514870623df43ff318341fffa0d74c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a7e514870623df43ff318341fffa0d74c">zeros</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *sz, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:a7e514870623df43ff318341fffa0d74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf78401deb21d2b46144db979a86a296"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#adf78401deb21d2b46144db979a86a296">ones</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:adf78401deb21d2b46144db979a86a296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f38b108c177ed5696aa4295f45ea4e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a85f38b108c177ed5696aa4295f45ea4e">ones</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:a85f38b108c177ed5696aa4295f45ea4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f92d67658151a00723abdbabe572b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ae6f92d67658151a00723abdbabe572b8">ones</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ndims, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *sz, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:ae6f92d67658151a00723abdbabe572b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479e07ad4829b35b83f2aae7231d0ec6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a479e07ad4829b35b83f2aae7231d0ec6">eye</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:a479e07ad4829b35b83f2aae7231d0ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a713e4c931aae8a8b13ec3c62326b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a79a713e4c931aae8a8b13ec3c62326b9">eye</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_u_mat.html#a65194dd922bef59b349a4148cd39d675">type</a>)</td></tr>
+<tr class="separator:a79a713e4c931aae8a8b13ec3c62326b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1e71cc2820eb96eca2f6a4df46b808"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#abf1e71cc2820eb96eca2f6a4df46b808">getStdAllocator</a> ()</td></tr>
+<tr class="memdesc:abf1e71cc2820eb96eca2f6a4df46b808"><td class="mdescLeft">&#160;</td><td class="mdescRight">and the standard allocator  <a href="classcv_1_1_u_mat.html#abf1e71cc2820eb96eca2f6a4df46b808">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf1e71cc2820eb96eca2f6a4df46b808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad662d8ae2354913ddee4374cb5a86808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ad662d8ae2354913ddee4374cb5a86808">flags</a></td></tr>
+<tr class="separator:ad662d8ae2354913ddee4374cb5a86808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad5753f30745d97f4e037516f3edf4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a7ad5753f30745d97f4e037516f3edf4f">dims</a></td></tr>
+<tr class="memdesc:a7ad5753f30745d97f4e037516f3edf4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the matrix dimensionality, &gt;= 2  <a href="classcv_1_1_u_mat.html#a7ad5753f30745d97f4e037516f3edf4f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7ad5753f30745d97f4e037516f3edf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8137e5d25233b57db5616f227f1772ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">rows</a></td></tr>
+<tr class="memdesc:a8137e5d25233b57db5616f227f1772ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of rows and columns or (-1, -1) when the matrix has more than 2 dimensions  <a href="classcv_1_1_u_mat.html#a8137e5d25233b57db5616f227f1772ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8137e5d25233b57db5616f227f1772ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cc40c5ec8a6b95317e5fe6abaca6fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a18cc40c5ec8a6b95317e5fe6abaca6fc">cols</a></td></tr>
+<tr class="separator:a18cc40c5ec8a6b95317e5fe6abaca6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb3a925c15a454a5edba1cb0f0008fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a1fb3a925c15a454a5edba1cb0f0008fd">allocator</a></td></tr>
+<tr class="memdesc:a1fb3a925c15a454a5edba1cb0f0008fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">custom allocator  <a href="classcv_1_1_u_mat.html#a1fb3a925c15a454a5edba1cb0f0008fd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fb3a925c15a454a5edba1cb0f0008fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c55c1af19750d1665eeee41a88d126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aa3c55c1af19750d1665eeee41a88d126">usageFlags</a></td></tr>
+<tr class="separator:aa3c55c1af19750d1665eeee41a88d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2462b4ad4d5b2e8833730a98ea7382a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_u_mat_data.html">UMatData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#ad2462b4ad4d5b2e8833730a98ea7382a">u</a></td></tr>
+<tr class="separator:ad2462b4ad4d5b2e8833730a98ea7382a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd8bc792218830014d8a99357acefa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#aefd8bc792218830014d8a99357acefa3">offset</a></td></tr>
+<tr class="separator:aefd8bc792218830014d8a99357acefa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762e5567b5c5636f6c1de2c260b12065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_mat_size.html">MatSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a762e5567b5c5636f6c1de2c260b12065">size</a></td></tr>
+<tr class="separator:a762e5567b5c5636f6c1de2c260b12065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ee14c5d1163cbb90a111539ea40a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_mat_step.html">MatStep</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_u_mat.html#a96ee14c5d1163cbb90a111539ea40a49">step</a></td></tr>
+<tr class="separator:a96ee14c5d1163cbb90a111539ea40a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Необходимо сделать:</a></b></dt><dd>document </dd></dl>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a937d5b9bf4ad898d03c5b4448cf948a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937d5b9bf4ad898d03c5b4448cf948a9">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a937d5b9bf4ad898d03c5b4448cf948a9a502944660bbb466a4e6b6ce0ec7eddb1"></a>MAGIC_VAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a937d5b9bf4ad898d03c5b4448cf948a9a10741a8eaf539b2cb513c134641c940f"></a>AUTO_STEP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a937d5b9bf4ad898d03c5b4448cf948a9a84000db2750cd83ad01c344b8a5b896e"></a>CONTINUOUS_FLAG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a937d5b9bf4ad898d03c5b4448cf948a9a1dadb89fba042bf2b7fb5bca8399aa73"></a>SUBMATRIX_FLAG&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac319f5f3ff6a02a17154f91d5f03d1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac319f5f3ff6a02a17154f91d5f03d1c3">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac319f5f3ff6a02a17154f91d5f03d1c3af10fa455a54f107558b9dbb9efd3959d"></a>MAGIC_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac319f5f3ff6a02a17154f91d5f03d1c3acfda75d2f03eb3b2dc71e9654b5bef46"></a>TYPE_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac319f5f3ff6a02a17154f91d5f03d1c3acbabb2648f797b89bd9ddc77cce0c408"></a>DEPTH_MASK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a63cb4da02e647fb49df1f40aab8ca35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cb4da02e647fb49df1f40aab8ca35b">&#9670;&nbsp;</a></span>UMat() <span class="overload">[1/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>default constructor </p>
+
+</div>
+</div>
+<a id="add0dc0febd6a7b6a7a79a85d41bb17f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0dc0febd6a7b6a7a79a85d41bb17f2">&#9670;&nbsp;</a></span>UMat() <span class="overload">[2/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructs 2D matrix of the specified size and type </p>
+
+</div>
+</div>
+<a id="a1f0939f54199110a180cf5d8e4c8d725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f0939f54199110a180cf5d8e4c8d725">&#9670;&nbsp;</a></span>UMat() <span class="overload">[3/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16a02552218847de2e60ce907b5e904a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a02552218847de2e60ce907b5e904a">&#9670;&nbsp;</a></span>UMat() <span class="overload">[4/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructs 2D matrix and fills it with the specified value _s. </p>
+
+</div>
+</div>
+<a id="aa0e86661d2f62be94ed7648508f1ec07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e86661d2f62be94ed7648508f1ec07">&#9670;&nbsp;</a></span>UMat() <span class="overload">[5/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af159e956ff96c64745c6940a3b1820ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af159e956ff96c64745c6940a3b1820ba">&#9670;&nbsp;</a></span>UMat() <span class="overload">[6/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructs n-dimensional matrix </p>
+
+</div>
+</div>
+<a id="a5e1866c206e9c116304a0257bc3a6c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1866c206e9c116304a0257bc3a6c50">&#9670;&nbsp;</a></span>UMat() <span class="overload">[7/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6afe62166cf5634b17ac54bdb16e8379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afe62166cf5634b17ac54bdb16e8379">&#9670;&nbsp;</a></span>UMat() <span class="overload">[8/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copy constructor </p>
+
+</div>
+</div>
+<a id="afeaabd3e9eef98ccef422a81176a4250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeaabd3e9eef98ccef422a81176a4250">&#9670;&nbsp;</a></span>UMat() <span class="overload">[9/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>rowRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>colRange</em> = <code><a class="el" href="classcv_1_1_range.html#af5a0207f6f98a69077db8e77898abc0f">Range::all</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates a matrix header for a part of the bigger matrix </p>
+
+</div>
+</div>
+<a id="aaa3fa04bb82fee6026cc2e85df96a796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3fa04bb82fee6026cc2e85df96a796">&#9670;&nbsp;</a></span>UMat() <span class="overload">[10/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>roi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96f381979b76ce63d497e812fd7ec574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f381979b76ce63d497e812fd7ec574">&#9670;&nbsp;</a></span>UMat() <span class="overload">[11/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> *&#160;</td>
+          <td class="paramname"><em>ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a577f91740a6ee96201049cad9b15c22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577f91740a6ee96201049cad9b15c22d">&#9670;&nbsp;</a></span>UMat() <span class="overload">[12/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_range.html">Range</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ranges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0edcf01672609ffb76bccc84e6039c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0edcf01672609ffb76bccc84e6039c4b">&#9670;&nbsp;</a></span>UMat() <span class="overload">[13/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; _Tp &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copyData</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>builds matrix from std::vector with or without copying the data </p>
+
+</div>
+</div>
+<a id="ace6c6c9c85db0fc28f2f8365c2f30985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6c6c9c85db0fc28f2f8365c2f30985">&#9670;&nbsp;</a></span>~UMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::~UMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>destructor - calls <a class="el" href="classcv_1_1_u_mat.html#aa9a894abdfd44e72ef37a4fc10f3481b" title="decreases reference counter;">release()</a> </p>
+
+</div>
+</div>
+<a id="ab2e3437a0cddfea4761f2f0d35ca08dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e3437a0cddfea4761f2f0d35ca08dd">&#9670;&nbsp;</a></span>UMat() <span class="overload">[14/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::UMat::UMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9f87daa635b42c20579ef2e526fc2b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f87daa635b42c20579ef2e526fc2b54">&#9670;&nbsp;</a></span>addref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::addref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>increases the reference counter; use with care to avoid memleaks </p>
+
+</div>
+</div>
+<a id="a80d08e2b1d2ee0343bbec632a14fa615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d08e2b1d2ee0343bbec632a14fa615">&#9670;&nbsp;</a></span>adjustROI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&amp; cv::UMat::adjustROI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dtop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dbottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dleft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dright</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moves/resizes the current matrix ROI inside the parent matrix. </p>
+
+</div>
+</div>
+<a id="aef524a90c600f04e1cdd12788c608476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef524a90c600f04e1cdd12788c608476">&#9670;&nbsp;</a></span>assignTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::assignTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58c1b68b2e355c044cf089c9156910c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c1b68b2e355c044cf089c9156910c4">&#9670;&nbsp;</a></span>channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::channels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element type, similar to CV_MAT_CN(cvmat-&gt;type) </p>
+
+</div>
+</div>
+<a id="a3d9972bea2e00ae4a8e2402dfdd5d99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9972bea2e00ae4a8e2402dfdd5d99a">&#9670;&nbsp;</a></span>checkVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::checkVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>elemChannels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>requireContinuous</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns N if the matrix is 1-channel (N x ptdim) or ptdim-channel (1 x N) or (N x 1); negative number otherwise </p>
+
+</div>
+</div>
+<a id="aac63c68170021973b171e94746c253ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac63c68170021973b171e94746c253ac">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns deep copy of the matrix, i.e. the data is copied </p>
+
+</div>
+</div>
+<a id="aaaa4b7216656ea35c63fcfc745c6995c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa4b7216656ea35c63fcfc745c6995c">&#9670;&nbsp;</a></span>col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::col </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns a new matrix header for the specified column </p>
+
+</div>
+</div>
+<a id="ade9f05c6bae4f6de8b24cc71d29f4b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade9f05c6bae4f6de8b24cc71d29f4b8a">&#9670;&nbsp;</a></span>colRange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::colRange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc6ffa253b779dd078638ad996e17c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6ffa253b779dd078638ad996e17c2f">&#9670;&nbsp;</a></span>colRange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::colRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>startcol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>endcol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... for the specified column span </p>
+
+</div>
+</div>
+<a id="a6f11287e53debd8d460fc053dc88feaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f11287e53debd8d460fc053dc88feaa">&#9670;&nbsp;</a></span>convertTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::convertTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts matrix to another datatype with optional scaling. See cvConvertScale. </p>
+
+</div>
+</div>
+<a id="a2ea1c1537ee15db8b22e34218a372f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea1c1537ee15db8b22e34218a372f5f">&#9670;&nbsp;</a></span>copySize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::copySize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>internal use function; properly re-allocates _size, _step arrays </p>
+
+</div>
+</div>
+<a id="ab9f4b02e099696dc0fb43c85c6f4a2f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f4b02e099696dc0fb43c85c6f4a2f1">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies the matrix content to "m". </p>
+
+</div>
+</div>
+<a id="a9f97eb1b8c307b5cd4c17962af27efbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f97eb1b8c307b5cd4c17962af27efbf">&#9670;&nbsp;</a></span>copyTo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::copyTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copies those matrix elements to "m" that are marked with non-zero mask elements. </p>
+
+</div>
+</div>
+<a id="a1f51b337fe0ee25e7c659502e3fe1022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f51b337fe0ee25e7c659502e3fe1022">&#9670;&nbsp;</a></span>create() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::create </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d6066cb804ad356c18fd7dc89203b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d6066cb804ad356c18fd7dc89203b92">&#9670;&nbsp;</a></span>create() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe3063b40dd6c5d8a0054759c1142631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3063b40dd6c5d8a0054759c1142631">&#9670;&nbsp;</a></span>create() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allocates new matrix data unless the matrix already has specified size and type. </p>
+
+</div>
+</div>
+<a id="ac0b2ce3cbd609f68092b8cffa2cc7155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b2ce3cbd609f68092b8cffa2cc7155">&#9670;&nbsp;</a></span>create() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a>&#160;</td>
+          <td class="paramname"><em>usageFlags</em> = <code><a class="el" href="group__core__basic.html#gga5681439dda418431eb0a672697135ed2ae383b08ee18b73d8c1588d968f953893">USAGE_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c3716c2b363388bb8e59212a50e6ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3716c2b363388bb8e59212a50e6ba5">&#9670;&nbsp;</a></span>deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::deallocate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deallocates the matrix data </p>
+
+</div>
+</div>
+<a id="a8511e27bd0093e5dd236df1ef111087a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8511e27bd0093e5dd236df1ef111087a">&#9670;&nbsp;</a></span>depth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::depth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element type, similar to CV_MAT_DEPTH(cvmat-&gt;type) </p>
+
+</div>
+</div>
+<a id="a0da02ad901084904580cf4b39d1552e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da02ad901084904580cf4b39d1552e9">&#9670;&nbsp;</a></span>diag() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::diag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructs a square diagonal matrix which main diagonal is vector "d" </p>
+
+</div>
+</div>
+<a id="a4bac5184c68677463a435e2bee4a8ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bac5184c68677463a435e2bee4a8ac7">&#9670;&nbsp;</a></span>diag() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::diag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>d</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>... for the specified diagonal (d=0 - the main diagonal, &gt;0 - a diagonal from the upper half, &lt;0 - a diagonal from the lower half) </p>
+
+</div>
+</div>
+<a id="a6daed34dfaccf50a34aca1d1ee5e5027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6daed34dfaccf50a34aca1d1ee5e5027">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cv::UMat::dot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>computes dot-product </p>
+
+</div>
+</div>
+<a id="a391f71d1da637a234701f78d7b0cc9a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391f71d1da637a234701f78d7b0cc9a5">&#9670;&nbsp;</a></span>elemSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::UMat::elemSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element size in bytes, </p>
+
+</div>
+</div>
+<a id="a318efa69d05f7b4c61488a8ce5125247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318efa69d05f7b4c61488a8ce5125247">&#9670;&nbsp;</a></span>elemSize1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::UMat::elemSize1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the size of element channel in bytes. </p>
+
+</div>
+</div>
+<a id="a8d0149f2671fd776444301cafa0eff8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0149f2671fd776444301cafa0eff8c">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::UMat::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true if matrix data is NULL </p>
+
+</div>
+</div>
+<a id="a479e07ad4829b35b83f2aae7231d0ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479e07ad4829b35b83f2aae7231d0ec6">&#9670;&nbsp;</a></span>eye() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::eye </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79a713e4c931aae8a8b13ec3c62326b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a713e4c931aae8a8b13ec3c62326b9">&#9670;&nbsp;</a></span>eye() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::eye </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d84c72c06ddd55d35b87c3d222d2674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d84c72c06ddd55d35b87c3d222d2674">&#9670;&nbsp;</a></span>getMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat.html">Mat</a> cv::UMat::getMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">AccessFlag</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1e71cc2820eb96eca2f6a4df46b808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1e71cc2820eb96eca2f6a4df46b808">&#9670;&nbsp;</a></span>getStdAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a>* cv::UMat::getStdAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>and the standard allocator </p>
+
+</div>
+</div>
+<a id="afdbe2f205e6bb5475b252b598376188e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdbe2f205e6bb5475b252b598376188e">&#9670;&nbsp;</a></span>handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* cv::UMat::handle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga6226c29c7b0e7bda7aff72e96ba8e1df">AccessFlag</a>&#160;</td>
+          <td class="paramname"><em>accessFlags</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the OpenCL buffer handle on which <a class="el" href="classcv_1_1_u_mat.html">UMat</a> operates on. The <a class="el" href="classcv_1_1_u_mat.html">UMat</a> instance should be kept alive during the use of the handle to prevent the buffer to be returned to the OpenCV buffer pool. </p>
+
+</div>
+</div>
+<a id="abb77173e3e661fc3f161f79e5559c5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb77173e3e661fc3f161f79e5559c5d7">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::inv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em> = <code><a class="el" href="group__core__array.html#ggaaf9ea5dcc392d5ae04eacb9920b9674ca247a3455cd64973152e17e26999dc024">DECOMP_LU</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matrix inversion by means of matrix expressions </p>
+
+</div>
+</div>
+<a id="af9f1dc7d12bb762061089e1c3bd77875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f1dc7d12bb762061089e1c3bd77875">&#9670;&nbsp;</a></span>isContinuous()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::UMat::isContinuous </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true iff the matrix data is continuous </p>
+
+</div>
+</div>
+<a id="acfba13176eea1e0e3db646a4e7a663a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfba13176eea1e0e3db646a4e7a663a5">&#9670;&nbsp;</a></span>isSubmatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::UMat::isSubmatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true if the matrix is a submatrix of another matrix </p>
+
+</div>
+</div>
+<a id="a657631fc34ff89a3e2e921122c45c667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657631fc34ff89a3e2e921122c45c667">&#9670;&nbsp;</a></span>locateROI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::locateROI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>wholeSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>ofs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>locates matrix header within a parent matrix. See below </p>
+
+</div>
+</div>
+<a id="af50d8160ca05a304b30c1dd64ae20755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50d8160ca05a304b30c1dd64ae20755">&#9670;&nbsp;</a></span>mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::mul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>per-element matrix multiplication by means of matrix expressions </p>
+
+</div>
+</div>
+<a id="afaf9116d630cafce0bb6465b616e7ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf9116d630cafce0bb6465b616e7ce8">&#9670;&nbsp;</a></span>ndoffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::ndoffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> *&#160;</td>
+          <td class="paramname"><em>ofs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6f92d67658151a00723abdbabe572b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f92d67658151a00723abdbabe572b8">&#9670;&nbsp;</a></span>ones() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::ones </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf78401deb21d2b46144db979a86a296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf78401deb21d2b46144db979a86a296">&#9670;&nbsp;</a></span>ones() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::ones </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85f38b108c177ed5696aa4295f45ea4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f38b108c177ed5696aa4295f45ea4e">&#9670;&nbsp;</a></span>ones() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::ones </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e245fe34228df0f31d3e3fdb6fa89d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e245fe34228df0f31d3e3fdb6fa89d3">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> *&#160;</td>
+          <td class="paramname"><em>ranges</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7679d5bea4421e360b90225d348e3fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7679d5bea4421e360b90225d348e3fa3">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>roi</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4e69198d95654e9fe2bd03dd1feee38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e69198d95654e9fe2bd03dd1feee38">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_range.html">Range</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ranges</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84b1f570775c927202a55ab1cccd9542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84b1f570775c927202a55ab1cccd9542">&#9670;&nbsp;</a></span>operator()() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>rowRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_range.html">Range</a>&#160;</td>
+          <td class="paramname"><em>colRange</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extracts a rectangular sub-matrix </p>
+
+</div>
+</div>
+<a id="a245c83dba9f05fc44d44d557f86101f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245c83dba9f05fc44d44d557f86101f1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&amp; cv::UMat::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets every matrix element to s </p>
+
+</div>
+</div>
+<a id="aac5e0ed13076c2371fa41d215a49b17f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5e0ed13076c2371fa41d215a49b17f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&amp; cv::UMat::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>assignment operators </p>
+
+</div>
+</div>
+<a id="a561c1a335882bfe799e4235ee8fb67a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561c1a335882bfe799e4235ee8fb67a6">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&amp; cv::UMat::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9a894abdfd44e72ef37a4fc10f3481b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a894abdfd44e72ef37a4fc10f3481b">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>decreases reference counter; </p>
+
+</div>
+</div>
+<a id="ac166eaa6eccbeb2f5e9ce593ee156ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac166eaa6eccbeb2f5e9ce593ee156ef4">&#9670;&nbsp;</a></span>reshape() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::reshape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>newndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>newsz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25ac687266568c8b024debd187c15b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ac687266568c8b024debd187c15b9b">&#9670;&nbsp;</a></span>reshape() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::reshape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates alternative matrix header for the same data, with different </p>
+
+</div>
+</div>
+<a id="a4f493829ef460456db42c3b802ebf20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f493829ef460456db42c3b802ebf20f">&#9670;&nbsp;</a></span>row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns a new matrix header for the specified row </p>
+
+</div>
+</div>
+<a id="aced43849cffaea0bf71f35edeba6ea1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced43849cffaea0bf71f35edeba6ea1c">&#9670;&nbsp;</a></span>rowRange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::rowRange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_range.html">Range</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a838edd92ae26c7f1cff59beda1b0518b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a838edd92ae26c7f1cff59beda1b0518b">&#9670;&nbsp;</a></span>rowRange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::rowRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>startrow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>endrow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... for the specified row span </p>
+
+</div>
+</div>
+<a id="a57513848cc5e55fe2b40bf98dfc99f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57513848cc5e55fe2b40bf98dfc99f08">&#9670;&nbsp;</a></span>setTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&amp; cv::UMat::setTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets some of the matrix elements to s, according to the mask </p>
+
+</div>
+</div>
+<a id="a5bcb8141a5651e69ceeabddf18d8ddfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcb8141a5651e69ceeabddf18d8ddfb">&#9670;&nbsp;</a></span>step1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::UMat::step1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns step/elemSize1() </p>
+
+</div>
+</div>
+<a id="ac18ab17cd8accff358d593e3c79ac1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18ab17cd8accff358d593e3c79ac1c3">&#9670;&nbsp;</a></span>t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matrix transposition by means of matrix expressions </p>
+
+</div>
+</div>
+<a id="abe7fd91b67cf90aa90c0845572552030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe7fd91b67cf90aa90c0845572552030">&#9670;&nbsp;</a></span>total()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::UMat::total </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the total number of matrix elements </p>
+
+</div>
+</div>
+<a id="a65194dd922bef59b349a4148cd39d675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65194dd922bef59b349a4148cd39d675">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns element type, similar to CV_MAT_TYPE(cvmat-&gt;type) </p>
+
+</div>
+</div>
+<a id="a0b62f88ad844949d0441ddf4160a7b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b62f88ad844949d0441ddf4160a7b24">&#9670;&nbsp;</a></span>updateContinuityFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::UMat::updateContinuityFlag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>internal use method: updates the continuity flag </p>
+
+</div>
+</div>
+<a id="a7e514870623df43ff318341fffa0d74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e514870623df43ff318341fffa0d74c">&#9670;&nbsp;</a></span>zeros() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::zeros </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ndims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> *&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab846739615683bbd536d90c06c40c47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab846739615683bbd536d90c06c40c47f">&#9670;&nbsp;</a></span>zeros() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::zeros </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Matlab-style matrix initialization. </p>
+
+</div>
+</div>
+<a id="ab27675e2c0e6a95fea933fe21dbcc17c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27675e2c0e6a95fea933fe21dbcc17c">&#9670;&nbsp;</a></span>zeros() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::UMat::zeros </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a1fb3a925c15a454a5edba1cb0f0008fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb3a925c15a454a5edba1cb0f0008fd">&#9670;&nbsp;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_mat_allocator.html">MatAllocator</a>* cv::UMat::allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>custom allocator </p>
+
+</div>
+</div>
+<a id="a18cc40c5ec8a6b95317e5fe6abaca6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18cc40c5ec8a6b95317e5fe6abaca6fc">&#9670;&nbsp;</a></span>cols</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::cols</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ad5753f30745d97f4e037516f3edf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad5753f30745d97f4e037516f3edf4f">&#9670;&nbsp;</a></span>dims</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::dims</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the matrix dimensionality, &gt;= 2 </p>
+
+</div>
+</div>
+<a id="ad662d8ae2354913ddee4374cb5a86808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad662d8ae2354913ddee4374cb5a86808">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>includes several bit-fields:</p><ul>
+<li>the magic signature</li>
+<li>continuity flag</li>
+<li>depth</li>
+<li>number of channels </li>
+</ul>
+
+</div>
+</div>
+<a id="aefd8bc792218830014d8a99357acefa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd8bc792218830014d8a99357acefa3">&#9670;&nbsp;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> cv::UMat::offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8137e5d25233b57db5616f227f1772ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8137e5d25233b57db5616f227f1772ee">&#9670;&nbsp;</a></span>rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::UMat::rows</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the number of rows and columns or (-1, -1) when the matrix has more than 2 dimensions </p>
+
+</div>
+</div>
+<a id="a762e5567b5c5636f6c1de2c260b12065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762e5567b5c5636f6c1de2c260b12065">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_mat_size.html">MatSize</a> cv::UMat::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ee14c5d1163cbb90a111539ea40a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ee14c5d1163cbb90a111539ea40a49">&#9670;&nbsp;</a></span>step</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_mat_step.html">MatStep</a> cv::UMat::step</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2462b4ad4d5b2e8833730a98ea7382a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2462b4ad4d5b2e8833730a98ea7382a">&#9670;&nbsp;</a></span>u</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_u_mat_data.html">UMatData</a>* cv::UMat::u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3c55c1af19750d1665eeee41a88d126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c55c1af19750d1665eeee41a88d126">&#9670;&nbsp;</a></span>usageFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga5681439dda418431eb0a672697135ed2">UMatUsageFlags</a> cv::UMat::usageFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_u_mat.html">UMat</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

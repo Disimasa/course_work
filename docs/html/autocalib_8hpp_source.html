@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/stitching/detail/autocalib.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('autocalib_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">autocalib.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="autocalib_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                          License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2000-2008, Intel Corporation, all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Copyright (C) 2009, Willow Garage Inc., all rights reserved.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//   * The name of the copyright holders may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors &quot;as is&quot; and</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// In no event shall the Intel Corporation or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifndef OPENCV_STITCHING_AUTOCALIB_HPP</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define OPENCV_STITCHING_AUTOCALIB_HPP</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="opencv2_2core_8hpp.html">opencv2/core.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="matchers_8hpp.html">matchers.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="group__stitching__autocalib.html#ga476c376813c82090433ca8b7ff74ddb9">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="group__stitching__autocalib.html#ga476c376813c82090433ca8b7ff74ddb9">focalsFromHomography</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_mat.html">Mat</a> &amp;H, <span class="keywordtype">double</span> &amp;f0, <span class="keywordtype">double</span> &amp;f1, <span class="keywordtype">bool</span> &amp;f0_ok, <span class="keywordtype">bool</span> &amp;f1_ok);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="group__stitching__autocalib.html#ga36c44fb204f5f0ae2b87274173a0cee2">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="group__stitching__autocalib.html#ga36c44fb204f5f0ae2b87274173a0cee2">estimateFocal</a>(<span class="keyword">const</span> std::vector&lt;ImageFeatures&gt; &amp;<a class="code" href="group__stitching__match.html#ga9abb80158a01f6f8cd3a1a782075f481">features</a>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                              <span class="keyword">const</span> std::vector&lt;MatchesInfo&gt; &amp;pairwise_matches,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                              std::vector&lt;double&gt; &amp;focals);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="group__stitching__autocalib.html#ga254049a56a16955b015f4e598f871861">   79</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="group__stitching__autocalib.html#ga254049a56a16955b015f4e598f871861">calibrateRotatingCamera</a>(<span class="keyword">const</span> std::vector&lt;Mat&gt; &amp;Hs,<a class="code" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="code" href="classcv_1_1_mat.html">Mat</a> &amp;K);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_STITCHING_AUTOCALIB_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_mat_html"><div class="ttname"><a href="classcv_1_1_mat.html">cv::Mat</a></div><div class="ttdoc">n-dimensional dense array class</div><div class="ttdef"><b>Definition:</b> mat.hpp:798</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga4e999bc21cb894d3ed789f3f0bc26778"><div class="ttname"><a href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a></div><div class="ttdeci">#define CV_OUT</div><div class="ttdef"><b>Definition:</b> cvdef.h:449</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga67ea671a3582ce612ac3c281e067f480"><div class="ttname"><a href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a></div><div class="ttdeci">#define CV_EXPORTS_W</div><div class="ttdef"><b>Definition:</b> cvdef.h:444</div></div>
+<div class="ttc" id="agroup__stitching__autocalib_html_ga254049a56a16955b015f4e598f871861"><div class="ttname"><a href="group__stitching__autocalib.html#ga254049a56a16955b015f4e598f871861">cv::detail::calibrateRotatingCamera</a></div><div class="ttdeci">bool CV_EXPORTS_W calibrateRotatingCamera(const std::vector&lt; Mat &gt; &amp;Hs, CV_OUT Mat &amp;K)</div></div>
+<div class="ttc" id="agroup__stitching__autocalib_html_ga36c44fb204f5f0ae2b87274173a0cee2"><div class="ttname"><a href="group__stitching__autocalib.html#ga36c44fb204f5f0ae2b87274173a0cee2">cv::detail::estimateFocal</a></div><div class="ttdeci">void CV_EXPORTS estimateFocal(const std::vector&lt; ImageFeatures &gt; &amp;features, const std::vector&lt; MatchesInfo &gt; &amp;pairwise_matches, std::vector&lt; double &gt; &amp;focals)</div><div class="ttdoc">Estimates focal lengths for each given camera.</div></div>
+<div class="ttc" id="agroup__stitching__autocalib_html_ga476c376813c82090433ca8b7ff74ddb9"><div class="ttname"><a href="group__stitching__autocalib.html#ga476c376813c82090433ca8b7ff74ddb9">cv::detail::focalsFromHomography</a></div><div class="ttdeci">void CV_EXPORTS_W focalsFromHomography(const Mat &amp;H, double &amp;f0, double &amp;f1, bool &amp;f0_ok, bool &amp;f1_ok)</div><div class="ttdoc">Tries to estimate focal lengths from the given homography under the assumption that the camera underg...</div></div>
+<div class="ttc" id="agroup__stitching__match_html_ga9abb80158a01f6f8cd3a1a782075f481"><div class="ttname"><a href="group__stitching__match.html#ga9abb80158a01f6f8cd3a1a782075f481">cv::detail::features</a></div><div class="ttdeci">InputArray CV_OUT ImageFeatures &amp; features</div><div class="ttdef"><b>Definition:</b> matchers.hpp:89</div></div>
+<div class="ttc" id="amatchers_8hpp_html"><div class="ttname"><a href="matchers_8hpp.html">matchers.hpp</a></div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="aopencv2_2core_8hpp_html"><div class="ttname"><a href="opencv2_2core_8hpp.html">core.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_392c16801bb3eb3d8eeca03342365665.html">stitching</a></li><li class="navelem"><a class="el" href="dir_c5c8bdffa677d638b4f394af2ed47477.html">detail</a></li><li class="navelem"><a class="el" href="autocalib_8hpp.html">autocalib.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/gapi/gtransform.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gtransform_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл gtransform.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;<a class="el" href="gcommon_8hpp_source.html">opencv2/gapi/gcommon.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gapi_2util_2util_8hpp_source.html">opencv2/gapi/util/util.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="garg_8hpp_source.html">opencv2/gapi/garg.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gtype__traits_8hpp_source.html">opencv2/gapi/gtype_traits.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="compiler__hints_8hpp_source.html">opencv2/gapi/util/compiler_hints.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gcomputation_8hpp_source.html">opencv2/gapi/gcomputation.hpp</a>&gt;</code><br />
+</div>
+<p><a href="gtransform_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_g_transform.html">cv::GTransform</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1detail_1_1_trans_helper_3_01_k_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01_out_01_4.html">cv::detail::TransHelper&lt; K, std::tuple&lt; Ins... &gt;, Out &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_transform_impl_3_01_k_00_01std_1_1function_3_01_r_07_args_8_8_8_08_4_01_4.html">cv::GTransformImpl&lt; K, std::function&lt; R(Args...)&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1detail.html">cv::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a8941f40c0520cce89daf301a638523ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gtransform_8hpp.html#a8941f40c0520cce89daf301a638523ca">G_DESCR_HELPER_CLASS</a>(Class)&#160;&#160;&#160;Class##DescrHelper</td></tr>
+<tr class="separator:a8941f40c0520cce89daf301a638523ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d5c8fab0b9f3f44683c9bc549c56a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gtransform_8hpp.html#a94d5c8fab0b9f3f44683c9bc549c56a6">G_DESCR_HELPER_BODY</a>(Class,  Descr)</td></tr>
+<tr class="separator:a94d5c8fab0b9f3f44683c9bc549c56a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66240341d57d2545f517dc7aa6408eab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gtransform_8hpp.html#a66240341d57d2545f517dc7aa6408eab">GAPI_TRANSFORM</a>(Class,  API,  Descr)</td></tr>
+<tr class="separator:a66240341d57d2545f517dc7aa6408eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a94d5c8fab0b9f3f44683c9bc549c56a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d5c8fab0b9f3f44683c9bc549c56a6">&#9670;&nbsp;</a></span>G_DESCR_HELPER_BODY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define G_DESCR_HELPER_BODY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Class, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Descr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <span class="keyword">namespace </span>detail                                            \</div>
+<div class="line">    {                                                           \</div>
+<div class="line">    struct <a class="code" href="gtransform_8hpp.html#a8941f40c0520cce89daf301a638523ca">G_DESCR_HELPER_CLASS</a>(Class)                          \</div>
+<div class="line">    {                                                           \</div>
+<div class="line">        static constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *descr() { <span class="keywordflow">return</span> Descr; }; \</div>
+<div class="line">    };                                                          \</div>
+<div class="line">    }</div>
+<div class="ttc" id="agtransform_8hpp_html_a8941f40c0520cce89daf301a638523ca"><div class="ttname"><a href="gtransform_8hpp.html#a8941f40c0520cce89daf301a638523ca">G_DESCR_HELPER_CLASS</a></div><div class="ttdeci">#define G_DESCR_HELPER_CLASS(Class)</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:87</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8941f40c0520cce89daf301a638523ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8941f40c0520cce89daf301a638523ca">&#9670;&nbsp;</a></span>G_DESCR_HELPER_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define G_DESCR_HELPER_CLASS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Class</td><td>)</td>
+          <td>&#160;&#160;&#160;Class##DescrHelper</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66240341d57d2545f517dc7aa6408eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66240341d57d2545f517dc7aa6408eab">&#9670;&nbsp;</a></span>GAPI_TRANSFORM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GAPI_TRANSFORM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Class, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">API, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Descr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="gtransform_8hpp.html#a94d5c8fab0b9f3f44683c9bc549c56a6">G_DESCR_HELPER_BODY</a>(Class, Descr)                                         \</div>
+<div class="line">    struct Class final : <span class="keyword">public</span> <a class="code" href="classcv_1_1_g_transform_impl.html">cv::GTransformImpl&lt;Class, std::function API&gt;</a>, \</div>
+<div class="line">                         public <a class="code" href="gtransform_8hpp.html#a8941f40c0520cce89daf301a638523ca">detail::G_DESCR_HELPER_CLASS</a>(Class)</div>
+<div class="ttc" id="aclasscv_1_1_g_transform_impl_html"><div class="ttname"><a href="classcv_1_1_g_transform_impl.html">cv::GTransformImpl</a></div><div class="ttdef"><b>Definition:</b> gtransform.hpp:69</div></div>
+<div class="ttc" id="agtransform_8hpp_html_a94d5c8fab0b9f3f44683c9bc549c56a6"><div class="ttname"><a href="gtransform_8hpp.html#a94d5c8fab0b9f3f44683c9bc549c56a6">G_DESCR_HELPER_BODY</a></div><div class="ttdeci">#define G_DESCR_HELPER_BODY(Class, Descr)</div><div class="ttdef"><b>Definition:</b> gtransform.hpp:89</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="gtransform_8hpp.html">gtransform.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

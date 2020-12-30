@@ -1,0 +1,2625 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$P_w$
+\pagebreak
+
+$p$
+\pagebreak
+
+\[s \; p = A \begin{bmatrix} R|t \end{bmatrix} P_w,\]
+\pagebreak
+
+$A$
+\pagebreak
+
+$R$
+\pagebreak
+
+$t$
+\pagebreak
+
+$s$
+\pagebreak
+
+$K$
+\pagebreak
+
+\[p = A P_c.\]
+\pagebreak
+
+$f_x$
+\pagebreak
+
+$f_y$
+\pagebreak
+
+$(c_x, c_y)$
+\pagebreak
+
+\[A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1},\]
+\pagebreak
+
+\[s \vecthree{u}{v}{1} = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1} \vecthree{X_c}{Y_c}{Z_c}.\]
+\pagebreak
+
+$[R|t]$
+\pagebreak
+
+$x' = X_c / Z_c$
+\pagebreak
+
+$y' = Y_c / Z_c$
+\pagebreak
+
+\[Z_c \begin{bmatrix} x' \\ y' \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} X_c \\ Y_c \\ Z_c \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+$w$
+\pagebreak
+
+$c$
+\pagebreak
+
+$P$
+\pagebreak
+
+$P_c$
+\pagebreak
+
+\[P_c = \begin{bmatrix} R & t \\ 0 & 1 \end{bmatrix} P_w,\]
+\pagebreak
+
+\[\begin{bmatrix} R & t \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix}, \]
+\pagebreak
+
+\[\begin{bmatrix} X_c \\ Y_c \\ Z_c \\ 1 \end{bmatrix} = \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} X_w \\ Y_w \\ Z_w \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+\[Z_c \begin{bmatrix} x' \\ y' \\ 1 \end{bmatrix} = \begin{bmatrix} R|t \end{bmatrix} \begin{bmatrix} X_w \\ Y_w \\ Z_w \\ 1 \end{bmatrix} = \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \end{bmatrix} \begin{bmatrix} X_w \\ Y_w \\ Z_w \\ 1 \end{bmatrix},\]
+\pagebreak
+
+$s \; p = A \begin{bmatrix} R|t \end{bmatrix} P_w$
+\pagebreak
+
+\[s \vecthree{u}{v}{1} = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1} \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \end{bmatrix} \begin{bmatrix} X_w \\ Y_w \\ Z_w \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+$Z_c \ne 0$
+\pagebreak
+
+\[\begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} f_x X_c/Z_c + c_x \\ f_y Y_c/Z_c + c_y \end{bmatrix}\]
+\pagebreak
+
+\[\vecthree{X_c}{Y_c}{Z_c} = \begin{bmatrix} R|t \end{bmatrix} \begin{bmatrix} X_w \\ Y_w \\ Z_w \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+\[\begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} f_x x'' + c_x \\ f_y y'' + c_y \end{bmatrix}\]
+\pagebreak
+
+\[\begin{bmatrix} x'' \\ y'' \end{bmatrix} = \begin{bmatrix} x' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + 2 p_1 x' y' + p_2(r^2 + 2 x'^2) + s_1 r^2 + s_2 r^4 \\ y' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + p_1 (r^2 + 2 y'^2) + 2 p_2 x' y' + s_3 r^2 + s_4 r^4 \\ \end{bmatrix}\]
+\pagebreak
+
+\[r^2 = x'^2 + y'^2\]
+\pagebreak
+
+\[\begin{bmatrix} x'\\ y' \end{bmatrix} = \begin{bmatrix} X_c/Z_c \\ Y_c/Z_c \end{bmatrix},\]
+\pagebreak
+
+$k_1$
+\pagebreak
+
+$k_2$
+\pagebreak
+
+$k_3$
+\pagebreak
+
+$k_4$
+\pagebreak
+
+$k_5$
+\pagebreak
+
+$k_6$
+\pagebreak
+
+$p_1$
+\pagebreak
+
+$p_2$
+\pagebreak
+
+$s_1$
+\pagebreak
+
+$s_2$
+\pagebreak
+
+$s_3$
+\pagebreak
+
+$s_4$
+\pagebreak
+
+$ 1 + k_1 r^2 + k_2 r^4 + k_3 r^6 $
+\pagebreak
+
+$x''$
+\pagebreak
+
+$y''$
+\pagebreak
+
+\[\begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} f_x x''' + c_x \\ f_y y''' + c_y \end{bmatrix},\]
+\pagebreak
+
+\[s\vecthree{x'''}{y'''}{1} = \vecthreethree{R_{33}(\tau_x, \tau_y)}{0}{-R_{13}(\tau_x, \tau_y)} {0}{R_{33}(\tau_x, \tau_y)}{-R_{23}(\tau_x, \tau_y)} {0}{0}{1} R(\tau_x, \tau_y) \vecthree{x''}{y''}{1}\]
+\pagebreak
+
+$R(\tau_x, \tau_y)$
+\pagebreak
+
+$\tau_x$
+\pagebreak
+
+$\tau_y$
+\pagebreak
+
+\[ R(\tau_x, \tau_y) = \vecthreethree{\cos(\tau_y)}{0}{-\sin(\tau_y)}{0}{1}{0}{\sin(\tau_y)}{0}{\cos(\tau_y)} \vecthreethree{1}{0}{0}{0}{\cos(\tau_x)}{\sin(\tau_x)}{0}{-\sin(\tau_x)}{\cos(\tau_x)} = \vecthreethree{\cos(\tau_y)}{\sin(\tau_y)\sin(\tau_x)}{-\sin(\tau_y)\cos(\tau_x)} {0}{\cos(\tau_x)}{\sin(\tau_x)} {\sin(\tau_y)}{-\cos(\tau_y)\sin(\tau_x)}{\cos(\tau_y)\cos(\tau_x)}. \]
+\pagebreak
+
+\[(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])\]
+\pagebreak
+
+$k_3=0$
+\pagebreak
+
+$c_x$
+\pagebreak
+
+$c_y$
+\pagebreak
+
+$P_h$
+\pagebreak
+
+$P \rightarrow P_h$
+\pagebreak
+
+\[\begin{bmatrix} X \\ Y \\ Z \end{bmatrix} \rightarrow \begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+$P_h \rightarrow P$
+\pagebreak
+
+\[\begin{bmatrix} X \\ Y \\ W \end{bmatrix} \rightarrow \begin{bmatrix} X / W \\ Y / W \end{bmatrix},\]
+\pagebreak
+
+$W \ne 0$
+\pagebreak
+
+$k P_h$
+\pagebreak
+
+$k \ne 0$
+\pagebreak
+
+\[P_1 = R P_0 + t \rightarrow P_{h_1} = \begin{bmatrix} R & t \\ 0 & 1 \end{bmatrix} P_{h_0}.\]
+\pagebreak
+
+\[Xc = R X + T\]
+\pagebreak
+
+\[x = Xc_1 \\ y = Xc_2 \\ z = Xc_3\]
+\pagebreak
+
+\[a = x / z \ and \ b = y / z \\ r^2 = a^2 + b^2 \\ \theta = atan(r)\]
+\pagebreak
+
+\[\theta_d = \theta (1 + k_1 \theta^2 + k_2 \theta^4 + k_3 \theta^6 + k_4 \theta^8)\]
+\pagebreak
+
+\[x' = (\theta_d / r) a \\ y' = (\theta_d / r) b \]
+\pagebreak
+
+\[u = f_x (x' + \alpha y') + c_x \\ v = f_y y' + c_y\]
+\pagebreak
+
+\[\begin{array}{l} \theta \leftarrow norm(r) \\ r \leftarrow r/ \theta \\ R = \cos(\theta) I + (1- \cos{\theta} ) r r^T + \sin(\theta) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} \end{array}\]
+\pagebreak
+
+\[\sin ( \theta ) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} = \frac{R - R^T}{2}\]
+\pagebreak
+
+\[\| \texttt{dstPoints} _i - \texttt{convertPointsHomogeneous} ( \texttt{H} * \texttt{srcPoints} _i) \|_2 > \texttt{ransacReprojThreshold}\]
+\pagebreak
+
+$i$
+\pagebreak
+
+$H$
+\pagebreak
+
+\[s_i \vecthree{x'_i}{y'_i}{1} \sim H \vecthree{x_i}{y_i}{1}\]
+\pagebreak
+
+\[\sum _i \left ( x'_i- \frac{h_{11} x_i + h_{12} y_i + h_{13}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2+ \left ( y'_i- \frac{h_{21} x_i + h_{22} y_i + h_{23}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2\]
+\pagebreak
+
+$srcPoints_i$
+\pagebreak
+
+$dstPoints_i$
+\pagebreak
+
+$h_{33}=1$
+\pagebreak
+
+$\cameramatrix{A}$
+\pagebreak
+
+$\texttt{A.rows*B.cols} \times {A.rows*A.cols}$
+\pagebreak
+
+$\texttt{A.rows*B.cols} \times {B.rows*B.cols}$
+\pagebreak
+
+$A*B$
+\pagebreak
+
+\[\begin{array}{l} \texttt{rvec3} = \mathrm{rodrigues} ^{-1} \left ( \mathrm{rodrigues} ( \texttt{rvec2} ) \cdot \mathrm{rodrigues} ( \texttt{rvec1} ) \right ) \\ \texttt{tvec3} = \mathrm{rodrigues} ( \texttt{rvec2} ) \cdot \texttt{tvec1} + \texttt{tvec2} \end{array} ,\]
+\pagebreak
+
+$\mathrm{rodrigues}$
+\pagebreak
+
+$\mathrm{rodrigues}^{-1}$
+\pagebreak
+
+$\distcoeffs$
+\pagebreak
+
+$f_x / f_y$
+\pagebreak
+
+$[0, 0, 0]$
+\pagebreak
+
+$ \bf{X}_w $
+\pagebreak
+
+$ \left[ u, v \right] $
+\pagebreak
+
+$ \Pi $
+\pagebreak
+
+$ \bf{A} $
+\pagebreak
+
+\[ \begin{align*} \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} &= \bf{A} \hspace{0.1em} \Pi \hspace{0.2em} ^{c}\bf{T}_w \begin{bmatrix} X_{w} \\ Y_{w} \\ Z_{w} \\ 1 \end{bmatrix} \\ \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} &= \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} X_{w} \\ Y_{w} \\ Z_{w} \\ 1 \end{bmatrix} \end{align*} \]
+\pagebreak
+
+\[ \begin{align*} \begin{bmatrix} X_c \\ Y_c \\ Z_c \\ 1 \end{bmatrix} &= \hspace{0.2em} ^{c}\bf{T}_w \begin{bmatrix} X_{w} \\ Y_{w} \\ Z_{w} \\ 1 \end{bmatrix} \\ \begin{bmatrix} X_c \\ Y_c \\ Z_c \\ 1 \end{bmatrix} &= \begin{bmatrix} r_{11} & r_{12} & r_{13} & t_x \\ r_{21} & r_{22} & r_{23} & t_y \\ r_{31} & r_{32} & r_{33} & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} X_{w} \\ Y_{w} \\ Z_{w} \\ 1 \end{bmatrix} \end{align*} \]
+\pagebreak
+
+$\alpha$
+\pagebreak
+
+$ \text{RMSE} = \sqrt{\frac{\sum_{i}^{N} \left ( \hat{y_i} - y_i \right )^2}{N}} $
+\pagebreak
+
+$f_x = f_y * \texttt{aspectRatio}$
+\pagebreak
+
+$(f_x, f_y, c_x, c_y, k_1, k_2, p_1, p_2, k_3, k_4, k_5, k_6 , s_1, s_2, s_3, s_4, \tau_x, \tau_y)$
+\pagebreak
+
+$(R_0, T_0, \dotsc , R_{M - 1}, T_{M - 1})$
+\pagebreak
+
+$R_i, T_i$
+\pagebreak
+
+$(p_1, p_2)$
+\pagebreak
+
+$f_y/f_x$
+\pagebreak
+
+$f^{(j)}_x$
+\pagebreak
+
+$f^{(j)}_y$
+\pagebreak
+
+$f^{(j)}_x/f^{(j)}_y$
+\pagebreak
+
+$f^{(0)}_x=f^{(1)}_x$
+\pagebreak
+
+$f^{(0)}_y=f^{(1)}_y$
+\pagebreak
+
+$R_1$
+\pagebreak
+
+$T_1$
+\pagebreak
+
+$R_2$
+\pagebreak
+
+$T_2$
+\pagebreak
+
+$T$
+\pagebreak
+
+\[R_2=R R_1\]
+\pagebreak
+
+\[T_2=R T_1 + T.\]
+\pagebreak
+
+\[\begin{bmatrix} X_2 \\ Y_2 \\ Z_2 \\ 1 \end{bmatrix} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} \begin{bmatrix} X_1 \\ Y_1 \\ Z_1 \\ 1 \end{bmatrix}.\]
+\pagebreak
+
+\[E= \vecthreethree{0}{-T_2}{T_1}{T_2}{0}{-T_0}{-T_1}{T_0}{0} R\]
+\pagebreak
+
+$T_i$
+\pagebreak
+
+$T=[T_0, T_1, T_2]^T$
+\pagebreak
+
+\[F = cameraMatrix2^{-T}\cdot E \cdot cameraMatrix1^{-1}\]
+\pagebreak
+
+$4 \times 4$
+\pagebreak
+
+\[\texttt{P1} = \begin{bmatrix} f & 0 & cx_1 & 0 \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}\]
+\pagebreak
+
+\[\texttt{P2} = \begin{bmatrix} f & 0 & cx_2 & T_x*f \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} ,\]
+\pagebreak
+
+$T_x$
+\pagebreak
+
+$cx_1=cx_2$
+\pagebreak
+
+\[\texttt{P1} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_1 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}\]
+\pagebreak
+
+\[\texttt{P2} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_2 & T_y*f \\ 0 & 0 & 1 & 0 \end{bmatrix},\]
+\pagebreak
+
+$T_y$
+\pagebreak
+
+$cy_1=cy_2$
+\pagebreak
+
+$|\texttt{points2[i]}^T*\texttt{F}*\texttt{points1[i]}|>\texttt{threshold}$
+\pagebreak
+
+$_{}^{g}\textrm{T}_c$
+\pagebreak
+
+$_{}^{b}\textrm{T}_g$
+\pagebreak
+
+$_{}^{c}\textrm{T}_t$
+\pagebreak
+
+\[ \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{b}\textrm{R}_g & _{}^{b}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} \]
+\pagebreak
+
+$\mathbf{A}\mathbf{X}=\mathbf{X}\mathbf{B}$
+\pagebreak
+
+\[ \begin{align*} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{b}{\textrm{T}_g}^{(2)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{b}{\textrm{T}_g}^{(2)})^{-1} \hspace{0.2em} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c &= \hspace{0.1em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \]
+\pagebreak
+
+\[ \begin{align*} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{g}{\textrm{T}_b}^{(2)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{g}{\textrm{T}_b}^{(2)})^{-1} \hspace{0.2em} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c &= \hspace{0.1em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \]
+\pagebreak
+
+$_{}^{w}\textrm{T}_b$
+\pagebreak
+
+$_{}^{c}\textrm{T}_g$
+\pagebreak
+
+$_{}^{c}\textrm{T}_w$
+\pagebreak
+
+$_{}^{g}\textrm{T}_b$
+\pagebreak
+
+\[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_b & _{}^{g}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_w & _{}^{c}\textrm{t}_w \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{w}\textrm{R}_b & _{}^{w}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_g & _{}^{c}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \]
+\pagebreak
+
+$\mathbf{A}\mathbf{X}=\mathbf{Z}\mathbf{B}$
+\pagebreak
+
+$\mathbf{A} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_w$
+\pagebreak
+
+$\mathbf{X} \Leftrightarrow \hspace{0.1em} _{}^{w}\textrm{T}_b$
+\pagebreak
+
+$\mathbf{Z} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_g$
+\pagebreak
+
+$\mathbf{B} \Leftrightarrow \hspace{0.1em} _{}^{g}\textrm{T}_b$
+\pagebreak
+
+$N = 7$
+\pagebreak
+
+$N \ge 8$
+\pagebreak
+
+\[[p_2; 1]^T F [p_1; 1] = 0\]
+\pagebreak
+
+$F$
+\pagebreak
+
+$9 \times 3$
+\pagebreak
+
+\[[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0\]
+\pagebreak
+
+$E$
+\pagebreak
+
+\[A = \begin{bmatrix} f & 0 & x_{pp} \\ 0 & f & y_{pp} \\ 0 & 0 & 1 \end{bmatrix}\]
+\pagebreak
+
+$K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+\pagebreak
+
+$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$
+\pagebreak
+
+$[R_1, t]$
+\pagebreak
+
+$[R_1, -t]$
+\pagebreak
+
+$[R_2, t]$
+\pagebreak
+
+$[R_2, -t]$
+\pagebreak
+
+$[p_2; 1]^T A^{-T} E A^{-1} [p_1; 1] = 0$
+\pagebreak
+
+$N \times 1$
+\pagebreak
+
+$1 \times N$
+\pagebreak
+
+$ax + by + c=0$
+\pagebreak
+
+$(a, b, c)$
+\pagebreak
+
+$l^{(2)}_i$
+\pagebreak
+
+$p^{(1)}_i$
+\pagebreak
+
+\[l^{(2)}_i = F p^{(1)}_i\]
+\pagebreak
+
+$l^{(1)}_i$
+\pagebreak
+
+$p^{(2)}_i$
+\pagebreak
+
+\[l^{(1)}_i = F^T p^{(2)}_i\]
+\pagebreak
+
+$a_i^2+b_i^2=1$
+\pagebreak
+
+$d(points1[i], newPoints1[i])^2 + d(points2[i],newPoints2[i])^2$
+\pagebreak
+
+$d(a,b)$
+\pagebreak
+
+$a$
+\pagebreak
+
+$b$
+\pagebreak
+
+$newPoints2^T * F * newPoints1 = 0$
+\pagebreak
+
+\[\begin{bmatrix} X \\ Y \\ Z \\ W \end{bmatrix} = Q \begin{bmatrix} x \\ y \\ \texttt{disparity} (x,y) \\ z \end{bmatrix}.\]
+\pagebreak
+
+\[ sd( \texttt{pt1} , \texttt{pt2} )= \frac{(\texttt{pt2}^t \cdot \texttt{F} \cdot \texttt{pt1})^2} {((\texttt{F} \cdot \texttt{pt1})(0))^2 + ((\texttt{F} \cdot \texttt{pt1})(1))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(0))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(1))^2} \]
+\pagebreak
+
+\[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\ a_{31} & a_{32} & a_{33}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} \]
+\pagebreak
+
+$(X,Y,Z)$
+\pagebreak
+
+$(x,y,z)$
+\pagebreak
+
+$3 \times 4$
+\pagebreak
+
+\[ \begin{bmatrix} a_{11} & a_{12} & a_{13} & b_1\\ a_{21} & a_{22} & a_{23} & b_2\\ a_{31} & a_{32} & a_{33} & b_3\\ \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} \]
+\pagebreak
+
+$3 \times 1$
+\pagebreak
+
+\[ \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} x\\ y\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ \end{bmatrix} \]
+\pagebreak
+
+$(X,Y)$
+\pagebreak
+
+$(x,y)$
+\pagebreak
+
+$2 \times 3$
+\pagebreak
+
+\[ \begin{bmatrix} a_{11} & a_{12} & b_1\\ a_{21} & a_{22} & b_2\\ \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} \cos(\theta) \cdot s & -\sin(\theta) \cdot s & t_x \\ \sin(\theta) \cdot s & \cos(\theta) \cdot s & t_y \end{bmatrix} \]
+\pagebreak
+
+$ \theta $
+\pagebreak
+
+$ s $
+\pagebreak
+
+$ t_x, t_y $
+\pagebreak
+
+$ x, y $
+\pagebreak
+
+$p_i$
+\pagebreak
+
+$p'_i$
+\pagebreak
+
+$f_x, f_y, c_x$
+\pagebreak
+
+$A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+\pagebreak
+
+$(u, v)$
+\pagebreak
+
+\[ \begin{array}{l} x \leftarrow (u - {c'}_x)/{f'}_x \\ y \leftarrow (v - {c'}_y)/{f'}_y \\ {[X\,Y\,W]} ^T \leftarrow R^{-1}*[x \, y \, 1]^T \\ x' \leftarrow X/W \\ y' \leftarrow Y/W \\ r^2 \leftarrow x'^2 + y'^2 \\ x'' \leftarrow x' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + 2p_1 x' y' + p_2(r^2 + 2 x'^2) + s_1 r^2 + s_2 r^4\\ y'' \leftarrow y' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + p_1 (r^2 + 2 y'^2) + 2 p_2 x' y' + s_3 r^2 + s_4 r^4 \\ s\vecthree{x'''}{y'''}{1} = \vecthreethree{R_{33}(\tau_x, \tau_y)}{0}{-R_{13}((\tau_x, \tau_y)} {0}{R_{33}(\tau_x, \tau_y)}{-R_{23}(\tau_x, \tau_y)} {0}{0}{1} R(\tau_x, \tau_y) \vecthree{x''}{y''}{1}\\ map_x(u,v) \leftarrow x''' f_x + c_x \\ map_y(u,v) \leftarrow y''' f_y + c_y \end{array} \]
+\pagebreak
+
+\[\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}\]
+\pagebreak
+
+$A=\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+\pagebreak
+
+$A'=\vecthreethree{f_x'}{0}{c_x'}{0}{f_y'}{c_y'}{0}{0}{1}$
+\pagebreak
+
+\[\begin{bmatrix} f_x && 0 && ( \texttt{imgSize.width} -1)*0.5 \\ 0 && f_y && ( \texttt{imgSize.height} -1)*0.5 \\ 0 && 0 && 1 \end{bmatrix} ,\]
+\pagebreak
+
+$(0,0)$
+\pagebreak
+
+$(1,1)$
+\pagebreak
+
+\[ \begin{array}{l} x^{"} \leftarrow (u - c_x)/f_x \\ y^{"} \leftarrow (v - c_y)/f_y \\ (x',y') = undistort(x^{"},y^{"}, \texttt{distCoeffs}) \\ {[X\,Y\,W]} ^T \leftarrow R*[x' \, y' \, 1]^T \\ x \leftarrow X/W \\ y \leftarrow Y/W \\ \text{only performed if P is specified:} \\ u' \leftarrow x {f'}_x + {c'}_x \\ v' \leftarrow y {f'}_y + {c'}_y \end{array} \]
+\pagebreak
+
+$\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+\pagebreak
+
+$\begin{bmatrix} {f'}_x & 0 & {c'}_x & t_x \\ 0 & {f'}_y & {c'}_y & t_y \\ 0 & 0 & 1 & t_z \end{bmatrix}$
+\pagebreak
+
+$cameramatrix{K}$
+\pagebreak
+
+$\distcoeffsfisheye$
+\pagebreak
+
+$P^{-1}$
+\pagebreak
+
+$\vecthreethree{f_x^{(j)}}{0}{c_x^{(j)}}{0}{f_y^{(j)}}{c_y^{(j)}}{0}{0}{1}$
+\pagebreak
+
+$j = 0,\, 1$
+\pagebreak
+
+$\sqrt[3]{\texttt{val}}$
+\pagebreak
+
+$LL^T$
+\pagebreak
+
+$\texttt{src1}^T\cdot\texttt{src1}\cdot\texttt{dst}=\texttt{src1}^T\texttt{src2}$
+\pagebreak
+
+$\texttt{src1}\cdot\texttt{dst}=\texttt{src2}$
+\pagebreak
+
+\[ norm = \forkthree {\|\texttt{src1}\|_{L_{\infty}} = \max _I | \texttt{src1} (I)|}{if \(\texttt{normType} = \texttt{NORM_INF}\) } {\|\texttt{src1}-\texttt{src2}\|_{L_{\infty}} = \max _I | \texttt{src1} (I) - \texttt{src2} (I)|}{if \(\texttt{normType} = \texttt{NORM_INF}\) } {\frac{\|\texttt{src1}-\texttt{src2}\|_{L_{\infty}} }{\|\texttt{src2}\|_{L_{\infty}} }}{if \(\texttt{normType} = \texttt{NORM_RELATIVE | NORM_INF}\) } \]
+\pagebreak
+
+\[ norm = \forkthree {\| \texttt{src1} \| _{L_1} = \sum _I | \texttt{src1} (I)|}{if \(\texttt{normType} = \texttt{NORM_L1}\)} { \| \texttt{src1} - \texttt{src2} \| _{L_1} = \sum _I | \texttt{src1} (I) - \texttt{src2} (I)|}{if \(\texttt{normType} = \texttt{NORM_L1}\) } { \frac{\|\texttt{src1}-\texttt{src2}\|_{L_1} }{\|\texttt{src2}\|_{L_1}} }{if \(\texttt{normType} = \texttt{NORM_RELATIVE | NORM_L1}\) } \]
+\pagebreak
+
+\[ norm = \forkthree { \| \texttt{src1} \| _{L_2} = \sqrt{\sum_I \texttt{src1}(I)^2} }{if \(\texttt{normType} = \texttt{NORM_L2}\) } { \| \texttt{src1} - \texttt{src2} \| _{L_2} = \sqrt{\sum_I (\texttt{src1}(I) - \texttt{src2}(I))^2} }{if \(\texttt{normType} = \texttt{NORM_L2}\) } { \frac{\|\texttt{src1}-\texttt{src2}\|_{L_2} }{\|\texttt{src2}\|_{L_2}} }{if \(\texttt{normType} = \texttt{NORM_RELATIVE | NORM_L2}\) } \]
+\pagebreak
+
+\[ norm = \forkthree { \| \texttt{src1} \| _{L_2} ^{2} = \sum_I \texttt{src1}(I)^2} {if \(\texttt{normType} = \texttt{NORM_L2SQR}\)} { \| \texttt{src1} - \texttt{src2} \| _{L_2} ^{2} = \sum_I (\texttt{src1}(I) - \texttt{src2}(I))^2 }{if \(\texttt{normType} = \texttt{NORM_L2SQR}\) } { \left(\frac{\|\texttt{src1}-\texttt{src2}\|_{L_2} }{\|\texttt{src2}\|_{L_2}}\right)^2 }{if \(\texttt{normType} = \texttt{NORM_RELATIVE | NORM_L2SQR}\) } \]
+\pagebreak
+
+$2^{16}$
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{src} (I) \quad \text{if} \quad \texttt{mask} (I) \ne 0.\]
+\pagebreak
+
+\[\texttt{arr} (I)= \texttt{value} \quad \text{if} \quad \texttt{mask} (I) \ne 0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{scale} \texttt{src} (I) + ( \texttt{shift} _0, \texttt{shift} _1,...)\]
+\pagebreak
+
+\[src1 \bullet src2 = \sum _I ( \texttt{src1} (I) \texttt{src2} (I))\]
+\pagebreak
+
+$||\texttt{a}||^2$
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} \times \texttt{src2}\]
+\pagebreak
+
+\[\begin{array}{l} \texttt{dst} _1 = \texttt{src1} _2 \texttt{src2} _3 - \texttt{src1} _3 \texttt{src2} _2 \\ \texttt{dst} _2 = \texttt{src1} _3 \texttt{src2} _1 - \texttt{src1} _1 \texttt{src2} _3 \\ \texttt{dst} _3 = \texttt{src1} _1 \texttt{src2} _2 - \texttt{src1} _2 \texttt{src2} _1 \end{array}\]
+\pagebreak
+
+$\texttt{rows} \times \texttt{cols}$
+\pagebreak
+
+\[i \le \texttt{value} < i+1\]
+\pagebreak
+
+$ |a - b| $
+\pagebreak
+
+$ saturate(|a - b|) $
+\pagebreak
+
+$ 1/sqrt(a) $
+\pagebreak
+
+$ sqrt(a^2 + b^2) $
+\pagebreak
+
+$ a^2 + b^2 $
+\pagebreak
+
+$ a*b + c $
+\pagebreak
+
+$ a*b >> 16 $
+\pagebreak
+
+$(i_0,...,i_{M.dims-1})$
+\pagebreak
+
+$0\leq i_k<M.size[k]$
+\pagebreak
+
+\[addr(M_{i_0,...,i_{M.dims-1}}) = M.data + M.step[0]*i_0 + M.step[1]*i_1 + ... + M.step[M.dims-1]*i_{M.dims-1}\]
+\pagebreak
+
+\[addr(M_{i,j}) = M.data + M.step[0]*i + M.step[1]*j\]
+\pagebreak
+
+$M_{ij}$
+\pagebreak
+
+\[m(x,y) = saturate \_ cast<rType>( \alpha (*this)(x,y) + \beta )\]
+\pagebreak
+
+$O(N^2)$
+\pagebreak
+
+$N$
+\pagebreak
+
+\[\mbox{Maximize } c\cdot x\\ \mbox{Subject to:}\\ Ax\leq b\\ x\geq 0\]
+\pagebreak
+
+$x$
+\pagebreak
+
+$c^T$
+\pagebreak
+
+$s,x_0\in\mathbb{R}^n$
+\pagebreak
+
+$v_0:=x_0-\frac{1}{2} s$
+\pagebreak
+
+$v_i:=x_0+s_i$
+\pagebreak
+
+$i=1,2,\dots,n$
+\pagebreak
+
+$s_i$
+\pagebreak
+
+$s_i:=e_i\cdot\left<e_i\cdot s\right>$
+\pagebreak
+
+$e_i$
+\pagebreak
+
+\[q = w + x\boldsymbol{i} + y\boldsymbol{j} + z\boldsymbol{k}\]
+\pagebreak
+
+\[q = [w, x, y, z]\]
+\pagebreak
+
+\[q = [w, \boldsymbol{v}] \]
+\pagebreak
+
+\[q = ||q||[\cos\psi, u_x\sin\psi,u_y\sin\psi, u_z\sin\psi].\]
+\pagebreak
+
+\[q = ||q||[\cos\psi, \boldsymbol{u}\sin\psi]\]
+\pagebreak
+
+$\psi = \frac{\theta}{2}$
+\pagebreak
+
+$\theta$
+\pagebreak
+
+$\boldsymbol{u} = [u_x, u_y, u_z]$
+\pagebreak
+
+$||q||$
+\pagebreak
+
+$q$
+\pagebreak
+
+\[q = [\cos\psi, u_x\sin\psi,u_y\sin\psi, u_z\sin\psi].\]
+\pagebreak
+
+$\boldsymbol{u}$
+\pagebreak
+
+$q_0, q_1$
+\pagebreak
+
+$r$
+\pagebreak
+
+$\theta \cdot \boldsymbol{u}$
+\pagebreak
+
+\[ \begin{equation} \begin{split} \psi &= ||r||\\ \boldsymbol{u} &= \frac{r}{\theta} \end{split} \end{equation} \]
+\pagebreak
+
+\[q = [\cos\psi, \boldsymbol{u}\sin\psi]\]
+\pagebreak
+
+$\psi = \theta / 2 $
+\pagebreak
+
+\[q.conjugate() = (w, -x, -y, -z).\]
+\pagebreak
+
+\[\exp(q) = e^w (\cos||\boldsymbol{v}||+ \frac{v}{||\boldsymbol{v}||})\sin||\boldsymbol{v}||\]
+\pagebreak
+
+$\boldsymbol{v} = [x, y, z].$
+\pagebreak
+
+\[\exp(q) = e^w (\cos||\boldsymbol{v}||+ \frac{v}{||\boldsymbol{v}||}\sin||\boldsymbol{v}||)\]
+\pagebreak
+
+\[\ln(q) = \ln||q|| + \frac{\boldsymbol{v}}{||\boldsymbol{v}||}\arccos\frac{w}{||q||}.\]
+\pagebreak
+
+\[\ln(q) = \ln||q|| + \frac{\boldsymbol{v}}{||\boldsymbol{v}||}\arccos\frac{w}{||q||}\]
+\pagebreak
+
+\[q^x = ||q||(cos(x\theta) + \boldsymbol{u}sin(x\theta))).\]
+\pagebreak
+
+\[q^x = ||q||(\cos(x\theta) + \boldsymbol{u}\sin(x\theta))).\]
+\pagebreak
+
+$\sqrt{q}$
+\pagebreak
+
+\[p^q = e^{q\ln(p)}.\]
+\pagebreak
+
+$p = (a, b, c, d) = (a, \boldsymbol{u})$
+\pagebreak
+
+$q = (w, x, y, z) = (w, \boldsymbol{v})$
+\pagebreak
+
+\[p \times q = \frac{pq- qp}{2}\]
+\pagebreak
+
+\[p \times q = \boldsymbol{u} \times \boldsymbol{v}\]
+\pagebreak
+
+\[p \times q = (cz-dy)i + (dx-bz)j + (by-xc)k \]
+\pagebreak
+
+\[p \times q = \frac{pq- qp}{2}.\]
+\pagebreak
+
+\[p \times q = \boldsymbol{u} \times \boldsymbol{v}.\]
+\pagebreak
+
+\[p \times q = (cz-dy)i + (dx-bz)j + (by-xc)k. \]
+\pagebreak
+
+\[||q|| = \sqrt{w^2 + x^2 + y^2 + z^2}.\]
+\pagebreak
+
+\[p = \frac{q}{||q||}\]
+\pagebreak
+
+$(p.x)^2 + (p.y)^2 + (p.z)^2 + (p.w)^2 = 1.$
+\pagebreak
+
+$q^{-1}$
+\pagebreak
+
+$q * q^{-1} = 1$
+\pagebreak
+
+\[\sinh(p) = \sin(w)\cos(||\boldsymbol{v}||) + \cosh(w)\frac{v}{||\boldsymbol{v}||}\sin||\boldsymbol{v}||\]
+\pagebreak
+
+$\sinh(p) = \sin(w)\cos(||\boldsymbol{v}||) + \cosh(w)\frac{v}{||\boldsymbol{v}||}\sin||\boldsymbol{v}||$
+\pagebreak
+
+\[\cosh(p) = \cosh(w) * \cos(||\boldsymbol{v}||) + \sinh(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sin(||\boldsymbol{v}||)\]
+\pagebreak
+
+\[\cosh(p) = \cosh(w) * \cos(||\boldsymbol{v}||) + \sinh(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}sin(||\boldsymbol{v}||)\]
+\pagebreak
+
+\[ \tanh(q) = \frac{\sinh(q)}{\cosh(q)}.\]
+\pagebreak
+
+\[\sin(p) = \sin(w) * \cosh(||\boldsymbol{v}||) + \cos(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sinh(||\boldsymbol{v}||)\]
+\pagebreak
+
+\[\cos(p) = \cos(w) * \cosh(||\boldsymbol{v}||) - \sin(w)\frac{\boldsymbol{v}}{||\boldsymbol{v}||}\sinh(||\boldsymbol{v}||)\]
+\pagebreak
+
+\[\tan(q) = \frac{\sin(q)}{\cos(q)}.\]
+\pagebreak
+
+\[\arcsin(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arcsinh(q\frac{\boldsymbol{v}}{||\boldsymbol{v}||})\]
+\pagebreak
+
+\[\arccos(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arccosh(q)\]
+\pagebreak
+
+\[\arctan(q) = -\frac{\boldsymbol{v}}{||\boldsymbol{v}||}arctanh(q\frac{\boldsymbol{v}}{||\boldsymbol{v}||})\]
+\pagebreak
+
+\[arcsinh(q) = \ln(q + \sqrt{q^2 + 1})\]
+\pagebreak
+
+\[arccosh(q) = \ln(q + \sqrt{q^2 - 1})\]
+\pagebreak
+
+\[arcosh(q) = \ln(q + \sqrt{q^2 - 1})\]
+\pagebreak
+
+\[arctanh(q) = \frac{\ln(q + 1) - \ln(1 - q)}{2}\]
+\pagebreak
+
+\[arcsinh(q) = \frac{\ln(q + 1) - \ln(1 - q)}{2}\]
+\pagebreak
+
+\[eps = |1 - dotValue|\]
+\pagebreak
+
+\[dotValue = (this.w^2 + this.x^2 + this,y^2 + this.z^2).\]
+\pagebreak
+
+$[1-eps, 1+eps]$
+\pagebreak
+
+\[\begin{bmatrix} x_0& x_1& x_2&...&x_n\\ y_0& y_1& y_2&...&y_n\\ z_0& z_1& z_2&...&z_n \end{bmatrix}\]
+\pagebreak
+
+\[\begin{bmatrix} x_0& x_1& x_2&...&x_n\\ y_0& y_1& y_2&...&y_n\\ z_0& z_1& z_2&...&z_n\\ 0&0&0&...&0 \end{bmatrix}\]
+\pagebreak
+
+\[ rVec = [\theta v_x, \theta v_y, \theta v_z]\]
+\pagebreak
+
+$\boldsymbol{v}$
+\pagebreak
+
+\[\psi = 2 *arccos(\frac{w}{||q||})\]
+\pagebreak
+
+$[0, 2\pi]$
+\pagebreak
+
+\[\begin{equation} \begin{split} \boldsymbol{v} &= \boldsymbol{u} ||\boldsymbol{v}||\\ &= \boldsymbol{u}||q||sin(\frac{\theta}{2}) \end{split} \end{equation}\]
+\pagebreak
+
+$v=[x, y ,z]$
+\pagebreak
+
+$p^{-1} * q$
+\pagebreak
+
+$\cos(\beta/2)$
+\pagebreak
+
+$\beta$
+\pagebreak
+
+\[p \cdot q = p.w \cdot q.w + p.x \cdot q.x + p.y \cdot q.y + p.z \cdot q.z\]
+\pagebreak
+
+$q_0$
+\pagebreak
+
+$q_1$
+\pagebreak
+
+\[Lerp(q_0, q_1, t) = (1 - t)q_0 + tq_1.\]
+\pagebreak
+
+$t = 0$
+\pagebreak
+
+$t= 1$
+\pagebreak
+
+$[0, 1]$
+\pagebreak
+
+$\overrightarrow{q_0q_1}$
+\pagebreak
+
+\[ Nlerp(q_0, q_1, t) = \frac{(1 - t)q_0 + tq_1}{||(1 - t)q_0 + tq_1||}.\]
+\pagebreak
+
+\[ Slerp(q_0, q_1, t) = \frac{\sin((1-t)\theta)}{\sin(\theta)}q_0 + \frac{\sin(t\theta)}{\sin(\theta)}q_1\]
+\pagebreak
+
+\[\theta=cos^{-1}(q_0\cdot q_1)\]
+\pagebreak
+
+$q_2$
+\pagebreak
+
+$q_3$
+\pagebreak
+
+\[Squad(q_i, s_i, s_{i+1}, q_{i+1}, t) = Slerp(Slerp(q_i, q_{i+1}, t), Slerp(s_i, s_{i+1}, t), 2t(1-t))\]
+\pagebreak
+
+\[s_i = q_i\exp(-\frac{\log(q^*_iq_{i+1}) + \log(q^*_iq_{i-1})}{4})\]
+\pagebreak
+
+$B\acute{e}zier$
+\pagebreak
+
+\[s_i = q_i\exp(-\frac{\log(q^*_iq_{i+1}) + \log(q^*_iq_{i-1})}{4}).\]
+\pagebreak
+
+$C^1$
+\pagebreak
+
+$q1$
+\pagebreak
+
+$q_0, q_1, q_2, q_3$
+\pagebreak
+
+$v_0, v_1, v_2$
+\pagebreak
+
+$v_0$
+\pagebreak
+
+$v_1$
+\pagebreak
+
+$t_0$
+\pagebreak
+
+$v_2$
+\pagebreak
+
+$-p$
+\pagebreak
+
+$p + (-p) = 0.$
+\pagebreak
+
+$q_i$
+\pagebreak
+
+$-q_i$
+\pagebreak
+
+\[ \begin{equation} \begin{split} p * q &= [p_0, \boldsymbol{u}]*[q_0, \boldsymbol{v}]\\ &=[p_0q_0 - \boldsymbol{u}\cdot \boldsymbol{v}, p_0\boldsymbol{v} + q_0\boldsymbol{u}+ \boldsymbol{u}\times \boldsymbol{v}]. \end{split} \end{equation} \]
+\pagebreak
+
+$\cdot$
+\pagebreak
+
+$\times $
+\pagebreak
+
+\[ \begin{equation} \begin{split} p * s &= [w, x, y, z] * s\\ &=[w * s, x * s, y * s, z * s]. \end{split} \end{equation} \]
+\pagebreak
+
+\[ \begin{equation} \begin{split} p / s &= [w, x, y, z] / s\\ &=[w/s, x/s, y/s, z/s]. \end{split} \end{equation} \]
+\pagebreak
+
+\[ \begin{equation} \begin{split} p / q &= p * q.inv()\\ \end{split} \end{equation} \]
+\pagebreak
+
+\[ \begin{equation} \begin{split} p / s &= [w, x, y, z] / s\\ &=[w / s, x / s, y / s, z / s]. \end{split} \end{equation} \]
+\pagebreak
+
+\[ \begin{equation} \begin{split} p / q&= p * q.inv()\\ \end{split} \end{equation} \]
+\pagebreak
+
+\[x \leq pt.x < x+width, y \leq pt.y < y+height\]
+\pagebreak
+
+$\texttt{rect} = \texttt{rect} \pm \texttt{point}$
+\pagebreak
+
+$\texttt{rect} = \texttt{rect} \pm \texttt{size}$
+\pagebreak
+
+$\subseteq$
+\pagebreak
+
+$[start,end)$
+\pagebreak
+
+$\texttt{Moments::m}_{ji}$
+\pagebreak
+
+\[\texttt{m} _{ji}= \sum _{x,y} \left ( \texttt{array} (x,y) \cdot x^j \cdot y^i \right )\]
+\pagebreak
+
+$\texttt{Moments::mu}_{ji}$
+\pagebreak
+
+\[\texttt{mu} _{ji}= \sum _{x,y} \left ( \texttt{array} (x,y) \cdot (x - \bar{x} )^j \cdot (y - \bar{y} )^i \right )\]
+\pagebreak
+
+$(\bar{x}, \bar{y})$
+\pagebreak
+
+\[\bar{x} = \frac{\texttt{m}_{10}}{\texttt{m}_{00}} , \; \bar{y} = \frac{\texttt{m}_{01}}{\texttt{m}_{00}}\]
+\pagebreak
+
+$\texttt{Moments::nu}_{ij}$
+\pagebreak
+
+\[\texttt{nu} _{ji}= \frac{\texttt{mu}_{ji}}{\texttt{m}_{00}^{(i+j)/2+1}} .\]
+\pagebreak
+
+$\texttt{mu}_{00}=\texttt{m}_{00}$
+\pagebreak
+
+$\texttt{nu}_{00}=1$
+\pagebreak
+
+$\texttt{nu}_{10}=\texttt{mu}_{10}=\texttt{mu}_{01}=\texttt{mu}_{10}=0$
+\pagebreak
+
+\[\texttt{(_Tp*)(((size_t)ptr + n-1) & -n)}\]
+\pagebreak
+
+\[\texttt{(sz + n-1) & -n}\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1}(I) + \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1}(I) + \texttt{src2} ) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1} + \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1}(I) - \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1}(I) - \texttt{src2} ) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1} - \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src2} - \texttt{src1}(I) ) \quad \texttt{if mask}(I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{scale} \cdot \texttt{src1} (I) \cdot \texttt{src2} (I))\]
+\pagebreak
+
+\[\texttt{dst(I) = saturate(src1(I)*scale/src2(I))}\]
+\pagebreak
+
+\[\texttt{dst(I) = saturate(scale/src2(I))}\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{scale} \cdot \texttt{src1} (I) + \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I)* \texttt{alpha} + \texttt{src2} (I)* \texttt{beta} + \texttt{gamma} )\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{saturate\_cast<uchar>} (| \texttt{src} (I)* \texttt{alpha} + \texttt{beta} |)\]
+\pagebreak
+
+\[\texttt{dst} (I) \leftarrow \texttt{lut(src(I) + d)}\]
+\pagebreak
+
+\[d = \fork{0}{if \(\texttt{src}\) has depth \(\texttt{CV_8U}\)}{128}{if \(\texttt{src}\) has depth \(\texttt{CV_8S}\)}\]
+\pagebreak
+
+\[\sum _{I: \; \texttt{src} (I) \ne0 } 1\]
+\pagebreak
+
+\[\begin{array}{l} N = \sum _{I: \; \texttt{mask} (I) \ne 0} 1 \\ M_c = \left ( \sum _{I: \; \texttt{mask} (I) \ne 0}{ \texttt{mtx} (I)_c} \right )/N \end{array}\]
+\pagebreak
+
+\[\begin{array}{l} N = \sum _{I, \texttt{mask} (I) \ne 0} 1 \\ \texttt{mean} _c = \frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \texttt{src} (I)_c}{N} \\ \texttt{stddev} _c = \sqrt{\frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \left ( \texttt{src} (I)_c - \texttt{mean} _c \right )^2}{N}} \end{array}\]
+\pagebreak
+
+$r(x)= \begin{pmatrix} x \\ 1-x \end{pmatrix}, x \in [-1;1]$
+\pagebreak
+
+$ L_{1}, L_{2} $
+\pagebreak
+
+$ L_{\infty} $
+\pagebreak
+
+$r(-1) = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$
+\pagebreak
+
+\begin{align*} \| r(-1) \|_{L_1} &= |-1| + |2| = 3 \\ \| r(-1) \|_{L_2} &= \sqrt{(-1)^{2} + (2)^{2}} = \sqrt{5} \\ \| r(-1) \|_{L_\infty} &= \max(|-1|,|2|) = 2 \end{align*}
+\pagebreak
+
+$r(0.5) = \begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$
+\pagebreak
+
+\begin{align*} \| r(0.5) \|_{L_1} &= |0.5| + |0.5| = 1 \\ \| r(0.5) \|_{L_2} &= \sqrt{(0.5)^{2} + (0.5)^{2}} = \sqrt{0.5} \\ \| r(0.5) \|_{L_\infty} &= \max(|0.5|,|0.5|) = 0.5. \end{align*}
+\pagebreak
+
+$\| r(x) \|_{L_1}, \| r(x) \|_{L_2}$
+\pagebreak
+
+$\| r(x) \|_{L_\infty}$
+\pagebreak
+
+$ L_{1} $
+\pagebreak
+
+$ r(x) $
+\pagebreak
+
+\[ \texttt{PSNR} = 10 \cdot \log_{10}{\left( \frac{R^2}{MSE} \right) } \]
+\pagebreak
+
+\[\| \texttt{dst} \| _{L_p}= \texttt{alpha}\]
+\pagebreak
+
+\[\min _I \texttt{dst} (I)= \texttt{alpha} , \, \, \max _I \texttt{dst} (I)= \texttt{beta}\]
+\pagebreak
+
+\[\texttt{mv} [c](I) = \texttt{src} (I)_c\]
+\pagebreak
+
+\[\texttt{dst} _{ij} = \left\{ \begin{array}{l l} \texttt{src} _{\texttt{src.rows}-i-1,j} & if\; \texttt{flipCode} = 0 \\ \texttt{src} _{i, \texttt{src.cols} -j-1} & if\; \texttt{flipCode} > 0 \\ \texttt{src} _{ \texttt{src.rows} -i-1, \texttt{src.cols} -j-1} & if\; \texttt{flipCode} < 0 \\ \end{array} \right.\]
+\pagebreak
+
+\[\texttt{dst} _{ij}= \texttt{src} _{i\mod src.rows, \; j\mod src.cols }\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \wedge \texttt{src2} \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \vee \texttt{src2} \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \oplus \texttt{src2} \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\]
+\pagebreak
+
+\[\texttt{dst} (I) = \neg \texttt{src} (I)\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1}(I) - \texttt{src2}(I)|)\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1}(I) - \texttt{src2} |)\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1} - \texttt{src2}(I) |)\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{lowerb} (I)_0 \leq \texttt{src} (I)_0 \leq \texttt{upperb} (I)_0\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{lowerb} (I)_0 \leq \texttt{src} (I)_0 \leq \texttt{upperb} (I)_0 \land \texttt{lowerb} (I)_1 \leq \texttt{src} (I)_1 \leq \texttt{upperb} (I)_1\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) \,\texttt{cmpop}\, \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1}(I) \,\texttt{cmpop}\, \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} \,\texttt{cmpop}\, \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{src2} (I))\]
+\pagebreak
+
+\[\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{value} )\]
+\pagebreak
+
+\[\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{src2} (I))\]
+\pagebreak
+
+\[\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{value} )\]
+\pagebreak
+
+\[\texttt{dst} (I) = \fork{\texttt{src}(I)^{power}}{if \(\texttt{power}\) is integer}{|\texttt{src}(I)|^{power}}{otherwise}\]
+\pagebreak
+
+\[\texttt{dst} [I] = e^{ src(I) }\]
+\pagebreak
+
+\[\texttt{dst} (I) = \log (\texttt{src}(I)) \]
+\pagebreak
+
+\[\begin{array}{l} \texttt{x} (I) = \texttt{magnitude} (I) \cos ( \texttt{angle} (I)) \\ \texttt{y} (I) = \texttt{magnitude} (I) \sin ( \texttt{angle} (I)) \\ \end{array}\]
+\pagebreak
+
+\[\begin{array}{l} \texttt{magnitude} (I)= \sqrt{\texttt{x}(I)^2+\texttt{y}(I)^2} , \\ \texttt{angle} (I)= \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))[ \cdot180 / \pi ] \end{array}\]
+\pagebreak
+
+\[\texttt{angle} (I) = \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))\]
+\pagebreak
+
+\[\texttt{dst} (I) = \sqrt{\texttt{x}(I)^2 + \texttt{y}(I)^2}\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{alpha} \cdot \texttt{src1} ^T \cdot \texttt{src2} + \texttt{beta} \cdot \texttt{src3} ^T\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} )^T ( \texttt{src} - \texttt{delta} )\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} ) ( \texttt{src} - \texttt{delta} )^T\]
+\pagebreak
+
+\[\texttt{dst} (i,j) = \texttt{src} (j,i)\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{m} \cdot \texttt{src} (I)\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{m} \cdot [ \texttt{src} (I); 1]\]
+\pagebreak
+
+\[(x, y, z) \rightarrow (x'/w, y'/w, z'/w)\]
+\pagebreak
+
+\[(x', y', z', w') = \texttt{mat} \cdot \begin{bmatrix} x & y & z & 1 \end{bmatrix}\]
+\pagebreak
+
+\[w = \fork{w'}{if \(w' \ne 0\)}{\infty}{otherwise}\]
+\pagebreak
+
+$\texttt{m}_{ij}=\texttt{m}_{ji}$
+\pagebreak
+
+$i > j$
+\pagebreak
+
+$i < j$
+\pagebreak
+
+\[\texttt{mtx} (i,j)= \fork{\texttt{value}}{ if \(i=j\)}{0}{otherwise}\]
+\pagebreak
+
+\[\mathrm{tr} ( \texttt{mtx} ) = \sum _i \texttt{mtx} (i,i)\]
+\pagebreak
+
+\[\texttt{dst} = \arg \min _X \| \texttt{src1} \cdot \texttt{X} - \texttt{src2} \|\]
+\pagebreak
+
+$\texttt{src1}^T\texttt{src1}$
+\pagebreak
+
+$\texttt{src1}\cdot\texttt{dst}=0$
+\pagebreak
+
+\[\texttt{coeffs} [0] x^3 + \texttt{coeffs} [1] x^2 + \texttt{coeffs} [2] x + \texttt{coeffs} [3] = 0\]
+\pagebreak
+
+\[x^3 + \texttt{coeffs} [0] x^2 + \texttt{coeffs} [1] x + \texttt{coeffs} [2] = 0\]
+\pagebreak
+
+\[\texttt{coeffs} [n] x^{n} + \texttt{coeffs} [n-1] x^{n-1} + ... + \texttt{coeffs} [1] x + \texttt{coeffs} [0] = 0\]
+\pagebreak
+
+\[d( \texttt{vec1} , \texttt{vec2} )= \sqrt{\sum_{i,j}{\texttt{icovar(i,j)}\cdot(\texttt{vec1}(I)-\texttt{vec2}(I))\cdot(\texttt{vec1(j)}-\texttt{vec2(j)})} }\]
+\pagebreak
+
+\[Y = F^{(N)} \cdot X,\]
+\pagebreak
+
+$F^{(N)}_{jk}=\exp(-2\pi i j k/N)$
+\pagebreak
+
+$i=\sqrt{-1}$
+\pagebreak
+
+\[\begin{array}{l} X'= \left (F^{(N)} \right )^{-1} \cdot Y = \left (F^{(N)} \right )^* \cdot y \\ X = (1/N) \cdot X, \end{array}\]
+\pagebreak
+
+$F^*=\left(\textrm{Re}(F^{(N)})-\textrm{Im}(F^{(N)})\right)^T$
+\pagebreak
+
+\[Y = F^{(M)} \cdot X \cdot F^{(N)}\]
+\pagebreak
+
+\[\begin{array}{l} X'= \left (F^{(M)} \right )^* \cdot Y \cdot \left (F^{(N)} \right )^* \\ X = \frac{1}{M \cdot N} \cdot X' \end{array}\]
+\pagebreak
+
+\[\begin{bmatrix} Re Y_{0,0} & Re Y_{0,1} & Im Y_{0,1} & Re Y_{0,2} & Im Y_{0,2} & \cdots & Re Y_{0,N/2-1} & Im Y_{0,N/2-1} & Re Y_{0,N/2} \\ Re Y_{1,0} & Re Y_{1,1} & Im Y_{1,1} & Re Y_{1,2} & Im Y_{1,2} & \cdots & Re Y_{1,N/2-1} & Im Y_{1,N/2-1} & Re Y_{1,N/2} \\ Im Y_{1,0} & Re Y_{2,1} & Im Y_{2,1} & Re Y_{2,2} & Im Y_{2,2} & \cdots & Re Y_{2,N/2-1} & Im Y_{2,N/2-1} & Im Y_{1,N/2} \\ \hdotsfor{9} \\ Re Y_{M/2-1,0} & Re Y_{M-3,1} & Im Y_{M-3,1} & \hdotsfor{3} & Re Y_{M-3,N/2-1} & Im Y_{M-3,N/2-1}& Re Y_{M/2-1,N/2} \\ Im Y_{M/2-1,0} & Re Y_{M-2,1} & Im Y_{M-2,1} & \hdotsfor{3} & Re Y_{M-2,N/2-1} & Im Y_{M-2,N/2-1}& Im Y_{M/2-1,N/2} \\ Re Y_{M/2,0} & Re Y_{M-1,1} & Im Y_{M-1,1} & \hdotsfor{3} & Re Y_{M-1,N/2-1} & Im Y_{M-1,N/2-1}& Re Y_{M/2,N/2} \end{bmatrix}\]
+\pagebreak
+
+\[Y = C^{(N)} \cdot X\]
+\pagebreak
+
+\[C^{(N)}_{jk}= \sqrt{\alpha_j/N} \cos \left ( \frac{\pi(2k+1)j}{2N} \right )\]
+\pagebreak
+
+$\alpha_0=1$
+\pagebreak
+
+$\alpha_j=2$
+\pagebreak
+
+\[X = \left (C^{(N)} \right )^{-1} \cdot Y = \left (C^{(N)} \right )^T \cdot Y\]
+\pagebreak
+
+$C^{(N)}$
+\pagebreak
+
+$C^{(N)} \cdot \left(C^{(N)}\right)^T = I$
+\pagebreak
+
+\[Y = C^{(N)} \cdot X \cdot \left (C^{(N)} \right )^T\]
+\pagebreak
+
+\[X = \left (C^{(N)} \right )^T \cdot X \cdot C^{(N)}\]
+\pagebreak
+
+\[\texttt{low} _c \leq \texttt{dst} (I)_c < \texttt{high} _c\]
+\pagebreak
+
+$\texttt{bestLabels}_i$
+\pagebreak
+
+$i^{th}$
+\pagebreak
+
+\[\sum _i \| \texttt{samples} _i - \texttt{centers} _{ \texttt{labels} _i} \| ^2\]
+\pagebreak
+
+\[\texttt{scale} \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...]^T \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...],\]
+\pagebreak
+
+\[\texttt{scale} \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...] \cdot [ \texttt{vects} [0]- \texttt{mean} , \texttt{vects} [1]- \texttt{mean} ,...]^T,\]
+\pagebreak
+
+\[dst = \arg \min _{x: \| x \| =1} \| src \cdot x \|\]
+\pagebreak
+
+\[\texttt{x} = \texttt{vt} ^T \cdot diag( \texttt{w} )^{-1} \cdot \texttt{u} ^T \cdot \texttt{rhs} \sim \texttt{A} ^{-1} \cdot \texttt{rhs}\]
+\pagebreak
+
+$x_t$
+\pagebreak
+
+$h_{t-1}$
+\pagebreak
+
+$o_t$
+\pagebreak
+
+$h_t$
+\pagebreak
+
+$N_o$
+\pagebreak
+
+$ W_{xo} $
+\pagebreak
+
+$N_h$
+\pagebreak
+
+$ W_{hh} $
+\pagebreak
+
+\[ groupSize = \frac{number\ of\ channels}{group} \]
+\pagebreak
+
+\[ output(n, c, h, w) = input(n, groupSize \times (c \% group) + \lfloor \frac{c}{group} \rfloor, h, w) \]
+\pagebreak
+
+$ (1 \times 1 \times N \times 7) $
+\pagebreak
+
+$ L_p $
+\pagebreak
+
+$ L_1 $
+\pagebreak
+
+$ L_2 $
+\pagebreak
+
+$ \epsilon $
+\pagebreak
+
+\[ norm = \sqrt[p]{\epsilon + \sum_{x, y, c} |src(x, y, c)|^p } \\ dst(x, y, c) = \frac{ src(x, y, c) }{norm} \]
+\pagebreak
+
+\[ norm(c) = \sqrt[p]{\epsilon + \sum_{x, y} |src(x, y, c)|^p } \\ dst(x, y, c) = \frac{ src(x, y, c) }{norm(c)} \]
+\pagebreak
+
+$c_t$
+\pagebreak
+
+\begin{eqnarray*} h_t &= o_t \odot tanh(c_t), \\ c_t &= f_t \odot c_{t-1} + i_t \odot g_t, \\ \end{eqnarray*}
+\pagebreak
+
+$\odot$
+\pagebreak
+
+$i_t, f_t, o_t, g_t$
+\pagebreak
+
+\begin{eqnarray*} i_t &= sigmoid&(W_{xi} x_t + W_{hi} h_{t-1} + b_i), \\ f_t &= sigmoid&(W_{xf} x_t + W_{hf} h_{t-1} + b_f), \\ o_t &= sigmoid&(W_{xo} x_t + W_{ho} h_{t-1} + b_o), \\ g_t &= tanh &(W_{xg} x_t + W_{hg} h_{t-1} + b_g), \\ \end{eqnarray*}
+\pagebreak
+
+$W_{x?}$
+\pagebreak
+
+$W_{h?}$
+\pagebreak
+
+$b_{?}$
+\pagebreak
+
+$W_{x?} \in R^{N_h \times N_x}$
+\pagebreak
+
+$W_{h?} \in R^{N_h \times N_h}$
+\pagebreak
+
+$b_? \in R^{N_h}$
+\pagebreak
+
+$ W_x = [W_{xi}; W_{xf}; W_{xo}, W_{xg}] $
+\pagebreak
+
+$W_x$
+\pagebreak
+
+$ W_{x?} $
+\pagebreak
+
+$ W_x \in R^{4N_h \times N_x} $
+\pagebreak
+
+$ W_h = [W_{hi}; W_{hf}; W_{ho}, W_{hg}], W_h \in R^{4N_h \times N_h} $
+\pagebreak
+
+$ b = [b_i; b_f, b_o, b_g]$
+\pagebreak
+
+$b \in R^{4N_h} $
+\pagebreak
+
+$ W_h $
+\pagebreak
+
+$ W_x $
+\pagebreak
+
+$ b $
+\pagebreak
+
+$ c_t $
+\pagebreak
+
+$ x_t $
+\pagebreak
+
+$ h_t $
+\pagebreak
+
+\begin{eqnarray*} h_t &= tanh&(W_{hh} h_{t-1} + W_{xh} x_t + b_h), \\ o_t &= tanh&(W_{ho} h_t + b_o), \end{eqnarray*}
+\pagebreak
+
+$ W_{xh} $
+\pagebreak
+
+$ b_{h} $
+\pagebreak
+
+$ b_{o} $
+\pagebreak
+
+$nms\_threshold_{i+1}=eta\cdot nms\_threshold_i$
+\pagebreak
+
+\[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\]
+\pagebreak
+
+$\frac{4*\pi*Area}{perimeter * perimeter}$
+\pagebreak
+
+$\delta_t$
+\pagebreak
+
+$(size_{i}-size_{i-delta})/size_{i-delta}$
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} + \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{src1}(I) - \texttt{src2}(I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} - \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src} - \texttt{c}\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{val} - \texttt{src}\]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I) \cdot \texttt{multiplier} )\]
+\pagebreak
+
+\[\texttt{dst(I) = saturate(src(I)*scale/divisor)}\]
+\pagebreak
+
+\[\texttt{dst(I) = saturate(divident*scale/src(I))}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) > \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} > \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) < \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} < \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) >= \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} >= \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) <= \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} <= \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) == \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} == \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst} (I) = \texttt{src1} (I) != \texttt{src2} (I)\]
+\pagebreak
+
+\[\texttt{dst} = \texttt{src1} != \texttt{src2}\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{saturate} (| \texttt{src1}(I) - \texttt{matC}(I)|)\]
+\pagebreak
+
+\[\texttt{dst}(I) = \texttt{alpha} * \texttt{src1}(I) - \texttt{beta} * \texttt{src2}(I) + \texttt{gamma} \]
+\pagebreak
+
+\begin{align*} \| r(-1) \|_{L_1} &= |-1| + |2| = 3 \\ \end{align*}
+\pagebreak
+
+\begin{align*} \| r(0.5) \|_{L_1} &= |0.5| + |0.5| = 1 \\ \end{align*}
+\pagebreak
+
+$ L_{2} $
+\pagebreak
+
+\begin{align*} \| r(-1) \|_{L_2} &= \sqrt{(-1)^{2} + (2)^{2}} = \sqrt{5} \\ \end{align*}
+\pagebreak
+
+\begin{align*} \| r(0.5) \|_{L_2} &= \sqrt{(0.5)^{2} + (0.5)^{2}} = \sqrt{0.5} \\ \end{align*}
+\pagebreak
+
+\begin{align*} \| r(-1) \|_{L_\infty} &= \max(|-1|,|2|) = 2 \end{align*}
+\pagebreak
+
+\begin{align*} \| r(0.5) \|_{L_\infty} &= \max(|0.5|,|0.5|) = 0.5. \end{align*}
+\pagebreak
+
+\[\texttt{sum} (X,Y) = \sum _{x<X,y<Y} \texttt{image} (x,y)\]
+\pagebreak
+
+\[\texttt{sqsum} (X,Y) = \sum _{x<X,y<Y} \texttt{image} (x,y)^2\]
+\pagebreak
+
+$(W+1)\times (H+1)$
+\pagebreak
+
+$(W+1)\times (H+)$
+\pagebreak
+
+\[\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}\]
+\pagebreak
+
+\[\texttt{(double)dsize.width/src.cols}\]
+\pagebreak
+
+\[\texttt{(double)dsize.height/src.rows}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \texttt{src} (map_x(x,y),map_y(x,y))\]
+\pagebreak
+
+$map_x$
+\pagebreak
+
+$map_y$
+\pagebreak
+
+$map_1$
+\pagebreak
+
+$map_2$
+\pagebreak
+
+\[\texttt{dst} (I) \leftarrow \texttt{lut(src(I))}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \texttt{src} \left ( \frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} , \frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} \right )\]
+\pagebreak
+
+$3\times 3$
+\pagebreak
+
+$\texttt{dst}\rightarrow\texttt{src}$
+\pagebreak
+
+\[\texttt{dst} (x,y) = \texttt{src} ( \texttt{M} _{11} x + \texttt{M} _{12} y + \texttt{M} _{13}, \texttt{M} _{21} x + \texttt{M} _{22} y + \texttt{M} _{23})\]
+\pagebreak
+
+$2\times 3$
+\pagebreak
+
+$G = \sqrt{G_x^2 + G_y^2}$
+\pagebreak
+
+$(-1,-1)$
+\pagebreak
+
+\[\texttt{dst} (x,y) = \sum _{ \substack{0\leq x' < \texttt{kernel.cols}\\{0\leq y' < \texttt{kernel.rows}}}} \texttt{kernel} (x',y')* \texttt{src} (x+x'- \texttt{anchor.x} ,y+y'- \texttt{anchor.y} )\]
+\pagebreak
+
+\[\texttt{K} = \alpha \begin{bmatrix} 1 & 1 & 1 & \cdots & 1 & 1 \\ 1 & 1 & 1 & \cdots & 1 & 1 \\ \hdotsfor{6} \\ 1 & 1 & 1 & \cdots & 1 & 1 \end{bmatrix}\]
+\pagebreak
+
+\[\alpha = \begin{cases} \frac{1}{\texttt{ksize.width*ksize.height}} & \texttt{when } \texttt{normalize=true} \\1 & \texttt{otherwise} \end{cases}\]
+\pagebreak
+
+\[\texttt{K} = \frac{1}{\texttt{ksize.width*ksize.height}} \begin{bmatrix} 1 & 1 & 1 & \cdots & 1 & 1 \\ 1 & 1 & 1 & \cdots & 1 & 1 \\ \hdotsfor{6} \\ 1 & 1 & 1 & \cdots & 1 & 1 \\ \end{bmatrix}\]
+\pagebreak
+
+$\texttt{ksize} \times \texttt{ksize}$
+\pagebreak
+
+\[\texttt{dst} (x,y) = \min _{(x',y'): \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \max _{(x',y'): \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\]
+\pagebreak
+
+$\texttt{ksize = 1}$
+\pagebreak
+
+$1 \times 3$
+\pagebreak
+
+$3\times3$
+\pagebreak
+
+\[\vecthreethree{-3}{0}{3}{-10}{0}{10}{-3}{0}{3}\]
+\pagebreak
+
+\[\texttt{dst} = \frac{\partial^{xorder+yorder} \texttt{src}}{\partial x^{xorder} \partial y^{yorder}}\]
+\pagebreak
+
+\[\vecthreethree{-1}{0}{1}{-2}{0}{2}{-1}{0}{1}\]
+\pagebreak
+
+\[\vecthreethree{-1}{-2}{-1}{0}{0}{0}{1}{2}{1}\]
+\pagebreak
+
+\[\texttt{dst} = \Delta \texttt{src} = \frac{\partial^2 \texttt{src}}{\partial x^2} + \frac{\partial^2 \texttt{src}}{\partial y^2}\]
+\pagebreak
+
+$3 \times 3$
+\pagebreak
+
+\[\vecthreethree {0}{1}{0}{1}{-4}{1}{0}{1}{0}\]
+\pagebreak
+
+$L_2$
+\pagebreak
+
+$=\sqrt{(dI/dx)^2 + (dI/dy)^2}$
+\pagebreak
+
+$L_1$
+\pagebreak
+
+$=|dI/dx|+|dI/dy|$
+\pagebreak
+
+$\texttt{qualityLevel} \cdot \max_{x,y} qualityMeasureMap(x,y)$
+\pagebreak
+
+\[H'_i = \sum _{0 \le j < i} H(j)\]
+\pagebreak
+
+$H'$
+\pagebreak
+
+$\texttt{dst}(x,y) = H'(\texttt{src}(x,y))$
+\pagebreak
+
+$\sum_i \rho(r_i)$
+\pagebreak
+
+$r_i$
+\pagebreak
+
+$\rho(r)$
+\pagebreak
+
+\[\rho (r) = r^2/2 \quad \text{(the simplest and the fastest least-squares method)}\]
+\pagebreak
+
+\[\rho (r) = r\]
+\pagebreak
+
+\[\rho (r) = 2 \cdot ( \sqrt{1 + \frac{r^2}{2}} - 1)\]
+\pagebreak
+
+\[\rho \left (r \right ) = C^2 \cdot \left ( \frac{r}{C} - \log{\left(1 + \frac{r}{C}\right)} \right ) \quad \text{where} \quad C=1.3998\]
+\pagebreak
+
+\[\rho \left (r \right ) = \frac{C^2}{2} \cdot \left ( 1 - \exp{\left(-\left(\frac{r}{C}\right)^2\right)} \right ) \quad \text{where} \quad C=2.9846\]
+\pagebreak
+
+\[\rho (r) = \fork{r^2/2}{if \(r < C\)}{C \cdot (r-C/2)}{otherwise} \quad \text{where} \quad C=1.345\]
+\pagebreak
+
+$w_i$
+\pagebreak
+
+$\rho(r_i)$
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{0.299} * \texttt{src}(I).R + \texttt{0.587} * \texttt{src}(I).G + \texttt{0.114} * \texttt{src}(I).B \]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{rY} * \texttt{src}(I).R + \texttt{gY} * \texttt{src}(I).G + \texttt{bY} * \texttt{src}(I).B \]
+\pagebreak
+
+\[\texttt{dst} (I)= \texttt{0.114} * \texttt{src}(I).B + \texttt{0.587} * \texttt{src}(I).G + \texttt{0.299} * \texttt{src}(I).R \]
+\pagebreak
+
+$\rightarrow$
+\pagebreak
+
+\[\texttt{N} = (\texttt{num_classes} + \texttt{5}) * \texttt{5},\]
+\pagebreak
+
+$\texttt{delay}\leq 0$
+\pagebreak
+
+$\sigma$
+\pagebreak
+
+\[\sigma = 0.3 (n/2 - 1) + 0.8 \quad \text{where} \quad n= \begin{array}{l l} \mbox{\texttt{size1} for horizontal kernel} \\ \mbox{\texttt{size2} for vertical kernel} \end{array}\]
+\pagebreak
+
+$7\times 7$
+\pagebreak
+
+$0<=i<cDims$
+\pagebreak
+
+$\texttt{lower}_0, \texttt{upper}_0, \texttt{lower}_1, \texttt{upper}_1 = \texttt{lower}_2, ... \texttt{upper}_{dims[i]-1}$
+\pagebreak
+
+$\texttt{lower}_j$
+\pagebreak
+
+$\texttt{upper}_j$
+\pagebreak
+
+\[\texttt{disthist} (I)= \forkthree{0}{if \(\texttt{hist1}(I)=0\)}{\texttt{scale}}{if \(\texttt{hist1}(I) \ne 0\) and \(\texttt{hist2}(I) > \texttt{hist1}(I)\)}{\frac{\texttt{hist2}(I) \cdot \texttt{scale}}{\texttt{hist1}(I)}}{if \(\texttt{hist1}(I) \ne 0\) and \(\texttt{hist2}(I) \le \texttt{hist1}(I)\)}\]
+\pagebreak
+
+$\texttt{size1}\times\texttt{size2}$
+\pagebreak
+
+$1/(\texttt{size1}\cdot\texttt{size2})$
+\pagebreak
+
+$\texttt{size1}\times\texttt{size1}$
+\pagebreak
+
+\[I_1(A,B) = \sum _{i=1...7} \left | \frac{1}{m^A_i} - \frac{1}{m^B_i} \right |\]
+\pagebreak
+
+\[I_2(A,B) = \sum _{i=1...7} \left | m^A_i - m^B_i \right |\]
+\pagebreak
+
+\[I_3(A,B) = \max _{i=1...7} \frac{ \left| m^A_i - m^B_i \right| }{ \left| m^A_i \right| }\]
+\pagebreak
+
+$(x, y)$
+\pagebreak
+
+\[\texttt{dst} (x,y)= \texttt{src} (f_x(x,y), f_y(x,y))\]
+\pagebreak
+
+$\left<g_x, g_y\right>: \texttt{src} \rightarrow \texttt{dst}$
+\pagebreak
+
+$\left<f_x, f_y\right>: \texttt{dst} \rightarrow \texttt{src}$
+\pagebreak
+
+$f_x(x,y)$
+\pagebreak
+
+$f_y(x,y)$
+\pagebreak
+
+$\left<f_x, f_y\right>$
+\pagebreak
+
+$(f_x(x,y), f_y(x,y))$
+\pagebreak
+
+\[\texttt{Scalar} (blue \_ component, green \_ component, red \_ component[, alpha \_ component])\]
+\pagebreak
+
+$\texttt{Point}(x,y)\rightarrow\texttt{Point2f}(x*2^{-shift},y*2^{-shift})$
+\pagebreak
+
+$B$
+\pagebreak
+
+$\begin{array}{l} m^A_i = \mathrm{sign} (h^A_i) \cdot \log{h^A_i} \\ m^B_i = \mathrm{sign} (h^B_i) \cdot \log{h^B_i} \end{array}$
+\pagebreak
+
+$h^A_i, h^B_i$
+\pagebreak
+
+$\texttt{ksize} \times 1$
+\pagebreak
+
+\[G_i= \alpha *e^{-(i-( \texttt{ksize} -1)/2)^2/(2* \texttt{sigma}^2)},\]
+\pagebreak
+
+$i=0..\texttt{ksize}-1$
+\pagebreak
+
+$\sum_i G_i=1$
+\pagebreak
+
+$\texttt{ksize} \mod 2 = 1$
+\pagebreak
+
+$=2^{ksize*2-dx-dy-2}$
+\pagebreak
+
+$(-1, -1)$
+\pagebreak
+
+\[\alpha = \begin{cases} \frac{1}{\texttt{ksize.width*ksize.height}} & \texttt{when } \texttt{normalize=true} \\1 & \texttt{otherwise}\end{cases}\]
+\pagebreak
+
+$ (x, y) $
+\pagebreak
+
+\[\texttt{Scharr(src, dst, ddepth, dx, dy, scale, delta, borderType)}\]
+\pagebreak
+
+\[\texttt{Sobel(src, dst, ddepth, dx, dy, FILTER_SCHARR, scale, delta, borderType)} .\]
+\pagebreak
+
+$\min(\lambda_1, \lambda_2)$
+\pagebreak
+
+$2\times2$
+\pagebreak
+
+$M^{(x,y)}$
+\pagebreak
+
+$\texttt{blockSize} \times \texttt{blockSize}$
+\pagebreak
+
+\[\texttt{dst} (x,y) = \mathrm{det} M^{(x,y)} - k \cdot \left ( \mathrm{tr} M^{(x,y)} \right )^2\]
+\pagebreak
+
+$\times$
+\pagebreak
+
+$S(p)$
+\pagebreak
+
+\[M = \begin{bmatrix} \sum _{S(p)}(dI/dx)^2 & \sum _{S(p)}dI/dx dI/dy \\ \sum _{S(p)}dI/dx dI/dy & \sum _{S(p)}(dI/dy)^2 \end{bmatrix}\]
+\pagebreak
+
+$M$
+\pagebreak
+
+$(\lambda_1, \lambda_2, x_1, y_1, x_2, y_2)$
+\pagebreak
+
+$\lambda_1, \lambda_2$
+\pagebreak
+
+$x_1, y_1$
+\pagebreak
+
+$\lambda_1$
+\pagebreak
+
+$x_2, y_2$
+\pagebreak
+
+$\lambda_2$
+\pagebreak
+
+\[\texttt{dst} = (D_x \texttt{src} )^2 \cdot D_{yy} \texttt{src} + (D_y \texttt{src} )^2 \cdot D_{xx} \texttt{src} - 2 D_x \texttt{src} \cdot D_y \texttt{src} \cdot D_{xy} \texttt{src}\]
+\pagebreak
+
+$D_x$
+\pagebreak
+
+$D_y$
+\pagebreak
+
+$D_{xx}$
+\pagebreak
+
+$D_{yy}$
+\pagebreak
+
+$D_{xy}$
+\pagebreak
+
+\[\epsilon _i = {DI_{p_i}}^T \cdot (q - p_i)\]
+\pagebreak
+
+${DI_{p_i}}$
+\pagebreak
+
+$\epsilon_i$
+\pagebreak
+
+\[\sum _i(DI_{p_i} \cdot {DI_{p_i}}^T) \cdot q - \sum _i(DI_{p_i} \cdot {DI_{p_i}}^T \cdot p_i)\]
+\pagebreak
+
+$G$
+\pagebreak
+
+\[q = G^{-1} \cdot b\]
+\pagebreak
+
+$(5*2+1) \times (5*2+1) = 11 \times 11$
+\pagebreak
+
+$(\rho, \theta)$
+\pagebreak
+
+$(\rho, \theta, \textrm{votes})$
+\pagebreak
+
+$\rho$
+\pagebreak
+
+$0 \sim \textrm{vertical line}, \pi/2 \sim \textrm{horizontal line}$
+\pagebreak
+
+$\textrm{votes}$
+\pagebreak
+
+$>\texttt{threshold}$
+\pagebreak
+
+$(x_1, y_1, x_2, y_2)$
+\pagebreak
+
+$(x_1,y_1)$
+\pagebreak
+
+$(x_2, y_2)$
+\pagebreak
+
+$(votes, rho, theta)$
+\pagebreak
+
+$(x, y, radius)$
+\pagebreak
+
+$(x, y, radius, votes)$
+\pagebreak
+
+$\texttt{(CV_32FC1, CV_32FC1)} \rightarrow \texttt{(CV_16SC2, CV_16UC1)}$
+\pagebreak
+
+$\texttt{(CV_32FC2)} \rightarrow \texttt{(CV_16SC2, CV_16UC1)}$
+\pagebreak
+
+\[\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{center.x} - \beta \cdot \texttt{center.y} \\ - \beta & \alpha & \beta \cdot \texttt{center.x} + (1- \alpha ) \cdot \texttt{center.y} \end{bmatrix}\]
+\pagebreak
+
+\[\begin{array}{l} \alpha = \texttt{scale} \cdot \cos \texttt{angle} , \\ \beta = \texttt{scale} \cdot \sin \texttt{angle} \end{array}\]
+\pagebreak
+
+\[\begin{bmatrix} x'_i \\ y'_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}\]
+\pagebreak
+
+\[dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2\]
+\pagebreak
+
+\[\begin{bmatrix} a_{11} & a_{12} & b_1 \\ a_{21} & a_{22} & b_2 \end{bmatrix}\]
+\pagebreak
+
+\[\begin{bmatrix} t_i x'_i \\ t_i y'_i \\ t_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}\]
+\pagebreak
+
+\[dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2,3\]
+\pagebreak
+
+\[patch(x, y) = src(x + \texttt{center.x} - ( \texttt{dst.cols} -1)*0.5, y + \texttt{center.y} - ( \texttt{dst.rows} -1)*0.5)\]
+\pagebreak
+
+\[ dst(\rho , \phi ) = src(x,y) \]
+\pagebreak
+
+\[ \begin{array}{l} \vec{I} = (x - center.x, \;y - center.y) \\ \phi = Kangle \cdot \texttt{angle} (\vec{I}) \\ \rho = \left\{\begin{matrix} Klin \cdot \texttt{magnitude} (\vec{I}) & default \\ Klog \cdot log_e(\texttt{magnitude} (\vec{I})) & if \; semilog \\ \end{matrix}\right. \end{array} \]
+\pagebreak
+
+\[ \begin{array}{l} Kangle = dsize.height / 2\Pi \\ Klin = dsize.width / maxRadius \\ Klog = dsize.width / log_e(maxRadius) \\ \end{array} \]
+\pagebreak
+
+\[\begin{array}{l} dsize.area \leftarrow (maxRadius^2 \cdot \Pi) \\ dsize.width = \texttt{cvRound}(maxRadius) \\ dsize.height = \texttt{cvRound}(maxRadius \cdot \Pi) \\ \end{array}\]
+\pagebreak
+
+\[\begin{array}{l} dsize.height = \texttt{cvRound}(dsize.width \cdot \Pi) \\ \end{array} \]
+\pagebreak
+
+$(rho, phi)->(x, y)$
+\pagebreak
+
+\[\texttt{tilted} (X,Y) = \sum _{y<Y,abs(x-X+1) \leq Y-y-1} \texttt{image} (x,y)\]
+\pagebreak
+
+\[\sum _{x_1 \leq x < x_2, \, y_1 \leq y < y_2} \texttt{image} (x,y) = \texttt{sum} (x_2,y_2)- \texttt{sum} (x_1,y_2)- \texttt{sum} (x_2,y_1)+ \texttt{sum} (x_1,y_1)\]
+\pagebreak
+
+$W \times H$
+\pagebreak
+
+\[\texttt{dst} (x,y) \leftarrow \texttt{dst} (x,y) + \texttt{src} (x,y) \quad \text{if} \quad \texttt{mask} (x,y) \ne 0\]
+\pagebreak
+
+\[\texttt{dst} (x,y) \leftarrow \texttt{dst} (x,y) + \texttt{src} (x,y)^2 \quad \text{if} \quad \texttt{mask} (x,y) \ne 0\]
+\pagebreak
+
+\[\texttt{dst} (x,y) \leftarrow \texttt{dst} (x,y) + \texttt{src1} (x,y) \cdot \texttt{src2} (x,y) \quad \text{if} \quad \texttt{mask} (x,y) \ne 0\]
+\pagebreak
+
+\[\texttt{dst} (x,y) \leftarrow (1- \texttt{alpha} ) \cdot \texttt{dst} (x,y) + \texttt{alpha} \cdot \texttt{src} (x,y) \quad \text{if} \quad \texttt{mask} (x,y) \ne 0\]
+\pagebreak
+
+\[\mathbf{G}_a = \mathcal{F}\{src_1\}, \; \mathbf{G}_b = \mathcal{F}\{src_2\}\]
+\pagebreak
+
+$\mathcal{F}$
+\pagebreak
+
+\[R = \frac{ \mathbf{G}_a \mathbf{G}_b^*}{|\mathbf{G}_a \mathbf{G}_b^*|}\]
+\pagebreak
+
+\[r = \mathcal{F}^{-1}\{R\}\]
+\pagebreak
+
+\[(\Delta x, \Delta y) = \texttt{weightedCentroid} \{\arg \max_{(x, y)}\{r\}\}\]
+\pagebreak
+
+\[dst(x,y) = \fork{\texttt{maxValue}}{if \(src(x,y) > T(x,y)\)}{0}{otherwise}\]
+\pagebreak
+
+\[dst(x,y) = \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\]
+\pagebreak
+
+$T(x,y)$
+\pagebreak
+
+\[\begin{array}{l} | \texttt{dstsize.width} *2-src.cols| \leq 2 \\ | \texttt{dstsize.height} *2-src.rows| \leq 2 \end{array}\]
+\pagebreak
+
+\[\frac{1}{256} \begin{bmatrix} 1 & 4 & 6 & 4 & 1 \\ 4 & 16 & 24 & 16 & 4 \\ 6 & 24 & 36 & 24 & 6 \\ 4 & 16 & 24 & 16 & 4 \\ 1 & 4 & 6 & 4 & 1 \end{bmatrix}\]
+\pagebreak
+
+\[\begin{array}{l} | \texttt{dstsize.width} -src.cols*2| \leq ( \texttt{dstsize.width} \mod 2) \\ | \texttt{dstsize.height} -src.rows*2| \leq ( \texttt{dstsize.height} \mod 2) \end{array}\]
+\pagebreak
+
+$L_0$
+\pagebreak
+
+$U_{\texttt{histSize}[i]-1}$
+\pagebreak
+
+$L_0, U_0=L_1, U_1=L_2, ..., U_{\texttt{histSize[i]}-2}=L_{\texttt{histSize[i]}-1}, U_{\texttt{histSize[i]}-1}$
+\pagebreak
+
+$U_{\texttt{histSize[i]}-1}$
+\pagebreak
+
+$d(H_1, H_2)$
+\pagebreak
+
+$\texttt{size1}\times \texttt{dims}+1$
+\pagebreak
+
+$\texttt{size1}\times \texttt{size2}$
+\pagebreak
+
+$\texttt{size1} \times \texttt{size2}$
+\pagebreak
+
+$\texttt{flow}_{i,j}$
+\pagebreak
+
+$j$
+\pagebreak
+
+\[(x,y): X- \texttt{sp} \le x \le X+ \texttt{sp} , Y- \texttt{sp} \le y \le Y+ \texttt{sp} , ||(R,G,B)-(r,g,b)|| \le \texttt{sr}\]
+\pagebreak
+
+\[(X,Y)~(X',Y'), (R,G,B)~(R',G',B').\]
+\pagebreak
+
+\[I(X,Y) <- (R*,G*,B*)\]
+\pagebreak
+
+$5\times 5$
+\pagebreak
+
+\[\texttt{src} (x',y')- \texttt{loDiff} \leq \texttt{src} (x,y) \leq \texttt{src} (x',y')+ \texttt{upDiff}\]
+\pagebreak
+
+\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)- \texttt{loDiff} \leq \texttt{src} (x,y) \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)+ \texttt{upDiff}\]
+\pagebreak
+
+\[\texttt{src} (x',y')_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} (x',y')_r+ \texttt{upDiff} _r,\]
+\pagebreak
+
+\[\texttt{src} (x',y')_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} (x',y')_g+ \texttt{upDiff} _g\]
+\pagebreak
+
+\[\texttt{src} (x',y')_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} (x',y')_b+ \texttt{upDiff} _b\]
+\pagebreak
+
+\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r+ \texttt{upDiff} _r,\]
+\pagebreak
+
+\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g+ \texttt{upDiff} _g\]
+\pagebreak
+
+\[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b+ \texttt{upDiff} _b\]
+\pagebreak
+
+$src(x',y')$
+\pagebreak
+
+$(x+1, y+1)$
+\pagebreak
+
+\[ \texttt{dst}(i,j) = \texttt{weights1}(i,j)*\texttt{src1}(i,j) + \texttt{weights2}(i,j)*\texttt{src2}(i,j) \]
+\pagebreak
+
+\[\begin{array}{l} hu[0]= \eta _{20}+ \eta _{02} \\ hu[1]=( \eta _{20}- \eta _{02})^{2}+4 \eta _{11}^{2} \\ hu[2]=( \eta _{30}-3 \eta _{12})^{2}+ (3 \eta _{21}- \eta _{03})^{2} \\ hu[3]=( \eta _{30}+ \eta _{12})^{2}+ ( \eta _{21}+ \eta _{03})^{2} \\ hu[4]=( \eta _{30}-3 \eta _{12})( \eta _{30}+ \eta _{12})[( \eta _{30}+ \eta _{12})^{2}-3( \eta _{21}+ \eta _{03})^{2}]+(3 \eta _{21}- \eta _{03})( \eta _{21}+ \eta _{03})[3( \eta _{30}+ \eta _{12})^{2}-( \eta _{21}+ \eta _{03})^{2}] \\ hu[5]=( \eta _{20}- \eta _{02})[( \eta _{30}+ \eta _{12})^{2}- ( \eta _{21}+ \eta _{03})^{2}]+4 \eta _{11}( \eta _{30}+ \eta _{12})( \eta _{21}+ \eta _{03}) \\ hu[6]=(3 \eta _{21}- \eta _{03})( \eta _{21}+ \eta _{03})[3( \eta _{30}+ \eta _{12})^{2}-( \eta _{21}+ \eta _{03})^{2}]-( \eta _{30}-3 \eta _{12})( \eta _{21}+ \eta _{03})[3( \eta _{30}+ \eta _{12})^{2}-( \eta _{21}+ \eta _{03})^{2}] \\ \end{array}\]
+\pagebreak
+
+$\eta_{ji}$
+\pagebreak
+
+$\texttt{Moments::nu}_{ji}$
+\pagebreak
+
+$w \times h$
+\pagebreak
+
+$I$
+\pagebreak
+
+$x' = 0...w-1, y' = 0...h-1$
+\pagebreak
+
+$(W-w+1) \times (H-h+1)$
+\pagebreak
+
+$\theta(n)$
+\pagebreak
+
+$O(n log(n))$
+\pagebreak
+
+$ \chi= \left(x^2, x y, y^2, x, y, 1\right) $
+\pagebreak
+
+$ A^T=\left\{A_{\text{xx}},A_{\text{xy}},A_{\text{yy}},A_x,A_y,A_0\right\} $
+\pagebreak
+
+$ (a,b) $
+\pagebreak
+
+$ (x_0,y_0) $
+\pagebreak
+
+$ A^T ( D_x^T D_x + D_y^T D_y) A = 1 $
+\pagebreak
+
+$ Dx $
+\pagebreak
+
+$ Dy $
+\pagebreak
+
+$ D $
+\pagebreak
+
+\begin{align*} D(i,:)&=\left\{x_i^2, x_i y_i, y_i^2, x_i, y_i, 1\right\} & D_x(i,:)&=\left\{2 x_i,y_i,0,1,0,0\right\} & D_y(i,:)&=\left\{0,x_i,2 y_i,0,1,0\right\} \end{align*}
+\pagebreak
+
+\begin{equation*} \epsilon ^2=\frac{ A^T D^T D A }{ A^T (D_x^T D_x + D_y^T D_y) A^T } \end{equation*}
+\pagebreak
+
+\begin{equation*} D^T D A = \lambda \left( D_x^T D_x + D_y^T D_y\right) A \end{equation*}
+\pagebreak
+
+$ 4 A_{xx} A_{yy}- A_{xy}^2 > 0 $
+\pagebreak
+
+$ 4 A_{xx} A_{yy}- A_{xy}^2=1 $
+\pagebreak
+
+\begin{equation*} \epsilon ^2= A^T D^T D A \quad \text{with} \quad A^T C A =1 \quad \text{and} \quad C=\left(\begin{matrix} 0 & 0 & 2 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 & 0 & 0 \\ 2 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{matrix} \right) \end{equation*}
+\pagebreak
+
+\begin{equation*} D^T D A = \lambda \left( C\right) A \end{equation*}
+\pagebreak
+
+$ \lambda$
+\pagebreak
+
+$\mathbf{u}$
+\pagebreak
+
+\begin{equation*} A = \sqrt{\frac{1}{\mathbf{u}^T C \mathbf{u}}} \mathbf{u} \end{equation*}
+\pagebreak
+
+$A^T C A =1$
+\pagebreak
+
+$\texttt{thickness} \ge 0$
+\pagebreak
+
+$\texttt{thickness}<0$
+\pagebreak
+
+$\texttt{offset}=(dx,dy)$
+\pagebreak
+
+\[\texttt{dst} = \mathrm{open} ( \texttt{src} , \texttt{element} )= \mathrm{dilate} ( \mathrm{erode} ( \texttt{src} , \texttt{element} ))\]
+\pagebreak
+
+\[\texttt{dst} = \mathrm{close} ( \texttt{src} , \texttt{element} )= \mathrm{erode} ( \mathrm{dilate} ( \texttt{src} , \texttt{element} ))\]
+\pagebreak
+
+\[\texttt{dst} = \mathrm{morph\_grad} ( \texttt{src} , \texttt{element} )= \mathrm{dilate} ( \texttt{src} , \texttt{element} )- \mathrm{erode} ( \texttt{src} , \texttt{element} )\]
+\pagebreak
+
+\[\texttt{dst} = \mathrm{tophat} ( \texttt{src} , \texttt{element} )= \texttt{src} - \mathrm{open} ( \texttt{src} , \texttt{element} )\]
+\pagebreak
+
+\[\texttt{dst} = \mathrm{blackhat} ( \texttt{src} , \texttt{element} )= \mathrm{close} ( \texttt{src} , \texttt{element} )- \texttt{src}\]
+\pagebreak
+
+\[E_{ij}=1\]
+\pagebreak
+
+\[E_{ij} = \begin{cases} 1 & \texttt{if } {i=\texttt{anchor.y } {or } {j=\texttt{anchor.x}}} \\0 & \texttt{otherwise} \end{cases}\]
+\pagebreak
+
+$dst( \rho , \phi ) = src(x,y)$
+\pagebreak
+
+$dst(x,y) = src( \rho , \phi )$
+\pagebreak
+
+\[\texttt{dst} (x,y) = \fork{\texttt{maxval}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{0}{otherwise}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \fork{0}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{maxval}}{otherwise}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \fork{\texttt{threshold}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{src}(x,y)}{otherwise}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \fork{\texttt{src}(x,y)}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{0}{otherwise}\]
+\pagebreak
+
+\[\texttt{dst} (x,y) = \fork{0}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{src}(x,y)}{otherwise}\]
+\pagebreak
+
+$T(x, y)$
+\pagebreak
+
+\[d(H_1,H_2) = \frac{\sum_I (H_1(I) - \bar{H_1}) (H_2(I) - \bar{H_2})}{\sqrt{\sum_I(H_1(I) - \bar{H_1})^2 \sum_I(H_2(I) - \bar{H_2})^2}}\]
+\pagebreak
+
+\[\bar{H_k} = \frac{1}{N} \sum _J H_k(J)\]
+\pagebreak
+
+\[d(H_1,H_2) = \sum _I \frac{\left(H_1(I)-H_2(I)\right)^2}{H_1(I)}\]
+\pagebreak
+
+\[d(H_1,H_2) = \sum _I \min (H_1(I), H_2(I))\]
+\pagebreak
+
+\[d(H_1,H_2) = \sqrt{1 - \frac{1}{\sqrt{\bar{H_1} \bar{H_2} N^2}} \sum_I \sqrt{H_1(I) \cdot H_2(I)}}\]
+\pagebreak
+
+\[d(H_1,H_2) = 2 * \sum _I \frac{\left(H_1(I)-H_2(I)\right)^2}{H_1(I)+H_2(I)}\]
+\pagebreak
+
+\[d(H_1,H_2) = \sum _I H_1(I) \log \left(\frac{H_1(I)}{H_2(I)}\right)\]
+\pagebreak
+
+\[R(x,y)= \sum _{x',y'} (T(x',y')-I(x+x',y+y'))^2\]
+\pagebreak
+
+\[R(x,y)= \sum _{x',y'} \left( (T(x',y')-I(x+x',y+y')) \cdot M(x',y') \right)^2\]
+\pagebreak
+
+\[R(x,y)= \frac{\sum_{x',y'} (T(x',y')-I(x+x',y+y'))^2}{\sqrt{\sum_{ x',y'}T(x',y')^2 \cdot \sum_{x',y'} I(x+x',y+y')^2}}\]
+\pagebreak
+
+\[R(x,y)= \frac{\sum _{x',y'} \left( (T(x',y')-I(x+x',y+y')) \cdot M(x',y') \right)^2}{\sqrt{\sum_{x',y'} \left( T(x',y') \cdot M(x',y') \right)^2 \cdot \sum_{x',y'} \left( I(x+x',y+y') \cdot M(x',y') \right)^2}}\]
+\pagebreak
+
+\[R(x,y)= \sum _{x',y'} (T(x',y') \cdot I(x+x',y+y'))\]
+\pagebreak
+
+\[R(x,y)= \sum _{x',y'} (T(x',y') \cdot I(x+x',y+y') \cdot M(x',y') ^2)\]
+\pagebreak
+
+\[R(x,y)= \frac{\sum_{x',y'} (T(x',y') \cdot I(x+x',y+y'))}{\sqrt{ \sum_{x',y'}T(x',y')^2 \cdot \sum_{x',y'} I(x+x',y+y')^2}}\]
+\pagebreak
+
+\[R(x,y)= \frac{\sum_{x',y'} (T(x',y') \cdot I(x+x',y+y') \cdot M(x',y')^2)}{\sqrt{\sum_{x',y'} \left( T(x',y') \cdot M(x',y') \right)^2 \cdot \sum_{x',y'} \left( I(x+x',y+y') \cdot M(x',y') \right)^2}}\]
+\pagebreak
+
+\[R(x,y)= \sum _{x',y'} (T'(x',y') \cdot I'(x+x',y+y'))\]
+\pagebreak
+
+\[\begin{array}{l} T'(x',y')=T(x',y') - 1/(w \cdot h) \cdot \sum _{ x'',y''} T(x'',y'') \\ I'(x+x',y+y')=I(x+x',y+y') - 1/(w \cdot h) \cdot \sum _{x'',y''} I(x+x'',y+y'') \end{array}\]
+\pagebreak
+
+\[\begin{array}{l} T'(x',y')=M(x',y') \cdot \left( T(x',y') - \frac{1}{\sum _{x'',y''} M(x'',y'')} \cdot \sum _{x'',y''} (T(x'',y'') \cdot M(x'',y'')) \right) \\ I'(x+x',y+y')=M(x',y') \cdot \left( I(x+x',y+y') - \frac{1}{\sum _{x'',y''} M(x'',y'')} \cdot \sum _{x'',y''} (I(x+x'',y+y'') \cdot M(x'',y'')) \right) \end{array} \]
+\pagebreak
+
+\[R(x,y)= \frac{ \sum_{x',y'} (T'(x',y') \cdot I'(x+x',y+y')) }{ \sqrt{\sum_{x',y'}T'(x',y')^2 \cdot \sum_{x',y'} I'(x+x',y+y')^2} }\]
+\pagebreak
+
+$\texttt{eps}\rightarrow +\inf$
+\pagebreak
+
+$\left\{(x,y)\in\mathbb{N}\times\mathbb{N}\mid 1\leq x\leq n,\;1\leq y\leq m\right\}$
+\pagebreak
+
+$m,\;n\in\mathbb{N}$
+\pagebreak
+
+$\{0,1,\dots,255\}$
+\pagebreak
+
+$f_i$
+\pagebreak
+
+\[\left\|\left\|\nabla x\right\|\right\| + \lambda\sum_i\left\|\left\|x-f_i\right\|\right\|\]
+\pagebreak
+
+$\|\|\cdot\|\|$
+\pagebreak
+
+$\lambda$
+\pagebreak
+
+$[0,255]$
+\pagebreak
+
+$\texttt{winsize}\times\texttt{winsize}$
+\pagebreak
+
+\[\texttt{prev} (y,x) \sim \texttt{next} ( y + \texttt{flow} (y,x)[1], x + \texttt{flow} (y,x)[0])\]
+\pagebreak
+
+\[[A^*|b^*] = arg \min _{[A|b]} \sum _i \| \texttt{dst}[i] - A { \texttt{src}[i]}^T - b \| ^2\]
+\pagebreak
+
+$[A|b]$
+\pagebreak
+
+\[\begin{bmatrix} a_{11} & a_{12} & b_1 \\ -a_{12} & a_{11} & b_2 \end{bmatrix}\]
+\pagebreak
+
+$2\times 2$
+\pagebreak
+
+\[\texttt{warpMatrix} = \arg\max_{W} \texttt{ECC}(\texttt{templateImage}(x,y),\texttt{inputImage}(x',y'))\]
+\pagebreak
+
+\[\begin{bmatrix} x' \\ y' \end{bmatrix} = W \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}\]
+\pagebreak
+
+$E(U) = \int_{\Omega} \delta \Psi(E_I) + \gamma \Psi(E_G) + \alpha \Psi(E_S) $
+\pagebreak
+
+$E_I,E_G,E_S$
+\pagebreak
+
+$\Psi(s^2)=\sqrt{s^2+\epsilon^2}$
+\pagebreak
+
+\end{document}

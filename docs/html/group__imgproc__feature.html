@@ -1,0 +1,1300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Imgproc_feature</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgproc__feature.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Imgproc_feature<div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_line_segment_detector.html">cv::LineSegmentDetector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line segment detector class.  <a href="classcv_1_1_line_segment_detector.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga073687a5b96ac7a3ab5802eb5510fe65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga073687a5b96ac7a3ab5802eb5510fe65">cv::HoughModes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aeb97ba90cb7ffac9d55c71290aa258cc">cv::HOUGH_STANDARD</a> = 0
+, <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65a2af8751122d7a6df8ef14dbc0799f76c">cv::HOUGH_PROBABILISTIC</a> = 1
+, <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65a0f81016a60d190b6987386a0b4b478e4">cv::HOUGH_MULTI_SCALE</a> = 2
+, <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d">cv::HOUGH_GRADIENT</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad">cv::HOUGH_GRADIENT_ALT</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ga073687a5b96ac7a3ab5802eb5510fe65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variants of a Hough transform.  <a href="group__imgproc__feature.html#ga073687a5b96ac7a3ab5802eb5510fe65">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga073687a5b96ac7a3ab5802eb5510fe65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad092a7362b8afb8a905238a41898d98c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#gad092a7362b8afb8a905238a41898d98c">cv::LineSegmentDetectorModes</a> { <a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98ca0114485ddcbb3d913b6d899a8697e30e">cv::LSD_REFINE_NONE</a> = 0
+, <a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98cade4b0da3a52bc9765f08255f041facb4">cv::LSD_REFINE_STD</a> = 1
+, <a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98ca88d573b707a6f7bbdeae166247cd8c15">cv::LSD_REFINE_ADV</a> = 2
+ }</td></tr>
+<tr class="memdesc:gad092a7362b8afb8a905238a41898d98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variants of Line Segment Detector.  <a href="group__imgproc__feature.html#gad092a7362b8afb8a905238a41898d98c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad092a7362b8afb8a905238a41898d98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga8c4ccbb1416f6978a893de76e8236f90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_line_segment_detector.html">LineSegmentDetector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga8c4ccbb1416f6978a893de76e8236f90">cv::createLineSegmentDetector</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> _refine=<a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98cade4b0da3a52bc9765f08255f041facb4">LSD_REFINE_STD</a>, double _scale=0.8, double _sigma_scale=0.6, double _quant=2.0, double _ang_th=22.5, double _log_eps=0, double _density_th=0.7, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> _n_bins=1024)</td></tr>
+<tr class="memdesc:ga8c4ccbb1416f6978a893de76e8236f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a smart pointer to a <a class="el" href="classcv_1_1_line_segment_detector.html" title="Line segment detector class.">LineSegmentDetector</a> object and initializes it.  <a href="group__imgproc__feature.html#ga8c4ccbb1416f6978a893de76e8236f90">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8c4ccbb1416f6978a893de76e8236f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad744b1c88d72215c5a79b2b90e9f5bda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#gad744b1c88d72215c5a79b2b90e9f5bda">cv::Canny</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__c.html#ga0934986249e7ba69309a154af3260f89">edges</a>, double <a class="el" href="group__imgproc__c.html#ga3624a49ef9de4b4c14537d162ac49d26">threshold1</a>, double <a class="el" href="group__imgproc__c.html#ga9f1cfe5469d77d47449d73966d484b84">threshold2</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> apertureSize=3, bool L2gradient=false)</td></tr>
+<tr class="memdesc:gad744b1c88d72215c5a79b2b90e9f5bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds edges in an image using the Canny algorithm <b>[Canny86]</b> .  <a href="group__imgproc__feature.html#gad744b1c88d72215c5a79b2b90e9f5bda">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad744b1c88d72215c5a79b2b90e9f5bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga445e2749861910fefe0db944a09e5eac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga445e2749861910fefe0db944a09e5eac">cv::Canny</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> dx, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> dy, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__c.html#ga0934986249e7ba69309a154af3260f89">edges</a>, double <a class="el" href="group__imgproc__c.html#ga3624a49ef9de4b4c14537d162ac49d26">threshold1</a>, double <a class="el" href="group__imgproc__c.html#ga9f1cfe5469d77d47449d73966d484b84">threshold2</a>, bool L2gradient=false)</td></tr>
+<tr class="separator:ga445e2749861910fefe0db944a09e5eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga363ae1047b9f246e78a82a2862c6cde8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8">cv::cornerMinEigenVal</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize=3, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga363ae1047b9f246e78a82a2862c6cde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the minimal eigenvalue of gradient matrices for corner detection.  <a href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga363ae1047b9f246e78a82a2862c6cde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ce7d0d38d83ef14e335b87c384f39dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd">cv::cornerHarris</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize, double k, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga5ce7d0d38d83ef14e335b87c384f39dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Harris corner detector.  <a href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5ce7d0d38d83ef14e335b87c384f39dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52dcea91b777bb8f1a506a9f91977aab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga52dcea91b777bb8f1a506a9f91977aab">cv::cornerEigenValsAndVecs</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga52dcea91b777bb8f1a506a9f91977aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates eigenvalues and eigenvectors of image blocks for corner detection.  <a href="group__imgproc__feature.html#ga52dcea91b777bb8f1a506a9f91977aab">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga52dcea91b777bb8f1a506a9f91977aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6967f1a104b733917d4da9685816cf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4">cv::preCornerDetect</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gac6967f1a104b733917d4da9685816cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a feature map for corner detection.  <a href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac6967f1a104b733917d4da9685816cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4310d06f13813830106e63fe519ba642"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga4310d06f13813830106e63fe519ba642">cv::cornerSubPix</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> <a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> winSize, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> zeroZone, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__calib3d.html#ga09a9c81a0c1db199028181db7fa89034">criteria</a>)</td></tr>
+<tr class="memdesc:ga4310d06f13813830106e63fe519ba642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refines the corner locations.  <a href="group__imgproc__feature.html#ga4310d06f13813830106e63fe519ba642">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4310d06f13813830106e63fe519ba642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19e8a8000230fae9736fe837b516a1d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga19e8a8000230fae9736fe837b516a1d1">cv::goodFeaturesToTrack</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxCorners, double qualityLevel, double minDistance, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize=3, bool useHarrisDetector=false, double k=0.04)</td></tr>
+<tr class="memdesc:ga19e8a8000230fae9736fe837b516a1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines strong corners on an image.  <a href="group__imgproc__feature.html#ga19e8a8000230fae9736fe837b516a1d1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga19e8a8000230fae9736fe837b516a1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga771d92e404bec92c8bbfe92b9bbf5f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga771d92e404bec92c8bbfe92b9bbf5f3b">cv::goodFeaturesToTrack</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxCorners, double qualityLevel, double minDistance, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> blockSize, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> gradientSize, bool useHarrisDetector=false, double k=0.04)</td></tr>
+<tr class="separator:ga771d92e404bec92c8bbfe92b9bbf5f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f2f4ef61facc51f7fb249be61801fa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga0f2f4ef61facc51f7fb249be61801fa6">cv::HoughLines</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> lines, double <a class="el" href="group__imgproc__c.html#ga7d8783b6b909806d38134f1f342005bf">rho</a>, double <a class="el" href="group__imgproc__c.html#ga90ba48f41646a904a861746079d43f17">theta</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">threshold</a>, double srn=0, double stn=0, double min_theta=0, double max_theta=<a class="el" href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a>)</td></tr>
+<tr class="memdesc:ga0f2f4ef61facc51f7fb249be61801fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds lines in a binary image using the standard Hough transform.  <a href="group__imgproc__feature.html#ga0f2f4ef61facc51f7fb249be61801fa6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0f2f4ef61facc51f7fb249be61801fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga184ca047da5a47af50bc7ff411cc8349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga184ca047da5a47af50bc7ff411cc8349">cv::HoughLinesP</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> lines, double <a class="el" href="group__imgproc__c.html#ga7d8783b6b909806d38134f1f342005bf">rho</a>, double <a class="el" href="group__imgproc__c.html#ga90ba48f41646a904a861746079d43f17">theta</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">threshold</a>, double minLineLength=0, double maxLineGap=0)</td></tr>
+<tr class="memdesc:ga184ca047da5a47af50bc7ff411cc8349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds line segments in a binary image using the probabilistic Hough transform.  <a href="group__imgproc__feature.html#ga184ca047da5a47af50bc7ff411cc8349">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga184ca047da5a47af50bc7ff411cc8349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d43819de9c06b703ecf4475d21936d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga6d43819de9c06b703ecf4475d21936d4">cv::HoughLinesPointSet</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> _point, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> _lines, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> lines_max, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__misc.html#gabd93e7119f2b85135109ab4b1f4f9eaf">threshold</a>, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)</td></tr>
+<tr class="memdesc:ga6d43819de9c06b703ecf4475d21936d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds lines in a set of points using the standard Hough transform.  <a href="group__imgproc__feature.html#ga6d43819de9c06b703ecf4475d21936d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6d43819de9c06b703ecf4475d21936d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87c2c2adf271356817c8636c5ef8a738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__feature.html#ga87c2c2adf271356817c8636c5ef8a738">cv::HoughCircles</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> circles, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>, double <a class="el" href="group__imgproc__c.html#gab72596cdef510cb9cb1a2b07a9189912">dp</a>, double minDist, double <a class="el" href="group__core__c.html#ga4a138cebb3d1124bb552aa80cc860eea">param1</a>=100, double <a class="el" href="group__core__c.html#ga31355e809c125347b49af078e58da79e">param2</a>=100, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> minRadius=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gaa127cf4ed721c001f0dd39efd29b9790">maxRadius</a>=0)</td></tr>
+<tr class="memdesc:ga87c2c2adf271356817c8636c5ef8a738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds circles in a grayscale image using the Hough transform.  <a href="group__imgproc__feature.html#ga87c2c2adf271356817c8636c5ef8a738">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga87c2c2adf271356817c8636c5ef8a738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga073687a5b96ac7a3ab5802eb5510fe65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga073687a5b96ac7a3ab5802eb5510fe65">&#9670;&nbsp;</a></span>HoughModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__feature.html#ga073687a5b96ac7a3ab5802eb5510fe65">cv::HoughModes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variants of a Hough transform. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga073687a5b96ac7a3ab5802eb5510fe65aeb97ba90cb7ffac9d55c71290aa258cc"></a>HOUGH_STANDARD&#160;</td><td class="fielddoc"><p>classical or standard Hough transform. Every line is represented by two floating-point numbers <img class="formulaInl" alt="$(\rho, \theta)$" src="form_715.png"/> , where <img class="formulaInl" alt="$\rho$" src="form_717.png"/> is a distance between (0,0) point and the line, and <img class="formulaInl" alt="$\theta$" src="form_278.png"/> is the angle between x-axis and the normal to the line. Thus, the matrix must be (the created sequence will be) of CV_32FC2 type </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga073687a5b96ac7a3ab5802eb5510fe65a2af8751122d7a6df8ef14dbc0799f76c"></a>HOUGH_PROBABILISTIC&#160;</td><td class="fielddoc"><p>probabilistic Hough transform (more efficient in case if the picture contains a few long linear segments). It returns line segments rather than the whole line. Each segment is represented by starting and ending points, and the matrix must be (the created sequence will be) of the CV_32SC4 type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga073687a5b96ac7a3ab5802eb5510fe65a0f81016a60d190b6987386a0b4b478e4"></a>HOUGH_MULTI_SCALE&#160;</td><td class="fielddoc"><p>multi-scale variant of the classical Hough transform. The lines are encoded the same way as HOUGH_STANDARD. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d"></a>HOUGH_GRADIENT&#160;</td><td class="fielddoc"><p>basically <em>21HT</em>, described in <b>[Yuen90]</b> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad"></a>HOUGH_GRADIENT_ALT&#160;</td><td class="fielddoc"><p>variation of HOUGH_GRADIENT to get better accuracy </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gad092a7362b8afb8a905238a41898d98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad092a7362b8afb8a905238a41898d98c">&#9670;&nbsp;</a></span>LineSegmentDetectorModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__feature.html#gad092a7362b8afb8a905238a41898d98c">cv::LineSegmentDetectorModes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variants of Line Segment Detector. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggad092a7362b8afb8a905238a41898d98ca0114485ddcbb3d913b6d899a8697e30e"></a>LSD_REFINE_NONE&#160;</td><td class="fielddoc"><p>No refinement applied. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad092a7362b8afb8a905238a41898d98cade4b0da3a52bc9765f08255f041facb4"></a>LSD_REFINE_STD&#160;</td><td class="fielddoc"><p>Standard refinement is applied. E.g. breaking arches into smaller straighter line approximations. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad092a7362b8afb8a905238a41898d98ca88d573b707a6f7bbdeae166247cd8c15"></a>LSD_REFINE_ADV&#160;</td><td class="fielddoc"><p>Advanced refinement. Number of false alarms is calculated, lines are refined through increase of precision, decrement in size, etc. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga445e2749861910fefe0db944a09e5eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga445e2749861910fefe0db944a09e5eac">&#9670;&nbsp;</a></span>Canny() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Canny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>threshold1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>threshold2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>L2gradient</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Finds edges in an image using the Canny algorithm with custom image gradient.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>16-bit x derivative of input image (CV_16SC1 or CV_16SC3). </td></tr>
+    <tr><td class="paramname">dy</td><td>16-bit y derivative of input image (same type as dx). </td></tr>
+    <tr><td class="paramname">edges</td><td>output edge map; single channels 8-bit image, which has the same size as image . </td></tr>
+    <tr><td class="paramname">threshold1</td><td>first threshold for the hysteresis procedure. </td></tr>
+    <tr><td class="paramname">threshold2</td><td>second threshold for the hysteresis procedure. </td></tr>
+    <tr><td class="paramname">L2gradient</td><td>a flag, indicating whether a more accurate <img class="formulaInl" alt="$L_2$" src="form_624.png"/> norm <img class="formulaInl" alt="$=\sqrt{(dI/dx)^2 + (dI/dy)^2}$" src="form_625.png"/> should be used to calculate the image gradient magnitude ( L2gradient=true ), or whether the default <img class="formulaInl" alt="$L_1$" src="form_626.png"/> norm <img class="formulaInl" alt="$=|dI/dx|+|dI/dy|$" src="form_627.png"/> is enough ( L2gradient=false ). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad744b1c88d72215c5a79b2b90e9f5bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad744b1c88d72215c5a79b2b90e9f5bda">&#9670;&nbsp;</a></span>Canny() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Canny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>threshold1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>threshold2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>apertureSize</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>L2gradient</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds edges in an image using the Canny algorithm <b>[Canny86]</b> . </p>
+<p>The function finds edges in the input image and marks them in the output map edges using the Canny algorithm. The smallest value between threshold1 and threshold2 is used for edge linking. The largest value is used to find initial segments of strong edges. See <a href="http://en.wikipedia.org/wiki/Canny_edge_detector">http://en.wikipedia.org/wiki/Canny_edge_detector</a></p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>8-bit input image. </td></tr>
+    <tr><td class="paramname">edges</td><td>output edge map; single channels 8-bit image, which has the same size as image . </td></tr>
+    <tr><td class="paramname">threshold1</td><td>first threshold for the hysteresis procedure. </td></tr>
+    <tr><td class="paramname">threshold2</td><td>second threshold for the hysteresis procedure. </td></tr>
+    <tr><td class="paramname">apertureSize</td><td>aperture size for the Sobel operator. </td></tr>
+    <tr><td class="paramname">L2gradient</td><td>a flag, indicating whether a more accurate <img class="formulaInl" alt="$L_2$" src="form_624.png"/> norm <img class="formulaInl" alt="$=\sqrt{(dI/dx)^2 + (dI/dy)^2}$" src="form_625.png"/> should be used to calculate the image gradient magnitude ( L2gradient=true ), or whether the default <img class="formulaInl" alt="$L_1$" src="form_626.png"/> norm <img class="formulaInl" alt="$=|dI/dx|+|dI/dy|$" src="form_627.png"/> is enough ( L2gradient=false ). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52dcea91b777bb8f1a506a9f91977aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52dcea91b777bb8f1a506a9f91977aab">&#9670;&nbsp;</a></span>cornerEigenValsAndVecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cornerEigenValsAndVecs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates eigenvalues and eigenvectors of image blocks for corner detection. </p>
+<p>For every pixel <img class="formulaInl" alt="$p$" src="form_1.png"/> , the function cornerEigenValsAndVecs considers a blockSize <img class="formulaInl" alt="$\times$" src="form_692.png"/> blockSize neighborhood <img class="formulaInl" alt="$S(p)$" src="form_693.png"/> . It calculates the covariation matrix of derivatives over the neighborhood as:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[M = \begin{bmatrix} \sum _{S(p)}(dI/dx)^2 &amp; \sum _{S(p)}dI/dx dI/dy \\ \sum _{S(p)}dI/dx dI/dy &amp; \sum _{S(p)}(dI/dy)^2 \end{bmatrix}\]" src="form_694.png"/>
+</p>
+<p>where the derivatives are computed using the Sobel operator.</p>
+<p>After that, it finds eigenvectors and eigenvalues of <img class="formulaInl" alt="$M$" src="form_695.png"/> and stores them in the destination image as <img class="formulaInl" alt="$(\lambda_1, \lambda_2, x_1, y_1, x_2, y_2)$" src="form_696.png"/> where</p>
+<ul>
+<li><img class="formulaInl" alt="$\lambda_1, \lambda_2$" src="form_697.png"/> are the non-sorted eigenvalues of <img class="formulaInl" alt="$M$" src="form_695.png"/></li>
+<li><img class="formulaInl" alt="$x_1, y_1$" src="form_698.png"/> are the eigenvectors corresponding to <img class="formulaInl" alt="$\lambda_1$" src="form_699.png"/></li>
+<li><img class="formulaInl" alt="$x_2, y_2$" src="form_700.png"/> are the eigenvectors corresponding to <img class="formulaInl" alt="$\lambda_2$" src="form_701.png"/></li>
+</ul>
+<p>The output of the function can be used for robust edge or corner detection.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Input single-channel 8-bit or floating-point image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Image to store the results. It has the same size as src and the type <a class="el" href="group__core__hal__interface.html#ga56e67b727727f2f9b73a4b62f0c4b2b5">CV_32FC(6)</a> . </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Neighborhood size (see details below). </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture parameter for the Sobel operator. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method. See <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cornerMinEigenVal</a>, <a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cornerHarris</a>, <a class="el" href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4" title="Calculates a feature map for corner detection.">preCornerDetect</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga5ce7d0d38d83ef14e335b87c384f39dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ce7d0d38d83ef14e335b87c384f39dd">&#9670;&nbsp;</a></span>cornerHarris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cornerHarris </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Harris corner detector. </p>
+<p>The function runs the Harris corner detector on the image. Similarly to cornerMinEigenVal and cornerEigenValsAndVecs , for each pixel <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> it calculates a <img class="formulaInl" alt="$2\times2$" src="form_688.png"/> gradient covariance matrix <img class="formulaInl" alt="$M^{(x,y)}$" src="form_689.png"/> over a <img class="formulaInl" alt="$\texttt{blockSize} \times \texttt{blockSize}$" src="form_690.png"/> neighborhood. Then, it computes the following characteristic:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \mathrm{det} M^{(x,y)} - k \cdot \left ( \mathrm{tr} M^{(x,y)} \right )^2\]" src="form_691.png"/>
+</p>
+<p>Corners in the image can be found as the local maxima of this response map.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Input single-channel 8-bit or floating-point image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Image to store the Harris detector responses. It has the type CV_32FC1 and the same size as src . </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Neighborhood size (see the details on <a class="el" href="group__imgproc__feature.html#ga52dcea91b777bb8f1a506a9f91977aab" title="Calculates eigenvalues and eigenvectors of image blocks for corner detection.">cornerEigenValsAndVecs</a> ). </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture parameter for the Sobel operator. </td></tr>
+    <tr><td class="paramname">k</td><td>Harris detector free parameter. See the formula above. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method. See <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga363ae1047b9f246e78a82a2862c6cde8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga363ae1047b9f246e78a82a2862c6cde8">&#9670;&nbsp;</a></span>cornerMinEigenVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cornerMinEigenVal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the minimal eigenvalue of gradient matrices for corner detection. </p>
+<p>The function is similar to cornerEigenValsAndVecs but it calculates and stores only the minimal eigenvalue of the covariance matrix of derivatives, that is, <img class="formulaInl" alt="$\min(\lambda_1, \lambda_2)$" src="form_687.png"/> in terms of the formulae in the cornerEigenValsAndVecs description.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Input single-channel 8-bit or floating-point image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Image to store the minimal eigenvalues. It has the type CV_32FC1 and the same size as src . </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Neighborhood size (see the details on <a class="el" href="group__imgproc__feature.html#ga52dcea91b777bb8f1a506a9f91977aab" title="Calculates eigenvalues and eigenvectors of image blocks for corner detection.">cornerEigenValsAndVecs</a> ). </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture parameter for the Sobel operator. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method. See <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4310d06f13813830106e63fe519ba642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4310d06f13813830106e63fe519ba642">&#9670;&nbsp;</a></span>cornerSubPix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::cornerSubPix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>winSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>zeroZone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>criteria</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refines the corner locations. </p>
+<p>The function iterates to find the sub-pixel accurate location of corners or radial saddle points as described in <b>[forstner1987fast]</b>, and as shown on the figure below.</p>
+<p><img src="pics/cornersubpix.png" alt="image" class="inline"/></p>
+<p>Sub-pixel accurate corner locator is based on the observation that every vector from the center <img class="formulaInl" alt="$q$" src="form_281.png"/> to a point <img class="formulaInl" alt="$p$" src="form_1.png"/> located within a neighborhood of <img class="formulaInl" alt="$q$" src="form_281.png"/> is orthogonal to the image gradient at <img class="formulaInl" alt="$p$" src="form_1.png"/> subject to image and measurement noise. Consider the expression:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\epsilon _i = {DI_{p_i}}^T \cdot (q - p_i)\]" src="form_708.png"/>
+</p>
+<p>where <img class="formulaInl" alt="${DI_{p_i}}$" src="form_709.png"/> is an image gradient at one of the points <img class="formulaInl" alt="$p_i$" src="form_209.png"/> in a neighborhood of <img class="formulaInl" alt="$q$" src="form_281.png"/> . The value of <img class="formulaInl" alt="$q$" src="form_281.png"/> is to be found so that <img class="formulaInl" alt="$\epsilon_i$" src="form_710.png"/> is minimized. A system of equations may be set up with <img class="formulaInl" alt="$\epsilon_i$" src="form_710.png"/> set to zero:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sum _i(DI_{p_i} \cdot {DI_{p_i}}^T) \cdot q - \sum _i(DI_{p_i} \cdot {DI_{p_i}}^T \cdot p_i)\]" src="form_711.png"/>
+</p>
+<p>where the gradients are summed within a neighborhood ("search window") of <img class="formulaInl" alt="$q$" src="form_281.png"/> . Calling the first gradient term <img class="formulaInl" alt="$G$" src="form_712.png"/> and the second gradient term <img class="formulaInl" alt="$b$" src="form_187.png"/> gives:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[q = G^{-1} \cdot b\]" src="form_713.png"/>
+</p>
+<p>The algorithm sets the center of the neighborhood window at this new center <img class="formulaInl" alt="$q$" src="form_281.png"/> and then iterates until the center stays within a set threshold.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Input single-channel, 8-bit or float image. </td></tr>
+    <tr><td class="paramname">corners</td><td>Initial coordinates of the input corners and refined coordinates provided for output. </td></tr>
+    <tr><td class="paramname">winSize</td><td>Half of the side length of the search window. For example, if winSize=Size(5,5) , then a <img class="formulaInl" alt="$(5*2+1) \times (5*2+1) = 11 \times 11$" src="form_714.png"/> search window is used. </td></tr>
+    <tr><td class="paramname">zeroZone</td><td>Half of the size of the dead region in the middle of the search zone over which the summation in the formula below is not done. It is used sometimes to avoid possible singularities of the autocorrelation matrix. The value of (-1,-1) indicates that there is no such a size. </td></tr>
+    <tr><td class="paramname">criteria</td><td>Criteria for termination of the iterative process of corner refinement. That is, the process of corner position refinement stops either after criteria.maxCount iterations or when the corner position moves by less than criteria.epsilon on some iteration. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8c4ccbb1416f6978a893de76e8236f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c4ccbb1416f6978a893de76e8236f90">&#9670;&nbsp;</a></span>createLineSegmentDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_line_segment_detector.html">LineSegmentDetector</a>&gt; cv::createLineSegmentDetector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>_refine</em> = <code><a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98cade4b0da3a52bc9765f08255f041facb4">LSD_REFINE_STD</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_scale</em> = <code>0.8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_sigma_scale</em> = <code>0.6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_quant</em> = <code>2.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_ang_th</em> = <code>22.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_log_eps</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_density_th</em> = <code>0.7</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>_n_bins</em> = <code>1024</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a smart pointer to a <a class="el" href="classcv_1_1_line_segment_detector.html" title="Line segment detector class.">LineSegmentDetector</a> object and initializes it. </p>
+<p>The <a class="el" href="classcv_1_1_line_segment_detector.html" title="Line segment detector class.">LineSegmentDetector</a> algorithm is defined using the standard values. Only advanced users may want to edit those, as to tailor it for their own application.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_refine</td><td>The way found lines will be refined, see <a class="el" href="group__imgproc__feature.html#gad092a7362b8afb8a905238a41898d98c" title="Variants of Line Segment Detector.">LineSegmentDetectorModes</a> </td></tr>
+    <tr><td class="paramname">_scale</td><td>The scale of the image that will be used to find the lines. <a class="el" href="classcv_1_1_range.html" title="Template class specifying a continuous subsequence (slice) of a sequence.">Range</a> (0..1]. </td></tr>
+    <tr><td class="paramname">_sigma_scale</td><td>Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale. </td></tr>
+    <tr><td class="paramname">_quant</td><td>Bound to the quantization error on the gradient norm. </td></tr>
+    <tr><td class="paramname">_ang_th</td><td>Gradient angle tolerance in degrees. </td></tr>
+    <tr><td class="paramname">_log_eps</td><td>Detection threshold: -log10(NFA) &gt; log_eps. Used only when advance refinement is chosen. </td></tr>
+    <tr><td class="paramname">_density_th</td><td>Minimal density of aligned region points in the enclosing rectangle. </td></tr>
+    <tr><td class="paramname">_n_bins</td><td>Number of bins in pseudo-ordering of gradient modulus.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Implementation has been removed due original code license conflict </dd></dl>
+
+</div>
+</div>
+<a id="ga771d92e404bec92c8bbfe92b9bbf5f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga771d92e404bec92c8bbfe92b9bbf5f3b">&#9670;&nbsp;</a></span>goodFeaturesToTrack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::goodFeaturesToTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>qualityLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minDistance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>gradientSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useHarrisDetector</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k</em> = <code>0.04</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga19e8a8000230fae9736fe837b516a1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19e8a8000230fae9736fe837b516a1d1">&#9670;&nbsp;</a></span>goodFeaturesToTrack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::goodFeaturesToTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>qualityLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minDistance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>blockSize</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useHarrisDetector</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k</em> = <code>0.04</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines strong corners on an image. </p>
+<p>The function finds the most prominent corners in the image or in the specified image region, as described in <b>[Shi94]</b></p>
+<ul>
+<li>Function calculates the corner quality measure at every source image pixel using the <a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cornerMinEigenVal</a> or <a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cornerHarris</a> .</li>
+<li>Function performs a non-maximum suppression (the local maximums in <em>3 x 3</em> neighborhood are retained).</li>
+<li>The corners with the minimal eigenvalue less than <img class="formulaInl" alt="$\texttt{qualityLevel} \cdot \max_{x,y} qualityMeasureMap(x,y)$" src="form_628.png"/> are rejected.</li>
+<li>The remaining corners are sorted by the quality measure in the descending order.</li>
+<li>Function throws away each corner for which there is a stronger corner at a distance less than maxDistance.</li>
+</ul>
+<p>The function can be used to initialize a point-based tracker of an object.</p>
+<dl class="section note"><dt>Заметки</dt><dd>If the function is called with different values A and B of the parameter qualityLevel , and A &gt; B, the vector of returned corners with qualityLevel=A will be the prefix of the output vector with qualityLevel=B .</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Input 8-bit or floating-point 32-bit, single-channel image. </td></tr>
+    <tr><td class="paramname">corners</td><td>Output vector of detected corners. </td></tr>
+    <tr><td class="paramname">maxCorners</td><td>Maximum number of corners to return. If there are more corners than are found, the strongest of them is returned. <code>maxCorners &lt;= 0</code> implies that no limit on the maximum is set and all detected corners are returned. </td></tr>
+    <tr><td class="paramname">qualityLevel</td><td>Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see <a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cornerMinEigenVal</a> ) or the Harris function response (see <a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cornerHarris</a> ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected. </td></tr>
+    <tr><td class="paramname">minDistance</td><td>Minimum possible Euclidean distance between the returned corners. </td></tr>
+    <tr><td class="paramname">mask</td><td>Optional region of interest. If the image is not empty (it needs to have the type CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected. </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Size of an average block for computing a derivative covariation matrix over each pixel neighborhood. See cornerEigenValsAndVecs . </td></tr>
+    <tr><td class="paramname">useHarrisDetector</td><td>Parameter indicating whether to use a Harris detector (see <a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cornerHarris</a>) or <a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cornerMinEigenVal</a>. </td></tr>
+    <tr><td class="paramname">k</td><td>Free parameter of the Harris detector.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cornerMinEigenVal</a>, <a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cornerHarris</a>, <a class="el" href="group__video__track.html#gae0e989a246b6c81ee407cb4bc06d0ee8" title="Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyra...">calcOpticalFlowPyrLK</a>, <a class="el" href="group__video__track.html#gafe52fd3986a2ba6ba0628ebb6a6e8b95" title="Computes an optimal affine transformation between two 2D point sets.">estimateRigidTransform</a>, </dd></dl>
+
+</div>
+</div>
+<a id="ga87c2c2adf271356817c8636c5ef8a738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87c2c2adf271356817c8636c5ef8a738">&#9670;&nbsp;</a></span>HoughCircles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::HoughCircles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>circles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minDist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>param1</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>param2</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minRadius</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxRadius</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds circles in a grayscale image using the Hough transform. </p>
+<p>The function finds circles in a grayscale image using a modification of the Hough transform.</p>
+<p>Example: : </p><div class="fragment"></div><!-- fragment --><dl class="section note"><dt>Заметки</dt><dd>Usually the function detects the centers of circles well. However, it may fail to find correct radii. You can assist to the function by specifying the radius range ( minRadius and maxRadius ) if you know it. Or, in the case of <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d" title="basically 21HT, described in">HOUGH_GRADIENT</a> method you may set maxRadius to a negative number to return centers only without radius search, and find the correct radius using an additional procedure.</dd></dl>
+<p>It also helps to smooth image a bit unless it's already soft. For example, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur()</a> with 7x7 kernel and 1.5x1.5 sigma or similar blurring may help.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>8-bit, single-channel, grayscale input image. </td></tr>
+    <tr><td class="paramname">circles</td><td>Output vector of found circles. Each vector is encoded as 3 or 4 element floating-point vector <img class="formulaInl" alt="$(x, y, radius)$" src="form_725.png"/> or <img class="formulaInl" alt="$(x, y, radius, votes)$" src="form_726.png"/> . </td></tr>
+    <tr><td class="paramname">method</td><td>Detection method, see <a class="el" href="group__imgproc__feature.html#ga073687a5b96ac7a3ab5802eb5510fe65" title="Variants of a Hough transform.">HoughModes</a>. The available methods are <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d" title="basically 21HT, described in">HOUGH_GRADIENT</a> and <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a>. </td></tr>
+    <tr><td class="paramname">dp</td><td>Inverse ratio of the accumulator resolution to the image resolution. For example, if dp=1 , the accumulator has the same resolution as the input image. If dp=2 , the accumulator has half as big width and height. For <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a> the recommended value is dp=1.5, unless some small very circles need to be detected. </td></tr>
+    <tr><td class="paramname">minDist</td><td>Minimum distance between the centers of the detected circles. If the parameter is too small, multiple neighbor circles may be falsely detected in addition to a true one. If it is too large, some circles may be missed. </td></tr>
+    <tr><td class="paramname">param1</td><td>First method-specific parameter. In case of <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d" title="basically 21HT, described in">HOUGH_GRADIENT</a> and <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a>, it is the higher threshold of the two passed to the Canny edge detector (the lower one is twice smaller). Note that <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a> uses <a class="el" href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85" title="Calculates the first x- or y- image derivative using Scharr operator.">Scharr</a> algorithm to compute image derivatives, so the threshold value shough normally be higher, such as 300 or normally exposed and contrasty images. </td></tr>
+    <tr><td class="paramname">param2</td><td>Second method-specific parameter. In case of <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d" title="basically 21HT, described in">HOUGH_GRADIENT</a>, it is the accumulator threshold for the circle centers at the detection stage. The smaller it is, the more false circles may be detected. Circles, corresponding to the larger accumulator values, will be returned first. In the case of <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a> algorithm, this is the circle "perfectness" measure. The closer it to 1, the better shaped circles algorithm selects. In most cases 0.9 should be fine. If you want get better detection of small circles, you may decrease it to 0.85, 0.8 or even less. But then also try to limit the search range [minRadius, maxRadius] to avoid many false circles. </td></tr>
+    <tr><td class="paramname">minRadius</td><td>Minimum circle radius. </td></tr>
+    <tr><td class="paramname">maxRadius</td><td>Maximum circle radius. If &lt;= 0, uses the maximum image dimension. If &lt; 0, <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65ab1bf00a90864db34b2f72fa76389931d" title="basically 21HT, described in">HOUGH_GRADIENT</a> returns centers without finding the radius. <a class="el" href="group__imgproc__feature.html#gga073687a5b96ac7a3ab5802eb5510fe65aad57c72131c801de427f1fdb55c8c8ad" title="variation of HOUGH_GRADIENT to get better accuracy">HOUGH_GRADIENT_ALT</a> always computes circle radiuses.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__shape.html#ga50005270ef5c771e2dde1d002a726145" title="Fits an ellipse around a set of 2D points.">fitEllipse</a>, <a class="el" href="group__imgproc__shape.html#ga1fb5d831897af1598652b27b959fa9ed" title="Finds a circle of the minimum area enclosing a 2D point set.">minEnclosingCircle</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga0f2f4ef61facc51f7fb249be61801fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f2f4ef61facc51f7fb249be61801fa6">&#9670;&nbsp;</a></span>HoughLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::HoughLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>srn</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stn</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_theta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_theta</em> = <code><a class="el" href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds lines in a binary image using the standard Hough transform. </p>
+<p>The function implements the standard or standard multi-scale Hough transform algorithm for line detection. See <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm">http://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm</a> for a good explanation of Hough transform.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>8-bit, single-channel binary source image. The image may be modified by the function. </td></tr>
+    <tr><td class="paramname">lines</td><td>Output vector of lines. Each line is represented by a 2 or 3 element vector <img class="formulaInl" alt="$(\rho, \theta)$" src="form_715.png"/> or <img class="formulaInl" alt="$(\rho, \theta, \textrm{votes})$" src="form_716.png"/> . <img class="formulaInl" alt="$\rho$" src="form_717.png"/> is the distance from the coordinate origin <img class="formulaInl" alt="$(0,0)$" src="form_219.png"/> (top-left corner of the image). <img class="formulaInl" alt="$\theta$" src="form_278.png"/> is the line rotation angle in radians ( <img class="formulaInl" alt="$0 \sim \textrm{vertical line}, \pi/2 \sim \textrm{horizontal line}$" src="form_718.png"/> ). <img class="formulaInl" alt="$\textrm{votes}$" src="form_719.png"/> is the value of accumulator. </td></tr>
+    <tr><td class="paramname">rho</td><td>Distance resolution of the accumulator in pixels. </td></tr>
+    <tr><td class="paramname">theta</td><td>Angle resolution of the accumulator in radians. </td></tr>
+    <tr><td class="paramname">threshold</td><td><a class="el" href="structcv_1_1_accumulator.html">Accumulator</a> threshold parameter. Only those lines are returned that get enough votes ( <img class="formulaInl" alt="$&gt;\texttt{threshold}$" src="form_720.png"/> ). </td></tr>
+    <tr><td class="paramname">srn</td><td>For the multi-scale Hough transform, it is a divisor for the distance resolution rho . The coarse accumulator distance resolution is rho and the accurate accumulator resolution is rho/srn . If both srn=0 and stn=0 , the classical Hough transform is used. Otherwise, both these parameters should be positive. </td></tr>
+    <tr><td class="paramname">stn</td><td>For the multi-scale Hough transform, it is a divisor for the distance resolution theta. </td></tr>
+    <tr><td class="paramname">min_theta</td><td>For standard and multi-scale Hough transform, minimum angle to check for lines. Must fall between 0 and max_theta. </td></tr>
+    <tr><td class="paramname">max_theta</td><td>For standard and multi-scale Hough transform, maximum angle to check for lines. Must fall between min_theta and CV_PI. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga184ca047da5a47af50bc7ff411cc8349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga184ca047da5a47af50bc7ff411cc8349">&#9670;&nbsp;</a></span>HoughLinesP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::HoughLinesP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minLineLength</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>maxLineGap</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds line segments in a binary image using the probabilistic Hough transform. </p>
+<p>The function implements the probabilistic Hough transform algorithm for line detection, described in <b>[Matas00]</b></p>
+<p>See the line detection example below: </p><div class="fragment"></div><!-- fragment --><p> This is a sample picture the function parameters have been tuned for:</p>
+<p><img src="pics/building.jpg" alt="image" class="inline"/></p>
+<p>And this is the output of the above program in case of the probabilistic Hough transform:</p>
+<p><img src="pics/houghp.png" alt="image" class="inline"/></p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>8-bit, single-channel binary source image. The image may be modified by the function. </td></tr>
+    <tr><td class="paramname">lines</td><td>Output vector of lines. Each line is represented by a 4-element vector <img class="formulaInl" alt="$(x_1, y_1, x_2, y_2)$" src="form_721.png"/> , where <img class="formulaInl" alt="$(x_1,y_1)$" src="form_722.png"/> and <img class="formulaInl" alt="$(x_2, y_2)$" src="form_723.png"/> are the ending points of each detected line segment. </td></tr>
+    <tr><td class="paramname">rho</td><td>Distance resolution of the accumulator in pixels. </td></tr>
+    <tr><td class="paramname">theta</td><td>Angle resolution of the accumulator in radians. </td></tr>
+    <tr><td class="paramname">threshold</td><td><a class="el" href="structcv_1_1_accumulator.html">Accumulator</a> threshold parameter. Only those lines are returned that get enough votes ( <img class="formulaInl" alt="$&gt;\texttt{threshold}$" src="form_720.png"/> ). </td></tr>
+    <tr><td class="paramname">minLineLength</td><td>Minimum line length. Line segments shorter than that are rejected. </td></tr>
+    <tr><td class="paramname">maxLineGap</td><td>Maximum allowed gap between points on the same line to link them.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1_line_segment_detector.html" title="Line segment detector class.">LineSegmentDetector</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6d43819de9c06b703ecf4475d21936d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d43819de9c06b703ecf4475d21936d4">&#9670;&nbsp;</a></span>HoughLinesPointSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::HoughLinesPointSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>_lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>lines_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rho_step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta_step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds lines in a set of points using the standard Hough transform. </p>
+<p>The function finds lines in a set of points using a modification of the Hough transform. </p><div class="fragment"></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_point</td><td>Input vector of points. Each vector must be encoded as a Point vector <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/>. Type must be CV_32FC2 or CV_32SC2. </td></tr>
+    <tr><td class="paramname">_lines</td><td>Output vector of found lines. Each vector is encoded as a vector&lt;Vec3d&gt; <img class="formulaInl" alt="$(votes, rho, theta)$" src="form_724.png"/>. The larger the value of 'votes', the higher the reliability of the Hough line. </td></tr>
+    <tr><td class="paramname">lines_max</td><td>Max count of hough lines. </td></tr>
+    <tr><td class="paramname">threshold</td><td><a class="el" href="structcv_1_1_accumulator.html">Accumulator</a> threshold parameter. Only those lines are returned that get enough votes ( <img class="formulaInl" alt="$&gt;\texttt{threshold}$" src="form_720.png"/> ) </td></tr>
+    <tr><td class="paramname">min_rho</td><td>Minimum Distance value of the accumulator in pixels. </td></tr>
+    <tr><td class="paramname">max_rho</td><td>Maximum Distance value of the accumulator in pixels. </td></tr>
+    <tr><td class="paramname">rho_step</td><td>Distance resolution of the accumulator in pixels. </td></tr>
+    <tr><td class="paramname">min_theta</td><td>Minimum angle value of the accumulator in radians. </td></tr>
+    <tr><td class="paramname">max_theta</td><td>Maximum angle value of the accumulator in radians. </td></tr>
+    <tr><td class="paramname">theta_step</td><td>Angle resolution of the accumulator in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac6967f1a104b733917d4da9685816cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6967f1a104b733917d4da9685816cf4">&#9670;&nbsp;</a></span>preCornerDetect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::preCornerDetect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates a feature map for corner detection. </p>
+<p>The function calculates the complex spatial derivative-based function of the source image</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = (D_x \texttt{src} )^2 \cdot D_{yy} \texttt{src} + (D_y \texttt{src} )^2 \cdot D_{xx} \texttt{src} - 2 D_x \texttt{src} \cdot D_y \texttt{src} \cdot D_{xy} \texttt{src}\]" src="form_702.png"/>
+</p>
+<p>where <img class="formulaInl" alt="$D_x$" src="form_703.png"/>, <img class="formulaInl" alt="$D_y$" src="form_704.png"/> are the first image derivatives, <img class="formulaInl" alt="$D_{xx}$" src="form_705.png"/>, <img class="formulaInl" alt="$D_{yy}$" src="form_706.png"/> are the second image derivatives, and <img class="formulaInl" alt="$D_{xy}$" src="form_707.png"/> is the mixed derivative.</p>
+<p>The corners can be found as local maximums of the functions, as shown below: </p><div class="fragment"><div class="line">Mat <a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, dilated_corners;</div>
+<div class="line"><a class="code" href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4">preCornerDetect</a>(<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>, <a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, 3);</div>
+<div class="line"><span class="comment">// dilation with 3x3 rectangular structuring element</span></div>
+<div class="line"><a class="code" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec">dilate</a>(<a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, dilated_corners, Mat(), 1);</div>
+<div class="line">Mat corner_mask = <a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a> == dilated_corners;</div>
+<div class="ttc" id="agroup__highgui__c_html_gad62b16ab219ae2483e8a3d921c44cc97"><div class="ttname"><a href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a></div><div class="ttdeci">const CvArr * image</div><div class="ttdef"><b>Definition:</b> highgui_c.h:138</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_ga7c963d5c0be2901e72c3762c1ddfcee6"><div class="ttname"><a href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a></div><div class="ttdeci">CvArr * corners</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:861</div></div>
+<div class="ttc" id="agroup__imgproc__feature_html_gac6967f1a104b733917d4da9685816cf4"><div class="ttname"><a href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4">cv::preCornerDetect</a></div><div class="ttdeci">CV_EXPORTS_W void preCornerDetect(InputArray src, OutputArray dst, int ksize, int borderType=BORDER_DEFAULT)</div><div class="ttdoc">Calculates a feature map for corner detection.</div></div>
+<div class="ttc" id="agroup__imgproc__filter_html_gaf226304189a1d4dc4eb9cebb6d25cdec"><div class="ttname"><a href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec">cv::dilate</a></div><div class="ttdeci">CV_EXPORTS_W void dilate(InputArray src, OutputArray dst, InputArray kernel, Point anchor=Point(-1,-1), int iterations=1, int borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())</div><div class="ttdoc">Dilates an image by using a specific structuring element.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source single-channel 8-bit of floating-point image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Output image that has the type CV_32F and the same size as src . </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture size of the Sobel . </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method. See <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

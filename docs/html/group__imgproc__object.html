@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Imgproc_object</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgproc__object.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Imgproc_object<div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga3a7850640f1fe1f58fe91a2d7583695d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d">cv::TemplateMatchModes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dab65c042ed62c9e9e095a1e7e41fe2773">cv::TM_SQDIFF</a> = 0
+, <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695da5382c8f9df87e87cf1e9f9927dc3bc31">cv::TM_SQDIFF_NORMED</a> = 1
+, <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695da5be00b45a4d99b5e42625b4400bfde65">cv::TM_CCORR</a> = 2
+, <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695daf9c3ab9296f597ea71f056399a5831da">cv::TM_CCORR_NORMED</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dac5babb7dfda59544e3e31ea928f8cb16">cv::TM_CCOEFF</a> = 4
+, <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dac6677e2af5e0fae82cc5339bfaef5038">cv::TM_CCOEFF_NORMED</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3a7850640f1fe1f58fe91a2d7583695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of the template matching operation  <a href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3a7850640f1fe1f58fe91a2d7583695d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga7d22b26af8e9b5380550847b1edb514c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__object.html#ga7d22b26af8e9b5380550847b1edb514c">cv::matchTemplate</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__c.html#ga3dda0ce9b269462404396ce3e9eedf00">templ</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__c.html#ga40d55b7cb8d50997fe33def0b3b76eac">result</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#gab9b9819cc20b34aa0ae2bfa4486e7a65">method</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="memdesc:ga7d22b26af8e9b5380550847b1edb514c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares a template against overlapped image regions.  <a href="group__imgproc__object.html#ga7d22b26af8e9b5380550847b1edb514c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7d22b26af8e9b5380550847b1edb514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga3a7850640f1fe1f58fe91a2d7583695d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a7850640f1fe1f58fe91a2d7583695d">&#9670;&nbsp;</a></span>TemplateMatchModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d">cv::TemplateMatchModes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type of the template matching operation </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695dab65c042ed62c9e9e095a1e7e41fe2773"></a>TM_SQDIFF&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \sum _{x',y'} (T(x',y')-I(x+x',y+y'))^2\]" src="form_839.png"/>
+</p>
+<p> with mask: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \sum _{x',y'} \left( (T(x',y')-I(x+x',y+y')) \cdot M(x',y') \right)^2\]" src="form_840.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695da5382c8f9df87e87cf1e9f9927dc3bc31"></a>TM_SQDIFF_NORMED&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \frac{\sum_{x',y'} (T(x',y')-I(x+x',y+y'))^2}{\sqrt{\sum_{ x',y'}T(x',y')^2 \cdot \sum_{x',y'} I(x+x',y+y')^2}}\]" src="form_841.png"/>
+</p>
+<p> with mask: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \frac{\sum _{x',y'} \left( (T(x',y')-I(x+x',y+y')) \cdot M(x',y') \right)^2}{\sqrt{\sum_{x',y'} \left( T(x',y') \cdot M(x',y') \right)^2 \cdot \sum_{x',y'} \left( I(x+x',y+y') \cdot M(x',y') \right)^2}}\]" src="form_842.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695da5be00b45a4d99b5e42625b4400bfde65"></a>TM_CCORR&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \sum _{x',y'} (T(x',y') \cdot I(x+x',y+y'))\]" src="form_843.png"/>
+</p>
+<p> with mask: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \sum _{x',y'} (T(x',y') \cdot I(x+x',y+y') \cdot M(x',y') ^2)\]" src="form_844.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695daf9c3ab9296f597ea71f056399a5831da"></a>TM_CCORR_NORMED&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \frac{\sum_{x',y'} (T(x',y') \cdot I(x+x',y+y'))}{\sqrt{ \sum_{x',y'}T(x',y')^2 \cdot \sum_{x',y'} I(x+x',y+y')^2}}\]" src="form_845.png"/>
+</p>
+<p> with mask: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \frac{\sum_{x',y'} (T(x',y') \cdot I(x+x',y+y') \cdot M(x',y')^2)}{\sqrt{\sum_{x',y'} \left( T(x',y') \cdot M(x',y') \right)^2 \cdot \sum_{x',y'} \left( I(x+x',y+y') \cdot M(x',y') \right)^2}}\]" src="form_846.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695dac5babb7dfda59544e3e31ea928f8cb16"></a>TM_CCOEFF&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \sum _{x',y'} (T'(x',y') \cdot I'(x+x',y+y'))\]" src="form_847.png"/>
+</p>
+<p> where </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} T'(x',y')=T(x',y') - 1/(w \cdot h) \cdot \sum _{ x'',y''} T(x'',y'') \\ I'(x+x',y+y')=I(x+x',y+y') - 1/(w \cdot h) \cdot \sum _{x'',y''} I(x+x'',y+y'') \end{array}\]" src="form_848.png"/>
+</p>
+<p> with mask: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} T'(x',y')=M(x',y') \cdot \left( T(x',y') - \frac{1}{\sum _{x'',y''} M(x'',y'')} \cdot \sum _{x'',y''} (T(x'',y'') \cdot M(x'',y'')) \right) \\ I'(x+x',y+y')=M(x',y') \cdot \left( I(x+x',y+y') - \frac{1}{\sum _{x'',y''} M(x'',y'')} \cdot \sum _{x'',y''} (I(x+x'',y+y'') \cdot M(x'',y'')) \right) \end{array} \]" src="form_849.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga3a7850640f1fe1f58fe91a2d7583695dac6677e2af5e0fae82cc5339bfaef5038"></a>TM_CCOEFF_NORMED&#160;</td><td class="fielddoc"><p class="formulaDsp">
+<img class="formulaDsp" alt="\[R(x,y)= \frac{ \sum_{x',y'} (T'(x',y') \cdot I'(x+x',y+y')) }{ \sqrt{\sum_{x',y'}T'(x',y')^2 \cdot \sum_{x',y'} I'(x+x',y+y')^2} }\]" src="form_850.png"/>
+</p>
+ </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga7d22b26af8e9b5380550847b1edb514c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d22b26af8e9b5380550847b1edb514c">&#9670;&nbsp;</a></span>matchTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::matchTemplate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>templ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>mask</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares a template against overlapped image regions. </p>
+<p>The function slides through image , compares the overlapped patches of size <img class="formulaInl" alt="$w \times h$" src="form_789.png"/> against templ using the specified method and stores the comparison results in result . <a class="el" href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d" title="type of the template matching operation">TemplateMatchModes</a> describes the formulae for the available comparison methods ( <img class="formulaInl" alt="$I$" src="form_790.png"/> denotes image, <img class="formulaInl" alt="$T$" src="form_118.png"/> template, <img class="formulaInl" alt="$R$" src="form_4.png"/> result, <img class="formulaInl" alt="$M$" src="form_695.png"/> the optional mask ). The summation is done over template and/or the image patch: <img class="formulaInl" alt="$x' = 0...w-1, y' = 0...h-1$" src="form_791.png"/></p>
+<p>After the function finishes the comparison, the best matches can be found as global minimums (when <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dab65c042ed62c9e9e095a1e7e41fe2773">TM_SQDIFF</a> was used) or maximums (when <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695da5be00b45a4d99b5e42625b4400bfde65">TM_CCORR</a> or <a class="el" href="group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dac5babb7dfda59544e3e31ea928f8cb16">TM_CCOEFF</a> was used) using the <a class="el" href="group__core__array.html#ga628679259d0612dbddba05a0f7447e75" title="Finds the global minimum and maximum in an array.">minMaxLoc</a> function. In case of a color image, template summation in the numerator and each sum in the denominator is done over all of the channels and separate mean values are used for each channel. That is, the function can take a color template and a color image. The result will still be a single-channel image, which is easier to analyze.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image where the search is running. It must be 8-bit or 32-bit floating-point. </td></tr>
+    <tr><td class="paramname">templ</td><td>Searched template. It must be not greater than the source image and have the same data type. </td></tr>
+    <tr><td class="paramname">result</td><td>Map of comparison results. It must be single-channel 32-bit floating-point. If image is <img class="formulaInl" alt="$W \times H$" src="form_745.png"/> and templ is <img class="formulaInl" alt="$w \times h$" src="form_789.png"/> , then result is <img class="formulaInl" alt="$(W-w+1) \times (H-h+1)$" src="form_792.png"/> . </td></tr>
+    <tr><td class="paramname">method</td><td>Parameter specifying the comparison method, see <a class="el" href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d" title="type of the template matching operation">TemplateMatchModes</a> </td></tr>
+    <tr><td class="paramname">mask</td><td>Optional mask. It must have the same size as templ. It must either have the same number of channels as template or only one channel, which is then used for all template and image channels. If the data type is <a class="el" href="group__core__hal__interface.html#ga32b18d904ee2b1731a9416a8eef67d06">CV_8U</a>, the mask is interpreted as a binary mask, meaning only elements where mask is nonzero are used and are kept unchanged independent of the actual mask value (weight equals 1). For data tpye <a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>, the mask values are used as weights. The exact formulas are documented in <a class="el" href="group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d" title="type of the template matching operation">TemplateMatchModes</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

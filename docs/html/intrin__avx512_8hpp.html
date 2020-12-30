@@ -1,0 +1,1421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/core/hal/intrin_avx512.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('intrin__avx512_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл intrin_avx512.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="intrin__avx512_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a221cbe0da5104653507acf9095919e8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a221cbe0da5104653507acf9095919e8f">CVT_ROUND_MODES_IMPLEMENTED</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a221cbe0da5104653507acf9095919e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae046dce22790e9d40874766ea9e4214"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#aae046dce22790e9d40874766ea9e4214">CV_SIMD512</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aae046dce22790e9d40874766ea9e4214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c4be63842d61002e22a63ab6d69f47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a08c4be63842d61002e22a63ab6d69f47">CV_SIMD512_64F</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a08c4be63842d61002e22a63ab6d69f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce0a60bc38400e182a2b34dfb915632"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a9ce0a60bc38400e182a2b34dfb915632">CV_SIMD512_FP16</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a9ce0a60bc38400e182a2b34dfb915632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabd23ee74d8469c60f327f22996f2b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#adabd23ee74d8469c60f327f22996f2b6">_v512_set_epu64</a>(a7,  a6,  a5,  a4,  a3,  a2,  a1,  a0)&#160;&#160;&#160;_mm512_set_epi64((<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a7),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a6),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a5),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a4),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a3),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a2),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a1),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a0))</td></tr>
+<tr class="separator:adabd23ee74d8469c60f327f22996f2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9a8a85789799bee53aadca153aad70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#aed9a8a85789799bee53aadca153aad70">_v512_set_epu32</a>(a15,  a14,  a13,  a12,  a11,  a10,  a9,  a8,  a7,  a6,  a5,  a4,  a3,  a2,  a1,  a0)</td></tr>
+<tr class="separator:aed9a8a85789799bee53aadca153aad70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a64c3503ad387561cadc41a2ae9dfe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a44a64c3503ad387561cadc41a2ae9dfe">_v512_set_epu16</a>(a31,  a30,  a29,  a28,  a27,  a26,  a25,  a24,  a23,  a22,  a21,  a20,  a19,  a18,  a17,  a16,  a15,  a14,  a13,  a12,  a11,  a10,  a9,  a8,  a7,  a6,  a5,  a4,  a3,  a2,  a1,  a0)</td></tr>
+<tr class="separator:a44a64c3503ad387561cadc41a2ae9dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527716398a3e2e49766fa0376629d34a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a527716398a3e2e49766fa0376629d34a">_v512_set_epu8</a>(a63,  a62,  a61,  a60,  a59,  a58,  a57,  a56,  a55,  a54,  a53,  a52,  a51,  a50,  a49,  a48,  a47,  a46,  a45,  a44,  a43,  a42,  a41,  a40,  a39,  a38,  a37,  a36,  a35,  a34,  a33,  a32,  a31,  a30,  a29,  a28,  a27,  a26,  a25,  a24,  a23,  a22,  a21,  a20,  a19,  a18,  a17,  a16,  a15,  a14,  a13,  a12,  a11,  a10,  a9,  a8,  a7,  a6,  a5,  a4,  a3,  a2,  a1,  a0)</td></tr>
+<tr class="separator:a527716398a3e2e49766fa0376629d34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43111cfc2083a62e3de0dbe8f539e706"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a43111cfc2083a62e3de0dbe8f539e706">_v512_set_epi8</a>(a63,  a62,  a61,  a60,  a59,  a58,  a57,  a56,  a55,  a54,  a53,  a52,  a51,  a50,  a49,  a48,  a47,  a46,  a45,  a44,  a43,  a42,  a41,  a40,  a39,  a38,  a37,  a36,  a35,  a34,  a33,  a32,  a31,  a30,  a29,  a28,  a27,  a26,  a25,  a24,  a23,  a22,  a21,  a20,  a19,  a18,  a17,  a16,  a15,  a14,  a13,  a12,  a11,  a10,  a9,  a8,  a7,  a6,  a5,  a4,  a3,  a2,  a1,  a0)</td></tr>
+<tr class="separator:a43111cfc2083a62e3de0dbe8f539e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8929ab3d23269f071916a7ff9b06155e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin__avx512_8hpp.html#a8929ab3d23269f071916a7ff9b06155e">_mm512_cvtpd_pslo</a>(a)&#160;&#160;&#160;_mm512_castps256_ps512(_mm512_cvtpd_ps(a))</td></tr>
+<tr class="separator:a8929ab3d23269f071916a7ff9b06155e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a8929ab3d23269f071916a7ff9b06155e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8929ab3d23269f071916a7ff9b06155e">&#9670;&nbsp;</a></span>_mm512_cvtpd_pslo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _mm512_cvtpd_pslo</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td>&#160;&#160;&#160;_mm512_castps256_ps512(_mm512_cvtpd_ps(a))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43111cfc2083a62e3de0dbe8f539e706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43111cfc2083a62e3de0dbe8f539e706">&#9670;&nbsp;</a></span>_v512_set_epi8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _v512_set_epi8</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a63, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a62, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a61, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a60, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a59, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a58, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a57, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a56, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a55, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a54, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a53, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a52, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a51, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a50, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a49, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a48, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a47, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a46, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a45, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a44, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a43, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a42, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a41, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a40, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a39, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a38, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a37, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a36, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a35, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a34, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a33, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a32, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a31, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a30, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a29, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a28, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a27, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a26, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a25, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a24, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a23, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a22, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a21, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a20, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a19, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a18, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a17, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a16, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a15, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a14, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a13, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a12, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a11, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a10, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a9, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a8, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a7, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a6, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">        <a class="code" href="intrin__avx512_8hpp.html#a527716398a3e2e49766fa0376629d34a">_v512_set_epu8</a>((<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a63), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a62), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a61), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a60), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a59), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a58), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a57), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a56), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a55), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a54), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a53), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a52), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a51), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a50), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a49), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a48), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a47), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a46), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a45), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a44), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a43), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a42), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a41), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a40), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a39), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a38), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a37), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a36), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a35), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a34), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a33), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a32), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a31), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a30), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a29), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a28), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a27), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a26), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a25), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a24), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a23), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a22), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a21), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a20), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a19), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a18), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a17), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a16), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a15), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a14), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a13), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a12), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a11), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)(a10), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a9), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a8), \</div>
+<div class="line">                       (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a7), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a6), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a5), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a4), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a3), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a2), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a1), (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>)( a0))</div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> interface.h:51</div></div>
+<div class="ttc" id="aintrin__avx512_8hpp_html_a527716398a3e2e49766fa0376629d34a"><div class="ttname"><a href="intrin__avx512_8hpp.html#a527716398a3e2e49766fa0376629d34a">_v512_set_epu8</a></div><div class="ttdeci">#define _v512_set_epu8(a63, a62, a61, a60, a59, a58, a57, a56, a55, a54, a53, a52, a51, a50, a49, a48, a47, a46, a45, a44, a43, a42, a41, a40, a39, a38, a37, a36, a35, a34, a33, a32, a31, a30, a29, a28, a27, a26, a25, a24, a23, a22, a21, a20, a19, a18, a17, a16, a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)</div><div class="ttdef"><b>Definition:</b> intrin_avx512.hpp:30</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a44a64c3503ad387561cadc41a2ae9dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a64c3503ad387561cadc41a2ae9dfe">&#9670;&nbsp;</a></span>_v512_set_epu16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _v512_set_epu16</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a31, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a30, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a29, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a28, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a27, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a26, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a25, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a24, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a23, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a22, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a21, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a20, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a19, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a18, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a17, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a16, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a15, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a14, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a13, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a12, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a11, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a10, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a9, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a8, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a7, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a6, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">        <a class="code" href="intrin__avx512_8hpp.html#aed9a8a85789799bee53aadca153aad70">_v512_set_epu32</a>(((<span class="keywordtype">unsigned</span>)(a31)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a30), ((<span class="keywordtype">unsigned</span>)(a29)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a28), ((<span class="keywordtype">unsigned</span>)(a27)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a26), ((<span class="keywordtype">unsigned</span>)(a25)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a24), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a23)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a22), ((<span class="keywordtype">unsigned</span>)(a21)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a20), ((<span class="keywordtype">unsigned</span>)(a19)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a18), ((<span class="keywordtype">unsigned</span>)(a17)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a16), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a15)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a14), ((<span class="keywordtype">unsigned</span>)(a13)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a12), ((<span class="keywordtype">unsigned</span>)(a11)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)(a10), ((<span class="keywordtype">unsigned</span>)( a9)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)( a8), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)( a7)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)( a6), ((<span class="keywordtype">unsigned</span>)( a5)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)( a4), ((<span class="keywordtype">unsigned</span>)( a3)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)( a2), ((<span class="keywordtype">unsigned</span>)( a1)&lt;&lt;16)|(<span class="keywordtype">unsigned</span>)( a0))</div>
+<div class="ttc" id="aintrin__avx512_8hpp_html_aed9a8a85789799bee53aadca153aad70"><div class="ttname"><a href="intrin__avx512_8hpp.html#aed9a8a85789799bee53aadca153aad70">_v512_set_epu32</a></div><div class="ttdeci">#define _v512_set_epu32(a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)</div><div class="ttdef"><b>Definition:</b> intrin_avx512.hpp:21</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aed9a8a85789799bee53aadca153aad70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9a8a85789799bee53aadca153aad70">&#9670;&nbsp;</a></span>_v512_set_epu32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _v512_set_epu32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a15, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a14, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a13, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a12, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a11, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a10, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a9, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a8, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a7, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a6, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">        _mm512_set_epi64(((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a15)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a14), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a13)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a12), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a11)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a10), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a9)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a8), \</div>
+<div class="line">                         ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a7)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a6), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a5)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a4), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a3)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a2), ((<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a1)&lt;&lt;32)|(<a class="code" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)( a0))</div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga7cde0074dfd288f2d70c0e035dacb28a"><div class="ttname"><a href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a></div><div class="ttdeci">int64_t int64</div><div class="ttdef"><b>Definition:</b> interface.h:61</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adabd23ee74d8469c60f327f22996f2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabd23ee74d8469c60f327f22996f2b6">&#9670;&nbsp;</a></span>_v512_set_epu64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _v512_set_epu64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a7, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a6, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;_mm512_set_epi64((<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a7),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a6),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a5),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a4),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a3),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a2),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a1),(<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>)(a0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a527716398a3e2e49766fa0376629d34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527716398a3e2e49766fa0376629d34a">&#9670;&nbsp;</a></span>_v512_set_epu8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _v512_set_epu8</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a63, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a62, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a61, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a60, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a59, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a58, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a57, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a56, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a55, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a54, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a53, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a52, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a51, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a50, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a49, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a48, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a47, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a46, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a45, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a44, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a43, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a42, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a41, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a40, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a39, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a38, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a37, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a36, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a35, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a34, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a33, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a32, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a31, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a30, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a29, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a28, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a27, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a26, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a25, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a24, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a23, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a22, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a21, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a20, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a19, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a18, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a17, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a16, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a15, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a14, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a13, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a12, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a11, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a10, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a9, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a8, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a7, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a6, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">        <a class="code" href="intrin__avx512_8hpp.html#aed9a8a85789799bee53aadca153aad70">_v512_set_epu32</a>(((<span class="keywordtype">unsigned</span>)(a63)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a62)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a61)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a60),((<span class="keywordtype">unsigned</span>)(a59)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a58)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a57)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a56), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a55)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a54)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a53)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a52),((<span class="keywordtype">unsigned</span>)(a51)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a50)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a49)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a48), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a47)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a46)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a45)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a44),((<span class="keywordtype">unsigned</span>)(a43)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a42)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a41)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a40), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a39)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a38)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a37)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a36),((<span class="keywordtype">unsigned</span>)(a35)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a34)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a33)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a32), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a31)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a30)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a29)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a28),((<span class="keywordtype">unsigned</span>)(a27)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a26)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a25)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a24), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a23)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a22)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a21)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a20),((<span class="keywordtype">unsigned</span>)(a19)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a18)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a17)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a16), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)(a15)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a14)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)(a13)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)(a12),((<span class="keywordtype">unsigned</span>)(a11)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)(a10)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)( a9)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)( a8), \</div>
+<div class="line">                        ((<span class="keywordtype">unsigned</span>)( a7)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)( a6)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)( a5)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)( a4),((<span class="keywordtype">unsigned</span>)( a3)&lt;&lt;24)|((<span class="keywordtype">unsigned</span>)( a2)&lt;&lt;16)|((<span class="keywordtype">unsigned</span>)( a1)&lt;&lt;8)|(<span class="keywordtype">unsigned</span>)( a0))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aae046dce22790e9d40874766ea9e4214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae046dce22790e9d40874766ea9e4214">&#9670;&nbsp;</a></span>CV_SIMD512</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_SIMD512&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08c4be63842d61002e22a63ab6d69f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c4be63842d61002e22a63ab6d69f47">&#9670;&nbsp;</a></span>CV_SIMD512_64F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_SIMD512_64F&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ce0a60bc38400e182a2b34dfb915632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce0a60bc38400e182a2b34dfb915632">&#9670;&nbsp;</a></span>CV_SIMD512_FP16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_SIMD512_FP16&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a221cbe0da5104653507acf9095919e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a221cbe0da5104653507acf9095919e8f">&#9670;&nbsp;</a></span>CVT_ROUND_MODES_IMPLEMENTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CVT_ROUND_MODES_IMPLEMENTED&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="dir_9cfd5b47b88c986e548a798da92b3d78.html">hal</a></li><li class="navelem"><a class="el" href="intrin__avx512_8hpp.html">intrin_avx512.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

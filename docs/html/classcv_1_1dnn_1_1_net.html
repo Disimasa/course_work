@@ -1,0 +1,1870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::dnn::Net</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1dnn_1_1_net.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classcv_1_1dnn_1_1_net-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::dnn::Net<div class="ingroups"><a class="el" href="group__dnn.html">Deep Neural Network module</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class allows to create and manipulate comprehensive artificial neural networks.  
+ <a href="classcv_1_1dnn_1_1_net.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2dnn_2dnn_8hpp_source.html">dnn.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a6962dbfe16ce1ae18c67de9f5f2912ef"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structcv_1_1dnn_1_1_dict_value.html">DictValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a></td></tr>
+<tr class="memdesc:a6962dbfe16ce1ae18c67de9f5f2912ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for strings and integers.  <a href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6962dbfe16ce1ae18c67de9f5f2912ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa93c9476c69030dbca5b92aaa8230af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aa93c9476c69030dbca5b92aaa8230af7">Net</a> ()</td></tr>
+<tr class="memdesc:aa93c9476c69030dbca5b92aaa8230af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classcv_1_1dnn_1_1_net.html#aa93c9476c69030dbca5b92aaa8230af7">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa93c9476c69030dbca5b92aaa8230af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e02d1bf0943af0a2ed411d52e5775eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a0e02d1bf0943af0a2ed411d52e5775eb">~Net</a> ()</td></tr>
+<tr class="memdesc:a0e02d1bf0943af0a2ed411d52e5775eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor frees the net only if there aren't references to the net anymore.  <a href="classcv_1_1dnn_1_1_net.html#a0e02d1bf0943af0a2ed411d52e5775eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e02d1bf0943af0a2ed411d52e5775eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8246e2ec35ef733cc8271d7e1fdfc7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ae8246e2ec35ef733cc8271d7e1fdfc7b">empty</a> () const</td></tr>
+<tr class="separator:ae8246e2ec35ef733cc8271d7e1fdfc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad403d5bb28064758adaf655fe3b0ae81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ad403d5bb28064758adaf655fe3b0ae81">dump</a> ()</td></tr>
+<tr class="memdesc:ad403d5bb28064758adaf655fe3b0ae81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump net to String.  <a href="classcv_1_1dnn_1_1_net.html#ad403d5bb28064758adaf655fe3b0ae81">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad403d5bb28064758adaf655fe3b0ae81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc36c81a8a904d147c17498cbd1a756"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a0fc36c81a8a904d147c17498cbd1a756">dumpToFile</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;path)</td></tr>
+<tr class="memdesc:a0fc36c81a8a904d147c17498cbd1a756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump net structure, hyperparameters, backend, target and fusion to dot file.  <a href="classcv_1_1dnn_1_1_net.html#a0fc36c81a8a904d147c17498cbd1a756">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0fc36c81a8a904d147c17498cbd1a756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1569c03d93c80fd8c6020589bd2ac116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a1569c03d93c80fd8c6020589bd2ac116">addLayer</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a1569c03d93c80fd8c6020589bd2ac116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new layer to the net.  <a href="classcv_1_1dnn_1_1_net.html#a1569c03d93c80fd8c6020589bd2ac116">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1569c03d93c80fd8c6020589bd2ac116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e78af0e0add3ff8594919f1af548dc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a7e78af0e0add3ff8594919f1af548dc4">addLayerToPrev</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a7e78af0e0add3ff8594919f1af548dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new layer and connects its first input to the first output of previously added layer.  <a href="classcv_1_1dnn_1_1_net.html#a7e78af0e0add3ff8594919f1af548dc4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e78af0e0add3ff8594919f1af548dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca892dbf6ecd5ba8051fb7f5c6266164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aca892dbf6ecd5ba8051fb7f5c6266164">getLayerId</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;layer)</td></tr>
+<tr class="memdesc:aca892dbf6ecd5ba8051fb7f5c6266164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts string name of the layer to the integer identifier.  <a href="classcv_1_1dnn_1_1_net.html#aca892dbf6ecd5ba8051fb7f5c6266164">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca892dbf6ecd5ba8051fb7f5c6266164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad1ec24dcb561f7bbe88572a956134d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a4ad1ec24dcb561f7bbe88572a956134d">getLayerNames</a> () const</td></tr>
+<tr class="separator:a4ad1ec24dcb561f7bbe88572a956134d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d1436a63d59045204630db6a6a0832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ae3d1436a63d59045204630db6a6a0832">getLayer</a> (<a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a> layerId)</td></tr>
+<tr class="memdesc:ae3d1436a63d59045204630db6a6a0832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to layer with specified id or name which the network use.  <a href="classcv_1_1dnn_1_1_net.html#ae3d1436a63d59045204630db6a6a0832">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae3d1436a63d59045204630db6a6a0832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf96c5e92de4f6cd3013a6fb900934b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#abf96c5e92de4f6cd3013a6fb900934b4">getLayerInputs</a> (<a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a> layerId)</td></tr>
+<tr class="memdesc:abf96c5e92de4f6cd3013a6fb900934b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to input layers of specific layer.  <a href="classcv_1_1dnn_1_1_net.html#abf96c5e92de4f6cd3013a6fb900934b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf96c5e92de4f6cd3013a6fb900934b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ee9291052a33a4de0ca94b4be5acf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aa2ee9291052a33a4de0ca94b4be5acf9">connect</a> (<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> outPin, <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> inpPin)</td></tr>
+<tr class="memdesc:aa2ee9291052a33a4de0ca94b4be5acf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects output of the first layer to input of the second layer.  <a href="classcv_1_1dnn_1_1_net.html#aa2ee9291052a33a4de0ca94b4be5acf9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa2ee9291052a33a4de0ca94b4be5acf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26615a67830b0045b68565c7e7dc1307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a26615a67830b0045b68565c7e7dc1307">connect</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> outLayerId, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> outNum, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> inpLayerId, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> inpNum)</td></tr>
+<tr class="memdesc:a26615a67830b0045b68565c7e7dc1307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects #<code>outNum</code> output of the first layer to #<code>inNum</code> input of the second layer.  <a href="classcv_1_1dnn_1_1_net.html#a26615a67830b0045b68565c7e7dc1307">Подробнее...</a><br /></td></tr>
+<tr class="separator:a26615a67830b0045b68565c7e7dc1307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba94fbca1400b87d73e7f7e597f3448"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a1ba94fbca1400b87d73e7f7e597f3448">setInputsNames</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;inputBlobNames)</td></tr>
+<tr class="memdesc:a1ba94fbca1400b87d73e7f7e597f3448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets outputs names of the network input pseudo layer.  <a href="classcv_1_1dnn_1_1_net.html#a1ba94fbca1400b87d73e7f7e597f3448">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ba94fbca1400b87d73e7f7e597f3448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44f0300165487c6b2010b561159b836a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a44f0300165487c6b2010b561159b836a">setInputShape</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;inputName, const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;shape)</td></tr>
+<tr class="memdesc:a44f0300165487c6b2010b561159b836a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify shape of network input.  <a href="classcv_1_1dnn_1_1_net.html#a44f0300165487c6b2010b561159b836a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44f0300165487c6b2010b561159b836a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae444ed7d9f75887a5075190f6d761fda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ae444ed7d9f75887a5075190f6d761fda">forward</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;outputName=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:ae444ed7d9f75887a5075190f6d761fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs forward pass to compute output of layer with name <code>outputName</code>.  <a href="classcv_1_1dnn_1_1_net.html#ae444ed7d9f75887a5075190f6d761fda">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae444ed7d9f75887a5075190f6d761fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2e8b7aef0edcd6c465d70e5e3867f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_async_array.html">AsyncArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a9c2e8b7aef0edcd6c465d70e5e3867f1">forwardAsync</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;outputName=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a9c2e8b7aef0edcd6c465d70e5e3867f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs forward pass to compute output of layer with name <code>outputName</code>.  <a href="classcv_1_1dnn_1_1_net.html#a9c2e8b7aef0edcd6c465d70e5e3867f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9c2e8b7aef0edcd6c465d70e5e3867f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c4e50e92f153d68acd405d7a5eb990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a91c4e50e92f153d68acd405d7a5eb990">forward</a> (<a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a> outputBlobs, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;outputName=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a91c4e50e92f153d68acd405d7a5eb990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs forward pass to compute output of layer with name <code>outputName</code>.  <a href="classcv_1_1dnn_1_1_net.html#a91c4e50e92f153d68acd405d7a5eb990">Подробнее...</a><br /></td></tr>
+<tr class="separator:a91c4e50e92f153d68acd405d7a5eb990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaa03410a838bed2e78774f185d2252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aafaa03410a838bed2e78774f185d2252">forward</a> (<a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a> outputBlobs, const std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;outBlobNames)</td></tr>
+<tr class="memdesc:aafaa03410a838bed2e78774f185d2252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs forward pass to compute outputs of layers listed in <code>outBlobNames</code>.  <a href="classcv_1_1dnn_1_1_net.html#aafaa03410a838bed2e78774f185d2252">Подробнее...</a><br /></td></tr>
+<tr class="separator:aafaa03410a838bed2e78774f185d2252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68cfab300fe6d301901f42808b54a8e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a68cfab300fe6d301901f42808b54a8e6">setPreferableBackend</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> backendId)</td></tr>
+<tr class="memdesc:a68cfab300fe6d301901f42808b54a8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask network to use specific computation backend where it supported.  <a href="classcv_1_1dnn_1_1_net.html#a68cfab300fe6d301901f42808b54a8e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68cfab300fe6d301901f42808b54a8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe119345df2491584b68e9775d48151"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aefe119345df2491584b68e9775d48151">setPreferableTarget</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> targetId)</td></tr>
+<tr class="memdesc:aefe119345df2491584b68e9775d48151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask network to make computations on specific target device.  <a href="classcv_1_1dnn_1_1_net.html#aefe119345df2491584b68e9775d48151">Подробнее...</a><br /></td></tr>
+<tr class="separator:aefe119345df2491584b68e9775d48151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda1797f888e88b5a0d18055a282a9fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#abda1797f888e88b5a0d18055a282a9fd">setInput</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> blob, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name=&quot;&quot;, double scalefactor=1.0, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;<a class="el" href="group__core__array.html#ga71c68a1493e52991ef0d07a72e4ca485">mean</a>=<a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>())</td></tr>
+<tr class="memdesc:abda1797f888e88b5a0d18055a282a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the new input value for the network.  <a href="classcv_1_1dnn_1_1_net.html#abda1797f888e88b5a0d18055a282a9fd">Подробнее...</a><br /></td></tr>
+<tr class="separator:abda1797f888e88b5a0d18055a282a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11415f99f4731ac502aa8d8535784a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ae11415f99f4731ac502aa8d8535784a6">setParam</a> (<a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a> layer, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> numParam, const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;blob)</td></tr>
+<tr class="memdesc:ae11415f99f4731ac502aa8d8535784a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the new value for the learned param of the layer.  <a href="classcv_1_1dnn_1_1_net.html#ae11415f99f4731ac502aa8d8535784a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae11415f99f4731ac502aa8d8535784a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b8d464f8dbe7a433436f38b2269ecd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#af2b8d464f8dbe7a433436f38b2269ecd">getParam</a> (<a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a> layer, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> numParam=0)</td></tr>
+<tr class="memdesc:af2b8d464f8dbe7a433436f38b2269ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns parameter blob of the layer.  <a href="classcv_1_1dnn_1_1_net.html#af2b8d464f8dbe7a433436f38b2269ecd">Подробнее...</a><br /></td></tr>
+<tr class="separator:af2b8d464f8dbe7a433436f38b2269ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5175117d094ef093ad23ac82ac26162f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a5175117d094ef093ad23ac82ac26162f">getUnconnectedOutLayers</a> () const</td></tr>
+<tr class="memdesc:a5175117d094ef093ad23ac82ac26162f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns indexes of layers with unconnected outputs.  <a href="classcv_1_1dnn_1_1_net.html#a5175117d094ef093ad23ac82ac26162f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5175117d094ef093ad23ac82ac26162f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af3d6915e8d59878a250b3f05a2ea5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a2af3d6915e8d59878a250b3f05a2ea5f">getUnconnectedOutLayersNames</a> () const</td></tr>
+<tr class="memdesc:a2af3d6915e8d59878a250b3f05a2ea5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns names of layers with unconnected outputs.  <a href="classcv_1_1dnn_1_1_net.html#a2af3d6915e8d59878a250b3f05a2ea5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2af3d6915e8d59878a250b3f05a2ea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f37ef9bc57c56a730efc778f88b150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#af9f37ef9bc57c56a730efc778f88b150">getLayersShapes</a> (const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;layersIds, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;inLayersShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;outLayersShapes) const</td></tr>
+<tr class="memdesc:af9f37ef9bc57c56a730efc778f88b150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns input and output shapes for all layers in loaded model; preliminary inferencing isn't necessary.  <a href="classcv_1_1dnn_1_1_net.html#af9f37ef9bc57c56a730efc778f88b150">Подробнее...</a><br /></td></tr>
+<tr class="separator:af9f37ef9bc57c56a730efc778f88b150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5efa172c9d81979c0fbbf51c55f07a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ad5efa172c9d81979c0fbbf51c55f07a2">getLayersShapes</a> (const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;layersIds, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;inLayersShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;outLayersShapes) const</td></tr>
+<tr class="separator:ad5efa172c9d81979c0fbbf51c55f07a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44efd1ce11c3665814870e4dd5d480e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a44efd1ce11c3665814870e4dd5d480e8">getLayerShapes</a> (const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;inLayerShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;outLayerShapes) const</td></tr>
+<tr class="memdesc:a44efd1ce11c3665814870e4dd5d480e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns input and output shapes for layer with specified id in loaded model; preliminary inferencing isn't necessary.  <a href="classcv_1_1dnn_1_1_net.html#a44efd1ce11c3665814870e4dd5d480e8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44efd1ce11c3665814870e4dd5d480e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b9bfe2a98ac8fa90a0a4d9281c15a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ad1b9bfe2a98ac8fa90a0a4d9281c15a6">getLayerShapes</a> (const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes, const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;inLayerShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;outLayerShapes) const</td></tr>
+<tr class="separator:ad1b9bfe2a98ac8fa90a0a4d9281c15a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89f97666670043a7da7dedee72e282c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#af89f97666670043a7da7dedee72e282c">getFLOPS</a> (const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes) const</td></tr>
+<tr class="memdesc:af89f97666670043a7da7dedee72e282c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes FLOP for whole loaded model with specified input shapes.  <a href="classcv_1_1dnn_1_1_net.html#af89f97666670043a7da7dedee72e282c">Подробнее...</a><br /></td></tr>
+<tr class="separator:af89f97666670043a7da7dedee72e282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae9efcc9c05e1a423752532012a664d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a2ae9efcc9c05e1a423752532012a664d">getFLOPS</a> (const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape) const</td></tr>
+<tr class="separator:a2ae9efcc9c05e1a423752532012a664d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5635e4c08ccc202a0106621e15d9a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a4d5635e4c08ccc202a0106621e15d9a3">getFLOPS</a> (const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes) const</td></tr>
+<tr class="separator:a4d5635e4c08ccc202a0106621e15d9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89b8eb9723e255ce353251137dc19c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ab89b8eb9723e255ce353251137dc19c9">getFLOPS</a> (const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape) const</td></tr>
+<tr class="separator:ab89b8eb9723e255ce353251137dc19c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de85d17ef673776c8589b05e195127d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6de85d17ef673776c8589b05e195127d">getLayerTypes</a> (<a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;layersTypes) const</td></tr>
+<tr class="memdesc:a6de85d17ef673776c8589b05e195127d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of types for layer used in model.  <a href="classcv_1_1dnn_1_1_net.html#a6de85d17ef673776c8589b05e195127d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6de85d17ef673776c8589b05e195127d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c893679fd9ef33fd19919d896d76e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ab1c893679fd9ef33fd19919d896d76e3">getLayersCount</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;layerType) const</td></tr>
+<tr class="memdesc:ab1c893679fd9ef33fd19919d896d76e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns count of layers of specified type.  <a href="classcv_1_1dnn_1_1_net.html#ab1c893679fd9ef33fd19919d896d76e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab1c893679fd9ef33fd19919d896d76e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ee410f9ba96118468abf074e73c806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a68ee410f9ba96118468abf074e73c806">getMemoryConsumption</a> (const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;blobs) const</td></tr>
+<tr class="memdesc:a68ee410f9ba96118468abf074e73c806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes bytes number which are required to store all weights and intermediate blobs for model.  <a href="classcv_1_1dnn_1_1_net.html#a68ee410f9ba96118468abf074e73c806">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68ee410f9ba96118468abf074e73c806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b98e2dcb19a50ede01556537d022ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a0b98e2dcb19a50ede01556537d022ba5">getMemoryConsumption</a> (const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;blobs) const</td></tr>
+<tr class="separator:a0b98e2dcb19a50ede01556537d022ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a44ea352e4b492722390a8f06fd5e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a74a44ea352e4b492722390a8f06fd5e6">getMemoryConsumption</a> (const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;blobs) const</td></tr>
+<tr class="separator:a74a44ea352e4b492722390a8f06fd5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab364bdcb7b97a21acdb16ed9c9cfad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#aab364bdcb7b97a21acdb16ed9c9cfad4">getMemoryConsumption</a> (const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> layerId, const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;blobs) const</td></tr>
+<tr class="separator:aab364bdcb7b97a21acdb16ed9c9cfad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59411c698919fb87101c30376297afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ac59411c698919fb87101c30376297afb">getMemoryConsumption</a> (const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;netInputShapes, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;layerIds, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;blobs) const</td></tr>
+<tr class="memdesc:ac59411c698919fb87101c30376297afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes bytes number which are required to store all weights and intermediate blobs for each layer.  <a href="classcv_1_1dnn_1_1_net.html#ac59411c698919fb87101c30376297afb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac59411c698919fb87101c30376297afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ea1d1d1b2f6a1c9a22bc466173c59e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a05ea1d1d1b2f6a1c9a22bc466173c59e">getMemoryConsumption</a> (const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;netInputShape, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;layerIds, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;weights, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;blobs) const</td></tr>
+<tr class="separator:a05ea1d1d1b2f6a1c9a22bc466173c59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cf42341ee0fd5f70fc1f43caf6a0ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a28cf42341ee0fd5f70fc1f43caf6a0ad">enableFusion</a> (bool fusion)</td></tr>
+<tr class="memdesc:a28cf42341ee0fd5f70fc1f43caf6a0ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables layer fusion in the network.  <a href="classcv_1_1dnn_1_1_net.html#a28cf42341ee0fd5f70fc1f43caf6a0ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28cf42341ee0fd5f70fc1f43caf6a0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dda0d2b26527e537b52ef90d44bc2fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a5dda0d2b26527e537b52ef90d44bc2fc">getPerfProfile</a> (<a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; &amp;timings)</td></tr>
+<tr class="memdesc:a5dda0d2b26527e537b52ef90d44bc2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns overall time for inference and timings (in ticks) for layers. Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers.  <a href="classcv_1_1dnn_1_1_net.html#a5dda0d2b26527e537b52ef90d44bc2fc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5dda0d2b26527e537b52ef90d44bc2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a5e69bd6c20f21ed8aa04982cbce17cfc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#a5e69bd6c20f21ed8aa04982cbce17cfc">readFromModelOptimizer</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;xml, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;bin)</td></tr>
+<tr class="memdesc:a5e69bd6c20f21ed8aa04982cbce17cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer intermediate representation (IR).  <a href="classcv_1_1dnn_1_1_net.html#a5e69bd6c20f21ed8aa04982cbce17cfc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5e69bd6c20f21ed8aa04982cbce17cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98ddf4806099a91f0b648287fcec704"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#ae98ddf4806099a91f0b648287fcec704">readFromModelOptimizer</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModelConfig, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferWeights)</td></tr>
+<tr class="memdesc:ae98ddf4806099a91f0b648287fcec704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer in-memory buffers with intermediate representation (IR).  <a href="classcv_1_1dnn_1_1_net.html#ae98ddf4806099a91f0b648287fcec704">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae98ddf4806099a91f0b648287fcec704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fd3b20f8878e202d41d597b3da15d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html#af1fd3b20f8878e202d41d597b3da15d6">readFromModelOptimizer</a> (const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *bufferModelConfigPtr, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> bufferModelConfigSize, const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *bufferWeightsPtr, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> bufferWeightsSize)</td></tr>
+<tr class="memdesc:af1fd3b20f8878e202d41d597b3da15d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer in-memory buffers with intermediate representation (IR).  <a href="classcv_1_1dnn_1_1_net.html#af1fd3b20f8878e202d41d597b3da15d6">Подробнее...</a><br /></td></tr>
+<tr class="separator:af1fd3b20f8878e202d41d597b3da15d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This class allows to create and manipulate comprehensive artificial neural networks. </p>
+<p>Neural network is presented as directed acyclic graph (DAG), where vertices are <a class="el" href="classcv_1_1dnn_1_1_layer.html" title="This interface class allows to build new Layers - are building blocks of networks.">Layer</a> instances, and edges specify relationships between layers inputs and outputs.</p>
+<p>Each network layer has unique integer id and unique string name inside its network. LayerId can store either layer name or layer id.</p>
+<p>This class supports reference counting of its instances, i. e. copies point to the same instance. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a6962dbfe16ce1ae18c67de9f5f2912ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6962dbfe16ce1ae18c67de9f5f2912ef">&#9670;&nbsp;</a></span>LayerId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structcv_1_1dnn_1_1_dict_value.html">DictValue</a> <a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">cv::dnn::Net::LayerId</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Container for strings and integers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa93c9476c69030dbca5b92aaa8230af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93c9476c69030dbca5b92aaa8230af7">&#9670;&nbsp;</a></span>Net()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::dnn::Net::Net </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="a0e02d1bf0943af0a2ed411d52e5775eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e02d1bf0943af0a2ed411d52e5775eb">&#9670;&nbsp;</a></span>~Net()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::dnn::Net::~Net </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor frees the net only if there aren't references to the net anymore. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1569c03d93c80fd8c6020589bd2ac116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1569c03d93c80fd8c6020589bd2ac116">&#9670;&nbsp;</a></span>addLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::dnn::Net::addLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds new layer to the net. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>unique name of the adding layer. </td></tr>
+    <tr><td class="paramname">type</td><td>typename of the adding layer (type must be registered in LayerRegister). </td></tr>
+    <tr><td class="paramname">params</td><td>parameters which will be used to initialize the creating layer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>unique identifier of created layer, or -1 if a failure will happen. </dd></dl>
+
+</div>
+</div>
+<a id="a7e78af0e0add3ff8594919f1af548dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e78af0e0add3ff8594919f1af548dc4">&#9670;&nbsp;</a></span>addLayerToPrev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::dnn::Net::addLayerToPrev </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds new layer and connects its first input to the first output of previously added layer. </p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1dnn_1_1_net.html#a1569c03d93c80fd8c6020589bd2ac116" title="Adds new layer to the net.">addLayer()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a26615a67830b0045b68565c7e7dc1307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26615a67830b0045b68565c7e7dc1307">&#9670;&nbsp;</a></span>connect() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>outLayerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>outNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>inpLayerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>inpNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connects #<code>outNum</code> output of the first layer to #<code>inNum</code> input of the second layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outLayerId</td><td>identifier of the first layer </td></tr>
+    <tr><td class="paramname">outNum</td><td>number of the first layer output </td></tr>
+    <tr><td class="paramname">inpLayerId</td><td>identifier of the second layer </td></tr>
+    <tr><td class="paramname">inpNum</td><td>number of the second layer input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2ee9291052a33a4de0ca94b4be5acf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ee9291052a33a4de0ca94b4be5acf9">&#9670;&nbsp;</a></span>connect() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td>
+          <td class="paramname"><em>outPin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td>
+          <td class="paramname"><em>inpPin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connects output of the first layer to input of the second layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outPin</td><td>descriptor of the first layer output. </td></tr>
+    <tr><td class="paramname">inpPin</td><td>descriptor of the second layer input.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Descriptors have the following template <code>&lt;layer_name&gt;[.input_number]</code>:</p><ul>
+<li>the first part of the template <code>layer_name</code> is string name of the added layer. If this part is empty then the network input pseudo layer will be used;</li>
+<li><p class="startli">the second optional part of the template <code>input_number</code> is either number of the layer input, either label one. If this part is omitted then the first layer input will be used.</p>
+<dl class="section see"><dt>См. также</dt><dd>setNetInputs(), <a class="el" href="classcv_1_1dnn_1_1_layer.html#a93212cf0fe50ace40af0f2b4f42263c4" title="Returns index of input blob into the input array.">Layer::inputNameToIndex()</a>, <a class="el" href="classcv_1_1dnn_1_1_layer.html#a8eefc37b2c55ae1e5d73223fe32483a7" title="Returns index of output blob in output array.">Layer::outputNameToIndex()</a> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="ad403d5bb28064758adaf655fe3b0ae81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad403d5bb28064758adaf655fe3b0ae81">&#9670;&nbsp;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> cv::dnn::Net::dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump net to String. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>String with structure, hyperparameters, backend, target and fusion Call method after <a class="el" href="classcv_1_1dnn_1_1_net.html#abda1797f888e88b5a0d18055a282a9fd" title="Sets the new input value for the network.">setInput()</a>. To see correct backend, target and fusion run after <a class="el" href="classcv_1_1dnn_1_1_net.html#ae444ed7d9f75887a5075190f6d761fda" title="Runs forward pass to compute output of layer with name outputName.">forward()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a0fc36c81a8a904d147c17498cbd1a756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc36c81a8a904d147c17498cbd1a756">&#9670;&nbsp;</a></span>dumpToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::dumpToFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump net structure, hyperparameters, backend, target and fusion to dot file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>path to output file with .dot extension </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1dnn_1_1_net.html#ad403d5bb28064758adaf655fe3b0ae81" title="Dump net to String.">dump()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae8246e2ec35ef733cc8271d7e1fdfc7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8246e2ec35ef733cc8271d7e1fdfc7b">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::dnn::Net::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if there are no layers in the network. </p>
+
+</div>
+</div>
+<a id="a28cf42341ee0fd5f70fc1f43caf6a0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cf42341ee0fd5f70fc1f43caf6a0ad">&#9670;&nbsp;</a></span>enableFusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::enableFusion </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fusion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables or disables layer fusion in the network. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fusion</td><td>true to enable the fusion, false to disable. The fusion is enabled by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae444ed7d9f75887a5075190f6d761fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae444ed7d9f75887a5075190f6d761fda">&#9670;&nbsp;</a></span>forward() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::dnn::Net::forward </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputName</em> = <code><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs forward pass to compute output of layer with name <code>outputName</code>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputName</td><td>name for layer which output is needed to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>blob for first output of specified layer.</dd></dl>
+<p>By default runs forward pass for the whole network. </p>
+
+</div>
+</div>
+<a id="aafaa03410a838bed2e78774f185d2252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafaa03410a838bed2e78774f185d2252">&#9670;&nbsp;</a></span>forward() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>outputBlobs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outBlobNames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs forward pass to compute outputs of layers listed in <code>outBlobNames</code>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputBlobs</td><td>contains blobs for first outputs of specified layers. </td></tr>
+    <tr><td class="paramname">outBlobNames</td><td>names for layers which outputs are needed to get </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a91c4e50e92f153d68acd405d7a5eb990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c4e50e92f153d68acd405d7a5eb990">&#9670;&nbsp;</a></span>forward() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>outputBlobs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputName</em> = <code><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs forward pass to compute output of layer with name <code>outputName</code>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputBlobs</td><td>contains all output blobs for specified layer. </td></tr>
+    <tr><td class="paramname">outputName</td><td>name for layer which output is needed to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If <code>outputName</code> is empty, runs forward pass for the whole network. </p>
+
+</div>
+</div>
+<a id="a9c2e8b7aef0edcd6c465d70e5e3867f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2e8b7aef0edcd6c465d70e5e3867f1">&#9670;&nbsp;</a></span>forwardAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_async_array.html">AsyncArray</a> cv::dnn::Net::forwardAsync </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputName</em> = <code><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs forward pass to compute output of layer with name <code>outputName</code>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputName</td><td>name for layer which output is needed to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>By default runs forward pass for the whole network.</p>
+<p>This is an asynchronous version of <a class="el" href="classcv_1_1dnn_1_1_net.html#ae444ed7d9f75887a5075190f6d761fda" title="Runs forward pass to compute output of layer with name outputName.">forward(const String&amp;)</a>. <a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625a6d17a7450b1e077ac91faa10a1e85486">dnn::DNN_BACKEND_INFERENCE_ENGINE</a> backend is required. </p>
+
+</div>
+</div>
+<a id="ab89b8eb9723e255ce353251137dc19c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89b8eb9723e255ce353251137dc19c9">&#9670;&nbsp;</a></span>getFLOPS() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::dnn::Net::getFLOPS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a4d5635e4c08ccc202a0106621e15d9a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5635e4c08ccc202a0106621e15d9a3">&#9670;&nbsp;</a></span>getFLOPS() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::dnn::Net::getFLOPS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a2ae9efcc9c05e1a423752532012a664d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae9efcc9c05e1a423752532012a664d">&#9670;&nbsp;</a></span>getFLOPS() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::dnn::Net::getFLOPS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="af89f97666670043a7da7dedee72e282c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89f97666670043a7da7dedee72e282c">&#9670;&nbsp;</a></span>getFLOPS() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::dnn::Net::getFLOPS </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes FLOP for whole loaded model with specified input shapes. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netInputShapes</td><td>vector of shapes for all net inputs. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>computed FLOP. </dd></dl>
+
+</div>
+</div>
+<a id="ae3d1436a63d59045204630db6a6a0832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d1436a63d59045204630db6a6a0832">&#9670;&nbsp;</a></span>getLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a>&gt; cv::dnn::Net::getLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a>&#160;</td>
+          <td class="paramname"><em>layerId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns pointer to layer with specified id or name which the network use. </p>
+
+</div>
+</div>
+<a id="aca892dbf6ecd5ba8051fb7f5c6266164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca892dbf6ecd5ba8051fb7f5c6266164">&#9670;&nbsp;</a></span>getLayerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::dnn::Net::getLayerId </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts string name of the layer to the integer identifier. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>id of the layer, or -1 if the layer wasn't found. </dd></dl>
+
+</div>
+</div>
+<a id="abf96c5e92de4f6cd3013a6fb900934b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf96c5e92de4f6cd3013a6fb900934b4">&#9670;&nbsp;</a></span>getLayerInputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a>&gt; &gt; cv::dnn::Net::getLayerInputs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a>&#160;</td>
+          <td class="paramname"><em>layerId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns pointers to input layers of specific layer. </p>
+
+</div>
+</div>
+<a id="a4ad1ec24dcb561f7bbe88572a956134d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad1ec24dcb561f7bbe88572a956134d">&#9670;&nbsp;</a></span>getLayerNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt; cv::dnn::Net::getLayerNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1c893679fd9ef33fd19919d896d76e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c893679fd9ef33fd19919d896d76e3">&#9670;&nbsp;</a></span>getLayersCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::dnn::Net::getLayersCount </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>layerType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns count of layers of specified type. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerType</td><td>type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>count of layers </dd></dl>
+
+</div>
+</div>
+<a id="a44efd1ce11c3665814870e4dd5d480e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44efd1ce11c3665814870e4dd5d480e8">&#9670;&nbsp;</a></span>getLayerShapes() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getLayerShapes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inLayerShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outLayerShapes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns input and output shapes for layer with specified id in loaded model; preliminary inferencing isn't necessary. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netInputShape</td><td>shape input blob in net input layer. </td></tr>
+    <tr><td class="paramname">layerId</td><td>id for layer. </td></tr>
+    <tr><td class="paramname">inLayerShapes</td><td>output parameter for input layers shapes; order is the same as in layersIds </td></tr>
+    <tr><td class="paramname">outLayerShapes</td><td>output parameter for output layers shapes; order is the same as in layersIds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1b9bfe2a98ac8fa90a0a4d9281c15a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b9bfe2a98ac8fa90a0a4d9281c15a6">&#9670;&nbsp;</a></span>getLayerShapes() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getLayerShapes </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inLayerShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outLayerShapes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ad5efa172c9d81979c0fbbf51c55f07a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5efa172c9d81979c0fbbf51c55f07a2">&#9670;&nbsp;</a></span>getLayersShapes() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getLayersShapes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layersIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inLayersShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outLayersShapes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="af9f37ef9bc57c56a730efc778f88b150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f37ef9bc57c56a730efc778f88b150">&#9670;&nbsp;</a></span>getLayersShapes() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getLayersShapes </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layersIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inLayersShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outLayersShapes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns input and output shapes for all layers in loaded model; preliminary inferencing isn't necessary. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netInputShapes</td><td>shapes for all input blobs in net input layer. </td></tr>
+    <tr><td class="paramname">layersIds</td><td>output parameter for layer IDs. </td></tr>
+    <tr><td class="paramname">inLayersShapes</td><td>output parameter for input layers shapes; order is the same as in layersIds </td></tr>
+    <tr><td class="paramname">outLayersShapes</td><td>output parameter for output layers shapes; order is the same as in layersIds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6de85d17ef673776c8589b05e195127d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de85d17ef673776c8589b05e195127d">&#9670;&nbsp;</a></span>getLayerTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getLayerTypes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layersTypes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns list of types for layer used in model. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layersTypes</td><td>output parameter for returning types. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab364bdcb7b97a21acdb16ed9c9cfad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab364bdcb7b97a21acdb16ed9c9cfad4">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a74a44ea352e4b492722390a8f06fd5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a44ea352e4b492722390a8f06fd5e6">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>layerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a0b98e2dcb19a50ede01556537d022ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b98e2dcb19a50ede01556537d022ba5">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a05ea1d1d1b2f6a1c9a22bc466173c59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ea1d1d1b2f6a1c9a22bc466173c59e">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>netInputShape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layerIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a68ee410f9ba96118468abf074e73c806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ee410f9ba96118468abf074e73c806">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes bytes number which are required to store all weights and intermediate blobs for model. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netInputShapes</td><td>vector of shapes for all net inputs. </td></tr>
+    <tr><td class="paramname">weights</td><td>output parameter to store resulting bytes for weights. </td></tr>
+    <tr><td class="paramname">blobs</td><td>output parameter to store resulting bytes for intermediate blobs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac59411c698919fb87101c30376297afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59411c698919fb87101c30376297afb">&#9670;&nbsp;</a></span>getMemoryConsumption() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::getMemoryConsumption </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netInputShapes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layerIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>blobs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes bytes number which are required to store all weights and intermediate blobs for each layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netInputShapes</td><td>vector of shapes for all net inputs. </td></tr>
+    <tr><td class="paramname">layerIds</td><td>output vector to save layer IDs. </td></tr>
+    <tr><td class="paramname">weights</td><td>output parameter to store resulting bytes for weights. </td></tr>
+    <tr><td class="paramname">blobs</td><td>output parameter to store resulting bytes for intermediate blobs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2b8d464f8dbe7a433436f38b2269ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b8d464f8dbe7a433436f38b2269ecd">&#9670;&nbsp;</a></span>getParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::dnn::Net::getParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a>&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>numParam</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns parameter blob of the layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>name or id of the layer. </td></tr>
+    <tr><td class="paramname">numParam</td><td>index of the layer parameter in the <a class="el" href="classcv_1_1dnn_1_1_layer.html#a56ccfba1953c97a7bd593de826554a7a" title="List of learned parameters must be stored here to allow read them by using Net::getParam().">Layer::blobs</a> array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1dnn_1_1_layer.html#a56ccfba1953c97a7bd593de826554a7a" title="List of learned parameters must be stored here to allow read them by using Net::getParam().">Layer::blobs</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5dda0d2b26527e537b52ef90d44bc2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dda0d2b26527e537b52ef90d44bc2fc">&#9670;&nbsp;</a></span>getPerfProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a> cv::dnn::Net::getPerfProfile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>timings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns overall time for inference and timings (in ticks) for layers. Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timings</td><td>vector for tick timings for all layers. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>overall ticks for model inference. </dd></dl>
+
+</div>
+</div>
+<a id="a5175117d094ef093ad23ac82ac26162f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5175117d094ef093ad23ac82ac26162f">&#9670;&nbsp;</a></span>getUnconnectedOutLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; cv::dnn::Net::getUnconnectedOutLayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns indexes of layers with unconnected outputs. </p>
+
+</div>
+</div>
+<a id="a2af3d6915e8d59878a250b3f05a2ea5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af3d6915e8d59878a250b3f05a2ea5f">&#9670;&nbsp;</a></span>getUnconnectedOutLayersNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&gt; cv::dnn::Net::getUnconnectedOutLayersNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns names of layers with unconnected outputs. </p>
+
+</div>
+</div>
+<a id="ae98ddf4806099a91f0b648287fcec704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98ddf4806099a91f0b648287fcec704">&#9670;&nbsp;</a></span>readFromModelOptimizer() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a> cv::dnn::Net::readFromModelOptimizer </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bufferModelConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bufferWeights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer in-memory buffers with intermediate representation (IR). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferModelConfig</td><td>buffer with model's configuration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferWeights</td><td>buffer with model's trained weights. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1dnn_1_1_net.html" title="This class allows to create and manipulate comprehensive artificial neural networks.">Net</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a5e69bd6c20f21ed8aa04982cbce17cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e69bd6c20f21ed8aa04982cbce17cfc">&#9670;&nbsp;</a></span>readFromModelOptimizer() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a> cv::dnn::Net::readFromModelOptimizer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>xml</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>bin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer intermediate representation (IR). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">xml</td><td>XML configuration file with network's topology. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bin</td><td>Binary file with trained weights. Networks imported from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer are launched in Intel's Inference Engine backend. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af1fd3b20f8878e202d41d597b3da15d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fd3b20f8878e202d41d597b3da15d6">&#9670;&nbsp;</a></span>readFromModelOptimizer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a> cv::dnn::Net::readFromModelOptimizer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td>
+          <td class="paramname"><em>bufferModelConfigPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>bufferModelConfigSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td>
+          <td class="paramname"><em>bufferWeightsPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td>
+          <td class="paramname"><em>bufferWeightsSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer in-memory buffers with intermediate representation (IR). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferModelConfigPtr</td><td>buffer pointer of model's configuration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferModelConfigSize</td><td>buffer size of model's configuration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferWeightsPtr</td><td>buffer pointer of model's trained weights. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferWeightsSize</td><td>buffer size of model's trained weights. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1dnn_1_1_net.html" title="This class allows to create and manipulate comprehensive artificial neural networks.">Net</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="abda1797f888e88b5a0d18055a282a9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda1797f888e88b5a0d18055a282a9fd">&#9670;&nbsp;</a></span>setInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>blob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scalefactor</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>mean</em> = <code><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the new input value for the network. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blob</td><td>A new blob. Should have CV_32F or CV_8U depth. </td></tr>
+    <tr><td class="paramname">name</td><td>A name of input layer. </td></tr>
+    <tr><td class="paramname">scalefactor</td><td>An optional normalization scale. </td></tr>
+    <tr><td class="paramname">mean</td><td>An optional mean subtraction values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1dnn_1_1_net.html#aa2ee9291052a33a4de0ca94b4be5acf9" title="Connects output of the first layer to input of the second layer.">connect(String, String)</a> to know format of the descriptor.</dd></dl>
+<p>If scale or mean values are specified, a final input blob is computed as: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\]" src="form_554.png"/>
+</p>
+ 
+</div>
+</div>
+<a id="a44f0300165487c6b2010b561159b836a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f0300165487c6b2010b561159b836a">&#9670;&nbsp;</a></span>setInputShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setInputShape </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>inputName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">MatShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specify shape of network input. </p>
+
+</div>
+</div>
+<a id="a1ba94fbca1400b87d73e7f7e597f3448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba94fbca1400b87d73e7f7e597f3448">&#9670;&nbsp;</a></span>setInputsNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setInputsNames </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inputBlobNames</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets outputs names of the network input pseudo layer. </p>
+<p>Each net always has special own the network input pseudo layer with id=0. This layer stores the user blobs only and don't make any computations. In fact, this layer provides the only way to pass user data into the network. As any other layer, this layer can label its outputs and this function provides an easy way to do this. </p>
+
+</div>
+</div>
+<a id="ae11415f99f4731ac502aa8d8535784a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11415f99f4731ac502aa8d8535784a6">&#9670;&nbsp;</a></span>setParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_net.html#a6962dbfe16ce1ae18c67de9f5f2912ef">LayerId</a>&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>numParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>blob</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the new value for the learned param of the layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>name or id of the layer. </td></tr>
+    <tr><td class="paramname">numParam</td><td>index of the layer parameter in the <a class="el" href="classcv_1_1dnn_1_1_layer.html#a56ccfba1953c97a7bd593de826554a7a" title="List of learned parameters must be stored here to allow read them by using Net::getParam().">Layer::blobs</a> array. </td></tr>
+    <tr><td class="paramname">blob</td><td>the new value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1dnn_1_1_layer.html#a56ccfba1953c97a7bd593de826554a7a" title="List of learned parameters must be stored here to allow read them by using Net::getParam().">Layer::blobs</a> </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>If shape of the new blob differs from the previous shape, then the following forward pass may fail. </dd></dl>
+
+</div>
+</div>
+<a id="a68cfab300fe6d301901f42808b54a8e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68cfab300fe6d301901f42808b54a8e6">&#9670;&nbsp;</a></span>setPreferableBackend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setPreferableBackend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>backendId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ask network to use specific computation backend where it supported. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">backendId</td><td>backend identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__dnn.html#ga186f7d9bfacac8b0ff2e26e2eab02625" title="Enum of computation backends supported by layers.">Backend</a></dd></dl>
+<p>If OpenCV is compiled with Intel's Inference Engine library, DNN_BACKEND_DEFAULT means DNN_BACKEND_INFERENCE_ENGINE. Otherwise it equals to DNN_BACKEND_OPENCV. </p>
+
+</div>
+</div>
+<a id="aefe119345df2491584b68e9775d48151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe119345df2491584b68e9775d48151">&#9670;&nbsp;</a></span>setPreferableTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::Net::setPreferableTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>targetId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ask network to make computations on specific target device. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetId</td><td>target identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5" title="Enum of target devices for computations.">Target</a></dd></dl>
+<p>List of supported combinations backend / target: </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">DNN_BACKEND_OPENCV   </th><th class="markdownTableHeadNone">DNN_BACKEND_INFERENCE_ENGINE   </th><th class="markdownTableHeadNone">DNN_BACKEND_HALIDE   </th><th class="markdownTableHeadNone">DNN_BACKEND_CUDA    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DNN_TARGET_CPU   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DNN_TARGET_OPENCL   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DNN_TARGET_OPENCL_FP16   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DNN_TARGET_MYRIAD   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DNN_TARGET_FPGA   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DNN_TARGET_CUDA   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">+    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DNN_TARGET_CUDA_FP16   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">+    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DNN_TARGET_HDDL   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">+   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+</table>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/dnn/<a class="el" href="opencv2_2dnn_2dnn_8hpp_source.html">dnn.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1dnn.html">dnn</a></li><li class="navelem"><a class="el" href="classcv_1_1dnn_1_1_net.html">Net</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

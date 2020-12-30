@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/infer/onnx.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('onnx_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">onnx.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="onnx_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2020 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_INFER_ONNX_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_INFER_ONNX_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span> <span class="comment">// tuple, tuple_size</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="opencv__includes_8hpp.html">opencv2/gapi/opencv_includes.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="any_8hpp.html">opencv2/gapi/util/any.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="cvdef_8h.html">opencv2/core/cvdef.h</a>&gt;</span>     <span class="comment">// GAPI_EXPORTS</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gkernel_8hpp.html">opencv2/gapi/gkernel.hpp</a>&gt;</span> <span class="comment">// GKernelPackage</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>gapi {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1onnx.html">   23</a></span>&#160;<span class="keyword">namespace </span>onnx {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1onnx.html#afb1aa422951b12bee5ff953952c00afc">   25</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#afb1aa422951b12bee5ff953952c00afc">backend</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063b">   27</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063b">TraitAs</a>: <a class="code" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063bace2f94540fa9914e8fe6f0de9817717b">TENSOR</a>, </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">// and passes dimensions as-is</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063ba23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>   </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// creates an &quot;image&quot; blob (NCHW/NHWC, etc)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1onnx.html#adab664de6c184b183b729f62da973095">   34</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#adab664de6c184b183b729f62da973095">PostProc</a> = std::function&lt;<a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a>(<span class="keyword">const</span> std::unordered_map&lt;std::string, cv::Mat&gt; &amp;,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                          std::unordered_map&lt;std::string, cv::Mat&gt; &amp;)&gt;;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1onnx_1_1detail.html">   38</a></span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html">ParamDesc</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a292473b1e04f4eff7f062ad49da9739a">   40</a></span>&#160;    std::string <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a292473b1e04f4eff7f062ad49da9739a">model_path</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// NB: nun_* may differ from topology&#39;s real input/output port numbers</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// (e.g. topology&#39;s partial execution)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#af6158738c09ae26e67d010df991281c1">   44</a></span>&#160;    <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#af6158738c09ae26e67d010df991281c1">num_in</a>;  <span class="comment">// How many inputs are defined in the operation</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3fe287d57f3a6e205db561d22d42737d">   45</a></span>&#160;    <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3fe287d57f3a6e205db561d22d42737d">num_out</a>; <span class="comment">// How many outputs are defined in the operation</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// NB: Here order follows the `Net` API</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ab146acb2c62e9e57ef5bfe052e92dce0">   48</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ab146acb2c62e9e57ef5bfe052e92dce0">input_names</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a51172a6637ce7acc5deb882728b4b580">   49</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a51172a6637ce7acc5deb882728b4b580">output_names</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a4e4a1139b9b98b5d1b3d50464feb1c78">   51</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a4e4a1139b9b98b5d1b3d50464feb1c78">ConstInput</a> = std::pair&lt;cv::Mat, TraitAs&gt;;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#aef6317f32124eb85e1ae0fd1bb386d9f">   52</a></span>&#160;    std::unordered_map&lt;std::string, ConstInput&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#aef6317f32124eb85e1ae0fd1bb386d9f">const_inputs</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a972197125bf267a284e45ed319b1aca7">   54</a></span>&#160;    std::vector&lt;cv::Scalar&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a972197125bf267a284e45ed319b1aca7">mean</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ad27f1f1dbe5d5c2b14f944fd7b27d3f6">   55</a></span>&#160;    std::vector&lt;cv::Scalar&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ad27f1f1dbe5d5c2b14f944fd7b27d3f6">stdev</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ac76c7d9a9581471d3266f7b675a8f5a9">   57</a></span>&#160;    std::vector&lt;cv::GMatDesc&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ac76c7d9a9581471d3266f7b675a8f5a9">out_metas</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3326eed199c1cbc67865e61996dca0d5">   58</a></span>&#160;    <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#adab664de6c184b183b729f62da973095">PostProc</a> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3326eed199c1cbc67865e61996dca0d5">custom_post_proc</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a1fbaa1ccae2ab0d7e5edf930301b9ed0">   60</a></span>&#160;    std::vector&lt;bool&gt; <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a1fbaa1ccae2ab0d7e5edf930301b9ed0">normalize</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Net&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html">   65</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html">PortCfg</a> {</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a37f18852ff317ac875a16837a4374f46">   66</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a37f18852ff317ac875a16837a4374f46">In</a> = std::array</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        &lt; std::string</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ab733975d04ae7959793fbdb12d933748">   69</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ab733975d04ae7959793fbdb12d933748">Out</a> = std::array</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        &lt; std::string</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::OutArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a30eb3c924696c6eaf81ff5fb5843e745">   72</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a30eb3c924696c6eaf81ff5fb5843e745">NormCoefs</a> = std::array</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        &lt; <a class="code" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ac63a34770becfd2736d3ba465aca8d33">   75</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ac63a34770becfd2736d3ba465aca8d33">Normalize</a> = std::array</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        &lt; bool</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html">   80</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Net&gt; <span class="keyword">class </span><a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params</a> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#abcaeff710d4facbbff3f429a5065a4d3">   82</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#abcaeff710d4facbbff3f429a5065a4d3">Params</a>(<span class="keyword">const</span> std::string &amp;model) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a292473b1e04f4eff7f062ad49da9739a">model_path</a> = model;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#af6158738c09ae26e67d010df991281c1">num_in</a>  = <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3fe287d57f3a6e205db561d22d42737d">num_out</a> = <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::OutArgs&gt;::value</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// BEGIN(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a8c98bcf73c51c35e0803aa2611e6339d">   89</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">GBackend</a>      <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a8c98bcf73c51c35e0803aa2611e6339d">backend</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#afb1aa422951b12bee5ff953952c00afc">cv::gapi::onnx::backend</a>();  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a81710154d8640c95ce2dc16fc60be860">   90</a></span>&#160;    std::string   <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a81710154d8640c95ce2dc16fc60be860">tag</a>()<span class="keyword">     const </span>{ <span class="keywordflow">return</span> Net::tag(); }</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a5d1c05f901d0bfc9d2d7852fa7f0cae4">   91</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1any.html">cv::util::any</a> <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a5d1c05f901d0bfc9d2d7852fa7f0cae4">params</a>()<span class="keyword">  const </span>{ <span class="keywordflow">return</span> { <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a> }; }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// END(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a6ee119f429bb772c26fc3abe15120148">   94</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a6ee119f429bb772c26fc3abe15120148">cfgInputLayers</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a37f18852ff317ac875a16837a4374f46">PortCfg&lt;Net&gt;::In</a> &amp;ll) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ab146acb2c62e9e57ef5bfe052e92dce0">input_names</a>.assign(ll.begin(), ll.end());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a206130fef0d4d7b8f0413985aa1fa3c4">   99</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a206130fef0d4d7b8f0413985aa1fa3c4">cfgOutputLayers</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ab733975d04ae7959793fbdb12d933748">PortCfg&lt;Net&gt;::Out</a> &amp;ll) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a51172a6637ce7acc5deb882728b4b580">output_names</a>.assign(ll.begin(), ll.end());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#aa018adc593be65e7350c9e9c14ff8fd5">  104</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#aa018adc593be65e7350c9e9c14ff8fd5">constInput</a>(<span class="keyword">const</span> std::string &amp;layer_name,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> &amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                            <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063b">TraitAs</a> hint = <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063bace2f94540fa9914e8fe6f0de9817717b">TraitAs::TENSOR</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#aef6317f32124eb85e1ae0fd1bb386d9f">const_inputs</a>[layer_name] = {<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>, hint};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4b6f122ae856195af563f5b6fc3f5220">  111</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4b6f122ae856195af563f5b6fc3f5220">cfgMeanStd</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a30eb3c924696c6eaf81ff5fb5843e745">PortCfg&lt;Net&gt;::NormCoefs</a> &amp;m,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                            <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a30eb3c924696c6eaf81ff5fb5843e745">PortCfg&lt;Net&gt;::NormCoefs</a> &amp;s) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a972197125bf267a284e45ed319b1aca7">mean</a>.assign(m.begin(), m.end());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ad27f1f1dbe5d5c2b14f944fd7b27d3f6">stdev</a>.assign(s.begin(), s.end());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a9a38f13123d16baaea4de9b06710ebf6">  118</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a9a38f13123d16baaea4de9b06710ebf6">cfgPostProc</a>(<span class="keyword">const</span> std::vector&lt;cv::GMatDesc&gt; &amp;outs,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                             <span class="keyword">const</span> <a class="code" href="namespacecv_1_1gapi_1_1onnx.html#adab664de6c184b183b729f62da973095">PostProc</a> &amp;pp) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ac76c7d9a9581471d3266f7b675a8f5a9">out_metas</a> = outs;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3326eed199c1cbc67865e61996dca0d5">custom_post_proc</a> = pp;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a31d590b499b4ef7b9dd097d46764a4d3">  125</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a31d590b499b4ef7b9dd097d46764a4d3">cfgNormalize</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ac63a34770becfd2736d3ba465aca8d33">PortCfg&lt;Net&gt;::Normalize</a> &amp;n) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>.<a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a1fbaa1ccae2ab0d7e5edf930301b9ed0">normalize</a>.assign(n.begin(), n.end());</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">  131</a></span>&#160;    <a class="code" href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html">detail::ParamDesc</a> <a class="code" href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">desc</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <span class="comment">// namespace onnx</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <span class="comment">// namespace gapi</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_INFER_HPP</span></div>
+<div class="ttc" id="aany_8hpp_html"><div class="ttname"><a href="any_8hpp.html">any.hpp</a></div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html"><div class="ttname"><a href="classcv_1_1_mat.html">cv::Mat</a></div><div class="ttdoc">n-dimensional dense array class</div><div class="ttdef"><b>Definition:</b> mat.hpp:798</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1_g_backend_html"><div class="ttname"><a href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a></div><div class="ttdef"><b>Definition:</b> gkernel.hpp:375</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html">cv::gapi::onnx::Params</a></div><div class="ttdef"><b>Definition:</b> onnx.hpp:80</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a206130fef0d4d7b8f0413985aa1fa3c4"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a206130fef0d4d7b8f0413985aa1fa3c4">cv::gapi::onnx::Params::cfgOutputLayers</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgOutputLayers(const typename PortCfg&lt; Net &gt;::Out &amp;ll)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:99</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a31d590b499b4ef7b9dd097d46764a4d3"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a31d590b499b4ef7b9dd097d46764a4d3">cv::gapi::onnx::Params::cfgNormalize</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgNormalize(const typename PortCfg&lt; Net &gt;::Normalize &amp;n)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:125</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a4940ad03075c04bafede81482740f720"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4940ad03075c04bafede81482740f720">cv::gapi::onnx::Params::desc</a></div><div class="ttdeci">detail::ParamDesc desc</div><div class="ttdef"><b>Definition:</b> onnx.hpp:131</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a4b6f122ae856195af563f5b6fc3f5220"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a4b6f122ae856195af563f5b6fc3f5220">cv::gapi::onnx::Params::cfgMeanStd</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgMeanStd(const typename PortCfg&lt; Net &gt;::NormCoefs &amp;m, const typename PortCfg&lt; Net &gt;::NormCoefs &amp;s)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:111</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a5d1c05f901d0bfc9d2d7852fa7f0cae4"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a5d1c05f901d0bfc9d2d7852fa7f0cae4">cv::gapi::onnx::Params::params</a></div><div class="ttdeci">cv::util::any params() const</div><div class="ttdef"><b>Definition:</b> onnx.hpp:91</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a6ee119f429bb772c26fc3abe15120148"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a6ee119f429bb772c26fc3abe15120148">cv::gapi::onnx::Params::cfgInputLayers</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgInputLayers(const typename PortCfg&lt; Net &gt;::In &amp;ll)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:94</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a81710154d8640c95ce2dc16fc60be860"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a81710154d8640c95ce2dc16fc60be860">cv::gapi::onnx::Params::tag</a></div><div class="ttdeci">std::string tag() const</div><div class="ttdef"><b>Definition:</b> onnx.hpp:90</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a8c98bcf73c51c35e0803aa2611e6339d"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a8c98bcf73c51c35e0803aa2611e6339d">cv::gapi::onnx::Params::backend</a></div><div class="ttdeci">GBackend backend() const</div><div class="ttdef"><b>Definition:</b> onnx.hpp:89</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_a9a38f13123d16baaea4de9b06710ebf6"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#a9a38f13123d16baaea4de9b06710ebf6">cv::gapi::onnx::Params::cfgPostProc</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgPostProc(const std::vector&lt; cv::GMatDesc &gt; &amp;outs, const PostProc &amp;pp)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:118</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_aa018adc593be65e7350c9e9c14ff8fd5"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#aa018adc593be65e7350c9e9c14ff8fd5">cv::gapi::onnx::Params::constInput</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; constInput(const std::string &amp;layer_name, const cv::Mat &amp;data, TraitAs hint=TraitAs::TENSOR)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:104</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1onnx_1_1_params_html_abcaeff710d4facbbff3f429a5065a4d3"><div class="ttname"><a href="classcv_1_1gapi_1_1onnx_1_1_params.html#abcaeff710d4facbbff3f429a5065a4d3">cv::gapi::onnx::Params::Params</a></div><div class="ttdeci">Params(const std::string &amp;model)</div><div class="ttdef"><b>Definition:</b> onnx.hpp:82</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1any_html"><div class="ttname"><a href="classcv_1_1util_1_1any.html">cv::util::any</a></div><div class="ttdef"><b>Definition:</b> any.hpp:54</div></div>
+<div class="ttc" id="acvdef_8h_html"><div class="ttname"><a href="cvdef_8h.html">cvdef.h</a></div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="agkernel_8hpp_html"><div class="ttname"><a href="gkernel_8hpp.html">gkernel.hpp</a></div></div>
+<div class="ttc" id="agroup__core__basic_html_ga599fe92e910c027be274233eccad7beb"><div class="ttname"><a href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a></div><div class="ttdeci">Scalar_&lt; double &gt; Scalar</div><div class="ttdef"><b>Definition:</b> types.hpp:669</div></div>
+<div class="ttc" id="agroup__core__c_html_ga9550b1803662fe5c2e7f2f7f1f382af5"><div class="ttname"><a href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a></div><div class="ttdeci">int CvScalar value</div><div class="ttdef"><b>Definition:</b> core_c.h:717</div></div>
+<div class="ttc" id="agroup__core__c_html_gacd1647952fba31484ea63d6f1140e509"><div class="ttname"><a href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> core_c.h:424</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1onnx_html_adab664de6c184b183b729f62da973095"><div class="ttname"><a href="namespacecv_1_1gapi_1_1onnx.html#adab664de6c184b183b729f62da973095">cv::gapi::onnx::PostProc</a></div><div class="ttdeci">std::function&lt; void(const std::unordered_map&lt; std::string, cv::Mat &gt; &amp;, std::unordered_map&lt; std::string, cv::Mat &gt; &amp;)&gt; PostProc</div><div class="ttdef"><b>Definition:</b> onnx.hpp:35</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1onnx_html_af9a00645def019ccc3f7c33699af063b"><div class="ttname"><a href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063b">cv::gapi::onnx::TraitAs</a></div><div class="ttdeci">TraitAs</div><div class="ttdef"><b>Definition:</b> onnx.hpp:27</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1onnx_html_af9a00645def019ccc3f7c33699af063ba23a12f67f614b5518c7f1c2465bf95e3"><div class="ttname"><a href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063ba23a12f67f614b5518c7f1c2465bf95e3">cv::gapi::onnx::TraitAs::IMAGE</a></div><div class="ttdeci">@ IMAGE</div><div class="ttdoc">G-API traits an associated cv::Mat as an image so.</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1onnx_html_af9a00645def019ccc3f7c33699af063bace2f94540fa9914e8fe6f0de9817717b"><div class="ttname"><a href="namespacecv_1_1gapi_1_1onnx.html#af9a00645def019ccc3f7c33699af063bace2f94540fa9914e8fe6f0de9817717b">cv::gapi::onnx::TraitAs::TENSOR</a></div><div class="ttdeci">@ TENSOR</div><div class="ttdoc">G-API traits an associated cv::Mat as a raw tensor.</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1onnx_html_afb1aa422951b12bee5ff953952c00afc"><div class="ttname"><a href="namespacecv_1_1gapi_1_1onnx.html#afb1aa422951b12bee5ff953952c00afc">cv::gapi::onnx::backend</a></div><div class="ttdeci">GAPI_EXPORTS cv::gapi::GBackend backend()</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_ae4ef4b83c54acc5e8d2956db165de790"><div class="ttname"><a href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">cv::int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> intrin_rvv.hpp:1945</div></div>
+<div class="ttc" id="aopencv__includes_8hpp_html"><div class="ttname"><a href="opencv__includes_8hpp.html">opencv_includes.hpp</a></div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a1dabed62d2d603302ed85878c743e251"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void(CL_CALLBACK *)(cl_program</div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a6ff403ead16f7faa1f7228274eb6b01d"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void void *CL_RUNTIME_EXPORT const cl_device_id const char const cl_program const char void void *CL_RUNTIME_EXPORT size_t</div><div class="ttdef"><b>Definition:</b> opencl_core.hpp:286</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1_port_cfg_html"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html">cv::gapi::onnx::PortCfg</a></div><div class="ttdef"><b>Definition:</b> onnx.hpp:65</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1_port_cfg_html_a30eb3c924696c6eaf81ff5fb5843e745"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a30eb3c924696c6eaf81ff5fb5843e745">cv::gapi::onnx::PortCfg::NormCoefs</a></div><div class="ttdeci">std::array&lt; cv::Scalar, std::tuple_size&lt; typename Net::InArgs &gt;::value &gt; NormCoefs</div><div class="ttdef"><b>Definition:</b> onnx.hpp:74</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1_port_cfg_html_a37f18852ff317ac875a16837a4374f46"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#a37f18852ff317ac875a16837a4374f46">cv::gapi::onnx::PortCfg::In</a></div><div class="ttdeci">std::array&lt; std::string, std::tuple_size&lt; typename Net::InArgs &gt;::value &gt; In</div><div class="ttdef"><b>Definition:</b> onnx.hpp:68</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1_port_cfg_html_ab733975d04ae7959793fbdb12d933748"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ab733975d04ae7959793fbdb12d933748">cv::gapi::onnx::PortCfg::Out</a></div><div class="ttdeci">std::array&lt; std::string, std::tuple_size&lt; typename Net::OutArgs &gt;::value &gt; Out</div><div class="ttdef"><b>Definition:</b> onnx.hpp:71</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1_port_cfg_html_ac63a34770becfd2736d3ba465aca8d33"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1_port_cfg.html#ac63a34770becfd2736d3ba465aca8d33">cv::gapi::onnx::PortCfg::Normalize</a></div><div class="ttdeci">std::array&lt; bool, std::tuple_size&lt; typename Net::InArgs &gt;::value &gt; Normalize</div><div class="ttdef"><b>Definition:</b> onnx.hpp:77</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html">cv::gapi::onnx::detail::ParamDesc</a></div><div class="ttdef"><b>Definition:</b> onnx.hpp:39</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a1fbaa1ccae2ab0d7e5edf930301b9ed0"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a1fbaa1ccae2ab0d7e5edf930301b9ed0">cv::gapi::onnx::detail::ParamDesc::normalize</a></div><div class="ttdeci">std::vector&lt; bool &gt; normalize</div><div class="ttdef"><b>Definition:</b> onnx.hpp:60</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a292473b1e04f4eff7f062ad49da9739a"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a292473b1e04f4eff7f062ad49da9739a">cv::gapi::onnx::detail::ParamDesc::model_path</a></div><div class="ttdeci">std::string model_path</div><div class="ttdef"><b>Definition:</b> onnx.hpp:40</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a3326eed199c1cbc67865e61996dca0d5"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3326eed199c1cbc67865e61996dca0d5">cv::gapi::onnx::detail::ParamDesc::custom_post_proc</a></div><div class="ttdeci">PostProc custom_post_proc</div><div class="ttdef"><b>Definition:</b> onnx.hpp:58</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a3fe287d57f3a6e205db561d22d42737d"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a3fe287d57f3a6e205db561d22d42737d">cv::gapi::onnx::detail::ParamDesc::num_out</a></div><div class="ttdeci">std::size_t num_out</div><div class="ttdef"><b>Definition:</b> onnx.hpp:45</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a4e4a1139b9b98b5d1b3d50464feb1c78"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a4e4a1139b9b98b5d1b3d50464feb1c78">cv::gapi::onnx::detail::ParamDesc::ConstInput</a></div><div class="ttdeci">std::pair&lt; cv::Mat, TraitAs &gt; ConstInput</div><div class="ttdef"><b>Definition:</b> onnx.hpp:51</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a51172a6637ce7acc5deb882728b4b580"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a51172a6637ce7acc5deb882728b4b580">cv::gapi::onnx::detail::ParamDesc::output_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; output_names</div><div class="ttdef"><b>Definition:</b> onnx.hpp:49</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_a972197125bf267a284e45ed319b1aca7"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#a972197125bf267a284e45ed319b1aca7">cv::gapi::onnx::detail::ParamDesc::mean</a></div><div class="ttdeci">std::vector&lt; cv::Scalar &gt; mean</div><div class="ttdef"><b>Definition:</b> onnx.hpp:54</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_ab146acb2c62e9e57ef5bfe052e92dce0"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ab146acb2c62e9e57ef5bfe052e92dce0">cv::gapi::onnx::detail::ParamDesc::input_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; input_names</div><div class="ttdef"><b>Definition:</b> onnx.hpp:48</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_ac76c7d9a9581471d3266f7b675a8f5a9"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ac76c7d9a9581471d3266f7b675a8f5a9">cv::gapi::onnx::detail::ParamDesc::out_metas</a></div><div class="ttdeci">std::vector&lt; cv::GMatDesc &gt; out_metas</div><div class="ttdef"><b>Definition:</b> onnx.hpp:57</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_ad27f1f1dbe5d5c2b14f944fd7b27d3f6"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#ad27f1f1dbe5d5c2b14f944fd7b27d3f6">cv::gapi::onnx::detail::ParamDesc::stdev</a></div><div class="ttdeci">std::vector&lt; cv::Scalar &gt; stdev</div><div class="ttdef"><b>Definition:</b> onnx.hpp:55</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_aef6317f32124eb85e1ae0fd1bb386d9f"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#aef6317f32124eb85e1ae0fd1bb386d9f">cv::gapi::onnx::detail::ParamDesc::const_inputs</a></div><div class="ttdeci">std::unordered_map&lt; std::string, ConstInput &gt; const_inputs</div><div class="ttdef"><b>Definition:</b> onnx.hpp:52</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc_html_af6158738c09ae26e67d010df991281c1"><div class="ttname"><a href="structcv_1_1gapi_1_1onnx_1_1detail_1_1_param_desc.html#af6158738c09ae26e67d010df991281c1">cv::gapi::onnx::detail::ParamDesc::num_in</a></div><div class="ttdeci">std::size_t num_in</div><div class="ttdef"><b>Definition:</b> onnx.hpp:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_e4a530b89cbe168084921eb3e1f70022.html">infer</a></li><li class="navelem"><a class="el" href="onnx_8hpp.html">onnx.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

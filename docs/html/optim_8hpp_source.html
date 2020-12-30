@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/core/optim.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('optim_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">optim.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="optim_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                           License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2013, OpenCV Foundation, all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//   * The name of the copyright holders may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors &quot;as is&quot; and</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// In no event shall the OpenCV Foundation or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifndef OPENCV_OPTIM_HPP</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define OPENCV_OPTIM_HPP</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="opencv2_2core_8hpp.html">opencv2/core.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1_min_problem_solver.html">MinProblemSolver</a> : <span class="keyword">public</span> <a class="code" href="classcv_1_1_algorithm.html">Algorithm</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html">   63</a></span>&#160;    <span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html">Function</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html#a7f3dfa55e4c4e3d3da625c0ac055f049">   66</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html#a7f3dfa55e4c4e3d3da625c0ac055f049">~Function</a>() {}</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html#af8ad87978dfc277f7feb8366de41c0ae">   67</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html#af8ad87978dfc277f7feb8366de41c0ae">getDims</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html#aad77c5e57d1d83a8497f0faf9375d63f">   68</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html#aad77c5e57d1d83a8497f0faf9375d63f">getGradientEps</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html#a49bb106fb6fb43eadc607486d4d4122f">   69</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html#a49bb106fb6fb43eadc607486d4d4122f">calc</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver_1_1_function.html#a1bf9eefb6c98d803caa6dde58d82209e">   70</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_min_problem_solver_1_1_function.html#a1bf9eefb6c98d803caa6dde58d82209e">getGradient</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>,<span class="keywordtype">double</span>* grad);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html#aa21b828e74653fb760f021c27d1f498a">   81</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;Function&gt;</a> <a class="code" href="classcv_1_1_min_problem_solver.html#aa21b828e74653fb760f021c27d1f498a">getFunction</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html#a22632a6392d2e159a8e01c2ed697cbe0">   89</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_min_problem_solver.html#a22632a6392d2e159a8e01c2ed697cbe0">setFunction</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;Function&gt;</a>&amp; f) = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html#aacdc1d10d144990d0aad163f0239efb4">   95</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="code" href="classcv_1_1_min_problem_solver.html#aacdc1d10d144990d0aad163f0239efb4">getTermCriteria</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html#aad56ae718e6cde978cac28e6ae1d58e7">  108</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_min_problem_solver.html#aad56ae718e6cde978cac28e6ae1d58e7">setTermCriteria</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a>&amp; <a class="code" href="group__core__c.html#gad5df871b1d714e419d2fbdc28e341c7f">termcrit</a>) = 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classcv_1_1_min_problem_solver.html#ade85ab8dceca1ee4974f62b758fa90af">  122</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classcv_1_1_min_problem_solver.html#ade85ab8dceca1ee4974f62b758fa90af">minimize</a>(<a class="code" href="classcv_1_1___input_output_array.html">InputOutputArray</a> <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) = 0;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classcv_1_1_downhill_solver.html">  155</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1_downhill_solver.html">DownhillSolver</a> : <span class="keyword">public</span> <a class="code" href="classcv_1_1_min_problem_solver.html">MinProblemSolver</a></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classcv_1_1_downhill_solver.html#a7e16f43c3e2c536628d2d6366a188a41">  164</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_downhill_solver.html#a7e16f43c3e2c536628d2d6366a188a41">getInitStep</a>(<a class="code" href="classcv_1_1___output_array.html">OutputArray</a> <a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>) <span class="keyword">const</span>=0;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classcv_1_1_downhill_solver.html#ab8038b328aee43b07760a346cebdc5a6">  180</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_downhill_solver.html#ab8038b328aee43b07760a346cebdc5a6">setInitStep</a>(<a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>)=0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcv_1_1_downhill_solver.html#a9ef15380f5843cd4ccd9b4f3308ce0de">  198</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;DownhillSolver&gt;</a> <a class="code" href="classcv_1_1_downhill_solver.html#a9ef15380f5843cd4ccd9b4f3308ce0de">create</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;MinProblemSolver::Function&gt;</a>&amp; f=<a class="code" href="structcv_1_1_ptr.html">Ptr&lt;MinProblemSolver::Function&gt;</a>(),</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                      <a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> initStep=<a class="code" href="classcv_1_1_mat__.html">Mat_&lt;double&gt;</a>(1,1,0.0),</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                      <a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="code" href="group__core__c.html#gad5df871b1d714e419d2fbdc28e341c7f">termcrit</a>=<a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="code" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e">TermCriteria::MAX_ITER</a>+<a class="code" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>,5000,0.000001));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classcv_1_1_conj_grad_solver.html">  236</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1_conj_grad_solver.html">ConjGradSolver</a> : <span class="keyword">public</span> <a class="code" href="classcv_1_1_min_problem_solver.html">MinProblemSolver</a></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classcv_1_1_conj_grad_solver.html#ad64e8d003cc3a6682b4fa7ab18c0c0e9">  252</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;ConjGradSolver&gt;</a> <a class="code" href="classcv_1_1_conj_grad_solver.html#ad64e8d003cc3a6682b4fa7ab18c0c0e9">create</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_ptr.html">Ptr&lt;MinProblemSolver::Function&gt;</a>&amp; f=<a class="code" href="structcv_1_1_ptr.html">Ptr&lt;ConjGradSolver::Function&gt;</a>(),</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                      <a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="code" href="group__core__c.html#gad5df871b1d714e419d2fbdc28e341c7f">termcrit</a>=<a class="code" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="code" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e">TermCriteria::MAX_ITER</a>+<a class="code" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>,5000,0.000001));</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;};</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="group__core__optim.html#ga86a370deffb37af51deb405a634eb14c">  257</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="group__core__optim.html#ga86a370deffb37af51deb405a634eb14c">SolveLPResult</a></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca53443e5084b8afbd368920564a005e6b">  259</a></span>&#160;    <a class="code" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca53443e5084b8afbd368920564a005e6b">SOLVELP_UNBOUNDED</a>    = -2, </div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14cae1450427844e557ad644cb4fcd44edef">  260</a></span>&#160;    <a class="code" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14cae1450427844e557ad644cb4fcd44edef">SOLVELP_UNFEASIBLE</a>    = -1, </div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca4f5a045a7b15b7b64acee6107b76e7b5">  261</a></span>&#160;    <a class="code" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca4f5a045a7b15b7b64acee6107b76e7b5">SOLVELP_SINGLE</a>    = 0, </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca94f9f0f66b795a4df9861e236064f1f0">SOLVELP_MULTI</a>    = 1 </div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca94f9f0f66b795a4df9861e236064f1f0">  263</a></span>&#160;};</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="group__core__optim.html#ga33174ee38621f8c534d81d4a7e220a01">  296</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <span class="keywordtype">int</span> <a class="code" href="group__core__optim.html#ga33174ee38621f8c534d81d4a7e220a01">solveLP</a>(<a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> Func, <a class="code" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> Constr, <a class="code" href="classcv_1_1___output_array.html">OutputArray</a> z);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}<span class="comment">// cv</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasscv_1_1___input_output_array_html"><div class="ttname"><a href="classcv_1_1___input_output_array.html">cv::_InputOutputArray</a></div><div class="ttdef"><b>Definition:</b> mat.hpp:382</div></div>
+<div class="ttc" id="aclasscv_1_1___output_array_html"><div class="ttname"><a href="classcv_1_1___output_array.html">cv::_OutputArray</a></div><div class="ttdoc">This type is very similar to InputArray except that it is used for input/output and output function p...</div><div class="ttdef"><b>Definition:</b> mat.hpp:291</div></div>
+<div class="ttc" id="aclasscv_1_1_algorithm_html"><div class="ttname"><a href="classcv_1_1_algorithm.html">cv::Algorithm</a></div><div class="ttdoc">This is a base class for all more or less complex algorithms in OpenCV.</div><div class="ttdef"><b>Definition:</b> core.hpp:3088</div></div>
+<div class="ttc" id="aclasscv_1_1_conj_grad_solver_html"><div class="ttname"><a href="classcv_1_1_conj_grad_solver.html">cv::ConjGradSolver</a></div><div class="ttdoc">This class is used to perform the non-linear non-constrained minimization of a function with known gr...</div><div class="ttdef"><b>Definition:</b> optim.hpp:237</div></div>
+<div class="ttc" id="aclasscv_1_1_conj_grad_solver_html_ad64e8d003cc3a6682b4fa7ab18c0c0e9"><div class="ttname"><a href="classcv_1_1_conj_grad_solver.html#ad64e8d003cc3a6682b4fa7ab18c0c0e9">cv::ConjGradSolver::create</a></div><div class="ttdeci">static Ptr&lt; ConjGradSolver &gt; create(const Ptr&lt; MinProblemSolver::Function &gt; &amp;f=Ptr&lt; ConjGradSolver::Function &gt;(), TermCriteria termcrit=TermCriteria(TermCriteria::MAX_ITER+TermCriteria::EPS, 5000, 0.000001))</div><div class="ttdoc">This function returns the reference to the ready-to-use ConjGradSolver object.</div></div>
+<div class="ttc" id="aclasscv_1_1_downhill_solver_html"><div class="ttname"><a href="classcv_1_1_downhill_solver.html">cv::DownhillSolver</a></div><div class="ttdoc">This class is used to perform the non-linear non-constrained minimization of a function,...</div><div class="ttdef"><b>Definition:</b> optim.hpp:156</div></div>
+<div class="ttc" id="aclasscv_1_1_downhill_solver_html_a7e16f43c3e2c536628d2d6366a188a41"><div class="ttname"><a href="classcv_1_1_downhill_solver.html#a7e16f43c3e2c536628d2d6366a188a41">cv::DownhillSolver::getInitStep</a></div><div class="ttdeci">virtual void getInitStep(OutputArray step) const =0</div><div class="ttdoc">Returns the initial step that will be used in downhill simplex algorithm.</div></div>
+<div class="ttc" id="aclasscv_1_1_downhill_solver_html_a9ef15380f5843cd4ccd9b4f3308ce0de"><div class="ttname"><a href="classcv_1_1_downhill_solver.html#a9ef15380f5843cd4ccd9b4f3308ce0de">cv::DownhillSolver::create</a></div><div class="ttdeci">static Ptr&lt; DownhillSolver &gt; create(const Ptr&lt; MinProblemSolver::Function &gt; &amp;f=Ptr&lt; MinProblemSolver::Function &gt;(), InputArray initStep=Mat_&lt; double &gt;(1, 1, 0.0), TermCriteria termcrit=TermCriteria(TermCriteria::MAX_ITER+TermCriteria::EPS, 5000, 0.000001))</div><div class="ttdoc">This function returns the reference to the ready-to-use DownhillSolver object.</div></div>
+<div class="ttc" id="aclasscv_1_1_downhill_solver_html_ab8038b328aee43b07760a346cebdc5a6"><div class="ttname"><a href="classcv_1_1_downhill_solver.html#ab8038b328aee43b07760a346cebdc5a6">cv::DownhillSolver::setInitStep</a></div><div class="ttdeci">virtual void setInitStep(InputArray step)=0</div><div class="ttdoc">Sets the initial step that will be used in downhill simplex algorithm.</div></div>
+<div class="ttc" id="aclasscv_1_1_mat___html"><div class="ttname"><a href="classcv_1_1_mat__.html">cv::Mat_&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html">cv::MinProblemSolver::Function</a></div><div class="ttdoc">Represents function being optimized.</div><div class="ttdef"><b>Definition:</b> optim.hpp:64</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html_a1bf9eefb6c98d803caa6dde58d82209e"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html#a1bf9eefb6c98d803caa6dde58d82209e">cv::MinProblemSolver::Function::getGradient</a></div><div class="ttdeci">virtual void getGradient(const double *x, double *grad)</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html_a49bb106fb6fb43eadc607486d4d4122f"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html#a49bb106fb6fb43eadc607486d4d4122f">cv::MinProblemSolver::Function::calc</a></div><div class="ttdeci">virtual double calc(const double *x) const =0</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html_a7f3dfa55e4c4e3d3da625c0ac055f049"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html#a7f3dfa55e4c4e3d3da625c0ac055f049">cv::MinProblemSolver::Function::~Function</a></div><div class="ttdeci">virtual ~Function()</div><div class="ttdef"><b>Definition:</b> optim.hpp:66</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html_aad77c5e57d1d83a8497f0faf9375d63f"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html#aad77c5e57d1d83a8497f0faf9375d63f">cv::MinProblemSolver::Function::getGradientEps</a></div><div class="ttdeci">virtual double getGradientEps() const</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_1_1_function_html_af8ad87978dfc277f7feb8366de41c0ae"><div class="ttname"><a href="classcv_1_1_min_problem_solver_1_1_function.html#af8ad87978dfc277f7feb8366de41c0ae">cv::MinProblemSolver::Function::getDims</a></div><div class="ttdeci">virtual int getDims() const =0</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html">cv::MinProblemSolver</a></div><div class="ttdoc">Basic interface for all solvers.</div><div class="ttdef"><b>Definition:</b> optim.hpp:59</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html_a22632a6392d2e159a8e01c2ed697cbe0"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html#a22632a6392d2e159a8e01c2ed697cbe0">cv::MinProblemSolver::setFunction</a></div><div class="ttdeci">virtual void setFunction(const Ptr&lt; Function &gt; &amp;f)=0</div><div class="ttdoc">Setter for the optimized function.</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html_aa21b828e74653fb760f021c27d1f498a"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html#aa21b828e74653fb760f021c27d1f498a">cv::MinProblemSolver::getFunction</a></div><div class="ttdeci">virtual Ptr&lt; Function &gt; getFunction() const =0</div><div class="ttdoc">Getter for the optimized function.</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html_aacdc1d10d144990d0aad163f0239efb4"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html#aacdc1d10d144990d0aad163f0239efb4">cv::MinProblemSolver::getTermCriteria</a></div><div class="ttdeci">virtual TermCriteria getTermCriteria() const =0</div><div class="ttdoc">Getter for the previously set terminal criteria for this algorithm.</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html_aad56ae718e6cde978cac28e6ae1d58e7"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html#aad56ae718e6cde978cac28e6ae1d58e7">cv::MinProblemSolver::setTermCriteria</a></div><div class="ttdeci">virtual void setTermCriteria(const TermCriteria &amp;termcrit)=0</div><div class="ttdoc">Set terminal criteria for solver.</div></div>
+<div class="ttc" id="aclasscv_1_1_min_problem_solver_html_ade85ab8dceca1ee4974f62b758fa90af"><div class="ttname"><a href="classcv_1_1_min_problem_solver.html#ade85ab8dceca1ee4974f62b758fa90af">cv::MinProblemSolver::minimize</a></div><div class="ttdeci">virtual double minimize(InputOutputArray x)=0</div><div class="ttdoc">actually runs the algorithm and performs the minimization.</div></div>
+<div class="ttc" id="aclasscv_1_1_term_criteria_html"><div class="ttname"><a href="classcv_1_1_term_criteria.html">cv::TermCriteria</a></div><div class="ttdoc">The class defining termination criteria for iterative algorithms.</div><div class="ttdef"><b>Definition:</b> types.hpp:853</div></div>
+<div class="ttc" id="aclasscv_1_1_term_criteria_html_a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e"><div class="ttname"><a href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e">cv::TermCriteria::MAX_ITER</a></div><div class="ttdeci">@ MAX_ITER</div><div class="ttdoc">ditto</div><div class="ttdef"><b>Definition:</b> types.hpp:861</div></div>
+<div class="ttc" id="aclasscv_1_1_term_criteria_html_a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5"><div class="ttname"><a href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">cv::TermCriteria::EPS</a></div><div class="ttdeci">@ EPS</div><div class="ttdoc">the desired accuracy or change in parameters at which the iterative algorithm stops</div><div class="ttdef"><b>Definition:</b> types.hpp:862</div></div>
+<div class="ttc" id="agroup__core__basic_html_gab1371a23c90d5f4725ea98240377d7a1"><div class="ttname"><a href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">cv::InputArray</a></div><div class="ttdeci">CV__DEBUG_NS_END typedef const _InputArray &amp; InputArray</div><div class="ttdef"><b>Definition:</b> mat.hpp:437</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa7cdf40a6d11ff4cbc59e7cebd6857df"><div class="ttname"><a href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a></div><div class="ttdeci">void int step</div><div class="ttdef"><b>Definition:</b> core_c.h:902</div></div>
+<div class="ttc" id="agroup__core__c_html_gad5df871b1d714e419d2fbdc28e341c7f"><div class="ttname"><a href="group__core__c.html#gad5df871b1d714e419d2fbdc28e341c7f">termcrit</a></div><div class="ttdeci">int CvArr CvTermCriteria termcrit</div><div class="ttdef"><b>Definition:</b> core_c.h:1924</div></div>
+<div class="ttc" id="agroup__core__optim_html_ga33174ee38621f8c534d81d4a7e220a01"><div class="ttname"><a href="group__core__optim.html#ga33174ee38621f8c534d81d4a7e220a01">cv::solveLP</a></div><div class="ttdeci">CV_EXPORTS_W int solveLP(InputArray Func, InputArray Constr, OutputArray z)</div><div class="ttdoc">Solve given (non-integer) linear programming problem using the Simplex Algorithm (Simplex Method).</div></div>
+<div class="ttc" id="agroup__core__optim_html_ga86a370deffb37af51deb405a634eb14c"><div class="ttname"><a href="group__core__optim.html#ga86a370deffb37af51deb405a634eb14c">cv::SolveLPResult</a></div><div class="ttdeci">SolveLPResult</div><div class="ttdoc">return codes for cv::solveLP() function</div><div class="ttdef"><b>Definition:</b> optim.hpp:258</div></div>
+<div class="ttc" id="agroup__core__optim_html_gga86a370deffb37af51deb405a634eb14ca4f5a045a7b15b7b64acee6107b76e7b5"><div class="ttname"><a href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca4f5a045a7b15b7b64acee6107b76e7b5">cv::SOLVELP_SINGLE</a></div><div class="ttdeci">@ SOLVELP_SINGLE</div><div class="ttdoc">there is only one maximum for target function</div><div class="ttdef"><b>Definition:</b> optim.hpp:261</div></div>
+<div class="ttc" id="agroup__core__optim_html_gga86a370deffb37af51deb405a634eb14ca53443e5084b8afbd368920564a005e6b"><div class="ttname"><a href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca53443e5084b8afbd368920564a005e6b">cv::SOLVELP_UNBOUNDED</a></div><div class="ttdeci">@ SOLVELP_UNBOUNDED</div><div class="ttdoc">problem is unbounded (target function can achieve arbitrary high values)</div><div class="ttdef"><b>Definition:</b> optim.hpp:259</div></div>
+<div class="ttc" id="agroup__core__optim_html_gga86a370deffb37af51deb405a634eb14ca94f9f0f66b795a4df9861e236064f1f0"><div class="ttname"><a href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14ca94f9f0f66b795a4df9861e236064f1f0">cv::SOLVELP_MULTI</a></div><div class="ttdeci">@ SOLVELP_MULTI</div><div class="ttdoc">there are multiple maxima for target function - the arbitrary one is returned</div><div class="ttdef"><b>Definition:</b> optim.hpp:262</div></div>
+<div class="ttc" id="agroup__core__optim_html_gga86a370deffb37af51deb405a634eb14cae1450427844e557ad644cb4fcd44edef"><div class="ttname"><a href="group__core__optim.html#gga86a370deffb37af51deb405a634eb14cae1450427844e557ad644cb4fcd44edef">cv::SOLVELP_UNFEASIBLE</a></div><div class="ttdeci">@ SOLVELP_UNFEASIBLE</div><div class="ttdoc">problem is unfeasible (there are no points that satisfy all the constraints imposed)</div><div class="ttdef"><b>Definition:</b> optim.hpp:260</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga67ea671a3582ce612ac3c281e067f480"><div class="ttname"><a href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a></div><div class="ttdeci">#define CV_EXPORTS_W</div><div class="ttdef"><b>Definition:</b> cvdef.h:444</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> highgui_c.h:204</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="aopencv2_2core_8hpp_html"><div class="ttname"><a href="opencv2_2core_8hpp.html">core.hpp</a></div></div>
+<div class="ttc" id="astructcv_1_1_ptr_html"><div class="ttname"><a href="structcv_1_1_ptr.html">cv::Ptr</a></div><div class="ttdef"><b>Definition:</b> cvstd_wrapper.hpp:74</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="optim_8hpp.html">optim.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

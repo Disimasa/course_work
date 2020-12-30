@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Структура cv::gapi::wip::draw::Text</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура cv::gapi::wip::draw::Text<div class="ingroups"><a class="el" href="group__gapi__draw.html">G-API Drawing and composition functionality</a> &raquo; <a class="el" href="group__gapi__draw__prims.html">Drawing primitives</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This structure represents a text string to draw.  
+ <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render__types_8hpp_source.html">render_types.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa146a75cd393e6fc9ad52f1ca755016a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#aa146a75cd393e6fc9ad52f1ca755016a">Text</a> (const std::string &amp;text_, const <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &amp;org_, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ff_, double fs_, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;color_, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> thick_=1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> lt_=8, bool bottom_left_origin_=false)</td></tr>
+<tr class="memdesc:aa146a75cd393e6fc9ad52f1ca755016a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html" title="This structure represents a text string to draw.">Text</a> constructor.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#aa146a75cd393e6fc9ad52f1ca755016a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa146a75cd393e6fc9ad52f1ca755016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25161b6f2f5d19de308eb3e661fd411c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a25161b6f2f5d19de308eb3e661fd411c">Text</a> ()=default</td></tr>
+<tr class="separator:a25161b6f2f5d19de308eb3e661fd411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a48a39ec4887178ad83ac058d4abf2885"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a48a39ec4887178ad83ac058d4abf2885">text</a></td></tr>
+<tr class="memdesc:a48a39ec4887178ad83ac058d4abf2885"><td class="mdescLeft">&#160;</td><td class="mdescRight">The text string to be drawn.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a48a39ec4887178ad83ac058d4abf2885">Подробнее...</a><br /></td></tr>
+<tr class="separator:a48a39ec4887178ad83ac058d4abf2885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af3274325bafac592a8b5df6d49921b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a8af3274325bafac592a8b5df6d49921b">org</a></td></tr>
+<tr class="memdesc:a8af3274325bafac592a8b5df6d49921b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bottom-left corner of the text string in the image.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a8af3274325bafac592a8b5df6d49921b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8af3274325bafac592a8b5df6d49921b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127f8256b9e7db44396137e4fc663f0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a127f8256b9e7db44396137e4fc663f0a">ff</a></td></tr>
+<tr class="memdesc:a127f8256b9e7db44396137e4fc663f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font type, see <a class="el" href="group__imgproc__draw.html#ga0f9314ea6e35f99bb23f29567fc16e11">HersheyFonts</a>.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a127f8256b9e7db44396137e4fc663f0a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a127f8256b9e7db44396137e4fc663f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b175b4fad1f28da380f4487ee943db2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a8b175b4fad1f28da380f4487ee943db2">fs</a></td></tr>
+<tr class="memdesc:a8b175b4fad1f28da380f4487ee943db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font scale factor that is multiplied by the font-specific base size.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a8b175b4fad1f28da380f4487ee943db2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b175b4fad1f28da380f4487ee943db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766270fb50948f67ae1cc47348c29786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a766270fb50948f67ae1cc47348c29786">color</a></td></tr>
+<tr class="memdesc:a766270fb50948f67ae1cc47348c29786"><td class="mdescLeft">&#160;</td><td class="mdescRight">The text color.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a766270fb50948f67ae1cc47348c29786">Подробнее...</a><br /></td></tr>
+<tr class="separator:a766270fb50948f67ae1cc47348c29786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af28010818ad018e85d5cc2e0c884e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a6af28010818ad018e85d5cc2e0c884e5">thick</a></td></tr>
+<tr class="memdesc:a6af28010818ad018e85d5cc2e0c884e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thickness of the lines used to draw a text.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a6af28010818ad018e85d5cc2e0c884e5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6af28010818ad018e85d5cc2e0c884e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d93708a9c11ff5582b64484dcd334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a688d93708a9c11ff5582b64484dcd334">lt</a></td></tr>
+<tr class="memdesc:a688d93708a9c11ff5582b64484dcd334"><td class="mdescLeft">&#160;</td><td class="mdescRight">The line type. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a>.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a688d93708a9c11ff5582b64484dcd334">Подробнее...</a><br /></td></tr>
+<tr class="separator:a688d93708a9c11ff5582b64484dcd334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f3d6f7e02391eb897be789bd2506fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#af2f3d6f7e02391eb897be789bd2506fd">bottom_left_origin</a></td></tr>
+<tr class="memdesc:af2f3d6f7e02391eb897be789bd2506fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true, the image data origin is at the bottom-left corner. Otherwise, it is at the top-left corner.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#af2f3d6f7e02391eb897be789bd2506fd">Подробнее...</a><br /></td></tr>
+<tr class="separator:af2f3d6f7e02391eb897be789bd2506fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This structure represents a text string to draw. </p>
+<p>Parameters match <a class="el" href="group__imgproc__draw.html#ga4c4c82b7772da47de4f3a013ccb64f31" title="Draws a text string.">cv::putText()</a>. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa146a75cd393e6fc9ad52f1ca755016a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa146a75cd393e6fc9ad52f1ca755016a">&#9670;&nbsp;</a></span>Text() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::gapi::wip::draw::Text::Text </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>org_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ff_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fs_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>color_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>thick_</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>lt_</em> = <code>8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bottom_left_origin_</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html" title="This structure represents a text string to draw.">Text</a> constructor. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text_</td><td>The text string to be drawn </td></tr>
+    <tr><td class="paramname">org_</td><td>The bottom-left corner of the text string in the image </td></tr>
+    <tr><td class="paramname">ff_</td><td>The font type, see <a class="el" href="group__imgproc__draw.html#ga0f9314ea6e35f99bb23f29567fc16e11">HersheyFonts</a> </td></tr>
+    <tr><td class="paramname">fs_</td><td>The font scale factor that is multiplied by the font-specific base size </td></tr>
+    <tr><td class="paramname">color_</td><td>The text color </td></tr>
+    <tr><td class="paramname">thick_</td><td>The thickness of the lines used to draw a text </td></tr>
+    <tr><td class="paramname">lt_</td><td>The line type. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a> </td></tr>
+    <tr><td class="paramname">bottom_left_origin_</td><td>When true, the image data origin is at the bottom-left corner. Otherwise, it is at the top-left corner </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25161b6f2f5d19de308eb3e661fd411c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25161b6f2f5d19de308eb3e661fd411c">&#9670;&nbsp;</a></span>Text() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::gapi::wip::draw::Text::Text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af2f3d6f7e02391eb897be789bd2506fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f3d6f7e02391eb897be789bd2506fd">&#9670;&nbsp;</a></span>bottom_left_origin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::gapi::wip::draw::Text::bottom_left_origin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When true, the image data origin is at the bottom-left corner. Otherwise, it is at the top-left corner. </p>
+
+</div>
+</div>
+<a id="a766270fb50948f67ae1cc47348c29786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766270fb50948f67ae1cc47348c29786">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> cv::gapi::wip::draw::Text::color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The text color. </p>
+
+</div>
+</div>
+<a id="a127f8256b9e7db44396137e4fc663f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127f8256b9e7db44396137e4fc663f0a">&#9670;&nbsp;</a></span>ff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Text::ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The font type, see <a class="el" href="group__imgproc__draw.html#ga0f9314ea6e35f99bb23f29567fc16e11">HersheyFonts</a>. </p>
+
+</div>
+</div>
+<a id="a8b175b4fad1f28da380f4487ee943db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b175b4fad1f28da380f4487ee943db2">&#9670;&nbsp;</a></span>fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cv::gapi::wip::draw::Text::fs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The font scale factor that is multiplied by the font-specific base size. </p>
+
+</div>
+</div>
+<a id="a688d93708a9c11ff5582b64484dcd334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d93708a9c11ff5582b64484dcd334">&#9670;&nbsp;</a></span>lt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Text::lt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The line type. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a>. </p>
+
+</div>
+</div>
+<a id="a8af3274325bafac592a8b5df6d49921b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af3274325bafac592a8b5df6d49921b">&#9670;&nbsp;</a></span>org</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> cv::gapi::wip::draw::Text::org</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The bottom-left corner of the text string in the image. </p>
+
+</div>
+</div>
+<a id="a48a39ec4887178ad83ac058d4abf2885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a39ec4887178ad83ac058d4abf2885">&#9670;&nbsp;</a></span>text</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cv::gapi::wip::draw::Text::text</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The text string to be drawn. </p>
+
+</div>
+</div>
+<a id="a6af28010818ad018e85d5cc2e0c884e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af28010818ad018e85d5cc2e0c884e5">&#9670;&nbsp;</a></span>thick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Text::thick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The thickness of the lines used to draw a text. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>opencv/build/include/opencv2/gapi/render/<a class="el" href="render__types_8hpp_source.html">render_types.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi.html">gapi</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1wip.html">wip</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1wip_1_1draw.html">draw</a></li><li class="navelem"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html">Text</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>
