@@ -16,9 +16,9 @@ int main() {
 		for (int col = 0; col < 28; col++) {
 			if (matrix(row, col) > 150) {
 				matrix(row, col) = 0;
-				testData(row * 28 + col) = 0;
+				testData(0, row * 28 + col) = 0;
 			} else {
-				testData(row * 28 + col) = (255 - matrix(row, col)) / 255.0;
+				testData(0, row * 28 + col) = (255 - matrix(row, col)) / 255.0;
 			}
 		}
 	}
