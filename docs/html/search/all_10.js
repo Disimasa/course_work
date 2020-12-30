@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weights_52',['weights',['../class_layer.html#a1588152248ef49963d47a8af56f89789',1,'Layer']]]
+  ['_7enetwork_37',['~Network',['../class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492',1,'Network']]]
 ];

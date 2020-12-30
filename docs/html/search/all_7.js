@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['info_5farch_24',['info_arch',['../_c_make_c_compiler_id_8c.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fcompiler_25',['info_compiler',['../_c_make_c_compiler_id_8c.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5flanguage_5fdialect_5fdefault_26',['info_language_dialect_default',['../_c_make_c_compiler_id_8c.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fplatform_27',['info_platform',['../_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
-  ['intodec_28',['intoDec',['../mnist__example_8cpp.html#a15c9be7dd7d3bc252b82fb3509c959fa',1,'mnist_example.cpp']]]
+  ['main_19',['main',['../mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;mnist_example.cpp'],['../mnist__with__opencv_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;mnist_with_opencv.cpp'],['../xor__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;xor_example.cpp']]],
+  ['matrix_20',['Matrix',['../_layer_8h.html#adfecb398197e2c871cba88a5f9f3c5fe',1,'Layer.h']]],
+  ['mnist_5fexample_2ecpp_21',['mnist_example.cpp',['../mnist__example_8cpp.html',1,'']]],
+  ['mnist_5fwith_5fopencv_2ecpp_22',['mnist_with_opencv.cpp',['../mnist__with__opencv_8cpp.html',1,'']]]
 ];

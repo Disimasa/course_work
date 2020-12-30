@@ -92,13 +92,24 @@ $(document).ready(function(){initNavTree('class_convolutional.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_convolutional_8h_source.html">Convolutional.h</a>&gt;</code></p>
+<p>Класс сверточного слоя нейронной сети. Чаще всего используется для обработки изображений, данная реализация использует valid метод для обработки изображения  
+ <a href="class_convolutional.html#details">Подробнее...</a></p>
 
-<p>Базовые классы:<a class="el" href="class_layer.html">Layer</a>.</p>
+<p><code>#include &lt;<a class="el" href="_convolutional_8h_source.html">Convolutional.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Convolutional:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_convolutional.png" usemap="#Convolutional_map" alt=""/>
+  <map id="Convolutional_map" name="Convolutional_map">
+<area href="class_layer.html" title="Абстрактный класс слоев нейронной сети" alt="Layer" shape="rect" coords="0,0,89,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:adc19ac3372621ec11a539f8d073adb35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_convolutional.html#adc19ac3372621ec11a539f8d073adb35">Convolutional</a> (int width, int height, int kernelSize=3, double(*<a class="el" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a>)(double x, bool derivative)=sigmoid)</td></tr>
+<tr class="memdesc:adc19ac3372621ec11a539f8d073adb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор принимает размер изображения, размер ядра и функцию активации  <a href="class_convolutional.html#adc19ac3372621ec11a539f8d073adb35">Подробнее...</a><br /></td></tr>
 <tr class="separator:adc19ac3372621ec11a539f8d073adb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad90e35f7050d1aef7b0dd2636386208e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_convolutional.html#ad90e35f7050d1aef7b0dd2636386208e">setRandomWeights</a> (<a class="el" href="class_layer.html">Layer</a> *nextLayer)</td></tr>
 <tr class="memdesc:ad90e35f7050d1aef7b0dd2636386208e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает случайные значения весов для этого слоя  <a href="class_convolutional.html#ad90e35f7050d1aef7b0dd2636386208e">Подробнее...</a><br /></td></tr>
@@ -137,7 +148,9 @@ $(document).ready(function(){initNavTree('class_convolutional.html',''); initRes
 <tr class="memitem:acb3ca0207d2957bdc214a0744ee951ba inherit pro_attribs_class_layer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#acb3ca0207d2957bdc214a0744ee951ba">neuronsAmount</a> {0}</td></tr>
 <tr class="separator:acb3ca0207d2957bdc214a0744ee951ba inherit pro_attribs_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Конструктор(ы)</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс сверточного слоя нейронной сети. Чаще всего используется для обработки изображений, данная реализация использует valid метод для обработки изображения </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="adc19ac3372621ec11a539f8d073adb35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc19ac3372621ec11a539f8d073adb35">&#9670;&nbsp;</a></span>Convolutional()</h2>
 
@@ -175,6 +188,8 @@ $(document).ready(function(){initNavTree('class_convolutional.html',''); initRes
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Конструктор принимает размер изображения, размер ядра и функцию активации </p>
 
 </div>
 </div>

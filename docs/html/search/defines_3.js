@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hex_109',['HEX',['../_c_make_c_compiler_id_8c.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCXXCompilerId.cpp']]]
+  ['dump_5fconfig_5fproperty_16676',['DUMP_CONFIG_PROPERTY',['../opencl__info_8hpp.html#adb1f7e36b62731d978fbc83a4a8bdb1f',1,'opencl_info.hpp']]],
+  ['dump_5fmessage_5fstdout_16677',['DUMP_MESSAGE_STDOUT',['../opencl__info_8hpp.html#ab1492316bf32f753adf701d3caa65df9',1,'opencl_info.hpp']]]
 ];

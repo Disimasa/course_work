@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getneuronsamount_21',['getNeuronsAmount',['../class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6',1,'Layer']]],
-  ['getweights_22',['getWeights',['../class_layer.html#a4257812065717b168ac2bcd67880a591',1,'Layer']]]
+  ['intodec_15',['intoDec',['../mnist__example_8cpp.html#a15c9be7dd7d3bc252b82fb3509c959fa',1,'mnist_example.cpp']]]
 ];

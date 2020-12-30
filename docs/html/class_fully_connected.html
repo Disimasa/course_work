@@ -92,13 +92,24 @@ $(document).ready(function(){initNavTree('class_fully_connected.html',''); initR
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_fully_connected_8h_source.html">FullyConnected.h</a>&gt;</code></p>
+<p>Класс полносвязного слоя нейронной сети. Используется для создания перцептронов разной топологии  
+ <a href="class_fully_connected.html#details">Подробнее...</a></p>
 
-<p>Базовые классы:<a class="el" href="class_layer.html">Layer</a>.</p>
+<p><code>#include &lt;<a class="el" href="_fully_connected_8h_source.html">FullyConnected.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:FullyConnected:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_fully_connected.png" usemap="#FullyConnected_map" alt=""/>
+  <map id="FullyConnected_map" name="FullyConnected_map">
+<area href="class_layer.html" title="Абстрактный класс слоев нейронной сети" alt="Layer" shape="rect" coords="0,0,101,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a70ea480232427ded817216cceb2965c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fully_connected.html#a70ea480232427ded817216cceb2965c0">FullyConnected</a> (int neuronsAmountVal, double(*activationMethodLink)(double x, bool derivative)=sigmoid)</td></tr>
+<tr class="memdesc:a70ea480232427ded817216cceb2965c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор принимает количество нейронов в слое и функцию активации  <a href="class_fully_connected.html#a70ea480232427ded817216cceb2965c0">Подробнее...</a><br /></td></tr>
 <tr class="separator:a70ea480232427ded817216cceb2965c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa013942e70d2f237842c0fa88bdb7d14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fully_connected.html#aa013942e70d2f237842c0fa88bdb7d14">setRandomWeights</a> (<a class="el" href="class_layer.html">Layer</a> *nextLayer)</td></tr>
 <tr class="memdesc:aa013942e70d2f237842c0fa88bdb7d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает случайные значения весов для этого слоя  <a href="class_fully_connected.html#aa013942e70d2f237842c0fa88bdb7d14">Подробнее...</a><br /></td></tr>
@@ -137,7 +148,9 @@ $(document).ready(function(){initNavTree('class_fully_connected.html',''); initR
 <tr class="memitem:acb3ca0207d2957bdc214a0744ee951ba inherit pro_attribs_class_layer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#acb3ca0207d2957bdc214a0744ee951ba">neuronsAmount</a> {0}</td></tr>
 <tr class="separator:acb3ca0207d2957bdc214a0744ee951ba inherit pro_attribs_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Конструктор(ы)</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс полносвязного слоя нейронной сети. Используется для создания перцептронов разной топологии </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a70ea480232427ded817216cceb2965c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70ea480232427ded817216cceb2965c0">&#9670;&nbsp;</a></span>FullyConnected()</h2>
 
@@ -163,6 +176,8 @@ $(document).ready(function(){initNavTree('class_fully_connected.html',''); initR
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Конструктор принимает количество нейронов в слое и функцию активации </p>
 
 </div>
 </div>

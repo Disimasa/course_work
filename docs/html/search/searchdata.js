@@ -1,13 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "abcdfghilmnprstuwx~",
+  0: "abcfgilmnprstuwx~",
   1: "cfln",
   2: "acflmnrx",
   3: "abcfgilmnprstu~",
-  4: "ainw",
+  4: "anw",
   5: "m",
-  6: "acdhps",
-  7: "c"
+  6: "c"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines",
-  7: "pages"
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "Функции",
   4: "Переменные",
   5: "Определения типов",
-  6: "Макросы",
-  7: "Страницы"
+  6: "Страницы"
 };
 

@@ -50,16 +50,6 @@ var menudata={children:[
 {text:"Файлы",url:"files.html",children:[
 {text:"Файлы",url:"files.html"},
 {text:"Список членов всех файлов",url:"globals.html",children:[
-{text:"Указатель",url:"globals.html",children:[
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
-{text:"d",url:"globals.html#index_d"},
-{text:"h",url:"globals.html#index_h"},
-{text:"i",url:"globals.html#index_i"},
-{text:"m",url:"globals.html#index_m"},
-{text:"p",url:"globals.html#index_p"},
-{text:"s",url:"globals.html#index_s"}]},
+{text:"Указатель",url:"globals.html"},
 {text:"Функции",url:"globals_func.html"},
-{text:"Переменные",url:"globals_vars.html"},
-{text:"Определения типов",url:"globals_type.html"},
-{text:"Макросы",url:"globals_defs.html"}]}]}]}
+{text:"Определения типов",url:"globals_type.html"}]}]}]}

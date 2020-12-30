@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['train_50',['train',['../class_network.html#a138adbe48af5e5f30d9140d5780d1ca3',1,'Network']]]
+  ['weights_35',['weights',['../class_layer.html#a1588152248ef49963d47a8af56f89789',1,'Layer']]]
 ];
