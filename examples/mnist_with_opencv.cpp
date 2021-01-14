@@ -37,4 +37,5 @@ int main() {
 		}
 	}
 	std::cout<<std::endl<<"There is " + std::to_string(maxId) + " on the image";
+	std::cin.get();
 }
