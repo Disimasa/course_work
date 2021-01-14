@@ -60,4 +60,5 @@ int main() {
 	network.setRandomWeights();
 	network.train(trainData, trainAnswers, 500, 0.0015);
 	network.recordWeights("./trained_weights.txt");
+	std::cin.get();
 }
