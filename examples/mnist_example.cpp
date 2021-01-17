@@ -57,6 +57,7 @@ int main() {
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
+
 	network.setRandomWeights();
 	network.train(trainData, trainAnswers, 500, 0.0015);
 	network.recordWeights("./trained_weights.txt");

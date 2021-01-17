@@ -1,5 +1,0 @@
-var classcv_1_1_g_kernel_type_m_3_01_k_00_01std_1_1function_3_01std_1_1tuple_3_01_r_8_8_8_01_4_07_args_8_8_8_08_4_01_4 =
-[
-    [ "InArgs", "classcv_1_1_g_kernel_type_m_3_01_k_00_01std_1_1function_3_01std_1_1tuple_3_01_r_8_8_8_01_4_07_args_8_8_8_08_4_01_4.html#a2839de0a0c028b1112bc115e67b08e23", null ],
-    [ "OutArgs", "classcv_1_1_g_kernel_type_m_3_01_k_00_01std_1_1function_3_01std_1_1tuple_3_01_r_8_8_8_01_4_07_args_8_8_8_08_4_01_4.html#a5d425af9fdadd9e84aa9ae9da620fb54", null ]
-];
