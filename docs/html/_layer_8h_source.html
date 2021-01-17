@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network: Исходный файл Network_lib/headers/Layer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_51270b9111a4468e10aae62019cdaa19.html">Network_lib</a></li><li class="navelem"><a class="el" href="dir_f39198a97dbb011e437a7c0676b8b06e.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Layer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NEURAL_NETWORK_LAYER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NEURAL_NETWORK_LAYER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">typedef</span> Eigen::MatrixXd Matrix;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ActivationMethods.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_layer.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_layer.html">Layer</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_layer.html">Layer</a>(<span class="keywordtype">int</span> neuronsAmountVal, <span class="keywordtype">double</span> (*<a class="code" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a>)(<span class="keywordtype">double</span> x, <span class="keywordtype">bool</span> derivative) = sigmoid);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_layer.html#a06c061004a08e17cf96f63d4174ec268">setWeights</a>(Matrix weightsVal);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">   14</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">setRandomWeights</a>(<a class="code" href="class_layer.html">Layer</a> *nextLayer) = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">   16</a></span>&#160;    <span class="keyword">virtual</span> Matrix <a class="code" href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">forward</a>(Matrix) = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">   18</a></span>&#160;    <span class="keyword">virtual</span> Matrix <a class="code" href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">back</a>(Matrix, Matrix) = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">   20</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">update</a>(Matrix, Matrix, Matrix, <span class="keywordtype">double</span>) = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6">getNeuronsAmount</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">   24</a></span>&#160;    double (*<a class="code" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a>)(<span class="keywordtype">double</span> x, <span class="keywordtype">bool</span> derivative);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Matrix <a class="code" href="class_layer.html#a4257812065717b168ac2bcd67880a591">getWeights</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Matrix weights;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> neuronsAmount{0};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//NEURAL_NETWORK_LAYER_H</span></div>
+<div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdoc">Абстрактный класс слоев нейронной сети</div><div class="ttdef"><b>Definition:</b> Layer.h:8</div></div>
+<div class="ttc" id="aclass_layer_html_a06c061004a08e17cf96f63d4174ec268"><div class="ttname"><a href="class_layer.html#a06c061004a08e17cf96f63d4174ec268">Layer::setWeights</a></div><div class="ttdeci">void setWeights(Matrix weightsVal)</div><div class="ttdoc">Устанавливает значение весов для этого слоя</div><div class="ttdef"><b>Definition:</b> Layer.cpp:7</div></div>
+<div class="ttc" id="aclass_layer_html_a2e4558b5d02c093e89a274ece7b389f2"><div class="ttname"><a href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">Layer::update</a></div><div class="ttdeci">virtual void update(Matrix, Matrix, Matrix, double)=0</div><div class="ttdoc">Функция обновляет значения весов этого слоя</div></div>
+<div class="ttc" id="aclass_layer_html_a4257812065717b168ac2bcd67880a591"><div class="ttname"><a href="class_layer.html#a4257812065717b168ac2bcd67880a591">Layer::getWeights</a></div><div class="ttdeci">Matrix getWeights()</div><div class="ttdoc">Возвращает матрицу весов этого слоя</div><div class="ttdef"><b>Definition:</b> Layer.cpp:15</div></div>
+<div class="ttc" id="aclass_layer_html_a4c2d74b22c1a815f7234674bb8bdc9c6"><div class="ttname"><a href="class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6">Layer::getNeuronsAmount</a></div><div class="ttdeci">int getNeuronsAmount()</div><div class="ttdoc">Возвращает количество нейронов этого слоя</div><div class="ttdef"><b>Definition:</b> Layer.cpp:11</div></div>
+<div class="ttc" id="aclass_layer_html_aa69c20e3aaad17e12f9396490601e07b"><div class="ttname"><a href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">Layer::forward</a></div><div class="ttdeci">virtual Matrix forward(Matrix)=0</div><div class="ttdoc">Функция отвечает за активацию слоя и возвращает вычисленные значения нейронов след....</div></div>
+<div class="ttc" id="aclass_layer_html_ab13a11bb30b3bc232dc001ee432799b8"><div class="ttname"><a href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">Layer::back</a></div><div class="ttdeci">virtual Matrix back(Matrix, Matrix)=0</div><div class="ttdoc">Функция отвечает за расчет дельты при обратном распостранении ошибки</div></div>
+<div class="ttc" id="aclass_layer_html_ad8df5bfe1eb950c322e231fc4adab92e"><div class="ttname"><a href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">Layer::setRandomWeights</a></div><div class="ttdeci">virtual void setRandomWeights(Layer *nextLayer)=0</div><div class="ttdoc">Устанавливает случайные значения весов для этого слоя</div></div>
+<div class="ttc" id="aclass_layer_html_ae5d971e1c1925f150062ec7665c115a3"><div class="ttname"><a href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">Layer::activationMethod</a></div><div class="ttdeci">double(* activationMethod)(double x, bool derivative)</div><div class="ttdoc">Метод активации, используемый в данном слое</div><div class="ttdef"><b>Definition:</b> Layer.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0
+</small></address>
+</body>
+</html>

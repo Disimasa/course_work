@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network: Класс Layer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_layer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Layer<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Абстрактный класс слоев нейронной сети  
+ <a href="class_layer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_layer_8h_source.html">Layer.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Layer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_layer.png" usemap="#Layer_map" alt=""/>
+  <map id="Layer_map" name="Layer_map">
+<area href="class_convolutional.html" title="Класс сверточного слоя нейронной сети. Чаще всего используется для обработки изображений,..." alt="Convolutional" shape="rect" coords="0,56,101,80"/>
+<area href="class_fully_connected.html" title="Класс полносвязного слоя нейронной сети. Используется для создания перцептронов разной топологии" alt="FullyConnected" shape="rect" coords="111,56,212,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aeaba2d3ea9efff1d8a0333859b78db76"><td class="memItemLeft" align="right" valign="top"><a id="aeaba2d3ea9efff1d8a0333859b78db76"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Layer</b> (int neuronsAmountVal, double(*<a class="el" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a>)(double x, bool derivative)=sigmoid)</td></tr>
+<tr class="separator:aeaba2d3ea9efff1d8a0333859b78db76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c061004a08e17cf96f63d4174ec268"><td class="memItemLeft" align="right" valign="top"><a id="a06c061004a08e17cf96f63d4174ec268"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a06c061004a08e17cf96f63d4174ec268">setWeights</a> (Matrix weightsVal)</td></tr>
+<tr class="memdesc:a06c061004a08e17cf96f63d4174ec268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает значение весов для этого слоя <br /></td></tr>
+<tr class="separator:a06c061004a08e17cf96f63d4174ec268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8df5bfe1eb950c322e231fc4adab92e"><td class="memItemLeft" align="right" valign="top"><a id="ad8df5bfe1eb950c322e231fc4adab92e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad8df5bfe1eb950c322e231fc4adab92e">setRandomWeights</a> (<a class="el" href="class_layer.html">Layer</a> *nextLayer)=0</td></tr>
+<tr class="memdesc:ad8df5bfe1eb950c322e231fc4adab92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает случайные значения весов для этого слоя <br /></td></tr>
+<tr class="separator:ad8df5bfe1eb950c322e231fc4adab92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69c20e3aaad17e12f9396490601e07b"><td class="memItemLeft" align="right" valign="top"><a id="aa69c20e3aaad17e12f9396490601e07b"></a>
+virtual Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aa69c20e3aaad17e12f9396490601e07b">forward</a> (Matrix)=0</td></tr>
+<tr class="memdesc:aa69c20e3aaad17e12f9396490601e07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция отвечает за активацию слоя и возвращает вычисленные значения нейронов след. слоя <br /></td></tr>
+<tr class="separator:aa69c20e3aaad17e12f9396490601e07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13a11bb30b3bc232dc001ee432799b8"><td class="memItemLeft" align="right" valign="top"><a id="ab13a11bb30b3bc232dc001ee432799b8"></a>
+virtual Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ab13a11bb30b3bc232dc001ee432799b8">back</a> (Matrix, Matrix)=0</td></tr>
+<tr class="memdesc:ab13a11bb30b3bc232dc001ee432799b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция отвечает за расчет дельты при обратном распостранении ошибки <br /></td></tr>
+<tr class="separator:ab13a11bb30b3bc232dc001ee432799b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4558b5d02c093e89a274ece7b389f2"><td class="memItemLeft" align="right" valign="top"><a id="a2e4558b5d02c093e89a274ece7b389f2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a2e4558b5d02c093e89a274ece7b389f2">update</a> (Matrix, Matrix, Matrix, double)=0</td></tr>
+<tr class="memdesc:a2e4558b5d02c093e89a274ece7b389f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция обновляет значения весов этого слоя <br /></td></tr>
+<tr class="separator:a2e4558b5d02c093e89a274ece7b389f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="memItemLeft" align="right" valign="top"><a id="a4c2d74b22c1a815f7234674bb8bdc9c6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a4c2d74b22c1a815f7234674bb8bdc9c6">getNeuronsAmount</a> ()</td></tr>
+<tr class="memdesc:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает количество нейронов этого слоя <br /></td></tr>
+<tr class="separator:a4c2d74b22c1a815f7234674bb8bdc9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4257812065717b168ac2bcd67880a591"><td class="memItemLeft" align="right" valign="top"><a id="a4257812065717b168ac2bcd67880a591"></a>
+Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a4257812065717b168ac2bcd67880a591">getWeights</a> ()</td></tr>
+<tr class="memdesc:a4257812065717b168ac2bcd67880a591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает матрицу весов этого слоя <br /></td></tr>
+<tr class="separator:a4257812065717b168ac2bcd67880a591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ae5d971e1c1925f150062ec7665c115a3"><td class="memItemLeft" align="right" valign="top"><a id="ae5d971e1c1925f150062ec7665c115a3"></a>
+double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ae5d971e1c1925f150062ec7665c115a3">activationMethod</a> )(double x, bool derivative)</td></tr>
+<tr class="memdesc:ae5d971e1c1925f150062ec7665c115a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод активации, используемый в данном слое <br /></td></tr>
+<tr class="separator:ae5d971e1c1925f150062ec7665c115a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a1588152248ef49963d47a8af56f89789"><td class="memItemLeft" align="right" valign="top"><a id="a1588152248ef49963d47a8af56f89789"></a>
+Matrix&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b></td></tr>
+<tr class="separator:a1588152248ef49963d47a8af56f89789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3ca0207d2957bdc214a0744ee951ba"><td class="memItemLeft" align="right" valign="top"><a id="acb3ca0207d2957bdc214a0744ee951ba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>neuronsAmount</b> {0}</td></tr>
+<tr class="separator:acb3ca0207d2957bdc214a0744ee951ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный класс слоев нейронной сети </p>
+</div><hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>Network_lib/headers/<a class="el" href="_layer_8h_source.html">Layer.h</a></li>
+<li>Network_lib/source/Layer.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0
+</small></address>
+</body>
+</html>
