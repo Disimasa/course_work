@@ -1,0 +1,1978 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Image Filtering</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__imgproc__filter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Image Filtering<div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:gad8e695e87dee497e227716576c244598"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gad8e695e87dee497e227716576c244598">cv::SpecialFilter</a> { <a class="el" href="group__imgproc__filter.html#ggad8e695e87dee497e227716576c244598a460c815d2bb921fb7f53f4220e19c1d5">cv::FILTER_SCHARR</a> = -1
+ }</td></tr>
+<tr class="separator:gad8e695e87dee497e227716576c244598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7be549266bad7b2e6a04db49827f9f32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga7be549266bad7b2e6a04db49827f9f32">cv::MorphTypes</a> { <br />
+&#160;&#160;<a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32aa3783a21b429f4c31c178264a0403fcd">cv::MORPH_ERODE</a> = 0
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a2b9f6b6fb168b4d1d5277caebfe7b73d">cv::MORPH_DILATE</a> = 1
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a08d3cc3a2ace00cec488966d31fa29ea">cv::MORPH_OPEN</a> = 2
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a68c4b9c6144a30bcd52d1cdf39bb30e1">cv::MORPH_CLOSE</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a887efd64e82cee95a62f851c7f3b617b">cv::MORPH_GRADIENT</a> = 4
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32ada67be24f4dce6d7e6c57527f8724f3b">cv::MORPH_TOPHAT</a> = 5
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a24d27f56df6b98b1cb92ae8108d4638f">cv::MORPH_BLACKHAT</a> = 6
+, <a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32acf55ff766595ec0174ba42852f0ac264">cv::MORPH_HITMISS</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7be549266bad7b2e6a04db49827f9f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of morphological operation  <a href="group__imgproc__filter.html#ga7be549266bad7b2e6a04db49827f9f32">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7be549266bad7b2e6a04db49827f9f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2db39b56866583a95a5680313c314ad"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gac2db39b56866583a95a5680313c314ad">cv::MorphShapes</a> { <a class="el" href="group__imgproc__filter.html#ggac2db39b56866583a95a5680313c314ada260c4cbde19a749726763c01a074c60f">cv::MORPH_RECT</a> = 0
+, <a class="el" href="group__imgproc__filter.html#ggac2db39b56866583a95a5680313c314ada318435753d0b9f7faa241a658ec2e191">cv::MORPH_CROSS</a> = 1
+, <a class="el" href="group__imgproc__filter.html#ggac2db39b56866583a95a5680313c314ada33a3c67a61f349d21c507d05c53a755f">cv::MORPH_ELLIPSE</a> = 2
+ }</td></tr>
+<tr class="memdesc:gac2db39b56866583a95a5680313c314ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">shape of the structuring element  <a href="group__imgproc__filter.html#gac2db39b56866583a95a5680313c314ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac2db39b56866583a95a5680313c314ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga38a8ea387cfb178559ad3fc4b3fd6c80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga38a8ea387cfb178559ad3fc4b3fd6c80">cv::getGaussianKernel</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize, double sigma, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ktype=<a class="el" href="group__core__hal__interface.html#ga30a562691cc5987bc88eb7bb7a8faf2b">CV_64F</a>)</td></tr>
+<tr class="memdesc:ga38a8ea387cfb178559ad3fc4b3fd6c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Gaussian filter coefficients.  <a href="group__imgproc__filter.html#ga38a8ea387cfb178559ad3fc4b3fd6c80">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga38a8ea387cfb178559ad3fc4b3fd6c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c1d40bbd83c977dd4f5c3e3b9f12dc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1">cv::getDerivKernels</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> kx, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> ky, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dx, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dy, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize, bool normalize=false, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ktype=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:ga1c1d40bbd83c977dd4f5c3e3b9f12dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns filter coefficients for computing spatial image derivatives.  <a href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1c1d40bbd83c977dd4f5c3e3b9f12dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00da609a95cf7463447fab17d8b25f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga00da609a95cf7463447fab17d8b25f3c">cv::getGaborKernel</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, double sigma, double <a class="el" href="group__imgproc__c.html#ga90ba48f41646a904a861746079d43f17">theta</a>, double lambd, double <a class="el" href="group__core__c.html#gad371e1c594a617af194d717a837ae04c">gamma</a>, double psi=<a class="el" href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a> *0.5, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ktype=<a class="el" href="group__core__hal__interface.html#ga30a562691cc5987bc88eb7bb7a8faf2b">CV_64F</a>)</td></tr>
+<tr class="memdesc:ga00da609a95cf7463447fab17d8b25f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Gabor filter coefficients.  <a href="group__imgproc__filter.html#ga00da609a95cf7463447fab17d8b25f3c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga00da609a95cf7463447fab17d8b25f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37a6222e3e71b3c570d1e8cbb4582798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798">cv::getStructuringElement</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga9441d55ee8217146ade7775f35b642c3">shape</a>, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1))</td></tr>
+<tr class="memdesc:ga37a6222e3e71b3c570d1e8cbb4582798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a structuring element of the specified size and shape for morphological operations.  <a href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga37a6222e3e71b3c570d1e8cbb4582798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7c87bbc46b97e7eafa71357916ab568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568">cv::medianBlur</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize)</td></tr>
+<tr class="memdesc:gad7c87bbc46b97e7eafa71357916ab568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using the median filter.  <a href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad7c87bbc46b97e7eafa71357916ab568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8972c822f378752101e8ed1bb357f48a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a">cv::GaussianBlur</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, double sigmaX, double sigmaY=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga8972c822f378752101e8ed1bb357f48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using a Gaussian filter.  <a href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8972c822f378752101e8ed1bb357f48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0373f92a136e10e9ec7c90a82032a332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332">cv::bilateralFilter</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> d, double sigmaColor, double sigmaSpace, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga0373f92a136e10e9ec7c90a82032a332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the bilateral filter to an image.  <a href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0373f92a136e10e9ec7c90a82032a332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d0f646516e6ebf4d5fe612a38f41b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e">cv::boxFilter</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), bool normalize=true, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga9d0f646516e6ebf4d5fe612a38f41b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using the box filter.  <a href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9d0f646516e6ebf4d5fe612a38f41b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1a3095db369c731339f1c8bf7578e28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gab1a3095db369c731339f1c8bf7578e28">cv::sqrBoxFilter</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1, -1), bool normalize=true, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gab1a3095db369c731339f1c8bf7578e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the normalized sum of squares of the pixel values overlapping the filter.  <a href="group__imgproc__filter.html#gab1a3095db369c731339f1c8bf7578e28">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab1a3095db369c731339f1c8bf7578e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab92678366adf9d129460eff60e71afc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6">cv::blur</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> ksize, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gab92678366adf9d129460eff60e71afc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using the normalized box filter.  <a href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab92678366adf9d129460eff60e71afc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23f5b640872e9a37da44521889cbd9aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa">cv::filter2D</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), double <a class="el" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga23f5b640872e9a37da44521889cbd9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolves an image with the kernel.  <a href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga23f5b640872e9a37da44521889cbd9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b22fefc02a8f853267737bc3d87dc4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a">cv::sepFilter2D</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> kernelX, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> kernelY, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), double <a class="el" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga2b22fefc02a8f853267737bc3d87dc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a separable linear filter to an image.  <a href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2b22fefc02a8f853267737bc3d87dc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40f37c24a6f7a36dfe7c8a22fa2f7b7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">cv::Sobel</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dx, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dy, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize=3, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1, double <a class="el" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga40f37c24a6f7a36dfe7c8a22fa2f7b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.  <a href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga40f37c24a6f7a36dfe7c8a22fa2f7b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e378721703d0061f6a398c8e14032ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga6e378721703d0061f6a398c8e14032ed">cv::spatialGradient</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> dx, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> dy, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize=3, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga6e378721703d0061f6a398c8e14032ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the first order image derivative in both x and y using a Sobel operator.  <a href="group__imgproc__filter.html#ga6e378721703d0061f6a398c8e14032ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6e378721703d0061f6a398c8e14032ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae485b1871554c08ecfb5825906e39f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85">cv::Scharr</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dx, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> dy, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1, double <a class="el" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gae485b1871554c08ecfb5825906e39f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the first x- or y- image derivative using Scharr operator.  <a href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae485b1871554c08ecfb5825906e39f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf33f59c828ca700ad7507ed10725414b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gaf33f59c828ca700ad7507ed10725414b">cv::Laplacian</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ksize=1, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1, double <a class="el" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>=0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gaf33f59c828ca700ad7507ed10725414b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Laplacian of an image.  <a href="group__imgproc__filter.html#gaf33f59c828ca700ad7507ed10725414b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf33f59c828ca700ad7507ed10725414b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14463f127947355033f323c71c3a5a82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82">cv::erode</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> iterations=1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=morphologyDefaultBorderValue())</td></tr>
+<tr class="memdesc:ga14463f127947355033f323c71c3a5a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erodes an image by using a specific structuring element.  <a href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga14463f127947355033f323c71c3a5a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf226304189a1d4dc4eb9cebb6d25cdec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec">cv::dilate</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> iterations=1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=morphologyDefaultBorderValue())</td></tr>
+<tr class="memdesc:gaf226304189a1d4dc4eb9cebb6d25cdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dilates an image by using a specific structuring element.  <a href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf226304189a1d4dc4eb9cebb6d25cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44a84dbc53d0913bc930c6cc7826e8c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9">cv::morphologyEx</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> op, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__imgproc__c.html#ga863a75780ba6c5de552f5361cb0d2c89">kernel</a>, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> anchor=<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> iterations=1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a>, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;borderValue=morphologyDefaultBorderValue())</td></tr>
+<tr class="memdesc:ga44a84dbc53d0913bc930c6cc7826e8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs advanced morphological transformations.  <a href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga44a84dbc53d0913bc930c6cc7826e8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01a53b03caf42fd5f6edd0c7142134b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga01a53b03caf42fd5f6edd0c7142134b5">cv::pyrDown</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dstsize=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:ga01a53b03caf42fd5f6edd0c7142134b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image and downsamples it.  <a href="group__imgproc__filter.html#ga01a53b03caf42fd5f6edd0c7142134b5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga01a53b03caf42fd5f6edd0c7142134b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadebc06f43ad2051c8b6d989f21be80aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gadebc06f43ad2051c8b6d989f21be80aa">cv::pyrUp</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;dstsize=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gadebc06f43ad2051c8b6d989f21be80aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upsamples an image and then blurs it.  <a href="group__imgproc__filter.html#gadebc06f43ad2051c8b6d989f21be80aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadebc06f43ad2051c8b6d989f21be80aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf24d99d137bb8eab33e0cf41028e25f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gaf24d99d137bb8eab33e0cf41028e25f5">cv::buildPyramid</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxlevel, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> borderType=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a>)</td></tr>
+<tr class="memdesc:gaf24d99d137bb8eab33e0cf41028e25f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the Gaussian pyramid for an image.  <a href="group__imgproc__filter.html#gaf24d99d137bb8eab33e0cf41028e25f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf24d99d137bb8eab33e0cf41028e25f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga088733b9e896e51c1044ab17155228e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga088733b9e896e51c1044ab17155228e8">cv::pyrMeanShiftFiltering</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, double <a class="el" href="group__imgproc__c.html#gac14bc2e984efdff6b1fa7e106f3ac14a">sp</a>, double <a class="el" href="group__imgproc__c.html#gacecaf9a0f96f944ff768b10358b45839">sr</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> maxLevel=1, <a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a> <a class="el" href="group__core__c.html#gad5df871b1d714e419d2fbdc28e341c7f">termcrit</a>=<a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e">TermCriteria::MAX_ITER</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>, 5, 1))</td></tr>
+<tr class="memdesc:ga088733b9e896e51c1044ab17155228e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs initial step of meanshift segmentation of an image.  <a href="group__imgproc__filter.html#ga088733b9e896e51c1044ab17155228e8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga088733b9e896e51c1044ab17155228e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Functions and classes described in this section are used to perform various linear or non-linear filtering operations on 2D images (represented as <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>'s). It means that for each pixel location <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/> in the source image (normally, rectangular), its neighborhood is considered and used to compute the response. In case of a linear filter, it is a weighted sum of pixel values. In case of morphological operations, it is the minimum or maximum values, and so on. The computed response is stored in the destination image at the same location <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/>. It means that the output image will be of the same size as the input image. Normally, the functions support multi-channel arrays, in which case every channel is processed independently. Therefore, the output image will also have the same number of channels as the input one.</p>
+<p>Another common feature of the functions and classes described in this section is that, unlike simple arithmetic functions, they need to extrapolate values of some non-existing pixels. For example, if you want to smooth an image using a Gaussian <img class="formulaInl" alt="$3 \times 3$" src="form_622.png"/> filter, then, when processing the left-most pixels in each row, you need pixels to the left of them, that is, outside of the image. You can let these pixels be the same as the left-most image pixels ("replicated
+border" extrapolation method), or assume that all the non-existing pixels are zeros ("constant
+border" extrapolation method), and so on. OpenCV enables you to specify the extrapolation method. For details, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a></p>
+<p><a class="anchor" id="filter_depths"></a></p>
+<h3><a class="anchor" id="autotoc_md41"></a>
+Depth combinations</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input depth (src.depth())   </th><th class="markdownTableHeadNone">Output depth (ddepth)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">CV_8U   </td><td class="markdownTableBodyNone">-1/CV_16S/CV_32F/CV_64F    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CV_16U/CV_16S   </td><td class="markdownTableBodyNone">-1/CV_32F/CV_64F    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">CV_32F   </td><td class="markdownTableBodyNone">-1/CV_32F/CV_64F    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CV_64F   </td><td class="markdownTableBodyNone">-1/CV_64F   </td></tr>
+</table>
+<dl class="section note"><dt>Заметки</dt><dd>when ddepth=-1, the output image will have the same depth as the source. <pre class="fragment">@defgroup imgproc_transform Geometric Image Transformations
+</pre> The functions in this section perform various geometrical transformations of 2D images. They do not change the image content but deform the pixel grid and map this deformed grid to the destination image. In fact, to avoid sampling artifacts, the mapping is done in the reverse order, from destination to the source. That is, for each pixel <img class="formulaInl" alt="$(x, y)$" src="form_663.png"/> of the destination image, the functions compute coordinates of the corresponding "donor" pixel in the source image and copy the pixel value:</dd></dl>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y)= \texttt{src} (f_x(x,y), f_y(x,y))\]" src="form_664.png"/>
+</p>
+<p>In case when you specify the forward mapping <img class="formulaInl" alt="$\left&lt;g_x, g_y\right&gt;: \texttt{src} \rightarrow \texttt{dst}$" src="form_665.png"/>, the OpenCV functions first compute the corresponding inverse mapping <img class="formulaInl" alt="$\left&lt;f_x, f_y\right&gt;: \texttt{dst} \rightarrow \texttt{src}$" src="form_666.png"/> and then use the above formula.</p>
+<p>The actual implementations of the geometrical transformations, from the most generic remap and to the simplest and the fastest resize, need to solve two main problems with the above formula:</p>
+<ul>
+<li>Extrapolation of non-existing pixels. Similarly to the filtering functions described in the previous section, for some <img class="formulaInl" alt="$(x,y)$" src="form_201.png"/>, either one of <img class="formulaInl" alt="$f_x(x,y)$" src="form_667.png"/>, or <img class="formulaInl" alt="$f_y(x,y)$" src="form_668.png"/>, or both of them may fall outside of the image. In this case, an extrapolation method needs to be used. OpenCV provides the same selection of extrapolation methods as in the filtering functions. In addition, it provides the method <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a886a5eb6b466854d63f9e742d5c8eefe" title="uvwxyz|abcdefgh|ijklmno">BORDER_TRANSPARENT</a>. This means that the corresponding pixels in the destination image will not be modified at all.</li>
+<li>Interpolation of pixel values. Usually <img class="formulaInl" alt="$f_x(x,y)$" src="form_667.png"/> and <img class="formulaInl" alt="$f_y(x,y)$" src="form_668.png"/> are floating-point numbers. This means that <img class="formulaInl" alt="$\left&lt;f_x, f_y\right&gt;$" src="form_669.png"/> can be either an affine or perspective transformation, or radial lens distortion correction, and so on. So, a pixel value at fractional coordinates needs to be retrieved. In the simplest case, the coordinates can be just rounded to the nearest integer coordinates and the corresponding pixel can be used. This is called a nearest-neighbor interpolation. However, a better result can be achieved by using more sophisticated <a href="http://en.wikipedia.org/wiki/Multivariate_interpolation">interpolation methods</a> , where a polynomial function is fit into some neighborhood of the computed pixel <img class="formulaInl" alt="$(f_x(x,y), f_y(x,y))$" src="form_670.png"/>, and then the value of the polynomial at <img class="formulaInl" alt="$(f_x(x,y), f_y(x,y))$" src="form_670.png"/> is taken as the interpolated pixel value. In OpenCV, you can choose between several interpolation methods. See resize for details.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>The geometrical transformations do not work with <code>CV_8S</code> or <code>CV_32S</code> images. <pre class="fragment">@defgroup imgproc_misc Miscellaneous Image Transformations
+@defgroup imgproc_draw Drawing Functions
+</pre> Drawing functions work with matrices/images of arbitrary depth. The boundaries of the shapes can be rendered with antialiasing (implemented only for 8-bit images for now). All the functions include the parameter color that uses an RGB value (that may be constructed with the Scalar constructor ) for color images and brightness for grayscale images. For color images, the channel ordering is normally <em>Blue, Green, Red</em>. This is what imshow, imread, and imwrite expect. So, if you form a color using the Scalar constructor, it should look like:</dd></dl>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{Scalar} (blue \_ component, green \_ component, red \_ component[, alpha \_ component])\]" src="form_671.png"/>
+</p>
+<p>If you are using your own image rendering and I/O functions, you can use any channel ordering. The drawing functions process each channel independently and do not depend on the channel order or even on the used color space. The whole image can be converted from BGR to RGB or to a different color space using cvtColor .</p>
+<p>If a drawn figure is partially or completely outside the image, the drawing functions clip it. Also, many drawing functions can handle pixel coordinates specified with sub-pixel accuracy. This means that the coordinates can be passed as fixed-point numbers encoded as integers. The number of fractional bits is specified by the shift parameter and the real point coordinates are calculated as <img class="formulaInl" alt="$\texttt{Point}(x,y)\rightarrow\texttt{Point2f}(x*2^{-shift},y*2^{-shift})$" src="form_672.png"/> . This feature is especially effective when rendering antialiased shapes.</p>
+<dl class="section note"><dt>Заметки</dt><dd>The functions do not support alpha-transparency when the target image is 4-channel. In this case, the color[3] is simply copied to the repainted pixels. Thus, if you want to paint semi-transparent shapes, you can paint them in a separate buffer and then blend it with the main image. <pre class="fragment">@defgroup imgproc_color_conversions Color Space Conversions
+@defgroup imgproc_colormap ColorMaps in OpenCV
+</pre> The human perception isn't built for observing fine changes in grayscale images. Human eyes are more sensitive to observing changes between colors, so you often need to recolor your grayscale images to get a clue about them. OpenCV now comes with various colormaps to enhance the visualization in your computer vision application.</dd></dl>
+<p>In OpenCV you only need applyColorMap to apply a colormap on a given image. The following sample code reads the path to an image from command line, applies a Jet colormap on it and shows the result:</p>
+<div class="fragment"></div><!-- fragment --><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__colormap.html#ga9a805d8262bcbe273f16be9ea2055a65" title="GNU Octave/MATLAB equivalent colormaps.">ColormapTypes</a> <pre class="fragment">@defgroup imgproc_subdiv2d Planar Subdivision
+</pre> The <a class="el" href="classcv_1_1_subdiv2_d.html">Subdiv2D</a> class described in this section is used to perform various planar subdivision on a set of 2D points (represented as vector of <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a>). OpenCV subdivides a plane into triangles using the Delaunay's algorithm, which corresponds to the dual graph of the Voronoi diagram. In the figure below, the Delaunay's triangulation is marked with black lines and the Voronoi diagram with red lines.</dd></dl>
+<p><img src="pics/delaunay_voronoi.png" alt="Delaunay triangulation (black) and Voronoi (red)" class="inline"/></p>
+<p>The subdivisions can be used for the 3D piece-wise transformation of a plane, morphing, fast location of points on the plane, building special graphs (such as NNG,<a class="el" href="classcv_1_1_r_n_g.html" title="Random Number Generator.">RNG</a>), and so forth. </p><pre class="fragment">@defgroup imgproc_hist Histograms
+@defgroup imgproc_shape Structural Analysis and Shape Descriptors
+@defgroup imgproc_motion Motion Analysis and Object Tracking
+@defgroup imgproc_feature Feature Detection
+@defgroup imgproc_object Object Detection
+@defgroup imgproc_c C API
+@defgroup imgproc_hal Hardware Acceleration Layer
+@{
+    @defgroup imgproc_hal_functions Functions
+    @defgroup imgproc_hal_interface Interface
+@}
+</pre> <h2 class="groupheader">Перечисления</h2>
+<a id="gac2db39b56866583a95a5680313c314ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2db39b56866583a95a5680313c314ad">&#9670;&nbsp;</a></span>MorphShapes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__filter.html#gac2db39b56866583a95a5680313c314ad">cv::MorphShapes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>shape of the structuring element </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggac2db39b56866583a95a5680313c314ada260c4cbde19a749726763c01a074c60f"></a>MORPH_RECT&#160;</td><td class="fielddoc"><p>a rectangular structuring element: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[E_{ij}=1\]" src="form_822.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggac2db39b56866583a95a5680313c314ada318435753d0b9f7faa241a658ec2e191"></a>MORPH_CROSS&#160;</td><td class="fielddoc"><p>a cross-shaped structuring element: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[E_{ij} = \begin{cases} 1 &amp; \texttt{if } {i=\texttt{anchor.y } {or } {j=\texttt{anchor.x}}} \\0 &amp; \texttt{otherwise} \end{cases}\]" src="form_823.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="ggac2db39b56866583a95a5680313c314ada33a3c67a61f349d21c507d05c53a755f"></a>MORPH_ELLIPSE&#160;</td><td class="fielddoc"><p>an elliptic structuring element, that is, a filled ellipse inscribed into the rectangle Rect(0, 0, esize.width, 0.esize.height) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga7be549266bad7b2e6a04db49827f9f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7be549266bad7b2e6a04db49827f9f32">&#9670;&nbsp;</a></span>MorphTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__filter.html#ga7be549266bad7b2e6a04db49827f9f32">cv::MorphTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type of morphological operation </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32aa3783a21b429f4c31c178264a0403fcd"></a>MORPH_ERODE&#160;</td><td class="fielddoc"><p>see <a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82" title="Erodes an image by using a specific structuring element.">erode</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32a2b9f6b6fb168b4d1d5277caebfe7b73d"></a>MORPH_DILATE&#160;</td><td class="fielddoc"><p>see <a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec" title="Dilates an image by using a specific structuring element.">dilate</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32a08d3cc3a2ace00cec488966d31fa29ea"></a>MORPH_OPEN&#160;</td><td class="fielddoc"><p>an opening operation </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \mathrm{open} ( \texttt{src} , \texttt{element} )= \mathrm{dilate} ( \mathrm{erode} ( \texttt{src} , \texttt{element} ))\]" src="form_817.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32a68c4b9c6144a30bcd52d1cdf39bb30e1"></a>MORPH_CLOSE&#160;</td><td class="fielddoc"><p>a closing operation </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \mathrm{close} ( \texttt{src} , \texttt{element} )= \mathrm{erode} ( \mathrm{dilate} ( \texttt{src} , \texttt{element} ))\]" src="form_818.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32a887efd64e82cee95a62f851c7f3b617b"></a>MORPH_GRADIENT&#160;</td><td class="fielddoc"><p>a morphological gradient </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \mathrm{morph\_grad} ( \texttt{src} , \texttt{element} )= \mathrm{dilate} ( \texttt{src} , \texttt{element} )- \mathrm{erode} ( \texttt{src} , \texttt{element} )\]" src="form_819.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32ada67be24f4dce6d7e6c57527f8724f3b"></a>MORPH_TOPHAT&#160;</td><td class="fielddoc"><p>"top hat" </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \mathrm{tophat} ( \texttt{src} , \texttt{element} )= \texttt{src} - \mathrm{open} ( \texttt{src} , \texttt{element} )\]" src="form_820.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32a24d27f56df6b98b1cb92ae8108d4638f"></a>MORPH_BLACKHAT&#160;</td><td class="fielddoc"><p>"black hat" </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \mathrm{blackhat} ( \texttt{src} , \texttt{element} )= \mathrm{close} ( \texttt{src} , \texttt{element} )- \texttt{src}\]" src="form_821.png"/>
+</p>
+ </td></tr>
+<tr><td class="fieldname"><a id="gga7be549266bad7b2e6a04db49827f9f32acf55ff766595ec0174ba42852f0ac264"></a>MORPH_HITMISS&#160;</td><td class="fielddoc"><p>"hit or miss" .- Only supported for CV_8UC1 binary images. A tutorial can be found in the documentation </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gad8e695e87dee497e227716576c244598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8e695e87dee497e227716576c244598">&#9670;&nbsp;</a></span>SpecialFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__imgproc__filter.html#gad8e695e87dee497e227716576c244598">cv::SpecialFilter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ggad8e695e87dee497e227716576c244598a460c815d2bb921fb7f53f4220e19c1d5"></a>FILTER_SCHARR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga0373f92a136e10e9ec7c90a82032a332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0373f92a136e10e9ec7c90a82032a332">&#9670;&nbsp;</a></span>bilateralFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::bilateralFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigmaColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigmaSpace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the bilateral filter to an image. </p>
+<p>The function applies bilateral filtering to the input image, as described in <a href="http://www.dai.ed.ac.uk/CVonline/LOCAL_COPIES/MANDUCHI1/Bilateral_Filtering.html">http://www.dai.ed.ac.uk/CVonline/LOCAL_COPIES/MANDUCHI1/Bilateral_Filtering.html</a> bilateralFilter can reduce unwanted noise very well while keeping edges fairly sharp. However, it is very slow compared to most filters.</p>
+<p><em>Sigma values</em>: For simplicity, you can set the 2 sigma values to be the same. If they are small (&lt; 10), the filter will not have much effect, whereas if they are large (&gt; 150), they will have a very strong effect, making the image look "cartoonish".</p>
+<p><em>Filter size</em>: Large filters (d &gt; 5) are very slow, so it is recommended to use d=5 for real-time applications, and perhaps d=9 for offline applications that need heavy noise filtering.</p>
+<p>This filter does not work inplace. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source 8-bit or floating-point, 1-channel or 3-channel image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and type as src . </td></tr>
+    <tr><td class="paramname">d</td><td>Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace. </td></tr>
+    <tr><td class="paramname">sigmaColor</td><td>Filter sigma in the color space. A larger value of the parameter means that farther colors within the pixel neighborhood (see sigmaSpace) will be mixed together, resulting in larger areas of semi-equal color. </td></tr>
+    <tr><td class="paramname">sigmaSpace</td><td>Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0, it specifies the neighborhood size regardless of sigmaSpace. Otherwise, d is proportional to sigmaSpace. </td></tr>
+    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab92678366adf9d129460eff60e71afc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab92678366adf9d129460eff60e71afc6">&#9670;&nbsp;</a></span>blur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::blur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blurs an image using the normalized box filter. </p>
+<p>The function smooths an image using the kernel:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{K} = \frac{1}{\texttt{ksize.width*ksize.height}} \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ \hdotsfor{6} \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ \end{bmatrix}\]" src="form_610.png"/>
+</p>
+<p>The call <code>blur(src, dst, ksize, anchor, borderType)</code> is equivalent to <code>boxFilter(src, dst, src.type(), ksize, anchor, true, borderType)</code>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image; it can have any number of channels, which are processed independently, but the depth should be CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
+    <tr><td class="paramname">ksize</td><td>blurring kernel size. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor point; default value Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e" title="Blurs an image using the box filter.">boxFilter</a>, <a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332" title="Applies the bilateral filter to an image.">bilateralFilter</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a>, <a class="el" href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568" title="Blurs an image using the median filter.">medianBlur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9d0f646516e6ebf4d5fe612a38f41b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d0f646516e6ebf4d5fe612a38f41b9e">&#9670;&nbsp;</a></span>boxFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::boxFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blurs an image using the box filter. </p>
+<p>The function smooths an image using the kernel:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{K} = \alpha \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ \hdotsfor{6} \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \end{bmatrix}\]" src="form_608.png"/>
+</p>
+<p>where</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\alpha = \begin{cases} \frac{1}{\texttt{ksize.width*ksize.height}} &amp; \texttt{when } \texttt{normalize=true} \\1 &amp; \texttt{otherwise}\end{cases}\]" src="form_683.png"/>
+</p>
+<p>Unnormalized box filter is useful for computing various integral characteristics over each pixel neighborhood, such as covariance matrices of image derivatives (used in dense optical flow algorithms, and so on). If you need to compute pixel sums over variable-size windows, use <a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">integral</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>the output image depth (-1 to use src.depth()). </td></tr>
+    <tr><td class="paramname">ksize</td><td>blurring kernel size. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor point; default value Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">normalize</td><td>flag, specifying whether the kernel is normalized by its area or not. </td></tr>
+    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">blur</a>, <a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332" title="Applies the bilateral filter to an image.">bilateralFilter</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a>, <a class="el" href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568" title="Blurs an image using the median filter.">medianBlur</a>, <a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">integral</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaf24d99d137bb8eab33e0cf41028e25f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf24d99d137bb8eab33e0cf41028e25f5">&#9670;&nbsp;</a></span>buildPyramid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::buildPyramid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga889a09549b98223016170d9b613715de">OutputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxlevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the Gaussian pyramid for an image. </p>
+<p>The function constructs a vector of images and builds the Gaussian pyramid by recursively applying pyrDown to the previously built pyramid layers, starting from <code>dst[0]==src</code>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image. Check pyrDown for the list of supported types. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination vector of maxlevel+1 images of the same type as src. dst[0] will be the same as src. dst[1] is the next pyramid layer, a smoothed and down-sized src, and so on. </td></tr>
+    <tr><td class="paramname">maxlevel</td><td>0-based index of the last (the smallest) pyramid layer. It must be non-negative. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> (<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838" title="iiiiii|abcdefgh|iiiiiii with some specified i">BORDER_CONSTANT</a> isn't supported) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf226304189a1d4dc4eb9cebb6d25cdec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf226304189a1d4dc4eb9cebb6d25cdec">&#9670;&nbsp;</a></span>dilate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dilate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code>morphologyDefaultBorderValue()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dilates an image by using a specific structuring element. </p>
+<p>The function dilates the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the maximum is taken: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \max _{(x',y'): \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\]" src="form_613.png"/>
+</p>
+<p>The function supports the in-place mode. Dilation can be applied several ( iterations ) times. In case of multi-channel images, each channel is processed independently.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image; the number of channels can be arbitrary, but the depth should be one of CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
+    <tr><td class="paramname">kernel</td><td>structuring element used for dilation; if elemenat=Mat(), a 3 x 3 rectangular structuring element is used. Kernel can be created using <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a> </td></tr>
+    <tr><td class="paramname">anchor</td><td>position of the anchor within the element; default value (-1, -1) means that the anchor is at the element center. </td></tr>
+    <tr><td class="paramname">iterations</td><td>number of times dilation is applied. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not suported. </td></tr>
+    <tr><td class="paramname">borderValue</td><td>border value in case of a constant border </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82" title="Erodes an image by using a specific structuring element.">erode</a>, <a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9" title="Performs advanced morphological transformations.">morphologyEx</a>, <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga14463f127947355033f323c71c3a5a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14463f127947355033f323c71c3a5a82">&#9670;&nbsp;</a></span>erode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::erode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code>morphologyDefaultBorderValue()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erodes an image by using a specific structuring element. </p>
+<p>The function erodes the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the minimum is taken:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \min _{(x',y'): \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\]" src="form_612.png"/>
+</p>
+<p>The function supports the in-place mode. Erosion can be applied several ( iterations ) times. In case of multi-channel images, each channel is processed independently.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image; the number of channels can be arbitrary, but the depth should be one of CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
+    <tr><td class="paramname">kernel</td><td>structuring element used for erosion; if <code>element=Mat()</code>, a <code>3 x 3</code> rectangular structuring element is used. Kernel can be created using <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a>. </td></tr>
+    <tr><td class="paramname">anchor</td><td>position of the anchor within the element; default value (-1, -1) means that the anchor is at the element center. </td></tr>
+    <tr><td class="paramname">iterations</td><td>number of times erosion is applied. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+    <tr><td class="paramname">borderValue</td><td>border value in case of a constant border </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec" title="Dilates an image by using a specific structuring element.">dilate</a>, <a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9" title="Performs advanced morphological transformations.">morphologyEx</a>, <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga23f5b640872e9a37da44521889cbd9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23f5b640872e9a37da44521889cbd9aa">&#9670;&nbsp;</a></span>filter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::filter2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convolves an image with the kernel. </p>
+<p>The function applies an arbitrary linear filter to an image. In-place operation is supported. When the aperture is partially outside the image, the function interpolates outlier pixel values according to the specified border mode.</p>
+<p>The function does actually compute correlation, not the convolution:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (x,y) = \sum _{ \substack{0\leq x' &lt; \texttt{kernel.cols}\\{0\leq y' &lt; \texttt{kernel.rows}}}} \texttt{kernel} (x',y')* \texttt{src} (x+x'- \texttt{anchor.x} ,y+y'- \texttt{anchor.y} )\]" src="form_607.png"/>
+</p>
+<p>That is, the kernel is not mirrored around the anchor point. If you need a real convolution, flip the kernel using <a class="el" href="group__core__array.html#gab51415fc8a5d4ccda9fc251705b76a48" title="Flips a 2D array around vertical, horizontal, or both axes.">flip</a> and set the new anchor to <code>(kernel.cols - anchor.x - 1, kernel.rows - anchor.y - 1)</code>.</p>
+<p>The function uses the DFT-based algorithm in case of sufficiently large kernels (~<code>11 x 11</code> or larger) and the direct algorithm for small kernels.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and the same number of channels as src. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>desired depth of the destination image, see <a class="el" href="group__imgproc__filter.html#filter_depths">combinations</a> </td></tr>
+    <tr><td class="paramname">kernel</td><td>convolution kernel (or rather a correlation kernel), a single-channel floating point matrix; if you want to apply different kernels to different channels, split the image into separate color planes using split and process them individually. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor of the kernel that indicates the relative position of a filtered point within the kernel; the anchor should lie within the kernel; default value (-1,-1) means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">delta</td><td>optional value added to the filtered pixels before storing them in dst. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a" title="Applies a separable linear filter to an image.">sepFilter2D</a>, <a class="el" href="group__core__array.html#gaf1e22eca54192dd1445671faef28d933" title="Performs a forward or inverse Discrete Fourier transform of a 1D or 2D floating-point array.">dft</a>, <a class="el" href="group__imgproc__object.html#ga7d22b26af8e9b5380550847b1edb514c" title="Compares a template against overlapped image regions.">matchTemplate</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga8972c822f378752101e8ed1bb357f48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8972c822f378752101e8ed1bb357f48a">&#9670;&nbsp;</a></span>GaussianBlur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::GaussianBlur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigmaX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigmaY</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blurs an image using a Gaussian filter. </p>
+<p>The function convolves the source image with the specified Gaussian kernel. In-place filtering is supported.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image; the image can have any number of channels, which are processed independently, but the depth should be CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
+    <tr><td class="paramname">ksize</td><td>Gaussian kernel size. ksize.width and ksize.height can differ but they both must be positive and odd. Or, they can be zero's and then they are computed from sigma. </td></tr>
+    <tr><td class="paramname">sigmaX</td><td>Gaussian kernel standard deviation in X direction. </td></tr>
+    <tr><td class="paramname">sigmaY</td><td>Gaussian kernel standard deviation in Y direction; if sigmaY is zero, it is set to be equal to sigmaX, if both sigmas are zeros, they are computed from ksize.width and ksize.height, respectively (see <a class="el" href="group__imgproc__filter.html#ga38a8ea387cfb178559ad3fc4b3fd6c80" title="Returns Gaussian filter coefficients.">getGaussianKernel</a> for details); to fully control the result regardless of possible future modifications of all this semantics, it is recommended to specify all of ksize, sigmaX, and sigmaY. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a" title="Applies a separable linear filter to an image.">sepFilter2D</a>, <a class="el" href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa" title="Convolves an image with the kernel.">filter2D</a>, <a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">blur</a>, <a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e" title="Blurs an image using the box filter.">boxFilter</a>, <a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332" title="Applies the bilateral filter to an image.">bilateralFilter</a>, <a class="el" href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568" title="Blurs an image using the median filter.">medianBlur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga1c1d40bbd83c977dd4f5c3e3b9f12dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1">&#9670;&nbsp;</a></span>getDerivKernels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::getDerivKernels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>kx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>ky</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ktype</em> = <code><a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns filter coefficients for computing spatial image derivatives. </p>
+<p>The function computes and returns the filter coefficients for spatial image derivatives. When <code>ksize=FILTER_SCHARR</code>, the Scharr <img class="formulaInl" alt="$3 \times 3$" src="form_622.png"/> kernels are generated (see <a class="el" href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85" title="Calculates the first x- or y- image derivative using Scharr operator.">Scharr</a>). Otherwise, Sobel kernels are generated (see <a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">Sobel</a>). The filters are normally passed to <a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a" title="Applies a separable linear filter to an image.">sepFilter2D</a> or to</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kx</td><td>Output matrix of row filter coefficients. It has the type ktype . </td></tr>
+    <tr><td class="paramname">ky</td><td>Output matrix of column filter coefficients. It has the type ktype . </td></tr>
+    <tr><td class="paramname">dx</td><td>Derivative order in respect of x. </td></tr>
+    <tr><td class="paramname">dy</td><td>Derivative order in respect of y. </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture size. It can be FILTER_SCHARR, 1, 3, 5, or 7. </td></tr>
+    <tr><td class="paramname">normalize</td><td>Flag indicating whether to normalize (scale down) the filter coefficients or not. Theoretically, the coefficients should have the denominator <img class="formulaInl" alt="$=2^{ksize*2-dx-dy-2}$" src="form_681.png"/>. If you are going to filter floating-point images, you are likely to use the normalized kernels. But if you compute derivatives of an 8-bit image, store the results in a 16-bit image, and wish to preserve all the fractional bits, you may want to set normalize=false . </td></tr>
+    <tr><td class="paramname">ktype</td><td>Type of filter coefficients. It can be CV_32f or CV_64F . </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga00da609a95cf7463447fab17d8b25f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00da609a95cf7463447fab17d8b25f3c">&#9670;&nbsp;</a></span>getGaborKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::getGaborKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lambd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gamma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>psi</em> = <code><a class="el" href="group__core__utils.html#ga677b89fae9308b340ddaebf0dba8455f">CV_PI</a>&#160;*0.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ktype</em> = <code><a class="el" href="group__core__hal__interface.html#ga30a562691cc5987bc88eb7bb7a8faf2b">CV_64F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns Gabor filter coefficients. </p>
+<p>For more details about gabor filter equations and parameters, see: <a href="http://en.wikipedia.org/wiki/Gabor_filter">Gabor Filter</a>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ksize</td><td>Size of the filter returned. </td></tr>
+    <tr><td class="paramname">sigma</td><td>Standard deviation of the gaussian envelope. </td></tr>
+    <tr><td class="paramname">theta</td><td>Orientation of the normal to the parallel stripes of a Gabor function. </td></tr>
+    <tr><td class="paramname">lambd</td><td>Wavelength of the sinusoidal factor. </td></tr>
+    <tr><td class="paramname">gamma</td><td>Spatial aspect ratio. </td></tr>
+    <tr><td class="paramname">psi</td><td>Phase offset. </td></tr>
+    <tr><td class="paramname">ktype</td><td>Type of filter coefficients. It can be CV_32F or CV_64F . </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga38a8ea387cfb178559ad3fc4b3fd6c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga38a8ea387cfb178559ad3fc4b3fd6c80">&#9670;&nbsp;</a></span>getGaussianKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::getGaussianKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ktype</em> = <code><a class="el" href="group__core__hal__interface.html#ga30a562691cc5987bc88eb7bb7a8faf2b">CV_64F</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns Gaussian filter coefficients. </p>
+<p>The function computes and returns the <img class="formulaInl" alt="$\texttt{ksize} \times 1$" src="form_676.png"/> matrix of Gaussian filter coefficients:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[G_i= \alpha *e^{-(i-( \texttt{ksize} -1)/2)^2/(2* \texttt{sigma}^2)},\]" src="form_677.png"/>
+</p>
+<p>where <img class="formulaInl" alt="$i=0..\texttt{ksize}-1$" src="form_678.png"/> and <img class="formulaInl" alt="$\alpha$" src="form_101.png"/> is the scale factor chosen so that <img class="formulaInl" alt="$\sum_i G_i=1$" src="form_679.png"/>.</p>
+<p>Two of such generated kernels can be passed to sepFilter2D. Those functions automatically recognize smoothing kernels (a symmetrical kernel with sum of weights equal to 1) and handle them accordingly. You may also use the higher-level GaussianBlur. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ksize</td><td>Aperture size. It should be odd ( <img class="formulaInl" alt="$\texttt{ksize} \mod 2 = 1$" src="form_680.png"/> ) and positive. </td></tr>
+    <tr><td class="paramname">sigma</td><td>Gaussian standard deviation. If it is non-positive, it is computed from ksize as <code>sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8</code>. </td></tr>
+    <tr><td class="paramname">ktype</td><td>Type of filter coefficients. It can be CV_32F or CV_64F . </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a" title="Applies a separable linear filter to an image.">sepFilter2D</a>, <a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1" title="Returns filter coefficients for computing spatial image derivatives.">getDerivKernels</a>, <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga37a6222e3e71b3c570d1e8cbb4582798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37a6222e3e71b3c570d1e8cbb4582798">&#9670;&nbsp;</a></span>getStructuringElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="classcv_1_1_mat.html">Mat</a> cv::getStructuringElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a structuring element of the specified size and shape for morphological operations. </p>
+<p>The function constructs and returns the structuring element that can be further passed to <a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82" title="Erodes an image by using a specific structuring element.">erode</a>, <a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec" title="Dilates an image by using a specific structuring element.">dilate</a> or <a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9" title="Performs advanced morphological transformations.">morphologyEx</a>. But you can also construct an arbitrary binary mask yourself and use it as the structuring element.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shape</td><td>Element shape that could be one of <a class="el" href="group__imgproc__filter.html#gac2db39b56866583a95a5680313c314ad" title="shape of the structuring element">MorphShapes</a> </td></tr>
+    <tr><td class="paramname">ksize</td><td>Size of the structuring element. </td></tr>
+    <tr><td class="paramname">anchor</td><td>Anchor position within the element. The default value <img class="formulaInl" alt="$(-1, -1)$" src="form_682.png"/> means that the anchor is at the center. Note that only the shape of a cross-shaped element depends on the anchor position. In other cases the anchor just regulates how much the result of the morphological operation is shifted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf33f59c828ca700ad7507ed10725414b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf33f59c828ca700ad7507ed10725414b">&#9670;&nbsp;</a></span>Laplacian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Laplacian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the Laplacian of an image. </p>
+<p>The function calculates the Laplacian of the source image by adding up the second x and y derivatives calculated using the Sobel operator:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \Delta \texttt{src} = \frac{\partial^2 \texttt{src}}{\partial x^2} + \frac{\partial^2 \texttt{src}}{\partial y^2}\]" src="form_621.png"/>
+</p>
+<p>This is done when <code>ksize &gt; 1</code>. When <code>ksize == 1</code>, the Laplacian is computed by filtering the image with the following <img class="formulaInl" alt="$3 \times 3$" src="form_622.png"/> aperture:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\vecthreethree {0}{1}{0}{1}{-4}{1}{0}{1}{0}\]" src="form_623.png"/>
+</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and the same number of channels as src . </td></tr>
+    <tr><td class="paramname">ddepth</td><td>Desired depth of the destination image. </td></tr>
+    <tr><td class="paramname">ksize</td><td>Aperture size used to compute the second-derivative filters. See <a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1" title="Returns filter coefficients for computing spatial image derivatives.">getDerivKernels</a> for details. The size must be positive and odd. </td></tr>
+    <tr><td class="paramname">scale</td><td>Optional scale factor for the computed Laplacian values. By default, no scaling is applied. See <a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1" title="Returns filter coefficients for computing spatial image derivatives.">getDerivKernels</a> for details. </td></tr>
+    <tr><td class="paramname">delta</td><td>Optional delta value that is added to the results prior to storing them in dst . </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">Sobel</a>, <a class="el" href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85" title="Calculates the first x- or y- image derivative using Scharr operator.">Scharr</a> </dd></dl>
+
+</div>
+</div>
+<a id="gad7c87bbc46b97e7eafa71357916ab568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7c87bbc46b97e7eafa71357916ab568">&#9670;&nbsp;</a></span>medianBlur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::medianBlur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blurs an image using the median filter. </p>
+<p>The function smoothes an image using the median filter with the <img class="formulaInl" alt="$\texttt{ksize} \times \texttt{ksize}$" src="form_611.png"/> aperture. Each channel of a multi-channel image is processed independently. In-place operation is supported.</p>
+<dl class="section note"><dt>Заметки</dt><dd>The median filter uses <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aa1de4cff95e3377d6d0cbe7569bd4e9f" title="aaaaaa|abcdefgh|hhhhhhh">BORDER_REPLICATE</a> internally to cope with border pixels, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a></dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input 1-, 3-, or 4-channel image; when ksize is 3 or 5, the image depth should be CV_8U, CV_16U, or CV_32F, for larger aperture sizes, it can only be CV_8U. </td></tr>
+    <tr><td class="paramname">dst</td><td>destination array of the same size and type as src. </td></tr>
+    <tr><td class="paramname">ksize</td><td>aperture linear size; it must be odd and greater than 1, for example: 3, 5, 7 ... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332" title="Applies the bilateral filter to an image.">bilateralFilter</a>, <a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">blur</a>, <a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e" title="Blurs an image using the box filter.">boxFilter</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga44a84dbc53d0913bc930c6cc7826e8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44a84dbc53d0913bc930c6cc7826e8c9">&#9670;&nbsp;</a></span>morphologyEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::morphologyEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838">BORDER_CONSTANT</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>borderValue</em> = <code>morphologyDefaultBorderValue()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs advanced morphological transformations. </p>
+<p>The function <a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9" title="Performs advanced morphological transformations.">cv::morphologyEx</a> can perform advanced morphological transformations using an erosion and dilation as basic operations.</p>
+<p>Any of the operations can be done in-place. In case of multi-channel images, each channel is processed independently.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image. The number of channels can be arbitrary. The depth should be one of CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and type as source image. </td></tr>
+    <tr><td class="paramname">op</td><td>Type of a morphological operation, see <a class="el" href="group__imgproc__filter.html#ga7be549266bad7b2e6a04db49827f9f32" title="type of morphological operation">MorphTypes</a> </td></tr>
+    <tr><td class="paramname">kernel</td><td>Structuring element. It can be created using <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a>. </td></tr>
+    <tr><td class="paramname">anchor</td><td>Anchor position with the kernel. Negative values mean that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">iterations</td><td>Number of times erosion and dilation are applied. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+    <tr><td class="paramname">borderValue</td><td>Border value in case of a constant border. The default value has a special meaning. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec" title="Dilates an image by using a specific structuring element.">dilate</a>, <a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82" title="Erodes an image by using a specific structuring element.">erode</a>, <a class="el" href="group__imgproc__filter.html#ga37a6222e3e71b3c570d1e8cbb4582798" title="Returns a structuring element of the specified size and shape for morphological operations.">getStructuringElement</a> </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>The number of iterations is the number of times erosion or dilatation operation will be applied. For instance, an opening operation (<a class="el" href="group__imgproc__filter.html#gga7be549266bad7b2e6a04db49827f9f32a08d3cc3a2ace00cec488966d31fa29ea">MORPH_OPEN</a>) with two iterations is equivalent to apply successively: erode -&gt; erode -&gt; dilate -&gt; dilate (and not erode -&gt; dilate -&gt; erode -&gt; dilate). </dd></dl>
+
+</div>
+</div>
+<a id="ga01a53b03caf42fd5f6edd0c7142134b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01a53b03caf42fd5f6edd0c7142134b5">&#9670;&nbsp;</a></span>pyrDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::pyrDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dstsize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blurs an image and downsamples it. </p>
+<p>By default, size of the output image is computed as <code>Size((src.cols+1)/2, (src.rows+1)/2)</code>, but in any case, the following conditions should be satisfied:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} | \texttt{dstsize.width} *2-src.cols| \leq 2 \\ | \texttt{dstsize.height} *2-src.rows| \leq 2 \end{array}\]" src="form_758.png"/>
+</p>
+<p>The function performs the downsampling step of the Gaussian pyramid construction. First, it convolves the source image with the kernel:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\frac{1}{256} \begin{bmatrix} 1 &amp; 4 &amp; 6 &amp; 4 &amp; 1 \\ 4 &amp; 16 &amp; 24 &amp; 16 &amp; 4 \\ 6 &amp; 24 &amp; 36 &amp; 24 &amp; 6 \\ 4 &amp; 16 &amp; 24 &amp; 16 &amp; 4 \\ 1 &amp; 4 &amp; 6 &amp; 4 &amp; 1 \end{bmatrix}\]" src="form_759.png"/>
+</p>
+<p>Then, it downsamples the image by rejecting even rows and columns.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image; it has the specified size and the same type as src. </td></tr>
+    <tr><td class="paramname">dstsize</td><td>size of the output image. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> (<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aed2e4346047e265c8c5a6d0276dcd838" title="iiiiii|abcdefgh|iiiiiii with some specified i">BORDER_CONSTANT</a> isn't supported) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga088733b9e896e51c1044ab17155228e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga088733b9e896e51c1044ab17155228e8">&#9670;&nbsp;</a></span>pyrMeanShiftFiltering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::pyrMeanShiftFiltering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>maxLevel</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>&#160;</td>
+          <td class="paramname"><em>termcrit</em> = <code><a class="el" href="classcv_1_1_term_criteria.html">TermCriteria</a>(<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a56ca2bc5cd06345060a1c1c66a8fc06e">TermCriteria::MAX_ITER</a>+<a class="el" href="classcv_1_1_term_criteria.html#a56fecdc291ccaba8aad27d67ccf72c57a857609e73e7028e638d2ea649f3b45d5">TermCriteria::EPS</a>,&#160;5,&#160;1)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs initial step of meanshift segmentation of an image. </p>
+<p>The function implements the filtering stage of meanshift segmentation, that is, the output of the function is the filtered "posterized" image with color gradients and fine-grain texture flattened. At every pixel (X,Y) of the input image (or down-sized input image, see below) the function executes meanshift iterations, that is, the pixel (X,Y) neighborhood in the joint space-color hyperspace is considered:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[(x,y): X- \texttt{sp} \le x \le X+ \texttt{sp} , Y- \texttt{sp} \le y \le Y+ \texttt{sp} , ||(R,G,B)-(r,g,b)|| \le \texttt{sr}\]" src="form_771.png"/>
+</p>
+<p>where (R,G,B) and (r,g,b) are the vectors of color components at (X,Y) and (x,y), respectively (though, the algorithm does not depend on the color space used, so any 3-component color space can be used instead). Over the neighborhood the average spatial value (X',Y') and average color vector (R',G',B') are found and they act as the neighborhood center on the next iteration:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[(X,Y)~(X',Y'), (R,G,B)~(R',G',B').\]" src="form_772.png"/>
+</p>
+<p>After the iterations over, the color components of the initial pixel (that is, the pixel from where the iterations started) are set to the final value (average color at the last iteration):</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[I(X,Y) &lt;- (R*,G*,B*)\]" src="form_773.png"/>
+</p>
+<p>When maxLevel &gt; 0, the gaussian pyramid of maxLevel+1 levels is built, and the above procedure is run on the smallest layer first. After that, the results are propagated to the larger layer and the iterations are run again only on those pixels where the layer colors differ by more than sr from the lower-resolution layer of the pyramid. That makes boundaries of color regions sharper. Note that the results will be actually different from the ones obtained by running the meanshift procedure on the whole original image (i.e. when maxLevel==0).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source 8-bit, 3-channel image. </td></tr>
+    <tr><td class="paramname">dst</td><td>The destination image of the same format and the same size as the source. </td></tr>
+    <tr><td class="paramname">sp</td><td>The spatial window radius. </td></tr>
+    <tr><td class="paramname">sr</td><td>The color window radius. </td></tr>
+    <tr><td class="paramname">maxLevel</td><td>Maximum level of the pyramid for the segmentation. </td></tr>
+    <tr><td class="paramname">termcrit</td><td>Termination criteria: when to stop meanshift iterations. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadebc06f43ad2051c8b6d989f21be80aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadebc06f43ad2051c8b6d989f21be80aa">&#9670;&nbsp;</a></span>pyrUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::pyrUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>dstsize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upsamples an image and then blurs it. </p>
+<p>By default, size of the output image is computed as <code>Size(src.cols\*2, (src.rows\*2)</code>, but in any case, the following conditions should be satisfied:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} | \texttt{dstsize.width} -src.cols*2| \leq ( \texttt{dstsize.width} \mod 2) \\ | \texttt{dstsize.height} -src.rows*2| \leq ( \texttt{dstsize.height} \mod 2) \end{array}\]" src="form_760.png"/>
+</p>
+<p>The function performs the upsampling step of the Gaussian pyramid construction, though it can actually be used to construct the Laplacian pyramid. First, it upsamples the source image by injecting even zero rows and columns and then convolves the result with the same kernel as in pyrDown multiplied by 4.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image. It has the specified size and the same type as src . </td></tr>
+    <tr><td class="paramname">dstsize</td><td>size of the output image. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> (only <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01" title="same as BORDER_REFLECT_101">BORDER_DEFAULT</a> is supported) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae485b1871554c08ecfb5825906e39f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae485b1871554c08ecfb5825906e39f85">&#9670;&nbsp;</a></span>Scharr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Scharr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the first x- or y- image derivative using Scharr operator. </p>
+<p>The function computes the first x- or y- spatial image derivative using the Scharr operator. The call</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{Scharr(src, dst, ddepth, dx, dy, scale, delta, borderType)}\]" src="form_685.png"/>
+</p>
+<p>is equivalent to</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{Sobel(src, dst, ddepth, dx, dy, FILTER_SCHARR, scale, delta, borderType)} .\]" src="form_686.png"/>
+</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and the same number of channels as src. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>output image depth, see <a class="el" href="group__imgproc__filter.html#filter_depths">combinations</a> </td></tr>
+    <tr><td class="paramname">dx</td><td>order of the derivative x. </td></tr>
+    <tr><td class="paramname">dy</td><td>order of the derivative y. </td></tr>
+    <tr><td class="paramname">scale</td><td>optional scale factor for the computed derivative values; by default, no scaling is applied (see <a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1" title="Returns filter coefficients for computing spatial image derivatives.">getDerivKernels</a> for details). </td></tr>
+    <tr><td class="paramname">delta</td><td>optional delta value that is added to the results prior to storing them in dst. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__core__array.html#ga40dc4660bf9b243a5fb5a84af4312a6b" title="Calculates the magnitude and angle of 2D vectors.">cartToPolar</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2b22fefc02a8f853267737bc3d87dc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b22fefc02a8f853267737bc3d87dc4a">&#9670;&nbsp;</a></span>sepFilter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::sepFilter2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernelX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>kernelY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a separable linear filter to an image. </p>
+<p>The function applies a separable linear filter to the image. That is, first, every row of src is filtered with the 1D kernel kernelX. Then, every column of the result is filtered with the 1D kernel kernelY. The final result shifted by delta is stored in dst .</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and the same number of channels as src . </td></tr>
+    <tr><td class="paramname">ddepth</td><td>Destination image depth, see <a class="el" href="group__imgproc__filter.html#filter_depths">combinations</a> </td></tr>
+    <tr><td class="paramname">kernelX</td><td>Coefficients for filtering each row. </td></tr>
+    <tr><td class="paramname">kernelY</td><td>Coefficients for filtering each column. </td></tr>
+    <tr><td class="paramname">anchor</td><td>Anchor position within the kernel. The default value <img class="formulaInl" alt="$(-1,-1)$" src="form_606.png"/> means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">delta</td><td>Value added to the filtered results before storing them. </td></tr>
+    <tr><td class="paramname">borderType</td><td>Pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa" title="Convolves an image with the kernel.">filter2D</a>, <a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">Sobel</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a>, <a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e" title="Blurs an image using the box filter.">boxFilter</a>, <a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">blur</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga40f37c24a6f7a36dfe7c8a22fa2f7b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">&#9670;&nbsp;</a></span>Sobel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Sobel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator. </p>
+<p>In all cases except one, the <img class="formulaInl" alt="$\texttt{ksize} \times \texttt{ksize}$" src="form_611.png"/> separable kernel is used to calculate the derivative. When <img class="formulaInl" alt="$\texttt{ksize = 1}$" src="form_614.png"/>, the <img class="formulaInl" alt="$3 \times 1$" src="form_197.png"/> or <img class="formulaInl" alt="$1 \times 3$" src="form_615.png"/> kernel is used (that is, no Gaussian smoothing is done). <code>ksize = 1</code> can only be used for the first or the second x- or y- derivatives.</p>
+<p>There is also the special value <code>ksize = #FILTER_SCHARR (-1)</code> that corresponds to the <img class="formulaInl" alt="$3\times3$" src="form_616.png"/> Scharr filter that may give more accurate results than the <img class="formulaInl" alt="$3\times3$" src="form_616.png"/> Sobel. The Scharr aperture is</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\vecthreethree{-3}{0}{3}{-10}{0}{10}{-3}{0}{3}\]" src="form_617.png"/>
+</p>
+<p>for the x-derivative, or transposed for the y-derivative.</p>
+<p>The function calculates an image derivative by convolving the image with the appropriate kernel:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \frac{\partial^{xorder+yorder} \texttt{src}}{\partial x^{xorder} \partial y^{yorder}}\]" src="form_618.png"/>
+</p>
+<p>The Sobel operators combine Gaussian smoothing and differentiation, so the result is more or less resistant to the noise. Most often, the function is called with ( xorder = 1, yorder = 0, ksize = 3) or ( xorder = 0, yorder = 1, ksize = 3) to calculate the first x- or y- image derivative. The first case corresponds to a kernel of:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\vecthreethree{-1}{0}{1}{-2}{0}{2}{-1}{0}{1}\]" src="form_619.png"/>
+</p>
+<p>The second case corresponds to a kernel of:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\vecthreethree{-1}{-2}{-1}{0}{0}{0}{1}{2}{1}\]" src="form_620.png"/>
+</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and the same number of channels as src . </td></tr>
+    <tr><td class="paramname">ddepth</td><td>output image depth, see <a class="el" href="group__imgproc__filter.html#filter_depths">combinations</a>; in the case of 8-bit input images it will result in truncated derivatives. </td></tr>
+    <tr><td class="paramname">dx</td><td>order of the derivative x. </td></tr>
+    <tr><td class="paramname">dy</td><td>order of the derivative y. </td></tr>
+    <tr><td class="paramname">ksize</td><td>size of the extended Sobel kernel; it must be 1, 3, 5, or 7. </td></tr>
+    <tr><td class="paramname">scale</td><td>optional scale factor for the computed derivative values; by default, no scaling is applied (see <a class="el" href="group__imgproc__filter.html#ga1c1d40bbd83c977dd4f5c3e3b9f12dc1" title="Returns filter coefficients for computing spatial image derivatives.">getDerivKernels</a> for details). </td></tr>
+    <tr><td class="paramname">delta</td><td>optional delta value that is added to the results prior to storing them in dst. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gae485b1871554c08ecfb5825906e39f85" title="Calculates the first x- or y- image derivative using Scharr operator.">Scharr</a>, <a class="el" href="group__imgproc__filter.html#gaf33f59c828ca700ad7507ed10725414b" title="Calculates the Laplacian of an image.">Laplacian</a>, <a class="el" href="group__imgproc__filter.html#ga2b22fefc02a8f853267737bc3d87dc4a" title="Applies a separable linear filter to an image.">sepFilter2D</a>, <a class="el" href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa" title="Convolves an image with the kernel.">filter2D</a>, <a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">GaussianBlur</a>, <a class="el" href="group__core__array.html#ga40dc4660bf9b243a5fb5a84af4312a6b" title="Calculates the magnitude and angle of 2D vectors.">cartToPolar</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6e378721703d0061f6a398c8e14032ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e378721703d0061f6a398c8e14032ed">&#9670;&nbsp;</a></span>spatialGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::spatialGradient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ksize</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the first order image derivative in both x and y using a Sobel operator. </p>
+<p>Equivalent to calling:</p>
+<div class="fragment"><div class="line"><a class="code" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">Sobel</a>( src, dx, <a class="code" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, 1, 0, 3 );</div>
+<div class="line"><a class="code" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">Sobel</a>( src, dy, <a class="code" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, 0, 1, 3 );</div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga3515053e24377cf079fa1027d208ad52"><div class="ttname"><a href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a></div><div class="ttdeci">#define CV_16SC1</div><div class="ttdef"><b>Definition:</b> interface.h:106</div></div>
+<div class="ttc" id="agroup__imgproc__filter_html_ga40f37c24a6f7a36dfe7c8a22fa2f7b7f"><div class="ttname"><a href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f">cv::Sobel</a></div><div class="ttdeci">CV_EXPORTS_W void Sobel(InputArray src, OutputArray dst, int ddepth, int dx, int dy, int ksize=3, double scale=1, double delta=0, int borderType=BORDER_DEFAULT)</div><div class="ttdoc">Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dx</td><td>output image with first-order derivative in x. </td></tr>
+    <tr><td class="paramname">dy</td><td>output image with first-order derivative in y. </td></tr>
+    <tr><td class="paramname">ksize</td><td>size of Sobel kernel. It must be 3. </td></tr>
+    <tr><td class="paramname">borderType</td><td>pixel extrapolation method, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. Only <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01" title="same as BORDER_REFLECT_101">BORDER_DEFAULT</a>=<a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5ab3c5a6143d8120b95005fa7105a10bb4" title="gfedcb|abcdefgh|gfedcba">BORDER_REFLECT_101</a> and <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5aa1de4cff95e3377d6d0cbe7569bd4e9f" title="aaaaaa|abcdefgh|hhhhhhh">BORDER_REPLICATE</a> are supported.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">Sobel</a> </dd></dl>
+
+</div>
+</div>
+<a id="gab1a3095db369c731339f1c8bf7578e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1a3095db369c731339f1c8bf7578e28">&#9670;&nbsp;</a></span>sqrBoxFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::sqrBoxFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>ksize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>anchor</em> = <code><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>(-1,&#160;-1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>borderType</em> = <code><a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5afe14c13a4ea8b8e3b3ef399013dbae01">BORDER_DEFAULT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the normalized sum of squares of the pixel values overlapping the filter. </p>
+<p>For every pixel <img class="formulaInl" alt="$ (x, y) $" src="form_684.png"/> in the source image, the function calculates the sum of squares of those neighboring pixel values which overlap the filter placed over the pixel <img class="formulaInl" alt="$ (x, y) $" src="form_684.png"/>.</p>
+<p>The unnormalized square box filter can be useful in computing local image statistics such as the the local variance and standard deviation around the neighborhood of a pixel.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and type as _src </td></tr>
+    <tr><td class="paramname">ddepth</td><td>the output image depth (-1 to use src.depth()) </td></tr>
+    <tr><td class="paramname">ksize</td><td>kernel size </td></tr>
+    <tr><td class="paramname">anchor</td><td>kernel anchor point. The default value of Point(-1, -1) denotes that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">normalize</td><td>flag, specifying whether the kernel is to be normalized by it's area or not. </td></tr>
+    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a>. <a class="el" href="group__core__array.html#gga209f2f4869e304c82d07739337eae7c5a697c1b011884a7c2bdc0e5caf7955661" title="cdefgh|abcdefgh|abcdefg">BORDER_WRAP</a> is not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga9d0f646516e6ebf4d5fe612a38f41b9e" title="Blurs an image using the box filter.">boxFilter</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

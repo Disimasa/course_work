@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Структура cv::gapi::wip::draw::Poly</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура cv::gapi::wip::draw::Poly<div class="ingroups"><a class="el" href="group__gapi__draw.html">G-API Drawing and composition functionality</a> &raquo; <a class="el" href="group__gapi__draw__prims.html">Drawing primitives</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This structure represents a polygon to draw.  
+ <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render__types_8hpp_source.html">render_types.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7a6976678ec3a75631a0148edefb0307"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a7a6976678ec3a75631a0148edefb0307">Poly</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &gt; &amp;points_, const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;color_, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> thick_=1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> lt_=8, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> shift_=0)</td></tr>
+<tr class="memdesc:a7a6976678ec3a75631a0148edefb0307"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_mosaic.html" title="This structure represents a mosaicing operation.">Mosaic</a> constructor.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a7a6976678ec3a75631a0148edefb0307">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7a6976678ec3a75631a0148edefb0307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2602504c16e281087cc9429917bf355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#ae2602504c16e281087cc9429917bf355">Poly</a> ()=default</td></tr>
+<tr class="separator:ae2602504c16e281087cc9429917bf355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aff9d551d70bb7a2d7dfba4c1cce5c01a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#aff9d551d70bb7a2d7dfba4c1cce5c01a">points</a></td></tr>
+<tr class="memdesc:aff9d551d70bb7a2d7dfba4c1cce5c01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points to connect.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#aff9d551d70bb7a2d7dfba4c1cce5c01a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aff9d551d70bb7a2d7dfba4c1cce5c01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a13eaa745f446dd1eb42c15eb129a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a00a13eaa745f446dd1eb42c15eb129a1">color</a></td></tr>
+<tr class="memdesc:a00a13eaa745f446dd1eb42c15eb129a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The line color.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a00a13eaa745f446dd1eb42c15eb129a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00a13eaa745f446dd1eb42c15eb129a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fb2626ae3c77cd1a5249d5348e85fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a51fb2626ae3c77cd1a5249d5348e85fa">thick</a></td></tr>
+<tr class="memdesc:a51fb2626ae3c77cd1a5249d5348e85fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thickness of line.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a51fb2626ae3c77cd1a5249d5348e85fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a51fb2626ae3c77cd1a5249d5348e85fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f7ecd2e8b4098625a193b9676b6bdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#af0f7ecd2e8b4098625a193b9676b6bdd">lt</a></td></tr>
+<tr class="memdesc:af0f7ecd2e8b4098625a193b9676b6bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Type of the line. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a>.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#af0f7ecd2e8b4098625a193b9676b6bdd">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0f7ecd2e8b4098625a193b9676b6bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ebea19a04470282d18b27f228cd47b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a0ebea19a04470282d18b27f228cd47b4">shift</a></td></tr>
+<tr class="memdesc:a0ebea19a04470282d18b27f228cd47b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of fractional bits in the point coordinate.  <a href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#a0ebea19a04470282d18b27f228cd47b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0ebea19a04470282d18b27f228cd47b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This structure represents a polygon to draw. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7a6976678ec3a75631a0148edefb0307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6976678ec3a75631a0148edefb0307">&#9670;&nbsp;</a></span>Poly() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::gapi::wip::draw::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>color_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>thick_</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>lt_</em> = <code>8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>shift_</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_mosaic.html" title="This structure represents a mosaicing operation.">Mosaic</a> constructor. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points_</td><td>Points to connect </td></tr>
+    <tr><td class="paramname">color_</td><td>The line color </td></tr>
+    <tr><td class="paramname">thick_</td><td>The thickness of line </td></tr>
+    <tr><td class="paramname">lt_</td><td>The Type of the line. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a> </td></tr>
+    <tr><td class="paramname">shift_</td><td>The number of fractional bits in the point coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2602504c16e281087cc9429917bf355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2602504c16e281087cc9429917bf355">&#9670;&nbsp;</a></span>Poly() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::gapi::wip::draw::Poly::Poly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a00a13eaa745f446dd1eb42c15eb129a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a13eaa745f446dd1eb42c15eb129a1">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a> cv::gapi::wip::draw::Poly::color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The line color. </p>
+
+</div>
+</div>
+<a id="af0f7ecd2e8b4098625a193b9676b6bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f7ecd2e8b4098625a193b9676b6bdd">&#9670;&nbsp;</a></span>lt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Poly::lt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Type of the line. See <a class="el" href="group__imgproc__draw.html#gaf076ef45de481ac96e0ab3dc2c29a777">LineTypes</a>. </p>
+
+</div>
+</div>
+<a id="aff9d551d70bb7a2d7dfba4c1cce5c01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9d551d70bb7a2d7dfba4c1cce5c01a">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">cv::Point</a>&gt; cv::gapi::wip::draw::Poly::points</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Points to connect. </p>
+
+</div>
+</div>
+<a id="a0ebea19a04470282d18b27f228cd47b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ebea19a04470282d18b27f228cd47b4">&#9670;&nbsp;</a></span>shift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Poly::shift</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of fractional bits in the point coordinate. </p>
+
+</div>
+</div>
+<a id="a51fb2626ae3c77cd1a5249d5348e85fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fb2626ae3c77cd1a5249d5348e85fa">&#9670;&nbsp;</a></span>thick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::gapi::wip::draw::Poly::thick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The thickness of line. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>opencv/build/include/opencv2/gapi/render/<a class="el" href="render__types_8hpp_source.html">render_types.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi.html">gapi</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1wip.html">wip</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1wip_1_1draw.html">draw</a></li><li class="navelem"><a class="el" href="structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html">Poly</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

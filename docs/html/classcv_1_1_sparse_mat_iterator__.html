@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Шаблон класса cv::SparseMatIterator_&lt; _Tp &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_sparse_mat_iterator__.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1_sparse_mat_iterator__-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса cv::SparseMatIterator_&lt; _Tp &gt;<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__basic.html">Basic structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Template Read-Write Sparse Matrix Iterator Class.  
+ <a href="classcv_1_1_sparse_mat_iterator__.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">cv::SparseMatConstIterator_&lt; _Tp &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a032fb509c53ad44f22ae833876dd113f"><td class="memItemLeft" align="right" valign="top">typedef std::forward_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a032fb509c53ad44f22ae833876dd113f">iterator_category</a></td></tr>
+<tr class="separator:a032fb509c53ad44f22ae833876dd113f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classcv_1_1_sparse_mat_const_iterator__"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcv_1_1_sparse_mat_const_iterator__')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">cv::SparseMatConstIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memitem:a72422dbb0a1afd0045309aeab95cdbd7 inherit pub_types_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">typedef std::forward_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a72422dbb0a1afd0045309aeab95cdbd7">iterator_category</a></td></tr>
+<tr class="separator:a72422dbb0a1afd0045309aeab95cdbd7 inherit pub_types_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a404a0443b24c1139f2c2b914cc468180"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a404a0443b24c1139f2c2b914cc468180">SparseMatIterator_</a> ()</td></tr>
+<tr class="memdesc:a404a0443b24c1139f2c2b914cc468180"><td class="mdescLeft">&#160;</td><td class="mdescRight">the default constructor  <a href="classcv_1_1_sparse_mat_iterator__.html#a404a0443b24c1139f2c2b914cc468180">Подробнее...</a><br /></td></tr>
+<tr class="separator:a404a0443b24c1139f2c2b914cc468180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07345c1dc666f06d49018130a48aaee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#aa07345c1dc666f06d49018130a48aaee">SparseMatIterator_</a> (<a class="el" href="classcv_1_1_sparse_mat__.html">SparseMat_</a>&lt; _Tp &gt; *_m)</td></tr>
+<tr class="memdesc:aa07345c1dc666f06d49018130a48aaee"><td class="mdescLeft">&#160;</td><td class="mdescRight">the full constructor setting the iterator to the first sparse matrix element  <a href="classcv_1_1_sparse_mat_iterator__.html#aa07345c1dc666f06d49018130a48aaee">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa07345c1dc666f06d49018130a48aaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c965fbfa854ab5bcb0e56ca051fb6c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a1c965fbfa854ab5bcb0e56ca051fb6c4">SparseMatIterator_</a> (<a class="el" href="classcv_1_1_sparse_mat.html">SparseMat</a> *_m)</td></tr>
+<tr class="separator:a1c965fbfa854ab5bcb0e56ca051fb6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4b4fd6b4f061e0d95f1927130b15d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a6d4b4fd6b4f061e0d95f1927130b15d4">SparseMatIterator_</a> (const <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> &amp;it)</td></tr>
+<tr class="memdesc:a6d4b4fd6b4f061e0d95f1927130b15d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the copy constructor  <a href="classcv_1_1_sparse_mat_iterator__.html#a6d4b4fd6b4f061e0d95f1927130b15d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d4b4fd6b4f061e0d95f1927130b15d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d385d5c83a9c1104e9a197e331881c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#ad1d385d5c83a9c1104e9a197e331881c">operator=</a> (const <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> &amp;it)</td></tr>
+<tr class="memdesc:ad1d385d5c83a9c1104e9a197e331881c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the assignment operator  <a href="classcv_1_1_sparse_mat_iterator__.html#ad1d385d5c83a9c1104e9a197e331881c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1d385d5c83a9c1104e9a197e331881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26262be0fb6504badd2d515e7dbbd648"><td class="memItemLeft" align="right" valign="top">_Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a26262be0fb6504badd2d515e7dbbd648">operator*</a> () const</td></tr>
+<tr class="memdesc:a26262be0fb6504badd2d515e7dbbd648"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the reference to the current element  <a href="classcv_1_1_sparse_mat_iterator__.html#a26262be0fb6504badd2d515e7dbbd648">Подробнее...</a><br /></td></tr>
+<tr class="separator:a26262be0fb6504badd2d515e7dbbd648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd3f1223ff101fd63a670102e1a805c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a5dd3f1223ff101fd63a670102e1a805c">operator++</a> ()</td></tr>
+<tr class="memdesc:a5dd3f1223ff101fd63a670102e1a805c"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the iterator to the next element  <a href="classcv_1_1_sparse_mat_iterator__.html#a5dd3f1223ff101fd63a670102e1a805c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5dd3f1223ff101fd63a670102e1a805c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5357404aa31635fe16fb7900c24e990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html#af5357404aa31635fe16fb7900c24e990">operator++</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>)</td></tr>
+<tr class="memdesc:af5357404aa31635fe16fb7900c24e990"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the iterator to the next element  <a href="classcv_1_1_sparse_mat_iterator__.html#af5357404aa31635fe16fb7900c24e990">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5357404aa31635fe16fb7900c24e990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_sparse_mat_const_iterator__')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">cv::SparseMatConstIterator_&lt; _Tp &gt;</a></td></tr>
+<tr class="memitem:ae840ff1fdc9aa20eac7953703f42a8ef inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#ae840ff1fdc9aa20eac7953703f42a8ef">SparseMatConstIterator_</a> ()</td></tr>
+<tr class="memdesc:ae840ff1fdc9aa20eac7953703f42a8ef inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">the default constructor  <a href="classcv_1_1_sparse_mat_const_iterator__.html#ae840ff1fdc9aa20eac7953703f42a8ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae840ff1fdc9aa20eac7953703f42a8ef inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac318c1458cb5078b03db72db21ac6de5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#ac318c1458cb5078b03db72db21ac6de5">SparseMatConstIterator_</a> (const <a class="el" href="classcv_1_1_sparse_mat__.html">SparseMat_</a>&lt; _Tp &gt; *_m)</td></tr>
+<tr class="memdesc:ac318c1458cb5078b03db72db21ac6de5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">the full constructor setting the iterator to the first sparse matrix element  <a href="classcv_1_1_sparse_mat_const_iterator__.html#ac318c1458cb5078b03db72db21ac6de5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac318c1458cb5078b03db72db21ac6de5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc0f436bbbf166ce0ff8a5455ff5009 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#addc0f436bbbf166ce0ff8a5455ff5009">SparseMatConstIterator_</a> (const <a class="el" href="classcv_1_1_sparse_mat.html">SparseMat</a> *_m)</td></tr>
+<tr class="separator:addc0f436bbbf166ce0ff8a5455ff5009 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfedc1a27fb81a75dbd8df905ec83b5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a5cfedc1a27fb81a75dbd8df905ec83b5">SparseMatConstIterator_</a> (const <a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">SparseMatConstIterator_</a> &amp;it)</td></tr>
+<tr class="memdesc:a5cfedc1a27fb81a75dbd8df905ec83b5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">the copy constructor  <a href="classcv_1_1_sparse_mat_const_iterator__.html#a5cfedc1a27fb81a75dbd8df905ec83b5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5cfedc1a27fb81a75dbd8df905ec83b5 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe543867ec13099311670ad837eab611 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">SparseMatConstIterator_</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#afe543867ec13099311670ad837eab611">operator=</a> (const <a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">SparseMatConstIterator_</a> &amp;it)</td></tr>
+<tr class="memdesc:afe543867ec13099311670ad837eab611 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">the assignment operator  <a href="classcv_1_1_sparse_mat_const_iterator__.html#afe543867ec13099311670ad837eab611">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe543867ec13099311670ad837eab611 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db341e36da96bff57ce3c8d16aa85a2 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top">const _Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a1db341e36da96bff57ce3c8d16aa85a2">operator*</a> () const</td></tr>
+<tr class="memdesc:a1db341e36da96bff57ce3c8d16aa85a2 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">the element access operator  <a href="classcv_1_1_sparse_mat_const_iterator__.html#a1db341e36da96bff57ce3c8d16aa85a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1db341e36da96bff57ce3c8d16aa85a2 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4e03aa55423633e9b7ba5df92530f0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">SparseMatConstIterator_</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a6c4e03aa55423633e9b7ba5df92530f0">operator++</a> ()</td></tr>
+<tr class="memdesc:a6c4e03aa55423633e9b7ba5df92530f0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the next element  <a href="classcv_1_1_sparse_mat_const_iterator__.html#a6c4e03aa55423633e9b7ba5df92530f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c4e03aa55423633e9b7ba5df92530f0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1bbc3e0dcbdd3a08a89397bfad38ee inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html">SparseMatConstIterator_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a2a1bbc3e0dcbdd3a08a89397bfad38ee">operator++</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>)</td></tr>
+<tr class="memdesc:a2a1bbc3e0dcbdd3a08a89397bfad38ee inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the next element  <a href="classcv_1_1_sparse_mat_const_iterator__.html#a2a1bbc3e0dcbdd3a08a89397bfad38ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a1bbc3e0dcbdd3a08a89397bfad38ee inherit pub_methods_classcv_1_1_sparse_mat_const_iterator__"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_sparse_mat_const_iterator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_sparse_mat_const_iterator')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">cv::SparseMatConstIterator</a></td></tr>
+<tr class="memitem:af3502cb42a852646d4f8cfed6e3b3c6b inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#af3502cb42a852646d4f8cfed6e3b3c6b">SparseMatConstIterator</a> ()</td></tr>
+<tr class="memdesc:af3502cb42a852646d4f8cfed6e3b3c6b inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">the default constructor  <a href="classcv_1_1_sparse_mat_const_iterator.html#af3502cb42a852646d4f8cfed6e3b3c6b">Подробнее...</a><br /></td></tr>
+<tr class="separator:af3502cb42a852646d4f8cfed6e3b3c6b inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e586f5019f8993d34da6dd9eaa74e8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a74e586f5019f8993d34da6dd9eaa74e8">SparseMatConstIterator</a> (const <a class="el" href="classcv_1_1_sparse_mat.html">SparseMat</a> *_m)</td></tr>
+<tr class="memdesc:a74e586f5019f8993d34da6dd9eaa74e8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">the full constructor setting the iterator to the first sparse matrix element  <a href="classcv_1_1_sparse_mat_const_iterator.html#a74e586f5019f8993d34da6dd9eaa74e8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74e586f5019f8993d34da6dd9eaa74e8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7549ff275790855409b1da3b14a85ddd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a7549ff275790855409b1da3b14a85ddd">SparseMatConstIterator</a> (const <a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a> &amp;it)</td></tr>
+<tr class="memdesc:a7549ff275790855409b1da3b14a85ddd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">the copy constructor  <a href="classcv_1_1_sparse_mat_const_iterator.html#a7549ff275790855409b1da3b14a85ddd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7549ff275790855409b1da3b14a85ddd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad2aca73fd447e5642b1c21bd978cd3 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a9ad2aca73fd447e5642b1c21bd978cd3">operator=</a> (const <a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a> &amp;it)</td></tr>
+<tr class="memdesc:a9ad2aca73fd447e5642b1c21bd978cd3 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">the assignment operator  <a href="classcv_1_1_sparse_mat_const_iterator.html#a9ad2aca73fd447e5642b1c21bd978cd3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9ad2aca73fd447e5642b1c21bd978cd3 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2abb15ac7188d500c245d79782302d3e inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a2abb15ac7188d500c245d79782302d3e inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memTemplItemLeft" align="right" valign="top">const _Tp &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a2abb15ac7188d500c245d79782302d3e">value</a> () const</td></tr>
+<tr class="memdesc:a2abb15ac7188d500c245d79782302d3e inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">template method returning the current matrix element  <a href="classcv_1_1_sparse_mat_const_iterator.html#a2abb15ac7188d500c245d79782302d3e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2abb15ac7188d500c245d79782302d3e inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed9e9598e8d21f6dc2d05b0bba0a544 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_sparse_mat_1_1_node.html">SparseMat::Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a7ed9e9598e8d21f6dc2d05b0bba0a544">node</a> () const</td></tr>
+<tr class="memdesc:a7ed9e9598e8d21f6dc2d05b0bba0a544 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the current node of the sparse matrix. it.node-&gt;idx is the current element index  <a href="classcv_1_1_sparse_mat_const_iterator.html#a7ed9e9598e8d21f6dc2d05b0bba0a544">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7ed9e9598e8d21f6dc2d05b0bba0a544 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240e65582faf3f08a0cc9268063efdf0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a240e65582faf3f08a0cc9268063efdf0">operator--</a> ()</td></tr>
+<tr class="memdesc:a240e65582faf3f08a0cc9268063efdf0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the previous element  <a href="classcv_1_1_sparse_mat_const_iterator.html#a240e65582faf3f08a0cc9268063efdf0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a240e65582faf3f08a0cc9268063efdf0 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e53a3cb951f9c3647c18e160fa124f inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#ae1e53a3cb951f9c3647c18e160fa124f">operator--</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>)</td></tr>
+<tr class="memdesc:ae1e53a3cb951f9c3647c18e160fa124f inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the previous element  <a href="classcv_1_1_sparse_mat_const_iterator.html#ae1e53a3cb951f9c3647c18e160fa124f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae1e53a3cb951f9c3647c18e160fa124f inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72bcf02305bcfcd92d4006621225fbd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#ad72bcf02305bcfcd92d4006621225fbd">operator++</a> ()</td></tr>
+<tr class="memdesc:ad72bcf02305bcfcd92d4006621225fbd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the next element  <a href="classcv_1_1_sparse_mat_const_iterator.html#ad72bcf02305bcfcd92d4006621225fbd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad72bcf02305bcfcd92d4006621225fbd inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18bf0568c460ed4a3c652348ef3f6a8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">SparseMatConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#ac18bf0568c460ed4a3c652348ef3f6a8">operator++</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>)</td></tr>
+<tr class="memdesc:ac18bf0568c460ed4a3c652348ef3f6a8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the next element  <a href="classcv_1_1_sparse_mat_const_iterator.html#ac18bf0568c460ed4a3c652348ef3f6a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac18bf0568c460ed4a3c652348ef3f6a8 inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e372a9006ca9a8838825a6ac98b45d inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#ad6e372a9006ca9a8838825a6ac98b45d">seekEnd</a> ()</td></tr>
+<tr class="memdesc:ad6e372a9006ca9a8838825a6ac98b45d inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves iterator to the element after the last element  <a href="classcv_1_1_sparse_mat_const_iterator.html#ad6e372a9006ca9a8838825a6ac98b45d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad6e372a9006ca9a8838825a6ac98b45d inherit pub_methods_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classcv_1_1_sparse_mat_const_iterator')"><img src="closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="classcv_1_1_sparse_mat_const_iterator.html">cv::SparseMatConstIterator</a></td></tr>
+<tr class="memitem:aa5348a0c97f2504824b9cb1f1c019c9b inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_sparse_mat.html">SparseMat</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#aa5348a0c97f2504824b9cb1f1c019c9b">m</a></td></tr>
+<tr class="separator:aa5348a0c97f2504824b9cb1f1c019c9b inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64acbbe5a9c0e23fe3955897de67e5b0 inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a64acbbe5a9c0e23fe3955897de67e5b0">hashidx</a></td></tr>
+<tr class="separator:a64acbbe5a9c0e23fe3955897de67e5b0 inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436e094b8015b0d904efca35186f21d6 inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_sparse_mat_const_iterator.html#a436e094b8015b0d904efca35186f21d6">ptr</a></td></tr>
+<tr class="separator:a436e094b8015b0d904efca35186f21d6 inherit pub_attribs_classcv_1_1_sparse_mat_const_iterator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename _Tp&gt;<br />
+class cv::SparseMatIterator_&lt; _Tp &gt;</h3>
+
+<p>Template Read-Write Sparse Matrix Iterator Class. </p>
+<p>This is the derived from <a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html" title="Template Read-Only Sparse Matrix Iterator Class.">cv::SparseMatConstIterator_</a> class that introduces more convenient <a class="el" href="classcv_1_1_sparse_mat_iterator__.html#a26262be0fb6504badd2d515e7dbbd648" title="returns the reference to the current element">operator *()</a> for accessing the current element. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a032fb509c53ad44f22ae833876dd113f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032fb509c53ad44f22ae833876dd113f">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::forward_iterator_tag <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::<a class="el" href="classcv_1_1_sparse_mat_const_iterator__.html#a72422dbb0a1afd0045309aeab95cdbd7">iterator_category</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a404a0443b24c1139f2c2b914cc468180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404a0443b24c1139f2c2b914cc468180">&#9670;&nbsp;</a></span>SparseMatIterator_() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::<a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the default constructor </p>
+
+</div>
+</div>
+<a id="aa07345c1dc666f06d49018130a48aaee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07345c1dc666f06d49018130a48aaee">&#9670;&nbsp;</a></span>SparseMatIterator_() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::<a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_sparse_mat__.html">SparseMat_</a>&lt; _Tp &gt; *&#160;</td>
+          <td class="paramname"><em>_m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the full constructor setting the iterator to the first sparse matrix element </p>
+
+</div>
+</div>
+<a id="a1c965fbfa854ab5bcb0e56ca051fb6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c965fbfa854ab5bcb0e56ca051fb6c4">&#9670;&nbsp;</a></span>SparseMatIterator_() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::<a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_sparse_mat.html">SparseMat</a> *&#160;</td>
+          <td class="paramname"><em>_m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d4b4fd6b4f061e0d95f1927130b15d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4b4fd6b4f061e0d95f1927130b15d4">&#9670;&nbsp;</a></span>SparseMatIterator_() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::<a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a>&lt; _Tp &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the copy constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a26262be0fb6504badd2d515e7dbbd648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26262be0fb6504badd2d515e7dbbd648">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">_Tp&amp; <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the reference to the current element </p>
+
+</div>
+</div>
+<a id="a5dd3f1223ff101fd63a670102e1a805c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd3f1223ff101fd63a670102e1a805c">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a>&amp; <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moves the iterator to the next element </p>
+
+</div>
+</div>
+<a id="af5357404aa31635fe16fb7900c24e990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5357404aa31635fe16fb7900c24e990">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a> <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moves the iterator to the next element </p>
+
+</div>
+</div>
+<a id="ad1d385d5c83a9c1104e9a197e331881c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d385d5c83a9c1104e9a197e331881c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a>&amp; <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">cv::SparseMatIterator_</a>&lt; _Tp &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a>&lt; _Tp &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the assignment operator </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2mat_8hpp_source.html">mat.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_sparse_mat_iterator__.html">SparseMatIterator_</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

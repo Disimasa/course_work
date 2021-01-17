@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/gmat.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gmat_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gmat.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gmat_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2018-2020 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_GMAT_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_GMAT_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>                 <span class="comment">// std::shared_ptr</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="opencv__includes_8hpp.html">opencv2/gapi/opencv_includes.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gcommon_8hpp.html">opencv2/gapi/gcommon.hpp</a>&gt;</span> <span class="comment">// GShape</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="assert_8hpp.html">opencv2/gapi/own/assert.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// TODO GAPI_EXPORTS or so</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Forward declaration; GNode and GOrigin are an internal</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// (user-inaccessible) classes.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span>GNode;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span>GOrigin;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="exports_8hpp.html#add44f3e1f8bd5d67030e089187926550">GAPI_EXPORTS_W_SIMPLE</a> <a class="code" href="classcv_1_1_g_mat.html">GMat</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat_p.html#a0760c6c75e8030cc2886d41a80f3f917">   52</a></span>&#160;    <a class="code" href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a> <a class="code" href="classcv_1_1_g_mat.html">GMat</a>();                       <span class="comment">// Empty constructor</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat_p.html#a01b33a2a87e01ad6b66de802bcf5100a">   53</a></span>&#160;    <a class="code" href="classcv_1_1_g_mat.html">GMat</a>(<span class="keyword">const</span> GNode &amp;n, <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> out);  <span class="comment">// Operation result constructor</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat.html#aa1c3bc5e0f079e441ee625185fefa50c">   55</a></span>&#160;    GOrigin&amp; <a class="code" href="classcv_1_1_g_mat.html#aa1c3bc5e0f079e441ee625185fefa50c">priv</a>();                        <span class="comment">// Internal use only</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat.html#a8e8ece216852023d524729aa1112d86f">   56</a></span>&#160;    <span class="keyword">const</span> GOrigin&amp; <a class="code" href="classcv_1_1_g_mat.html#a8e8ece216852023d524729aa1112d86f">priv</a>()  <span class="keyword">const</span>;           <span class="comment">// Internal use only</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::shared_ptr&lt;GOrigin&gt; m_priv;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcv_1_1_g_mat_p.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1_g_mat_p.html">GMatP</a> : <span class="keyword">public</span> <a class="code" href="classcv_1_1_g_mat.html">GMat</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1_g_mat.html#a0760c6c75e8030cc2886d41a80f3f917">GMat::GMat</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_r_mat.html">RMat</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html">   76</a></span>&#160;<span class="keyword">struct </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// FIXME: Default initializers in C++14</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a8ff44429b7c0b89c3f316fa76454da5a">   79</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcv_1_1_g_mat_desc.html#a8ff44429b7c0b89c3f316fa76454da5a">depth</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">   80</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">chan</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">   81</a></span>&#160;    <a class="code" href="classcv_1_1_size__.html">cv::Size</a> <a class="code" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">size</a>; <span class="comment">// NB.: no multi-dimensional cases covered yet</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">   82</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">planar</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#aed459b7df39d58b591153e84f0139cca">   83</a></span>&#160;    std::vector&lt;int&gt; <a class="code" href="structcv_1_1_g_mat_desc.html#aed459b7df39d58b591153e84f0139cca">dims</a>; <span class="comment">// FIXME: Maybe it&#39;s real questionable to have it here</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#af1ca7df8c95459e97ba51d1db9d1b6c3">   85</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html#af1ca7df8c95459e97ba51d1db9d1b6c3">GMatDesc</a>(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> c, <a class="code" href="classcv_1_1_size__.html">cv::Size</a> s, <span class="keywordtype">bool</span> p = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        : <a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a>(d), chan(c), <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>(s), planar(p) {}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#adcd344b1c0357b8bb82c6746b69e1645">   88</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html#adcd344b1c0357b8bb82c6746b69e1645">GMatDesc</a>(<span class="keywordtype">int</span> d, <span class="keyword">const</span> std::vector&lt;int&gt; &amp;dd)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        : <a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a>(d), chan(-1), <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>{-1,-1}, planar(false), <a class="code" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>(dd) {}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a1abac9e8d6eee4b1a5790847b03f0761">   91</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html#a1abac9e8d6eee4b1a5790847b03f0761">GMatDesc</a>(<span class="keywordtype">int</span> d, std::vector&lt;int&gt; &amp;&amp;dd)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        : <a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a>(d), chan(-1), <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>{-1,-1}, planar(false), <a class="code" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>(<a class="code" href="namespacestd.html">std</a>::move(dd)) {}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a337b637929783648b934e4e566f03dd6">   94</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html#a337b637929783648b934e4e566f03dd6">GMatDesc</a>() : <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a>(-1, -1, {-1,-1}) {}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a15c5b7fd785e239a1863f4658c1c53ac">   96</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecv.html#a61f78d9677b1afe1e625fd6bfd47680c">operator== </a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> &amp;rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span>    <a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a>  == rhs.<a class="code" href="structcv_1_1_g_mat_desc.html#a8ff44429b7c0b89c3f316fa76454da5a">depth</a></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;               &amp;&amp; chan   == rhs.<a class="code" href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">chan</a></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;               &amp;&amp; <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>   == rhs.<a class="code" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">size</a></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;               &amp;&amp; planar == rhs.<a class="code" href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">planar</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;               &amp;&amp; <a class="code" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>   == rhs.<a class="code" href="structcv_1_1_g_mat_desc.html#aed459b7df39d58b591153e84f0139cca">dims</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a6b16d9a0f3bb63fa355a63a05a5fd397">  105</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecv.html#a192a7ab4ac09a4c52de77a6795af30f7">operator!= </a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> &amp;rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == rhs);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a2597ddde56d22b00bc0174978309849b">  110</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1_g_mat_desc.html#a2597ddde56d22b00bc0174978309849b">isND</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !<a class="code" href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a>.empty(); }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// Checks if the passed mat can be described by this descriptor</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// (it handles the case when</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// 1-channel mat can be reinterpreted as is (1-channel mat)</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// and as a 3-channel planar mat with height divided by 3)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#af5ff4c580b9c3d2162ae4d6ff9c0537e">  116</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1_g_mat_desc.html#af5ff4c580b9c3d2162ae4d6ff9c0537e">canDescribe</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_mat.html">cv::Mat</a>&amp; <a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a8e7480f125ed884dc19ab199ffd8e352">  118</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1_g_mat_desc.html#a8e7480f125ed884dc19ab199ffd8e352">canDescribe</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_r_mat.html">cv::RMat</a>&amp; <a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc which differs in size by delta</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// (all other fields are taken unchanged from this GMatDesc)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// FIXME: a better name?</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a9210d5700cc720d70bf3df2e2374ee02">  123</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#a9210d5700cc720d70bf3df2e2374ee02">withSizeDelta</a>(<a class="code" href="classcv_1_1_size__.html">cv::Size</a> <a class="code" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">size</a> += <a class="code" href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc which differs in size by delta</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// (all other fields are taken unchanged from this GMatDesc)</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">// This is an overload.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#ac3da6d65d65160b358670d6566747f35">  133</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#ac3da6d65d65160b358670d6566747f35">withSizeDelta</a>(<span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> withSizeDelta(<a class="code" href="classcv_1_1_size__.html">cv::Size</a>{dx,dy});</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#aa0a8e3b6f80aede6415e0ea5b0dc3515">  138</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#aa0a8e3b6f80aede6415e0ea5b0dc3515">withSize</a>(<a class="code" href="classcv_1_1_size__.html">cv::Size</a> sz)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">size</a> = sz;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc with specified data depth.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// (all other fields are taken unchanged from this GMatDesc)</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a82c512d99a4ed51a3372b78a9ddc8dce">  147</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#a82c512d99a4ed51a3372b78a9ddc8dce">withDepth</a>(<span class="keywordtype">int</span> ddepth)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(<a class="code" href="group__core__utils.html#ga645f5d1efbab7bb8fdd460df6e633ebc">CV_MAT_CN</a>(ddepth) == 1 || ddepth == -1);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (ddepth != -1) desc.<a class="code" href="structcv_1_1_g_mat_desc.html#a8ff44429b7c0b89c3f316fa76454da5a">depth</a> = ddepth;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc with specified data depth</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// and number of channels.</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="comment">// (all other fields are taken unchanged from this GMatDesc)</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a2a7556619457489e32202631f0e0414e">  158</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#a2a7556619457489e32202631f0e0414e">withType</a>(<span class="keywordtype">int</span> ddepth, <span class="keywordtype">int</span> dchan)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(<a class="code" href="group__core__utils.html#ga645f5d1efbab7bb8fdd460df6e633ebc">CV_MAT_CN</a>(ddepth) == 1 || ddepth == -1);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc = withDepth(ddepth);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">chan</a> = dchan;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc with planar flag set</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// (no size changes are performed, only channel interpretation is changed</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// (interleaved -&gt; planar)</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#ac3db4ce0b4c2bc2a9c7931b1898c90f6">  169</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#ac3db4ce0b4c2bc2a9c7931b1898c90f6">asPlanar</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(planar == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">planar</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// reinterpreting 1-channel input as planar image</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">// (size height is divided by plane number)</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#a47e313dd951214fbe2469a956af24944">  180</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#a47e313dd951214fbe2469a956af24944">asPlanar</a>(<span class="keywordtype">int</span> planes)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(planar == <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(chan == 1);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(planes &gt; 1);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(<a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>.<a class="code" href="struct_cv_size.html#ac743399a59a7a2f302091b9180d23673">height</a> % planes == 0);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">size</a>.<a class="code" href="classcv_1_1_size__.html#a1d289dce6b5d8006a54f3ee0259fc545">height</a> /=  planes;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">chan</a> = planes;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> desc.<a class="code" href="structcv_1_1_g_mat_desc.html#ac3db4ce0b4c2bc2a9c7931b1898c90f6">asPlanar</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">// Meta combinator: return a new GMatDesc with planar flag set to false</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// (no size changes are performed, only channel interpretation is changed</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// (planar -&gt; interleaved)</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="structcv_1_1_g_mat_desc.html#ac7d2267acbbc949cf82a5d35b6942847">  195</a></span>&#160;    <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="structcv_1_1_g_mat_desc.html#ac7d2267acbbc949cf82a5d35b6942847">asInterleaved</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a>(planar == <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> desc(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        desc.<a class="code" href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">planar</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> desc;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;};</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> GMatDesc empty_gmat_desc() { <span class="keywordflow">return</span> GMatDesc{-1,-1,{-1,-1}}; }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1detail.html">  206</a></span>&#160;<span class="keyword">namespace </span>gapi { <span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1detail.html#a1c1ba259be3f7ce286a915e1a1166c65">  213</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacecv_1_1gapi_1_1detail.html#a1c1ba259be3f7ce286a915e1a1166c65">checkVector</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a>&amp; in, <span class="keyword">const</span> <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1detail.html#af3098471a0ff5d0d23426d8e6e1ae28c">  224</a></span>&#160;std::vector&lt;int&gt; <a class="code" href="namespacecv_1_1gapi_1_1detail.html#a1c1ba259be3f7ce286a915e1a1166c65">checkVector</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a>&amp; in);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}} <span class="comment">// namespace gapi::detail</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#if !defined(GAPI_STANDALONE)</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="group__gapi__meta__args.html#ga7b4a792227ed53f24ca10e41723a522c">  228</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">descr_of</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(GAPI_STANDALONE)</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">//Fwd declarations</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1own.html">  232</a></span>&#160;<span class="keyword">namespace </span>gapi { <span class="keyword">namespace </span>own {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keyword">class </span><a class="code" href="classcv_1_1gapi_1_1own_1_1_mat.html">Mat</a>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1own.html#a73a8c30ad2c0566bdb594a6cc19cecc9">  234</a></span>&#160;    <a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="namespacecv_1_1gapi_1_1own.html#a73a8c30ad2c0566bdb594a6cc19cecc9">descr_of</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1gapi_1_1own_1_1_mat.html">Mat</a> &amp;<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}}<span class="comment">//gapi::own</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="group__gapi__meta__args.html#gaf89cff7e2c60330a7de1526c2f234af1">  237</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">descr_of</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_r_mat.html">RMat</a> &amp;<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#if !defined(GAPI_STANDALONE)</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="group__gapi__meta__args.html#ga0e4f4b5e8195879c9421d54128d173b7">  240</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="structcv_1_1_g_mat_desc.html">GMatDesc</a> <a class="code" href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">descr_of</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> &amp;<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecv_1_1gapi_1_1own.html#a73a8c30ad2c0566bdb594a6cc19cecc9">gapi::own::descr_of</a>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="namespacecv.html#af5a114c32e98b475e333d057327c86a8">  247</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::ostream&amp; <a class="code" href="group__core.html#ga2c4455e18bf344ab22a377027494507e">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="structcv_1_1_g_mat_desc.html">cv::GMatDesc</a> &amp;desc);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_GMAT_HPP</span></div>
+<div class="ttc" id="aassert_8hpp_html"><div class="ttname"><a href="assert_8hpp.html">assert.hpp</a></div></div>
+<div class="ttc" id="aassert_8hpp_html_ac7ff15c806f547ae531e8d0984c685ae"><div class="ttname"><a href="assert_8hpp.html#ac7ff15c806f547ae531e8d0984c685ae">GAPI_Assert</a></div><div class="ttdeci">#define GAPI_Assert</div><div class="ttdef"><b>Definition:</b> assert.hpp:20</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_html"><div class="ttname"><a href="classcv_1_1_g_mat.html">cv::GMat</a></div><div class="ttdef"><b>Definition:</b> gmat.hpp:50</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_html_a0760c6c75e8030cc2886d41a80f3f917"><div class="ttname"><a href="classcv_1_1_g_mat.html#a0760c6c75e8030cc2886d41a80f3f917">cv::GMat::GMat</a></div><div class="ttdeci">GAPI_WRAP GMat()</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_html_a8e8ece216852023d524729aa1112d86f"><div class="ttname"><a href="classcv_1_1_g_mat.html#a8e8ece216852023d524729aa1112d86f">cv::GMat::priv</a></div><div class="ttdeci">const GOrigin &amp; priv() const</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_html_aa1c3bc5e0f079e441ee625185fefa50c"><div class="ttname"><a href="classcv_1_1_g_mat.html#aa1c3bc5e0f079e441ee625185fefa50c">cv::GMat::priv</a></div><div class="ttdeci">GOrigin &amp; priv()</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_p_html"><div class="ttname"><a href="classcv_1_1_g_mat_p.html">cv::GMatP</a></div><div class="ttdef"><b>Definition:</b> gmat.hpp:63</div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html"><div class="ttname"><a href="classcv_1_1_mat.html">cv::Mat</a></div><div class="ttdoc">n-dimensional dense array class</div><div class="ttdef"><b>Definition:</b> mat.hpp:798</div></div>
+<div class="ttc" id="aclasscv_1_1_r_mat_html"><div class="ttname"><a href="classcv_1_1_r_mat.html">cv::RMat</a></div><div class="ttdef"><b>Definition:</b> rmat.hpp:46</div></div>
+<div class="ttc" id="aclasscv_1_1_size___html"><div class="ttname"><a href="classcv_1_1_size__.html">cv::Size_</a></div><div class="ttdoc">Template class for specifying the size of an image or rectangle.</div><div class="ttdef"><b>Definition:</b> types.hpp:316</div></div>
+<div class="ttc" id="aclasscv_1_1_size___html_a1d289dce6b5d8006a54f3ee0259fc545"><div class="ttname"><a href="classcv_1_1_size__.html#a1d289dce6b5d8006a54f3ee0259fc545">cv::Size_::height</a></div><div class="ttdeci">_Tp height</div><div class="ttdoc">the height</div><div class="ttdef"><b>Definition:</b> types.hpp:340</div></div>
+<div class="ttc" id="aclasscv_1_1_u_mat_html"><div class="ttname"><a href="classcv_1_1_u_mat.html">cv::UMat</a></div><div class="ttdef"><b>Definition:</b> mat.hpp:2381</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1own_1_1_mat_html"><div class="ttname"><a href="classcv_1_1gapi_1_1own_1_1_mat.html">cv::gapi::own::Mat</a></div><div class="ttdef"><b>Definition:</b> mat.hpp:88</div></div>
+<div class="ttc" id="aexports_8hpp_html_a11b787c5fb3561e507d6779531bab28a"><div class="ttname"><a href="exports_8hpp.html#a11b787c5fb3561e507d6779531bab28a">GAPI_WRAP</a></div><div class="ttdeci">#define GAPI_WRAP</div><div class="ttdef"><b>Definition:</b> exports.hpp:19</div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="aexports_8hpp_html_add44f3e1f8bd5d67030e089187926550"><div class="ttname"><a href="exports_8hpp.html#add44f3e1f8bd5d67030e089187926550">GAPI_EXPORTS_W_SIMPLE</a></div><div class="ttdeci">#define GAPI_EXPORTS_W_SIMPLE</div><div class="ttdef"><b>Definition:</b> exports.hpp:21</div></div>
+<div class="ttc" id="agcommon_8hpp_html"><div class="ttname"><a href="gcommon_8hpp.html">gcommon.hpp</a></div></div>
+<div class="ttc" id="agroup__core__c_html_ga61fed56cb531d5cdb7d162007cc02132"><div class="ttname"><a href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a></div><div class="ttdeci">CvArr const CvMat * mat</div><div class="ttdef"><b>Definition:</b> core_c.h:1305</div></div>
+<div class="ttc" id="agroup__core__c_html_ga854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a></div><div class="ttdeci">CvSize size</div><div class="ttdef"><b>Definition:</b> core_c.h:109</div></div>
+<div class="ttc" id="agroup__core__c_html_gacb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a></div><div class="ttdeci">int depth</div><div class="ttdef"><b>Definition:</b> core_c.h:97</div></div>
+<div class="ttc" id="agroup__core__c_html_gaedadeec3ef499c79fc32c00079f7982d"><div class="ttname"><a href="group__core__c.html#gaedadeec3ef499c79fc32c00079f7982d">dims</a></div><div class="ttdeci">int dims</div><div class="ttdef"><b>Definition:</b> core_c.h:461</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga645f5d1efbab7bb8fdd460df6e633ebc"><div class="ttname"><a href="group__core__utils.html#ga645f5d1efbab7bb8fdd460df6e633ebc">CV_MAT_CN</a></div><div class="ttdeci">#define CV_MAT_CN(flags)</div><div class="ttdef"><b>Definition:</b> cvdef.h:463</div></div>
+<div class="ttc" id="agroup__core_html_ga2c4455e18bf344ab22a377027494507e"><div class="ttname"><a href="group__core.html#ga2c4455e18bf344ab22a377027494507e">cv::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;, const Quat&lt; _Tp &gt; &amp;)</div></div>
+<div class="ttc" id="agroup__gapi__meta__args_html_ga0d1b4f7d1dbc43b5ac9ddd6454348f0c"><div class="ttname"><a href="group__gapi__meta__args.html#ga0d1b4f7d1dbc43b5ac9ddd6454348f0c">cv::descr_of</a></div><div class="ttdeci">GArrayDesc descr_of(const std::vector&lt; U &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> garray.hpp:44</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_ga5763d62f5c6f37e64f38d25dddcc10fa"><div class="ttname"><a href="group__imgproc__c.html#ga5763d62f5c6f37e64f38d25dddcc10fa">delta</a></div><div class="ttdeci">CvSize int int int CvPoint int delta</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:1160</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1detail_html_a1c1ba259be3f7ce286a915e1a1166c65"><div class="ttname"><a href="namespacecv_1_1gapi_1_1detail.html#a1c1ba259be3f7ce286a915e1a1166c65">cv::gapi::detail::checkVector</a></div><div class="ttdeci">int checkVector(const GMatDesc &amp;in, const size_t n)</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1own_html_a73a8c30ad2c0566bdb594a6cc19cecc9"><div class="ttname"><a href="namespacecv_1_1gapi_1_1own.html#a73a8c30ad2c0566bdb594a6cc19cecc9">cv::gapi::own::descr_of</a></div><div class="ttdeci">GAPI_EXPORTS GMatDesc descr_of(const Mat &amp;mat)</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_a192a7ab4ac09a4c52de77a6795af30f7"><div class="ttname"><a href="namespacecv.html#a192a7ab4ac09a4c52de77a6795af30f7">cv::operator!=</a></div><div class="ttdeci">GAPI_EXPORTS cv::GMat operator!=(const cv::GMat &amp;lhs, const cv::GMat &amp;rhs)</div></div>
+<div class="ttc" id="anamespacecv_html_a61f78d9677b1afe1e625fd6bfd47680c"><div class="ttname"><a href="namespacecv.html#a61f78d9677b1afe1e625fd6bfd47680c">cv::operator==</a></div><div class="ttdeci">GAPI_EXPORTS cv::GMat operator==(const cv::GMat &amp;lhs, const cv::GMat &amp;rhs)</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:266</div></div>
+<div class="ttc" id="aopencv__includes_8hpp_html"><div class="ttname"><a href="opencv__includes_8hpp.html">opencv_includes.hpp</a></div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a6ff403ead16f7faa1f7228274eb6b01d"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void void *CL_RUNTIME_EXPORT const cl_device_id const char const cl_program const char void void *CL_RUNTIME_EXPORT size_t</div><div class="ttdef"><b>Definition:</b> opencl_core.hpp:286</div></div>
+<div class="ttc" id="astruct_cv_size_html_ac743399a59a7a2f302091b9180d23673"><div class="ttname"><a href="struct_cv_size.html#ac743399a59a7a2f302091b9180d23673">CvSize::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> types_c.h:1172</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html">cv::GMatDesc</a></div><div class="ttdef"><b>Definition:</b> gmat.hpp:77</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a1abac9e8d6eee4b1a5790847b03f0761"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a1abac9e8d6eee4b1a5790847b03f0761">cv::GMatDesc::GMatDesc</a></div><div class="ttdeci">GMatDesc(int d, std::vector&lt; int &gt; &amp;&amp;dd)</div><div class="ttdef"><b>Definition:</b> gmat.hpp:91</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a2597ddde56d22b00bc0174978309849b"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a2597ddde56d22b00bc0174978309849b">cv::GMatDesc::isND</a></div><div class="ttdeci">bool isND() const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:110</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a2a7556619457489e32202631f0e0414e"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a2a7556619457489e32202631f0e0414e">cv::GMatDesc::withType</a></div><div class="ttdeci">GMatDesc withType(int ddepth, int dchan) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:158</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a337b637929783648b934e4e566f03dd6"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a337b637929783648b934e4e566f03dd6">cv::GMatDesc::GMatDesc</a></div><div class="ttdeci">GMatDesc()</div><div class="ttdef"><b>Definition:</b> gmat.hpp:94</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a47e313dd951214fbe2469a956af24944"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a47e313dd951214fbe2469a956af24944">cv::GMatDesc::asPlanar</a></div><div class="ttdeci">GMatDesc asPlanar(int planes) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:180</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a64432cfbe7c973d05e792640f9ddac69"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a64432cfbe7c973d05e792640f9ddac69">cv::GMatDesc::chan</a></div><div class="ttdeci">int chan</div><div class="ttdef"><b>Definition:</b> gmat.hpp:80</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a7618c7c08cd282071e295a93080ef035"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a7618c7c08cd282071e295a93080ef035">cv::GMatDesc::planar</a></div><div class="ttdeci">bool planar</div><div class="ttdef"><b>Definition:</b> gmat.hpp:82</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a82c512d99a4ed51a3372b78a9ddc8dce"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a82c512d99a4ed51a3372b78a9ddc8dce">cv::GMatDesc::withDepth</a></div><div class="ttdeci">GMatDesc withDepth(int ddepth) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:147</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a8e7480f125ed884dc19ab199ffd8e352"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a8e7480f125ed884dc19ab199ffd8e352">cv::GMatDesc::canDescribe</a></div><div class="ttdeci">bool canDescribe(const cv::RMat &amp;mat) const</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a8ff44429b7c0b89c3f316fa76454da5a"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a8ff44429b7c0b89c3f316fa76454da5a">cv::GMatDesc::depth</a></div><div class="ttdeci">int depth</div><div class="ttdef"><b>Definition:</b> gmat.hpp:79</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_a9210d5700cc720d70bf3df2e2374ee02"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#a9210d5700cc720d70bf3df2e2374ee02">cv::GMatDesc::withSizeDelta</a></div><div class="ttdeci">GMatDesc withSizeDelta(cv::Size delta) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:123</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_aa0a8e3b6f80aede6415e0ea5b0dc3515"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#aa0a8e3b6f80aede6415e0ea5b0dc3515">cv::GMatDesc::withSize</a></div><div class="ttdeci">GMatDesc withSize(cv::Size sz) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:138</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_ac3da6d65d65160b358670d6566747f35"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#ac3da6d65d65160b358670d6566747f35">cv::GMatDesc::withSizeDelta</a></div><div class="ttdeci">GMatDesc withSizeDelta(int dx, int dy) const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:133</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_ac3db4ce0b4c2bc2a9c7931b1898c90f6"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#ac3db4ce0b4c2bc2a9c7931b1898c90f6">cv::GMatDesc::asPlanar</a></div><div class="ttdeci">GMatDesc asPlanar() const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:169</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_ac7d2267acbbc949cf82a5d35b6942847"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#ac7d2267acbbc949cf82a5d35b6942847">cv::GMatDesc::asInterleaved</a></div><div class="ttdeci">GMatDesc asInterleaved() const</div><div class="ttdef"><b>Definition:</b> gmat.hpp:195</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_adcd344b1c0357b8bb82c6746b69e1645"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#adcd344b1c0357b8bb82c6746b69e1645">cv::GMatDesc::GMatDesc</a></div><div class="ttdeci">GMatDesc(int d, const std::vector&lt; int &gt; &amp;dd)</div><div class="ttdef"><b>Definition:</b> gmat.hpp:88</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_aeb7532e7c4135e1a30e7705f7fbc547e"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#aeb7532e7c4135e1a30e7705f7fbc547e">cv::GMatDesc::size</a></div><div class="ttdeci">cv::Size size</div><div class="ttdef"><b>Definition:</b> gmat.hpp:81</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_aed459b7df39d58b591153e84f0139cca"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#aed459b7df39d58b591153e84f0139cca">cv::GMatDesc::dims</a></div><div class="ttdeci">std::vector&lt; int &gt; dims</div><div class="ttdef"><b>Definition:</b> gmat.hpp:83</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_af1ca7df8c95459e97ba51d1db9d1b6c3"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#af1ca7df8c95459e97ba51d1db9d1b6c3">cv::GMatDesc::GMatDesc</a></div><div class="ttdeci">GMatDesc(int d, int c, cv::Size s, bool p=false)</div><div class="ttdef"><b>Definition:</b> gmat.hpp:85</div></div>
+<div class="ttc" id="astructcv_1_1_g_mat_desc_html_af5ff4c580b9c3d2162ae4d6ff9c0537e"><div class="ttname"><a href="structcv_1_1_g_mat_desc.html#af5ff4c580b9c3d2162ae4d6ff9c0537e">cv::GMatDesc::canDescribe</a></div><div class="ttdeci">bool canDescribe(const cv::Mat &amp;mat) const</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="gmat_8hpp.html">gmat.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::detail::RotationWarper</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1detail_1_1_rotation_warper.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1detail_1_1_rotation_warper-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::detail::RotationWarper<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__stitching.html">Images stitching</a> &raquo; <a class="el" href="group__stitching__warp.html">Images Warping</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rotation-only model image warper interface.  
+ <a href="classcv_1_1detail_1_1_rotation_warper.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stitching_2detail_2warpers_8hpp_source.html">warpers.hpp</a>&gt;</code></p>
+
+<p>Производные классы:<a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html">cv::detail::RotationWarperBase&lt; P &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1ae345a2e77c4afe0175215c791334d2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a1ae345a2e77c4afe0175215c791334d2">~RotationWarper</a> ()</td></tr>
+<tr class="separator:a1ae345a2e77c4afe0175215c791334d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6264673f55297685343f6cd1ceaaa93"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#ad6264673f55297685343f6cd1ceaaa93">warpPoint</a> (const <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>)=0</td></tr>
+<tr class="memdesc:ad6264673f55297685343f6cd1ceaaa93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects the image point.  <a href="classcv_1_1detail_1_1_rotation_warper.html#ad6264673f55297685343f6cd1ceaaa93">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad6264673f55297685343f6cd1ceaaa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728d9f913de612d069b84022a4fe906c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a728d9f913de612d069b84022a4fe906c">warpPointBackward</a> (const <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> &amp;<a class="el" href="group__imgproc__c.html#ga350b3a83768fbff7ceba7d1be6fe3475">pt</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>)=0</td></tr>
+<tr class="memdesc:a728d9f913de612d069b84022a4fe906c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects the image point backward.  <a href="classcv_1_1detail_1_1_rotation_warper.html#a728d9f913de612d069b84022a4fe906c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a728d9f913de612d069b84022a4fe906c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ff96c239a3d7d8f11818d19d6f8033"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#ab0ff96c239a3d7d8f11818d19d6f8033">buildMaps</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> src_size, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> xmap, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> ymap)=0</td></tr>
+<tr class="memdesc:ab0ff96c239a3d7d8f11818d19d6f8033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the projection maps according to the given camera data.  <a href="classcv_1_1detail_1_1_rotation_warper.html#ab0ff96c239a3d7d8f11818d19d6f8033">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0ff96c239a3d7d8f11818d19d6f8033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832646209a4070fb2a5152876b9b4256"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a832646209a4070fb2a5152876b9b4256">warp</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> interp_mode, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> border_mode, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)=0</td></tr>
+<tr class="memdesc:a832646209a4070fb2a5152876b9b4256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects the image.  <a href="classcv_1_1detail_1_1_rotation_warper.html#a832646209a4070fb2a5152876b9b4256">Подробнее...</a><br /></td></tr>
+<tr class="separator:a832646209a4070fb2a5152876b9b4256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b63824f0cdeb4b3717a1236e7a1c6e7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a0b63824f0cdeb4b3717a1236e7a1c6e7">warpBackward</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> interp_mode, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> border_mode, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> dst_size, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)=0</td></tr>
+<tr class="memdesc:a0b63824f0cdeb4b3717a1236e7a1c6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects the image backward.  <a href="classcv_1_1detail_1_1_rotation_warper.html#a0b63824f0cdeb4b3717a1236e7a1c6e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0b63824f0cdeb4b3717a1236e7a1c6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674efcb1aa88f48c208ef895237a45b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a674efcb1aa88f48c208ef895237a45b9">warpRoi</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> src_size, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> K, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__calib3d.html#ga9fa0a7485e7bb36239bbd36b93c5f28a">R</a>)=0</td></tr>
+<tr class="separator:a674efcb1aa88f48c208ef895237a45b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686d91dcaa65e05424c60ab0047cbe0f"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a686d91dcaa65e05424c60ab0047cbe0f">getScale</a> () const</td></tr>
+<tr class="separator:a686d91dcaa65e05424c60ab0047cbe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04686ebbe20736e23702e43ec0acf074"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html#a04686ebbe20736e23702e43ec0acf074">setScale</a> (float)</td></tr>
+<tr class="separator:a04686ebbe20736e23702e43ec0acf074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Rotation-only model image warper interface. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1ae345a2e77c4afe0175215c791334d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae345a2e77c4afe0175215c791334d2">&#9670;&nbsp;</a></span>~RotationWarper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::detail::RotationWarper::~RotationWarper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab0ff96c239a3d7d8f11818d19d6f8033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ff96c239a3d7d8f11818d19d6f8033">&#9670;&nbsp;</a></span>buildMaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::detail::RotationWarper::buildMaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>src_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>xmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>ymap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds the projection maps according to the given camera data. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src_size</td><td>Source image size </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+    <tr><td class="paramname">xmap</td><td>Projection map for the x axis </td></tr>
+    <tr><td class="paramname">ymap</td><td>Projection map for the y axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Projected image minimum bounding box </dd></dl>
+
+<p>Замещается в <a class="el" href="classcv_1_1detail_1_1_cylindrical_warper_gpu.html#a625672bfe4a749decc4f034b25f5eabc">cv::detail::CylindricalWarperGpu</a>, <a class="el" href="classcv_1_1detail_1_1_spherical_warper_gpu.html#aceae064b7d60ddc8b93da9a051139ae5">cv::detail::SphericalWarperGpu</a>, <a class="el" href="classcv_1_1detail_1_1_plane_warper_gpu.html#a466ee547cea4424d225fc9ae4184e437">cv::detail::PlaneWarperGpu</a>, <a class="el" href="classcv_1_1detail_1_1_cylindrical_warper.html#a08ff8cd30170d95ee92d7710aee09220">cv::detail::CylindricalWarper</a>, <a class="el" href="classcv_1_1detail_1_1_spherical_warper.html#a837c229215541f760797862985dd8790">cv::detail::SphericalWarper</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a4eb9f68904a76e91c51f0b3267e6cd40">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_affine_warper.html#a489b254ef6deaac009cb07ad27a68ed5">cv::detail::AffineWarper</a>.</p>
+
+</div>
+</div>
+<a id="a686d91dcaa65e05424c60ab0047cbe0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686d91dcaa65e05424c60ab0047cbe0f">&#9670;&nbsp;</a></span>getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float cv::detail::RotationWarper::getScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяется в <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#ac6c55b0debe3e8dc0ee3c1d0dc8d506f">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a04686ebbe20736e23702e43ec0acf074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04686ebbe20736e23702e43ec0acf074">&#9670;&nbsp;</a></span>setScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::detail::RotationWarper::setScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяется в <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a01b400d3384b6767332a5c8b795372b3">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a832646209a4070fb2a5152876b9b4256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832646209a4070fb2a5152876b9b4256">&#9670;&nbsp;</a></span>warp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> cv::detail::RotationWarper::warp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>interp_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>border_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Projects the image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source image </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+    <tr><td class="paramname">interp_mode</td><td>Interpolation mode </td></tr>
+    <tr><td class="paramname">border_mode</td><td>Border extrapolation mode </td></tr>
+    <tr><td class="paramname">dst</td><td>Projected image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Project image top-left corner </dd></dl>
+
+<p>Замещается в <a class="el" href="classcv_1_1detail_1_1_plane_warper.html#a5d0058338cdb7550b4a185089b9b3faa">cv::detail::PlaneWarper</a>.</p>
+
+</div>
+</div>
+<a id="a0b63824f0cdeb4b3717a1236e7a1c6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b63824f0cdeb4b3717a1236e7a1c6e7">&#9670;&nbsp;</a></span>warpBackward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::detail::RotationWarper::warpBackward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>interp_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>border_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>dst_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Projects the image backward. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Projected image </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+    <tr><td class="paramname">interp_mode</td><td>Interpolation mode </td></tr>
+    <tr><td class="paramname">border_mode</td><td>Border extrapolation mode </td></tr>
+    <tr><td class="paramname">dst_size</td><td>Backward-projected image size </td></tr>
+    <tr><td class="paramname">dst</td><td>Backward-projected image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6264673f55297685343f6cd1ceaaa93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6264673f55297685343f6cd1ceaaa93">&#9670;&nbsp;</a></span>warpPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> cv::detail::RotationWarper::warpPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Projects the image point. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>Source point </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Projected point </dd></dl>
+
+<p>Замещается в <a class="el" href="classcv_1_1detail_1_1_plane_warper.html#a2b6812c9a7c2a1990478769817876fd2">cv::detail::PlaneWarper</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a28fdaa73212419d9a803d77a738fac10">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_affine_warper.html#a2ad6297c62b422ee0f2cb0c6324e24f2">cv::detail::AffineWarper</a>.</p>
+
+</div>
+</div>
+<a id="a728d9f913de612d069b84022a4fe906c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728d9f913de612d069b84022a4fe906c">&#9670;&nbsp;</a></span>warpPointBackward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> cv::detail::RotationWarper::warpPointBackward </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga7d080aa40de011e4410bca63385ffe2a">Point2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Projects the image point backward. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>Projected point </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Backward-projected point </dd></dl>
+
+<p>Замещается в <a class="el" href="classcv_1_1detail_1_1_plane_warper.html#ad78f78bb538144ecee81ff91be40f843">cv::detail::PlaneWarper</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0aa1baec5392fed8eff7f0ead6ce856e">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_affine_warper.html#a0118c2ffe4aca551bb307e3a7710ad00">cv::detail::AffineWarper</a>.</p>
+
+</div>
+</div>
+<a id="a674efcb1aa88f48c208ef895237a45b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674efcb1aa88f48c208ef895237a45b9">&#9670;&nbsp;</a></span>warpRoi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::detail::RotationWarper::warpRoi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>src_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src_size</td><td>Source image bounding box </td></tr>
+    <tr><td class="paramname">K</td><td>Camera intrinsic parameters </td></tr>
+    <tr><td class="paramname">R</td><td>Camera rotation matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Projected image minimum bounding box </dd></dl>
+
+<p>Замещается в <a class="el" href="classcv_1_1detail_1_1_plane_warper.html#a937edbca3e4b861319a11d2d87510fcc">cv::detail::PlaneWarper</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; P &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; SphericalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; PlaneProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; PaniniPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; StereographicProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; SphericalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; CompressedRectilinearProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; FisheyeProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; TransverseMercatorProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; PaniniProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; CompressedRectilinearPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; CylindricalPortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; CylindricalProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; PlanePortraitProjector &gt;</a>, <a class="el" href="classcv_1_1detail_1_1_rotation_warper_base.html#a0e4b38466eb4eaf220d9dfe655317a97">cv::detail::RotationWarperBase&lt; MercatorProjector &gt;</a> и <a class="el" href="classcv_1_1detail_1_1_affine_warper.html#acf30b2c7f1cd18405b35d9b3cb1d8031">cv::detail::AffineWarper</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/stitching/detail/<a class="el" href="stitching_2detail_2warpers_8hpp_source.html">warpers.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcv_1_1detail_1_1_rotation_warper.html">RotationWarper</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

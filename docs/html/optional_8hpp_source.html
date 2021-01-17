@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/util/optional.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('optional_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">optional.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="optional_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2018 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_UTIL_OPTIONAL_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_UTIL_OPTIONAL_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="variant_8hpp.html">opencv2/gapi/util/variant.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// A poor man&#39;s `optional` implementation, incompletely modeled against C++17 spec.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>util</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1bad__optional__access.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcv_1_1util_1_1bad__optional__access.html">bad_optional_access</a>: <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1bad__optional__access.html#a390af7cd00b32fb8f32cb36d3a1027a5">   21</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classcv_1_1util_1_1bad__optional__access.html#a390af7cd00b32fb8f32cb36d3a1027a5">what</a>() const noexcept<span class="keyword"> override</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bad optional access&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// TODO: nullopt_t</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Interface ///////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html">   30</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classcv_1_1util_1_1optional.html">optional</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// Constructors</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// NB.: there were issues with Clang 3.8 when =default() was used</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// instead {}</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">   36</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">optional</a>() {};</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a09eaedc3d5761ccc237a213e6f4f8d94">   37</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1optional.html#a09eaedc3d5761ccc237a213e6f4f8d94">optional</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">optional</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        explicit <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>(const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;) noexcept;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>(<a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// TODO: optional(nullopt_t) noexcept;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// TODO: optional(const optional&lt;U&gt; &amp;)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// TODO: optional(optional&lt;U&gt; &amp;&amp;)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// TODO: optional(Args&amp;&amp;...)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// TODO: optional(initializer_list&lt;U&gt;)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// TODO: optional(U&amp;&amp; value);</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Assignment</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a63f5b7ed8f6493e16c2816fcc6f287b0">   49</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp; operator=(const <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;) = default;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp; operator=(<a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;&amp;);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Observers</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* operator-&gt; ();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* operator-&gt; () const;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; operator* ();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; operator* () const;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// TODO: &amp;&amp; versions</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        operator <span class="keywordtype">bool</span>() const noexcept;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classcv_1_1util_1_1optional.html#a71435dbb18c1f2c0f5868c77a823d539">has_value</a>() const noexcept;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">value</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">value</a>() const;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// TODO: &amp;&amp; versions</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        template&lt;class <a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a>&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> <a class="code" href="classcv_1_1util_1_1optional.html#a5508081ca60f545c5542b3c466dbd568">value_or</a>(<a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a> &amp;&amp;default_value) const;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1optional.html#ac084b122b402d3c64976e0ccad57ddaf">swap</a>(<a class="code" href="classcv_1_1util_1_1optional.html">optional</a> &amp;other) noexcept;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1optional.html#a431117c910e3d0bae5757e3cacc65b60">reset</a>() noexcept;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// TODO: emplace</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// TODO: operator==, !=, &lt;, &lt;=, &gt;, &gt;=</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    private:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        struct nothing {};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;nothing, T&gt;</a> m_holder;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;typename std::decay&lt;T&gt;::type</a>&gt; <a class="code" href="namespacecv_1_1util.html#ae87e1848e5fe5add52bc859f0e1e36b0">make_optional</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// TODO: Args... and initializer_list versions</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Implementation //////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a0a5f2400bcd5e4235e543a7c7a903d24">   86</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">optional&lt;T&gt;::optional</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &amp;&amp;v) noexcept</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        : m_holder(v)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a70f767e7e0c079616ecb7494e3e5f74d">   91</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">optional&lt;T&gt;::optional</a>(<span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> &amp;v) noexcept</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        : m_holder(v)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#ab7e3745f571967e65d36bc7eeb640d7f">   96</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">optional&lt;T&gt;::optional</a>(<a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;&amp; rhs) noexcept</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        : m_holder(std::move(rhs.m_holder))</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        rhs.reset();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a702d7a72eb87236d5195236bbef3d407">  102</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;T&gt;</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a63f5b7ed8f6493e16c2816fcc6f287b0">optional&lt;T&gt;::operator=</a>(<a class="code" href="classcv_1_1util_1_1optional.html">optional</a>&amp;&amp; rhs)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        m_holder = std::move(rhs.m_holder);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        rhs.reset();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#af9c384816f316388b844f764d50c5ef7">  109</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1optional.html#af9c384816f316388b844f764d50c5ef7">optional&lt;T&gt;::operator-&gt; </a>()</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> &amp; *(*this);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a656e8f03c9c93365ad168cc141682658">  114</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1optional.html#af9c384816f316388b844f764d50c5ef7">optional&lt;T&gt;::operator-&gt; </a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> &amp; *(*this);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a98a3906afc1a4005f761124f3fd22e8e">  119</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a98a3906afc1a4005f761124f3fd22e8e">optional&lt;T&gt;::operator* </a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a37e1e46df264e1fddf325db1e6903c5b">  124</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a98a3906afc1a4005f761124f3fd22e8e">optional&lt;T&gt;::operator* </a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#acaf721831dbcc8a403f8c23b2515a9a3">  129</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;T&gt;::operator</a> bool() const noexcept</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> this-&gt;has_value();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a71435dbb18c1f2c0f5868c77a823d539">  134</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">bool</span> <a class="code" href="classcv_1_1util_1_1optional.html#a71435dbb18c1f2c0f5868c77a823d539">optional&lt;T&gt;::has_value</a>() const noexcept</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">return</span> util::holds_alternative&lt;T&gt;(m_holder);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">  139</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">optional&lt;T&gt;::value</a>()</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (!this-&gt;has_value())</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">throw_error</a>(<a class="code" href="classcv_1_1util_1_1bad__optional__access.html">bad_optional_access</a>());</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> util::get&lt;T&gt;(m_holder);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a99838c47e5462b61fe9c5fea4080b4a2">  146</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">optional&lt;T&gt;::value</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (!this-&gt;has_value())</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">throw_error</a>(<a class="code" href="classcv_1_1util_1_1bad__optional__access.html">bad_optional_access</a>());</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> util::get&lt;T&gt;(m_holder);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a5508081ca60f545c5542b3c466dbd568">  154</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> U&gt; <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> <a class="code" href="classcv_1_1util_1_1optional.html#a5508081ca60f545c5542b3c466dbd568">optional&lt;T&gt;::value_or</a>(<a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a> &amp;&amp;default_value)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> (this-&gt;has_value() ? this-&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>() : <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>(default_value));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#ac084b122b402d3c64976e0ccad57ddaf">  159</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1optional.html#ac084b122b402d3c64976e0ccad57ddaf">optional&lt;T&gt;::swap</a>(<a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;T&gt;</a> &amp;other) noexcept</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        m_holder.swap(other.m_holder);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1optional.html#a431117c910e3d0bae5757e3cacc65b60">  164</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1optional.html#a431117c910e3d0bae5757e3cacc65b60">optional&lt;T&gt;::reset</a>() noexcept</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span> (this-&gt;has_value())</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            m_holder = nothing{};</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#ae87e1848e5fe5add52bc859f0e1e36b0">  171</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;typename std::decay&lt;T&gt;::type</a>&gt; <a class="code" href="namespacecv_1_1util.html#ae87e1848e5fe5add52bc859f0e1e36b0">make_optional</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classcv_1_1util_1_1optional.html">optional&lt;typename std::decay&lt;T&gt;::type</a>&gt;(std::forward&lt;T&gt;(<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;} <span class="comment">// namespace util</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_UTIL_OPTIONAL_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1util_1_1bad__optional__access_html"><div class="ttname"><a href="classcv_1_1util_1_1bad__optional__access.html">cv::util::bad_optional_access</a></div><div class="ttdef"><b>Definition:</b> optional.hpp:19</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1bad__optional__access_html_a390af7cd00b32fb8f32cb36d3a1027a5"><div class="ttname"><a href="classcv_1_1util_1_1bad__optional__access.html#a390af7cd00b32fb8f32cb36d3a1027a5">cv::util::bad_optional_access::what</a></div><div class="ttdeci">virtual const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> optional.hpp:21</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html"><div class="ttname"><a href="classcv_1_1util_1_1optional.html">cv::util::optional</a></div><div class="ttdef"><b>Definition:</b> optional.hpp:31</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a09eaedc3d5761ccc237a213e6f4f8d94"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a09eaedc3d5761ccc237a213e6f4f8d94">cv::util::optional::optional</a></div><div class="ttdeci">optional(const optional &amp;)=default</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a3fe7d5e5cdaa44962186c121c64e4495"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a3fe7d5e5cdaa44962186c121c64e4495">cv::util::optional::value</a></div><div class="ttdeci">T &amp; value()</div><div class="ttdef"><b>Definition:</b> optional.hpp:139</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a431117c910e3d0bae5757e3cacc65b60"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a431117c910e3d0bae5757e3cacc65b60">cv::util::optional::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdef"><b>Definition:</b> optional.hpp:164</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a5508081ca60f545c5542b3c466dbd568"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a5508081ca60f545c5542b3c466dbd568">cv::util::optional::value_or</a></div><div class="ttdeci">T value_or(U &amp;&amp;default_value) const</div><div class="ttdef"><b>Definition:</b> optional.hpp:154</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a63f5b7ed8f6493e16c2816fcc6f287b0"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a63f5b7ed8f6493e16c2816fcc6f287b0">cv::util::optional::operator=</a></div><div class="ttdeci">optional &amp; operator=(const optional &amp;)=default</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a71435dbb18c1f2c0f5868c77a823d539"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a71435dbb18c1f2c0f5868c77a823d539">cv::util::optional::has_value</a></div><div class="ttdeci">bool has_value() const noexcept</div><div class="ttdef"><b>Definition:</b> optional.hpp:134</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_a98a3906afc1a4005f761124f3fd22e8e"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#a98a3906afc1a4005f761124f3fd22e8e">cv::util::optional::operator*</a></div><div class="ttdeci">T &amp; operator*()</div><div class="ttdef"><b>Definition:</b> optional.hpp:119</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_ab22465abe81369037764c6ac1b799273"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#ab22465abe81369037764c6ac1b799273">cv::util::optional::optional</a></div><div class="ttdeci">optional()</div><div class="ttdef"><b>Definition:</b> optional.hpp:36</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_ac084b122b402d3c64976e0ccad57ddaf"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#ac084b122b402d3c64976e0ccad57ddaf">cv::util::optional::swap</a></div><div class="ttdeci">void swap(optional &amp;other) noexcept</div><div class="ttdef"><b>Definition:</b> optional.hpp:159</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1optional_html_af9c384816f316388b844f764d50c5ef7"><div class="ttname"><a href="classcv_1_1util_1_1optional.html#af9c384816f316388b844f764d50c5ef7">cv::util::optional::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;()</div><div class="ttdef"><b>Definition:</b> optional.hpp:109</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html"><div class="ttname"><a href="classcv_1_1util_1_1variant.html">cv::util::variant&lt; nothing, T &gt;</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga1fc9a530e4f9c60ea61e1e7a68cfb639"><div class="ttname"><a href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">cv::T</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray InputOutputArray T</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_ga9550b1803662fe5c2e7f2f7f1f382af5"><div class="ttname"><a href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a></div><div class="ttdeci">int CvScalar value</div><div class="ttdef"><b>Definition:</b> core_c.h:717</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa9c521f41af9a5191e5e4b6ffbae211a"><div class="ttname"><a href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a></div><div class="ttdeci">const CvArr * U</div><div class="ttdef"><b>Definition:</b> core_c.h:1337</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a40544b3ca23b3917f2a5de6b0273079d"><div class="ttname"><a href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">cv::util::throw_error</a></div><div class="ttdeci">void throw_error(ExceptionType &amp;&amp;e)</div><div class="ttdef"><b>Definition:</b> throw.hpp:23</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_ae87e1848e5fe5add52bc859f0e1e36b0"><div class="ttname"><a href="namespacecv_1_1util.html#ae87e1848e5fe5add52bc859f0e1e36b0">cv::util::make_optional</a></div><div class="ttdeci">optional&lt; typename std::decay&lt; T &gt;::type &gt; make_optional(T &amp;&amp;value)</div><div class="ttdef"><b>Definition:</b> optional.hpp:171</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="avariant_8hpp_html"><div class="ttname"><a href="variant_8hpp.html">variant.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_b2dcf1d3354090c206761d4ddbd38b1c.html">util</a></li><li class="navelem"><a class="el" href="optional_8hpp.html">optional.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

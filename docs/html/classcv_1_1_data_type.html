@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Шаблон класса cv::DataType&lt; _Tp &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_data_type.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Шаблон класса cv::DataType&lt; _Tp &gt;<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__basic.html">Basic structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Template "trait" class for OpenCV primitive data types.  
+ <a href="classcv_1_1_data_type.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="traits_8hpp_source.html">traits.hpp</a>&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename _Tp&gt;<br />
+class cv::DataType&lt; _Tp &gt;</h3>
+
+<p>Template "trait" class for OpenCV primitive data types. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Deprecated. This is replaced by "single purpose" traits: <a class="el" href="structcv_1_1traits_1_1_type.html">traits::Type</a> and <a class="el" href="structcv_1_1traits_1_1_depth.html">traits::Depth</a></dd></dl>
+<p>A primitive OpenCV data type is one of unsigned char, bool, signed char, unsigned short, signed short, int, float, double, or a tuple of values of one of these types, where all the values in the tuple have the same type. Any primitive type from the list can be defined by an identifier in the form CV_&lt;bit-depth&gt;{U|S|F}C(&lt;number_of_channels&gt;), for example: uchar CV_8UC1, 3-element floating-point tuple CV_32FC3, and so on. A universal OpenCV structure that is able to store a single instance of such a primitive data type is <a class="el" href="classcv_1_1_vec.html" title="Template class for short numerical vectors, a partial case of Matx.">Vec</a>. Multiple instances of such a type can be stored in a std::vector, <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a>, <a class="el" href="classcv_1_1_mat__.html" title="Template matrix class derived from Mat.">Mat_</a>, <a class="el" href="classcv_1_1_sparse_mat.html" title="The class SparseMat represents multi-dimensional sparse numerical arrays.">SparseMat</a>, <a class="el" href="classcv_1_1_sparse_mat__.html" title="Template sparse n-dimensional array class derived from SparseMat.">SparseMat_</a>, or any other container that is able to store <a class="el" href="classcv_1_1_vec.html" title="Template class for short numerical vectors, a partial case of Matx.">Vec</a> instances.</p>
+<p>The <a class="el" href="classcv_1_1_data_type.html" title="Template &quot;trait&quot; class for OpenCV primitive data types.">DataType</a> class is basically used to provide a description of such primitive data types without adding any fields or methods to the corresponding classes (and it is actually impossible to add anything to primitive C/C++ data types). This technique is known in C++ as class traits. It is not <a class="el" href="classcv_1_1_data_type.html" title="Template &quot;trait&quot; class for OpenCV primitive data types.">DataType</a> itself that is used but its specialized versions, such as: </p><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;&gt; <span class="keyword">class </span>DataType&lt;<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">typedef</span> <a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> value_type;</div>
+<div class="line">    <span class="keyword">typedef</span> <span class="keywordtype">int</span> work_type;</div>
+<div class="line">    <span class="keyword">typedef</span> <a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> channel_type;</div>
+<div class="line">    <span class="keyword">enum</span> { channel_type = <a class="code" href="group__core__hal__interface.html#ga32b18d904ee2b1731a9416a8eef67d06">CV_8U</a>, <a class="code" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels</a> = 1, fmt=<span class="charliteral">&#39;u&#39;</span>, <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> = <a class="code" href="group__core__hal__interface.html#ga32b18d904ee2b1731a9416a8eef67d06">CV_8U</a> };</div>
+<div class="line">};</div>
+<div class="line">...</div>
+<div class="line">template&lt;<span class="keyword">typename</span> _Tp&gt; DataType&lt;std::complex&lt;_Tp&gt; &gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">typedef</span> std::complex&lt;_Tp&gt; value_type;</div>
+<div class="line">    <span class="keyword">typedef</span> std::complex&lt;_Tp&gt; work_type;</div>
+<div class="line">    <span class="keyword">typedef</span> _Tp channel_type;</div>
+<div class="line">    <span class="comment">// DataDepth is another helper trait class</span></div>
+<div class="line">    <span class="keyword">enum</span> { <a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a> = <a class="code" href="classcv_1_1_data_depth.html#a3dac88a53257756bacd936912f93dbdea7cb026110dca902585250642b85975d2">DataDepth&lt;_Tp&gt;::value</a>, <a class="code" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels</a>=2,</div>
+<div class="line">        fmt=(<a class="code" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels</a>-1)*256+<a class="code" href="classcv_1_1_data_depth.html#a3dac88a53257756bacd936912f93dbdeae5030288b4884074c6dd94c287ab31ba">DataDepth&lt;_Tp&gt;::fmt</a>,</div>
+<div class="line">        <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>=<a class="code" href="group__core__hal__interface.html#gab2ebca36079fd923483abee99d7ff40d">CV_MAKETYPE</a>(<a class="code" href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a>, <a class="code" href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels</a>) };</div>
+<div class="line">};</div>
+<div class="line">...</div>
+<div class="ttc" id="aclasscv_1_1_data_depth_html_a3dac88a53257756bacd936912f93dbdea7cb026110dca902585250642b85975d2"><div class="ttname"><a href="classcv_1_1_data_depth.html#a3dac88a53257756bacd936912f93dbdea7cb026110dca902585250642b85975d2">cv::DataDepth::value</a></div><div class="ttdeci">@ value</div><div class="ttdef"><b>Definition:</b> traits.hpp:289</div></div>
+<div class="ttc" id="aclasscv_1_1_data_depth_html_a3dac88a53257756bacd936912f93dbdeae5030288b4884074c6dd94c287ab31ba"><div class="ttname"><a href="classcv_1_1_data_depth.html#a3dac88a53257756bacd936912f93dbdeae5030288b4884074c6dd94c287ab31ba">cv::DataDepth::fmt</a></div><div class="ttdeci">@ fmt</div><div class="ttdef"><b>Definition:</b> traits.hpp:290</div></div>
+<div class="ttc" id="agroup__core__c_html_ga2876852c6a9947679c3003692de5aa83"><div class="ttname"><a href="group__core__c.html#ga2876852c6a9947679c3003692de5aa83">channels</a></div><div class="ttdeci">int int channels</div><div class="ttdef"><b>Definition:</b> core_c.h:97</div></div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__core__c_html_gacb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="group__core__c.html#gacb5ba97551079e0b072c62c21d784ac5">depth</a></div><div class="ttdeci">int depth</div><div class="ttdef"><b>Definition:</b> core_c.h:97</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga32b18d904ee2b1731a9416a8eef67d06"><div class="ttname"><a href="group__core__hal__interface.html#ga32b18d904ee2b1731a9416a8eef67d06">CV_8U</a></div><div class="ttdeci">#define CV_8U</div><div class="ttdef"><b>Definition:</b> interface.h:73</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> interface.h:51</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_gab2ebca36079fd923483abee99d7ff40d"><div class="ttname"><a href="group__core__hal__interface.html#gab2ebca36079fd923483abee99d7ff40d">CV_MAKETYPE</a></div><div class="ttdeci">#define CV_MAKETYPE(depth, cn)</div><div class="ttdef"><b>Definition:</b> interface.h:85</div></div>
+</div><!-- fragment --><p> The main purpose of this class is to convert compilation-time type information to an OpenCV-compatible data type identifier, for example: </p><div class="fragment"><div class="line"><span class="comment">// allocates a 30x40 floating-point matrix</span></div>
+<div class="line">Mat A(30, 40, <a class="code" href="classcv_1_1_data_type_3_01float_01_4.html#a2ef7e431d6f389f5ff01f4f213d9cceca479e72236953b4c3301390b3f2365332">DataType&lt;float&gt;::type</a>);</div>
+<div class="line"> </div>
+<div class="line">Mat <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> = Mat_&lt;std::complex&lt;double&gt; &gt;(3, 3);</div>
+<div class="line"><span class="comment">// the statement below will print 6, 2 , that is depth == CV_64F, channels == 2</span></div>
+<div class="line">cout &lt;&lt; <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>.depth() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a>.channels() &lt;&lt; endl;</div>
+<div class="ttc" id="aclasscv_1_1_data_type_3_01float_01_4_html_a2ef7e431d6f389f5ff01f4f213d9cceca479e72236953b4c3301390b3f2365332"><div class="ttname"><a href="classcv_1_1_data_type_3_01float_01_4.html#a2ef7e431d6f389f5ff01f4f213d9cceca479e72236953b4c3301390b3f2365332">cv::DataType&lt; float &gt;::type</a></div><div class="ttdeci">@ type</div><div class="ttdef"><b>Definition:</b> traits.hpp:245</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa51ff7457205fc6e7de24356f7a5db6d"><div class="ttname"><a href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a></div><div class="ttdeci">const CvArr const CvArr const CvArr * B</div><div class="ttdef"><b>Definition:</b> core_c.h:1338</div></div>
+</div><!-- fragment --><p> So, such traits are used to tell OpenCV which data type you are working with, even if such a type is not native to OpenCV. For example, the matrix B initialization above is compiled because OpenCV defines the proper specialized template class <a class="el" href="classcv_1_1_data_type.html" title="Template &quot;trait&quot; class for OpenCV primitive data types.">DataType</a>&lt;complex&lt;_Tp&gt; &gt; . This mechanism is also useful (and used in OpenCV this way) for generic algorithms implementations.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Default values were dropped to stop confusing developers about using of unsupported types (see #7599) </dd></dl>
+</div><hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="traits_8hpp_source.html">traits.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_data_type.html">DataType</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

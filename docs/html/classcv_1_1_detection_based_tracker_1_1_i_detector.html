@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::DetectionBasedTracker::IDetector</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_detection_based_tracker_1_1_i_detector.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classcv_1_1_detection_based_tracker_1_1_i_detector-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::DetectionBasedTracker::IDetector<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="detection__based__tracker_8hpp_source.html">detection_based_tracker.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7c0adbebe4c859cffaabb9a17da8cc96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a7c0adbebe4c859cffaabb9a17da8cc96">IDetector</a> ()</td></tr>
+<tr class="separator:a7c0adbebe4c859cffaabb9a17da8cc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae613e0c9a09698523280299e1bb02b5d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#ae613e0c9a09698523280299e1bb02b5d">detect</a> (const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;<a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;objects)=0</td></tr>
+<tr class="separator:ae613e0c9a09698523280299e1bb02b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fefc396886a457f4569660d4c66c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a04fefc396886a457f4569660d4c66c0e">setMinObjectSize</a> (const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;<a class="el" href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379">min</a>)</td></tr>
+<tr class="separator:a04fefc396886a457f4569660d4c66c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d73cf36e6f3882625576eb300a3712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#ae2d73cf36e6f3882625576eb300a3712">setMaxObjectSize</a> (const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;<a class="el" href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">max</a>)</td></tr>
+<tr class="separator:ae2d73cf36e6f3882625576eb300a3712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee8efd446544a5c4cd0f11245a20d35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a2ee8efd446544a5c4cd0f11245a20d35">getMinObjectSize</a> () const</td></tr>
+<tr class="separator:a2ee8efd446544a5c4cd0f11245a20d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00167aa10a2e553e7d73375022d7084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#ae00167aa10a2e553e7d73375022d7084">getMaxObjectSize</a> () const</td></tr>
+<tr class="separator:ae00167aa10a2e553e7d73375022d7084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a395e1e7557fb1bb74fadbbb7e9a89"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#ae7a395e1e7557fb1bb74fadbbb7e9a89">getScaleFactor</a> ()</td></tr>
+<tr class="separator:ae7a395e1e7557fb1bb74fadbbb7e9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f11f963c44fb96531595cbbca220730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a9f11f963c44fb96531595cbbca220730">setScaleFactor</a> (float <a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>)</td></tr>
+<tr class="separator:a9f11f963c44fb96531595cbbca220730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07417ff188483d9e8aed9684ebe74f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#aa07417ff188483d9e8aed9684ebe74f1">getMinNeighbours</a> ()</td></tr>
+<tr class="separator:aa07417ff188483d9e8aed9684ebe74f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc30759564fd402d3d9a4dc30bcb798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#adfc30759564fd402d3d9a4dc30bcb798">setMinNeighbours</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>)</td></tr>
+<tr class="separator:adfc30759564fd402d3d9a4dc30bcb798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4da28e12715f1ba3126b4799e205bd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#adf4da28e12715f1ba3126b4799e205bd">~IDetector</a> ()</td></tr>
+<tr class="separator:adf4da28e12715f1ba3126b4799e205bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:af89dbb1102becacb1bfae95069ab1bfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#af89dbb1102becacb1bfae95069ab1bfc">minObjSize</a></td></tr>
+<tr class="separator:af89dbb1102becacb1bfae95069ab1bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36207faebbad7ce45c3dde9d37c9e5f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a36207faebbad7ce45c3dde9d37c9e5f4">maxObjSize</a></td></tr>
+<tr class="separator:a36207faebbad7ce45c3dde9d37c9e5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef03c2f2a5d822ef686d119a2800212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a8ef03c2f2a5d822ef686d119a2800212">minNeighbours</a></td></tr>
+<tr class="separator:a8ef03c2f2a5d822ef686d119a2800212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e466966d8e1d37f7eb1200ecdf090a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html#a09e466966d8e1d37f7eb1200ecdf090a">scaleFactor</a></td></tr>
+<tr class="separator:a09e466966d8e1d37f7eb1200ecdf090a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7c0adbebe4c859cffaabb9a17da8cc96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0adbebe4c859cffaabb9a17da8cc96">&#9670;&nbsp;</a></span>IDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::DetectionBasedTracker::IDetector::IDetector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf4da28e12715f1ba3126b4799e205bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4da28e12715f1ba3126b4799e205bd">&#9670;&nbsp;</a></span>~IDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::DetectionBasedTracker::IDetector::~IDetector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae613e0c9a09698523280299e1bb02b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae613e0c9a09698523280299e1bb02b5d">&#9670;&nbsp;</a></span>detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::IDetector::detect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae00167aa10a2e553e7d73375022d7084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00167aa10a2e553e7d73375022d7084">&#9670;&nbsp;</a></span>getMaxObjectSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> cv::DetectionBasedTracker::IDetector::getMaxObjectSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa07417ff188483d9e8aed9684ebe74f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07417ff188483d9e8aed9684ebe74f1">&#9670;&nbsp;</a></span>getMinNeighbours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DetectionBasedTracker::IDetector::getMinNeighbours </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ee8efd446544a5c4cd0f11245a20d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee8efd446544a5c4cd0f11245a20d35">&#9670;&nbsp;</a></span>getMinObjectSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> cv::DetectionBasedTracker::IDetector::getMinObjectSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7a395e1e7557fb1bb74fadbbb7e9a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a395e1e7557fb1bb74fadbbb7e9a89">&#9670;&nbsp;</a></span>getScaleFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cv::DetectionBasedTracker::IDetector::getScaleFactor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2d73cf36e6f3882625576eb300a3712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d73cf36e6f3882625576eb300a3712">&#9670;&nbsp;</a></span>setMaxObjectSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::IDetector::setMaxObjectSize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfc30759564fd402d3d9a4dc30bcb798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc30759564fd402d3d9a4dc30bcb798">&#9670;&nbsp;</a></span>setMinNeighbours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::IDetector::setMinNeighbours </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04fefc396886a457f4569660d4c66c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fefc396886a457f4569660d4c66c0e">&#9670;&nbsp;</a></span>setMinObjectSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::IDetector::setMinObjectSize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>min</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f11f963c44fb96531595cbbca220730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f11f963c44fb96531595cbbca220730">&#9670;&nbsp;</a></span>setScaleFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::IDetector::setScaleFactor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a36207faebbad7ce45c3dde9d37c9e5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36207faebbad7ce45c3dde9d37c9e5f4">&#9670;&nbsp;</a></span>maxObjSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> cv::DetectionBasedTracker::IDetector::maxObjSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ef03c2f2a5d822ef686d119a2800212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef03c2f2a5d822ef686d119a2800212">&#9670;&nbsp;</a></span>minNeighbours</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DetectionBasedTracker::IDetector::minNeighbours</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af89dbb1102becacb1bfae95069ab1bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89dbb1102becacb1bfae95069ab1bfc">&#9670;&nbsp;</a></span>minObjSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a> cv::DetectionBasedTracker::IDetector::minObjSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09e466966d8e1d37f7eb1200ecdf090a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e466966d8e1d37f7eb1200ecdf090a">&#9670;&nbsp;</a></span>scaleFactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cv::DetectionBasedTracker::IDetector::scaleFactor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/objdetect/<a class="el" href="detection__based__tracker_8hpp_source.html">detection_based_tracker.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_detection_based_tracker.html">DetectionBasedTracker</a></li><li class="navelem"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

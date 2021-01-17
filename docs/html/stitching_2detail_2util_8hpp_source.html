@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/stitching/detail/util.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stitching_2detail_2util_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">util.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stitching_2detail_2util_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                          License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2000-2008, Intel Corporation, all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Copyright (C) 2009, Willow Garage Inc., all rights reserved.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//   * The name of the copyright holders may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors &quot;as is&quot; and</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// In no event shall the Intel Corporation or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifndef OPENCV_STITCHING_UTIL_HPP</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define OPENCV_STITCHING_UTIL_HPP</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="opencv2_2core_8hpp.html">opencv2/core.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html">DisjointSets</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#ab0c7e73d1acaaa2b48a1df5066b569de">   58</a></span>&#160;    <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#ab0c7e73d1acaaa2b48a1df5066b569de">DisjointSets</a>(<span class="keywordtype">int</span> elem_count = 0) { createOneElemSets(elem_count); }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#a840589dd0b4786c04f7505d238b60531">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#a840589dd0b4786c04f7505d238b60531">createOneElemSets</a>(<span class="keywordtype">int</span> elem_count);</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#a4f61a6ddc6663de58ad177d5ab92d943">   61</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#a4f61a6ddc6663de58ad177d5ab92d943">findSetByElem</a>(<span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga3af7387cc1cc7f4c6c88660faa0c3aea">elem</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#ace5164c3b1500421c96c7b6cc4dfaa9d">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#ace5164c3b1500421c96c7b6cc4dfaa9d">mergeSets</a>(<span class="keywordtype">int</span> set1, <span class="keywordtype">int</span> set2);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#a1663942a3058de8c0835cdc657fd3591">   64</a></span>&#160;    std::vector&lt;int&gt; <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#a1663942a3058de8c0835cdc657fd3591">parent</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_disjoint_sets.html#a57434b53bae97ab6bedbb134acadc22b">   65</a></span>&#160;    std::vector&lt;int&gt; <a class="code" href="classcv_1_1detail_1_1_disjoint_sets.html#a57434b53bae97ab6bedbb134acadc22b">size</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::vector&lt;int&gt; rank_;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_graph_edge.html">   72</a></span>&#160;<span class="keyword">struct </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="structcv_1_1detail_1_1_graph_edge.html">GraphEdge</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structcv_1_1detail_1_1_graph_edge.html">GraphEdge</a>(<span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to, <span class="keywordtype">float</span> weight);</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_graph_edge.html#ae9655069c8161475dd6c1ff504a6c89f">   75</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacecv.html#a1d8712b1cebaf6f8b49bc3bcf733f649">operator &lt;</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1detail_1_1_graph_edge.html">GraphEdge</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> weight &lt; other.<a class="code" href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">weight</a>; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_graph_edge.html#a02573cd46ba9f4cf2fa8e7b40cde41df">   76</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacecv.html#a790ea3ffb583631718a89880b2cec3d1">operator &gt;</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1detail_1_1_graph_edge.html">GraphEdge</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> weight &gt; other.<a class="code" href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">weight</a>; }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_graph_edge.html#a7ee67c4025576238d703f2b51bdcaa51">   78</a></span>&#160;    <span class="keywordtype">int</span> from, <a class="code" href="structcv_1_1detail_1_1_graph_edge.html#a7ee67c4025576238d703f2b51bdcaa51">to</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">   79</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">weight</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="group__stitching.html#ga7de758260f93bd840c47184aef9b25a2">   82</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="group__stitching.html#ga7de758260f93bd840c47184aef9b25a2">GraphEdge::GraphEdge</a>(<span class="keywordtype">int</span> _from, <span class="keywordtype">int</span> _to, <span class="keywordtype">float</span> _weight) : from(_from), to(_to), weight(_weight) {}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html">   85</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1detail_1_1_graph.html">Graph</a></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#a28af321e16d2ff278f0ee8ca5ff93eb9">   88</a></span>&#160;    <a class="code" href="classcv_1_1detail_1_1_graph.html#a28af321e16d2ff278f0ee8ca5ff93eb9">Graph</a>(<span class="keywordtype">int</span> num_vertices = 0) { create(num_vertices); }</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#a36812f283b56ba6cbeec3cf3c3db3883">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1detail_1_1_graph.html#a36812f283b56ba6cbeec3cf3c3db3883">create</a>(<span class="keywordtype">int</span> num_vertices) { edges_.assign(num_vertices, std::list&lt;GraphEdge&gt;()); }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#a8f71b977899774233d495be13a3d400b">   90</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcv_1_1detail_1_1_graph.html#a8f71b977899774233d495be13a3d400b">numVertices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(edges_.size()); }</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#ab71aed62d6713b3dc9c2833a42686fdc">   91</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1detail_1_1_graph.html#ab71aed62d6713b3dc9c2833a42686fdc">addEdge</a>(<span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to, <span class="keywordtype">float</span> weight);</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#ae240a8d6ee21deaee7617e459597b042">   92</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt; <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> <a class="code" href="classcv_1_1detail_1_1_graph.html#ae240a8d6ee21deaee7617e459597b042">forEach</a>(<a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> body) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classcv_1_1detail_1_1_graph.html#aa0adb7331b3c3d89b9ec630ba860308a">   93</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt; <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> <a class="code" href="classcv_1_1detail_1_1_graph.html#aa0adb7331b3c3d89b9ec630ba860308a">walkBreadthFirst</a>(<span class="keywordtype">int</span> from, <a class="code" href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a> body) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::vector&lt; std::list&lt;GraphEdge&gt; &gt; edges_;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// Auxiliary functions</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group__stitching.html#gabe93812c6b9cf981a8a88edd39ccc5dc">  103</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <span class="keywordtype">bool</span> <a class="code" href="group__stitching.html#gabe93812c6b9cf981a8a88edd39ccc5dc">overlapRoi</a>(<a class="code" href="classcv_1_1_point__.html">Point</a> tl1, <a class="code" href="classcv_1_1_point__.html">Point</a> tl2, <a class="code" href="classcv_1_1_size__.html">Size</a> sz1, <a class="code" href="classcv_1_1_size__.html">Size</a> sz2, <a class="code" href="classcv_1_1_rect__.html">Rect</a> &amp;roi);</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="group__stitching.html#gaece3a23fa7334e2d852fc495f1848379">  104</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="classcv_1_1_rect__.html">Rect</a> <a class="code" href="group__stitching.html#gaece3a23fa7334e2d852fc495f1848379">resultRoi</a>(<span class="keyword">const</span> std::vector&lt;Point&gt; &amp;<a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <span class="keyword">const</span> std::vector&lt;UMat&gt; &amp;images);</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="group__stitching.html#gae8dc4cea4bb3d9a8183330f8946754c5">  105</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="classcv_1_1_rect__.html">Rect</a> <a class="code" href="group__stitching.html#gaece3a23fa7334e2d852fc495f1848379">resultRoi</a>(<span class="keyword">const</span> std::vector&lt;Point&gt; &amp;<a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <span class="keyword">const</span> std::vector&lt;Size&gt; &amp;<a class="code" href="group__core__c.html#gaf18ed273a16d96ec981e672c631fcb3f">sizes</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="group__stitching.html#ga93841e0f3a1fe81886b52ac3c6679afb">  106</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="classcv_1_1_rect__.html">Rect</a> <a class="code" href="group__stitching.html#ga93841e0f3a1fe81886b52ac3c6679afb">resultRoiIntersection</a>(<span class="keyword">const</span> std::vector&lt;Point&gt; &amp;<a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, <span class="keyword">const</span> std::vector&lt;Size&gt; &amp;<a class="code" href="group__core__c.html#gaf18ed273a16d96ec981e672c631fcb3f">sizes</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__stitching.html#gaa0b786acdb85942dca5bc213d01ed407">  107</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="code" href="classcv_1_1_point__.html">Point</a> <a class="code" href="group__stitching.html#gaa0b786acdb85942dca5bc213d01ed407">resultTl</a>(<span class="keyword">const</span> std::vector&lt;Point&gt; &amp;<a class="code" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// Returns random &#39;count&#39; element subset of the {0,1,...,size-1} set</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="group__stitching.html#gaac42e73783d5273c6e5511bf7e050ae8">  110</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <span class="keywordtype">void</span> <a class="code" href="group__stitching.html#gaac42e73783d5273c6e5511bf7e050ae8">selectRandomSubset</a>(<span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga2e751d0e4002c0a0e2779e2ad4dae90f">count</a>, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>, std::vector&lt;int&gt; &amp;subset);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="group__stitching.html#ga6a9061fa186238ec8cce707c0cf6ed66">  112</a></span>&#160;<a class="code" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <span class="keywordtype">int</span>&amp; <a class="code" href="group__stitching.html#ga6a9061fa186238ec8cce707c0cf6ed66">stitchingLogLevel</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util__inl_8hpp.html">util_inl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_STITCHING_UTIL_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_point___html"><div class="ttname"><a href="classcv_1_1_point__.html">cv::Point_</a></div><div class="ttdoc">Template class for 2D points specified by its coordinates x and y.</div><div class="ttdef"><b>Definition:</b> types.hpp:158</div></div>
+<div class="ttc" id="aclasscv_1_1_rect___html"><div class="ttname"><a href="classcv_1_1_rect__.html">cv::Rect_</a></div><div class="ttdoc">Template class for 2D rectangles.</div><div class="ttdef"><b>Definition:</b> types.hpp:421</div></div>
+<div class="ttc" id="aclasscv_1_1_size___html"><div class="ttname"><a href="classcv_1_1_size__.html">cv::Size_</a></div><div class="ttdoc">Template class for specifying the size of an image or rectangle.</div><div class="ttdef"><b>Definition:</b> types.hpp:316</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html">cv::detail::DisjointSets</a></div><div class="ttdef"><b>Definition:</b> util.hpp:56</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_a1663942a3058de8c0835cdc657fd3591"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#a1663942a3058de8c0835cdc657fd3591">cv::detail::DisjointSets::parent</a></div><div class="ttdeci">std::vector&lt; int &gt; parent</div><div class="ttdef"><b>Definition:</b> util.hpp:64</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_a4f61a6ddc6663de58ad177d5ab92d943"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#a4f61a6ddc6663de58ad177d5ab92d943">cv::detail::DisjointSets::findSetByElem</a></div><div class="ttdeci">int findSetByElem(int elem)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_a57434b53bae97ab6bedbb134acadc22b"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#a57434b53bae97ab6bedbb134acadc22b">cv::detail::DisjointSets::size</a></div><div class="ttdeci">std::vector&lt; int &gt; size</div><div class="ttdef"><b>Definition:</b> util.hpp:65</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_a840589dd0b4786c04f7505d238b60531"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#a840589dd0b4786c04f7505d238b60531">cv::detail::DisjointSets::createOneElemSets</a></div><div class="ttdeci">void createOneElemSets(int elem_count)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_ab0c7e73d1acaaa2b48a1df5066b569de"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#ab0c7e73d1acaaa2b48a1df5066b569de">cv::detail::DisjointSets::DisjointSets</a></div><div class="ttdeci">DisjointSets(int elem_count=0)</div><div class="ttdef"><b>Definition:</b> util.hpp:58</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_disjoint_sets_html_ace5164c3b1500421c96c7b6cc4dfaa9d"><div class="ttname"><a href="classcv_1_1detail_1_1_disjoint_sets.html#ace5164c3b1500421c96c7b6cc4dfaa9d">cv::detail::DisjointSets::mergeSets</a></div><div class="ttdeci">int mergeSets(int set1, int set2)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html">cv::detail::Graph</a></div><div class="ttdef"><b>Definition:</b> util.hpp:86</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_a28af321e16d2ff278f0ee8ca5ff93eb9"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#a28af321e16d2ff278f0ee8ca5ff93eb9">cv::detail::Graph::Graph</a></div><div class="ttdeci">Graph(int num_vertices=0)</div><div class="ttdef"><b>Definition:</b> util.hpp:88</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_a36812f283b56ba6cbeec3cf3c3db3883"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#a36812f283b56ba6cbeec3cf3c3db3883">cv::detail::Graph::create</a></div><div class="ttdeci">void create(int num_vertices)</div><div class="ttdef"><b>Definition:</b> util.hpp:89</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_a8f71b977899774233d495be13a3d400b"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#a8f71b977899774233d495be13a3d400b">cv::detail::Graph::numVertices</a></div><div class="ttdeci">int numVertices() const</div><div class="ttdef"><b>Definition:</b> util.hpp:90</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_aa0adb7331b3c3d89b9ec630ba860308a"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#aa0adb7331b3c3d89b9ec630ba860308a">cv::detail::Graph::walkBreadthFirst</a></div><div class="ttdeci">B walkBreadthFirst(int from, B body) const</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_ab71aed62d6713b3dc9c2833a42686fdc"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#ab71aed62d6713b3dc9c2833a42686fdc">cv::detail::Graph::addEdge</a></div><div class="ttdeci">void addEdge(int from, int to, float weight)</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_graph_html_ae240a8d6ee21deaee7617e459597b042"><div class="ttname"><a href="classcv_1_1detail_1_1_graph.html#ae240a8d6ee21deaee7617e459597b042">cv::detail::Graph::forEach</a></div><div class="ttdeci">B forEach(B body) const</div></div>
+<div class="ttc" id="agroup__core__c_html_ga2e751d0e4002c0a0e2779e2ad4dae90f"><div class="ttname"><a href="group__core__c.html#ga2e751d0e4002c0a0e2779e2ad4dae90f">count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> core_c.h:1410</div></div>
+<div class="ttc" id="agroup__core__c_html_ga3af7387cc1cc7f4c6c88660faa0c3aea"><div class="ttname"><a href="group__core__c.html#ga3af7387cc1cc7f4c6c88660faa0c3aea">elem</a></div><div class="ttdeci">const void * elem</div><div class="ttdef"><b>Definition:</b> core_c.h:1712</div></div>
+<div class="ttc" id="agroup__core__c_html_ga854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a></div><div class="ttdeci">CvSize size</div><div class="ttdef"><b>Definition:</b> core_c.h:109</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa51ff7457205fc6e7de24356f7a5db6d"><div class="ttname"><a href="group__core__c.html#gaa51ff7457205fc6e7de24356f7a5db6d">B</a></div><div class="ttdeci">const CvArr const CvArr const CvArr * B</div><div class="ttdef"><b>Definition:</b> core_c.h:1338</div></div>
+<div class="ttc" id="agroup__core__c_html_gaf18ed273a16d96ec981e672c631fcb3f"><div class="ttname"><a href="group__core__c.html#gaf18ed273a16d96ec981e672c631fcb3f">sizes</a></div><div class="ttdeci">const int * sizes</div><div class="ttdef"><b>Definition:</b> core_c.h:437</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga67ea671a3582ce612ac3c281e067f480"><div class="ttname"><a href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a></div><div class="ttdeci">#define CV_EXPORTS_W</div><div class="ttdef"><b>Definition:</b> cvdef.h:444</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_ga7c963d5c0be2901e72c3762c1ddfcee6"><div class="ttname"><a href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a></div><div class="ttdeci">CvArr * corners</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:861</div></div>
+<div class="ttc" id="agroup__stitching_html_ga6a9061fa186238ec8cce707c0cf6ed66"><div class="ttname"><a href="group__stitching.html#ga6a9061fa186238ec8cce707c0cf6ed66">cv::detail::stitchingLogLevel</a></div><div class="ttdeci">CV_EXPORTS_W int &amp; stitchingLogLevel()</div></div>
+<div class="ttc" id="agroup__stitching_html_ga7de758260f93bd840c47184aef9b25a2"><div class="ttname"><a href="group__stitching.html#ga7de758260f93bd840c47184aef9b25a2">cv::detail::GraphEdge::GraphEdge</a></div><div class="ttdeci">GraphEdge(int from, int to, float weight)</div><div class="ttdef"><b>Definition:</b> util.hpp:82</div></div>
+<div class="ttc" id="agroup__stitching_html_ga93841e0f3a1fe81886b52ac3c6679afb"><div class="ttname"><a href="group__stitching.html#ga93841e0f3a1fe81886b52ac3c6679afb">cv::detail::resultRoiIntersection</a></div><div class="ttdeci">CV_EXPORTS_W Rect resultRoiIntersection(const std::vector&lt; Point &gt; &amp;corners, const std::vector&lt; Size &gt; &amp;sizes)</div></div>
+<div class="ttc" id="agroup__stitching_html_gaa0b786acdb85942dca5bc213d01ed407"><div class="ttname"><a href="group__stitching.html#gaa0b786acdb85942dca5bc213d01ed407">cv::detail::resultTl</a></div><div class="ttdeci">CV_EXPORTS_W Point resultTl(const std::vector&lt; Point &gt; &amp;corners)</div></div>
+<div class="ttc" id="agroup__stitching_html_gaac42e73783d5273c6e5511bf7e050ae8"><div class="ttname"><a href="group__stitching.html#gaac42e73783d5273c6e5511bf7e050ae8">cv::detail::selectRandomSubset</a></div><div class="ttdeci">CV_EXPORTS_W void selectRandomSubset(int count, int size, std::vector&lt; int &gt; &amp;subset)</div></div>
+<div class="ttc" id="agroup__stitching_html_gabe93812c6b9cf981a8a88edd39ccc5dc"><div class="ttname"><a href="group__stitching.html#gabe93812c6b9cf981a8a88edd39ccc5dc">cv::detail::overlapRoi</a></div><div class="ttdeci">CV_EXPORTS_W bool overlapRoi(Point tl1, Point tl2, Size sz1, Size sz2, Rect &amp;roi)</div></div>
+<div class="ttc" id="agroup__stitching_html_gaece3a23fa7334e2d852fc495f1848379"><div class="ttname"><a href="group__stitching.html#gaece3a23fa7334e2d852fc495f1848379">cv::detail::resultRoi</a></div><div class="ttdeci">CV_EXPORTS_W Rect resultRoi(const std::vector&lt; Point &gt; &amp;corners, const std::vector&lt; UMat &gt; &amp;images)</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_a1d8712b1cebaf6f8b49bc3bcf733f649"><div class="ttname"><a href="namespacecv.html#a1d8712b1cebaf6f8b49bc3bcf733f649">cv::operator&lt;</a></div><div class="ttdeci">GAPI_EXPORTS cv::GMat operator&lt;(const cv::GMat &amp;lhs, const cv::GMat &amp;rhs)</div></div>
+<div class="ttc" id="anamespacecv_html_a790ea3ffb583631718a89880b2cec3d1"><div class="ttname"><a href="namespacecv.html#a790ea3ffb583631718a89880b2cec3d1">cv::operator&gt;</a></div><div class="ttdeci">GAPI_EXPORTS cv::GMat operator&gt;(const cv::GMat &amp;lhs, const cv::GMat &amp;rhs)</div></div>
+<div class="ttc" id="aopencv2_2core_8hpp_html"><div class="ttname"><a href="opencv2_2core_8hpp.html">core.hpp</a></div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_graph_edge_html"><div class="ttname"><a href="structcv_1_1detail_1_1_graph_edge.html">cv::detail::GraphEdge</a></div><div class="ttdef"><b>Definition:</b> util.hpp:73</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_graph_edge_html_a7ee67c4025576238d703f2b51bdcaa51"><div class="ttname"><a href="structcv_1_1detail_1_1_graph_edge.html#a7ee67c4025576238d703f2b51bdcaa51">cv::detail::GraphEdge::to</a></div><div class="ttdeci">int to</div><div class="ttdef"><b>Definition:</b> util.hpp:78</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_graph_edge_html_a9efad8a7b27a03e6029a75413aed60ae"><div class="ttname"><a href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">cv::detail::GraphEdge::weight</a></div><div class="ttdeci">float weight</div><div class="ttdef"><b>Definition:</b> util.hpp:79</div></div>
+<div class="ttc" id="autil__inl_8hpp_html"><div class="ttname"><a href="util__inl_8hpp.html">util_inl.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_392c16801bb3eb3d8eeca03342365665.html">stitching</a></li><li class="navelem"><a class="el" href="dir_c5c8bdffa677d638b4f394af2ed47477.html">detail</a></li><li class="navelem"><a class="el" href="stitching_2detail_2util_8hpp.html">util.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

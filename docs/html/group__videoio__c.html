@@ -1,0 +1,1181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: C API for video I/O</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__videoio__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">C API for video I/O<div class="ingroups"><a class="el" href="group__videoio.html">Video I/O</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga394109074fab9bdca2ea45514b1946b7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a></td></tr>
+<tr class="memdesc:ga394109074fab9bdca2ea45514b1946b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" capture structure  <a href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga394109074fab9bdca2ea45514b1946b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga888ba48aa022b60aecf98a462aa1b638"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a></td></tr>
+<tr class="memdesc:ga888ba48aa022b60aecf98a462aa1b638"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" video file writer structure  <a href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga888ba48aa022b60aecf98a462aa1b638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga81cab760e486f32e9c518d88fda50528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a> (<a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> *) cvCreateFileCapture(const char *<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="memdesc:ga81cab760e486f32e9c518d88fda50528"><td class="mdescLeft">&#160;</td><td class="mdescRight">start capturing frames from video file  <a href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga81cab760e486f32e9c518d88fda50528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee2deb635b1c2ba647492fd2b7a2093e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gaee2deb635b1c2ba647492fd2b7a2093e">CVAPI</a> (int) cvGrabFrame(<a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> *capture)</td></tr>
+<tr class="memdesc:gaee2deb635b1c2ba647492fd2b7a2093e"><td class="mdescLeft">&#160;</td><td class="mdescRight">grab a frame, return 1 on success, 0 on fail.  <a href="group__videoio__c.html#gaee2deb635b1c2ba647492fd2b7a2093e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaee2deb635b1c2ba647492fd2b7a2093e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ee02d49f53d1bffa105b003988cb6db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga1ee02d49f53d1bffa105b003988cb6db">CVAPI</a> (<a class="el" href="group__core__c.html#ga95b2b850bce7cb368b8a3dc540debee3">IplImage</a> *) cvRetrieveFrame(<a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> *capture</td></tr>
+<tr class="memdesc:ga1ee02d49f53d1bffa105b003988cb6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the frame grabbed with cvGrabFrame(..)  <a href="group__videoio__c.html#ga1ee02d49f53d1bffa105b003988cb6db">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1ee02d49f53d1bffa105b003988cb6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ecc2faec8765245141b834c83d9bfa1"><td class="memItemLeft" align="right" valign="top">int streamIdx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga4ecc2faec8765245141b834c83d9bfa1">CV_DEFAULT</a> (0))</td></tr>
+<tr class="separator:ga4ecc2faec8765245141b834c83d9bfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7994447b15bb1eeacbf342259c5e015b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga7994447b15bb1eeacbf342259c5e015b">CVAPI</a> (<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>) cvReleaseCapture(<a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> **capture)</td></tr>
+<tr class="memdesc:ga7994447b15bb1eeacbf342259c5e015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop capturing/reading and free resources  <a href="group__videoio__c.html#ga7994447b15bb1eeacbf342259c5e015b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7994447b15bb1eeacbf342259c5e015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefcde78984bf74a2ef4062bfc989f175"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gaefcde78984bf74a2ef4062bfc989f175">CVAPI</a> (double) cvGetCaptureProperty(<a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> *capture</td></tr>
+<tr class="memdesc:gaefcde78984bf74a2ef4062bfc989f175"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve capture properties  <a href="group__videoio__c.html#gaefcde78984bf74a2ef4062bfc989f175">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaefcde78984bf74a2ef4062bfc989f175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6aae87cc673dfca4c586b373d1eb45c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga6aae87cc673dfca4c586b373d1eb45c0">CVAPI</a> (<a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a> *) cvCreateVideoWriter(const char *<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a></td></tr>
+<tr class="memdesc:ga6aae87cc673dfca4c586b373d1eb45c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize video file writer  <a href="group__videoio__c.html#ga6aae87cc673dfca4c586b373d1eb45c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6aae87cc673dfca4c586b373d1eb45c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2342b4114eef6675f281a365a58b3478"><td class="memItemLeft" align="right" valign="top">int double <a class="el" href="struct_cv_size.html">CvSize</a> int is_color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga2342b4114eef6675f281a365a58b3478">CV_DEFAULT</a> (1))</td></tr>
+<tr class="separator:ga2342b4114eef6675f281a365a58b3478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ga8c399265194069eb08b059fe98d8a545"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga8c399265194069eb08b059fe98d8a545">apiPreference</a></td></tr>
+<tr class="separator:ga8c399265194069eb08b059fe98d8a545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8635d9e852e1fa7a5720868b2df59427"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga8635d9e852e1fa7a5720868b2df59427">property_id</a></td></tr>
+<tr class="separator:ga8635d9e852e1fa7a5720868b2df59427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4670c92695d4327c21292905a803901"><td class="memItemLeft" align="right" valign="top">int double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a></td></tr>
+<tr class="separator:gad4670c92695d4327c21292905a803901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aa0a26434ee5817a5e37a4972bae0d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga9aa0a26434ee5817a5e37a4972bae0d8">fourcc</a></td></tr>
+<tr class="separator:ga9aa0a26434ee5817a5e37a4972bae0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbca5b692e9ace76ccf02d9c621ee228"><td class="memItemLeft" align="right" valign="top">int double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gadbca5b692e9ace76ccf02d9c621ee228">fps</a></td></tr>
+<tr class="separator:gadbca5b692e9ace76ccf02d9c621ee228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga058dbaebc483d4becfa7f75d2ed3dd1c"><td class="memItemLeft" align="right" valign="top">int double <a class="el" href="struct_cv_size.html">CvSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga058dbaebc483d4becfa7f75d2ed3dd1c">frame_size</a></td></tr>
+<tr class="separator:ga058dbaebc483d4becfa7f75d2ed3dd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga731049183fae0125c0b5d2940d461cf3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__core__c.html#ga95b2b850bce7cb368b8a3dc540debee3">IplImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a></td></tr>
+<tr class="separator:ga731049183fae0125c0b5d2940d461cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Obsolete functions/synonyms</h2></td></tr>
+<tr class="memitem:ga740fbcd0a6dc9a25e747ce3946491772"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga740fbcd0a6dc9a25e747ce3946491772">cvCaptureFromCAM</a>&#160;&#160;&#160;cvCreateCameraCapture</td></tr>
+<tr class="separator:ga740fbcd0a6dc9a25e747ce3946491772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga709ac3b8d05afd27c1d86f6636cf55fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga709ac3b8d05afd27c1d86f6636cf55fb">cvCaptureFromFile</a>&#160;&#160;&#160;cvCreateFileCapture</td></tr>
+<tr class="separator:ga709ac3b8d05afd27c1d86f6636cf55fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga710135adb524858e34858a447d03f507"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#ga710135adb524858e34858a447d03f507">cvCaptureFromAVI</a>&#160;&#160;&#160;<a class="el" href="group__videoio__c.html#ga709ac3b8d05afd27c1d86f6636cf55fb">cvCaptureFromFile</a></td></tr>
+<tr class="separator:ga710135adb524858e34858a447d03f507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea3f63afc666dc8e09293498c15128c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gaea3f63afc666dc8e09293498c15128c2">cvCreateAVIWriter</a>&#160;&#160;&#160;cvCreateVideoWriter</td></tr>
+<tr class="separator:gaea3f63afc666dc8e09293498c15128c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa251b74b997bc2ad92c424f96ecf82de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__c.html#gaa251b74b997bc2ad92c424f96ecf82de">cvWriteToAVI</a>&#160;&#160;&#160;cvWriteFrame</td></tr>
+<tr class="separator:gaa251b74b997bc2ad92c424f96ecf82de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Макросы</h2>
+<a id="ga710135adb524858e34858a447d03f507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga710135adb524858e34858a447d03f507">&#9670;&nbsp;</a></span>cvCaptureFromAVI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cvCaptureFromAVI&#160;&#160;&#160;<a class="el" href="group__videoio__c.html#ga709ac3b8d05afd27c1d86f6636cf55fb">cvCaptureFromFile</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000060">Уст.:</a></b></dt><dd>use cvCreateFileCapture() instead </dd></dl>
+
+</div>
+</div>
+<a id="ga740fbcd0a6dc9a25e747ce3946491772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga740fbcd0a6dc9a25e747ce3946491772">&#9670;&nbsp;</a></span>cvCaptureFromCAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cvCaptureFromCAM&#160;&#160;&#160;cvCreateCameraCapture</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000058">Уст.:</a></b></dt><dd>use cvCreateCameraCapture() instead </dd></dl>
+
+</div>
+</div>
+<a id="ga709ac3b8d05afd27c1d86f6636cf55fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga709ac3b8d05afd27c1d86f6636cf55fb">&#9670;&nbsp;</a></span>cvCaptureFromFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cvCaptureFromFile&#160;&#160;&#160;cvCreateFileCapture</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000059">Уст.:</a></b></dt><dd>use cvCreateFileCapture() instead </dd></dl>
+
+</div>
+</div>
+<a id="gaea3f63afc666dc8e09293498c15128c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea3f63afc666dc8e09293498c15128c2">&#9670;&nbsp;</a></span>cvCreateAVIWriter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cvCreateAVIWriter&#160;&#160;&#160;cvCreateVideoWriter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000061">Уст.:</a></b></dt><dd>use cvCreateVideoWriter() instead </dd></dl>
+
+</div>
+</div>
+<a id="gaa251b74b997bc2ad92c424f96ecf82de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa251b74b997bc2ad92c424f96ecf82de">&#9670;&nbsp;</a></span>cvWriteToAVI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cvWriteToAVI&#160;&#160;&#160;cvWriteFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000062">Уст.:</a></b></dt><dd>use cvWriteFrame() instead </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="ga394109074fab9bdca2ea45514b1946b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga394109074fab9bdca2ea45514b1946b7">&#9670;&nbsp;</a></span>CvCapture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"black box" capture structure </p>
+<p>In C++ use <a class="el" href="classcv_1_1_video_capture.html" title="Class for video capturing from video files, image sequences or cameras.">cv::VideoCapture</a> </p>
+
+</div>
+</div>
+<a id="ga888ba48aa022b60aecf98a462aa1b638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga888ba48aa022b60aecf98a462aa1b638">&#9670;&nbsp;</a></span>CvVideoWriter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a> <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"black box" video file writer structure </p>
+<p>In C++ use <a class="el" href="classcv_1_1_video_writer.html" title="Video writer class.">cv::VideoWriter</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga4ecc2faec8765245141b834c83d9bfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ecc2faec8765245141b834c83d9bfa1">&#9670;&nbsp;</a></span>CV_DEFAULT() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int streamIdx CV_DEFAULT </td>
+          <td>(</td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2342b4114eef6675f281a365a58b3478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2342b4114eef6675f281a365a58b3478">&#9670;&nbsp;</a></span>CV_DEFAULT() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int double <a class="el" href="struct_cv_size.html">CvSize</a> int is_color CV_DEFAULT </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga81cab760e486f32e9c518d88fda50528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81cab760e486f32e9c518d88fda50528">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>start capturing frames from video file </p>
+<p>start capturing frames from camera: index = camera_index + domain_offset (CV_CAP_*)</p>
+<p>start capturing frames from video file. allows specifying a preferred API to use </p>
+
+</div>
+</div>
+<a id="ga6aae87cc673dfca4c586b373d1eb45c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6aae87cc673dfca4c586b373d1eb45c0">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize video file writer </p>
+
+</div>
+</div>
+<a id="gaefcde78984bf74a2ef4062bfc989f175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefcde78984bf74a2ef4062bfc989f175">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retrieve capture properties </p>
+
+</div>
+</div>
+<a id="gaee2deb635b1c2ba647492fd2b7a2093e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee2deb635b1c2ba647492fd2b7a2093e">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>grab a frame, return 1 on success, 0 on fail. </p>
+<p>write frame to video file</p>
+<p>Return the type of the capturer (eg, <a class="el" href="videoio_2legacy_2constants__c_8h.html#a1812ab31015cef0a41c6d4f3ae07f13daa0008d5518630f11edcc89932faa4ae7">CV_CAP_VFW</a>, <a class="el" href="videoio_2legacy_2constants__c_8h.html#a1812ab31015cef0a41c6d4f3ae07f13da061243c2ad12fbd89518a4ca8c58f79f">CV_CAP_UNICAP</a>)</p>
+<p>set capture properties</p>
+<p>this function is thought to be fast</p>
+<p>It is unknown if created with <a class="el" href="videoio_2legacy_2constants__c_8h.html#a1812ab31015cef0a41c6d4f3ae07f13da8c6c1159fb332c7979612de8bcb91a24">CV_CAP_ANY</a> </p>
+
+</div>
+</div>
+<a id="ga1ee02d49f53d1bffa105b003988cb6db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ee02d49f53d1bffa105b003988cb6db">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__c.html#ga95b2b850bce7cb368b8a3dc540debee3">IplImage</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the frame grabbed with cvGrabFrame(..) </p>
+<p>Just a combination of cvGrabFrame and cvRetrieveFrame.</p>
+<p>This function may apply some frame processing like frame decompression, flipping etc. </p><dl class="section warning"><dt>Предупреждения</dt><dd>!!!DO NOT RELEASE or MODIFY the retrieved frame!!!</dd>
+<dd>
+!!!DO NOT RELEASE or MODIFY the retrieved frame!!! </dd></dl>
+
+</div>
+</div>
+<a id="ga7994447b15bb1eeacbf342259c5e015b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7994447b15bb1eeacbf342259c5e015b">&#9670;&nbsp;</a></span>CVAPI() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CVAPI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stop capturing/reading and free resources </p>
+<p>close video file writer</p>
+<p>stop capturing/reading and free resources</p>
+<p>close video file writer</p>
+<p>Draws contour outlines or filled interiors on the image.</p>
+<p>Calculates bounding box of text stroke (useful for alignment)</p>
+<p>Renders text stroke with specified font and color at specified location. <a class="el" href="struct_cv_font.html">CvFont</a> should be initialized with cvInitFont.</p>
+<p>Initializes font structure (OpenCV 1.x API).</p>
+<p>Draws one or more polygonal curves.</p>
+<p>Fills an area bounded by one or more arbitrary polygons.</p>
+<p>Fills convex or monotonous polygon.</p>
+<p>Draws ellipse outline, filled ellipse, elliptic arc or filled elliptic sector.</p>
+<p>Draws a circle with specified center and radius.</p>
+<p>Draws a rectangle specified by a <a class="el" href="struct_cv_rect.html">CvRect</a> structure.</p>
+<p>Draws a rectangle given two opposite corners of the rectangle (pt1 &amp; pt2)</p>
+<p>Draws 4-connected, 8-connected or antialiased line segment connecting two points.</p>
+<p>Fits a line into set of 2d or 3d points in a robust way (M-estimator technique)</p>
+<p>Finds a sparse set of points within the selected region that seem to be easy to track.</p>
+<p>Adjust corner position using some sort of gradient search.</p>
+<p>Harris corner detector:</p>
+<p>Calculates minimal eigenvalue for 2x2 gradient covariation matrix at every image pixel.</p>
+<p>Calculates eigen values and vectors of 2x2 gradient covariation matrix at every image pixel.</p>
+<p>Calculates constraint image for corner detection.</p>
+<p>Runs canny edge detector.</p>
+<p>Fills the connected component until the color difference gets large enough.</p>
+<p>Applies adaptive threshold to grayscale image.</p>
+<p>Applies distance transform to binary image.</p>
+<p>equalizes histogram of 8-bit single-channel image</p>
+<p>Divides one histogram by another.</p>
+<p>Locates a template within an image by using a histogram comparison.</p>
+<p>Calculates back project.</p>
+<p>Calculates array histogram.</p>
+<p>Calculates bayesian probabilistic histograms (each or src and dst is an array of <em>number</em> histograms.</p>
+<p>Copies a histogram.</p>
+<p>Thresholds the histogram.</p>
+<p>Normalizes the histogram.</p>
+<p>Finds the minimum and maximum histogram bins.</p>
+<p>Clears the histogram.</p>
+<p>Releases the histogram.</p>
+<p>Sets the bounds of the histogram bins.</p>
+<p>Finds coordinates of the box vertices.</p>
+<p>Initializes Freeman chain reader.</p>
+<p>Substitutes the last retrieved contour with the new one.</p>
+<p>Measures similarity between template and overlapped windows in the source image and fills the resultant image with the measurements.</p>
+<p>Retrieves quadrangle from the input array.</p>
+<p>Retrieves the rectangular image region with specified center from the input array.</p>
+<p>Calculates 7 Hu's invariants from precalculated spatial and central moments.</p>
+<p>Calculates all spatial and central moments up to the 3rd order.</p>
+<p>Performs complex morphological transformation.</p>
+<p>dilates input image (applies maximum filter) one or more times.</p>
+<p>erodes input image (applies minimum filter) one or more times. If element pointer is NULL, 3x3 rectangular element is used</p>
+<p>releases structuring element</p>
+<p>Performs forward or inverse log-polar image transform.</p>
+<p>Converts mapx &amp; mapy from floating-point to integer formats for cvRemap.</p>
+<p>Performs generic geometric transformation using the specified coordinate maps.</p>
+<p>Warps image with perspective (projective) transform.</p>
+<p>Warps image with affine transform.</p>
+<p>Resizes image (input array is resized to fit the destination array)</p>
+<p>Converts input array pixels from one color space to another.</p>
+<p>Calculates the image Laplacian: (d2/dx + d2/dy)I.</p>
+<p>Calculates an image derivative using generalized Sobel.</p>
+<p>Segments image using seed "markers".</p>
+<p>Filters image using meanshift algorithm.</p>
+<p>Releases pyramid.</p>
+<p>Up-samples image and smoothes the result with gaussian kernel.</p>
+<p>Smoothes the input image with gaussian kernel and then down-samples it.</p>
+<p>Finds integral image: SUM(X,Y) = <a class="el" href="group__imgproc__c.html#ga718e61ac54ab69a36c063fac0e4d9034">sum(x&lt;X,y&lt;Y)</a>I(x,y)</p>
+<p>Convolves an image with the kernel.</p>
+<p>Smooths the image in one of several ways.</p>
+<p>Adds image to accumulator with weights: acc = acc*(1-alpha) + image*alpha.</p>
+<p>Adds a product of two images to accumulator.</p>
+<p>Adds squared image to accumulator.</p>
+<p>Releases an object.</p>
+<p>Makes OpenCV use IPL functions for allocating IplImage and IplROI structures.</p>
+<p>Calculates the cross product of two 3D vectors.</p>
+<p>Fills an array with random numbers and updates the RNG state.</p>
+<p>Converts one array to another with optional linear transformation.</p>
+<p>Clears the array.</p>
+<p>Sets every element of an array to a given value.</p>
+<p>Copies one array to another.</p>
+<p>Retrieves low-level information about the array.</p>
+<p>Assigns user data to the array header.</p>
+<p>Releases array data.</p>
+<p>Allocates array data.</p>
+<p>Change a specific array element.</p>
+<p>Change the particular array element.</p>
+<p>Deallocates sparse array.</p>
+<p>Deallocates a matrix.</p>
+<p>Resets the image ROI to include the entire image and releases the ROI structure.</p>
+<p>Sets an image Region Of Interest (ROI) for a given rectangle.</p>
+<p>Sets the channel of interest in an IplImage.</p>
+<p>Deallocates the image header and the image data.</p>
+<p><code>free</code> wrapper. Here and further all the memory releasing functions (that all call cvFree) take double pointer in order to to clear pointer to the data after releasing it. Passing pointer to NULL pointer is Ok: nothing happens in this case</p>
+<p>This call is an analogue of : </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a> )</div>
+<div class="line">{</div>
+<div class="line">    iplDeallocate(*<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>, <a class="code" href="group__core__c.html#gaa68e757518e15a43a48d4bd57b035a3b">IPL_IMAGE_HEADER</a> | <a class="code" href="group__core__c.html#ga1838909abdbe19f2ca20c84c06b0a0ea">IPL_IMAGE_ROI</a>);</div>
+<div class="line">    *<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a> = 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__c_html_ga1838909abdbe19f2ca20c84c06b0a0ea"><div class="ttname"><a href="group__core__c.html#ga1838909abdbe19f2ca20c84c06b0a0ea">IPL_IMAGE_ROI</a></div><div class="ttdeci">#define IPL_IMAGE_ROI</div><div class="ttdef"><b>Definition:</b> types_c.h:411</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa68e757518e15a43a48d4bd57b035a3b"><div class="ttname"><a href="group__core__c.html#gaa68e757518e15a43a48d4bd57b035a3b">IPL_IMAGE_HEADER</a></div><div class="ttdeci">#define IPL_IMAGE_HEADER</div><div class="ttdef"><b>Definition:</b> types_c.h:409</div></div>
+<div class="ttc" id="agroup__highgui__c_html_gad62b16ab219ae2483e8a3d921c44cc97"><div class="ttname"><a href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a></div><div class="ttdeci">const CvArr * image</div><div class="ttdef"><b>Definition:</b> highgui_c.h:138</div></div>
+</div><!-- fragment --><p> but it does not use IPL functions by default (see the CV_TURN_ON_IPL_COMPATIBILITY macro). </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Double pointer to the image header</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This call is a shortened form of : </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(*<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a> )</div>
+<div class="line">{</div>
+<div class="line">    cvReleaseData(*<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>);</div>
+<div class="line">    cvReleaseImageHeader(<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Double pointer to the image header</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the ROI is set to NULL and the coi is <em>not</em> 0, the ROI is allocated. Most OpenCV functions do not* support the COI setting, so to process an individual image/matrix channel one may copy (via cvCopy or cvSplit) the channel to a separate image/matrix, process it and then copy the result back (via cvCopy or cvMerge) if needed. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>A pointer to the image header </td></tr>
+    <tr><td class="paramname">coi</td><td>The channel of interest. 0 - all channels are selected, 1 - first channel is selected, etc. Note that the channel indices become 1-based.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the original image ROI was NULL and the rect is not the whole image, the ROI structure is allocated.</p>
+<p>Most OpenCV functions support the use of ROI and treat the image rectangle as a separate image. For example, all of the pixel coordinates are counted from the top-left (or bottom-left) corner of the ROI, not the original image. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>A pointer to the image header </td></tr>
+    <tr><td class="paramname">rect</td><td>The ROI rectangle</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This produces a similar result to the following, but in addition it releases the ROI structure. : </p><div class="fragment"><div class="line">cvSetImageROI(<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>, <a class="code" href="group__core__c.html#gafaffdb9052823163862a88209f379921">cvRect</a>(0, 0, <a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>-&gt;width, <a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>-&gt;height ));</div>
+<div class="line">cvSetImageCOI(<a class="code" href="group__highgui__c.html#gad62b16ab219ae2483e8a3d921c44cc97">image</a>, 0);</div>
+<div class="ttc" id="agroup__core__c_html_gafaffdb9052823163862a88209f379921"><div class="ttname"><a href="group__core__c.html#gafaffdb9052823163862a88209f379921">cvRect</a></div><div class="ttdeci">CV_INLINE CvRect cvRect(int x, int y, int width, int height)</div><div class="ttdef"><b>Definition:</b> types_c.h:874</div></div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>A pointer to the image header</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function decrements the matrix data reference counter and deallocates matrix header. If the data reference counter is 0, it also deallocates the data. : </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(*<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a> )</div>
+<div class="line">    <a class="code" href="group__core__c.html#ga67c50b750b763270b8330a18b3172c85">cvDecRefData</a>(*<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="line"><a class="code" href="group__core__c.html#ga0c5b55bdfff212be3e40c0cb38507e7f">cvFree</a>((<span class="keywordtype">void</span>**)<a class="code" href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a>);</div>
+<div class="ttc" id="agroup__core__c_html_ga0c5b55bdfff212be3e40c0cb38507e7f"><div class="ttname"><a href="group__core__c.html#ga0c5b55bdfff212be3e40c0cb38507e7f">cvFree</a></div><div class="ttdeci">#define cvFree(ptr)</div><div class="ttdef"><b>Definition:</b> core_c.h:89</div></div>
+<div class="ttc" id="agroup__core__c_html_ga61fed56cb531d5cdb7d162007cc02132"><div class="ttname"><a href="group__core__c.html#ga61fed56cb531d5cdb7d162007cc02132">mat</a></div><div class="ttdeci">CvArr const CvMat * mat</div><div class="ttdef"><b>Definition:</b> core_c.h:1305</div></div>
+<div class="ttc" id="agroup__core__c_html_ga67c50b750b763270b8330a18b3172c85"><div class="ttname"><a href="group__core__c.html#ga67c50b750b763270b8330a18b3172c85">cvDecRefData</a></div><div class="ttdeci">CV_INLINE void cvDecRefData(CvArr *arr)</div><div class="ttdoc">Decrements an array data reference counter.</div><div class="ttdef"><b>Definition:</b> core_c.h:298</div></div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>Double pointer to the matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>low-level scalar &lt;-&gt; raw data conversion functions</p>
+<p>The function releases the sparse array and clears the array pointer upon exit. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>Double pointer to the array</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The functions assign the new value to a particular array element. In the case of a sparse array the functions create the node if it does not exist yet. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Input array </td></tr>
+    <tr><td class="paramname">idx0</td><td>The first zero-based component of the element index </td></tr>
+    <tr><td class="paramname">value</td><td>The assigned value</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.</p>
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Input array </td></tr>
+    <tr><td class="paramname">idx</td><td>Array of the element indices </td></tr>
+    <tr><td class="paramname">value</td><td>The assigned value</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The functions assign a new value to a specific element of a single-channel array. If the array has multiple channels, a runtime error is raised. Note that the Set*D function can be used safely for both single-channel and multiple-channel arrays, though they are a bit slower.</p>
+<p>In the case of a sparse array the functions create the node if it does not yet exist. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Input array </td></tr>
+    <tr><td class="paramname">idx0</td><td>The first zero-based component of the element index </td></tr>
+    <tr><td class="paramname">value</td><td>The assigned value</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>clears element of ND dense array, in case of sparse arrays it deletes the specified node</p>
+<p>Repeats source 2d array several times in both horizontal and vertical direction to fill destination array</p>
+<p>The function allocates image, matrix or multi-dimensional dense array data. Note that in the case of matrix types OpenCV allocation functions are used. In the case of IplImage they are used unless <a class="el" href="group__core__c.html#ga19f3f877176395658850a825d2ef4db4">CV_TURN_ON_IPL_COMPATIBILITY()</a> has been called before. In the latter case IPL functions are used to allocate the data. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array header</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function releases the array data. In the case of <a class="el" href="struct_cv_mat.html">CvMat</a> or <a class="el" href="struct_cv_mat_n_d.html">CvMatND</a> it simply calls <a class="el" href="group__core__c.html#ga67c50b750b763270b8330a18b3172c85" title="Decrements an array data reference counter.">cvDecRefData()</a>, that is the function can not deallocate external data. See also the note to cvCreateData . </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array header</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function assigns user data to the array header. Header should be initialized before using cvCreateMatHeader, cvCreateImageHeader, cvCreateMatNDHeader, cvInitMatHeader, cvInitImageHeader or cvInitMatNDHeader. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array header </td></tr>
+    <tr><td class="paramname">data</td><td>User data </td></tr>
+    <tr><td class="paramname">step</td><td>Full row length in bytes</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function fills output variables with low-level information about the array data. All output</p>
+<p>parameters are optional, so some of the pointers may be set to NULL. If the array is IplImage with ROI set, the parameters of ROI are returned.</p>
+<p>The following example shows how to get access to array elements. It computes absolute values of the array elements : </p><div class="fragment"><div class="line"><span class="keywordtype">float</span>* <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>;</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>;</div>
+<div class="line"><a class="code" href="struct_cv_size.html">CvSize</a> <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>;</div>
+<div class="line"> </div>
+<div class="line">cvGetRawData(array, (<a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>**)&amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>, &amp;<a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>, &amp;<a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>);</div>
+<div class="line"><a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a> /= <span class="keyword">sizeof</span>(<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>[0]);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a> = 0; <a class="code" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a> &lt; <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>.<a class="code" href="struct_cv_size.html#ac743399a59a7a2f302091b9180d23673">height</a>; <a class="code" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>++, <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a> += <a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a> )</div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a> = 0; <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a> &lt; <a class="code" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>.<a class="code" href="struct_cv_size.html#a2b1a1518e624c74c5a0e24c6cc1c3170">width</a>; <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>++ )</div>
+<div class="line">        <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>[<a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>] = (<span class="keywordtype">float</span>)fabs(<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>[<a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>]);</div>
+<div class="ttc" id="agroup__core__c_html_ga854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a></div><div class="ttdeci">CvSize size</div><div class="ttdef"><b>Definition:</b> core_c.h:109</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa7cdf40a6d11ff4cbc59e7cebd6857df"><div class="ttname"><a href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a></div><div class="ttdeci">void int step</div><div class="ttdef"><b>Definition:</b> core_c.h:902</div></div>
+<div class="ttc" id="agroup__core__c_html_gacd1647952fba31484ea63d6f1140e509"><div class="ttname"><a href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> core_c.h:424</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> interface.h:51</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> highgui_c.h:204</div></div>
+<div class="ttc" id="agroup__highgui__c_html_gaf1202c02b14870c18fb3a1da73e9e7c7"><div class="ttname"><a href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a></div><div class="ttdeci">int int y</div><div class="ttdef"><b>Definition:</b> highgui_c.h:204</div></div>
+<div class="ttc" id="astruct_cv_size_html"><div class="ttname"><a href="struct_cv_size.html">CvSize</a></div><div class="ttdef"><b>Definition:</b> types_c.h:1170</div></div>
+<div class="ttc" id="astruct_cv_size_html_a2b1a1518e624c74c5a0e24c6cc1c3170"><div class="ttname"><a href="struct_cv_size.html#a2b1a1518e624c74c5a0e24c6cc1c3170">CvSize::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> types_c.h:1171</div></div>
+<div class="ttc" id="astruct_cv_size_html_ac743399a59a7a2f302091b9180d23673"><div class="ttname"><a href="struct_cv_size.html#ac743399a59a7a2f302091b9180d23673">CvSize::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> types_c.h:1172</div></div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array header </td></tr>
+    <tr><td class="paramname">data</td><td>Output pointer to the whole image origin or ROI origin if ROI is set </td></tr>
+    <tr><td class="paramname">step</td><td>Output full row length in bytes </td></tr>
+    <tr><td class="paramname">roi_size</td><td>Output ROI size</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function copies selected elements from an input array to an output array:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \texttt{src} (I) \quad \text{if} \quad \texttt{mask} (I) \ne 0.\]" src="form_238.png"/>
+</p>
+<p>If any of the passed arrays is of IplImage type, then its ROI and COI fields are used. Both arrays must have the same type, the same number of dimensions, and the same size. The function can also copy sparse arrays (mask is not supported in this case). </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source array </td></tr>
+    <tr><td class="paramname">dst</td><td>The destination array </td></tr>
+    <tr><td class="paramname">mask</td><td>Operation mask, 8-bit single channel array; specifies elements of the destination array to be changed</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function copies the scalar value to every selected element of the destination array: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{arr} (I)= \texttt{value} \quad \text{if} \quad \texttt{mask} (I) \ne 0\]" src="form_239.png"/>
+</p>
+<p> If array arr is of IplImage type, then is ROI used, but COI must not be set. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The destination array </td></tr>
+    <tr><td class="paramname">value</td><td>Fill value </td></tr>
+    <tr><td class="paramname">mask</td><td>Operation mask, 8-bit single channel array; specifies elements of the destination array to be changed</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function clears the array. In the case of dense arrays (<a class="el" href="struct_cv_mat.html">CvMat</a>, <a class="el" href="struct_cv_mat_n_d.html">CvMatND</a> or IplImage), <a class="el" href="group__core__c.html#ga376f499e3308f2a0e462fead0639e2a7">cvZero(array)</a> is equivalent to cvSet(array,cvScalarAll(0),0). In the case of sparse arrays all the elements are removed. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array to be cleared</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Splits a multi-channel array into the set of single-channel arrays or extracts particular [color] plane</p>
+<p>Merges a set of single-channel arrays into the single multi-channel array or inserts one particular [color] plane to the array</p>
+<p>Copies several channels from input arrays to certain channels of output arrays</p>
+<p>The function has several different purposes, and thus has several different names. It copies one array to another with optional scaling, which is performed first, and/or optional type conversion, performed after:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I) = \texttt{scale} \texttt{src} (I) + ( \texttt{shift} _0, \texttt{shift} _1,...)\]" src="form_240.png"/>
+</p>
+<p>All the channels of multi-channel arrays are processed independently.</p>
+<p>The type of conversion is done with rounding and saturation, that is if the result of scaling + conversion can not be represented exactly by a value of the destination array element type, it is set to the nearest representable value on the real axis. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source array </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination array </td></tr>
+    <tr><td class="paramname">scale</td><td>Scale factor </td></tr>
+    <tr><td class="paramname">shift</td><td>Value added to the scaled source array elements</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Performs linear transformation on every source array element, stores absolute value of the result: dst(x,y,c) = abs(scale*src(x,y,c)+shift). destination array must have 8u type. In other cases one may use cvConvertScale + cvAbsDiffS</p>
+<p>dst(mask) = src1(mask) + src2(mask)</p>
+<p>dst(mask) = src(mask) + value</p>
+<p>dst(mask) = src1(mask) - src2(mask)</p>
+<p>dst(mask) = value - src(mask)</p>
+<p>dst(idx) = src1(idx) * src2(idx) * scale (scaled element-wise multiplication of 2 arrays)</p>
+<p>element-wise division/inversion with scaling: dst(idx) = src1(idx) * scale / src2(idx) or dst(idx) = scale / src2(idx) if src1 == 0</p>
+<p>dst = src1 * scale + src2</p>
+<p>dst = src1 * alpha + src2 * beta + gamma</p>
+<p>dst(idx) = src1(idx) &amp; src2(idx)</p>
+<p>dst(idx) = src(idx) &amp; value</p>
+<p>dst(idx) = src1(idx) | src2(idx)</p>
+<p>dst(idx) = src(idx) | value</p>
+<p>dst(idx) = src1(idx) ^ src2(idx)</p>
+<p>dst(idx) = src(idx) ^ value</p>
+<p>dst(idx) = ~src(idx)</p>
+<p>dst(idx) = lower(idx) &lt;= src(idx) &lt; upper(idx)</p>
+<p>dst(idx) = lower &lt;= src(idx) &lt; upper</p>
+<p>The comparison operation support single-channel arrays only. Destination image should be 8uC1 or 8sC1 dst(idx) = src1(idx) <em>cmp_op</em> src2(idx)</p>
+<p>dst(idx) = src1(idx) <em>cmp_op</em> value</p>
+<p>dst(idx) = min(src1(idx),src2(idx))</p>
+<p>dst(idx) = max(src1(idx),src2(idx))</p>
+<p>dst(idx) = min(src(idx),value)</p>
+<p>dst(idx) = max(src(idx),value)</p>
+<p>dst(x,y,c) = abs(src1(x,y,c) - src2(x,y,c))</p>
+<p>dst(x,y,c) = abs(src(x,y,c) - value(c))</p>
+<p>Does cartesian-&gt;polar coordinates conversion. Either of output components (magnitude or angle) is optional</p>
+<p>Does polar-&gt;cartesian coordinates conversion. Either of output components (magnitude or angle) is optional. If magnitude is missing it is assumed to be all 1's</p>
+<p>Does powering: dst(idx) = src(idx)^power</p>
+<p>Does exponention: dst(idx) = exp(src(idx)). Overflow is not handled yet. Underflow is handled. Maximal relative error is ~7e-6 for single-precision input</p>
+<p>Calculates natural logarithms: dst(idx) = log(abs(src(idx))). Logarithm of 0 gives large negative number(~-700) Maximal relative error is ~3e-7 for single-precision output</p>
+<p>The function fills the destination array with uniformly or normally distributed random numbers. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng</td><td>CvRNG state initialized by cvRNG </td></tr>
+    <tr><td class="paramname">arr</td><td>The destination array </td></tr>
+    <tr><td class="paramname">dist_type</td><td>Distribution type <blockquote class="doxtable">
+<p>- <b>CV_RAND_UNI</b> uniform distribution</p><ul>
+<li><b>CV_RAND_NORMAL</b> normal or Gaussian distribution </li>
+</ul>
+</blockquote>
+</td></tr>
+    <tr><td class="paramname">param1</td><td>The first parameter of the distribution. In the case of a uniform distribution it is the inclusive lower boundary of the random numbers range. In the case of a normal distribution it is the mean value of the random numbers. </td></tr>
+    <tr><td class="paramname">param2</td><td>The second parameter of the distribution. In the case of a uniform distribution it is the exclusive upper boundary of the random numbers range. In the case of a normal distribution it is the standard deviation of the random numbers. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd>randu, randn, RNG::fill.</dd></dl>
+<p>Finds all real and complex roots of a polynomial equation</p>
+<p>The function calculates the cross product of two 3D vectors: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \texttt{src1} \times \texttt{src2}\]" src="form_243.png"/>
+</p>
+<p> or: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} \texttt{dst} _1 = \texttt{src1} _2 \texttt{src2} _3 - \texttt{src1} _3 \texttt{src2} _2 \\ \texttt{dst} _2 = \texttt{src1} _3 \texttt{src2} _1 - \texttt{src1} _1 \texttt{src2} _3 \\ \texttt{dst} _3 = \texttt{src1} _1 \texttt{src2} _2 - \texttt{src1} _2 \texttt{src2} _1 \end{array}\]" src="form_244.png"/>
+</p>
+ <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>The first source vector </td></tr>
+    <tr><td class="paramname">src2</td><td>The second source vector </td></tr>
+    <tr><td class="paramname">dst</td><td>The destination vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Extended matrix transform: dst = alpha*op(A)*op(B) + beta*op(C), where op(X) is X or X^T</p>
+<p>Transforms each element of source array and stores resultant vectors in destination array</p>
+<p>Does perspective transform on every element of input array</p>
+<p>Calculates (A-delta)*(A-delta)^T (order=0) or (A-delta)^T*(A-delta) (order=1)</p>
+<p>Transposes matrix. Square matrices can be transposed in-place</p>
+<p>Completes the symmetric matrix from the lower (LtoR=0) or from the upper (LtoR!=0) part</p>
+<p>Mirror array data around horizontal (flip=0), vertical (flip=1) or both(flip=-1) axises: cvFlip(src) flips images vertically and sequences horizontally (inplace)</p>
+<p>Performs Singular Value Decomposition of a matrix</p>
+<p>Performs Singular Value Back Substitution (solves A*X = B): flags must be the same as in cvSVD</p>
+<p>Finds eigen values and vectors of a symmetric matrix</p>
+<ul>
+<li>Finds selected eigen values and vectors of a symmetric matrix *&zwj;/ Makes an identity matrix (mat_ij = i == j)</li>
+</ul>
+<p>Calculates covariation matrix for a set of vectors </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__core__c.html#core_c_CovarFlags">flags</a></dd></dl>
+<p>Calculates mean and standard deviation of pixel values</p>
+<p>Finds global minimum, maximum and their positions</p>
+<dl class="section see"><dt>См. также</dt><dd>ref core_c_NormFlags "flags"</dd>
+<dd>
+<a class="el" href="group__core__c.html#core_c_ReduceFlags">flags</a></dd></dl>
+<p>Discrete Fourier Transform: complex-&gt;complex, real-&gt;ccs (forward), ccs-&gt;real (inverse) </p><dl class="section see"><dt>См. также</dt><dd>core_c_DftFlags "flags"</dd></dl>
+<p>Multiply results of DFTs: DFT(X)*DFT(Y) or DFT(X)*conj(DFT(Y)) </p><dl class="section see"><dt>См. также</dt><dd>core_c_DftFlags "flags"</dd></dl>
+<p>Discrete Cosine Transform </p><dl class="section see"><dt>См. также</dt><dd>core_c_DftFlags "flags"</dd></dl>
+<p>Releases memory storage. All the children of a parent must be released before the parent. A child storage returns all the blocks to parent when it is released</p>
+<p>Clears memory storage. This is the only way(!!!) (besides cvRestoreMemStoragePos) to reuse memory allocated for the storage - cvClearSeq,cvClearSet ... do not free any memory. A child storage returns all the blocks to the parent when it is cleared</p>
+<p>Remember a storage "free memory" position</p>
+<p>Restore a storage "free memory" position</p>
+<p>Changes default size (granularity) of sequence blocks. The default size is ~1Kbyte</p>
+<p>Removes the last element from sequence and optionally saves it</p>
+<p>Removes the first element from sequence and optioanally saves it</p>
+<p>Adds several new elements to the end of sequence</p>
+<p>Removes several elements from the end of sequence and optionally saves them</p>
+<p>Removes specified sequence element</p>
+<p>Removes all the elements from the sequence. The freed memory can be reused later only by the same sequence unless cvClearMemStorage or cvRestoreMemStoragePos is called</p>
+<p>Initializes sequence writer. The new elements will be added to the end of sequence</p>
+<p>Combination of cvCreateSeq and cvStartAppendToSeq</p>
+<p>Updates sequence header. May be useful to get access to some of previously written elements via cvGetSeqElem or sequence reader</p>
+<p>Initializes sequence reader. The sequence can be read in forward or backward direction</p>
+<p>Changes sequence reader position. It may seek to an absolute or to relative to the current position</p>
+<p>Removes sequence slice</p>
+<p>Inserts a sequence or array into another sequence</p>
+<p>Sorts sequence in-place given element comparison function</p>
+<p>Reverses order of sequence elements in-place</p>
+<p>Removes element from the set by its index <br  />
+</p>
+<p>Removes all the elements from the set</p>
+<p>Remove edge connecting two vertices</p>
+<p>Remove all vertices and edges from the graph</p>
+<p>Releases graph scanner.</p>
+<p>Does look-up transformation. Elements of the source array (that should be 8uC1 or 8sC1) are used as indexes in lutarr 256-element table</p>
+<p>Inserts sequence into tree with specified "parent" sequence. If parent is equal to frame (e.g. the most external contour), then added contour will have null pointer to parent.</p>
+<p>Removes contour from tree (together with the contour children).</p>
+<p>Normally, the function is not called directly. Instead, a simple macro <a class="el" href="group__core__c.html#ga19f3f877176395658850a825d2ef4db4">CV_TURN_ON_IPL_COMPATIBILITY()</a> is used that calls cvSetIPLAllocators and passes there pointers to IPL allocation functions. : </p><div class="fragment"><div class="line">...</div>
+<div class="line">CV_TURN_ON_IPL_COMPATIBILITY()</div>
+<div class="line">...</div>
+</div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">create_header</td><td>pointer to a function, creating IPL image header. </td></tr>
+    <tr><td class="paramname">allocate_data</td><td>pointer to a function, allocating IPL image data. </td></tr>
+    <tr><td class="paramname">deallocate</td><td>pointer to a function, deallocating IPL image. </td></tr>
+    <tr><td class="paramname">create_roi</td><td>pointer to a function, creating IPL image ROI (i.e. Region of Interest). </td></tr>
+    <tr><td class="paramname">clone_image</td><td>pointer to a function, cloning an IPL image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function finds the type of a given object and calls release with the double pointer. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">struct_ptr</td><td>Double pointer to the object</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets error status silently</p>
+<p>Sets error status and performs some additional actions (displaying message box, writing message to stderr, terminating application etc.) depending on the current error mode</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__motion.html#ga56941ef1a4988437ab537991eaa9fdf5" title="Adds the square of a source image to the accumulator image.">cv::accumulateSquare</a></dd>
+<dd>
+<a class="el" href="group__imgproc__motion.html#gac888a8d70f2249e4947b73eae80de6c0" title="Adds the per-element product of two input images to the accumulator image.">cv::accumulateProduct</a></dd>
+<dd>
+<a class="el" href="group__imgproc__motion.html#ga5dfa7168a4d2404f80382949665fd84e" title="Updates a running average.">cv::accumulateWeighted</a></dd></dl>
+<p>Copies source 2D array inside of the larger destination array and makes a border of the specified type (IPL_BORDER_*) around the copied area.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source image </td></tr>
+    <tr><td class="paramname">dst</td><td>The destination image </td></tr>
+    <tr><td class="paramname">smoothtype</td><td>Type of the smoothing, see SmoothMethod_c </td></tr>
+    <tr><td class="paramname">size1</td><td>The first parameter of the smoothing operation, the aperture width. Must be a positive odd number (1, 3, 5, ...) </td></tr>
+    <tr><td class="paramname">size2</td><td>The second parameter of the smoothing operation, the aperture height. Ignored by CV_MEDIAN and CV_BILATERAL methods. In the case of simple scaled/non-scaled and Gaussian blur if size2 is zero, it is set to size1. Otherwise it must be a positive odd number. </td></tr>
+    <tr><td class="paramname">sigma1</td><td>In the case of a Gaussian parameter this parameter may specify Gaussian <img class="formulaInl" alt="$\sigma$" src="form_649.png"/> (standard deviation). If it is zero, it is calculated from the kernel size: <p class="formulaDsp">
+<img class="formulaDsp" alt="\[\sigma = 0.3 (n/2 - 1) + 0.8 \quad \text{where} \quad n= \begin{array}{l l} \mbox{\texttt{size1} for horizontal kernel} \\ \mbox{\texttt{size2} for vertical kernel} \end{array}\]" src="form_650.png"/>
+</p>
+ Using standard sigma for small kernels ( <img class="formulaInl" alt="$3\times 3$" src="form_601.png"/> to <img class="formulaInl" alt="$7\times 7$" src="form_651.png"/> ) gives better speed. If sigma1 is not zero, while size1 and size2 are zeros, the kernel size is calculated from the sigma (to provide accurate enough operation). </td></tr>
+    <tr><td class="paramname">sigma2</td><td>additional parameter for bilateral filtering</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga8972c822f378752101e8ed1bb357f48a" title="Blurs an image using a Gaussian filter.">cv::GaussianBlur</a>, <a class="el" href="group__imgproc__filter.html#gab92678366adf9d129460eff60e71afc6" title="Blurs an image using the normalized box filter.">cv::blur</a>, <a class="el" href="group__imgproc__filter.html#gad7c87bbc46b97e7eafa71357916ab568" title="Blurs an image using the median filter.">cv::medianBlur</a>, <a class="el" href="group__imgproc__filter.html#ga0373f92a136e10e9ec7c90a82032a332" title="Applies the bilateral filter to an image.">cv::bilateralFilter</a>.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image. </td></tr>
+    <tr><td class="paramname">dst</td><td>output image of the same size and the same number of channels as src. </td></tr>
+    <tr><td class="paramname">kernel</td><td>convolution kernel (or rather a correlation kernel), a single-channel floating point matrix; if you want to apply different kernels to different channels, split the image into separate color planes using split and process them individually. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor of the kernel that indicates the relative position of a filtered point within the kernel; the anchor should lie within the kernel; default value (-1,-1) means that the anchor is at the kernel center.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga23f5b640872e9a37da44521889cbd9aa" title="Convolves an image with the kernel.">cv::filter2D</a></dd>
+<dd>
+<a class="el" href="group__imgproc__misc.html#ga7ab63567aec107648ebf3000e4da2645">cv::integral</a></dd></dl>
+<p>dst_width = floor(src_width/2)[+1], dst_height = floor(src_height/2)[+1] </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga01a53b03caf42fd5f6edd0c7142134b5" title="Blurs an image and downsamples it.">cv::pyrDown</a></dd></dl>
+<p>dst_width = src_width*2, dst_height = src_height*2 </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gadebc06f43ad2051c8b6d989f21be80aa" title="Upsamples an image and then blurs it.">cv::pyrUp</a></dd>
+<dd>
+<a class="el" href="group__imgproc__filter.html#ga088733b9e896e51c1044ab17155228e8" title="Performs initial step of meanshift segmentation of an image.">cv::pyrMeanShiftFiltering</a></dd>
+<dd>
+<a class="el" href="group__imgproc__misc.html#ga2ca35988e63d61ad5ef85769e612205d" title="Performs a marker-based image segmentation using the watershed algorithm.">cv::watershed</a></dd></dl>
+<p>(aperture_size = 1,3,5,7) or Scharr (aperture_size = -1) operator. Scharr can be used only for the first dx or dy derivative </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#ga40f37c24a6f7a36dfe7c8a22fa2f7b7f" title="Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.">cv::Sobel</a></dd>
+<dd>
+<a class="el" href="group__imgproc__filter.html#gaf33f59c828ca700ad7507ed10725414b" title="Calculates the Laplacian of an image.">cv::Laplacian</a></dd>
+<dd>
+<a class="el" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd" title="Converts an image from one color space to another.">cv::cvtColor</a></dd>
+<dd>
+<a class="el" href="group__imgproc__transform.html#gab636441be60a7aae25cd95e42e642266" title="Resizes an image.">cv::resize</a></dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>::cvGetQuadrangleSubPix is similar to ::cvWarpAffine, but the outliers are extrapolated using replication border mode. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__transform.html#ga19d1840d8576c7552c90c113d43c5472" title="Applies an affine transformation to an image.">cv::warpAffine</a></dd>
+<dd>
+<a class="el" href="group__imgproc__transform.html#ga6da39cda17c3c822200e8715d8d74c99" title="Applies a perspective transformation to an image.">cv::warpPerspective</a></dd>
+<dd>
+<a class="el" href="group__imgproc__transform.html#ga54393bdaf5e3f3b7b4113d134b9b5ed2" title="Applies a generic geometrical transformation to an image.">cv::remap</a></dd>
+<dd>
+<a class="el" href="group__imgproc__transform.html#gaf13dc9c56024d85dc71051046866a62d" title="Converts image transformation maps from one representation to another.">cv::convertMaps</a></dd>
+<dd>
+<a class="el" href="group__imgproc__transform.html#ga8548cfb1caa19c485abf694f4e18fc87" title="Remaps an image to polar or semilog-polar coordinates space.">cv::warpPolar</a></dd></dl>
+<p>Performs forward or inverse linear-polar image transform </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__transform.html#ga8548cfb1caa19c485abf694f4e18fc87" title="Remaps an image to polar or semilog-polar coordinates space.">cv::warpPolar</a></dd>
+<dd>
+cvCreateStructuringElementEx</dd>
+<dd>
+<a class="el" href="group__imgproc__filter.html#ga14463f127947355033f323c71c3a5a82" title="Erodes an image by using a specific structuring element.">cv::erode</a></dd></dl>
+<p>If element pointer is NULL, 3x3 rectangular element is used </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__filter.html#gaf226304189a1d4dc4eb9cebb6d25cdec" title="Dilates an image by using a specific structuring element.">cv::dilate</a></dd>
+<dd>
+<a class="el" href="group__imgproc__filter.html#ga44a84dbc53d0913bc930c6cc7826e8c9" title="Performs advanced morphological transformations.">cv::morphologyEx</a></dd>
+<dd>
+<a class="el" href="group__imgproc__shape.html#ga32cdf64ff9e8fbf019de3f53a430fb15" title="Calculates all of the moments up to the third order of a polygon or rasterized shape.">cv::moments</a></dd>
+<dd>
+<a class="el" href="group__imgproc__shape.html#ga0556712e37566ce295038f19f4f50f9a" title="Calculates seven Hu invariants.">cv::HuMoments</a></dd></dl>
+<p>dst(x,y) &lt;- src(x + center.x - dst_width/2, y + center.y - dst_height/2). Values of pixels with fractional coordinates are retrieved using bilinear interpolation </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__transform.html#gaed86cdbae22f3e635204da86f4b87a9a" title="Retrieves a pixel rectangle from an image with sub-pixel accuracy.">cv::getRectSubPix</a></dd></dl>
+<p>matrixarr = ( a11 a12 | b1 ) dst(x,y) &lt;- src(A[x y]' + b) ( a21 a22 | b2 ) (bilinear interpolation is used to retrieve pixels with fractional coordinates) </p><dl class="section see"><dt>См. также</dt><dd>cvWarpAffine</dd>
+<dd>
+<a class="el" href="group__imgproc__object.html#ga7d22b26af8e9b5380550847b1edb514c" title="Compares a template against overlapped image regions.">cv::matchTemplate</a></dd></dl>
+<p>(if the substitutor is null, the last retrieved contour is removed from the tree) </p><dl class="section see"><dt>См. также</dt><dd>cvFindContours</dd></dl>
+<p>The reader is used to iteratively get coordinates of all the chain points. If the Freeman codes should be read as is, a simple sequence reader should be used </p><dl class="section see"><dt>См. также</dt><dd>cvApproxChains</dd></dl>
+<p>This is a standalone function for setting bin ranges in the histogram. For a more detailed description of the parameters ranges and uniform, see the :ocvCalcHist function that can initialize the ranges as well. Ranges for the histogram bins must be set before the histogram is calculated or the backproject of the histogram is calculated.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Histogram. </td></tr>
+    <tr><td class="paramname">ranges</td><td>Array of bin ranges arrays. See :ocvCreateHist for details. </td></tr>
+    <tr><td class="paramname">uniform</td><td>Uniformity flag. See :ocvCreateHist for details.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function releases the histogram (header and the data). The pointer to the histogram is cleared by the function. If *hist pointer is already NULL, the function does nothing.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Double pointer to the released histogram.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function sets all of the histogram bins to 0 in case of a dense histogram and removes all histogram bins in case of a sparse array.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Histogram.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function finds the minimum and maximum histogram bins and their positions. All of output arguments are optional. Among several extremas with the same value the ones with the minimum index (in the lexicographical order) are returned. In case of several maximums or minimums, the earliest in the lexicographical order (extrema locations) is returned.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Histogram. </td></tr>
+    <tr><td class="paramname">min_value</td><td>Pointer to the minimum value of the histogram. </td></tr>
+    <tr><td class="paramname">max_value</td><td>Pointer to the maximum value of the histogram. </td></tr>
+    <tr><td class="paramname">min_idx</td><td>Pointer to the array of coordinates for the minimum. </td></tr>
+    <tr><td class="paramname">max_idx</td><td>Pointer to the array of coordinates for the maximum.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function normalizes the histogram bins by scaling them so that the sum of the bins becomes equal to factor.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Pointer to the histogram. </td></tr>
+    <tr><td class="paramname">factor</td><td>Normalization factor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function clears histogram bins that are below the specified threshold.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist</td><td>Pointer to the histogram. </td></tr>
+    <tr><td class="paramname">threshold</td><td>Threshold level.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function makes a copy of the histogram. If the second histogram pointer *dst is NULL, a new histogram of the same size as src is created. Otherwise, both histograms must have equal types and sizes. Then the function copies the bin values of the source histogram to the destination histogram and sets the same bin value ranges as in src.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source histogram. </td></tr>
+    <tr><td class="paramname">dst</td><td>Pointer to the destination histogram.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__hist.html#gae40ecb58a10f17a5452ef8df0b2c0cf8" title="Calculates a histogram of a set of arrays.">cv::calcHist</a></dd>
+<dd>
+<a class="el" href="group__imgproc__c.html#gae842717d2116ce52fac4727bd02d4eb0">cvCalcBackProject</a>, <a class="el" href="group__imgproc__hist.html#gae248bda5f5c01d847fcdfac7b908bbcc" title="Calculates the back projection of a histogram.">cv::calcBackProject</a></dd></dl>
+<p>The function calculates the back projection by comparing histograms of the source image patches with the given histogram. The function is similar to matchTemplate, but instead of comparing the raster patch with all its possible positions within the search window, the function CalcBackProjectPatch compares histograms. See the algorithm diagram below:</p>
+<p><img src="pics/backprojectpatch.png" alt="image" class="inline"/></p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Source images (though, you may pass CvMat** as well). </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image. </td></tr>
+    <tr><td class="paramname">range</td><td></td></tr>
+    <tr><td class="paramname">hist</td><td>Histogram. </td></tr>
+    <tr><td class="paramname">method</td><td>Comparison method passed to cvCompareHist (see the function description). </td></tr>
+    <tr><td class="paramname">factor</td><td>Normalization factor for histograms that affects the normalization scale of the destination image. Pass 1 if not sure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__c.html#ga633a12e74beb80ea22c690d12d9915cb">cvCalcBackProjectPatch</a></dd></dl>
+<p>The function calculates the object probability density from two histograms as:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{disthist} (I)= \forkthree{0}{if \&zwj;(\texttt{hist1}(I)=0\&zwj;)}{\texttt{scale}}{if \&zwj;(\texttt{hist1}(I) \ne 0\&zwj;) and \&zwj;(\texttt{hist2}(I) &gt; \texttt{hist1}(I)\&zwj;)}{\frac{\texttt{hist2}(I) \cdot \texttt{scale}}{\texttt{hist1}(I)}}{if \&zwj;(\texttt{hist1}(I) \ne 0\&zwj;) and \&zwj;(\texttt{hist2}(I) \le \texttt{hist1}(I)\&zwj;)}\]" src="form_656.png"/>
+</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hist1</td><td>First histogram (the divisor). </td></tr>
+    <tr><td class="paramname">hist2</td><td>Second histogram. </td></tr>
+    <tr><td class="paramname">dst_hist</td><td>Destination histogram. </td></tr>
+    <tr><td class="paramname">scale</td><td>Scale factor for the destination histogram.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__hist.html#gaa4ee6dfff4aa1d840bdbebbe991184aa" title="Equalizes the histogram of a grayscale image.">cv::equalizeHist</a></dd>
+<dd>
+<a class="el" href="group__imgproc__misc.html#ga07d54f4fc17d60465e4ca1b024afa70f">cv::distanceTransform</a></dd></dl>
+<p>The two parameters for methods CV_ADAPTIVE_THRESH_MEAN_C and CV_ADAPTIVE_THRESH_GAUSSIAN_C are: neighborhood size (3, 5, 7 etc.), and a constant subtracted from mean (...,-3,-2,-1,0,1,2,3,...) </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__misc.html#ga8886eaaac71abdcb2a3a212180d70a50" title="Applies an adaptive threshold to an array.">cv::adaptiveThreshold</a></dd>
+<dd>
+<a class="el" href="group__imgproc__misc.html#gacdc2a3a7d3c5587cbbe6d2144133f8cf">cv::floodFill</a></dd>
+<dd>
+<a class="el" href="group__imgproc__feature.html#gad744b1c88d72215c5a79b2b90e9f5bda" title="Finds edges in an image using the Canny algorithm  .">cv::Canny</a></dd></dl>
+<p>Dx^2 * Dyy + Dxx * Dy^2 - 2 * Dx * Dy * Dxy. Applying threshold to the result gives coordinates of corners </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__feature.html#gac6967f1a104b733917d4da9685816cf4" title="Calculates a feature map for corner detection.">cv::preCornerDetect</a></dd>
+<dd>
+<a class="el" href="group__imgproc__feature.html#ga52dcea91b777bb8f1a506a9f91977aab" title="Calculates eigenvalues and eigenvectors of image blocks for corner detection.">cv::cornerEigenValsAndVecs</a></dd>
+<dd>
+<a class="el" href="group__imgproc__feature.html#ga363ae1047b9f246e78a82a2862c6cde8" title="Calculates the minimal eigenvalue of gradient matrices for corner detection.">cv::cornerMinEigenVal</a></dd></dl>
+<p>Calculates det(M) - k*(trace(M)^2), where M is 2x2 gradient covariation matrix for each pixel </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__feature.html#ga5ce7d0d38d83ef14e335b87c384f39dd" title="Harris corner detector.">cv::cornerHarris</a></dd>
+<dd>
+<a class="el" href="group__imgproc__feature.html#ga4310d06f13813830106e63fe519ba642" title="Refines the corner locations.">cv::cornerSubPix</a></dd>
+<dd>
+<a class="el" href="group__imgproc__feature.html#ga19e8a8000230fae9736fe837b516a1d1" title="Determines strong corners on an image.">cv::goodFeaturesToTrack</a></dd>
+<dd>
+<a class="el" href="group__imgproc__shape.html#gae3f6f1bb89e74a970294c6a6d3db4995" title="Fits a line to a 2D or 3D point set.">cv::fitLine</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga6537e4c2dd8b146dac052ddd63fccf94" title="Draws a line segment connecting two points.">cv::line</a></dd></dl>
+<p>if thickness&lt;0 (e.g. thickness == CV_FILLED), the filled box is drawn </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__draw.html#ga229a4a707afff1d92550884e01f3341d" title="Draws a simple, thick, or filled up-right rectangle.">cv::rectangle</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga229a4a707afff1d92550884e01f3341d" title="Draws a simple, thick, or filled up-right rectangle.">cv::rectangle</a></dd></dl>
+<p>Thickness works in the same way as with cvRectangle </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__draw.html#gae3aec0fff0050b1bbcf3028c1d93bf84" title="Draws a circle.">cv::circle</a></dd></dl>
+<p>depending on <em>thickness</em>, <em>start_angle</em> and <em>end_angle</em> parameters. The resultant figure is rotated by <em>angle</em>. All the angles are in degrees </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__imgproc__draw.html#ga63a6948c0a654f145ac510ad739c59e4" title="Draws a simple or thick elliptic arc or fills an ellipse sector.">cv::ellipse</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga7dc0cf61ea6654e118c93834241c186d">cv::fillConvexPoly</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga4d62b5356af4290cb99af1fdb14228c0">cv::fillPoly</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga5cd0952b6dd84c5799db8bbb4659e108">cv::polylines</a></dd></dl>
+<p>The function initializes the font structure that can be passed to text rendering functions.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">font</td><td>Pointer to the font structure initialized by the function </td></tr>
+    <tr><td class="paramname">font_face</td><td>Font name identifier. See <a class="el" href="group__imgproc__draw.html#ga0f9314ea6e35f99bb23f29567fc16e11">cv::HersheyFonts</a> and corresponding old CV_* identifiers. </td></tr>
+    <tr><td class="paramname">hscale</td><td>Horizontal scale. If equal to 1.0f , the characters have the original width depending on the font type. If equal to 0.5f , the characters are of half the original width. </td></tr>
+    <tr><td class="paramname">vscale</td><td>Vertical scale. If equal to 1.0f , the characters have the original height depending on the font type. If equal to 0.5f , the characters are of half the original height. </td></tr>
+    <tr><td class="paramname">shear</td><td>Approximate tangent of the character slope relative to the vertical line. A zero value means a non-italic font, 1.0f means about a 45 degree slope, etc. </td></tr>
+    <tr><td class="paramname">thickness</td><td>Thickness of the text strokes </td></tr>
+    <tr><td class="paramname">line_type</td><td>Type of the strokes, see line description</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd>cvPutText</dd>
+<dd>
+cvInitFont, cvGetTextSize, <a class="el" href="group__imgproc__c.html#ga28b7578c82a196024269361c9315834f">cvFont</a>, <a class="el" href="group__imgproc__draw.html#ga4c4c82b7772da47de4f3a013ccb64f31" title="Draws a text string.">cv::putText</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga20c65028a51e41cec819a072a02efe7e" title="Calculates the width and height of a text string.">cv::getTextSize</a></dd>
+<dd>
+<a class="el" href="group__imgproc__draw.html#ga5c4357637401fc66f1ca4ff52e09939d" title="Draws contours outlines or filled contours.">cv::drawContours</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ga8c399265194069eb08b059fe98d8a545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c399265194069eb08b059fe98d8a545">&#9670;&nbsp;</a></span>apiPreference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int apiPreference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9aa0a26434ee5817a5e37a4972bae0d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa0a26434ee5817a5e37a4972bae0d8">&#9670;&nbsp;</a></span>fourcc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fourcc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadbca5b692e9ace76ccf02d9c621ee228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadbca5b692e9ace76ccf02d9c621ee228">&#9670;&nbsp;</a></span>fps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int double fps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga058dbaebc483d4becfa7f75d2ed3dd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga058dbaebc483d4becfa7f75d2ed3dd1c">&#9670;&nbsp;</a></span>frame_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int double <a class="el" href="struct_cv_size.html">CvSize</a> frame_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga731049183fae0125c0b5d2940d461cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga731049183fae0125c0b5d2940d461cf3">&#9670;&nbsp;</a></span>image</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__core__c.html#ga95b2b850bce7cb368b8a3dc540debee3">IplImage</a>* image</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8635d9e852e1fa7a5720868b2df59427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8635d9e852e1fa7a5720868b2df59427">&#9670;&nbsp;</a></span>property_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int property_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad4670c92695d4327c21292905a803901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4670c92695d4327c21292905a803901">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int double value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

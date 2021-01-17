@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/util/variant.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('variant_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">variant.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="variant_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2018 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_UTIL_VARIANT_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_UTIL_VARIANT_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="throw_8hpp.html">opencv2/gapi/util/throw.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gapi_2util_2util_8hpp.html">opencv2/gapi/util/util.hpp</a>&gt;</span> <span class="comment">// max_of_t</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gapi_2util_2type__traits_8hpp.html">opencv2/gapi/util/type_traits.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// A poor man&#39;s `variant` implementation, incompletely modeled against C++17 spec.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>util</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacecv_1_1util_1_1detail.html">   23</a></span>&#160;    <span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">template</span>&lt;<a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> I, <span class="keyword">typename</span> <a class="code" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Target</a>, <span class="keyword">typename</span> First, <span class="keyword">typename</span>... Remaining&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">   26</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">type_list_index_helper</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a1efbe97e5ff5a960b5ae5f5a85a0e1ba">   28</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a1efbe97e5ff5a960b5ae5f5a85a0e1ba">is_same</a> = <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::is_same&lt;Target, First&gt;::value</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a090c1706ad482155c12f98215d039e05">   29</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a090c1706ad482155c12f98215d039e05">value</a> =</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                std::conditional&lt;is_same, std::integral_constant&lt;std::size_t, I&gt;, <a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">type_list_index_helper</a>&lt;I + 1, <a class="code" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Target</a>, Remaining...&gt;&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">::type::value</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">template</span>&lt;std::<span class="keywordtype">size_t</span> I, <span class="keyword">typename</span> Target, <span class="keyword">typename</span> First&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1detail_1_1type__list__index__helper_3_01_i_00_01_target_00_01_first_01_4.html">   34</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">type_list_index_helper</a>&lt;I, <a class="code" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Target</a>, First&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            static_assert(<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::is_same&lt;Target, First&gt;::value</a>, <span class="stringliteral">&quot;Type not found&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1detail_1_1type__list__index__helper_3_01_i_00_01_target_00_01_first_01_4.html#ac324c839efccc03536258b7d848660c2">   37</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a090c1706ad482155c12f98215d039e05">value</a> = I;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Target</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1type__list__index.html">   42</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcv_1_1util_1_1type__list__index.html">type_list_index</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1type__list__index.html#a4c38ab40650d329b122a5c80290769d7">   44</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1util_1_1type__list__index.html#a4c38ab40650d329b122a5c80290769d7">value</a> = <a class="code" href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">detail::type_list_index_helper</a>&lt;0, <a class="code" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Target</a>, Types...&gt;<a class="code" href="structcv_1_1util_1_1type__list__index.html#a4c38ab40650d329b122a5c80290769d7">::value</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1bad__variant__access.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcv_1_1util_1_1bad__variant__access.html">bad_variant_access</a>: <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1bad__variant__access.html#aee2d9e0a5acf271d5ef4fa7f415d79e2">   50</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classcv_1_1util_1_1bad__variant__access.html#aee2d9e0a5acf271d5ef4fa7f415d79e2">what</a>() const noexcept<span class="keyword"> override</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bad variant access&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Interface ///////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structcv_1_1util_1_1monostate.html">   57</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcv_1_1util_1_1monostate.html">monostate</a> {};</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a4d75335a7cc12c0d62a854c9151e02d2">   58</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecv_1_1util.html#a4d75335a7cc12c0d62a854c9151e02d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="structcv_1_1util_1_1monostate.html">util::monostate</a>&amp;, <span class="keyword">const</span> <a class="code" href="structcv_1_1util_1_1monostate.html">util::monostate</a>&amp;)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt; <span class="comment">// FIXME: no references, arrays, and void</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html">   64</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcv_1_1util_1_1variant.html">variant</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// FIXME: Replace with std::aligned_union after gcc4.8 support is dropped</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">static</span> constexpr <span class="keyword">const</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> S = cv::detail::max_of_t&lt;<span class="keyword">sizeof</span>(Ts)...&gt;::<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">static</span> constexpr <span class="keyword">const</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> A = cv::detail::max_of_t&lt;<span class="keyword">alignof</span>(Ts)...&gt;::<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">using</span> Memory = <span class="keyword">typename</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">std::aligned_storage&lt;S, A&gt;::type</a>[1];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>cctr_h {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, <span class="keyword">const</span> Memory from) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keyword">new</span> (<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>) <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>(*<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(from));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>mctr_h {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, <span class="keywordtype">void</span> *pval) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keyword">new</span> (<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>) <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>(std::move(*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(pval)));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//FIXME: unify with cctr_h and mctr_h</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>cnvrt_ctor_h {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, <span class="keywordtype">void</span>* from) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keyword">using</span> <a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">util::decay_t</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keyword">new</span> (<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>) <a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">decay_t&lt;T&gt;</a>(std::forward&lt;T&gt;(*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">decay_t&lt;T&gt;</a>*<span class="keyword">&gt;</span>(from)));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>copy_h {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory to, <span class="keyword">const</span> Memory from) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                *<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(to) = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(from);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>move_h {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory to, Memory from) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                *<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(to) = std::move(*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(from));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//FIXME: unify with copy_h and move_h</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>cnvrt_assign_h {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory to, <span class="keywordtype">void</span>* from) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keyword">using</span> <a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">util::decay_t</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                *<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">decay_t&lt;T&gt;</a>*<span class="keyword">&gt;</span>(to) = std::forward&lt;T&gt;(*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">decay_t&lt;T&gt;</a>*<span class="keyword">&gt;</span>(from));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        };</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>swap_h {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory to, Memory from) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                std::swap(*<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(to), *<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(from));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        };</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>dtor_h {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> help(Memory <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                (<a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a>) <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>; <span class="comment">// MSCV warning</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>)-&gt;~<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        };</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>equal_h {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> help(<span class="keyword">const</span> Memory lhs, <span class="keyword">const</span> Memory rhs) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; t_lhs = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(lhs);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; t_rhs = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*<span class="keyword">&gt;</span>(rhs);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordflow">return</span> t_lhs == t_rhs;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*CCtr) (Memory, <span class="keyword">const</span> Memory);  <span class="comment">// Copy c-tor (variant)</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*MCtr) (Memory, <span class="keywordtype">void</span>*);         <span class="comment">// Generic move c-tor</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*Copy) (Memory, <span class="keyword">const</span> Memory);  <span class="comment">// Copy assignment</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*Move) (Memory, Memory);        <span class="comment">// Move assignment</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*Swap) (Memory, Memory);        <span class="comment">// Swap</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*Dtor) (Memory);                <span class="comment">// Destructor</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">using</span>  cnvrt_assgn_t   = <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*) (Memory, <span class="keywordtype">void</span>*);  <span class="comment">// Converting assignment (via std::forward)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">using</span>  cnvrt_ctor_t    = <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a> (*) (Memory, <span class="keywordtype">void</span>*);  <span class="comment">// Converting constructor (via std::forward)</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">typedef</span> bool (*Equal)(<span class="keyword">const</span> Memory, <span class="keyword">const</span> Memory); <span class="comment">// Equality test (external)</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;CCtr, <span class="keyword">sizeof</span>...(Ts)&gt; cctrs(){ <span class="keywordflow">return</span> {{(&amp;cctr_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;MCtr, <span class="keyword">sizeof</span>...(Ts)&gt; mctrs(){ <span class="keywordflow">return</span> {{(&amp;mctr_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;Copy, <span class="keyword">sizeof</span>...(Ts)&gt; cpyrs(){ <span class="keywordflow">return</span> {{(&amp;copy_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;Move, <span class="keyword">sizeof</span>...(Ts)&gt; mvers(){ <span class="keywordflow">return</span> {{(&amp;move_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;Swap, <span class="keyword">sizeof</span>...(Ts)&gt; swprs(){ <span class="keywordflow">return</span> {{(&amp;swap_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;Dtor, <span class="keyword">sizeof</span>...(Ts)&gt; dtors(){ <span class="keywordflow">return</span> {{(&amp;dtor_h&lt;Ts&gt;::help)...}};}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> cond, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">struct </span>conditional_ref : std::conditional&lt;cond, typename std::remove_reference&lt;T&gt;::type&amp;, typename std::remove_reference&lt;T&gt;::type &gt; {};</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> cond, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">using</span> conditional_ref_t = <span class="keyword">typename</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">conditional_ref&lt;cond, T&gt;::type</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> is_lvalue_arg&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;cnvrt_assgn_t, <span class="keyword">sizeof</span>...(Ts)&gt; cnvrt_assgnrs(){</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">return</span> {{(&amp;cnvrt_assign_h&lt;conditional_ref_t&lt;is_lvalue_arg,Ts&gt;&gt;::help)...}};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> is_lvalue_arg&gt;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">static</span> constexpr std::array&lt;cnvrt_ctor_t, <span class="keyword">sizeof</span>...(Ts)&gt; cnvrt_ctors(){</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> {{(&amp;cnvrt_ctor_h&lt;conditional_ref_t&lt;is_lvalue_arg,Ts&gt;&gt;::help)...}};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> m_index = 0;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a6bd7b7a970c744b0e160ef03a207f044">  172</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Us&gt; <span class="keyword">friend</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a6bd7b7a970c744b0e160ef03a207f044">get</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#ad5a15304c2725da374971b236ee35625">  173</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Us&gt; <span class="keyword">friend</span> <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1variant.html#ad5a15304c2725da374971b236ee35625">get</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a48517152354c45df85f98346b52d884d">  174</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Us&gt; <span class="keyword">friend</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1variant.html#a48517152354c45df85f98346b52d884d">get_if</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> *v) noexcept;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a4a96b6213a62d73b400ca0b8cbb2d0bc">  175</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Us&gt; <span class="keyword">friend</span> <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1variant.html#a4a96b6213a62d73b400ca0b8cbb2d0bc">get_if</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> *v) noexcept;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a22b988f35c68ef6dda4395640dd00d45">  177</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Us&gt; <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classcv_1_1util_1_1variant.html#a22b988f35c68ef6dda4395640dd00d45">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;lhs,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                                        <span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;rhs);</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">  179</a></span>&#160;        Memory <a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">// Constructors</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">  183</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">variant</a>() noexcept;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a7eded4ad52972cb36fe84b6d3430d3f1">  184</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>(const <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp; other);</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a07d8a0b9c7bbce035cdd045fd9ac3aec">  185</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp;&amp; other) noexcept;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// are_different_t is a SFINAE trick to avoid variant(T &amp;&amp;t) with T=variant</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// for some reason, this version is called instead of variant(variant&amp;&amp; o) when</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// variant is used in STL containers (examples: vector assignment).</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        template&lt;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            typename = util::<a class="code" href="namespacecv_1_1util.html#ac9c8953efdea7776932b453ab3d40830">are_different_t</a>&lt;<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>, <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        &gt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#af0a059d49545db5b9f5b1f146f85bc05">  193</a></span>&#160;        explicit <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">// template&lt;class T, class... Args&gt; explicit variant(Args&amp;&amp;... args);</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">// FIXME: other constructors</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">// Destructor</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a0a9e93249f56d1cc34c6068543562cad">  198</a></span>&#160;        ~<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">// Assignment</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a06701f71c52af321d833f6f3fdcfb89f">  201</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp; operator=(const <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp; rhs);</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#abcd060a1b68f44893b2f15547f46b1d1">  202</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp; operator=(<a class="code" href="classcv_1_1util_1_1variant.html">variant</a> &amp;&amp;rhs) noexcept;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">// SFINAE trick to avoid operator=(T&amp;&amp;) with T=variant&lt;&gt;, see comment above</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        template&lt;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            typename = util::<a class="code" href="namespacecv_1_1util.html#ac9c8953efdea7776932b453ab3d40830">are_different_t</a>&lt;<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>, <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        &gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#aa4d841affbe050fd34c14f374850f8d9">  209</a></span>&#160;        <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&amp; operator=(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; t) noexcept;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">// Observers</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">  212</a></span>&#160;        <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">size_t</span> <a class="code" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">index</a>() const noexcept;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">// FIXME: valueless_by_exception()</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Modifiers</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// FIXME: emplace()</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#ac7471fa2590350e45b30cb72da0f7668">  217</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1variant.html#ac7471fa2590350e45b30cb72da0f7668">swap</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant</a> &amp;rhs) noexcept;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// Non-C++17x!</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#aa87645829693267bb0f0ecd5325a1fc7">  220</a></span>&#160;        template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt; static constexpr <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">size_t</span> <a class="code" href="classcv_1_1util_1_1variant.html#aa87645829693267bb0f0ecd5325a1fc7">index_of</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    };</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">// FIMXE: visit</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, typename... Types&gt;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1variant.html#a48517152354c45df85f98346b52d884d">get_if</a>(util::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Types...&gt;* v) noexcept;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, typename... Types&gt;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1util_1_1variant.html#a48517152354c45df85f98346b52d884d">get_if</a>(const util::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Types...&gt;* v) noexcept;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, typename... Types&gt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a6bd7b7a970c744b0e160ef03a207f044">get</a>(util::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Types...&gt; &amp;v);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, typename... Types&gt;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    const <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a6bd7b7a970c744b0e160ef03a207f044">get</a>(const util::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Types...&gt; &amp;v);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    template&lt;typename <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, typename... Types&gt;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacecv_1_1util.html#a2d33fc6eb38576b151326991529ce403">holds_alternative</a>(const util::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Types...&gt; &amp;v) noexcept;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// FIXME: T&amp;&amp;, const TT&amp;&amp; versions.</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// Implementation //////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    template&lt;typename... Ts&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">  243</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Ts...&gt;::<a class="code" href="classcv_1_1util_1_1variant.html">variant</a>() noexcept</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> std::tuple_element&lt;0, std::tuple&lt;Ts...&gt; &gt;<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">::type</a> TFirst;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">new</span> (<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>) TFirst();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a7eded4ad52972cb36fe84b6d3430d3f1">  250</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">variant&lt;Ts...&gt;::variant</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant</a> &amp;other)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        : m_index(other.m_index)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        (cctrs()[m_index])(<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, other.<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a07d8a0b9c7bbce035cdd045fd9ac3aec">  257</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">variant&lt;Ts...&gt;::variant</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant</a> &amp;&amp;other) noexcept</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        : m_index(other.m_index)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        (mctrs()[m_index])(memory, other.memory);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#af0a059d49545db5b9f5b1f146f85bc05">  265</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">variant&lt;Ts...&gt;::variant</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; t)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        : m_index(util::<a class="code" href="structcv_1_1util_1_1type__list__index.html">type_list_index</a>&lt;util::<a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">decay_t</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;, Ts...&gt;::<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a>)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keyword">const</span> constexpr <span class="keywordtype">bool</span> is_lvalue_arg =  <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::is_lvalue_reference&lt;T&gt;::value</a>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        (cnvrt_ctors&lt;is_lvalue_arg&gt;()[m_index])(<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, <span class="keyword">const_cast&lt;</span><a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">util::decay_t&lt;T&gt;</a> *<span class="keyword">&gt;</span>(&amp;t));</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a0a9e93249f56d1cc34c6068543562cad">  273</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html#a0a9e93249f56d1cc34c6068543562cad">variant&lt;Ts...&gt;::~variant</a>()</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        (dtors()[m_index])(memory);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a37e79528fb523179954532c12afb3e5b">  279</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Ts...&gt;&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a06701f71c52af321d833f6f3fdcfb89f">variant&lt;Ts...&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Ts...&gt;</a> &amp;rhs)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span> (m_index != rhs.m_index)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            (dtors()[    m_index])(memory);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            (cctrs()[rhs.m_index])(memory, rhs.<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            m_index = rhs.m_index;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            (cpyrs()[rhs.m_index])(memory, rhs.<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a0f2388dd0dd28e24b5842cd1b432008c">  295</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Ts...&gt;&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a06701f71c52af321d833f6f3fdcfb89f">variant&lt;Ts...&gt;::operator=</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Ts...&gt;</a> &amp;&amp;rhs) noexcept</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">if</span> (m_index != rhs.m_index)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            (dtors()[    m_index])(memory);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            (mctrs()[rhs.m_index])(memory, rhs.memory);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            m_index = rhs.m_index;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            (mvers()[rhs.m_index])(memory, rhs.memory);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#ac79b6c26e562636fb083bb6220af39d7">  312</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Ts...&gt;&amp; <a class="code" href="classcv_1_1util_1_1variant.html#a06701f71c52af321d833f6f3fdcfb89f">variant&lt;Ts...&gt;::operator=</a>(<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp;&amp; t) noexcept</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keyword">using</span> decayed_t = <a class="code" href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">util::decay_t&lt;T&gt;</a>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">// FIXME: No version with implicit type conversion available!</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> t_index =</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <a class="code" href="structcv_1_1util_1_1type__list__index.html">util::type_list_index</a>&lt;decayed_t, Ts...&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">::value</a>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">const</span> constexpr <span class="keywordtype">bool</span> is_lvalue_arg =  <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::is_lvalue_reference&lt;T&gt;::value</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">if</span> (t_index != m_index)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            (dtors()[m_index])(memory);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            (cnvrt_ctors&lt;is_lvalue_arg&gt;()[t_index])(memory, &amp;t);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            m_index = t_index;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            (cnvrt_assgnrs&lt;is_lvalue_arg&gt;()[m_index])(memory, &amp;t);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">  336</a></span>&#160;    <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">util::variant&lt;Ts...&gt;::index</a>() const noexcept</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> m_index;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#ac7471fa2590350e45b30cb72da0f7668">  342</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1util_1_1variant.html#ac7471fa2590350e45b30cb72da0f7668">variant&lt;Ts...&gt;::swap</a>(<a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Ts...&gt;</a> &amp;rhs) noexcept</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">if</span> (m_index == rhs.index())</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            (swprs()[m_index](memory, rhs.memory));</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Ts...&gt; tmp(std::move(*<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            *<span class="keyword">this</span> = std::move(rhs);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            rhs   = std::move(tmp);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="classcv_1_1util_1_1variant.html#aa87645829693267bb0f0ecd5325a1fc7">  358</a></span>&#160;    constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="classcv_1_1util_1_1variant.html#aa87645829693267bb0f0ecd5325a1fc7">variant&lt;Ts...&gt;::index_of</a>()</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structcv_1_1util_1_1type__list__index.html">util::type_list_index</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, Ts...&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">::value</a>; <span class="comment">// FIXME: tests!</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#ad9437cba1b6142cf823005f189259b8c">  364</a></span>&#160;    <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="namespacecv_1_1util.html#ad9437cba1b6142cf823005f189259b8c">get_if</a>(<a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;Types...&gt;</a>* v) noexcept</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> t_index =</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <a class="code" href="structcv_1_1util_1_1type__list__index.html">util::type_list_index</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, Types...&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">::value</a>;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">if</span> (v &amp;&amp; v-&gt;index() == t_index)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)(&amp;v-&gt;memory);  <span class="comment">// workaround for ICC 2019</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="comment">// original code: return reinterpret_cast&lt;T&amp;&gt;(v.memory);</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00376"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a359826cbca43bd1ba30663693960fa61">  376</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="namespacecv_1_1util.html#ad9437cba1b6142cf823005f189259b8c">get_if</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;Types...&gt;</a>* v) noexcept</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keyword">const</span> constexpr <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> t_index =</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <a class="code" href="structcv_1_1util_1_1type__list__index.html">util::type_list_index</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, Types...&gt;<a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">::value</a>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">if</span> (v &amp;&amp; v-&gt;index() == t_index)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordflow">return</span> (<span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)(&amp;v-&gt;memory);  <span class="comment">// workaround for ICC 2019</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="comment">// original code: return reinterpret_cast&lt;const T&amp;&gt;(v.memory);</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">  388</a></span>&#160;    <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">get</a>(<a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;Types...&gt;</a> &amp;v)</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">auto</span>* p = get_if&lt;T&gt;(&amp;v))</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <span class="keywordflow">return</span> *p;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <a class="code" href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">throw_error</a>(<a class="code" href="classcv_1_1util_1_1bad__variant__access.html">bad_variant_access</a>());</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00397"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a9fbdc1e13578418fb485cb66a8cd87e2">  397</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">get</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;Types...&gt;</a> &amp;v)</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">auto</span>* p = get_if&lt;T&gt;(&amp;v))</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            <span class="keywordflow">return</span> *p;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <a class="code" href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">throw_error</a>(<a class="code" href="classcv_1_1util_1_1bad__variant__access.html">bad_variant_access</a>());</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>, <span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a2d33fc6eb38576b151326991529ce403">  406</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacecv_1_1util.html#a2d33fc6eb38576b151326991529ce403">holds_alternative</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">util::variant&lt;Types...&gt;</a> &amp;v) noexcept</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">return</span> v.index() == <a class="code" href="classcv_1_1util_1_1variant.html">util::variant</a>&lt;Types...&gt;::template index_of&lt;T&gt;();</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#a671a36e09de46881212b09f980d86b00">  411</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Us&gt; <span class="keywordtype">bool</span> <a class="code" href="namespacecv_1_1util.html#a4d75335a7cc12c0d62a854c9151e02d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;lhs,</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                                             <span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;rhs)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keyword">using</span> <a class="code" href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a> = <a class="code" href="classcv_1_1util_1_1variant.html">variant</a>&lt;Us...&gt;;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="comment">// Instantiate table only here since it requires operator== for &lt;Us...&gt;</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="comment">// &lt;Us...&gt; should have operator== only if this one is used, not in general</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> std::array&lt;<span class="keyword">typename</span> V::Equal, <span class="keyword">sizeof</span>...(Us)&gt; eqs = {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            {(&amp;V::template equal_h&lt;Us&gt;::help)...}</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        };</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keywordflow">if</span> (lhs.<a class="code" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">index</a>() != rhs.<a class="code" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">index</a>())</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">return</span> (eqs[lhs.<a class="code" href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">index</a>()])(lhs.<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>, rhs.<a class="code" href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">memory</a>);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="line" href="namespacecv_1_1util.html#aefce3a0692acbbc03674218a59ded1bc">  426</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Us&gt; <span class="keywordtype">bool</span> <a class="code" href="namespacecv_1_1util.html#aefce3a0692acbbc03674218a59ded1bc">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;lhs,</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                                             <span class="keyword">const</span> <a class="code" href="classcv_1_1util_1_1variant.html">variant&lt;Us...&gt;</a> &amp;rhs)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;} <span class="comment">// namespace util</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_UTIL_VARIANT_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1util_1_1bad__variant__access_html"><div class="ttname"><a href="classcv_1_1util_1_1bad__variant__access.html">cv::util::bad_variant_access</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:48</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1bad__variant__access_html_aee2d9e0a5acf271d5ef4fa7f415d79e2"><div class="ttname"><a href="classcv_1_1util_1_1bad__variant__access.html#aee2d9e0a5acf271d5ef4fa7f415d79e2">cv::util::bad_variant_access::what</a></div><div class="ttdeci">virtual const char * what() const noexcept override</div><div class="ttdef"><b>Definition:</b> variant.hpp:50</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html"><div class="ttname"><a href="classcv_1_1util_1_1variant.html">cv::util::variant</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:65</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a06701f71c52af321d833f6f3fdcfb89f"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a06701f71c52af321d833f6f3fdcfb89f">cv::util::variant::operator=</a></div><div class="ttdeci">variant &amp; operator=(const variant &amp;rhs)</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a0a9e93249f56d1cc34c6068543562cad"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a0a9e93249f56d1cc34c6068543562cad">cv::util::variant::~variant</a></div><div class="ttdeci">~variant()</div><div class="ttdef"><b>Definition:</b> variant.hpp:273</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a204de4b74e5394c354ee97bfd1b2a320"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a204de4b74e5394c354ee97bfd1b2a320">cv::util::variant::variant</a></div><div class="ttdeci">variant() noexcept</div><div class="ttdef"><b>Definition:</b> variant.hpp:243</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a22b988f35c68ef6dda4395640dd00d45"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a22b988f35c68ef6dda4395640dd00d45">cv::util::variant::operator==</a></div><div class="ttdeci">friend bool operator==(const variant&lt; Us... &gt; &amp;lhs, const variant&lt; Us... &gt; &amp;rhs)</div><div class="ttdef"><b>Definition:</b> variant.hpp:411</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a48517152354c45df85f98346b52d884d"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a48517152354c45df85f98346b52d884d">cv::util::variant::get_if</a></div><div class="ttdeci">friend T * get_if(variant&lt; Us... &gt; *v) noexcept</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a4a96b6213a62d73b400ca0b8cbb2d0bc"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a4a96b6213a62d73b400ca0b8cbb2d0bc">cv::util::variant::get_if</a></div><div class="ttdeci">friend const T * get_if(const variant&lt; Us... &gt; *v) noexcept</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a6bd7b7a970c744b0e160ef03a207f044"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a6bd7b7a970c744b0e160ef03a207f044">cv::util::variant::get</a></div><div class="ttdeci">friend T &amp; get(variant&lt; Us... &gt; &amp;v)</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_a6e86a7a617c062c8e36c3e991fa3fc1c"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#a6e86a7a617c062c8e36c3e991fa3fc1c">cv::util::variant::index</a></div><div class="ttdeci">std::size_t index() const noexcept</div><div class="ttdef"><b>Definition:</b> variant.hpp:336</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_aa87645829693267bb0f0ecd5325a1fc7"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#aa87645829693267bb0f0ecd5325a1fc7">cv::util::variant::index_of</a></div><div class="ttdeci">static constexpr std::size_t index_of()</div><div class="ttdef"><b>Definition:</b> variant.hpp:358</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_ac2d4047459c677a9369c27e277484973"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#ac2d4047459c677a9369c27e277484973">cv::util::variant::memory</a></div><div class="ttdeci">Memory memory</div><div class="ttdef"><b>Definition:</b> variant.hpp:179</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_ac7471fa2590350e45b30cb72da0f7668"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#ac7471fa2590350e45b30cb72da0f7668">cv::util::variant::swap</a></div><div class="ttdeci">void swap(variant &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> variant.hpp:342</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1variant_html_ad5a15304c2725da374971b236ee35625"><div class="ttname"><a href="classcv_1_1util_1_1variant.html#ad5a15304c2725da374971b236ee35625">cv::util::variant::get</a></div><div class="ttdeci">friend const T &amp; get(const variant&lt; Us... &gt; &amp;v)</div></div>
+<div class="ttc" id="agapi_2util_2type__traits_8hpp_html"><div class="ttname"><a href="gapi_2util_2type__traits_8hpp.html">type_traits.hpp</a></div></div>
+<div class="ttc" id="agapi_2util_2util_8hpp_html"><div class="ttname"><a href="gapi_2util_2util_8hpp.html">util.hpp</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga1fc9a530e4f9c60ea61e1e7a68cfb639"><div class="ttname"><a href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">cv::T</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray InputOutputArray T</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__core__c_html_ga9550b1803662fe5c2e7f2f7f1f382af5"><div class="ttname"><a href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a></div><div class="ttdeci">int CvScalar value</div><div class="ttdef"><b>Definition:</b> core_c.h:717</div></div>
+<div class="ttc" id="agroup__core__c_html_gad8dd4fff0e3910932187b6de0543cae1"><div class="ttname"><a href="group__core__c.html#gad8dd4fff0e3910932187b6de0543cae1">V</a></div><div class="ttdeci">const CvArr const CvArr * V</div><div class="ttdef"><b>Definition:</b> core_c.h:1338</div></div>
+<div class="ttc" id="agroup__dnn_html_ga709af7692ba29788182cf573531b0ff5"><div class="ttname"><a href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">cv::dnn::Target</a></div><div class="ttdeci">Target</div><div class="ttdoc">Enum of target devices for computations.</div><div class="ttdef"><b>Definition:</b> dnn.hpp:88</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a2d33fc6eb38576b151326991529ce403"><div class="ttname"><a href="namespacecv_1_1util.html#a2d33fc6eb38576b151326991529ce403">cv::util::holds_alternative</a></div><div class="ttdeci">bool holds_alternative(const util::variant&lt; Types... &gt; &amp;v) noexcept</div><div class="ttdef"><b>Definition:</b> variant.hpp:406</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a40544b3ca23b3917f2a5de6b0273079d"><div class="ttname"><a href="namespacecv_1_1util.html#a40544b3ca23b3917f2a5de6b0273079d">cv::util::throw_error</a></div><div class="ttdeci">void throw_error(ExceptionType &amp;&amp;e)</div><div class="ttdef"><b>Definition:</b> throw.hpp:23</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a4d75335a7cc12c0d62a854c9151e02d2"><div class="ttname"><a href="namespacecv_1_1util.html#a4d75335a7cc12c0d62a854c9151e02d2">cv::util::operator==</a></div><div class="ttdeci">bool operator==(const util::monostate &amp;, const util::monostate &amp;)</div><div class="ttdef"><b>Definition:</b> variant.hpp:58</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a71f02f915a836dd4fa73b9dbc76d297b"><div class="ttname"><a href="namespacecv_1_1util.html#a71f02f915a836dd4fa73b9dbc76d297b">cv::util::get</a></div><div class="ttdeci">T &amp; get(util::variant&lt; Types... &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> variant.hpp:388</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_ac9c8953efdea7776932b453ab3d40830"><div class="ttname"><a href="namespacecv_1_1util.html#ac9c8953efdea7776932b453ab3d40830">cv::util::are_different_t</a></div><div class="ttdeci">enable_if_t&lt; !std::is_same&lt; decay_t&lt; T &gt;, decay_t&lt; U &gt; &gt;::value, V &gt; are_different_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:26</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_ad9437cba1b6142cf823005f189259b8c"><div class="ttname"><a href="namespacecv_1_1util.html#ad9437cba1b6142cf823005f189259b8c">cv::util::get_if</a></div><div class="ttdeci">T * get_if(util::variant&lt; Types... &gt; *v) noexcept</div><div class="ttdef"><b>Definition:</b> variant.hpp:364</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_adb17b06a4df2b1870f4d768e2c01accc"><div class="ttname"><a href="namespacecv_1_1util.html#adb17b06a4df2b1870f4d768e2c01accc">cv::util::decay_t</a></div><div class="ttdeci">typename std::decay&lt; T &gt;::type decay_t</div><div class="ttdef"><b>Definition:</b> type_traits.hpp:22</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_aefce3a0692acbbc03674218a59ded1bc"><div class="ttname"><a href="namespacecv_1_1util.html#aefce3a0692acbbc03674218a59ded1bc">cv::util::operator!=</a></div><div class="ttdeci">bool operator!=(const variant&lt; Us... &gt; &amp;lhs, const variant&lt; Us... &gt; &amp;rhs)</div><div class="ttdef"><b>Definition:</b> variant.hpp:426</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:266</div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a1dabed62d2d603302ed85878c743e251"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void(CL_CALLBACK *)(cl_program</div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a6ff403ead16f7faa1f7228274eb6b01d"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void void *CL_RUNTIME_EXPORT const cl_device_id const char const cl_program const char void void *CL_RUNTIME_EXPORT size_t</div><div class="ttdef"><b>Definition:</b> opencl_core.hpp:286</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1detail_1_1type__list__index__helper_html"><div class="ttname"><a href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html">cv::util::detail::type_list_index_helper</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:27</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1detail_1_1type__list__index__helper_html_a090c1706ad482155c12f98215d039e05"><div class="ttname"><a href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a090c1706ad482155c12f98215d039e05">cv::util::detail::type_list_index_helper::value</a></div><div class="ttdeci">static constexpr const std::size_t value</div><div class="ttdef"><b>Definition:</b> variant.hpp:29</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1detail_1_1type__list__index__helper_html_a1efbe97e5ff5a960b5ae5f5a85a0e1ba"><div class="ttname"><a href="structcv_1_1util_1_1detail_1_1type__list__index__helper.html#a1efbe97e5ff5a960b5ae5f5a85a0e1ba">cv::util::detail::type_list_index_helper::is_same</a></div><div class="ttdeci">static constexpr const bool is_same</div><div class="ttdef"><b>Definition:</b> variant.hpp:28</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1monostate_html"><div class="ttname"><a href="structcv_1_1util_1_1monostate.html">cv::util::monostate</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:57</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1type__list__index_html"><div class="ttname"><a href="structcv_1_1util_1_1type__list__index.html">cv::util::type_list_index</a></div><div class="ttdef"><b>Definition:</b> variant.hpp:43</div></div>
+<div class="ttc" id="astructcv_1_1util_1_1type__list__index_html_a4c38ab40650d329b122a5c80290769d7"><div class="ttname"><a href="structcv_1_1util_1_1type__list__index.html#a4c38ab40650d329b122a5c80290769d7">cv::util::type_list_index::value</a></div><div class="ttdeci">static constexpr const std::size_t value</div><div class="ttdef"><b>Definition:</b> variant.hpp:44</div></div>
+<div class="ttc" id="athrow_8hpp_html"><div class="ttname"><a href="throw_8hpp.html">throw.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_b2dcf1d3354090c206761d4ddbd38b1c.html">util</a></li><li class="navelem"><a class="el" href="variant_8hpp.html">variant.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

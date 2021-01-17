@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::GFluidKernel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_g_fluid_kernel.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1_g_fluid_kernel-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::GFluidKernel</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="gfluidkernel_8hpp_source.html">gfluidkernel.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a8af159f1d2f0183faeb58620029f5196"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">Kind</a> { <a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196ad7778d0c64b6ba21494c97f77a66885a">Filter</a>
+, <a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196a9d723d04c40bfd81835c0766a698cf63">Resize</a>
+, <a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196a16837c2743fdb5c65b4aa24414c9769e">YUV420toRGB</a>
+ }</td></tr>
+<tr class="separator:a8af159f1d2f0183faeb58620029f5196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90564111600d3a008f62f19ccef689a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">F</a> = std::function&lt; <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">cv::GArgs</a> &amp;, const std::vector&lt; <a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a> * &gt; &amp;)&gt;</td></tr>
+<tr class="separator:aa90564111600d3a008f62f19ccef689a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b302cf0f61f16dda9d192b9c0c12627"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">IS</a> = std::function&lt; <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">cv::GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">cv::GArgs</a> &amp;, <a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a> &amp;)&gt;</td></tr>
+<tr class="separator:a9b302cf0f61f16dda9d192b9c0c12627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f42985cb666b38d9a398787d602b0f4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">RS</a> = std::function&lt; <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(<a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a> &amp;)&gt;</td></tr>
+<tr class="separator:a1f42985cb666b38d9a398787d602b0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af142894c00fefc7ab279f7a07c9d4483"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#af142894c00fefc7ab279f7a07c9d4483">M</a> = std::function&lt; <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> &amp;)&gt;</td></tr>
+<tr class="separator:af142894c00fefc7ab279f7a07c9d4483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba224640f0f60620a5d936cb2e6bb3e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">B</a> = std::function&lt; <a class="el" href="namespacecv_1_1gapi_1_1fluid.html#a7a75d671abb94d1acf5f7c6f9690626b">gapi::fluid::BorderOpt</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> &amp;)&gt;</td></tr>
+<tr class="separator:acba224640f0f60620a5d936cb2e6bb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e11dfec24f2271e6c075bebb482b634"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">GW</a> = std::function&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> &amp;)&gt;</td></tr>
+<tr class="separator:a4e11dfec24f2271e6c075bebb482b634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a43989c69fb2f587d7fdb3517909a7ccb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a43989c69fb2f587d7fdb3517909a7ccb">GFluidKernel</a> ()</td></tr>
+<tr class="separator:a43989c69fb2f587d7fdb3517909a7ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20bc42eb01c8c6144b3e2e542763f800"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a20bc42eb01c8c6144b3e2e542763f800">GFluidKernel</a> (<a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">Kind</a> k, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> l, bool scratch, const <a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">F</a> &amp;f, const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">IS</a> &amp;is, const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">RS</a> &amp;rs, const <a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">B</a> &amp;b, const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">GW</a> &amp;<a class="el" href="group__imgproc__c.html#ga31d2e5a438a6bb322126274298e0023a">win</a>)</td></tr>
+<tr class="separator:a20bc42eb01c8c6144b3e2e542763f800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:afa847a31acb72ac70c10972f53479cfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">Kind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#afa847a31acb72ac70c10972f53479cfa">m_kind</a></td></tr>
+<tr class="separator:afa847a31acb72ac70c10972f53479cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99969329bfc1c8ce49d51ce508486d4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#ab99969329bfc1c8ce49d51ce508486d4">m_lpi</a> = -1</td></tr>
+<tr class="separator:ab99969329bfc1c8ce49d51ce508486d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba3a59bfa5c9983deb8b2afcb2364fa"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a0ba3a59bfa5c9983deb8b2afcb2364fa">m_scratch</a> = false</td></tr>
+<tr class="separator:a0ba3a59bfa5c9983deb8b2afcb2364fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb33f4543e3c21e4477c659c41010878"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">F</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#afb33f4543e3c21e4477c659c41010878">m_f</a></td></tr>
+<tr class="separator:afb33f4543e3c21e4477c659c41010878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2dfed8c8ed15931ef929661dadcb6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">IS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a5d2dfed8c8ed15931ef929661dadcb6e">m_is</a></td></tr>
+<tr class="separator:a5d2dfed8c8ed15931ef929661dadcb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cf9e5853447b948aaa4779cbe222ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">RS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a72cf9e5853447b948aaa4779cbe222ae">m_rs</a></td></tr>
+<tr class="separator:a72cf9e5853447b948aaa4779cbe222ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950e44699c320b9704842ee43f68f8cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">B</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a950e44699c320b9704842ee43f68f8cc">m_b</a></td></tr>
+<tr class="separator:a950e44699c320b9704842ee43f68f8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599fa1e42090456a4db959ab949fefcf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">GW</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a599fa1e42090456a4db959ab949fefcf">m_gw</a></td></tr>
+<tr class="separator:a599fa1e42090456a4db959ab949fefcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="acba224640f0f60620a5d936cb2e6bb3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba224640f0f60620a5d936cb2e6bb3e">&#9670;&nbsp;</a></span>B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">cv::GFluidKernel::B</a> =  std::function&lt;<a class="el" href="namespacecv_1_1gapi_1_1fluid.html#a7a75d671abb94d1acf5f7c6f9690626b">gapi::fluid::BorderOpt</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a>&amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a>&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa90564111600d3a008f62f19ccef689a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90564111600d3a008f62f19ccef689a">&#9670;&nbsp;</a></span>F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">cv::GFluidKernel::F</a> =  std::function&lt;<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">cv::GArgs</a>&amp;, const std::vector&lt;<a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a>*&gt; &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e11dfec24f2271e6c075bebb482b634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e11dfec24f2271e6c075bebb482b634">&#9670;&nbsp;</a></span>GW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">cv::GFluidKernel::GW</a> =  std::function&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a>&amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a>&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b302cf0f61f16dda9d192b9c0c12627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b302cf0f61f16dda9d192b9c0c12627">&#9670;&nbsp;</a></span>IS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">cv::GFluidKernel::IS</a> =  std::function&lt;<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">cv::GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">cv::GArgs</a>&amp;, <a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af142894c00fefc7ab279f7a07c9d4483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af142894c00fefc7ab279f7a07c9d4483">&#9670;&nbsp;</a></span>M</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#af142894c00fefc7ab279f7a07c9d4483">cv::GFluidKernel::M</a> =  std::function&lt;<a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a>(const <a class="el" href="namespacecv.html#a5f31109e95e8ff4ced55b5e85f885fb1">GMetaArgs</a> &amp;, const <a class="el" href="namespacecv.html#a70eaaa55b0e94b6867242fbfb9c9dede">GArgs</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f42985cb666b38d9a398787d602b0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f42985cb666b38d9a398787d602b0f4">&#9670;&nbsp;</a></span>RS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">cv::GFluidKernel::RS</a> =  std::function&lt;<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>(<a class="el" href="classcv_1_1gapi_1_1fluid_1_1_buffer.html">gapi::fluid::Buffer</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a8af159f1d2f0183faeb58620029f5196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af159f1d2f0183faeb58620029f5196">&#9670;&nbsp;</a></span>Kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">cv::GFluidKernel::Kind</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a8af159f1d2f0183faeb58620029f5196ad7778d0c64b6ba21494c97f77a66885a"></a>Filter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8af159f1d2f0183faeb58620029f5196a9d723d04c40bfd81835c0766a698cf63"></a>Resize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8af159f1d2f0183faeb58620029f5196a16837c2743fdb5c65b4aa24414c9769e"></a>YUV420toRGB&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a43989c69fb2f587d7fdb3517909a7ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43989c69fb2f587d7fdb3517909a7ccb">&#9670;&nbsp;</a></span>GFluidKernel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::GFluidKernel::GFluidKernel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20bc42eb01c8c6144b3e2e542763f800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20bc42eb01c8c6144b3e2e542763f800">&#9670;&nbsp;</a></span>GFluidKernel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::GFluidKernel::GFluidKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">Kind</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scratch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">F</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">IS</a> &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">RS</a> &amp;&#160;</td>
+          <td class="paramname"><em>rs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">B</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">GW</a> &amp;&#160;</td>
+          <td class="paramname"><em>win</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a950e44699c320b9704842ee43f68f8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950e44699c320b9704842ee43f68f8cc">&#9670;&nbsp;</a></span>m_b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#acba224640f0f60620a5d936cb2e6bb3e">B</a> cv::GFluidKernel::m_b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb33f4543e3c21e4477c659c41010878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb33f4543e3c21e4477c659c41010878">&#9670;&nbsp;</a></span>m_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#aa90564111600d3a008f62f19ccef689a">F</a> cv::GFluidKernel::m_f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a599fa1e42090456a4db959ab949fefcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599fa1e42090456a4db959ab949fefcf">&#9670;&nbsp;</a></span>m_gw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a4e11dfec24f2271e6c075bebb482b634">GW</a> cv::GFluidKernel::m_gw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d2dfed8c8ed15931ef929661dadcb6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d2dfed8c8ed15931ef929661dadcb6e">&#9670;&nbsp;</a></span>m_is</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a9b302cf0f61f16dda9d192b9c0c12627">IS</a> cv::GFluidKernel::m_is</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa847a31acb72ac70c10972f53479cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa847a31acb72ac70c10972f53479cfa">&#9670;&nbsp;</a></span>m_kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_g_fluid_kernel.html#a8af159f1d2f0183faeb58620029f5196">Kind</a> cv::GFluidKernel::m_kind</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab99969329bfc1c8ce49d51ce508486d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99969329bfc1c8ce49d51ce508486d4">&#9670;&nbsp;</a></span>m_lpi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::GFluidKernel::m_lpi = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72cf9e5853447b948aaa4779cbe222ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cf9e5853447b948aaa4779cbe222ae">&#9670;&nbsp;</a></span>m_rs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_g_fluid_kernel.html#a1f42985cb666b38d9a398787d602b0f4">RS</a> cv::GFluidKernel::m_rs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ba3a59bfa5c9983deb8b2afcb2364fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba3a59bfa5c9983deb8b2afcb2364fa">&#9670;&nbsp;</a></span>m_scratch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool cv::GFluidKernel::m_scratch = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/gapi/fluid/<a class="el" href="gfluidkernel_8hpp_source.html">gfluidkernel.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_g_fluid_kernel.html">GFluidKernel</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

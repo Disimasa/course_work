@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/calib3d/calib3d_c.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('calib3d__c_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">calib3d_c.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="calib3d__c_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                          License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2000-2008, Intel Corporation, all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Copyright (C) 2009, Willow Garage Inc., all rights reserved.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Copyright (C) 2013, OpenCV Foundation, all rights reserved.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//   * The name of the copyright holders may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors &quot;as is&quot; and</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// In no event shall the Intel Corporation or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef OPENCV_CALIB3D_C_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define OPENCV_CALIB3D_C_H</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2types__c_8h.html">opencv2/core/types_c.h</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/* Calculates fundamental matrix given a set of corresponding points */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#acd70e232d9670a0ffbec7624f819e731">   54</a></span>&#160;<span class="preprocessor">#define CV_FM_7POINT 1</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a13d5fbc45601fd0d9aa5af81a079d73a">   55</a></span>&#160;<span class="preprocessor">#define CV_FM_8POINT 2</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a5e724fe78567220f3104374bce17c859">   57</a></span>&#160;<span class="preprocessor">#define CV_LMEDS 4</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#ad583c9874d55e6129ec1b85d9dd9b973">   58</a></span>&#160;<span class="preprocessor">#define CV_RANSAC 8</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#ac0df1c0cb05d99880584a828dc6e6a05">   60</a></span>&#160;<span class="preprocessor">#define CV_FM_LMEDS_ONLY  CV_LMEDS</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a3428a14110851e2fba4821bcc999e873">   61</a></span>&#160;<span class="preprocessor">#define CV_FM_RANSAC_ONLY CV_RANSAC</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a8ed05b4cb3044e69e45ed0c8003acf4c">   62</a></span>&#160;<span class="preprocessor">#define CV_FM_LMEDS CV_LMEDS</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#ab86b19f9732a651e99a6fbad51ec72f0">   63</a></span>&#160;<span class="preprocessor">#define CV_FM_RANSAC CV_RANSAC</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">enum</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8be4b232c6acfab1dc69e090d934b426">   67</a></span>&#160;    <a class="code" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8be4b232c6acfab1dc69e090d934b426">CV_ITERATIVE</a> = 0,</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba2ad6ca91b2638cd82dd04df585822cf8">   68</a></span>&#160;    <a class="code" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba2ad6ca91b2638cd82dd04df585822cf8">CV_EPNP</a> = 1, <span class="comment">// F.Moreno-Noguer, V.Lepetit and P.Fua &quot;EPnP: Efficient Perspective-n-Point Camera Pose Estimation&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba7513c67aacb7baa2ec7611e2cdc85045">   69</a></span>&#160;    <a class="code" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba7513c67aacb7baa2ec7611e2cdc85045">CV_P3P</a> = 2, <span class="comment">// X.S. Gao, X.-R. Hou, J. Tang, H.-F. Chang; &quot;Complete Solution Classification for the Perspective-Three-Point Problem&quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba58122c1352d99aee37d1c8d9b36481a6">CV_DLS</a> = 3 <span class="comment">// Joel A. Hesch and Stergios I. Roumeliotis. &quot;A Direct Least-Squares (DLS) Method for PnP&quot;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba58122c1352d99aee37d1c8d9b36481a6">   71</a></span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a34614fa660c6706b09d658142795ca5e">   73</a></span>&#160;<span class="preprocessor">#define CV_CALIB_CB_ADAPTIVE_THRESH  1</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#ad7483a0ebfd83bd0ea11b6281309988d">   74</a></span>&#160;<span class="preprocessor">#define CV_CALIB_CB_NORMALIZE_IMAGE  2</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#af91a8412f3d681fdc8f9f8ceac25fea0">   75</a></span>&#160;<span class="preprocessor">#define CV_CALIB_CB_FILTER_QUADS     4</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a2f12d56bae5fbd3eb614d930fbbf56eb">   76</a></span>&#160;<span class="preprocessor">#define CV_CALIB_CB_FAST_CHECK       8</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#abfe87ad0401432b756600c0dbf04da27">   78</a></span>&#160;<span class="preprocessor">#define CV_CALIB_USE_INTRINSIC_GUESS  1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a6e16c84b20076f05c8fc1568e3a133cf">   79</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_ASPECT_RATIO     2</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a1d7328c564c85ac13da01f5fb715dde5">   80</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_PRINCIPAL_POINT  4</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a719461ad9ee310c0875078239dfb0cfb">   81</a></span>&#160;<span class="preprocessor">#define CV_CALIB_ZERO_TANGENT_DIST    8</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a1abada166b1993a95bb42051e16b5b79">   82</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_FOCAL_LENGTH 16</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a324ef4dd5afdaef2a0ecdd0fe7860311">   83</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K1  32</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a84267d64ddfc4d3355f11183941c1047">   84</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K2  64</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#af31634bca23f5213abbf793b2570488f">   85</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K3  128</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a39d224b0ce447b4f3dd360a2d9aae906">   86</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K4  2048</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#aca023f78c814739894b85446847df06a">   87</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K5  4096</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#aa10447c424fa53e3aa8e9fe308355463">   88</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_K6  8192</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#acce494e150af097f8131853935b816aa">   89</a></span>&#160;<span class="preprocessor">#define CV_CALIB_RATIONAL_MODEL 16384</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a86c0689526f7d1d6852d750530c58ea3">   90</a></span>&#160;<span class="preprocessor">#define CV_CALIB_THIN_PRISM_MODEL 32768</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a8c7cd68e0b9b781a7986a53f92dd2388">   91</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_S1_S2_S3_S4  65536</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#af462df424a5ef06919f54c9101563f1a">   92</a></span>&#160;<span class="preprocessor">#define CV_CALIB_TILTED_MODEL  262144</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a03529acf2dca8b5d25ae49aadfc11c90">   93</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_TAUX_TAUY  524288</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a3e0983cc19e1136179368b4681ccea4f">   94</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_TANGENT_DIST 2097152</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#aefe2d7299e7dc32cfa640a2cb8cf0785">   96</a></span>&#160;<span class="preprocessor">#define CV_CALIB_NINTRINSIC 18</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a0cdd706eab6c916b853b80335d7b2891">   98</a></span>&#160;<span class="preprocessor">#define CV_CALIB_FIX_INTRINSIC  256</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a622637de619e6f335033a431b747d987">   99</a></span>&#160;<span class="preprocessor">#define CV_CALIB_SAME_FOCAL_LENGTH 512</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a5e439a1d2e4b65828121d1626a50a4f2">  101</a></span>&#160;<span class="preprocessor">#define CV_CALIB_ZERO_DISPARITY 1024</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/* stereo correspondence parameters and functions */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#aac970026f96f5dbf7d3e8baf2851045b">  104</a></span>&#160;<span class="preprocessor">#define CV_STEREO_BM_NORMALIZED_RESPONSE  0</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="calib3d__c_8h.html#a4fbd854e2c4ff159ed0e513d4356b076">  105</a></span>&#160;<span class="preprocessor">#define CV_STEREO_BM_XSOBEL               1</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> CvLevMarq</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    CvLevMarq();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    CvLevMarq( <span class="keywordtype">int</span> nparams, <span class="keywordtype">int</span> nerrs, <a class="code" href="struct_cv_term_criteria.html">CvTermCriteria</a> <a class="code" href="group__imgproc__c.html#gac808aaac88b1d5574652acbfb70cdaf4">criteria</a>=</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;              <a class="code" href="group__core__c.html#ga798d54ea85fdbd8dad543c3b8721763a">cvTermCriteria</a>(<a class="code" href="group__core__c.html#ga3d22bb48d24b85a1bbc5d10e0ddcff33">CV_TERMCRIT_EPS</a>+<a class="code" href="group__core__c.html#ga4f6009f584607989e908868751567fe7">CV_TERMCRIT_ITER</a>,30,DBL_EPSILON),</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;              <span class="keywordtype">bool</span> completeSymmFlag=<span class="keyword">false</span> );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    ~CvLevMarq();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> init( <span class="keywordtype">int</span> nparams, <span class="keywordtype">int</span> nerrs, <a class="code" href="struct_cv_term_criteria.html">CvTermCriteria</a> <a class="code" href="group__imgproc__c.html#gac808aaac88b1d5574652acbfb70cdaf4">criteria</a>=</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;              <a class="code" href="group__core__c.html#ga798d54ea85fdbd8dad543c3b8721763a">cvTermCriteria</a>(<a class="code" href="group__core__c.html#ga3d22bb48d24b85a1bbc5d10e0ddcff33">CV_TERMCRIT_EPS</a>+<a class="code" href="group__core__c.html#ga4f6009f584607989e908868751567fe7">CV_TERMCRIT_ITER</a>,30,DBL_EPSILON),</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;              <span class="keywordtype">bool</span> completeSymmFlag=<span class="keyword">false</span> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">bool</span> update( <span class="keyword">const</span> <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; <a class="code" href="group__highgui__c.html#ga2fad04a6d56e23dd58d9ebbcffae688f">param</a>, <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; J, <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; err );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span> updateAlt( <span class="keyword">const</span> <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; <a class="code" href="group__highgui__c.html#ga2fad04a6d56e23dd58d9ebbcffae688f">param</a>, <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; JtJ, <a class="code" href="struct_cv_mat.html">CvMat</a>*&amp; JtErr, <span class="keywordtype">double</span>*&amp; errNorm );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">enum</span> { DONE=0, STARTED=1, CALC_J=2, CHECK_ERR=3 };</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> <a class="code" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> prevParam;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> <a class="code" href="group__highgui__c.html#ga2fad04a6d56e23dd58d9ebbcffae688f">param</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> J;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> err;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> JtJ;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> JtJN;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> JtErr;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> JtJV;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="structcv_1_1_ptr.html">cv::Ptr&lt;CvMat&gt;</a> JtJW;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">double</span> prevErrNorm, errNorm;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> lambdaLg10;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="struct_cv_term_criteria.html">CvTermCriteria</a> <a class="code" href="group__imgproc__c.html#gac808aaac88b1d5574652acbfb70cdaf4">criteria</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> state;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> iters;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">bool</span> completeSymmFlag;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> solveMethod;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OPENCV_CALIB3D_C_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="acalib3d__c_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba2ad6ca91b2638cd82dd04df585822cf8"><div class="ttname"><a href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba2ad6ca91b2638cd82dd04df585822cf8">CV_EPNP</a></div><div class="ttdeci">@ CV_EPNP</div><div class="ttdef"><b>Definition:</b> calib3d_c.h:68</div></div>
+<div class="ttc" id="acalib3d__c_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba58122c1352d99aee37d1c8d9b36481a6"><div class="ttname"><a href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba58122c1352d99aee37d1c8d9b36481a6">CV_DLS</a></div><div class="ttdeci">@ CV_DLS</div><div class="ttdef"><b>Definition:</b> calib3d_c.h:70</div></div>
+<div class="ttc" id="acalib3d__c_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba7513c67aacb7baa2ec7611e2cdc85045"><div class="ttname"><a href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba7513c67aacb7baa2ec7611e2cdc85045">CV_P3P</a></div><div class="ttdeci">@ CV_P3P</div><div class="ttdef"><b>Definition:</b> calib3d_c.h:69</div></div>
+<div class="ttc" id="acalib3d__c_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8be4b232c6acfab1dc69e090d934b426"><div class="ttname"><a href="calib3d__c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8be4b232c6acfab1dc69e090d934b426">CV_ITERATIVE</a></div><div class="ttdeci">@ CV_ITERATIVE</div><div class="ttdef"><b>Definition:</b> calib3d_c.h:67</div></div>
+<div class="ttc" id="acore_2types__c_8h_html"><div class="ttname"><a href="core_2types__c_8h.html">types_c.h</a></div></div>
+<div class="ttc" id="agroup__core__c_html_ga3d22bb48d24b85a1bbc5d10e0ddcff33"><div class="ttname"><a href="group__core__c.html#ga3d22bb48d24b85a1bbc5d10e0ddcff33">CV_TERMCRIT_EPS</a></div><div class="ttdeci">#define CV_TERMCRIT_EPS</div><div class="ttdef"><b>Definition:</b> types_c.h:909</div></div>
+<div class="ttc" id="agroup__core__c_html_ga4f6009f584607989e908868751567fe7"><div class="ttname"><a href="group__core__c.html#ga4f6009f584607989e908868751567fe7">CV_TERMCRIT_ITER</a></div><div class="ttdeci">#define CV_TERMCRIT_ITER</div><div class="ttdef"><b>Definition:</b> types_c.h:907</div></div>
+<div class="ttc" id="agroup__core__c_html_ga798d54ea85fdbd8dad543c3b8721763a"><div class="ttname"><a href="group__core__c.html#ga798d54ea85fdbd8dad543c3b8721763a">cvTermCriteria</a></div><div class="ttdeci">CV_INLINE CvTermCriteria cvTermCriteria(int type, int max_iter, double epsilon)</div><div class="ttdef"><b>Definition:</b> types_c.h:930</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa7cdf40a6d11ff4cbc59e7cebd6857df"><div class="ttname"><a href="group__core__c.html#gaa7cdf40a6d11ff4cbc59e7cebd6857df">step</a></div><div class="ttdeci">void int step</div><div class="ttdef"><b>Definition:</b> core_c.h:902</div></div>
+<div class="ttc" id="agroup__core__c_html_gab1abe7ada6425dcc502761faec53e651"><div class="ttname"><a href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a></div><div class="ttdeci">CvArr const CvArr * mask</div><div class="ttdef"><b>Definition:</b> core_c.h:586</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga2fad04a6d56e23dd58d9ebbcffae688f"><div class="ttname"><a href="group__highgui__c.html#ga2fad04a6d56e23dd58d9ebbcffae688f">param</a></div><div class="ttdeci">int int int void * param</div><div class="ttdef"><b>Definition:</b> highgui_c.h:204</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_gac808aaac88b1d5574652acbfb70cdaf4"><div class="ttname"><a href="group__imgproc__c.html#gac808aaac88b1d5574652acbfb70cdaf4">criteria</a></div><div class="ttdeci">CvPoint2D32f int CvSize CvSize CvTermCriteria criteria</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:892</div></div>
+<div class="ttc" id="astruct_cv_mat_html"><div class="ttname"><a href="struct_cv_mat.html">CvMat</a></div><div class="ttdef"><b>Definition:</b> types_c.h:465</div></div>
+<div class="ttc" id="astruct_cv_term_criteria_html"><div class="ttname"><a href="struct_cv_term_criteria.html">CvTermCriteria</a></div><div class="ttdef"><b>Definition:</b> types_c.h:914</div></div>
+<div class="ttc" id="astructcv_1_1_ptr_html"><div class="ttname"><a href="structcv_1_1_ptr.html">cv::Ptr</a></div><div class="ttdef"><b>Definition:</b> cvstd_wrapper.hpp:74</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_19570f54c215e7ef804cb8a89f828353.html">calib3d</a></li><li class="navelem"><a class="el" href="calib3d__c_8h.html">calib3d_c.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

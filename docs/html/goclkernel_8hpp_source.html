@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/ocl/goclkernel.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('goclkernel_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">goclkernel.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="goclkernel_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2018-2020 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_GOCLKERNEL_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_GOCLKERNEL_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="core_2mat_8hpp.html">opencv2/core/mat.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gcommon_8hpp.html">opencv2/gapi/gcommon.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gkernel_8hpp.html">opencv2/gapi/gkernel.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="garg_8hpp.html">opencv2/gapi/garg.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// FIXME: namespace scheme for backends?</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>gimpl</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Forward-declare an internal class</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">class </span>GOCLExecutable;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;} <span class="comment">// namespace gimpl</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>gapi</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1ocl.html">   32</a></span>&#160;<span class="keyword">namespace </span>ocl</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="group__gapi__std__backends.html#ga5d50ea107219b315bdf3ed54342c29cd">   46</a></span>&#160;    <a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="group__gapi__std__backends.html#ga5d50ea107219b315bdf3ed54342c29cd">backend</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace ocl</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;} <span class="comment">// namespace gapi</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// Represents arguments which are passed to a wrapped OCL function</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// FIXME: put into detail?</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Generic accessor API</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">   59</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">inArg</a>(<span class="keywordtype">int</span> input) { <span class="keywordflow">return</span> m_args.at(input).get&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;(); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Syntax sugar</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a782ca6fe7ba966201c558fc837845c22">   62</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a>&amp;  <a class="code" href="classcv_1_1_g_o_c_l_context.html#a782ca6fe7ba966201c558fc837845c22">inMat</a>(<span class="keywordtype">int</span> input);</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#ab6561a2ea00141e38ac8afa1f89458ab">   63</a></span>&#160;    <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a>&amp;  <a class="code" href="classcv_1_1_g_o_c_l_context.html#ab6561a2ea00141e38ac8afa1f89458ab">outMatR</a>(<span class="keywordtype">int</span> output); <span class="comment">// FIXME: Avoid cv::Mat m = ctx.outMatR()</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#ad5e0cc242c6ae544bac0e1d23e8cf39d">   65</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classcv_1_1_scalar__.html">cv::Scalar</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#ad5e0cc242c6ae544bac0e1d23e8cf39d">inVal</a>(<span class="keywordtype">int</span> input);</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a4caa04c8e3d57aab2c3f0d622b953b9b">   66</a></span>&#160;    <a class="code" href="classcv_1_1_scalar__.html">cv::Scalar</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#a4caa04c8e3d57aab2c3f0d622b953b9b">outValR</a>(<span class="keywordtype">int</span> output); <span class="comment">// FIXME: Avoid cv::Scalar s = ctx.outValR()</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a23b6577922d9c1b5b3bb835c16e76afa">   67</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; std::vector&lt;T&gt;&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#a23b6577922d9c1b5b3bb835c16e76afa">outVecR</a>(<span class="keywordtype">int</span> output) <span class="comment">// FIXME: the same issue</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> outVecRef(output).wref&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#ab25deb99d582bce4ddc5714b0321236f">   71</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#ab25deb99d582bce4ddc5714b0321236f">outOpaqueR</a>(<span class="keywordtype">int</span> output) <span class="comment">// FIXME: the same issue</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> outOpaqueRef(output).wref&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a0f5085f10ef2311591f023eedd0a0a49">   77</a></span>&#160;    <a class="code" href="classcv_1_1detail_1_1_vector_ref.html">detail::VectorRef</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#a0f5085f10ef2311591f023eedd0a0a49">outVecRef</a>(<span class="keywordtype">int</span> output);</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#aaaed3bedecfdfa0f73198e3c6615861d">   78</a></span>&#160;    <a class="code" href="classcv_1_1detail_1_1_opaque_ref.html">detail::OpaqueRef</a>&amp; <a class="code" href="classcv_1_1_g_o_c_l_context.html#aaaed3bedecfdfa0f73198e3c6615861d">outOpaqueRef</a>(<span class="keywordtype">int</span> output);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#adadfe363aeb36efda23e4a4c2b24c3fd">   80</a></span>&#160;    std::vector&lt;GArg&gt; <a class="code" href="classcv_1_1_g_o_c_l_context.html#adadfe363aeb36efda23e4a4c2b24c3fd">m_args</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#aef292728daf8181723a5a56a969e17dc">   81</a></span>&#160;    std::unordered_map&lt;std::size_t, GRunArgP&gt; <a class="code" href="classcv_1_1_g_o_c_l_context.html#aef292728daf8181723a5a56a969e17dc">m_results</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_context.html#a1c0bdef3cddbcf4d7a1c64e48248732c">   84</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>gimpl::GOCLExecutable;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html">   87</a></span>&#160;<span class="keyword">class </span><a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html">GOCLKernel</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// This function is kernel&#39;s execution entry point (does the processing work)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html#aff00699e540127c7d92fb352164257ab">   91</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#aff00699e540127c7d92fb352164257ab">F</a> = std::function&lt;<a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;)&gt;;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html#aa76103326cdf0b5ce42e5c8466dea113">   93</a></span>&#160;    <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#aa76103326cdf0b5ce42e5c8466dea113">GOCLKernel</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html#a2da247db14accf228762984591ed1b8d">   94</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#a2da247db14accf228762984591ed1b8d">GOCLKernel</a>(<span class="keyword">const</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#aff00699e540127c7d92fb352164257ab">F</a>&amp; f);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html#a4c2736a75bb29feb1ddd387947135393">   96</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#a4c2736a75bb29feb1ddd387947135393">apply</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel.html#a19d73000cd7b9d6fd63cd3c50ad8c4f3">   99</a></span>&#160;    <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#aff00699e540127c7d92fb352164257ab">F</a> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html#a19d73000cd7b9d6fd63cd3c50ad8c4f3">m_f</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// FIXME: This is an ugly ad-hoc implementation. TODO: refactor</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">namespace </span>detail</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">struct </span>ocl_get_in;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_mat_01_4.html">  107</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_mat.html">GMat</a>&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_mat_01_4.html#a522e0d6a048e1464939817ea348775c1">  109</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a>    <a class="code" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_mat_01_4.html#a522e0d6a048e1464939817ea348775c1">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a782ca6fe7ba966201c558fc837845c22">inMat</a>(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>); }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_scalar_01_4.html">  111</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_scalar.html">GScalar</a>&gt;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_scalar_01_4.html#afce3e8e171d283b5fd910e65bab81870">  113</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_scalar__.html">cv::Scalar</a> <a class="code" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_scalar_01_4.html#afce3e8e171d283b5fd910e65bab81870">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#ad5e0cc242c6ae544bac0e1d23e8cf39d">inVal</a>(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>); }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html">  115</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_array.html">GArray</a>&lt;U&gt; &gt;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a6a67939768a3ba8e10a0e11a860f9649">  117</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> std::vector&lt;U&gt;&amp; <a class="code" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a6a67939768a3ba8e10a0e11a860f9649">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">inArg</a>&lt;<a class="code" href="classcv_1_1detail_1_1_vector_ref.html">VectorRef</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>).rref&lt;U&gt;(); }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html">  119</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_opaque.html">GOpaque</a>&lt;U&gt; &gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a41517ddb9a54364431d96063428517ba">  121</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a>&amp; <a class="code" href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a41517ddb9a54364431d96063428517ba">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">inArg</a>&lt;<a class="code" href="classcv_1_1detail_1_1_opaque_ref.html">OpaqueRef</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>).rref&lt;U&gt;(); }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in.html">  123</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in</a></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__in.html#aacb949ca8c17d2bb8022f21a24f8aca6">  125</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a> <a class="code" href="structcv_1_1detail_1_1ocl__get__in.html#aacb949ca8c17d2bb8022f21a24f8aca6">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">inArg</a>&lt;<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>); }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html">  128</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html">tracked_cv_umat</a>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//TODO Think if T - API could reallocate UMat to a proper size - how do we handle this ?</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//tracked_cv_umat(cv::UMat&amp; m) : r{(m)}, original_data{m.getMat(ACCESS_RW).data} {}</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html#a2d3d1aba90a40aa411eea051e686df35">  131</a></span>&#160;    <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a2d3d1aba90a40aa411eea051e686df35">tracked_cv_umat</a>(<a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a>&amp; m) : <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a6a9a4f76fd04649d4d5fa85f56b3cfae">r</a>(m), <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a8239876c6987cec486138493596be8b7">original_data</a>{ nullptr } {}</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html#a6a9a4f76fd04649d4d5fa85f56b3cfae">  132</a></span>&#160;    <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;<a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a6a9a4f76fd04649d4d5fa85f56b3cfae">r</a>; <span class="comment">// FIXME: It was a value (not a reference) before.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                 <span class="comment">// Actually OCL backend should allocate its internal data!</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html#a8239876c6987cec486138493596be8b7">  134</a></span>&#160;    <a class="code" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>* <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a8239876c6987cec486138493596be8b7">original_data</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html#a4120d3d2dbfc60ab25c942d8673aa985">  136</a></span>&#160;    <span class="keyword">operator</span> <a class="code" href="classcv_1_1_u_mat.html">cv::UMat</a>&amp; (){ <span class="keywordflow">return</span> <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a6a9a4f76fd04649d4d5fa85f56b3cfae">r</a>;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1tracked__cv__umat.html#a907c4700b70270adce7d25228e2e3ee5">  137</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a907c4700b70270adce7d25228e2e3ee5">validate</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="comment">//if (r.getMat(ACCESS_RW).data != original_data)</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">//    util::throw_error</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">//        (std::logic_error</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">//         (&quot;OpenCV kernel output parameter was reallocated. \n&quot;</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">//          &quot;Incorrect meta data was provided ?&quot;));</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;};</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Outputs&gt;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="namespacecv_1_1detail.html#a8c6a7120c4c06f085a6bc3503243c4d9">  150</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecv_1_1detail.html#a8c6a7120c4c06f085a6bc3503243c4d9">postprocess_ocl</a>(Outputs&amp;... outs)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">struct</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">void</span> operator()(<a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html">tracked_cv_umat</a>* bm) { bm-&gt;<a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html#a907c4700b70270adce7d25228e2e3ee5">validate</a>(); }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">void</span> operator()(...) {                  }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    } validate;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">//dummy array to unfold parameter pack</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">int</span> dummy[] = { 0, (validate(&amp;outs), 0)... };</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="namespacecv_1_1util.html#a5f00f5a230b8dc4f63bdd1c8057ace44">cv::util::suppress_unused_warning</a>(dummy);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out.html">  163</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_mat_01_4.html">  164</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_mat.html">GMat</a>&gt;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_mat_01_4.html#ae97ba9cd159a7152a0e2171860ebc6b9">  166</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="structcv_1_1detail_1_1tracked__cv__umat.html">tracked_cv_umat</a> <a class="code" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_mat_01_4.html#ae97ba9cd159a7152a0e2171860ebc6b9">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">auto</span>&amp; <a class="code" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a> = ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#ab6561a2ea00141e38ac8afa1f89458ab">outMatR</a>(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span>{ <a class="code" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a> };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;};</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_scalar_01_4.html">  172</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_scalar.html">GScalar</a>&gt;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_scalar_01_4.html#a976d21511ec987772f40852adbc259d0">  174</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_scalar__.html">cv::Scalar</a>&amp; <a class="code" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_scalar_01_4.html#a976d21511ec987772f40852adbc259d0">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a4caa04c8e3d57aab2c3f0d622b953b9b">outValR</a>(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html">  179</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_array.html">GArray</a>&lt;U&gt; &gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a7bedb68e777501882e8ca4037e8e179e">  181</a></span>&#160;    <span class="keyword">static</span> std::vector&lt;U&gt;&amp; <a class="code" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a7bedb68e777501882e8ca4037e8e179e">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#a23b6577922d9c1b5b3bb835c16e76afa">outVecR</a>&lt;<a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>);  }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html">  183</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt; <span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="classcv_1_1_g_opaque.html">GOpaque</a>&lt;U&gt; &gt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a46f86f06cb28a70e8c792c1a5e684a29">  185</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a>&amp; <a class="code" href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a46f86f06cb28a70e8c792c1a5e684a29">get</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>) { <span class="keywordflow">return</span> ctx.<a class="code" href="classcv_1_1_g_o_c_l_context.html#ab25deb99d582bce4ddc5714b0321236f">outOpaqueR</a>&lt;<a class="code" href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a>&gt;(<a class="code" href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a>);  }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;};</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">  189</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">OCLCallHelper</a>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">// FIXME: probably can be simplified with std::apply or analogue.</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Impl, <span class="keyword">typename</span>... Ins, <span class="keyword">typename</span>... Outs&gt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html">  193</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">OCLCallHelper</a>&lt;Impl, <a class="code" href="namespacestd.html">std</a>::tuple&lt;Ins...&gt;, std::tuple&lt;Outs...&gt; &gt;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Inputs&gt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st3828252fa0e8d0b7e5e4a1540f78bbee.html">  196</a></span>&#160;    <span class="keyword">struct </span>call_and_postprocess</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Outputs&gt;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st3828252fa0e8d0b7e5e4a1540f78bbee.html#a9ef584f92c327343e1686f79114a0b19">  199</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st3828252fa0e8d0b7e5e4a1540f78bbee.html#a9ef584f92c327343e1686f79114a0b19">call</a>(Inputs&amp;&amp;... ins, Outputs&amp;&amp;... outs)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="comment">//not using a std::forward on outs is deliberate in order to</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">//cause compilation error, by trying to bind rvalue references to lvalue references</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            Impl::run(std::forward&lt;Inputs&gt;(ins)..., outs...);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <a class="code" href="namespacecv_1_1detail.html#a8c6a7120c4c06f085a6bc3503243c4d9">postprocess_ocl</a>(outs...);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    };</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span>... IIs, <span class="keywordtype">int</span>... OIs&gt;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#afc5cd88e5482d3eaa6e8671fc7a177d5">  210</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#afc5cd88e5482d3eaa6e8671fc7a177d5">call_impl</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx, detail::Seq&lt;IIs...&gt;, detail::Seq&lt;OIs...&gt;)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">//TODO: Make sure that OpenCV kernels do not reallocate memory for output parameters</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">//by comparing it&#39;s state (data ptr) before and after the call.</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="comment">//Convert own::Scalar to cv::Scalar before call kernel and run kernel</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">//convert cv::Scalar to own::Scalar after call kernel and write back results</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        call_and_postprocess&lt;decltype(<a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in&lt;Ins&gt;::get</a>(ctx, IIs))...&gt;::call(<a class="code" href="structcv_1_1detail_1_1ocl__get__in.html">ocl_get_in&lt;Ins&gt;::get</a>(ctx, IIs)..., <a class="code" href="structcv_1_1detail_1_1ocl__get__out.html">ocl_get_out&lt;Outs&gt;::get</a>(ctx, OIs)...);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#a0416c643846c9dcff9282069c44ff0f6">  219</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#a0416c643846c9dcff9282069c44ff0f6">call</a>(<a class="code" href="classcv_1_1_g_o_c_l_context.html">GOCLContext</a> &amp;ctx)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        call_impl(ctx,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keyword">typename</span> detail::MkSeq&lt;<span class="keyword">sizeof</span>...(Ins)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>(),</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keyword">typename</span> detail::MkSeq&lt;<span class="keyword">sizeof</span>...(Outs)&gt;::<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>());</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;};</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> Impl, <span class="keyword">class</span> K&gt;</div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel_impl.html">  230</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_g_o_c_l_kernel_impl.html">GOCLKernelImpl</a>: <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">cv::detail::OCLCallHelper</a>&lt;Impl, typename K::InArgs, typename K::OutArgs&gt;,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                      <span class="keyword">public</span> <a class="code" href="structcv_1_1detail_1_1_kernel_tag.html">cv::detail::KernelTag</a></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">P</a> = <a class="code" href="structcv_1_1detail_1_1_o_c_l_call_helper.html">detail::OCLCallHelper&lt;Impl, typename K::InArgs, typename K::OutArgs&gt;</a>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel_impl.html#a89c12b602953b44d6488fb60efbff2b6">  236</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel_impl.html#a89c12b602953b44d6488fb60efbff2b6">API</a> = K;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel_impl.html#a1a6acaf585f91c212e24d860cf28eaf4">  238</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="classcv_1_1_g_o_c_l_kernel_impl.html#a1a6acaf585f91c212e24d860cf28eaf4">backend</a>()  { <span class="keywordflow">return</span> <a class="code" href="group__gapi__std__backends.html#ga5d50ea107219b315bdf3ed54342c29cd">cv::gapi::ocl::backend</a>(); }</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classcv_1_1_g_o_c_l_kernel_impl.html#ac42fb5d276d34fdee3252879fe2ca72b">  239</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html">cv::GOCLKernel</a>     <a class="code" href="classcv_1_1_g_o_c_l_kernel_impl.html#ac42fb5d276d34fdee3252879fe2ca72b">kernel</a>()   { <span class="keywordflow">return</span> <a class="code" href="classcv_1_1_g_o_c_l_kernel.html">GOCLKernel</a>(&amp;P::call);     }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;};</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="goclkernel_8hpp.html#a318ccf7b93292b29615b038effdc5d49">  242</a></span>&#160;<span class="preprocessor">#define GAPI_OCL_KERNEL(Name, API) struct Name: public cv::GOCLKernelImpl&lt;Name, API&gt;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_GOCLKERNEL_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_g_array_html"><div class="ttname"><a href="classcv_1_1_g_array.html">cv::GArray</a></div><div class="ttdef"><b>Definition:</b> garray.hpp:338</div></div>
+<div class="ttc" id="aclasscv_1_1_g_mat_html"><div class="ttname"><a href="classcv_1_1_g_mat.html">cv::GMat</a></div><div class="ttdef"><b>Definition:</b> gmat.hpp:50</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html">cv::GOCLContext</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:55</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_a0f5085f10ef2311591f023eedd0a0a49"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#a0f5085f10ef2311591f023eedd0a0a49">cv::GOCLContext::outVecRef</a></div><div class="ttdeci">detail::VectorRef &amp; outVecRef(int output)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_a23b6577922d9c1b5b3bb835c16e76afa"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#a23b6577922d9c1b5b3bb835c16e76afa">cv::GOCLContext::outVecR</a></div><div class="ttdeci">std::vector&lt; T &gt; &amp; outVecR(int output)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:67</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_a3dc8d9a90a8aa11096b7624a739ee8b8"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#a3dc8d9a90a8aa11096b7624a739ee8b8">cv::GOCLContext::inArg</a></div><div class="ttdeci">const T &amp; inArg(int input)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:59</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_a4caa04c8e3d57aab2c3f0d622b953b9b"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#a4caa04c8e3d57aab2c3f0d622b953b9b">cv::GOCLContext::outValR</a></div><div class="ttdeci">cv::Scalar &amp; outValR(int output)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_a782ca6fe7ba966201c558fc837845c22"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#a782ca6fe7ba966201c558fc837845c22">cv::GOCLContext::inMat</a></div><div class="ttdeci">const cv::UMat &amp; inMat(int input)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_aaaed3bedecfdfa0f73198e3c6615861d"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#aaaed3bedecfdfa0f73198e3c6615861d">cv::GOCLContext::outOpaqueRef</a></div><div class="ttdeci">detail::OpaqueRef &amp; outOpaqueRef(int output)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_ab25deb99d582bce4ddc5714b0321236f"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#ab25deb99d582bce4ddc5714b0321236f">cv::GOCLContext::outOpaqueR</a></div><div class="ttdeci">T &amp; outOpaqueR(int output)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:71</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_ab6561a2ea00141e38ac8afa1f89458ab"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#ab6561a2ea00141e38ac8afa1f89458ab">cv::GOCLContext::outMatR</a></div><div class="ttdeci">cv::UMat &amp; outMatR(int output)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_ad5e0cc242c6ae544bac0e1d23e8cf39d"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#ad5e0cc242c6ae544bac0e1d23e8cf39d">cv::GOCLContext::inVal</a></div><div class="ttdeci">const cv::Scalar &amp; inVal(int input)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_adadfe363aeb36efda23e4a4c2b24c3fd"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#adadfe363aeb36efda23e4a4c2b24c3fd">cv::GOCLContext::m_args</a></div><div class="ttdeci">std::vector&lt; GArg &gt; m_args</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:80</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_context_html_aef292728daf8181723a5a56a969e17dc"><div class="ttname"><a href="classcv_1_1_g_o_c_l_context.html#aef292728daf8181723a5a56a969e17dc">cv::GOCLContext::m_results</a></div><div class="ttdeci">std::unordered_map&lt; std::size_t, GRunArgP &gt; m_results</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:81</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html">cv::GOCLKernel</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:88</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html_a19d73000cd7b9d6fd63cd3c50ad8c4f3"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html#a19d73000cd7b9d6fd63cd3c50ad8c4f3">cv::GOCLKernel::m_f</a></div><div class="ttdeci">F m_f</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:99</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html_a2da247db14accf228762984591ed1b8d"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html#a2da247db14accf228762984591ed1b8d">cv::GOCLKernel::GOCLKernel</a></div><div class="ttdeci">GOCLKernel(const F &amp;f)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html_a4c2736a75bb29feb1ddd387947135393"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html#a4c2736a75bb29feb1ddd387947135393">cv::GOCLKernel::apply</a></div><div class="ttdeci">void apply(GOCLContext &amp;ctx)</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html_aa76103326cdf0b5ce42e5c8466dea113"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html#aa76103326cdf0b5ce42e5c8466dea113">cv::GOCLKernel::GOCLKernel</a></div><div class="ttdeci">GOCLKernel()</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_html_aff00699e540127c7d92fb352164257ab"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel.html#aff00699e540127c7d92fb352164257ab">cv::GOCLKernel::F</a></div><div class="ttdeci">std::function&lt; void(GOCLContext &amp;)&gt; F</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:91</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_impl_html"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel_impl.html">cv::GOCLKernelImpl</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:232</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_impl_html_a1a6acaf585f91c212e24d860cf28eaf4"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel_impl.html#a1a6acaf585f91c212e24d860cf28eaf4">cv::GOCLKernelImpl::backend</a></div><div class="ttdeci">static cv::gapi::GBackend backend()</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:238</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_impl_html_a89c12b602953b44d6488fb60efbff2b6"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel_impl.html#a89c12b602953b44d6488fb60efbff2b6">cv::GOCLKernelImpl::API</a></div><div class="ttdeci">K API</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:236</div></div>
+<div class="ttc" id="aclasscv_1_1_g_o_c_l_kernel_impl_html_ac42fb5d276d34fdee3252879fe2ca72b"><div class="ttname"><a href="classcv_1_1_g_o_c_l_kernel_impl.html#ac42fb5d276d34fdee3252879fe2ca72b">cv::GOCLKernelImpl::kernel</a></div><div class="ttdeci">static cv::GOCLKernel kernel()</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:239</div></div>
+<div class="ttc" id="aclasscv_1_1_g_opaque_html"><div class="ttname"><a href="classcv_1_1_g_opaque.html">cv::GOpaque</a></div><div class="ttdef"><b>Definition:</b> gopaque.hpp:309</div></div>
+<div class="ttc" id="aclasscv_1_1_g_scalar_html"><div class="ttname"><a href="classcv_1_1_g_scalar.html">cv::GScalar</a></div><div class="ttdef"><b>Definition:</b> gscalar.hpp:30</div></div>
+<div class="ttc" id="aclasscv_1_1_scalar___html"><div class="ttname"><a href="classcv_1_1_scalar__.html">cv::Scalar_&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclasscv_1_1_u_mat_html"><div class="ttname"><a href="classcv_1_1_u_mat.html">cv::UMat</a></div><div class="ttdef"><b>Definition:</b> mat.hpp:2381</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_opaque_ref_html"><div class="ttname"><a href="classcv_1_1detail_1_1_opaque_ref.html">cv::detail::OpaqueRef</a></div><div class="ttdef"><b>Definition:</b> gopaque.hpp:230</div></div>
+<div class="ttc" id="aclasscv_1_1detail_1_1_vector_ref_html"><div class="ttname"><a href="classcv_1_1detail_1_1_vector_ref.html">cv::detail::VectorRef</a></div><div class="ttdef"><b>Definition:</b> garray.hpp:237</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1_g_backend_html"><div class="ttname"><a href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a></div><div class="ttdef"><b>Definition:</b> gkernel.hpp:375</div></div>
+<div class="ttc" id="acore_2mat_8hpp_html"><div class="ttname"><a href="core_2mat_8hpp.html">mat.hpp</a></div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="agarg_8hpp_html"><div class="ttname"><a href="garg_8hpp.html">garg.hpp</a></div></div>
+<div class="ttc" id="agcommon_8hpp_html"><div class="ttname"><a href="gcommon_8hpp.html">gcommon.hpp</a></div></div>
+<div class="ttc" id="agkernel_8hpp_html"><div class="ttname"><a href="gkernel_8hpp.html">gkernel.hpp</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga1fc9a530e4f9c60ea61e1e7a68cfb639"><div class="ttname"><a href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">cv::T</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray InputOutputArray T</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_ga5c7c842f447336aa2f10826df65a28b3"><div class="ttname"><a href="group__core__c.html#ga5c7c842f447336aa2f10826df65a28b3">idx</a></div><div class="ttdeci">const int * idx</div><div class="ttdef"><b>Definition:</b> core_c.h:665</div></div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__core__c_html_gaa9c521f41af9a5191e5e4b6ffbae211a"><div class="ttname"><a href="group__core__c.html#gaa9c521f41af9a5191e5e4b6ffbae211a">U</a></div><div class="ttdeci">const CvArr * U</div><div class="ttdef"><b>Definition:</b> core_c.h:1337</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> interface.h:51</div></div>
+<div class="ttc" id="agroup__gapi__std__backends_html_ga5d50ea107219b315bdf3ed54342c29cd"><div class="ttname"><a href="group__gapi__std__backends.html#ga5d50ea107219b315bdf3ed54342c29cd">cv::gapi::ocl::backend</a></div><div class="ttdeci">GAPI_EXPORTS cv::gapi::GBackend backend()</div><div class="ttdoc">Get a reference to OCL backend.</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_ga54709f3b06b33b66763f1613cc7fb571"><div class="ttname"><a href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a></div><div class="ttdeci">CvRect r</div><div class="ttdef"><b>Definition:</b> imgproc_c.h:976</div></div>
+<div class="ttc" id="anamespacecv_1_1detail_html_a8c6a7120c4c06f085a6bc3503243c4d9"><div class="ttname"><a href="namespacecv_1_1detail.html#a8c6a7120c4c06f085a6bc3503243c4d9">cv::detail::postprocess_ocl</a></div><div class="ttdeci">void postprocess_ocl(Outputs &amp;... outs)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:150</div></div>
+<div class="ttc" id="anamespacecv_1_1util_html_a5f00f5a230b8dc4f63bdd1c8057ace44"><div class="ttname"><a href="namespacecv_1_1util.html#a5f00f5a230b8dc4f63bdd1c8057ace44">cv::util::suppress_unused_warning</a></div><div class="ttdeci">void suppress_unused_warning(const T &amp;)</div><div class="ttdoc">Utility template function to prevent &quot;unused&quot; warnings by various compilers.</div><div class="ttdef"><b>Definition:</b> compiler_hints.hpp:15</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:266</div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a1dabed62d2d603302ed85878c743e251"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a1dabed62d2d603302ed85878c743e251">void</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void(CL_CALLBACK *)(cl_program</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_kernel_tag_html"><div class="ttname"><a href="structcv_1_1detail_1_1_kernel_tag.html">cv::detail::KernelTag</a></div><div class="ttdef"><b>Definition:</b> gcommon.hpp:36</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6_html_a0416c643846c9dcff9282069c44ff0f6"><div class="ttname"><a href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#a0416c643846c9dcff9282069c44ff0f6">cv::detail::OCLCallHelper&lt; Impl, std::tuple&lt; Ins... &gt;, std::tuple&lt; Outs... &gt; &gt;::call</a></div><div class="ttdeci">static void call(GOCLContext &amp;ctx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:219</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6_html_afc5cd88e5482d3eaa6e8671fc7a177d5"><div class="ttname"><a href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st0ecf73e403e0f6161bac0d713f7a08d6.html#afc5cd88e5482d3eaa6e8671fc7a177d5">cv::detail::OCLCallHelper&lt; Impl, std::tuple&lt; Ins... &gt;, std::tuple&lt; Outs... &gt; &gt;::call_impl</a></div><div class="ttdeci">static void call_impl(GOCLContext &amp;ctx, detail::Seq&lt; IIs... &gt;, detail::Seq&lt; OIs... &gt;)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:210</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st3828252fa0e8d0b7e5e4a1540f78bbee_html_a9ef584f92c327343e1686f79114a0b19"><div class="ttname"><a href="structcv_1_1detail_1_1_o_c_l_call_helper_3_01_impl_00_01std_1_1tuple_3_01_ins_8_8_8_01_4_00_01st3828252fa0e8d0b7e5e4a1540f78bbee.html#a9ef584f92c327343e1686f79114a0b19">cv::detail::OCLCallHelper&lt; Impl, std::tuple&lt; Ins... &gt;, std::tuple&lt; Outs... &gt; &gt;::call_and_postprocess::call</a></div><div class="ttdeci">static void call(Inputs &amp;&amp;... ins, Outputs &amp;&amp;... outs)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:199</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1_o_c_l_call_helper_html"><div class="ttname"><a href="structcv_1_1detail_1_1_o_c_l_call_helper.html">cv::detail::OCLCallHelper</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:189</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4_html_a6a67939768a3ba8e10a0e11a860f9649"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a6a67939768a3ba8e10a0e11a860f9649">cv::detail::ocl_get_in&lt; cv::GArray&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static const std::vector&lt; U &gt; &amp; get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:117</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_mat_01_4_html_a522e0d6a048e1464939817ea348775c1"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_mat_01_4.html#a522e0d6a048e1464939817ea348775c1">cv::detail::ocl_get_in&lt; cv::GMat &gt;::get</a></div><div class="ttdeci">static cv::UMat get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:109</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4_html_a41517ddb9a54364431d96063428517ba"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a41517ddb9a54364431d96063428517ba">cv::detail::ocl_get_in&lt; cv::GOpaque&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static const U &amp; get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:121</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_scalar_01_4_html_afce3e8e171d283b5fd910e65bab81870"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in_3_01cv_1_1_g_scalar_01_4.html#afce3e8e171d283b5fd910e65bab81870">cv::detail::ocl_get_in&lt; cv::GScalar &gt;::get</a></div><div class="ttdeci">static cv::Scalar get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:113</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_html"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in.html">cv::detail::ocl_get_in</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:124</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__in_html_aacb949ca8c17d2bb8022f21a24f8aca6"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__in.html#aacb949ca8c17d2bb8022f21a24f8aca6">cv::detail::ocl_get_in::get</a></div><div class="ttdeci">static T get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:125</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_array_3_01_u_01_4_01_4_html_a7bedb68e777501882e8ca4037e8e179e"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_array_3_01_u_01_4_01_4.html#a7bedb68e777501882e8ca4037e8e179e">cv::detail::ocl_get_out&lt; cv::GArray&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static std::vector&lt; U &gt; &amp; get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:181</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_mat_01_4_html_ae97ba9cd159a7152a0e2171860ebc6b9"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_mat_01_4.html#ae97ba9cd159a7152a0e2171860ebc6b9">cv::detail::ocl_get_out&lt; cv::GMat &gt;::get</a></div><div class="ttdeci">static tracked_cv_umat get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:166</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4_html_a46f86f06cb28a70e8c792c1a5e684a29"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_opaque_3_01_u_01_4_01_4.html#a46f86f06cb28a70e8c792c1a5e684a29">cv::detail::ocl_get_out&lt; cv::GOpaque&lt; U &gt; &gt;::get</a></div><div class="ttdeci">static U &amp; get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:185</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_scalar_01_4_html_a976d21511ec987772f40852adbc259d0"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__out_3_01cv_1_1_g_scalar_01_4.html#a976d21511ec987772f40852adbc259d0">cv::detail::ocl_get_out&lt; cv::GScalar &gt;::get</a></div><div class="ttdeci">static cv::Scalar &amp; get(GOCLContext &amp;ctx, int idx)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:174</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1ocl__get__out_html"><div class="ttname"><a href="structcv_1_1detail_1_1ocl__get__out.html">cv::detail::ocl_get_out</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:163</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1tracked__cv__umat_html"><div class="ttname"><a href="structcv_1_1detail_1_1tracked__cv__umat.html">cv::detail::tracked_cv_umat</a></div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:128</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1tracked__cv__umat_html_a2d3d1aba90a40aa411eea051e686df35"><div class="ttname"><a href="structcv_1_1detail_1_1tracked__cv__umat.html#a2d3d1aba90a40aa411eea051e686df35">cv::detail::tracked_cv_umat::tracked_cv_umat</a></div><div class="ttdeci">tracked_cv_umat(cv::UMat &amp;m)</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:131</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1tracked__cv__umat_html_a6a9a4f76fd04649d4d5fa85f56b3cfae"><div class="ttname"><a href="structcv_1_1detail_1_1tracked__cv__umat.html#a6a9a4f76fd04649d4d5fa85f56b3cfae">cv::detail::tracked_cv_umat::r</a></div><div class="ttdeci">cv::UMat &amp; r</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:132</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1tracked__cv__umat_html_a8239876c6987cec486138493596be8b7"><div class="ttname"><a href="structcv_1_1detail_1_1tracked__cv__umat.html#a8239876c6987cec486138493596be8b7">cv::detail::tracked_cv_umat::original_data</a></div><div class="ttdeci">uchar * original_data</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:134</div></div>
+<div class="ttc" id="astructcv_1_1detail_1_1tracked__cv__umat_html_a907c4700b70270adce7d25228e2e3ee5"><div class="ttname"><a href="structcv_1_1detail_1_1tracked__cv__umat.html#a907c4700b70270adce7d25228e2e3ee5">cv::detail::tracked_cv_umat::validate</a></div><div class="ttdeci">void validate() const</div><div class="ttdef"><b>Definition:</b> goclkernel.hpp:137</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_e64fc37726ff93bdde0be220fd97befc.html">ocl</a></li><li class="navelem"><a class="el" href="goclkernel_8hpp.html">goclkernel.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::cuda::BufferPool</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1cuda_1_1_buffer_pool.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1cuda_1_1_buffer_pool-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::cuda::BufferPool<div class="ingroups"><a class="el" href="group__cuda.html">CUDA-accelerated Computer Vision</a> &raquo; <a class="el" href="group__cudacore.html">Core part</a> &raquo; <a class="el" href="group__cudacore__struct.html">Data Structures</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> for use with CUDA streams.  
+ <a href="classcv_1_1cuda_1_1_buffer_pool.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0f1e0a518847d41663e7344927515761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">BufferPool</a> (<a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a0f1e0a518847d41663e7344927515761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> for the given stream.  <a href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0f1e0a518847d41663e7344927515761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e6a4f8ebdf4fecb3639a7f7aacb9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html#aa4e6a4f8ebdf4fecb3639a7f7aacb9d8">getBuffer</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga061459acc9e078fa4699e0e349887215">rows</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#ga4407a60bc4387adae24cee658711f2d9">cols</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="memdesc:aa4e6a4f8ebdf4fecb3639a7f7aacb9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of given size and type.  <a href="classcv_1_1cuda_1_1_buffer_pool.html#aa4e6a4f8ebdf4fecb3639a7f7aacb9d8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4e6a4f8ebdf4fecb3639a7f7aacb9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70abb3d44e0dbf0fe2398f59e401d9ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html#a70abb3d44e0dbf0fe2398f59e401d9ea">getBuffer</a> (<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="memdesc:a70abb3d44e0dbf0fe2398f59e401d9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of given size and type.  <a href="classcv_1_1cuda_1_1_buffer_pool.html#a70abb3d44e0dbf0fe2398f59e401d9ea">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70abb3d44e0dbf0fe2398f59e401d9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d63fa8ba5c92c10da1a7bea0f118aba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html#a9d63fa8ba5c92c10da1a7bea0f118aba">getAllocator</a> () const</td></tr>
+<tr class="memdesc:a9d63fa8ba5c92c10da1a7bea0f118aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the allocator associated with the stream.  <a href="classcv_1_1cuda_1_1_buffer_pool.html#a9d63fa8ba5c92c10da1a7bea0f118aba">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9d63fa8ba5c92c10da1a7bea0f118aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> for use with CUDA streams. </p>
+<p><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> utilizes <a class="el" href="classcv_1_1cuda_1_1_stream.html" title="This class encapsulates a queue of asynchronous calls.">Stream</a>'s allocator to create new buffers for <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>'s. It is only useful when enabled with <a class="el" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085" title="BufferPool management (must be called before Stream creation)">setBufferPoolUsage</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085">setBufferPoolUsage</a>(<span class="keyword">true</span>);</div>
+<div class="ttc" id="agroup__cudacore__struct_html_ga0444b78168a19e590ed1c3a2e2704085"><div class="ttname"><a href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085">cv::cuda::setBufferPoolUsage</a></div><div class="ttdeci">CV_EXPORTS_W void setBufferPoolUsage(bool on)</div><div class="ttdoc">BufferPool management (must be called before Stream creation)</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Заметки</dt><dd><a class="el" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085" title="BufferPool management (must be called before Stream creation)">setBufferPoolUsage</a> must be called <em>before</em> any <a class="el" href="classcv_1_1cuda_1_1_stream.html" title="This class encapsulates a queue of asynchronous calls.">Stream</a> declaration.</dd></dl>
+<p>Users may specify custom allocator for <a class="el" href="classcv_1_1cuda_1_1_stream.html" title="This class encapsulates a queue of asynchronous calls.">Stream</a> and may implement their own stream based functions utilizing the same underlying GPU memory management.</p>
+<p>If custom allocator is not specified, <a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> utilizes StackAllocator by default. StackAllocator allocates a chunk of GPU device memory beforehand, and when <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> is declared later on, it is given the pre-allocated memory. This kind of strategy reduces the number of calls for memory allocating APIs such as cudaMalloc or cudaMallocPitch.</p>
+<p>Below is an example that utilizes <a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> with StackAllocator:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="opencv_8hpp.html">opencv2/opencv.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacecv_1_1cuda.html">cv::cuda</a></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085">setBufferPoolUsage</a>(<span class="keyword">true</span>);                               <span class="comment">// Tell OpenCV that we are going to utilize BufferPool</span></div>
+<div class="line">    <a class="code" href="group__cudacore__struct.html#gaea47826613b76ca2970e84cffa1d5fac">setBufferPoolConfig</a>(<a class="code" href="group__cudacore__init.html#gaa846fa7d9c2c5d1380426ad2106bb774">getDevice</a>(), 1024 * 1024 * 64, 2);  <span class="comment">// Allocate 64 MB, 2 stacks (default is 10 MB, 5 stacks)</span></div>
+<div class="line"> </div>
+<div class="line">    Stream stream1, stream2;                                <span class="comment">// Each stream uses 1 stack</span></div>
+<div class="line">    <a class="code" href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">BufferPool</a> pool1(stream1), pool2(stream2);</div>
+<div class="line"> </div>
+<div class="line">    GpuMat d_src1 = pool1.getBuffer(4096, 4096, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// 16MB</span></div>
+<div class="line">    GpuMat d_dst1 = pool1.getBuffer(4096, 4096, <a class="code" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>);   <span class="comment">// 48MB, pool1 is now full</span></div>
+<div class="line"> </div>
+<div class="line">    GpuMat d_src2 = pool2.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// 1MB</span></div>
+<div class="line">    GpuMat d_dst2 = pool2.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>);   <span class="comment">// 3MB</span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd">cvtColor</a>(d_src1, d_dst1, <a class="code" href="group__imgproc__c.html#gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d">CV_GRAY2BGR</a>, 0, stream1);</div>
+<div class="line">    <a class="code" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd">cvtColor</a>(d_src2, d_dst2, <a class="code" href="group__imgproc__c.html#gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d">CV_GRAY2BGR</a>, 0, stream2);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasscv_1_1cuda_1_1_buffer_pool_html_a0f1e0a518847d41663e7344927515761"><div class="ttname"><a href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">cv::cuda::BufferPool::BufferPool</a></div><div class="ttdeci">BufferPool(Stream &amp;stream)</div><div class="ttdoc">Gets the BufferPool for the given stream.</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga81df635441b21f532fdace401e04f588"><div class="ttname"><a href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a></div><div class="ttdeci">#define CV_8UC1</div><div class="ttdef"><b>Definition:</b> interface.h:88</div></div>
+<div class="ttc" id="agroup__core__hal__interface_html_ga88c4cd9de76f678f33928ef1e3f96047"><div class="ttname"><a href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a></div><div class="ttdeci">#define CV_8UC3</div><div class="ttdef"><b>Definition:</b> interface.h:90</div></div>
+<div class="ttc" id="agroup__cudacore__init_html_gaa846fa7d9c2c5d1380426ad2106bb774"><div class="ttname"><a href="group__cudacore__init.html#gaa846fa7d9c2c5d1380426ad2106bb774">cv::cuda::getDevice</a></div><div class="ttdeci">CV_EXPORTS_W int getDevice()</div><div class="ttdoc">Returns the current device index set by cuda::setDevice or initialized by default.</div></div>
+<div class="ttc" id="agroup__cudacore__struct_html_gaea47826613b76ca2970e84cffa1d5fac"><div class="ttname"><a href="group__cudacore__struct.html#gaea47826613b76ca2970e84cffa1d5fac">cv::cuda::setBufferPoolConfig</a></div><div class="ttdeci">CV_EXPORTS_W void setBufferPoolConfig(int deviceId, size_t stackSize, int stackCount)</div></div>
+<div class="ttc" id="agroup__imgproc__c_html_gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d"><div class="ttname"><a href="group__imgproc__c.html#gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d">CV_GRAY2BGR</a></div><div class="ttdeci">@ CV_GRAY2BGR</div><div class="ttdef"><b>Definition:</b> types_c.h:123</div></div>
+<div class="ttc" id="agroup__imgproc__color__conversions_html_ga9cec3a213b6cda786e404a72e09247dd"><div class="ttname"><a href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd">cv::cvtColor</a></div><div class="ttdeci">CV_EXPORTS_W void cvtColor(InputArray src, OutputArray dst, int code, int dstCn=0)</div><div class="ttdoc">Converts an image from one color space to another.</div></div>
+<div class="ttc" id="amnist__example_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> mnist_example.cpp:18</div></div>
+<div class="ttc" id="anamespacecv_1_1cuda_html"><div class="ttname"><a href="namespacecv_1_1cuda.html">cv::cuda</a></div><div class="ttdef"><b>Definition:</b> cuda.hpp:65</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="aopencv_8hpp_html"><div class="ttname"><a href="opencv_8hpp.html">opencv.hpp</a></div></div>
+</div><!-- fragment --><p>If we allocate another <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> on pool1 in the above example, it will be carried out by the DefaultAllocator since the stack for pool1 is full.</p>
+<div class="fragment"><div class="line">GpuMat d_add1 = pool1.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// Stack for pool1 is full, memory is allocated with DefaultAllocator</span></div>
+</div><!-- fragment --><p>If a third stream is declared in the above example, allocating with <a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html#aa4e6a4f8ebdf4fecb3639a7f7aacb9d8" title="Allocates a new GpuMat of given size and type.">getBuffer</a> within that stream will also be carried out by the DefaultAllocator because we've run out of stacks.</p>
+<div class="fragment"><div class="line">Stream stream3;                                         <span class="comment">// Only 2 stacks were allocated, we&#39;ve run out of stacks</span></div>
+<div class="line"><a class="code" href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">BufferPool</a> pool3(stream3);</div>
+<div class="line">GpuMat d_src3 = pool3.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// Memory is allocated with DefaultAllocator</span></div>
+</div><!-- fragment --><dl class="section warning"><dt>Предупреждения</dt><dd>When utilizing StackAllocator, deallocation order is important.</dd></dl>
+<p>Just like a stack, deallocation must be done in LIFO order. Below is an example of erroneous usage that violates LIFO rule. If OpenCV is compiled in Debug mode, this sample code will emit CV_Assert error.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code" href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085">setBufferPoolUsage</a>(<span class="keyword">true</span>);                               <span class="comment">// Tell OpenCV that we are going to utilize BufferPool</span></div>
+<div class="line">    Stream stream;                                          <span class="comment">// A default size (10 MB) stack is allocated to this stream</span></div>
+<div class="line">    <a class="code" href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">BufferPool</a> pool(stream);</div>
+<div class="line"> </div>
+<div class="line">    GpuMat mat1 = pool.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);      <span class="comment">// Allocate mat1 (1MB)</span></div>
+<div class="line">    GpuMat mat2 = pool.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);      <span class="comment">// Allocate mat2 (1MB)</span></div>
+<div class="line"> </div>
+<div class="line">    mat1.release();                                         <span class="comment">// erroneous usage : mat2 must be deallocated before mat1</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Since C++ local variables are destroyed in the reverse order of construction, the code sample below satisfies the LIFO rule. Local <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a>'s are deallocated and the corresponding memory is automatically returned to the pool for later usage.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code" href="mnist__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="group__cudacore__struct.html#ga0444b78168a19e590ed1c3a2e2704085">setBufferPoolUsage</a>(<span class="keyword">true</span>);                               <span class="comment">// Tell OpenCV that we are going to utilize BufferPool</span></div>
+<div class="line">    <a class="code" href="group__cudacore__struct.html#gaea47826613b76ca2970e84cffa1d5fac">setBufferPoolConfig</a>(<a class="code" href="group__cudacore__init.html#gaa846fa7d9c2c5d1380426ad2106bb774">getDevice</a>(), 1024 * 1024 * 64, 2);  <span class="comment">// Allocate 64 MB, 2 stacks (default is 10 MB, 5 stacks)</span></div>
+<div class="line"> </div>
+<div class="line">    Stream stream1, stream2;                                <span class="comment">// Each stream uses 1 stack</span></div>
+<div class="line">    <a class="code" href="classcv_1_1cuda_1_1_buffer_pool.html#a0f1e0a518847d41663e7344927515761">BufferPool</a> pool1(stream1), pool2(stream2);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++)</div>
+<div class="line">    {</div>
+<div class="line">        GpuMat d_src1 = pool1.getBuffer(4096, 4096, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// 16MB</span></div>
+<div class="line">        GpuMat d_dst1 = pool1.getBuffer(4096, 4096, <a class="code" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>);   <span class="comment">// 48MB, pool1 is now full</span></div>
+<div class="line"> </div>
+<div class="line">        GpuMat d_src2 = pool2.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>);   <span class="comment">// 1MB</span></div>
+<div class="line">        GpuMat d_dst2 = pool2.getBuffer(1024, 1024, <a class="code" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>);   <span class="comment">// 3MB</span></div>
+<div class="line"> </div>
+<div class="line">        d_src1.setTo(<a class="code" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(i), stream1);</div>
+<div class="line">        d_src2.setTo(<a class="code" href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">Scalar</a>(i), stream2);</div>
+<div class="line"> </div>
+<div class="line">        <a class="code" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd">cvtColor</a>(d_src1, d_dst1, <a class="code" href="group__imgproc__c.html#gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d">CV_GRAY2BGR</a>, 0, stream1);</div>
+<div class="line">        <a class="code" href="group__imgproc__color__conversions.html#ga9cec3a213b6cda786e404a72e09247dd">cvtColor</a>(d_src2, d_dst2, <a class="code" href="group__imgproc__c.html#gga0ae1e3bf78c960c83e2d437efd802058a3e44f821dfa46abff2d3cee4cca0a69d">CV_GRAY2BGR</a>, 0, stream2);</div>
+<div class="line">                                                                <span class="comment">// The order of destruction of the local variables is:</span></div>
+<div class="line">                                                                <span class="comment">//   d_dst2 =&gt; d_src2 =&gt; d_dst1 =&gt; d_src1</span></div>
+<div class="line">                                                                <span class="comment">// LIFO rule is satisfied, this code runs without error</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__basic_html_ga599fe92e910c027be274233eccad7beb"><div class="ttname"><a href="group__core__basic.html#ga599fe92e910c027be274233eccad7beb">cv::Scalar</a></div><div class="ttdeci">Scalar_&lt; double &gt; Scalar</div><div class="ttdef"><b>Definition:</b> types.hpp:669</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a0f1e0a518847d41663e7344927515761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1e0a518847d41663e7344927515761">&#9670;&nbsp;</a></span>BufferPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::cuda::BufferPool::BufferPool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1cuda_1_1_stream.html">Stream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the <a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html" title="BufferPool for use with CUDA streams.">BufferPool</a> for the given stream. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9d63fa8ba5c92c10da1a7bea0f118aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d63fa8ba5c92c10da1a7bea0f118aba">&#9670;&nbsp;</a></span>getAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html">GpuMat::Allocator</a>&gt; cv::cuda::BufferPool::getAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the allocator associated with the stream. </p>
+
+</div>
+</div>
+<a id="aa4e6a4f8ebdf4fecb3639a7f7aacb9d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e6a4f8ebdf4fecb3639a7f7aacb9d8">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::BufferPool::getBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocates a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of given size and type. </p>
+
+</div>
+</div>
+<a id="a70abb3d44e0dbf0fe2398f59e401d9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70abb3d44e0dbf0fe2398f59e401d9ea">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html">GpuMat</a> cv::cuda::BufferPool::getBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocates a new <a class="el" href="classcv_1_1cuda_1_1_gpu_mat.html" title="Base storage class for GPU memory with reference counting.">GpuMat</a> of given size and type. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="core_2cuda_8hpp_source.html">cuda.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1cuda.html">cuda</a></li><li class="navelem"><a class="el" href="classcv_1_1cuda_1_1_buffer_pool.html">BufferPool</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

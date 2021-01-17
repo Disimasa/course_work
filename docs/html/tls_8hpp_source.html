@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/core/utils/tls.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('tls_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">tls.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="tls_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef OPENCV_UTILS_TLS_HPP</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define OPENCV_UTILS_TLS_HPP</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="core_2utility_8hpp.html">opencv2/core/utility.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespacecv_1_1details.html">   15</a></span>&#160;<span class="keyword">namespace </span>details { <span class="keyword">class </span>TlsStorage; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#a822517e9fa810fb1278b6745b666e670">   26</a></span>&#160;    <a class="code" href="classcv_1_1_t_l_s_data_container.html#a822517e9fa810fb1278b6745b666e670">TLSDataContainer</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#af82bae531c9816f2891d8019108e7bdd">   27</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classcv_1_1_t_l_s_data_container.html#af82bae531c9816f2891d8019108e7bdd">~TLSDataContainer</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#a5fd371340f0dd7e193a4ab09795dbda6">   30</a></span>&#160;    <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data_container.html#a5fd371340f0dd7e193a4ab09795dbda6">gatherData</a>(std::vector&lt;void*&gt; &amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#a3e075d229aaa6c3f60cbd1a545f9ce77">   32</a></span>&#160;    <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data_container.html#a3e075d229aaa6c3f60cbd1a545f9ce77">detachData</a>(std::vector&lt;void*&gt;&amp; <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#ace0bad31d5b53059247d6fa3070fc3a0">   34</a></span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="classcv_1_1_t_l_s_data_container.html#ace0bad31d5b53059247d6fa3070fc3a0">getData</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#af8c2c374fb21c3bf8421e28290df3630">   35</a></span>&#160;    <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data_container.html#af8c2c374fb21c3bf8421e28290df3630">release</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#a13487b759ad6e80b5ac95171f5973027">   38</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classcv_1_1_t_l_s_data_container.html#a13487b759ad6e80b5ac95171f5973027">createDataInstance</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#ab9969d79ef0b1acb9e26548a283e1059">   39</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data_container.html#ab9969d79ef0b1acb9e26548a283e1059">deleteDataInstance</a>(<span class="keywordtype">void</span>* pData) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> key_;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#aa3eac24e60c6a2312e113759cb3ed391">   44</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>cv::details::TlsStorage;  <span class="comment">// core/src/system.cpp</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_container.html#a60db91833dbbbcb7d3406b819de3b272">   47</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_container.html#a60db91833dbbbcb7d3406b819de3b272">cleanup</a>(); </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Disable copy/assign (noncopyable pattern)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a>(<a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a>&amp; operator =(<span class="keyword">const</span> <a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_t_l_s_data.html">TLSData</a> : <span class="keyword">protected</span> <a class="code" href="classcv_1_1_t_l_s_data_container.html">TLSDataContainer</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#ac945ff66d0653b82b928fa03d2e955cc">   64</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="classcv_1_1_t_l_s_data.html#ac945ff66d0653b82b928fa03d2e955cc">TLSData</a>() {}</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#aaf906e246fce05cef51afb7213d944da">   65</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="classcv_1_1_t_l_s_data.html#aaf906e246fce05cef51afb7213d944da">~TLSData</a>() { <a class="code" href="classcv_1_1_t_l_s_data_container.html#af8c2c374fb21c3bf8421e28290df3630">release</a>(); }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#a2314048543cb22e35188d0638c2b029b">   67</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* <a class="code" href="classcv_1_1_t_l_s_data.html#a2314048543cb22e35188d0638c2b029b">get</a>()<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> (<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)<a class="code" href="classcv_1_1_t_l_s_data_container.html#ace0bad31d5b53059247d6fa3070fc3a0">getData</a>(); }  </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#a6dc1b69ad91e20f63177fe0d3ae22771">   68</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>&amp; <a class="code" href="classcv_1_1_t_l_s_data.html#a6dc1b69ad91e20f63177fe0d3ae22771">getRef</a>()<span class="keyword"> const </span>{ <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>* ptr = (<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)<a class="code" href="classcv_1_1_t_l_s_data_container.html#ace0bad31d5b53059247d6fa3070fc3a0">getData</a>(); <a class="code" href="group__core__utils.html#gafbcb487cba05bd288dbe18c433de4f6f">CV_DbgAssert</a>(ptr); <span class="keywordflow">return</span> *ptr; }  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#a02c27b7fb89eed095708c588af79ff1f">   71</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data.html#a02c27b7fb89eed095708c588af79ff1f">cleanup</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_container.html#a60db91833dbbbcb7d3406b819de3b272">TLSDataContainer::cleanup</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#a214a5c797bf1aa889e81430dcfea596b">   78</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classcv_1_1_t_l_s_data.html#a214a5c797bf1aa889e81430dcfea596b">createDataInstance</a>() const <a class="code" href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a> { <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data.html#a6a197810db6d03c4397ee203eb9a2fad">   80</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data.html#a6a197810db6d03c4397ee203eb9a2fad">deleteDataInstance</a>(<span class="keywordtype">void</span>* pData) <span class="keyword">const</span> <a class="code" href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a> { <span class="keyword">delete</span> (<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)pData; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html">   86</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1_t_l_s_data_accumulator.html">TLSDataAccumulator</a> : <span class="keyword">public</span> <a class="code" href="classcv_1_1_t_l_s_data.html">TLSData</a>&lt;T&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">mutable</span> <a class="code" href="group__core__utils.html#gaf0b2df4f7899189c9d04f7a2c2559132">cv::Mutex</a> mutex;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">mutable</span> std::vector&lt;T*&gt; dataFromTerminatedThreads;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::vector&lt;T*&gt; detachedData;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> cleanupMode;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#a301bbde7e15b617b722fb344183734df">   93</a></span>&#160;    <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a301bbde7e15b617b722fb344183734df">TLSDataAccumulator</a>() : cleanupMode(false) {}</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#aae14fd5735f3280daeef7e1d6ae6c533">   94</a></span>&#160;    <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#aae14fd5735f3280daeef7e1d6ae6c533">~TLSDataAccumulator</a>()</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#aa3e2204675be100726e6088d8e34214a">release</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#aacb6a6d0001d8091f7356d5a2fce788b">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#aacb6a6d0001d8091f7356d5a2fce788b">gather</a>(std::vector&lt;T*&gt; &amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="group__core__utils.html#gaf62bcd90f70e275191ab95136d85906b">CV_Assert</a>(cleanupMode == <span class="keyword">false</span>);  <span class="comment">// state is not valid</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="group__core__utils.html#gaf62bcd90f70e275191ab95136d85906b">CV_Assert</a>(<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.empty());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            std::vector&lt;void*&gt; &amp;dataVoid = <span class="keyword">reinterpret_cast&lt;</span>std::vector&lt;void*&gt;&amp;<span class="keyword">&gt;</span>(<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_container.html#a5fd371340f0dd7e193a4ab09795dbda6">TLSDataContainer::gatherData</a>(dataVoid);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.reserve(<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.size() + dataFromTerminatedThreads.size());</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::vector&lt;T*&gt;::const_iterator i = dataFromTerminatedThreads.begin(); i != dataFromTerminatedThreads.end(); ++i)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>.push_back((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)*i);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#aa40ccce3dca12ada46d0f02d99866690">  130</a></span>&#160;    std::vector&lt;T*&gt;&amp; <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#aa40ccce3dca12ada46d0f02d99866690">detachData</a>()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="group__core__utils.html#gaf62bcd90f70e275191ab95136d85906b">CV_Assert</a>(cleanupMode == <span class="keyword">false</span>);  <span class="comment">// state is not valid</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        std::vector&lt;void*&gt; dataVoid;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_container.html#a3e075d229aaa6c3f60cbd1a545f9ce77">TLSDataContainer::detachData</a>(dataVoid);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            detachedData.reserve(dataVoid.size() + dataFromTerminatedThreads.size());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::vector&lt;T*&gt;::const_iterator i = dataFromTerminatedThreads.begin(); i != dataFromTerminatedThreads.end(); ++i)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                detachedData.push_back((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)*i);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            dataFromTerminatedThreads.clear();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::vector&lt;void*&gt;::const_iterator i = dataVoid.begin(); i != dataVoid.end(); ++i)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                detachedData.push_back((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)(<span class="keywordtype">void</span>*)*i);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        dataVoid.clear();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> detachedData;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#a80211de7cf66b22d5408cbe873f7ffe2">  155</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a80211de7cf66b22d5408cbe873f7ffe2">cleanupDetachedData</a>()</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        cleanupMode = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">_cleanupDetachedData</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        cleanupMode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#a3fe56df89fa57f6e7c9becf6d15a3454">  164</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a3fe56df89fa57f6e7c9becf6d15a3454">cleanup</a>()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        cleanupMode = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_container.html#a60db91833dbbbcb7d3406b819de3b272">TLSDataContainer::cleanup</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">_cleanupDetachedData</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#af58261968217fca51f73106487653d66">_cleanupTerminatedData</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        cleanupMode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#aa3e2204675be100726e6088d8e34214a">  176</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#aa3e2204675be100726e6088d8e34214a">release</a>()</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        cleanupMode = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="classcv_1_1_t_l_s_data_container.html#af8c2c374fb21c3bf8421e28290df3630">TLSDataContainer::release</a>();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">_cleanupDetachedData</a>();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#af58261968217fca51f73106487653d66">_cleanupTerminatedData</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">// synchronized</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">  189</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">_cleanupDetachedData</a>()</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::vector&lt;T*&gt;::iterator i = detachedData.begin(); i != detachedData.end(); ++i)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#accf3a284d5358bcd39aab9df897fa206">deleteDataInstance</a>((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)*i);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        detachedData.clear();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// synchronized</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#af58261968217fca51f73106487653d66">  199</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#af58261968217fca51f73106487653d66">_cleanupTerminatedData</a>()</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">typename</span> std::vector&lt;T*&gt;::iterator i = dataFromTerminatedThreads.begin(); i != dataFromTerminatedThreads.end(); ++i)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#accf3a284d5358bcd39aab9df897fa206">deleteDataInstance</a>((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)*i);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        dataFromTerminatedThreads.clear();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#a08015abe3d6199e847e5bc23e2080f12">  209</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#a08015abe3d6199e847e5bc23e2080f12">createDataInstance</a>() const <a class="code" href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">// Note: we can collect all allocated data here, but this would require raced mutex locks</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classcv_1_1_t_l_s_data_accumulator.html#accf3a284d5358bcd39aab9df897fa206">  214</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>  <a class="code" href="classcv_1_1_t_l_s_data_accumulator.html#accf3a284d5358bcd39aab9df897fa206">deleteDataInstance</a>(<span class="keywordtype">void</span>* pData) <span class="keyword">const</span> <a class="code" href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (cleanupMode)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keyword">delete</span> (<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)pData;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <a class="code" href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">AutoLock</a> lock(mutex);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            dataFromTerminatedThreads.push_back((<a class="code" href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">T</a>*)pData);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_UTILS_TLS_HPP</span></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html">cv::TLSDataAccumulator</a></div><div class="ttdoc">TLS data accumulator with gathering methods.</div><div class="ttdef"><b>Definition:</b> tls.hpp:87</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_a08015abe3d6199e847e5bc23e2080f12"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#a08015abe3d6199e847e5bc23e2080f12">cv::TLSDataAccumulator::createDataInstance</a></div><div class="ttdeci">virtual void * createDataInstance() const CV_OVERRIDE</div><div class="ttdoc">Wrapper to allocate data by template.</div><div class="ttdef"><b>Definition:</b> tls.hpp:209</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_a301bbde7e15b617b722fb344183734df"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#a301bbde7e15b617b722fb344183734df">cv::TLSDataAccumulator::TLSDataAccumulator</a></div><div class="ttdeci">TLSDataAccumulator()</div><div class="ttdef"><b>Definition:</b> tls.hpp:93</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_a3fe56df89fa57f6e7c9becf6d15a3454"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#a3fe56df89fa57f6e7c9becf6d15a3454">cv::TLSDataAccumulator::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdoc">Release associated thread data.</div><div class="ttdef"><b>Definition:</b> tls.hpp:164</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_a80211de7cf66b22d5408cbe873f7ffe2"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#a80211de7cf66b22d5408cbe873f7ffe2">cv::TLSDataAccumulator::cleanupDetachedData</a></div><div class="ttdeci">void cleanupDetachedData()</div><div class="ttdoc">Release associated thread data returned by detachData() call.</div><div class="ttdef"><b>Definition:</b> tls.hpp:155</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_a8a87f686dd972d52b815759379e87c6f"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#a8a87f686dd972d52b815759379e87c6f">cv::TLSDataAccumulator::_cleanupDetachedData</a></div><div class="ttdeci">void _cleanupDetachedData()</div><div class="ttdef"><b>Definition:</b> tls.hpp:189</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_aa3e2204675be100726e6088d8e34214a"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#aa3e2204675be100726e6088d8e34214a">cv::TLSDataAccumulator::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Release associated thread data and free TLS key.</div><div class="ttdef"><b>Definition:</b> tls.hpp:176</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_aa40ccce3dca12ada46d0f02d99866690"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#aa40ccce3dca12ada46d0f02d99866690">cv::TLSDataAccumulator::detachData</a></div><div class="ttdeci">std::vector&lt; T * &gt; &amp; detachData()</div><div class="ttdoc">Get and detach data from all threads.</div><div class="ttdef"><b>Definition:</b> tls.hpp:130</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_aacb6a6d0001d8091f7356d5a2fce788b"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#aacb6a6d0001d8091f7356d5a2fce788b">cv::TLSDataAccumulator::gather</a></div><div class="ttdeci">void gather(std::vector&lt; T * &gt; &amp;data) const</div><div class="ttdoc">Get data from all threads.</div><div class="ttdef"><b>Definition:</b> tls.hpp:106</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_aae14fd5735f3280daeef7e1d6ae6c533"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#aae14fd5735f3280daeef7e1d6ae6c533">cv::TLSDataAccumulator::~TLSDataAccumulator</a></div><div class="ttdeci">~TLSDataAccumulator()</div><div class="ttdef"><b>Definition:</b> tls.hpp:94</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_accf3a284d5358bcd39aab9df897fa206"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#accf3a284d5358bcd39aab9df897fa206">cv::TLSDataAccumulator::deleteDataInstance</a></div><div class="ttdeci">virtual void deleteDataInstance(void *pData) const CV_OVERRIDE</div><div class="ttdoc">Wrapper to release data by template.</div><div class="ttdef"><b>Definition:</b> tls.hpp:214</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_accumulator_html_af58261968217fca51f73106487653d66"><div class="ttname"><a href="classcv_1_1_t_l_s_data_accumulator.html#af58261968217fca51f73106487653d66">cv::TLSDataAccumulator::_cleanupTerminatedData</a></div><div class="ttdeci">void _cleanupTerminatedData()</div><div class="ttdef"><b>Definition:</b> tls.hpp:199</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html">cv::TLSDataContainer</a></div><div class="ttdef"><b>Definition:</b> tls.hpp:24</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_a13487b759ad6e80b5ac95171f5973027"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#a13487b759ad6e80b5ac95171f5973027">cv::TLSDataContainer::createDataInstance</a></div><div class="ttdeci">virtual void * createDataInstance() const =0</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_a3e075d229aaa6c3f60cbd1a545f9ce77"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#a3e075d229aaa6c3f60cbd1a545f9ce77">cv::TLSDataContainer::detachData</a></div><div class="ttdeci">void detachData(std::vector&lt; void * &gt; &amp;data)</div><div class="ttdoc">get TLS data and detach all data from threads (similar to cleanup() call)</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_a5fd371340f0dd7e193a4ab09795dbda6"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#a5fd371340f0dd7e193a4ab09795dbda6">cv::TLSDataContainer::gatherData</a></div><div class="ttdeci">void gatherData(std::vector&lt; void * &gt; &amp;data) const</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_a60db91833dbbbcb7d3406b819de3b272"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#a60db91833dbbbcb7d3406b819de3b272">cv::TLSDataContainer::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdoc">Release created TLS data container objects. It is similar to release() call, but it keeps TLS contain...</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_a822517e9fa810fb1278b6745b666e670"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#a822517e9fa810fb1278b6745b666e670">cv::TLSDataContainer::TLSDataContainer</a></div><div class="ttdeci">TLSDataContainer()</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_ab9969d79ef0b1acb9e26548a283e1059"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#ab9969d79ef0b1acb9e26548a283e1059">cv::TLSDataContainer::deleteDataInstance</a></div><div class="ttdeci">virtual void deleteDataInstance(void *pData) const =0</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_ace0bad31d5b53059247d6fa3070fc3a0"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#ace0bad31d5b53059247d6fa3070fc3a0">cv::TLSDataContainer::getData</a></div><div class="ttdeci">void * getData() const</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_af82bae531c9816f2891d8019108e7bdd"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#af82bae531c9816f2891d8019108e7bdd">cv::TLSDataContainer::~TLSDataContainer</a></div><div class="ttdeci">virtual ~TLSDataContainer()</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_container_html_af8c2c374fb21c3bf8421e28290df3630"><div class="ttname"><a href="classcv_1_1_t_l_s_data_container.html#af8c2c374fb21c3bf8421e28290df3630">cv::TLSDataContainer::release</a></div><div class="ttdeci">void release()</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html">cv::TLSData</a></div><div class="ttdoc">Simple TLS data class.</div><div class="ttdef"><b>Definition:</b> tls.hpp:62</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_a02c27b7fb89eed095708c588af79ff1f"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#a02c27b7fb89eed095708c588af79ff1f">cv::TLSData::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdoc">Release associated thread data.</div><div class="ttdef"><b>Definition:</b> tls.hpp:71</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_a214a5c797bf1aa889e81430dcfea596b"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#a214a5c797bf1aa889e81430dcfea596b">cv::TLSData::createDataInstance</a></div><div class="ttdeci">virtual void * createDataInstance() const CV_OVERRIDE</div><div class="ttdoc">Wrapper to allocate data by template.</div><div class="ttdef"><b>Definition:</b> tls.hpp:78</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_a2314048543cb22e35188d0638c2b029b"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#a2314048543cb22e35188d0638c2b029b">cv::TLSData::get</a></div><div class="ttdeci">T * get() const</div><div class="ttdoc">Get data associated with key.</div><div class="ttdef"><b>Definition:</b> tls.hpp:67</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_a6a197810db6d03c4397ee203eb9a2fad"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#a6a197810db6d03c4397ee203eb9a2fad">cv::TLSData::deleteDataInstance</a></div><div class="ttdeci">virtual void deleteDataInstance(void *pData) const CV_OVERRIDE</div><div class="ttdoc">Wrapper to release data by template.</div><div class="ttdef"><b>Definition:</b> tls.hpp:80</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_a6dc1b69ad91e20f63177fe0d3ae22771"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#a6dc1b69ad91e20f63177fe0d3ae22771">cv::TLSData::getRef</a></div><div class="ttdeci">T &amp; getRef() const</div><div class="ttdoc">Get data associated with key.</div><div class="ttdef"><b>Definition:</b> tls.hpp:68</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_aaf906e246fce05cef51afb7213d944da"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#aaf906e246fce05cef51afb7213d944da">cv::TLSData::~TLSData</a></div><div class="ttdeci">~TLSData()</div><div class="ttdef"><b>Definition:</b> tls.hpp:65</div></div>
+<div class="ttc" id="aclasscv_1_1_t_l_s_data_html_ac945ff66d0653b82b928fa03d2e955cc"><div class="ttname"><a href="classcv_1_1_t_l_s_data.html#ac945ff66d0653b82b928fa03d2e955cc">cv::TLSData::TLSData</a></div><div class="ttdeci">TLSData()</div><div class="ttdef"><b>Definition:</b> tls.hpp:64</div></div>
+<div class="ttc" id="acore_2utility_8hpp_html"><div class="ttname"><a href="core_2utility_8hpp.html">utility.hpp</a></div></div>
+<div class="ttc" id="agroup__calib3d_html_ga1fc9a530e4f9c60ea61e1e7a68cfb639"><div class="ttname"><a href="group__calib3d.html#ga1fc9a530e4f9c60ea61e1e7a68cfb639">cv::T</a></div><div class="ttdeci">InputArrayOfArrays InputArrayOfArrays InputOutputArray InputOutputArray InputOutputArray InputOutputArray Size InputOutputArray InputOutputArray T</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:2069</div></div>
+<div class="ttc" id="agroup__core__c_html_gacd1647952fba31484ea63d6f1140e509"><div class="ttname"><a href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> core_c.h:424</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga1bf9f0e121b54272da02379cfccd0a2b"><div class="ttname"><a href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a></div><div class="ttdeci">#define CV_EXPORTS</div><div class="ttdef"><b>Definition:</b> cvdef.h:407</div></div>
+<div class="ttc" id="agroup__core__utils_html_ga4d89d63e402ef9ddc48e18e21180fe4a"><div class="ttname"><a href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a></div><div class="ttdeci">#define CV_OVERRIDE</div><div class="ttdef"><b>Definition:</b> cvdef.h:740</div></div>
+<div class="ttc" id="agroup__core__utils_html_gaac6054394f54fbbc849a09f4286774e9"><div class="ttname"><a href="group__core__utils.html#gaac6054394f54fbbc849a09f4286774e9">cv::AutoLock</a></div><div class="ttdeci">std::lock_guard&lt; cv::Mutex &gt; AutoLock</div><div class="ttdef"><b>Definition:</b> utility.hpp:707</div></div>
+<div class="ttc" id="agroup__core__utils_html_gaf0b2df4f7899189c9d04f7a2c2559132"><div class="ttname"><a href="group__core__utils.html#gaf0b2df4f7899189c9d04f7a2c2559132">cv::Mutex</a></div><div class="ttdeci">std::recursive_mutex Mutex</div><div class="ttdef"><b>Definition:</b> utility.hpp:706</div></div>
+<div class="ttc" id="agroup__core__utils_html_gaf62bcd90f70e275191ab95136d85906b"><div class="ttname"><a href="group__core__utils.html#gaf62bcd90f70e275191ab95136d85906b">CV_Assert</a></div><div class="ttdeci">#define CV_Assert(expr)</div><div class="ttdoc">Checks a condition at runtime and throws exception if it fails.</div><div class="ttdef"><b>Definition:</b> base.hpp:342</div></div>
+<div class="ttc" id="agroup__core__utils_html_gafbcb487cba05bd288dbe18c433de4f6f"><div class="ttname"><a href="group__core__utils.html#gafbcb487cba05bd288dbe18c433de4f6f">CV_DbgAssert</a></div><div class="ttdeci">#define CV_DbgAssert(expr)</div><div class="ttdef"><b>Definition:</b> base.hpp:375</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="dir_bf03137742c09ac3c763ba47df777fea.html">utils</a></li><li class="navelem"><a class="el" href="tls_8hpp.html">tls.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

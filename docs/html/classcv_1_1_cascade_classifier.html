@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::CascadeClassifier</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_cascade_classifier.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classcv_1_1_cascade_classifier-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::CascadeClassifier<div class="ingroups"><a class="el" href="group__objdetect.html">Object Detection</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Cascade classifier class for object detection.  
+ <a href="classcv_1_1_cascade_classifier.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2objdetect_8hpp_source.html">objdetect.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a64cf99cb5b862a8122cc377de7750f49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a64cf99cb5b862a8122cc377de7750f49">CascadeClassifier</a> ()</td></tr>
+<tr class="separator:a64cf99cb5b862a8122cc377de7750f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cff02e0e5a44383a93763c5b8409d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a4cff02e0e5a44383a93763c5b8409d50">CascadeClassifier</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="memdesc:a4cff02e0e5a44383a93763c5b8409d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a classifier from a file.  <a href="classcv_1_1_cascade_classifier.html#a4cff02e0e5a44383a93763c5b8409d50">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4cff02e0e5a44383a93763c5b8409d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05833947148e7357aad2547321645268"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a05833947148e7357aad2547321645268">~CascadeClassifier</a> ()</td></tr>
+<tr class="separator:a05833947148e7357aad2547321645268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240de19a751c514454a460cafe6be100"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a240de19a751c514454a460cafe6be100">empty</a> () const</td></tr>
+<tr class="memdesc:a240de19a751c514454a460cafe6be100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the classifier has been loaded.  <a href="classcv_1_1_cascade_classifier.html#a240de19a751c514454a460cafe6be100">Подробнее...</a><br /></td></tr>
+<tr class="separator:a240de19a751c514454a460cafe6be100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad90e6dca8f1e7f9183c197c35a902ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#aad90e6dca8f1e7f9183c197c35a902ff">load</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>)</td></tr>
+<tr class="memdesc:aad90e6dca8f1e7f9183c197c35a902ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a classifier from a file.  <a href="classcv_1_1_cascade_classifier.html#aad90e6dca8f1e7f9183c197c35a902ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad90e6dca8f1e7f9183c197c35a902ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd09e812dd49f51049a818758ebbf553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#abd09e812dd49f51049a818758ebbf553">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;node)</td></tr>
+<tr class="memdesc:abd09e812dd49f51049a818758ebbf553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a classifier from a <a class="el" href="classcv_1_1_file_storage.html" title="XML/YAML/JSON file storage class that encapsulates all the information necessary for writing or readi...">FileStorage</a> node.  <a href="classcv_1_1_cascade_classifier.html#abd09e812dd49f51049a818758ebbf553">Подробнее...</a><br /></td></tr>
+<tr class="separator:abd09e812dd49f51049a818758ebbf553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d5fb00105df774885c98297d753e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a18d5fb00105df774885c98297d753e73">detectMultiScale</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;<a class="el" href="classcv_1_1_cascade_classifier.html#a531d44cf6ef94676d80ae4ab6ffaf59a">objects</a>, double <a class="el" href="classcv_1_1_cascade_classifier.html#a11b95011506336e5280d26f978d3ef2c">scaleFactor</a>=1.1, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="classcv_1_1_cascade_classifier.html#a9e6b0c99f0472572132aba7ad39d1432">minNeighbors</a>=3, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__highgui__c.html#ga1f0f6495eb7969fde1a9fcef99a073b5">flags</a>=0, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_cascade_classifier.html#a884b4879c20521a2cbd6fe1f69a7b8ac">minSize</a>=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="classcv_1_1_cascade_classifier.html#a86c68abfeabf883e7370849208f8202e">maxSize</a>=<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>())</td></tr>
+<tr class="memdesc:a18d5fb00105df774885c98297d753e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles.  <a href="classcv_1_1_cascade_classifier.html#a18d5fb00105df774885c98297d753e73">Подробнее...</a><br /></td></tr>
+<tr class="separator:a18d5fb00105df774885c98297d753e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e0cf4732815d6649e15700f3e7c52b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ad6e0cf4732815d6649e15700f3e7c52b">CV_WRAP_AS</a> (detectMultiScale2) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="classcv_1_1_cascade_classifier.html#a18d5fb00105df774885c98297d753e73">detectMultiScale</a>(<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a></td></tr>
+<tr class="separator:ad6e0cf4732815d6649e15700f3e7c52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55867bdacbe4890c454696ad3f61f4f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a55867bdacbe4890c454696ad3f61f4f4">CV_WRAP_AS</a> (detectMultiScale3) <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="classcv_1_1_cascade_classifier.html#a18d5fb00105df774885c98297d753e73">detectMultiScale</a>(<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a></td></tr>
+<tr class="separator:a55867bdacbe4890c454696ad3f61f4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279b0526e29df51bac1451e939124318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a279b0526e29df51bac1451e939124318">isOldFormatCascade</a> () const</td></tr>
+<tr class="separator:a279b0526e29df51bac1451e939124318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6431d6e683829f065f40d44188997d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a5a6431d6e683829f065f40d44188997d">getOriginalWindowSize</a> () const</td></tr>
+<tr class="separator:a5a6431d6e683829f065f40d44188997d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157457fbb02422cb2936a72c3454986b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a157457fbb02422cb2936a72c3454986b">getFeatureType</a> () const</td></tr>
+<tr class="separator:a157457fbb02422cb2936a72c3454986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cccf61596e217726c5da99da3a69bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ac7cccf61596e217726c5da99da3a69bf">getOldCascade</a> ()</td></tr>
+<tr class="separator:ac7cccf61596e217726c5da99da3a69bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7628a59eefb561ecd79ad9d02bd69073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a7628a59eefb561ecd79ad9d02bd69073">setMaskGenerator</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a> &gt; &amp;maskGenerator)</td></tr>
+<tr class="separator:a7628a59eefb561ecd79ad9d02bd69073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39ae98f8358d3ffc14d7477a7bdb116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ac39ae98f8358d3ffc14d7477a7bdb116">getMaskGenerator</a> ()</td></tr>
+<tr class="separator:ac39ae98f8358d3ffc14d7477a7bdb116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ade54b51cf28d09c7844bb6a6c15283f8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ade54b51cf28d09c7844bb6a6c15283f8">convert</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;oldcascade, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;newcascade)</td></tr>
+<tr class="separator:ade54b51cf28d09c7844bb6a6c15283f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a531d44cf6ef94676d80ae4ab6ffaf59a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a531d44cf6ef94676d80ae4ab6ffaf59a">objects</a></td></tr>
+<tr class="separator:a531d44cf6ef94676d80ae4ab6ffaf59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ea580097f908a932b8b7933d1fa4b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ac4ea580097f908a932b8b7933d1fa4b5">numDetections</a></td></tr>
+<tr class="separator:ac4ea580097f908a932b8b7933d1fa4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b95011506336e5280d26f978d3ef2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a11b95011506336e5280d26f978d3ef2c">scaleFactor</a> =1.1</td></tr>
+<tr class="separator:a11b95011506336e5280d26f978d3ef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6b0c99f0472572132aba7ad39d1432"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a9e6b0c99f0472572132aba7ad39d1432">minNeighbors</a> =3</td></tr>
+<tr class="separator:a9e6b0c99f0472572132aba7ad39d1432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b15ce8dd164114bcb36bad5b0e0824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a60b15ce8dd164114bcb36bad5b0e0824">flags</a> =0</td></tr>
+<tr class="separator:a60b15ce8dd164114bcb36bad5b0e0824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884b4879c20521a2cbd6fe1f69a7b8ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a884b4879c20521a2cbd6fe1f69a7b8ac">minSize</a> =<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td></tr>
+<tr class="separator:a884b4879c20521a2cbd6fe1f69a7b8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c68abfeabf883e7370849208f8202e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a86c68abfeabf883e7370849208f8202e">maxSize</a> =<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>() )</td></tr>
+<tr class="separator:a86c68abfeabf883e7370849208f8202e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247e257e4b22b7aa05e4676ae8aff33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a247e257e4b22b7aa05e4676ae8aff33d">rejectLevels</a></td></tr>
+<tr class="separator:a247e257e4b22b7aa05e4676ae8aff33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3578bea1a45bec39a2e8d1066aa54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a9f3578bea1a45bec39a2e8d1066aa54f">levelWeights</a></td></tr>
+<tr class="separator:a9f3578bea1a45bec39a2e8d1066aa54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df87f78af899fdc30ccdda3b39dc4fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a0df87f78af899fdc30ccdda3b39dc4fb">scaleFactor</a> = 1.1</td></tr>
+<tr class="separator:a0df87f78af899fdc30ccdda3b39dc4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d709e1ab489b05dc87390b1bf82de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a15d709e1ab489b05dc87390b1bf82de2">minNeighbors</a> = 3</td></tr>
+<tr class="separator:a15d709e1ab489b05dc87390b1bf82de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988ef9d2193ea161967e4c6954f0f766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a988ef9d2193ea161967e4c6954f0f766">flags</a> = 0</td></tr>
+<tr class="separator:a988ef9d2193ea161967e4c6954f0f766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d8dd215d182f9990a86e17149d21db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ae0d8dd215d182f9990a86e17149d21db">minSize</a> = <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td></tr>
+<tr class="separator:ae0d8dd215d182f9990a86e17149d21db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75155cd1d519cbdab633a243db80622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#ae75155cd1d519cbdab633a243db80622">maxSize</a> = <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td></tr>
+<tr class="separator:ae75155cd1d519cbdab633a243db80622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acceb05ab97ea4d65397bde686516702f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; double &gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#acceb05ab97ea4d65397bde686516702f">outputRejectLevels</a> = false )</td></tr>
+<tr class="separator:acceb05ab97ea4d65397bde686516702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028c1d86a8275c82b089510768f853bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_base_cascade_classifier.html">BaseCascadeClassifier</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_cascade_classifier.html#a028c1d86a8275c82b089510768f853bd">cc</a></td></tr>
+<tr class="separator:a028c1d86a8275c82b089510768f853bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Cascade classifier class for object detection. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a64cf99cb5b862a8122cc377de7750f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64cf99cb5b862a8122cc377de7750f49">&#9670;&nbsp;</a></span>CascadeClassifier() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::CascadeClassifier::CascadeClassifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cff02e0e5a44383a93763c5b8409d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cff02e0e5a44383a93763c5b8409d50">&#9670;&nbsp;</a></span>CascadeClassifier() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> cv::CascadeClassifier::CascadeClassifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a classifier from a file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the file from which the classifier is loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05833947148e7357aad2547321645268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05833947148e7357aad2547321645268">&#9670;&nbsp;</a></span>~CascadeClassifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CascadeClassifier::~CascadeClassifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ade54b51cf28d09c7844bb6a6c15283f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade54b51cf28d09c7844bb6a6c15283f8">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::CascadeClassifier::convert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>oldcascade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>newcascade</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6e0cf4732815d6649e15700f3e7c52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e0cf4732815d6649e15700f3e7c52b">&#9670;&nbsp;</a></span>CV_WRAP_AS() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CascadeClassifier::CV_WRAP_AS </td>
+          <td>(</td>
+          <td class="paramtype">detectMultiScale2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Matrix of the type CV_8U containing an image where objects are detected. </td></tr>
+    <tr><td class="paramname">objects</td><td>Vector of rectangles where each rectangle contains the detected object, the rectangles may be partially outside the original image. </td></tr>
+    <tr><td class="paramname">numDetections</td><td>Vector of detection numbers for the corresponding objects. An object's number of detections is the number of neighboring positively classified rectangles that were joined together to form the object. </td></tr>
+    <tr><td class="paramname">scaleFactor</td><td>Parameter specifying how much the image size is reduced at each image scale. </td></tr>
+    <tr><td class="paramname">minNeighbors</td><td>Parameter specifying how many neighbors each candidate rectangle should have to retain it. </td></tr>
+    <tr><td class="paramname">flags</td><td>Parameter with the same meaning for an old cascade as in the function cvHaarDetectObjects. It is not used for a new cascade. </td></tr>
+    <tr><td class="paramname">minSize</td><td>Minimum possible object size. Objects smaller than that are ignored. </td></tr>
+    <tr><td class="paramname">maxSize</td><td>Maximum possible object size. Objects larger than that are ignored. If <code>maxSize == minSize</code> model is evaluated on single scale. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55867bdacbe4890c454696ad3f61f4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55867bdacbe4890c454696ad3f61f4f4">&#9670;&nbsp;</a></span>CV_WRAP_AS() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::CascadeClassifier::CV_WRAP_AS </td>
+          <td>(</td>
+          <td class="paramtype">detectMultiScale3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. This function allows you to retrieve the final stage decision certainty of classification. For this, one needs to set <code>outputRejectLevels</code> on true and provide the <code>rejectLevels</code> and <code>levelWeights</code> parameter. For each resulting detection, <code>levelWeights</code> will then contain the certainty of classification at the final stage. This value can then be used to separate strong from weaker classifications.</p>
+<p>A code sample on how to use it efficiently can be found below: </p><div class="fragment"><div class="line">Mat img;</div>
+<div class="line">vector&lt;double&gt; weights;</div>
+<div class="line">vector&lt;int&gt; levels;</div>
+<div class="line">vector&lt;Rect&gt; detections;</div>
+<div class="line"><a class="code" href="classcv_1_1_cascade_classifier.html#a64cf99cb5b862a8122cc377de7750f49">CascadeClassifier</a> model(<span class="stringliteral">&quot;/path/to/your/model.xml&quot;</span>);</div>
+<div class="line">model.detectMultiScale(img, detections, levels, weights, 1.1, 3, 0, <a class="code" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), <a class="code" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>(), <span class="keyword">true</span>);</div>
+<div class="line">cerr &lt;&lt; <span class="stringliteral">&quot;Detection &quot;</span> &lt;&lt; detections[0] &lt;&lt; <span class="stringliteral">&quot; with weight &quot;</span> &lt;&lt; weights[0] &lt;&lt; endl;</div>
+<div class="ttc" id="aclasscv_1_1_cascade_classifier_html_a64cf99cb5b862a8122cc377de7750f49"><div class="ttname"><a href="classcv_1_1_cascade_classifier.html#a64cf99cb5b862a8122cc377de7750f49">cv::CascadeClassifier::CascadeClassifier</a></div><div class="ttdeci">CV_WRAP CascadeClassifier()</div></div>
+<div class="ttc" id="agroup__core__basic_html_ga346f563897249351a34549137c8532a0"><div class="ttname"><a href="group__core__basic.html#ga346f563897249351a34549137c8532a0">cv::Size</a></div><div class="ttdeci">Size2i Size</div><div class="ttdef"><b>Definition:</b> types.hpp:347</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a18d5fb00105df774885c98297d753e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18d5fb00105df774885c98297d753e73">&#9670;&nbsp;</a></span>detectMultiScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CascadeClassifier::detectMultiScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objects</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scaleFactor</em> = <code>1.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>minNeighbors</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>minSize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>maxSize</em> = <code><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Matrix of the type CV_8U containing an image where objects are detected. </td></tr>
+    <tr><td class="paramname">objects</td><td>Vector of rectangles where each rectangle contains the detected object, the rectangles may be partially outside the original image. </td></tr>
+    <tr><td class="paramname">scaleFactor</td><td>Parameter specifying how much the image size is reduced at each image scale. </td></tr>
+    <tr><td class="paramname">minNeighbors</td><td>Parameter specifying how many neighbors each candidate rectangle should have to retain it. </td></tr>
+    <tr><td class="paramname">flags</td><td>Parameter with the same meaning for an old cascade as in the function cvHaarDetectObjects. It is not used for a new cascade. </td></tr>
+    <tr><td class="paramname">minSize</td><td>Minimum possible object size. Objects smaller than that are ignored. </td></tr>
+    <tr><td class="paramname">maxSize</td><td>Maximum possible object size. Objects larger than that are ignored. If <code>maxSize == minSize</code> model is evaluated on single scale.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function is parallelized with the TBB library.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>(Python) A face detection example using cascade classifiers can be found at opencv_source_code/samples/python/facedetect.py </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a240de19a751c514454a460cafe6be100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a240de19a751c514454a460cafe6be100">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::CascadeClassifier::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the classifier has been loaded. </p>
+
+</div>
+</div>
+<a id="a157457fbb02422cb2936a72c3454986b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157457fbb02422cb2936a72c3454986b">&#9670;&nbsp;</a></span>getFeatureType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::CascadeClassifier::getFeatureType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac39ae98f8358d3ffc14d7477a7bdb116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39ae98f8358d3ffc14d7477a7bdb116">&#9670;&nbsp;</a></span>getMaskGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a>&gt; cv::CascadeClassifier::getMaskGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7cccf61596e217726c5da99da3a69bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cccf61596e217726c5da99da3a69bf">&#9670;&nbsp;</a></span>getOldCascade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* cv::CascadeClassifier::getOldCascade </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a6431d6e683829f065f40d44188997d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6431d6e683829f065f40d44188997d">&#9670;&nbsp;</a></span>getOriginalWindowSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::CascadeClassifier::getOriginalWindowSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a279b0526e29df51bac1451e939124318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279b0526e29df51bac1451e939124318">&#9670;&nbsp;</a></span>isOldFormatCascade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::CascadeClassifier::isOldFormatCascade </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad90e6dca8f1e7f9183c197c35a902ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad90e6dca8f1e7f9183c197c35a902ff">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::CascadeClassifier::load </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a classifier from a file. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the file from which the classifier is loaded. The file may contain an old HAAR classifier trained by the haartraining application or a new cascade classifier trained by the traincascade application. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd09e812dd49f51049a818758ebbf553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd09e812dd49f51049a818758ebbf553">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::CascadeClassifier::read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads a classifier from a <a class="el" href="classcv_1_1_file_storage.html" title="XML/YAML/JSON file storage class that encapsulates all the information necessary for writing or readi...">FileStorage</a> node. </p>
+<dl class="section note"><dt>Заметки</dt><dd>The file may contain a new cascade classifier (trained traincascade application) only. </dd></dl>
+
+</div>
+</div>
+<a id="a7628a59eefb561ecd79ad9d02bd69073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7628a59eefb561ecd79ad9d02bd69073">&#9670;&nbsp;</a></span>setMaskGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::CascadeClassifier::setMaskGenerator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_base_cascade_classifier_1_1_mask_generator.html">BaseCascadeClassifier::MaskGenerator</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>maskGenerator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a028c1d86a8275c82b089510768f853bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028c1d86a8275c82b089510768f853bd">&#9670;&nbsp;</a></span>cc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_base_cascade_classifier.html">BaseCascadeClassifier</a>&gt; cv::CascadeClassifier::cc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60b15ce8dd164114bcb36bad5b0e0824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b15ce8dd164114bcb36bad5b0e0824">&#9670;&nbsp;</a></span>flags <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::CascadeClassifier::flags =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a988ef9d2193ea161967e4c6954f0f766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988ef9d2193ea161967e4c6954f0f766">&#9670;&nbsp;</a></span>flags <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::CascadeClassifier::flags = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f3578bea1a45bec39a2e8d1066aa54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f3578bea1a45bec39a2e8d1066aa54f">&#9670;&nbsp;</a></span>levelWeights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt;&amp; cv::CascadeClassifier::levelWeights</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86c68abfeabf883e7370849208f8202e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c68abfeabf883e7370849208f8202e">&#9670;&nbsp;</a></span>maxSize <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::CascadeClassifier::maxSize =<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>() )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae75155cd1d519cbdab633a243db80622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75155cd1d519cbdab633a243db80622">&#9670;&nbsp;</a></span>maxSize <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::CascadeClassifier::maxSize = <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e6b0c99f0472572132aba7ad39d1432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6b0c99f0472572132aba7ad39d1432">&#9670;&nbsp;</a></span>minNeighbors <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::CascadeClassifier::minNeighbors =3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15d709e1ab489b05dc87390b1bf82de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d709e1ab489b05dc87390b1bf82de2">&#9670;&nbsp;</a></span>minNeighbors <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::CascadeClassifier::minNeighbors = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a884b4879c20521a2cbd6fe1f69a7b8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884b4879c20521a2cbd6fe1f69a7b8ac">&#9670;&nbsp;</a></span>minSize <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::CascadeClassifier::minSize =<a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d8dd215d182f9990a86e17149d21db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d8dd215d182f9990a86e17149d21db">&#9670;&nbsp;</a></span>minSize <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> cv::CascadeClassifier::minSize = <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4ea580097f908a932b8b7933d1fa4b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ea580097f908a932b8b7933d1fa4b5">&#9670;&nbsp;</a></span>numDetections</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt;&amp; cv::CascadeClassifier::numDetections</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a531d44cf6ef94676d80ae4ab6ffaf59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531d44cf6ef94676d80ae4ab6ffaf59a">&#9670;&nbsp;</a></span>objects</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &gt; &amp; cv::CascadeClassifier::objects</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acceb05ab97ea4d65397bde686516702f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acceb05ab97ea4d65397bde686516702f">&#9670;&nbsp;</a></span>outputRejectLevels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> bool cv::CascadeClassifier::outputRejectLevels = false )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a247e257e4b22b7aa05e4676ae8aff33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247e257e4b22b7aa05e4676ae8aff33d">&#9670;&nbsp;</a></span>rejectLevels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt;&amp; cv::CascadeClassifier::rejectLevels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11b95011506336e5280d26f978d3ef2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b95011506336e5280d26f978d3ef2c">&#9670;&nbsp;</a></span>scaleFactor <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; double cv::CascadeClassifier::scaleFactor =1.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0df87f78af899fdc30ccdda3b39dc4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df87f78af899fdc30ccdda3b39dc4fb">&#9670;&nbsp;</a></span>scaleFactor <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt;double&gt; double cv::CascadeClassifier::scaleFactor = 1.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2objdetect_8hpp_source.html">objdetect.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_cascade_classifier.html">CascadeClassifier</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

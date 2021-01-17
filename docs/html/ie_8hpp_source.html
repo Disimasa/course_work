@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/gapi/infer/ie.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ie_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ie.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ie_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// This file is part of OpenCV project.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// It is subject to the license terms in the LICENSE file found in the top-level directory</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// of this distribution and at http://opencv.org/license.html.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (C) 2019 Intel Corporation</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef OPENCV_GAPI_INFER_IE_HPP</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define OPENCV_GAPI_INFER_IE_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span> <span class="comment">// tuple, tuple_size</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="opencv__includes_8hpp.html">opencv2/gapi/opencv_includes.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="any_8hpp.html">opencv2/gapi/util/any.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="cvdef_8h.html">opencv2/core/cvdef.h</a>&gt;</span>     <span class="comment">// GAPI_EXPORTS</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gkernel_8hpp.html">opencv2/gapi/gkernel.hpp</a>&gt;</span> <span class="comment">// GKernelPackage</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="infer_8hpp.html">opencv2/gapi/infer.hpp</a>&gt;</span>   <span class="comment">// Generic</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecv.html">cv</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>gapi {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// FIXME: introduce a new sub-namespace for NN?</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>ie {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1ie.html#a6b68dfcd619615233ca47347eb894ff0">   28</a></span>&#160;<a class="code" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a6b68dfcd619615233ca47347eb894ff0">backend</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">   40</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">TraitAs</a>: <a class="code" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1bace2f94540fa9914e8fe6f0de9817717b">TENSOR</a>, </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1ba23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>   </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">   46</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a> = std::map&lt;std::string, std::string&gt;;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacecv_1_1gapi_1_1ie_1_1detail.html">   48</a></span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">   49</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">ParamDesc</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#ac819ca1d4c72c0ff505565b7c12b137f">   50</a></span>&#160;        std::string <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#ac819ca1d4c72c0ff505565b7c12b137f">model_path</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a52b8c348bcf3aea523bbb69cc8df77eb">   51</a></span>&#160;        std::string <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a52b8c348bcf3aea523bbb69cc8df77eb">weights_path</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a6cedf45e3d8bde8ed5bde5b79ff08987">   52</a></span>&#160;        std::string <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a6cedf45e3d8bde8ed5bde5b79ff08987">device_id</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// NB: Here order follows the `Net` API</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#af23f13d4a2063df67603b64941af4cc3">   55</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#af23f13d4a2063df67603b64941af4cc3">input_names</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa8858a371b710e686b4df176c3ccd946">   56</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa8858a371b710e686b4df176c3ccd946">output_names</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">   58</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">ConstInput</a> = std::pair&lt;cv::Mat, TraitAs&gt;;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#abcd569505d17ebb8d373458e689b2d4d">   59</a></span>&#160;        std::unordered_map&lt;std::string, ConstInput&gt; <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#abcd569505d17ebb8d373458e689b2d4d">const_inputs</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// NB: nun_* may differ from topology&#39;s real input/output port numbers</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// (e.g. topology&#39;s partial execution)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a75f7bf27319d7cc4be75276b2e2ed861">   63</a></span>&#160;        <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a75f7bf27319d7cc4be75276b2e2ed861">num_in</a>;  <span class="comment">// How many inputs are defined in the operation</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a91fcee8a7d169d5e0785458c7fb8219f">   64</a></span>&#160;        <a class="code" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a91fcee8a7d169d5e0785458c7fb8219f">num_out</a>; <span class="comment">// How many outputs are defined in the operation</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">   66</a></span>&#160;        <span class="keyword">enum class</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">Kind</a> { <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb">Load</a>, <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a">Import</a> };</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a84f93fe836984050944ca17668c1cad9">   67</a></span>&#160;        <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">Kind</a> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a84f93fe836984050944ca17668c1cad9">kind</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa43f214dcd5d4b8ed1f4e1a285ff66ab">   68</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa43f214dcd5d4b8ed1f4e1a285ff66ab">is_generic</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a4790813bb0f908c472c596f05045bd98">   69</a></span>&#160;        <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a> <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a4790813bb0f908c472c596f05045bd98">config</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// FIXME: this is probably a shared (reusable) thing</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Net&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html">   75</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html">PortCfg</a> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#ad9c639e74f1c6a4c9ef143e730f70478">   76</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#ad9c639e74f1c6a4c9ef143e730f70478">In</a> = std::array</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        &lt; std::string</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#a73601a4545cc2eea31511e6067010523">   79</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#a73601a4545cc2eea31511e6067010523">Out</a> = std::array</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        &lt; std::string</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::OutArgs&gt;::value</a> &gt;;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html">   84</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Net&gt; <span class="keyword">class </span><a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#abe0385ab38d7f17f4255fab7047e4440">   86</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#abe0385ab38d7f17f4255fab7047e4440">Params</a>(<span class="keyword">const</span> std::string &amp;model,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;           <span class="keyword">const</span> std::string &amp;weights,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;           <span class="keyword">const</span> std::string &amp;device)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        : <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a1136fc28a28da350d53f3332769c25a2">desc</a>{ model, weights, device, {}, {}, {}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;              , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a>  <span class="comment">// num_in</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;              , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::OutArgs&gt;::value</a> <span class="comment">// num_out</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;              , <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb">detail::ParamDesc::Kind::Load</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;              , false</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;              , {}} {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a139dd0e4a21f756ddb87d7bdbe5a0032">   97</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a139dd0e4a21f756ddb87d7bdbe5a0032">Params</a>(<span class="keyword">const</span> std::string &amp;model,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;           <span class="keyword">const</span> std::string &amp;device)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        : desc{ model, {}, device, {}, {}, {}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;              , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::InArgs&gt;::value</a>  <span class="comment">// num_in</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              , <a class="code" href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">std::tuple_size&lt;typename Net::OutArgs&gt;::value</a> <span class="comment">// num_out</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;              , <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a">detail::ParamDesc::Kind::Import</a></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;              , false</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;              , {}} {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#aecac9f8f2339cf4ad732305e711c6f24">  107</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#aecac9f8f2339cf4ad732305e711c6f24">cfgInputLayers</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#ad9c639e74f1c6a4c9ef143e730f70478">PortCfg&lt;Net&gt;::In</a> &amp;ll) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        desc.input_names.clear();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        desc.input_names.reserve(ll.size());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="group__gapi__transform.html#ga840c1b32b4e83d641273b19705fce272">std::copy</a>(ll.begin(), ll.end(),</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                  std::back_inserter(desc.input_names));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a9a77772618784d0f7dc30e85f586cb3b">  115</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a9a77772618784d0f7dc30e85f586cb3b">cfgOutputLayers</a>(<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#a73601a4545cc2eea31511e6067010523">PortCfg&lt;Net&gt;::Out</a> &amp;ll) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        desc.output_names.clear();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        desc.output_names.reserve(ll.size());</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="group__gapi__transform.html#ga840c1b32b4e83d641273b19705fce272">std::copy</a>(ll.begin(), ll.end(),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                  std::back_inserter(desc.output_names));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a9e18d44a58c68488dcc0cfb58543f8d7">  123</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params&lt;Net&gt;</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a9e18d44a58c68488dcc0cfb58543f8d7">constInput</a>(<span class="keyword">const</span> std::string &amp;layer_name,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classcv_1_1_mat.html">cv::Mat</a> &amp;<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                            <a class="code" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">TraitAs</a> hint = TraitAs::TENSOR) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        desc.const_inputs[layer_name] = {<a class="code" href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a>, hint};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a87345f2d66b361a612a4125eae064481">  130</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a87345f2d66b361a612a4125eae064481">pluginConfig</a>(<a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a>&amp;&amp; cfg) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        desc.config = std::move(cfg);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a7ca250be26ffe60a797933e87ba76448">  135</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a7ca250be26ffe60a797933e87ba76448">pluginConfig</a>(<span class="keyword">const</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a>&amp; cfg) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        desc.config = cfg;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// BEGIN(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#ad52482244db5c0c348ecc09b73516064">  141</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">GBackend</a>      <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#ad52482244db5c0c348ecc09b73516064">backend</a>()<span class="keyword">    const </span>{ <span class="keywordflow">return</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a6b68dfcd619615233ca47347eb894ff0">cv::gapi::ie::backend</a>();  }</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a71e0a70d2bcae940cea19d594a1e79ee">  142</a></span>&#160;    std::string   <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a71e0a70d2bcae940cea19d594a1e79ee">tag</a>()<span class="keyword">        const </span>{ <span class="keywordflow">return</span> Net::tag(); }</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a45f7b71e9007db6f13cb1535ce9b1a37">  143</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1any.html">cv::util::any</a> <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a45f7b71e9007db6f13cb1535ce9b1a37">params</a>()<span class="keyword">     const </span>{ <span class="keywordflow">return</span> { desc }; }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// END(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params.html#a1136fc28a28da350d53f3332769c25a2">  147</a></span>&#160;    <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">detail::ParamDesc</a> <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html#a1136fc28a28da350d53f3332769c25a2">desc</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;};</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html">  151</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a>&lt;<a class="code" href="namespacecv.html">cv</a>::<a class="code" href="structcv_1_1gapi_1_1_generic.html">gapi::Generic</a>&gt; {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a818aa2c1e6467a757932ca4d1a490059">  153</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a818aa2c1e6467a757932ca4d1a490059">Params</a>(<span class="keyword">const</span> std::string &amp;tag,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;           <span class="keyword">const</span> std::string &amp;model,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;           <span class="keyword">const</span> std::string &amp;weights,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;           <span class="keyword">const</span> std::string &amp;device)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        : desc{ model, weights, device, {}, {}, {}, 0u, 0u, detail::ParamDesc::Kind::Load, <span class="keyword">true</span>, {}}, m_tag(tag) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    };</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a909356b9a831db5161b02de18fb9e558">  160</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a909356b9a831db5161b02de18fb9e558">Params</a>(<span class="keyword">const</span> std::string &amp;tag,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;           <span class="keyword">const</span> std::string &amp;model,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;           <span class="keyword">const</span> std::string &amp;device)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        : desc{ model, {}, device, {}, {}, {}, 0u, 0u, detail::ParamDesc::Kind::Import, <span class="keyword">true</span>, {}}, m_tag(tag) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    };</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#af83db61d519c77a9d840571046f48e74">  166</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#af83db61d519c77a9d840571046f48e74">pluginConfig</a>(<a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a>&amp;&amp; cfg) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        desc.config = std::move(cfg);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a84ec4351a3f4950daa0f17647d84e067">  171</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params.html">Params</a>&amp; <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a84ec4351a3f4950daa0f17647d84e067">pluginConfig</a>(<span class="keyword">const</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a>&amp; cfg) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        desc.config = cfg;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// BEGIN(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#afc9111c30610ab5dc4255c9fc2c9e249">  177</a></span>&#160;    <a class="code" href="classcv_1_1gapi_1_1_g_backend.html">GBackend</a>      <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#afc9111c30610ab5dc4255c9fc2c9e249">backend</a>()<span class="keyword">    const </span>{ <span class="keywordflow">return</span> <a class="code" href="namespacecv_1_1gapi_1_1ie.html#a6b68dfcd619615233ca47347eb894ff0">cv::gapi::ie::backend</a>();  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a9d1c694b7373c9ce7ba66ab7c9f87d5b">  178</a></span>&#160;    std::string   <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a9d1c694b7373c9ce7ba66ab7c9f87d5b">tag</a>()<span class="keyword">        const </span>{ <span class="keywordflow">return</span> m_tag; }</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a2ab19c52b96b93a51233b24714000baf">  179</a></span>&#160;    <a class="code" href="classcv_1_1util_1_1any.html">cv::util::any</a> <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a2ab19c52b96b93a51233b24714000baf">params</a>()<span class="keyword">     const </span>{ <span class="keywordflow">return</span> { desc }; }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// END(G-API&#39;s network parametrization API)</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a6552c17858c4432aaecbab98ac004673">  183</a></span>&#160;    <a class="code" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">detail::ParamDesc</a> <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a6552c17858c4432aaecbab98ac004673">desc</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a10e1f5ff6917e212aad2a18d3b75b70f">  184</a></span>&#160;    std::string <a class="code" href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a10e1f5ff6917e212aad2a18d3b75b70f">m_tag</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;};</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;} <span class="comment">// namespace ie</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;} <span class="comment">// namespace gapi</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;} <span class="comment">// namespace cv</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OPENCV_GAPI_INFER_IE_HPP</span></div>
+<div class="ttc" id="aany_8hpp_html"><div class="ttname"><a href="any_8hpp.html">any.hpp</a></div></div>
+<div class="ttc" id="aclasscv_1_1_mat_html"><div class="ttname"><a href="classcv_1_1_mat.html">cv::Mat</a></div><div class="ttdoc">n-dimensional dense array class</div><div class="ttdef"><b>Definition:</b> mat.hpp:798</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1_g_backend_html"><div class="ttname"><a href="classcv_1_1gapi_1_1_g_backend.html">cv::gapi::GBackend</a></div><div class="ttdef"><b>Definition:</b> gkernel.hpp:375</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a10e1f5ff6917e212aad2a18d3b75b70f"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a10e1f5ff6917e212aad2a18d3b75b70f">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::m_tag</a></div><div class="ttdeci">std::string m_tag</div><div class="ttdef"><b>Definition:</b> ie.hpp:184</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a2ab19c52b96b93a51233b24714000baf"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a2ab19c52b96b93a51233b24714000baf">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::params</a></div><div class="ttdeci">cv::util::any params() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:179</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a6552c17858c4432aaecbab98ac004673"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a6552c17858c4432aaecbab98ac004673">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::desc</a></div><div class="ttdeci">detail::ParamDesc desc</div><div class="ttdef"><b>Definition:</b> ie.hpp:183</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a818aa2c1e6467a757932ca4d1a490059"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a818aa2c1e6467a757932ca4d1a490059">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::Params</a></div><div class="ttdeci">Params(const std::string &amp;tag, const std::string &amp;model, const std::string &amp;weights, const std::string &amp;device)</div><div class="ttdef"><b>Definition:</b> ie.hpp:153</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a84ec4351a3f4950daa0f17647d84e067"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a84ec4351a3f4950daa0f17647d84e067">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::pluginConfig</a></div><div class="ttdeci">Params &amp; pluginConfig(const IEConfig &amp;cfg)</div><div class="ttdef"><b>Definition:</b> ie.hpp:171</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a909356b9a831db5161b02de18fb9e558"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a909356b9a831db5161b02de18fb9e558">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::Params</a></div><div class="ttdeci">Params(const std::string &amp;tag, const std::string &amp;model, const std::string &amp;device)</div><div class="ttdef"><b>Definition:</b> ie.hpp:160</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_a9d1c694b7373c9ce7ba66ab7c9f87d5b"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#a9d1c694b7373c9ce7ba66ab7c9f87d5b">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::tag</a></div><div class="ttdeci">std::string tag() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:178</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_af83db61d519c77a9d840571046f48e74"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#af83db61d519c77a9d840571046f48e74">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::pluginConfig</a></div><div class="ttdeci">Params &amp; pluginConfig(IEConfig &amp;&amp;cfg)</div><div class="ttdef"><b>Definition:</b> ie.hpp:166</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4_html_afc9111c30610ab5dc4255c9fc2c9e249"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params_3_01cv_1_1gapi_1_1_generic_01_4.html#afc9111c30610ab5dc4255c9fc2c9e249">cv::gapi::ie::Params&lt; cv::gapi::Generic &gt;::backend</a></div><div class="ttdeci">GBackend backend() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:177</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html">cv::gapi::ie::Params</a></div><div class="ttdef"><b>Definition:</b> ie.hpp:84</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a1136fc28a28da350d53f3332769c25a2"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a1136fc28a28da350d53f3332769c25a2">cv::gapi::ie::Params::desc</a></div><div class="ttdeci">detail::ParamDesc desc</div><div class="ttdef"><b>Definition:</b> ie.hpp:147</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a139dd0e4a21f756ddb87d7bdbe5a0032"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a139dd0e4a21f756ddb87d7bdbe5a0032">cv::gapi::ie::Params::Params</a></div><div class="ttdeci">Params(const std::string &amp;model, const std::string &amp;device)</div><div class="ttdef"><b>Definition:</b> ie.hpp:97</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a45f7b71e9007db6f13cb1535ce9b1a37"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a45f7b71e9007db6f13cb1535ce9b1a37">cv::gapi::ie::Params::params</a></div><div class="ttdeci">cv::util::any params() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:143</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a71e0a70d2bcae940cea19d594a1e79ee"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a71e0a70d2bcae940cea19d594a1e79ee">cv::gapi::ie::Params::tag</a></div><div class="ttdeci">std::string tag() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:142</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a7ca250be26ffe60a797933e87ba76448"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a7ca250be26ffe60a797933e87ba76448">cv::gapi::ie::Params::pluginConfig</a></div><div class="ttdeci">Params &amp; pluginConfig(const IEConfig &amp;cfg)</div><div class="ttdef"><b>Definition:</b> ie.hpp:135</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a87345f2d66b361a612a4125eae064481"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a87345f2d66b361a612a4125eae064481">cv::gapi::ie::Params::pluginConfig</a></div><div class="ttdeci">Params &amp; pluginConfig(IEConfig &amp;&amp;cfg)</div><div class="ttdef"><b>Definition:</b> ie.hpp:130</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a9a77772618784d0f7dc30e85f586cb3b"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a9a77772618784d0f7dc30e85f586cb3b">cv::gapi::ie::Params::cfgOutputLayers</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgOutputLayers(const typename PortCfg&lt; Net &gt;::Out &amp;ll)</div><div class="ttdef"><b>Definition:</b> ie.hpp:115</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_a9e18d44a58c68488dcc0cfb58543f8d7"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#a9e18d44a58c68488dcc0cfb58543f8d7">cv::gapi::ie::Params::constInput</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; constInput(const std::string &amp;layer_name, const cv::Mat &amp;data, TraitAs hint=TraitAs::TENSOR)</div><div class="ttdef"><b>Definition:</b> ie.hpp:123</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_abe0385ab38d7f17f4255fab7047e4440"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#abe0385ab38d7f17f4255fab7047e4440">cv::gapi::ie::Params::Params</a></div><div class="ttdeci">Params(const std::string &amp;model, const std::string &amp;weights, const std::string &amp;device)</div><div class="ttdef"><b>Definition:</b> ie.hpp:86</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_ad52482244db5c0c348ecc09b73516064"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#ad52482244db5c0c348ecc09b73516064">cv::gapi::ie::Params::backend</a></div><div class="ttdeci">GBackend backend() const</div><div class="ttdef"><b>Definition:</b> ie.hpp:141</div></div>
+<div class="ttc" id="aclasscv_1_1gapi_1_1ie_1_1_params_html_aecac9f8f2339cf4ad732305e711c6f24"><div class="ttname"><a href="classcv_1_1gapi_1_1ie_1_1_params.html#aecac9f8f2339cf4ad732305e711c6f24">cv::gapi::ie::Params::cfgInputLayers</a></div><div class="ttdeci">Params&lt; Net &gt; &amp; cfgInputLayers(const typename PortCfg&lt; Net &gt;::In &amp;ll)</div><div class="ttdef"><b>Definition:</b> ie.hpp:107</div></div>
+<div class="ttc" id="aclasscv_1_1util_1_1any_html"><div class="ttname"><a href="classcv_1_1util_1_1any.html">cv::util::any</a></div><div class="ttdef"><b>Definition:</b> any.hpp:54</div></div>
+<div class="ttc" id="acvdef_8h_html"><div class="ttname"><a href="cvdef_8h.html">cvdef.h</a></div></div>
+<div class="ttc" id="aexports_8hpp_html_aa8b19b214081394654ba18aa754418e4"><div class="ttname"><a href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a></div><div class="ttdeci">#define GAPI_EXPORTS</div><div class="ttdef"><b>Definition:</b> exports.hpp:20</div></div>
+<div class="ttc" id="agkernel_8hpp_html"><div class="ttname"><a href="gkernel_8hpp.html">gkernel.hpp</a></div></div>
+<div class="ttc" id="agroup__core__c_html_ga9550b1803662fe5c2e7f2f7f1f382af5"><div class="ttname"><a href="group__core__c.html#ga9550b1803662fe5c2e7f2f7f1f382af5">value</a></div><div class="ttdeci">int CvScalar value</div><div class="ttdef"><b>Definition:</b> core_c.h:717</div></div>
+<div class="ttc" id="agroup__core__c_html_gacd1647952fba31484ea63d6f1140e509"><div class="ttname"><a href="group__core__c.html#gacd1647952fba31484ea63d6f1140e509">data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition:</b> core_c.h:424</div></div>
+<div class="ttc" id="agroup__gapi__transform_html_ga840c1b32b4e83d641273b19705fce272"><div class="ttname"><a href="group__gapi__transform.html#ga840c1b32b4e83d641273b19705fce272">cv::gapi::copy</a></div><div class="ttdeci">GAPI_EXPORTS GMat copy(const GMat &amp;in)</div><div class="ttdoc">Makes a copy of the input image. Note that this copy may be not real (no actual data copied)....</div></div>
+<div class="ttc" id="ainfer_8hpp_html"><div class="ttname"><a href="infer_8hpp.html">infer.hpp</a></div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1ie_html_a6b68dfcd619615233ca47347eb894ff0"><div class="ttname"><a href="namespacecv_1_1gapi_1_1ie.html#a6b68dfcd619615233ca47347eb894ff0">cv::gapi::ie::backend</a></div><div class="ttdeci">GAPI_EXPORTS cv::gapi::GBackend backend()</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1ie_html_a8cfbcd3dee47ed8a7a94fe6a9453356d"><div class="ttname"><a href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">cv::gapi::ie::IEConfig</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; IEConfig</div><div class="ttdef"><b>Definition:</b> ie.hpp:46</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1ie_html_af63f38e596d0a0c4a2196532cfba3c1b"><div class="ttname"><a href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">cv::gapi::ie::TraitAs</a></div><div class="ttdeci">TraitAs</div><div class="ttdef"><b>Definition:</b> ie.hpp:41</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1ie_html_af63f38e596d0a0c4a2196532cfba3c1ba23a12f67f614b5518c7f1c2465bf95e3"><div class="ttname"><a href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1ba23a12f67f614b5518c7f1c2465bf95e3">cv::gapi::ie::TraitAs::IMAGE</a></div><div class="ttdeci">@ IMAGE</div><div class="ttdoc">G-API traits an associated cv::Mat as an image so creates an &quot;image&quot; blob (NCHW/NHWC,...</div></div>
+<div class="ttc" id="anamespacecv_1_1gapi_1_1ie_html_af63f38e596d0a0c4a2196532cfba3c1bace2f94540fa9914e8fe6f0de9817717b"><div class="ttname"><a href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1bace2f94540fa9914e8fe6f0de9817717b">cv::gapi::ie::TraitAs::TENSOR</a></div><div class="ttdeci">@ TENSOR</div><div class="ttdoc">G-API traits an associated cv::Mat as a raw tensor and passes dimensions as-is.</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">&quot;black box&quot; representation of the file storage associated with a file on disk.</div><div class="ttdef"><b>Definition:</b> calib3d.hpp:438</div></div>
+<div class="ttc" id="anamespacecv_html_ae4ef4b83c54acc5e8d2956db165de790"><div class="ttname"><a href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">cv::int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> intrin_rvv.hpp:1945</div></div>
+<div class="ttc" id="aopencv__includes_8hpp_html"><div class="ttname"><a href="opencv__includes_8hpp.html">opencv_includes.hpp</a></div></div>
+<div class="ttc" id="aruntime_2autogenerated_2opencl__core_8hpp_html_a6ff403ead16f7faa1f7228274eb6b01d"><div class="ttname"><a href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a></div><div class="ttdeci">CL_RUNTIME_EXPORT const cl_device_id const char void void *CL_RUNTIME_EXPORT const cl_device_id const char const cl_program const char void void *CL_RUNTIME_EXPORT size_t</div><div class="ttdef"><b>Definition:</b> opencl_core.hpp:286</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1_generic_html"><div class="ttname"><a href="structcv_1_1gapi_1_1_generic.html">cv::gapi::Generic</a></div><div class="ttdoc">Special network type.</div><div class="ttdef"><b>Definition:</b> infer.hpp:389</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1_port_cfg_html"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html">cv::gapi::ie::PortCfg</a></div><div class="ttdef"><b>Definition:</b> ie.hpp:75</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1_port_cfg_html_a73601a4545cc2eea31511e6067010523"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#a73601a4545cc2eea31511e6067010523">cv::gapi::ie::PortCfg::Out</a></div><div class="ttdeci">std::array&lt; std::string, std::tuple_size&lt; typename Net::OutArgs &gt;::value &gt; Out</div><div class="ttdef"><b>Definition:</b> ie.hpp:81</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1_port_cfg_html_ad9c639e74f1c6a4c9ef143e730f70478"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1_port_cfg.html#ad9c639e74f1c6a4c9ef143e730f70478">cv::gapi::ie::PortCfg::In</a></div><div class="ttdeci">std::array&lt; std::string, std::tuple_size&lt; typename Net::InArgs &gt;::value &gt; In</div><div class="ttdef"><b>Definition:</b> ie.hpp:78</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">cv::gapi::ie::detail::ParamDesc</a></div><div class="ttdef"><b>Definition:</b> ie.hpp:49</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a4790813bb0f908c472c596f05045bd98"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a4790813bb0f908c472c596f05045bd98">cv::gapi::ie::detail::ParamDesc::config</a></div><div class="ttdeci">IEConfig config</div><div class="ttdef"><b>Definition:</b> ie.hpp:69</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a52b8c348bcf3aea523bbb69cc8df77eb"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a52b8c348bcf3aea523bbb69cc8df77eb">cv::gapi::ie::detail::ParamDesc::weights_path</a></div><div class="ttdeci">std::string weights_path</div><div class="ttdef"><b>Definition:</b> ie.hpp:51</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a6cedf45e3d8bde8ed5bde5b79ff08987"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a6cedf45e3d8bde8ed5bde5b79ff08987">cv::gapi::ie::detail::ParamDesc::device_id</a></div><div class="ttdeci">std::string device_id</div><div class="ttdef"><b>Definition:</b> ie.hpp:52</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a75f7bf27319d7cc4be75276b2e2ed861"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a75f7bf27319d7cc4be75276b2e2ed861">cv::gapi::ie::detail::ParamDesc::num_in</a></div><div class="ttdeci">std::size_t num_in</div><div class="ttdef"><b>Definition:</b> ie.hpp:63</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a84f93fe836984050944ca17668c1cad9"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a84f93fe836984050944ca17668c1cad9">cv::gapi::ie::detail::ParamDesc::kind</a></div><div class="ttdeci">Kind kind</div><div class="ttdef"><b>Definition:</b> ie.hpp:67</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a91fcee8a7d169d5e0785458c7fb8219f"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a91fcee8a7d169d5e0785458c7fb8219f">cv::gapi::ie::detail::ParamDesc::num_out</a></div><div class="ttdeci">std::size_t num_out</div><div class="ttdef"><b>Definition:</b> ie.hpp:64</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a92acb8d8a99627386311945554af59fe"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">cv::gapi::ie::detail::ParamDesc::Kind</a></div><div class="ttdeci">Kind</div><div class="ttdef"><b>Definition:</b> ie.hpp:66</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a">cv::gapi::ie::detail::ParamDesc::Kind::Import</a></div><div class="ttdeci">@ Import</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb">cv::gapi::ie::detail::ParamDesc::Kind::Load</a></div><div class="ttdeci">@ Load</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_a973fed5585bc862a96339cf10f632bbb"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">cv::gapi::ie::detail::ParamDesc::ConstInput</a></div><div class="ttdeci">std::pair&lt; cv::Mat, TraitAs &gt; ConstInput</div><div class="ttdef"><b>Definition:</b> ie.hpp:58</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_aa43f214dcd5d4b8ed1f4e1a285ff66ab"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa43f214dcd5d4b8ed1f4e1a285ff66ab">cv::gapi::ie::detail::ParamDesc::is_generic</a></div><div class="ttdeci">bool is_generic</div><div class="ttdef"><b>Definition:</b> ie.hpp:68</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_aa8858a371b710e686b4df176c3ccd946"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa8858a371b710e686b4df176c3ccd946">cv::gapi::ie::detail::ParamDesc::output_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; output_names</div><div class="ttdef"><b>Definition:</b> ie.hpp:56</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_abcd569505d17ebb8d373458e689b2d4d"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#abcd569505d17ebb8d373458e689b2d4d">cv::gapi::ie::detail::ParamDesc::const_inputs</a></div><div class="ttdeci">std::unordered_map&lt; std::string, ConstInput &gt; const_inputs</div><div class="ttdef"><b>Definition:</b> ie.hpp:59</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_ac819ca1d4c72c0ff505565b7c12b137f"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#ac819ca1d4c72c0ff505565b7c12b137f">cv::gapi::ie::detail::ParamDesc::model_path</a></div><div class="ttdeci">std::string model_path</div><div class="ttdef"><b>Definition:</b> ie.hpp:50</div></div>
+<div class="ttc" id="astructcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc_html_af23f13d4a2063df67603b64941af4cc3"><div class="ttname"><a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#af23f13d4a2063df67603b64941af4cc3">cv::gapi::ie::detail::ParamDesc::input_names</a></div><div class="ttdeci">std::vector&lt; std::string &gt; input_names</div><div class="ttdef"><b>Definition:</b> ie.hpp:55</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_21b5cc2a90750c5b1b011f0f42cf1d12.html">gapi</a></li><li class="navelem"><a class="el" href="dir_e4a530b89cbe168084921eb3e1f70022.html">infer</a></li><li class="navelem"><a class="el" href="ie_8hpp.html">ie.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

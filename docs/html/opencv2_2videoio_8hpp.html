@@ -1,0 +1,698 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/videoio.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('opencv2_2videoio_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл videoio.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="opencv2_2core_8hpp_source.html">opencv2/core.hpp</a>&quot;</code><br />
+</div>
+<p><a href="opencv2_2videoio_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_video_capture.html">cv::VideoCapture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for video capturing from video files, image sequences or cameras.  <a href="classcv_1_1_video_capture.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_video_writer.html">cv::VideoWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video writer class.  <a href="classcv_1_1_video_writer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_default_deleter_3_01_cv_capture_01_4.html">cv::DefaultDeleter&lt; CvCapture &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_default_deleter_3_01_cv_video_writer_01_4.html">cv::DefaultDeleter&lt; CvVideoWriter &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a394109074fab9bdca2ea45514b1946b7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="opencv2_2videoio_8hpp.html#a394109074fab9bdca2ea45514b1946b7">CvCapture</a></td></tr>
+<tr class="separator:a394109074fab9bdca2ea45514b1946b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888ba48aa022b60aecf98a462aa1b638"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="opencv2_2videoio_8hpp.html#a888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a></td></tr>
+<tr class="separator:a888ba48aa022b60aecf98a462aa1b638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga023786be1ee68a9105bf2e48c700294d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__flags__base.html#ga023786be1ee68a9105bf2e48c700294d">cv::VideoCaptureAPIs</a> { <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da77ab1fe260fd182f8ec7655fab27a31d">cv::CAP_ANY</a> = 0
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da5290a0c5005edf1c5715a0c8e637b861">cv::CAP_VFW</a> = 200
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da0c5f2eb9d2d43fb3582583203160a419">cv::CAP_V4L</a> = 200
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da78d2234242b9be9c53196be7c2bb2537">cv::CAP_V4L2</a> = CAP_V4L
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da8555c783cb62cdc666806d3faf8efa09">cv::CAP_FIREWIRE</a> = 300
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dab51c7fc9cc4dda4f63f9a86dc3212f89">cv::CAP_FIREWARE</a> = CAP_FIREWIRE
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294daf1b3045737ea7a591c26d6050a5a4755">cv::CAP_IEEE1394</a> = CAP_FIREWIRE
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da90613927859093cb37c9df3acf47061b">cv::CAP_DC1394</a> = CAP_FIREWIRE
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da50f0063ddd92eae7eb4c9d5657c57f01">cv::CAP_CMU1394</a> = CAP_FIREWIRE
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dac06269ed54875916d93209669512c1c4">cv::CAP_QT</a> = 500
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da44311f187ece704740c79eedcadd9856">cv::CAP_UNICAP</a> = 600
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dab6ac3effa04f41ed5470375c85a23504">cv::CAP_DSHOW</a> = 700
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294daea3f59a31f396298b5b3531c23391e49">cv::CAP_PVAPI</a> = 800
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294daa073098573ce0968cb7a79de1a5ce0ee">cv::CAP_OPENNI</a> = 900
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da19bf6cb6cd40b856d55867ce1a88f7af">cv::CAP_OPENNI_ASUS</a> = 910
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da0a3b80ec023425a27431991500d26847">cv::CAP_ANDROID</a> = 1000
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da09a7f09167711d60cd98bb779154374b">cv::CAP_XIAPI</a> = 1100
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dad40e88621d29a819d17f14207cb12326">cv::CAP_AVFOUNDATION</a> = 1200
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294daf4dde3ebf402904bf78b40956035b766">cv::CAP_GIGANETIX</a> = 1300
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da278d5ad4907c9c0fe6d1c6104b746019">cv::CAP_MSMF</a> = 1400
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da92175615b64b63f7fe170e1fe8eabeea">cv::CAP_WINRT</a> = 1410
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dabe0df46cd132d1cfbae88efd6f4becdf">cv::CAP_INTELPERC</a> = 1500
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da7f442efc12cf9056cf4dc1597ba7fda6">cv::CAP_REALSENSE</a> = 1500
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dabfd6ffd761dc1b2841b5595f089412e7">cv::CAP_OPENNI2</a> = 1600
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da2c24b5fa88b2d575c3555f2732899937">cv::CAP_OPENNI2_ASUS</a> = 1610
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da9ce2b4f360d124a676a4dd320d23e6c8">cv::CAP_OPENNI2_ASTRA</a> = 1620
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da96c457f30fddf85dc689f940a4c07807">cv::CAP_GPHOTO2</a> = 1700
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da38dcac6866f7608675dd35ba0b9c3c07">cv::CAP_GSTREAMER</a> = 1800
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dacf10e9692c4166f74de62b7d00c377d0">cv::CAP_FFMPEG</a> = 1900
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294dabe73da7a65e66cdd47c87733a4ea6ef0">cv::CAP_IMAGES</a> = 2000
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da154dbbfdbcd9aee0ebcbca984479c57a">cv::CAP_ARAVIS</a> = 2100
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da30dc8f8843e26aa10d401799f62eaa25">cv::CAP_OPENCV_MJPEG</a> = 2200
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da7212c0c08fcb32247b7cdb62466955f4">cv::CAP_INTEL_MFX</a> = 2300
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da5cc03d4fed01f175de71b3fd228a1ac3">cv::CAP_XINE</a> = 2400
+, <a class="el" href="group__videoio__flags__base.html#gga023786be1ee68a9105bf2e48c700294da13460f2d9e01d62d407aa2fd4355af29">cv::CAP_UEYE</a> = 2500
+<br />
+ }</td></tr>
+<tr class="memdesc:ga023786be1ee68a9105bf2e48c700294d"><td class="mdescLeft">&#160;</td><td class="mdescRight">VideoCapture API backends identifier.  <a href="group__videoio__flags__base.html#ga023786be1ee68a9105bf2e48c700294d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga023786be1ee68a9105bf2e48c700294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb8dd9c89c10a5c63c139bf7c4f5704d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d">cv::VideoCaptureProperties</a> { <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da7c2fa550ba270713fca1405397b90ae0">cv::CAP_PROP_POS_MSEC</a> =0
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da6223452891755166a4fd5173ea257068">cv::CAP_PROP_POS_FRAMES</a> =1
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da7b235a04f50a444bc2dc72f5ae394aaf">cv::CAP_PROP_POS_AVI_RATIO</a> =2
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dab26d2ba37086662261148e9fe93eecad">cv::CAP_PROP_FRAME_WIDTH</a> =3
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dad8b57083fd9bd58e0f94e68a54b42b7e">cv::CAP_PROP_FRAME_HEIGHT</a> =4
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daf01bc92359d2abc9e6eeb5cbe36d9af2">cv::CAP_PROP_FPS</a> =5
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da53e1c28d4c2ca10732af106f3bf00613">cv::CAP_PROP_FOURCC</a> =6
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dadadc646b31cfd2194794a3a80b8fa6c2">cv::CAP_PROP_FRAME_COUNT</a> =7
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da171e1ed33a7c1280a9d2c869732f226c">cv::CAP_PROP_FORMAT</a> =8
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dae45a994f35020bf149050dcb2a02da72">cv::CAP_PROP_MODE</a> =9
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da95753013fd8f0c0af3f743dc0293844b">cv::CAP_PROP_BRIGHTNESS</a> =10
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dae412ca134669abd128476d5afe41e29c">cv::CAP_PROP_CONTRAST</a> =11
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da2495072c1b81de961e5b9f601bc4aab3">cv::CAP_PROP_SATURATION</a> =12
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daa9800b2246d653480facbf02a3d1109b">cv::CAP_PROP_HUE</a> =13
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daf2ead561c823ccfbbd9889c8ac690b75">cv::CAP_PROP_GAIN</a> =14
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dafb6cd2b43344f0458c13863354989623">cv::CAP_PROP_EXPOSURE</a> =15
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dad0bb457c76e2b01024ecb3a85e75af29">cv::CAP_PROP_CONVERT_RGB</a> =16
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dafe7719e51138b49c8fd9c7c71d5121a9">cv::CAP_PROP_WHITE_BALANCE_BLUE_U</a> =17
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da0471d0b2b6fe06f6977a41bbe56b46b5">cv::CAP_PROP_RECTIFICATION</a> =18
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dab48ba74e66e91d91722e036b322fb2a3">cv::CAP_PROP_MONOCHROME</a> =19
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daa4cff86666811a91654c34ea05eef368">cv::CAP_PROP_SHARPNESS</a> =20
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da5c790a640b290f73fcd279e8bbaf0f13">cv::CAP_PROP_AUTO_EXPOSURE</a> =21
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da16f82a926e5e1003ed420e12b37753b1">cv::CAP_PROP_GAMMA</a> =22
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da4471c47a983494d88844aa313e599a5f">cv::CAP_PROP_TEMPERATURE</a> =23
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daa157bb0c323279596cbed43a8d8d7827">cv::CAP_PROP_TRIGGER</a> =24
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da97bdb876e58d2b5e0b6958a1cc195eac">cv::CAP_PROP_TRIGGER_DELAY</a> =25
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da4da437eb05a5af70b080254027acc5e0">cv::CAP_PROP_WHITE_BALANCE_RED_V</a> =26
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da73f3ec06cf4f9aca1ab7f3b52260fd5e">cv::CAP_PROP_ZOOM</a> =27
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da25fe3d87b62a918427d49f3d43aef714">cv::CAP_PROP_FOCUS</a> =28
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daa33343b2bee43f96c3f8c4f4d809d040">cv::CAP_PROP_GUID</a> =29
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da6f7abc33bd385769da80a33926445f9e">cv::CAP_PROP_ISO_SPEED</a> =30
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da291cc06a405ecd99d074d051d98a3931">cv::CAP_PROP_BACKLIGHT</a> =32
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da976bd262a1efb96781c9a675dd461d5e">cv::CAP_PROP_PAN</a> =33
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dad126234b7a8bd92a50fc075461a99778">cv::CAP_PROP_TILT</a> =34
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dab8ccf2e54a73af3d0f1249cbc9c21445">cv::CAP_PROP_ROLL</a> =35
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da6fad0580db4515df0b5f5e4b05ee94fc">cv::CAP_PROP_IRIS</a> =36
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da6339d098548d91f438b6f10ee1407c72">cv::CAP_PROP_SETTINGS</a> =37
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da5014616457bfb833d3ec00c4b7f31342">cv::CAP_PROP_BUFFERSIZE</a> =38
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704dad937a854bd8d1ca73edfb3570e799aa3">cv::CAP_PROP_AUTOFOCUS</a> =39
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da4fc3ef1222d9a8be3d7b6d044494a523">cv::CAP_PROP_SAR_NUM</a> =40
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704daaac79210a04c7a75815be9dfbf78eaf1">cv::CAP_PROP_SAR_DEN</a> =41
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da0bdf71aedd96f43adf1dc007cc2cff85">cv::CAP_PROP_BACKEND</a> =42
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da2f6d968016612b1d87c9895e75a6449a">cv::CAP_PROP_CHANNEL</a> =43
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da762391cbaa101c4015e6a935aa0cfc95">cv::CAP_PROP_AUTO_WB</a> =44
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da280eb4a13368f5ccdea3b2233dbc25b6">cv::CAP_PROP_WB_TEMPERATURE</a> =45
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da6221cfac2d7ab4d84b38bff91949fa6c">cv::CAP_PROP_CODEC_PIXEL_FORMAT</a> =46
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da711a09ebb79c9a632e38e5d3ac780acd">cv::CAP_PROP_BITRATE</a> =47
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da161e0ba8e8fad2a34880e0fc6753a2b2">cv::CAP_PROP_ORIENTATION_META</a> =48
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da41512a8827718b93f8bdc7b60c83b033">cv::CAP_PROP_ORIENTATION_AUTO</a> =49
+, <a class="el" href="group__videoio__flags__base.html#ggaeb8dd9c89c10a5c63c139bf7c4f5704da1784bfdbf42eec0b8eaf4c126aea3ed3">cv::CV__CAP_PROP_LATEST</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gaeb8dd9c89c10a5c63c139bf7c4f5704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">VideoCapture generic properties identifier.  <a href="group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaeb8dd9c89c10a5c63c139bf7c4f5704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41c5cfa7859ae542b71b1d33bbd4d2b4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__videoio__flags__base.html#ga41c5cfa7859ae542b71b1d33bbd4d2b4">cv::VideoWriterProperties</a> { <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga41c5cfa7859ae542b71b1d33bbd4d2b4a1cc2ab47f60a115ff9624ff71715b93b">cv::VIDEOWRITER_PROP_QUALITY</a> = 1
+, <a class="el" href="group__videoio__flags__base.html#gga41c5cfa7859ae542b71b1d33bbd4d2b4ace3320e146f4f95f3d58b32b0e1237b1">cv::VIDEOWRITER_PROP_FRAMEBYTES</a> = 2
+, <a class="el" href="group__videoio__flags__base.html#gga41c5cfa7859ae542b71b1d33bbd4d2b4ae8e8348e4b6b8c78d9921c65c91a8e10">cv::VIDEOWRITER_PROP_NSTRIPES</a> = 3
+, <a class="el" href="group__videoio__flags__base.html#gga41c5cfa7859ae542b71b1d33bbd4d2b4aad8fd6a513706288dfcaa491269851d8">cv::VIDEOWRITER_PROP_IS_COLOR</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__base.html#gga41c5cfa7859ae542b71b1d33bbd4d2b4a3e575f46a9637c4af3a63b70760c6957">cv::VIDEOWRITER_PROP_DEPTH</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:ga41c5cfa7859ae542b71b1d33bbd4d2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">VideoWriter generic properties identifier.  <a href="group__videoio__flags__base.html#ga41c5cfa7859ae542b71b1d33bbd4d2b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga41c5cfa7859ae542b71b1d33bbd4d2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">IEEE 1394 drivers</div></td></tr>
+<tr class="memitem:ga6a0e727e07d18ebc315bfe86a01f7746"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga6a0e727e07d18ebc315bfe86a01f7746acf2cc1c71097ed0b4a41835469c7442f">cv::CAP_PROP_DC1394_OFF</a> = -4
+, <a class="el" href="group__videoio__flags__others.html#gga6a0e727e07d18ebc315bfe86a01f7746ad4e4849dd1d36d22ae451ae9241cf780">cv::CAP_PROP_DC1394_MODE_MANUAL</a> = -3
+, <a class="el" href="group__videoio__flags__others.html#gga6a0e727e07d18ebc315bfe86a01f7746adbadd629b9386316a1837103d147e180">cv::CAP_PROP_DC1394_MODE_AUTO</a> = -2
+, <a class="el" href="group__videoio__flags__others.html#gga6a0e727e07d18ebc315bfe86a01f7746a93ed17f4467068f9fb5d0b72cff48cfd">cv::CAP_PROP_DC1394_MODE_ONE_PUSH_AUTO</a> = -1
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga6a0e727e07d18ebc315bfe86a01f7746abb0d92c98e8d5017993b699661eac161">cv::CAP_PROP_DC1394_MAX</a> = 31
+<br />
+ }</td></tr>
+<tr class="memdesc:ga6a0e727e07d18ebc315bfe86a01f7746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes of the IEEE 1394 controlling registers (can be: auto, manual, auto single push, absolute Latter allowed with any other mode) every feature can have only one mode turned on at a time.  <a href="group__videoio__flags__others.html#ga6a0e727e07d18ebc315bfe86a01f7746">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6a0e727e07d18ebc315bfe86a01f7746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">OpenNI (for Kinect)</div></td></tr>
+<tr class="memitem:gacafc0274ed6403276a9c1463d82b1cd6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#ggacafc0274ed6403276a9c1463d82b1cd6a803680384669d80d0294ad7836ec57e6">cv::CAP_OPENNI_DEPTH_GENERATOR</a> = 1 &lt;&lt; 31
+, <a class="el" href="group__videoio__flags__others.html#ggacafc0274ed6403276a9c1463d82b1cd6a88571cf323ed746cfad77160272fe593">cv::CAP_OPENNI_IMAGE_GENERATOR</a> = 1 &lt;&lt; 30
+, <a class="el" href="group__videoio__flags__others.html#ggacafc0274ed6403276a9c1463d82b1cd6a895744d25aea6269227db6d4d2b30e68">cv::CAP_OPENNI_IR_GENERATOR</a> = 1 &lt;&lt; 29
+, <a class="el" href="group__videoio__flags__others.html#ggacafc0274ed6403276a9c1463d82b1cd6aa78452e84ffa2e3544cb0006ed89e842">cv::CAP_OPENNI_GENERATORS_MASK</a> = CAP_OPENNI_DEPTH_GENERATOR + CAP_OPENNI_IMAGE_GENERATOR + CAP_OPENNI_IR_GENERATOR
+ }</td></tr>
+<tr class="memdesc:gacafc0274ed6403276a9c1463d82b1cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenNI map generators.  <a href="group__videoio__flags__others.html#gacafc0274ed6403276a9c1463d82b1cd6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacafc0274ed6403276a9c1463d82b1cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbbd266b1e99bc7003c530ec0b8a96f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8abcda142aeb58988856fe78d762e66de4">cv::CAP_PROP_OPENNI_OUTPUT_MODE</a> = 100
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8af1babc6cc545ca6774f1690b9c32a036">cv::CAP_PROP_OPENNI_FRAME_MAX_DEPTH</a> = 101
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a676d008cfa53522d7d118d34ff66336b">cv::CAP_PROP_OPENNI_BASELINE</a> = 102
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a8103ade90d890b2b0a9d0cef99e59dc1">cv::CAP_PROP_OPENNI_FOCAL_LENGTH</a> = 103
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a051eab1e624d79b5b3b297883eaab23f">cv::CAP_PROP_OPENNI_REGISTRATION</a> = 104
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a66af01b2664b79aa76689ade0935736e">cv::CAP_PROP_OPENNI_REGISTRATION_ON</a> = CAP_PROP_OPENNI_REGISTRATION
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8af675327cdfd8a83dd87d8e90b34479bb">cv::CAP_PROP_OPENNI_APPROX_FRAME_SYNC</a> = 105
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a1512aa312e7db87684e323e7b440f63c">cv::CAP_PROP_OPENNI_MAX_BUFFER_SIZE</a> = 106
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a580f8871db885f3dc6bdfcc0abcef9a8">cv::CAP_PROP_OPENNI_CIRCLE_BUFFER</a> = 107
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a0d36810d3a75e7d53292b2307b873ff6">cv::CAP_PROP_OPENNI_MAX_TIME_DURATION</a> = 108
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8aa821a4784e36e4f40aa9e212537851e8">cv::CAP_PROP_OPENNI_GENERATOR_PRESENT</a> = 109
+, <a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8aa3b67d0d527dde2b44abb117eee5f289">cv::CAP_PROP_OPENNI2_SYNC</a> = 110
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggacbbd266b1e99bc7003c530ec0b8a96f8a4d176582d7510d1dd24816916134178f">cv::CAP_PROP_OPENNI2_MIRROR</a> = 111
+<br />
+ }</td></tr>
+<tr class="memdesc:gacbbd266b1e99bc7003c530ec0b8a96f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of cameras available through OpenNI backend.  <a href="group__videoio__flags__others.html#gacbbd266b1e99bc7003c530ec0b8a96f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacbbd266b1e99bc7003c530ec0b8a96f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab950f4a5b6e1ebff306f3b7874e90214"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214ab1d78bb8b7e062f4bc14d7db3eccf9b9">cv::CAP_OPENNI_IMAGE_GENERATOR_PRESENT</a> = CAP_OPENNI_IMAGE_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a241b67030848f3bcf223d18ebfe75adc">cv::CAP_OPENNI_IMAGE_GENERATOR_OUTPUT_MODE</a> = CAP_OPENNI_IMAGE_GENERATOR + CAP_PROP_OPENNI_OUTPUT_MODE
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a35506303a7585ddfaf30ad453704af13">cv::CAP_OPENNI_DEPTH_GENERATOR_PRESENT</a> = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214afefc8beb33fe05b3729b422678893215">cv::CAP_OPENNI_DEPTH_GENERATOR_BASELINE</a> = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_BASELINE
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a8033186b1063aa190fd91661aac79b5d">cv::CAP_OPENNI_DEPTH_GENERATOR_FOCAL_LENGTH</a> = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_FOCAL_LENGTH
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a4bfc7955622984b48420bf8fecda6388">cv::CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION</a> = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_REGISTRATION
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a5c1c8b4e40121d8a906d39d772117700">cv::CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION_ON</a> = CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION
+, <a class="el" href="group__videoio__flags__others.html#ggab950f4a5b6e1ebff306f3b7874e90214a60014cf8395b41a0918be79e63ef0a03">cv::CAP_OPENNI_IR_GENERATOR_PRESENT</a> = CAP_OPENNI_IR_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT
+<br />
+ }</td></tr>
+<tr class="memdesc:gab950f4a5b6e1ebff306f3b7874e90214"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenNI shortcuts.  <a href="group__videoio__flags__others.html#gab950f4a5b6e1ebff306f3b7874e90214">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab950f4a5b6e1ebff306f3b7874e90214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7956af2ace3d3acb9dae27cc96353a42"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a2278fe906c8f7508e6e7a92f46888661">cv::CAP_OPENNI_DEPTH_MAP</a> = 0
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a9025b0faf50e561b874405f7013f43dd">cv::CAP_OPENNI_POINT_CLOUD_MAP</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a549229ff705c2c4d637712b93041e06f">cv::CAP_OPENNI_DISPARITY_MAP</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a471838d1ee511e9555d07abe076db5b1">cv::CAP_OPENNI_DISPARITY_MAP_32F</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a4cc33615f4869c0a2eda62587b945fb9">cv::CAP_OPENNI_VALID_DEPTH_MASK</a> = 4
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a467bac9001f40dea888f47ac55886c23">cv::CAP_OPENNI_BGR_IMAGE</a> = 5
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42ae9fad51a17faff9b4351ccaa6b8375ba">cv::CAP_OPENNI_GRAY_IMAGE</a> = 6
+, <a class="el" href="group__videoio__flags__others.html#gga7956af2ace3d3acb9dae27cc96353a42a39da5760ecb602bb5f31b2889ee7f9ae">cv::CAP_OPENNI_IR_IMAGE</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7956af2ace3d3acb9dae27cc96353a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenNI data given from depth generator.  <a href="group__videoio__flags__others.html#ga7956af2ace3d3acb9dae27cc96353a42">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7956af2ace3d3acb9dae27cc96353a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99628fb8d431bc6ef37ee0c34d22d70a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga99628fb8d431bc6ef37ee0c34d22d70aa08a35a2f66b2d645eb7817e852ff8ddc">cv::CAP_OPENNI_VGA_30HZ</a> = 0
+, <a class="el" href="group__videoio__flags__others.html#gga99628fb8d431bc6ef37ee0c34d22d70aaac4de9c7e74b115c82b996e5a9de738b">cv::CAP_OPENNI_SXGA_15HZ</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#gga99628fb8d431bc6ef37ee0c34d22d70aa170b676fb0471be44394d7c600787872">cv::CAP_OPENNI_SXGA_30HZ</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#gga99628fb8d431bc6ef37ee0c34d22d70aa6ae35b3670500dd309e0797781ffc46b">cv::CAP_OPENNI_QVGA_30HZ</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga99628fb8d431bc6ef37ee0c34d22d70aa5db747b95207d3086eff4e58ce68f495">cv::CAP_OPENNI_QVGA_60HZ</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ga99628fb8d431bc6ef37ee0c34d22d70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported output modes of OpenNI image generator.  <a href="group__videoio__flags__others.html#ga99628fb8d431bc6ef37ee0c34d22d70a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga99628fb8d431bc6ef37ee0c34d22d70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">GStreamer</div></td></tr>
+<tr class="memitem:gaaa4a2147e7ca591eed86f326c8bc271a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#ggaaa4a2147e7ca591eed86f326c8bc271aa15017e3dbe8d23bf4081b71d35e71bdf">cv::CAP_PROP_GSTREAMER_QUEUE_LENGTH</a> = 200
+ }</td></tr>
+<tr class="separator:gaaa4a2147e7ca591eed86f326c8bc271a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">PvAPI, Prosilica GigE SDK</div></td></tr>
+<tr class="memitem:gac9e96127443fe13242a3a33c8f973949"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949a4c1e342f7800bb32f5994170c71b107b">cv::CAP_PROP_PVAPI_MULTICASTIP</a> = 300
+, <a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949a337f6f1806a65c7e9b4bf33f96b46008">cv::CAP_PROP_PVAPI_FRAMESTARTTRIGGERMODE</a> = 301
+, <a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949ad10d97cf35c6cdba377ba9ed7f4df457">cv::CAP_PROP_PVAPI_DECIMATIONHORIZONTAL</a> = 302
+, <a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949a15037da6569b943b91364be21af58ede">cv::CAP_PROP_PVAPI_DECIMATIONVERTICAL</a> = 303
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949adc35a809d39b76611bbddfbe1d262de9">cv::CAP_PROP_PVAPI_BINNINGX</a> = 304
+, <a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949ad09164e443627dd9fffae73c17e26ff5">cv::CAP_PROP_PVAPI_BINNINGY</a> = 305
+, <a class="el" href="group__videoio__flags__others.html#ggac9e96127443fe13242a3a33c8f973949af398d565fa74a15b5336cd7d7b4875c1">cv::CAP_PROP_PVAPI_PIXELFORMAT</a> = 306
+<br />
+ }</td></tr>
+<tr class="memdesc:gac9e96127443fe13242a3a33c8f973949"><td class="mdescLeft">&#160;</td><td class="mdescRight">PVAPI.  <a href="group__videoio__flags__others.html#gac9e96127443fe13242a3a33c8f973949">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac9e96127443fe13242a3a33c8f973949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f04d43763fb3b5a12271de84a5e3f74"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga4f04d43763fb3b5a12271de84a5e3f74ad149577e9f1a26d0b9ab7cc38ea66e25">cv::CAP_PVAPI_FSTRIGMODE_FREERUN</a> = 0
+, <a class="el" href="group__videoio__flags__others.html#gga4f04d43763fb3b5a12271de84a5e3f74af199d5c684aa54a3d37a8a5d7ddfc3c3">cv::CAP_PVAPI_FSTRIGMODE_SYNCIN1</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#gga4f04d43763fb3b5a12271de84a5e3f74aca95ce56d9dea6f7addc0f578f0e960b">cv::CAP_PVAPI_FSTRIGMODE_SYNCIN2</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#gga4f04d43763fb3b5a12271de84a5e3f74a393224986d05449896f3f1614865ac37">cv::CAP_PVAPI_FSTRIGMODE_FIXEDRATE</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga4f04d43763fb3b5a12271de84a5e3f74aadfb77546571860e37e5adf9ea661a72">cv::CAP_PVAPI_FSTRIGMODE_SOFTWARE</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ga4f04d43763fb3b5a12271de84a5e3f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">PVAPI: FrameStartTriggerMode.  <a href="group__videoio__flags__others.html#ga4f04d43763fb3b5a12271de84a5e3f74">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4f04d43763fb3b5a12271de84a5e3f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad184dea5ca7f8972e938ecdddebb8cd6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#ggad184dea5ca7f8972e938ecdddebb8cd6a77557674b55270997bb64557becdcae4">cv::CAP_PVAPI_DECIMATION_OFF</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#ggad184dea5ca7f8972e938ecdddebb8cd6a65c059a6dfc8b709bc9bb33eb057e865">cv::CAP_PVAPI_DECIMATION_2OUTOF4</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#ggad184dea5ca7f8972e938ecdddebb8cd6aac6400fa67e4237c2bbe26fefa0c552d">cv::CAP_PVAPI_DECIMATION_2OUTOF8</a> = 4
+, <a class="el" href="group__videoio__flags__others.html#ggad184dea5ca7f8972e938ecdddebb8cd6a93abac526319d5b0d39d89bce5508095">cv::CAP_PVAPI_DECIMATION_2OUTOF16</a> = 8
+ }</td></tr>
+<tr class="memdesc:gad184dea5ca7f8972e938ecdddebb8cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">PVAPI: DecimationHorizontal, DecimationVertical.  <a href="group__videoio__flags__others.html#gad184dea5ca7f8972e938ecdddebb8cd6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad184dea5ca7f8972e938ecdddebb8cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga582b8e92406ed0d403a5690c3273a994"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994a7910aa88e73d326883f0742f760ecae1">cv::CAP_PVAPI_PIXELFORMAT_MONO8</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994aac9c9b4bfc19ee84bd9428f0cca98c9a">cv::CAP_PVAPI_PIXELFORMAT_MONO16</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994a14cc8991f566cbb95661a95b9d02ff5f">cv::CAP_PVAPI_PIXELFORMAT_BAYER8</a> = 3
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994a13e3854cacaa94dd376d6742b4701051">cv::CAP_PVAPI_PIXELFORMAT_BAYER16</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994acd6f4bfde8ab0461d43616e3f2c11b31">cv::CAP_PVAPI_PIXELFORMAT_RGB24</a> = 5
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994abcecb9c33a2533abfc3b2caf6ddf10e8">cv::CAP_PVAPI_PIXELFORMAT_BGR24</a> = 6
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994a2069a8d1441e7c7c461273cf09692803">cv::CAP_PVAPI_PIXELFORMAT_RGBA32</a> = 7
+, <a class="el" href="group__videoio__flags__others.html#gga582b8e92406ed0d403a5690c3273a994a0fa9e749378a7e1afdce0ef93bc98139">cv::CAP_PVAPI_PIXELFORMAT_BGRA32</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:ga582b8e92406ed0d403a5690c3273a994"><td class="mdescLeft">&#160;</td><td class="mdescRight">PVAPI: PixelFormat.  <a href="group__videoio__flags__others.html#ga582b8e92406ed0d403a5690c3273a994">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga582b8e92406ed0d403a5690c3273a994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">XIMEA Camera API</div></td></tr>
+<tr class="memitem:ga860d7570a57e7421cfc5e756b7cd2a60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a0b6409999490a804d1a06df43105e5cb">cv::CAP_PROP_XI_DOWNSAMPLING</a> = 400
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a78102975f149dfb80b657f2d4a263f56">cv::CAP_PROP_XI_DATA_FORMAT</a> = 401
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a4b7b75badbf59d821962c06cf4d025bb">cv::CAP_PROP_XI_OFFSET_X</a> = 402
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a6724b0905a0bda1166a67f6ccbc70327">cv::CAP_PROP_XI_OFFSET_Y</a> = 403
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa523371bc36e5e200dc8948a97a34bc9">cv::CAP_PROP_XI_TRG_SOURCE</a> = 404
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa008a158bb86a33056b5cf20300b70fc">cv::CAP_PROP_XI_TRG_SOFTWARE</a> = 405
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aaaa4bcf89caf285194c200b990d94b94">cv::CAP_PROP_XI_GPI_SELECTOR</a> = 406
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a4dbdf76832838e9ad4b89da280bdcbca">cv::CAP_PROP_XI_GPI_MODE</a> = 407
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab44ede586d7a2370e24ae87d6aa8afad">cv::CAP_PROP_XI_GPI_LEVEL</a> = 408
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a1785d9ac27c4d678dc0afad376322a48">cv::CAP_PROP_XI_GPO_SELECTOR</a> = 409
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a4aadd5055b767a8ebe6be43b15b165ac">cv::CAP_PROP_XI_GPO_MODE</a> = 410
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a9dbacb0484a6cceef5afd4496740e3f7">cv::CAP_PROP_XI_LED_SELECTOR</a> = 411
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a722e0061b85c4785608ac5ac7a473c00">cv::CAP_PROP_XI_LED_MODE</a> = 412
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60af8a5a64e094123892b5813fff1188706">cv::CAP_PROP_XI_MANUAL_WB</a> = 413
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a78726921e8b31b899e12e1b7aa7acc0b">cv::CAP_PROP_XI_AUTO_WB</a> = 414
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a9eb8e60a7c1ec79d620d194f2bb3deba">cv::CAP_PROP_XI_AEAG</a> = 415
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a2ef62c529916491a59a4b5cca77bc7af">cv::CAP_PROP_XI_EXP_PRIORITY</a> = 416
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aab0ce44b1aa17d4f82678aeebcd1deb5">cv::CAP_PROP_XI_AE_MAX_LIMIT</a> = 417
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8d1beac67e7dffae82f72b9a91922e02">cv::CAP_PROP_XI_AG_MAX_LIMIT</a> = 418
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a1df2a23c5ac1d3b0e690d634a23f3815">cv::CAP_PROP_XI_AEAG_LEVEL</a> = 419
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a6c71b080417a0fe6b182f868c4a319a7">cv::CAP_PROP_XI_TIMEOUT</a> = 420
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aaa2e2d066a822de98d26f26c5511c805">cv::CAP_PROP_XI_EXPOSURE</a> = 421
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a13f4135742d70478e25494bb12dac06d">cv::CAP_PROP_XI_EXPOSURE_BURST_COUNT</a> = 422
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5c4afbb52928cd2a035b46f90f0b77e7">cv::CAP_PROP_XI_GAIN_SELECTOR</a> = 423
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a2ce2015d26b875f9a5bba2c34efa881f">cv::CAP_PROP_XI_GAIN</a> = 424
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a206b435824abcca17fc5c405ee3bca44">cv::CAP_PROP_XI_DOWNSAMPLING_TYPE</a> = 426
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a13057f6fa93855d14425fccd23bb83ec">cv::CAP_PROP_XI_BINNING_SELECTOR</a> = 427
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a0199f71e8c1c122580bca052ec01f985">cv::CAP_PROP_XI_BINNING_VERTICAL</a> = 428
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8ad99a5e916acc75fcc7721feb34a317">cv::CAP_PROP_XI_BINNING_HORIZONTAL</a> = 429
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab06c8c58619c511dac584a2f75e3d7ad">cv::CAP_PROP_XI_BINNING_PATTERN</a> = 430
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a1b9ad18b3612d2e3608ae81f88d77288">cv::CAP_PROP_XI_DECIMATION_SELECTOR</a> = 431
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a62d52331d0200f822501b9e0e747d0e0">cv::CAP_PROP_XI_DECIMATION_VERTICAL</a> = 432
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60adbba432c72379e77501b3c00f87e5c8c">cv::CAP_PROP_XI_DECIMATION_HORIZONTAL</a> = 433
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a0165a1d34902d00b60da24503bb051f3">cv::CAP_PROP_XI_DECIMATION_PATTERN</a> = 434
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac63611cdaf894d351b953c34b93bbe27">cv::CAP_PROP_XI_TEST_PATTERN_GENERATOR_SELECTOR</a> = 587
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60af6e3addcd1dc86db902982df976ef398">cv::CAP_PROP_XI_TEST_PATTERN</a> = 588
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aace6b4af9afed47c6d39faa842607ab0">cv::CAP_PROP_XI_IMAGE_DATA_FORMAT</a> = 435
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60abe84384ce558a68b1fb119c26a1fb1c7">cv::CAP_PROP_XI_SHUTTER_TYPE</a> = 436
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a94443f6400743b92ab0d747cccd94733">cv::CAP_PROP_XI_SENSOR_TAPS</a> = 437
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a39e41c91baf6f63c17af16eca11854f8">cv::CAP_PROP_XI_AEAG_ROI_OFFSET_X</a> = 439
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a46b7791d22180493c94beef20d98fe94">cv::CAP_PROP_XI_AEAG_ROI_OFFSET_Y</a> = 440
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60acbd2426abe20e582a878d7621951bf1a">cv::CAP_PROP_XI_AEAG_ROI_WIDTH</a> = 441
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aef5ce8e8556233335e9771c5a13cf646">cv::CAP_PROP_XI_AEAG_ROI_HEIGHT</a> = 442
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8e96da9798b9d04931b78f161d860068">cv::CAP_PROP_XI_BPC</a> = 445
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8501e38cd113a72c31555a8fb378b8c8">cv::CAP_PROP_XI_WB_KR</a> = 448
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a01849a14d6761cea0075d713ed1b13c3">cv::CAP_PROP_XI_WB_KG</a> = 449
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a85591ebfaf9e08ac3298ffbddb4a6eb0">cv::CAP_PROP_XI_WB_KB</a> = 450
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5f993678826ae1397c77d05853e9ac47">cv::CAP_PROP_XI_WIDTH</a> = 451
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a6d7d5e4b2602f9bff56564d884e08fe4">cv::CAP_PROP_XI_HEIGHT</a> = 452
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60afa595df0cdf5b73134aa29a67ccabc74">cv::CAP_PROP_XI_REGION_SELECTOR</a> = 589
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ae147b9f0ff2b052840cfbde354db8370">cv::CAP_PROP_XI_REGION_MODE</a> = 595
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a3ba1662e0b303848e464d138a42a3f8d">cv::CAP_PROP_XI_LIMIT_BANDWIDTH</a> = 459
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a21c86de9892de694193d5d778433ce1f">cv::CAP_PROP_XI_SENSOR_DATA_BIT_DEPTH</a> = 460
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a0582602575f693d8cf9f9da68f8d7e4e">cv::CAP_PROP_XI_OUTPUT_DATA_BIT_DEPTH</a> = 461
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a3cb6414220dc96a4346dbb9820d6807c">cv::CAP_PROP_XI_IMAGE_DATA_BIT_DEPTH</a> = 462
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a9de43705d72a70642b315c0164d3f706">cv::CAP_PROP_XI_OUTPUT_DATA_PACKING</a> = 463
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a4dd38252df8993caaa6a94991c7c710a">cv::CAP_PROP_XI_OUTPUT_DATA_PACKING_TYPE</a> = 464
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad6a369e15415652c07377e617c31b816">cv::CAP_PROP_XI_IS_COOLED</a> = 465
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa2272098bfa67902996bc6908acb1f1c">cv::CAP_PROP_XI_COOLING</a> = 466
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a7a5b70e760f454ba83133e868e8bff98">cv::CAP_PROP_XI_TARGET_TEMP</a> = 467
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aabb95af76be80f6b87680c4b257f98ee">cv::CAP_PROP_XI_CHIP_TEMP</a> = 468
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa0b998a928fb6bdaa4dd1def71b5e15b">cv::CAP_PROP_XI_HOUS_TEMP</a> = 469
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac35662482264494d5d4a2d3694604454">cv::CAP_PROP_XI_HOUS_BACK_SIDE_TEMP</a> = 590
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a94305071b134947bedeeb4c5dd59418e">cv::CAP_PROP_XI_SENSOR_BOARD_TEMP</a> = 596
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a4b9de3101c09c901dd98a0f9b64b807a">cv::CAP_PROP_XI_CMS</a> = 470
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab5f0a4155a300bd53ee69539a405fe41">cv::CAP_PROP_XI_APPLY_CMS</a> = 471
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a3474bff058406213c00f940b7d39ca03">cv::CAP_PROP_XI_IMAGE_IS_COLOR</a> = 474
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a43d1598de031e32b1573edd86971f397">cv::CAP_PROP_XI_COLOR_FILTER_ARRAY</a> = 475
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60adec96ba88422b04bb4b8b4f672f5c77b">cv::CAP_PROP_XI_GAMMAY</a> = 476
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac51336a614b4d065e6ec6e4c9dbc75d4">cv::CAP_PROP_XI_GAMMAC</a> = 477
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a0cb34cbfab7826a77b11c241d1b68058">cv::CAP_PROP_XI_SHARPNESS</a> = 478
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a3f848989fa4782daed55e6d66db49f75">cv::CAP_PROP_XI_CC_MATRIX_00</a> = 479
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a95e27d9c6825f62a75f6e5925a10a660">cv::CAP_PROP_XI_CC_MATRIX_01</a> = 480
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac24b38753dc61ea5a34e8e24cb1b7ebb">cv::CAP_PROP_XI_CC_MATRIX_02</a> = 481
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab4dc65aa8bf1e3264c130f2ca438ebbd">cv::CAP_PROP_XI_CC_MATRIX_03</a> = 482
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa680ef94ac047467b30eb19d0ab9e3e1">cv::CAP_PROP_XI_CC_MATRIX_10</a> = 483
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a88e6261d6402965b2188dffa5da40a3e">cv::CAP_PROP_XI_CC_MATRIX_11</a> = 484
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aebd3e3ef66d136f30d7ae884775d92e5">cv::CAP_PROP_XI_CC_MATRIX_12</a> = 485
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60af90a703023bce0fa393089f8944167fb">cv::CAP_PROP_XI_CC_MATRIX_13</a> = 486
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a03c5b9f730df89e85d3c1f9f062f8477">cv::CAP_PROP_XI_CC_MATRIX_20</a> = 487
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a1e9e100b5881d8bec3749279e9b0a18f">cv::CAP_PROP_XI_CC_MATRIX_21</a> = 488
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad39c4868d1fd828a13301c4e3a484c1a">cv::CAP_PROP_XI_CC_MATRIX_22</a> = 489
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad32906e25f6e4b3b7a721f019980a2df">cv::CAP_PROP_XI_CC_MATRIX_23</a> = 490
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60acb9360352011126b2c5b22f00d2bc825">cv::CAP_PROP_XI_CC_MATRIX_30</a> = 491
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5f0675b49efc4bf8afa8c3e5a021f947">cv::CAP_PROP_XI_CC_MATRIX_31</a> = 492
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac7a263f10e2aa915d0db21d000f677dd">cv::CAP_PROP_XI_CC_MATRIX_32</a> = 493
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a56a526385841cb1b73c311b9ab3cd6f8">cv::CAP_PROP_XI_CC_MATRIX_33</a> = 494
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a32a46b42b8292aa0e6fcf362ee53ed61">cv::CAP_PROP_XI_DEFAULT_CC_MATRIX</a> = 495
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a28611dcbbd5efd0c9fcfc03180ff13e6">cv::CAP_PROP_XI_TRG_SELECTOR</a> = 498
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a74fe2c1fa26066f63ceb698fd24e1b24">cv::CAP_PROP_XI_ACQ_FRAME_BURST_COUNT</a> = 499
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60afbca56ae9dc4ffa899f971ad3568d357">cv::CAP_PROP_XI_DEBOUNCE_EN</a> = 507
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60abc52f65fa1d3a00eaeae28faae42c202">cv::CAP_PROP_XI_DEBOUNCE_T0</a> = 508
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad5c9b833300a7a1c219ba1989f2976c4">cv::CAP_PROP_XI_DEBOUNCE_T1</a> = 509
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab9a4ade923237e2ecd6d28ee091c8979">cv::CAP_PROP_XI_DEBOUNCE_POL</a> = 510
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a2bcfc66b47eb20fe0be9922d6faf0fa3">cv::CAP_PROP_XI_LENS_MODE</a> = 511
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a307eab1a5189dfde4c57eda926f48383">cv::CAP_PROP_XI_LENS_APERTURE_VALUE</a> = 512
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aed9b0f1eaade0778e19a08726370b785">cv::CAP_PROP_XI_LENS_FOCUS_MOVEMENT_VALUE</a> = 513
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad4cf2ae2680ee32f9acd3f080bb053ab">cv::CAP_PROP_XI_LENS_FOCUS_MOVE</a> = 514
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a7f9b49011d868c73fb578b540ddc0685">cv::CAP_PROP_XI_LENS_FOCUS_DISTANCE</a> = 515
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a903a9233d8a5231653a6217a8d360039">cv::CAP_PROP_XI_LENS_FOCAL_LENGTH</a> = 516
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab28c47b9f81e7fa9d2ecccfaa3a287ea">cv::CAP_PROP_XI_LENS_FEATURE_SELECTOR</a> = 517
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a42e9e7a34d9d173ba710e8dd69205657">cv::CAP_PROP_XI_LENS_FEATURE</a> = 518
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a2bec5db0ec17f9c5154ad75303590805">cv::CAP_PROP_XI_DEVICE_MODEL_ID</a> = 521
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60acff771ea3b2e38c53377b6e2c148d650">cv::CAP_PROP_XI_DEVICE_SN</a> = 522
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5cf923f4f06e03bd3edd5af3a44135e7">cv::CAP_PROP_XI_IMAGE_DATA_FORMAT_RGB32_ALPHA</a> = 529
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a7e3cfe131842e34628f998dc87adf229">cv::CAP_PROP_XI_IMAGE_PAYLOAD_SIZE</a> = 530
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab45acea64fe23cb73657b4b42d443a1b">cv::CAP_PROP_XI_TRANSPORT_PIXEL_FORMAT</a> = 531
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa79cb01e1a0fba12586631d22896805d">cv::CAP_PROP_XI_SENSOR_CLOCK_FREQ_HZ</a> = 532
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a762ae4ae81179e7d1806ca2c09ede2a4">cv::CAP_PROP_XI_SENSOR_CLOCK_FREQ_INDEX</a> = 533
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a013c1c3db5462bd5e762a5c2c94a4da0">cv::CAP_PROP_XI_SENSOR_OUTPUT_CHANNEL_COUNT</a> = 534
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aed8586ad3c43e4d5761cc4b6a6549374">cv::CAP_PROP_XI_FRAMERATE</a> = 535
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab26bfa6487516f5a1c1422fa914de7b0">cv::CAP_PROP_XI_COUNTER_SELECTOR</a> = 536
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a1936978811c685c26c945937b62f56e3">cv::CAP_PROP_XI_COUNTER_VALUE</a> = 537
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60abfc1c4c1d54741960f234e782d5be2af">cv::CAP_PROP_XI_ACQ_TIMING_MODE</a> = 538
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a93c8b6cca33f3a341502e1f05471e980">cv::CAP_PROP_XI_AVAILABLE_BANDWIDTH</a> = 539
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a928df33def77f34c5c7f311858f25c48">cv::CAP_PROP_XI_BUFFER_POLICY</a> = 540
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa47de0c7b39fd5adc6797edbb15a2174">cv::CAP_PROP_XI_LUT_EN</a> = 541
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a12fc0fdcee31edf2a9e1a3f7fdbefacd">cv::CAP_PROP_XI_LUT_INDEX</a> = 542
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a98d369394fa4657593238af9a30fcd80">cv::CAP_PROP_XI_LUT_VALUE</a> = 543
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5ed0495b88a2983f8be36e17c63c51fc">cv::CAP_PROP_XI_TRG_DELAY</a> = 544
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60af1e0231c56b7d5ccb9b7d0dece3cd2f2">cv::CAP_PROP_XI_TS_RST_MODE</a> = 545
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a95df1de33780fe933834b6286c5b6696">cv::CAP_PROP_XI_TS_RST_SOURCE</a> = 546
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5d8a3630e00a1edcb6562445ac7c97e5">cv::CAP_PROP_XI_IS_DEVICE_EXIST</a> = 547
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa29dd84cf215e0f439a66fe868455cdd">cv::CAP_PROP_XI_ACQ_BUFFER_SIZE</a> = 548
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a541d2ca1825e3fbdf0e850558e82b242">cv::CAP_PROP_XI_ACQ_BUFFER_SIZE_UNIT</a> = 549
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac93e79a0df6b8383b383d0c3e377e832">cv::CAP_PROP_XI_ACQ_TRANSPORT_BUFFER_SIZE</a> = 550
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a656141833befd21f204c7d9f7687b9cf">cv::CAP_PROP_XI_BUFFERS_QUEUE_SIZE</a> = 551
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a898f4934777168695360effbefd4b3e7">cv::CAP_PROP_XI_ACQ_TRANSPORT_BUFFER_COMMIT</a> = 552
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab6ae274d73be763065ae6d4157c33e30">cv::CAP_PROP_XI_RECENT_FRAME</a> = 553
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a28bbc3b30b0d6e4ef038f00e867871ef">cv::CAP_PROP_XI_DEVICE_RESET</a> = 554
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a5799261a0420d625f4f9e3ef3ac141fd">cv::CAP_PROP_XI_COLUMN_FPN_CORRECTION</a> = 555
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a162e9f64020df1cd6d9cba4b3198061f">cv::CAP_PROP_XI_ROW_FPN_CORRECTION</a> = 591
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a74407dd885ecbf8a74358e3f01c8687e">cv::CAP_PROP_XI_SENSOR_MODE</a> = 558
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa66a91a6b9c0446067f92f552424c175">cv::CAP_PROP_XI_HDR</a> = 559
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a25f4ff6e0a75c6a4c3eb42ca69a99008">cv::CAP_PROP_XI_HDR_KNEEPOINT_COUNT</a> = 560
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ad41c3fe9bf0384b4487b728ae8d71c6c">cv::CAP_PROP_XI_HDR_T1</a> = 561
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a9462841c6f21b93462869a701078412d">cv::CAP_PROP_XI_HDR_T2</a> = 562
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60acd116ed9889b08b5f617d35b74149669">cv::CAP_PROP_XI_KNEEPOINT1</a> = 563
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a975d8587ffcaac63ee6d7c733b378fcd">cv::CAP_PROP_XI_KNEEPOINT2</a> = 564
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a97c3f4c0e44b9f06581578f7d03b9dbf">cv::CAP_PROP_XI_IMAGE_BLACK_LEVEL</a> = 565
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8dc2ca4801e0957fdf3f149c66c9f9c8">cv::CAP_PROP_XI_HW_REVISION</a> = 571
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a627a30de4f523437febda2d48e29c504">cv::CAP_PROP_XI_DEBUG_LEVEL</a> = 572
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac689b604605532a1e1b4da825b4b8315">cv::CAP_PROP_XI_AUTO_BANDWIDTH_CALCULATION</a> = 573
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a8e843bc6a96b5fb81b45a8f37f00e3e8">cv::CAP_PROP_XI_FFS_FILE_ID</a> = 594
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ab6d8f3f143d9b3ff663b2877123aaf17">cv::CAP_PROP_XI_FFS_FILE_SIZE</a> = 580
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aab4b15d9df02a485c1197bdd76a5e7d9">cv::CAP_PROP_XI_FREE_FFS_SIZE</a> = 581
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60ac06438499f168922ffb7ff0a6d4565de">cv::CAP_PROP_XI_USED_FFS_SIZE</a> = 582
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a37f5748b495927f2a92370dd3a296766">cv::CAP_PROP_XI_FFS_ACCESS_KEY</a> = 583
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60aa27042108d67ac05c59c09f0e8191980">cv::CAP_PROP_XI_SENSOR_FEATURE_SELECTOR</a> = 585
+, <a class="el" href="group__videoio__flags__others.html#gga860d7570a57e7421cfc5e756b7cd2a60a582364263b7b374acfda85afc3b8984d">cv::CAP_PROP_XI_SENSOR_FEATURE_VALUE</a> = 586
+<br />
+ }</td></tr>
+<tr class="memdesc:ga860d7570a57e7421cfc5e756b7cd2a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of cameras available through XIMEA SDK backend.  <a href="group__videoio__flags__others.html#ga860d7570a57e7421cfc5e756b7cd2a60">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga860d7570a57e7421cfc5e756b7cd2a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d510909ac3c2b369f1fd7f4a5b16dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#gga87d510909ac3c2b369f1fd7f4a5b16dda519a968f4b8cd96e8032407f85de98b4">cv::CAP_PROP_ARAVIS_AUTOTRIGGER</a> = 600
+ }</td></tr>
+<tr class="memdesc:ga87d510909ac3c2b369f1fd7f4a5b16dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of cameras available through ARAVIS backend.  <a href="group__videoio__flags__others.html#ga87d510909ac3c2b369f1fd7f4a5b16dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga87d510909ac3c2b369f1fd7f4a5b16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">AVFoundation framework for iOS</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>OS X Lion will have the same API </p>
+</div></td></tr>
+<tr class="memitem:ga5d1cda427a8a40198279661ca2c1ceee"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga5d1cda427a8a40198279661ca2c1ceeea049085d744de6023c0b4b263e16ce9ff">cv::CAP_PROP_IOS_DEVICE_FOCUS</a> = 9001
+, <a class="el" href="group__videoio__flags__others.html#gga5d1cda427a8a40198279661ca2c1ceeeaea912356d2f5707561b5a7d44e11fa00">cv::CAP_PROP_IOS_DEVICE_EXPOSURE</a> = 9002
+, <a class="el" href="group__videoio__flags__others.html#gga5d1cda427a8a40198279661ca2c1ceeea7d18d0bbcc2094dd9cc8214afa52f70a">cv::CAP_PROP_IOS_DEVICE_FLASH</a> = 9003
+, <a class="el" href="group__videoio__flags__others.html#gga5d1cda427a8a40198279661ca2c1ceeea709a5efd2ef0842ba866c494c844e784">cv::CAP_PROP_IOS_DEVICE_WHITEBALANCE</a> = 9004
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga5d1cda427a8a40198279661ca2c1ceeea0f5c7fcd82d2eb877eb299419caf7ac6">cv::CAP_PROP_IOS_DEVICE_TORCH</a> = 9005
+<br />
+ }</td></tr>
+<tr class="memdesc:ga5d1cda427a8a40198279661ca2c1ceee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of cameras available through AVFOUNDATION backend.  <a href="group__videoio__flags__others.html#ga5d1cda427a8a40198279661ca2c1ceee">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5d1cda427a8a40198279661ca2c1ceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Smartek Giganetix GigEVisionSDK</div></td></tr>
+<tr class="memitem:gae651f0dbd887b9c98e61175c421d4c6f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6fae548de03f852996b9ba5e5adfbbbce93">cv::CAP_PROP_GIGA_FRAME_OFFSET_X</a> = 10001
+, <a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6fafb8d98d9ad34d6d74bdbeff2f5197111">cv::CAP_PROP_GIGA_FRAME_OFFSET_Y</a> = 10002
+, <a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6faa72a12bf66268d701e80113a2b7767fc">cv::CAP_PROP_GIGA_FRAME_WIDTH_MAX</a> = 10003
+, <a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6fafa8cdf9c627d7264bf7f9d77e4a8437f">cv::CAP_PROP_GIGA_FRAME_HEIGH_MAX</a> = 10004
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6fa9330b5353a86ba5dfc522859fb3ec8d9">cv::CAP_PROP_GIGA_FRAME_SENS_WIDTH</a> = 10005
+, <a class="el" href="group__videoio__flags__others.html#ggae651f0dbd887b9c98e61175c421d4c6faee1202dad37d4dd3f02f9fa42e149b23">cv::CAP_PROP_GIGA_FRAME_SENS_HEIGH</a> = 10006
+<br />
+ }</td></tr>
+<tr class="memdesc:gae651f0dbd887b9c98e61175c421d4c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of cameras available through Smartek Giganetix Ethernet Vision backend.  <a href="group__videoio__flags__others.html#gae651f0dbd887b9c98e61175c421d4c6f">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae651f0dbd887b9c98e61175c421d4c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Intel Perceptual Computing SDK</div></td></tr>
+<tr class="memitem:ga04e1a7d193a239118dc264f3b33a7af3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3a61e601c701375c5e43d43754ddf6d030">cv::CAP_PROP_INTELPERC_PROFILE_COUNT</a> = 11001
+, <a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3a03489c9c3fc5b2656a9063f2e079d7a3">cv::CAP_PROP_INTELPERC_PROFILE_IDX</a> = 11002
+, <a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3a0096091135b3fa213dbeed6a103d8b58">cv::CAP_PROP_INTELPERC_DEPTH_LOW_CONFIDENCE_VALUE</a> = 11003
+, <a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3acc9291ae9c5beec367fb701cabcaaf0e">cv::CAP_PROP_INTELPERC_DEPTH_SATURATION_VALUE</a> = 11004
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3ac3f7024c4c8555f8927fa093aa31dd62">cv::CAP_PROP_INTELPERC_DEPTH_CONFIDENCE_THRESHOLD</a> = 11005
+, <a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3a07423906d8a904f7997292878a5c78f0">cv::CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_HORZ</a> = 11006
+, <a class="el" href="group__videoio__flags__others.html#gga04e1a7d193a239118dc264f3b33a7af3a647281df465ac37cdc9e199f1fb9ca3c">cv::CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_VERT</a> = 11007
+<br />
+ }</td></tr>
+<tr class="separator:ga04e1a7d193a239118dc264f3b33a7af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9da076edb99cf8cb211c313b3f0fbe7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#ggaf9da076edb99cf8cb211c313b3f0fbe7af09153f3c7f98ceb038d39453da205cf">cv::CAP_INTELPERC_DEPTH_GENERATOR</a> = 1 &lt;&lt; 29
+, <a class="el" href="group__videoio__flags__others.html#ggaf9da076edb99cf8cb211c313b3f0fbe7a428daa198f3d2593d78abca6348c125d">cv::CAP_INTELPERC_IMAGE_GENERATOR</a> = 1 &lt;&lt; 28
+, <a class="el" href="group__videoio__flags__others.html#ggaf9da076edb99cf8cb211c313b3f0fbe7af40091a565b49a9554c42e8a3c006936">cv::CAP_INTELPERC_IR_GENERATOR</a> = 1 &lt;&lt; 27
+, <a class="el" href="group__videoio__flags__others.html#ggaf9da076edb99cf8cb211c313b3f0fbe7abae15b45bbfb9ace04d86ff77e438e4e">cv::CAP_INTELPERC_GENERATORS_MASK</a> = CAP_INTELPERC_DEPTH_GENERATOR + CAP_INTELPERC_IMAGE_GENERATOR + CAP_INTELPERC_IR_GENERATOR
+ }</td></tr>
+<tr class="memdesc:gaf9da076edb99cf8cb211c313b3f0fbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Perceptual Streams.  <a href="group__videoio__flags__others.html#gaf9da076edb99cf8cb211c313b3f0fbe7">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf9da076edb99cf8cb211c313b3f0fbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8729b87a4ca8e16b9b0e747de6af27d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#ggaf8729b87a4ca8e16b9b0e747de6af27da0633813010b6c21838951de5fb34d643">cv::CAP_INTELPERC_DEPTH_MAP</a> = 0
+, <a class="el" href="group__videoio__flags__others.html#ggaf8729b87a4ca8e16b9b0e747de6af27daaafadc6ce2abb8a2e962b2d4115a0f48">cv::CAP_INTELPERC_UVDEPTH_MAP</a> = 1
+, <a class="el" href="group__videoio__flags__others.html#ggaf8729b87a4ca8e16b9b0e747de6af27da56fd50220f952776712bcfb656a5c64d">cv::CAP_INTELPERC_IR_MAP</a> = 2
+, <a class="el" href="group__videoio__flags__others.html#ggaf8729b87a4ca8e16b9b0e747de6af27da5c722445f6d9324474cf50b39b92ae74">cv::CAP_INTELPERC_IMAGE</a> = 3
+ }</td></tr>
+<tr class="separator:gaf8729b87a4ca8e16b9b0e747de6af27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">gPhoto2 connection</div></td></tr>
+<tr class="memitem:ga98374762d257db279c38da3577861584"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584ad68866e163722ca095ebb063759201bd">cv::CAP_PROP_GPHOTO2_PREVIEW</a> = 17001
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584ad6f05f89311dc09cfaf828c8b91b6d18">cv::CAP_PROP_GPHOTO2_WIDGET_ENUMERATE</a> = 17002
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584a842f6beebf68e379a6be441979709e07">cv::CAP_PROP_GPHOTO2_RELOAD_CONFIG</a> = 17003
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584a794abce1a061930e32d362f4ec1dd9e9">cv::CAP_PROP_GPHOTO2_RELOAD_ON_CHANGE</a> = 17004
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584aa50f65192f6dd5970282ed6bea335731">cv::CAP_PROP_GPHOTO2_COLLECT_MSGS</a> = 17005
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584a12383f3e93113560c8f01d7abc8b1607">cv::CAP_PROP_GPHOTO2_FLUSH_MSGS</a> = 17006
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584ae9be75bcff2e935ddae1f5b09941c462">cv::CAP_PROP_SPEED</a> = 17007
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584a368193e813f38cd561e44c432ac035d0">cv::CAP_PROP_APERTURE</a> = 17008
+, <br />
+&#160;&#160;<a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584a32983621756658f76b5f0ab5388940d7">cv::CAP_PROP_EXPOSUREPROGRAM</a> = 17009
+, <a class="el" href="group__videoio__flags__others.html#gga98374762d257db279c38da3577861584abe08426b291b533a4cf61a7e4e7d1324">cv::CAP_PROP_VIEWFINDER</a> = 17010
+<br />
+ }</td></tr>
+<tr class="memdesc:ga98374762d257db279c38da3577861584"><td class="mdescLeft">&#160;</td><td class="mdescRight">gPhoto2 properties  <a href="group__videoio__flags__others.html#ga98374762d257db279c38da3577861584">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga98374762d257db279c38da3577861584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Images backend</div></td></tr>
+<tr class="memitem:ga2a608ac7b6bde0c6a51b53b079f27aa4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__videoio__flags__others.html#gga2a608ac7b6bde0c6a51b53b079f27aa4afde4916d952c3a893b2dfb809f2b75e6">cv::CAP_PROP_IMAGES_BASE</a> = 18000
+, <a class="el" href="group__videoio__flags__others.html#gga2a608ac7b6bde0c6a51b53b079f27aa4a419c7f8af9ed15c0b641b8c0201355c4">cv::CAP_PROP_IMAGES_LAST</a> = 19000
+ }</td></tr>
+<tr class="memdesc:ga2a608ac7b6bde0c6a51b53b079f27aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Images backend properties.  <a href="group__videoio__flags__others.html#ga2a608ac7b6bde0c6a51b53b079f27aa4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2a608ac7b6bde0c6a51b53b079f27aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a394109074fab9bdca2ea45514b1946b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394109074fab9bdca2ea45514b1946b7">&#9670;&nbsp;</a></span>CvCapture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> <a class="el" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a888ba48aa022b60aecf98a462aa1b638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888ba48aa022b60aecf98a462aa1b638">&#9670;&nbsp;</a></span>CvVideoWriter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a> <a class="el" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="opencv2_2videoio_8hpp.html">videoio.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

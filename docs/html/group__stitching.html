@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Images stitching</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__stitching.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#groups">Группы</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Images stitching</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Группы</h2></td></tr>
+<tr class="memitem:group__stitching__match"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__match.html">Features Finding and Images Matching</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__rotation"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html">Rotation Estimation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__autocalib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__autocalib.html">Autocalibration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__warp"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__warp.html">Images Warping</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__seam"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__seam.html">Seam Estimation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__exposure"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__exposure.html">Exposure Compensation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__stitching__blend"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__blend.html">Image Blenders</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1detail_1_1_camera_params.html">cv::detail::CameraParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes camera parameters.  <a href="structcv_1_1detail_1_1_camera_params.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_timelapser.html">cv::detail::Timelapser</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_timelapser_crop.html">cv::detail::TimelapserCrop</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_disjoint_sets.html">cv::detail::DisjointSets</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1detail_1_1_graph_edge.html">cv::detail::GraphEdge</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_graph.html">cv::detail::Graph</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html">cv::Stitcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">High level image stitcher.  <a href="classcv_1_1_stitcher.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gabe93812c6b9cf981a8a88edd39ccc5dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gabe93812c6b9cf981a8a88edd39ccc5dc">cv::detail::overlapRoi</a> (<a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> tl1, <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> tl2, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> sz1, <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> sz2, <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;roi)</td></tr>
+<tr class="separator:gabe93812c6b9cf981a8a88edd39ccc5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaece3a23fa7334e2d852fc495f1848379"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gaece3a23fa7334e2d852fc495f1848379">cv::detail::resultRoi</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, const std::vector&lt; <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &gt; &amp;images)</td></tr>
+<tr class="separator:gaece3a23fa7334e2d852fc495f1848379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8dc4cea4bb3d9a8183330f8946754c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gae8dc4cea4bb3d9a8183330f8946754c5">cv::detail::resultRoi</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, const std::vector&lt; <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>)</td></tr>
+<tr class="separator:gae8dc4cea4bb3d9a8183330f8946754c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93841e0f3a1fe81886b52ac3c6679afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#ga93841e0f3a1fe81886b52ac3c6679afb">cv::detail::resultRoiIntersection</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>, const std::vector&lt; <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gafcc291f06aa904173ea1ada4741707f6">sizes</a>)</td></tr>
+<tr class="separator:ga93841e0f3a1fe81886b52ac3c6679afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0b786acdb85942dca5bc213d01ed407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gaa0b786acdb85942dca5bc213d01ed407">cv::detail::resultTl</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga7c963d5c0be2901e72c3762c1ddfcee6">corners</a>)</td></tr>
+<tr class="separator:gaa0b786acdb85942dca5bc213d01ed407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac42e73783d5273c6e5511bf7e050ae8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gaac42e73783d5273c6e5511bf7e050ae8">cv::detail::selectRandomSubset</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__imgproc__c.html#ga3fc2704a5a1dd88fdd8c6d76754645f0">count</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;subset)</td></tr>
+<tr class="separator:gaac42e73783d5273c6e5511bf7e050ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a9061fa186238ec8cce707c0cf6ed66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#ga6a9061fa186238ec8cce707c0cf6ed66">cv::detail::stitchingLogLevel</a> ()</td></tr>
+<tr class="separator:ga6a9061fa186238ec8cce707c0cf6ed66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2f9e86dc8d29c107785f44379a34092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_stitcher.html">Stitcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#gae2f9e86dc8d29c107785f44379a34092">cv::createStitcher</a> (bool try_use_gpu=false)</td></tr>
+<tr class="separator:gae2f9e86dc8d29c107785f44379a34092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga934e973aeaacd315b6119da8569549a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_stitcher.html">Stitcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#ga934e973aeaacd315b6119da8569549a2">cv::createStitcherScans</a> (bool try_use_gpu=false)</td></tr>
+<tr class="separator:ga934e973aeaacd315b6119da8569549a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7de758260f93bd840c47184aef9b25a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching.html#ga7de758260f93bd840c47184aef9b25a2">cv::detail::GraphEdge::GraphEdge</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="structcv_1_1detail_1_1_graph_edge.html#ac4e43b1421e87ba73232f9d502925b49">from</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> <a class="el" href="structcv_1_1detail_1_1_graph_edge.html#a7ee67c4025576238d703f2b51bdcaa51">to</a>, float <a class="el" href="structcv_1_1detail_1_1_graph_edge.html#a9efad8a7b27a03e6029a75413aed60ae">weight</a>)</td></tr>
+<tr class="separator:ga7de758260f93bd840c47184aef9b25a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>This figure illustrates the stitching module pipeline implemented in the <a class="el" href="classcv_1_1_stitcher.html" title="High level image stitcher.">Stitcher</a> class. Using that class it's possible to configure/remove some steps, i.e. adjust the stitching pipeline according to the particular needs. All building blocks from the pipeline are available in the detail namespace, one can combine and use them separately.</p>
+<p>The implemented stitching pipeline is very similar to the one proposed in <b>[BL07]</b> .</p>
+<p><img src="StitchingPipeline.jpg" alt="stitching pipeline" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md43"></a>
+Camera models</h2>
+<p>There are currently 2 camera models implemented in stitching pipeline.</p>
+<ul>
+<li><em>Homography model</em> expecting perspective transformations between images implemented in <a class="el" href="classcv_1_1detail_1_1_best_of2_nearest_matcher.html">cv::detail::BestOf2NearestMatcher</a> <a class="el" href="classcv_1_1detail_1_1_homography_based_estimator.html" title="Homography based rotation estimator.">cv::detail::HomographyBasedEstimator</a> <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_reproj.html" title="Implementation of the camera parameters refinement algorithm which minimizes sum of the reprojection ...">cv::detail::BundleAdjusterReproj</a> <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_ray.html" title="Implementation of the camera parameters refinement algorithm which minimizes sum of the distances bet...">cv::detail::BundleAdjusterRay</a></li>
+<li><em>Affine model</em> expecting affine transformation with 6 DOF or 4 DOF implemented in <a class="el" href="classcv_1_1detail_1_1_affine_best_of2_nearest_matcher.html">cv::detail::AffineBestOf2NearestMatcher</a> <a class="el" href="classcv_1_1detail_1_1_affine_based_estimator.html" title="Affine transformation based estimator.">cv::detail::AffineBasedEstimator</a> <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_affine.html" title="Bundle adjuster that expects affine transformation represented in homogeneous coordinates in R for ea...">cv::detail::BundleAdjusterAffine</a> <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_affine_partial.html" title="Bundle adjuster that expects affine transformation with 4 DOF represented in homogeneous coordinates ...">cv::detail::BundleAdjusterAffinePartial</a> <a class="el" href="classcv_1_1_affine_warper.html" title="Affine warper factory class.">cv::AffineWarper</a></li>
+</ul>
+<p>Homography model is useful for creating photo panoramas captured by camera, while affine-based model can be used to stitch scans and object captured by specialized devices. Use <a class="el" href="classcv_1_1_stitcher.html#ac8bf64a1cf6fd8e42da7f4cc650b3333">cv::Stitcher::create</a> to get preconfigured pipeline for one of those models.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Certain detailed settings of <a class="el" href="classcv_1_1_stitcher.html">cv::Stitcher</a> might not make sense. Especially you should not mix classes implementing affine model and classes implementing Homography model, as they work with different transformations. </dd></dl>
+<h2 class="groupheader">Функции</h2>
+<a id="gae2f9e86dc8d29c107785f44379a34092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2f9e86dc8d29c107785f44379a34092">&#9670;&nbsp;</a></span>createStitcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_stitcher.html">Stitcher</a>&gt; cv::createStitcher </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>try_use_gpu</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000055">Уст.:</a></b></dt><dd>use <a class="el" href="classcv_1_1_stitcher.html#ac8bf64a1cf6fd8e42da7f4cc650b3333" title="Creates a Stitcher configured in one of the stitching modes.">Stitcher::create</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga934e973aeaacd315b6119da8569549a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga934e973aeaacd315b6119da8569549a2">&#9670;&nbsp;</a></span>createStitcherScans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_stitcher.html">Stitcher</a>&gt; cv::createStitcherScans </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>try_use_gpu</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000056">Уст.:</a></b></dt><dd>use <a class="el" href="classcv_1_1_stitcher.html#ac8bf64a1cf6fd8e42da7f4cc650b3333" title="Creates a Stitcher configured in one of the stitching modes.">Stitcher::create</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga7de758260f93bd840c47184aef9b25a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7de758260f93bd840c47184aef9b25a2">&#9670;&nbsp;</a></span>GraphEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::detail::GraphEdge::GraphEdge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe93812c6b9cf981a8a88edd39ccc5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe93812c6b9cf981a8a88edd39ccc5dc">&#9670;&nbsp;</a></span>overlapRoi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> bool cv::detail::overlapRoi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>tl1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>tl2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>sz1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a>&#160;</td>
+          <td class="paramname"><em>sz2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>roi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae8dc4cea4bb3d9a8183330f8946754c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8dc4cea4bb3d9a8183330f8946754c5">&#9670;&nbsp;</a></span>resultRoi() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::detail::resultRoi </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sizes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaece3a23fa7334e2d852fc495f1848379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaece3a23fa7334e2d852fc495f1848379">&#9670;&nbsp;</a></span>resultRoi() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::detail::resultRoi </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_u_mat.html">UMat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga93841e0f3a1fe81886b52ac3c6679afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93841e0f3a1fe81886b52ac3c6679afb">&#9670;&nbsp;</a></span>resultRoiIntersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">Rect</a> cv::detail::resultRoiIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sizes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa0b786acdb85942dca5bc213d01ed407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa0b786acdb85942dca5bc213d01ed407">&#9670;&nbsp;</a></span>resultTl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> cv::detail::resultTl </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaac42e73783d5273c6e5511bf7e050ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac42e73783d5273c6e5511bf7e050ae8">&#9670;&nbsp;</a></span>selectRandomSubset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::detail::selectRandomSubset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>subset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6a9061fa186238ec8cce707c0cf6ed66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a9061fa186238ec8cce707c0cf6ed66">&#9670;&nbsp;</a></span>stitchingLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&amp; cv::detail::stitchingLogLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

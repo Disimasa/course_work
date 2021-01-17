@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::DetectionBasedTracker</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_detection_based_tracker.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classcv_1_1_detection_based_tracker-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::DetectionBasedTracker<div class="ingroups"><a class="el" href="group__objdetect.html">Object Detection</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="detection__based__tracker_8hpp_source.html">detection_based_tracker.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_ext_object.html">ExtObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_inner_parameters.html">InnerParameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_tracked_object.html">TrackedObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ad43563cc5b954817ad5078f995afd3ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ff">ObjectStatus</a> { <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ffab57bc255a72bcaa7b49c2c3c6b4257d7">DETECTED_NOT_SHOWN_YET</a>
+, <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ffa9828525838cee9776655ebbd2211d3e7">DETECTED</a>
+, <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ffa6d5ec140e9ee103752c5356d95504694">DETECTED_TEMPORARY_LOST</a>
+, <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ffaf4b74b622d1802cbb6573c8b1148c953">WRONG_OBJECT</a>
+ }</td></tr>
+<tr class="separator:ad43563cc5b954817ad5078f995afd3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2c841a29a7ebda695fd90521c4781f"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#acf2c841a29a7ebda695fd90521c4781f">Object</a></td></tr>
+<tr class="separator:acf2c841a29a7ebda695fd90521c4781f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aab415fa71206b900ad52ae650ab96636"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#aab415fa71206b900ad52ae650ab96636">DetectionBasedTracker</a> (<a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; <a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a> &gt; mainDetector, <a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; <a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a> &gt; trackingDetector, const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> &amp;params)</td></tr>
+<tr class="separator:aab415fa71206b900ad52ae650ab96636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8b736d3ce835a1d06dfc5fea7390f3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a5d8b736d3ce835a1d06dfc5fea7390f3">~DetectionBasedTracker</a> ()</td></tr>
+<tr class="separator:a5d8b736d3ce835a1d06dfc5fea7390f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1038295b9626937e0d3c34c728f23ab1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a1038295b9626937e0d3c34c728f23ab1">run</a> ()</td></tr>
+<tr class="separator:a1038295b9626937e0d3c34c728f23ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4061f2d28cf54e48360c8aa06135f38"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ac4061f2d28cf54e48360c8aa06135f38">stop</a> ()</td></tr>
+<tr class="separator:ac4061f2d28cf54e48360c8aa06135f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5069e92d25b70eb15ca31d856f70ef8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ac5069e92d25b70eb15ca31d856f70ef8">resetTracking</a> ()</td></tr>
+<tr class="separator:ac5069e92d25b70eb15ca31d856f70ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04010a77df58e838a781889eb4edd303"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a04010a77df58e838a781889eb4edd303">process</a> (const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;imageGray)</td></tr>
+<tr class="separator:a04010a77df58e838a781889eb4edd303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d662e7707bc6d8fcc8e6cf687ec273a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a9d662e7707bc6d8fcc8e6cf687ec273a">setParameters</a> (const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> &amp;params)</td></tr>
+<tr class="separator:a9d662e7707bc6d8fcc8e6cf687ec273a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41acf453c321417190f3e365aff6ae4a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a41acf453c321417190f3e365aff6ae4a">getParameters</a> () const</td></tr>
+<tr class="separator:a41acf453c321417190f3e365aff6ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c9412496500098db81f1c75421df84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a05c9412496500098db81f1c75421df84">getObjects</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga40d55b7cb8d50997fe33def0b3b76eac">result</a>) const</td></tr>
+<tr class="separator:a05c9412496500098db81f1c75421df84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3796f79dcbb9d961073dc93100a0cdf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ac3796f79dcbb9d961073dc93100a0cdf">getObjects</a> (std::vector&lt; <a class="el" href="classcv_1_1_detection_based_tracker.html#acf2c841a29a7ebda695fd90521c4781f">Object</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga40d55b7cb8d50997fe33def0b3b76eac">result</a>) const</td></tr>
+<tr class="separator:ac3796f79dcbb9d961073dc93100a0cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19dc28908b6b02b22fbad6ad352c63b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ae19dc28908b6b02b22fbad6ad352c63b">getObjects</a> (std::vector&lt; <a class="el" href="structcv_1_1_detection_based_tracker_1_1_ext_object.html">ExtObject</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#ga40d55b7cb8d50997fe33def0b3b76eac">result</a>) const</td></tr>
+<tr class="separator:ae19dc28908b6b02b22fbad6ad352c63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91602bf61863fc3126be05a0d3e5416b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a91602bf61863fc3126be05a0d3e5416b">addObject</a> (const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;location)</td></tr>
+<tr class="separator:a91602bf61863fc3126be05a0d3e5416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a9089f0ed19233e699c586bdda23997b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a9089f0ed19233e699c586bdda23997b6">updateTrackedObjects</a> (const std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;detectedObjects)</td></tr>
+<tr class="separator:a9089f0ed19233e699c586bdda23997b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211041e01b46de543af522fc82cdedf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a211041e01b46de543af522fc82cdedf9">calcTrackedObjectPositionToShow</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i) const</td></tr>
+<tr class="separator:a211041e01b46de543af522fc82cdedf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f92fe2ee9b297ae6dd9aeac35fc3bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a28f92fe2ee9b297ae6dd9aeac35fc3bd">calcTrackedObjectPositionToShow</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> i, <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ff">ObjectStatus</a> &amp;status) const</td></tr>
+<tr class="separator:a28f92fe2ee9b297ae6dd9aeac35fc3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60322c607da2e8cc127fac6c0461394d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a60322c607da2e8cc127fac6c0461394d">detectInRegion</a> (const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;img, const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;<a class="el" href="group__imgproc__c.html#ga54709f3b06b33b66763f1613cc7fb571">r</a>, std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;detectedObjectsInRegions)</td></tr>
+<tr class="separator:a60322c607da2e8cc127fac6c0461394d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:aae0c0bd5a104bb1c57632e5187f32fe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; SeparateDetectionWork &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#aae0c0bd5a104bb1c57632e5187f32fe8">separateDetectionWork</a></td></tr>
+<tr class="separator:aae0c0bd5a104bb1c57632e5187f32fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c3de5745a8eb4312db652276d387e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#af2c3de5745a8eb4312db652276d387e3">parameters</a></td></tr>
+<tr class="separator:af2c3de5745a8eb4312db652276d387e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a9583eced7508072d910188c97f4bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_inner_parameters.html">InnerParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ad8a9583eced7508072d910188c97f4bf">innerParameters</a></td></tr>
+<tr class="separator:ad8a9583eced7508072d910188c97f4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb616a0b54da056cc7ee96963bba52e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#adb616a0b54da056cc7ee96963bba52e3">numTrackedSteps</a></td></tr>
+<tr class="separator:adb616a0b54da056cc7ee96963bba52e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0f343e0a2f0515b15f3ecdb7e59069"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structcv_1_1_detection_based_tracker_1_1_tracked_object.html">TrackedObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#adc0f343e0a2f0515b15f3ecdb7e59069">trackedObjects</a></td></tr>
+<tr class="separator:adc0f343e0a2f0515b15f3ecdb7e59069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd31f48b5461c2b338e80b1cf54dfc85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#acd31f48b5461c2b338e80b1cf54dfc85">weightsPositionsSmoothing</a></td></tr>
+<tr class="separator:acd31f48b5461c2b338e80b1cf54dfc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00b750e1be9e4e3d2515996e03b4f97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#ad00b750e1be9e4e3d2515996e03b4f97">weightsSizesSmoothing</a></td></tr>
+<tr class="separator:ad00b750e1be9e4e3d2515996e03b4f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139b62b2435087f6ef6527b75f69a751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; <a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#a139b62b2435087f6ef6527b75f69a751">cascadeForTracking</a></td></tr>
+<tr class="separator:a139b62b2435087f6ef6527b75f69a751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:acbbf5473e3e123f3a376397d703a67af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_detection_based_tracker.html#acbbf5473e3e123f3a376397d703a67af">workcycleObjectDetectorFunction</a> (<a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *p)</td></tr>
+<tr class="separator:acbbf5473e3e123f3a376397d703a67af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="acf2c841a29a7ebda695fd90521c4781f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2c841a29a7ebda695fd90521c4781f">&#9670;&nbsp;</a></span>Object</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;<a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; <a class="el" href="classcv_1_1_detection_based_tracker.html#acf2c841a29a7ebda695fd90521c4781f">cv::DetectionBasedTracker::Object</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ad43563cc5b954817ad5078f995afd3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43563cc5b954817ad5078f995afd3ff">&#9670;&nbsp;</a></span>ObjectStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ff">cv::DetectionBasedTracker::ObjectStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ad43563cc5b954817ad5078f995afd3ffab57bc255a72bcaa7b49c2c3c6b4257d7"></a>DETECTED_NOT_SHOWN_YET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad43563cc5b954817ad5078f995afd3ffa9828525838cee9776655ebbd2211d3e7"></a>DETECTED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad43563cc5b954817ad5078f995afd3ffa6d5ec140e9ee103752c5356d95504694"></a>DETECTED_TEMPORARY_LOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad43563cc5b954817ad5078f995afd3ffaf4b74b622d1802cbb6573c8b1148c953"></a>WRONG_OBJECT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aab415fa71206b900ad52ae650ab96636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab415fa71206b900ad52ae650ab96636">&#9670;&nbsp;</a></span>DetectionBasedTracker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::DetectionBasedTracker::DetectionBasedTracker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; <a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a> &gt;&#160;</td>
+          <td class="paramname"><em>mainDetector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt; <a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a> &gt;&#160;</td>
+          <td class="paramname"><em>trackingDetector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d8b736d3ce835a1d06dfc5fea7390f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8b736d3ce835a1d06dfc5fea7390f3">&#9670;&nbsp;</a></span>~DetectionBasedTracker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::DetectionBasedTracker::~DetectionBasedTracker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a91602bf61863fc3126be05a0d3e5416b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91602bf61863fc3126be05a0d3e5416b">&#9670;&nbsp;</a></span>addObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DetectionBasedTracker::addObject </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a211041e01b46de543af522fc82cdedf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211041e01b46de543af522fc82cdedf9">&#9670;&nbsp;</a></span>calcTrackedObjectPositionToShow() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> cv::DetectionBasedTracker::calcTrackedObjectPositionToShow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28f92fe2ee9b297ae6dd9aeac35fc3bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f92fe2ee9b297ae6dd9aeac35fc3bd">&#9670;&nbsp;</a></span>calcTrackedObjectPositionToShow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> cv::DetectionBasedTracker::calcTrackedObjectPositionToShow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_detection_based_tracker.html#ad43563cc5b954817ad5078f995afd3ff">ObjectStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60322c607da2e8cc127fac6c0461394d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60322c607da2e8cc127fac6c0461394d">&#9670;&nbsp;</a></span>detectInRegion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::detectInRegion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>detectedObjectsInRegions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05c9412496500098db81f1c75421df84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c9412496500098db81f1c75421df84">&#9670;&nbsp;</a></span>getObjects() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::getObjects </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae19dc28908b6b02b22fbad6ad352c63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19dc28908b6b02b22fbad6ad352c63b">&#9670;&nbsp;</a></span>getObjects() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::getObjects </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structcv_1_1_detection_based_tracker_1_1_ext_object.html">ExtObject</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3796f79dcbb9d961073dc93100a0cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3796f79dcbb9d961073dc93100a0cdf">&#9670;&nbsp;</a></span>getObjects() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::getObjects </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1_detection_based_tracker.html#acf2c841a29a7ebda695fd90521c4781f">Object</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41acf453c321417190f3e365aff6ae4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41acf453c321417190f3e365aff6ae4a">&#9670;&nbsp;</a></span>getParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a>&amp; cv::DetectionBasedTracker::getParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04010a77df58e838a781889eb4edd303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04010a77df58e838a781889eb4edd303">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::process </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;&#160;</td>
+          <td class="paramname"><em>imageGray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5069e92d25b70eb15ca31d856f70ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5069e92d25b70eb15ca31d856f70ef8">&#9670;&nbsp;</a></span>resetTracking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::resetTracking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1038295b9626937e0d3c34c728f23ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1038295b9626937e0d3c34c728f23ab1">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool cv::DetectionBasedTracker::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d662e7707bc6d8fcc8e6cf687ec273a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d662e7707bc6d8fcc8e6cf687ec273a">&#9670;&nbsp;</a></span>setParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::DetectionBasedTracker::setParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4061f2d28cf54e48360c8aa06135f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4061f2d28cf54e48360c8aa06135f38">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9089f0ed19233e699c586bdda23997b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9089f0ed19233e699c586bdda23997b6">&#9670;&nbsp;</a></span>updateTrackedObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::DetectionBasedTracker::updateTrackedObjects </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__core__basic.html#ga11d95de507098e90bad732b9345402e8">cv::Rect</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>detectedObjects</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="acbbf5473e3e123f3a376397d703a67af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbbf5473e3e123f3a376397d703a67af">&#9670;&nbsp;</a></span>workcycleObjectDetectorFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* workcycleObjectDetectorFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a139b62b2435087f6ef6527b75f69a751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139b62b2435087f6ef6527b75f69a751">&#9670;&nbsp;</a></span>cascadeForTracking</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt;<a class="el" href="classcv_1_1_detection_based_tracker_1_1_i_detector.html">IDetector</a>&gt; cv::DetectionBasedTracker::cascadeForTracking</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8a9583eced7508072d910188c97f4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a9583eced7508072d910188c97f4bf">&#9670;&nbsp;</a></span>innerParameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_inner_parameters.html">InnerParameters</a> cv::DetectionBasedTracker::innerParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb616a0b54da056cc7ee96963bba52e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb616a0b54da056cc7ee96963bba52e3">&#9670;&nbsp;</a></span>numTrackedSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::DetectionBasedTracker::numTrackedSteps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2c3de5745a8eb4312db652276d387e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c3de5745a8eb4312db652276d387e3">&#9670;&nbsp;</a></span>parameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_detection_based_tracker_1_1_parameters.html">Parameters</a> cv::DetectionBasedTracker::parameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae0c0bd5a104bb1c57632e5187f32fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0c0bd5a104bb1c57632e5187f32fe8">&#9670;&nbsp;</a></span>separateDetectionWork</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">cv::Ptr</a>&lt;SeparateDetectionWork&gt; cv::DetectionBasedTracker::separateDetectionWork</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc0f343e0a2f0515b15f3ecdb7e59069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0f343e0a2f0515b15f3ecdb7e59069">&#9670;&nbsp;</a></span>trackedObjects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structcv_1_1_detection_based_tracker_1_1_tracked_object.html">TrackedObject</a>&gt; cv::DetectionBasedTracker::trackedObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd31f48b5461c2b338e80b1cf54dfc85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd31f48b5461c2b338e80b1cf54dfc85">&#9670;&nbsp;</a></span>weightsPositionsSmoothing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;float&gt; cv::DetectionBasedTracker::weightsPositionsSmoothing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad00b750e1be9e4e3d2515996e03b4f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00b750e1be9e4e3d2515996e03b4f97">&#9670;&nbsp;</a></span>weightsSizesSmoothing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;float&gt; cv::DetectionBasedTracker::weightsSizesSmoothing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/objdetect/<a class="el" href="detection__based__tracker_8hpp_source.html">detection_based_tracker.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_detection_based_tracker.html">DetectionBasedTracker</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::LineSegmentDetector</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_line_segment_detector.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1_line_segment_detector-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::LineSegmentDetector<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__imgproc.html">Image Processing</a> &raquo; <a class="el" href="group__imgproc__feature.html">Imgproc_feature</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Line segment detector class.  
+ <a href="classcv_1_1_line_segment_detector.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2imgproc_8hpp_source.html">imgproc.hpp</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6c19955f017a5c8136ace53f394cdfd4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_line_segment_detector.html#a6c19955f017a5c8136ace53f394cdfd4">detect</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> _image, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> _lines, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__highgui__c.html#ga2474a5474cbff19523a51eb1de01cda4">width</a>=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> prec=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>(), <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> nfa=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())=0</td></tr>
+<tr class="memdesc:a6c19955f017a5c8136ace53f394cdfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds lines in the input image.  <a href="classcv_1_1_line_segment_detector.html#a6c19955f017a5c8136ace53f394cdfd4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6c19955f017a5c8136ace53f394cdfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ef6c4c431a76db0da626c43c1c0361"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_line_segment_detector.html#a10ef6c4c431a76db0da626c43c1c0361">drawSegments</a> (<a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> _image, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> lines)=0</td></tr>
+<tr class="memdesc:a10ef6c4c431a76db0da626c43c1c0361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the line segments on a given image.  <a href="classcv_1_1_line_segment_detector.html#a10ef6c4c431a76db0da626c43c1c0361">Подробнее...</a><br /></td></tr>
+<tr class="separator:a10ef6c4c431a76db0da626c43c1c0361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95972b67174eaed9b6be8a7d06683253"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_line_segment_detector.html#a95972b67174eaed9b6be8a7d06683253">compareSegments</a> (const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;<a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> lines1, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> lines2, <a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a> _image=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())=0</td></tr>
+<tr class="memdesc:a95972b67174eaed9b6be8a7d06683253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws two groups of lines in blue and red, counting the non overlapping (mismatching) pixels.  <a href="classcv_1_1_line_segment_detector.html#a95972b67174eaed9b6be8a7d06683253">Подробнее...</a><br /></td></tr>
+<tr class="separator:a95972b67174eaed9b6be8a7d06683253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7656a3533b28741d1cb6c27abd9f3f3c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_line_segment_detector.html#a7656a3533b28741d1cb6c27abd9f3f3c">~LineSegmentDetector</a> ()</td></tr>
+<tr class="separator:a7656a3533b28741d1cb6c27abd9f3f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a827c8b2781ed17574805f373e6054ff1">Algorithm</a> ()</td></tr>
+<tr class="separator:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8ae826127fa0f1f8d10a24841bd376f8">~Algorithm</a> ()</td></tr>
+<tr class="separator:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">clear</a> ()</td></tr>
+<tr class="memdesc:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the algorithm state.  <a href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">write</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="memdesc:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores algorithm parameters in a file storage.  <a href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">write</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &gt; &amp;fs, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()) const</td></tr>
+<tr class="memdesc:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">simplified API for language bindings Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm parameters from a file storage.  <a href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">empty</a> () const</td></tr>
+<tr class="memdesc:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classcv_1_1_algorithm.html" title="This is a base class for all more or less complex algorithms in OpenCV.">Algorithm</a> is empty (e.g. in the very beginning or after unsuccessful read.  <a href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#af5584a693c6fe6a3b8e0fcdd6c25d1fd">save</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>) const</td></tr>
+<tr class="separator:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a6ec6ed12df12de3ae03f50fcd2118cd7">getDefaultName</a> () const</td></tr>
+<tr class="separator:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm from the file node.  <a href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">load</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from the file.  <a href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">loadFromString</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;strModel, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from a String.  <a href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a68eeca71617474ad3d4561786f0289d2">writeFormat</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="separator:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Line segment detector class. </p>
+<p>following the algorithm described at <b>[Rafael12]</b> .</p>
+<dl class="section note"><dt>Заметки</dt><dd>Implementation has been removed due original code license conflict </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7656a3533b28741d1cb6c27abd9f3f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7656a3533b28741d1cb6c27abd9f3f3c">&#9670;&nbsp;</a></span>~LineSegmentDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cv::LineSegmentDetector::~LineSegmentDetector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a95972b67174eaed9b6be8a7d06683253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95972b67174eaed9b6be8a7d06683253">&#9670;&nbsp;</a></span>compareSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::LineSegmentDetector::compareSegments </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga346f563897249351a34549137c8532a0">Size</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>lines1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>lines2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>_image</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws two groups of lines in blue and red, counting the non overlapping (mismatching) pixels. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size of the image, where lines1 and lines2 were found. </td></tr>
+    <tr><td class="paramname">lines1</td><td>The first group of lines that needs to be drawn. It is visualized in blue color. </td></tr>
+    <tr><td class="paramname">lines2</td><td>The second group of lines. They visualized in red color. </td></tr>
+    <tr><td class="paramname">_image</td><td>Optional image, where the lines will be drawn. The image should be color(3-channel) in order for lines1 and lines2 to be drawn in the above mentioned colors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c19955f017a5c8136ace53f394cdfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c19955f017a5c8136ace53f394cdfd4">&#9670;&nbsp;</a></span>detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::LineSegmentDetector::detect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>_lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>width</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>prec</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>nfa</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds lines in the input image. </p>
+<p>This is the output of the default parameters of the algorithm on the above shown image.</p>
+<p><img src="pics/building_lsd.png" alt="image" class="inline"/></p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_image</td><td>A grayscale (CV_8UC1) input image. If only a roi needs to be selected, use: <code>lsd_ptr-\&gt;detect(image(roi), lines, ...); lines += Scalar(roi.x, roi.y, roi.x, roi.y);</code> </td></tr>
+    <tr><td class="paramname">_lines</td><td>A vector of Vec4i or Vec4f elements specifying the beginning and ending point of a line. Where Vec4i/Vec4f is (x1, y1, x2, y2), point 1 is the start, point 2 - end. Returned lines are strictly oriented depending on the gradient. </td></tr>
+    <tr><td class="paramname">width</td><td>Vector of widths of the regions, where the lines are found. E.g. Width of line. </td></tr>
+    <tr><td class="paramname">prec</td><td>Vector of precisions with which the lines are found. </td></tr>
+    <tr><td class="paramname">nfa</td><td>Vector containing number of false alarms in the line region, with precision of 10%. The bigger the value, logarithmically better the detection.<ul>
+<li>-1 corresponds to 10 mean false alarms</li>
+<li>0 corresponds to 1 mean false alarm</li>
+<li>1 corresponds to 0.1 mean false alarms This vector will be calculated only when the objects type is <a class="el" href="group__imgproc__feature.html#ggad092a7362b8afb8a905238a41898d98ca88d573b707a6f7bbdeae166247cd8c15">LSD_REFINE_ADV</a>. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10ef6c4c431a76db0da626c43c1c0361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ef6c4c431a76db0da626c43c1c0361">&#9670;&nbsp;</a></span>drawSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::LineSegmentDetector::drawSegments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaf77c9a14ef956c50c1efd4547f444e63">InputOutputArray</a>&#160;</td>
+          <td class="paramname"><em>_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>lines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws the line segments on a given image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_image</td><td>The image, where the lines will be drawn. Should be bigger or equal to the image, where the lines were found. </td></tr>
+    <tr><td class="paramname">lines</td><td>A vector of the lines that needed to be drawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2imgproc_8hpp_source.html">imgproc.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_line_segment_detector.html">LineSegmentDetector</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

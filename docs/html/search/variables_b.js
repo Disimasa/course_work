@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['l2hysthreshold_12856',['L2HysThreshold',['../structcv_1_1_h_o_g_descriptor.html#a4da90a1418ada8e80c8a44ef0e353cd6',1,'cv::HOGDescriptor']]],
+  ['labels_12857',['labels',['../group__core__c.html#ga1342f74a0f7dd7c20ab7e79b2e6e5af5',1,'labels():&#160;core_c.h'],['../group__imgproc__misc.html#gaa75358e6ed91336d607ff7a9a5991251',1,'cv::labels()']]],
+  ['labeltype_12858',['labelType',['../group__imgproc__misc.html#ga7766611410594c80d27622896cd90f8e',1,'cv']]],
+  ['lastpositions_12859',['lastPositions',['../structcv_1_1_detection_based_tracker_1_1_tracked_object.html#a140f80ee7a31d82e0021d7a05b9fd77f',1,'cv::DetectionBasedTracker::TrackedObject']]],
+  ['lastsampletime_12860',['lastSampleTime',['../interface_cv_video_camera.html#a1730b56eb3f27f253fb609e368d11945',1,'CvVideoCamera']]],
+  ['learningrate_12861',['learningRate',['../structcv_1_1gapi_1_1video_1_1_background_subtractor_params.html#a883489aae995805dce80a75708104878',1,'cv::gapi::video::BackgroundSubtractorParams']]],
+  ['level_12862',['level',['../struct_cv_tree_node_iterator.html#a2e15a5c9c012f972d1af74f020d31d65',1,'CvTreeNodeIterator::level()'],['../structcv_1_1utils_1_1logging_1_1_log_tag.html#ab2f82b2f9e4ed222078e35dfc3bfebe4',1,'cv::utils::logging::LogTag::level()']]],
+  ['levelweights_12863',['levelWeights',['../classcv_1_1_cascade_classifier.html#a9f3578bea1a45bec39a2e8d1066aa54f',1,'cv::CascadeClassifier']]],
+  ['line_12864',['line',['../classcv_1_1_exception.html#aa81481ded6391d046768d9829c56fd90',1,'cv::Exception::line()'],['../group__core__c.html#ga60e47d98d27b2fd9a0666c7d53824d56',1,'line():&#160;core_c.h'],['../group__imgproc__c.html#ga7146038506976205c451bf9d62f663b4',1,'line():&#160;imgproc_c.h']]],
+  ['line_5fiterator_12865',['line_iterator',['../group__imgproc__c.html#ga473ad7afd12dfd7f50bfdb121546ecf4',1,'imgproc_c.h']]],
+  ['line_5fstorage_12866',['line_storage',['../group__imgproc__c.html#gaa3fef5dde04c4a918865d7163981ab10',1,'imgproc_c.h']]],
+  ['line_5ftype_12867',['line_type',['../structcv_1_1_qt_font.html#a128c7f4c9bb3a29aabace35d44ad4004',1,'cv::QtFont::line_type()'],['../struct_cv_font.html#aad561dba61a70aea869ea429bf692299',1,'CvFont::line_type()']]],
+  ['location_12868',['location',['../structcv_1_1_detection_based_tracker_1_1_ext_object.html#ae35c2f8e432191e876da162978ffdbfb',1,'cv::DetectionBasedTracker::ExtObject']]],
+  ['locations_12869',['locations',['../structcv_1_1_detection_r_o_i.html#a9e3ba3daa336f41774e72b8ee2787876',1,'cv::DetectionROI']]],
+  ['logsoftmax_12870',['logSoftMax',['../classcv_1_1dnn_1_1_softmax_layer.html#aa55c1c0d83caf0946865e225ae37f664',1,'cv::dnn::SoftmaxLayer']]],
+  ['loiterations_12871',['loIterations',['../structcv_1_1_usac_params.html#a8d560a6e0bec21ac447cda8e4a90eb3d',1,'cv::UsacParams']]],
+  ['lomethod_12872',['loMethod',['../structcv_1_1_usac_params.html#a4298872bc27de551ffa457e82c1ca1bb',1,'cv::UsacParams']]],
+  ['losamplesize_12873',['loSampleSize',['../structcv_1_1_usac_params.html#ae70a6a3684b321b8352d7af0e7b1017e',1,'cv::UsacParams']]],
+  ['lower_12874',['lower',['../group__core__c.html#ga0383d0fa3cd604e2cb1be135c65ccd98',1,'core_c.h']]],
+  ['lowerbound_12875',['lowerBound',['../group__imgproc__hist.html#ga16f7dd2345d622a8f9c453352c1ea520',1,'cv']]],
+  ['lt_12876',['lt',['../structcv_1_1gapi_1_1wip_1_1draw_1_1_text.html#a688d93708a9c11ff5582b64484dcd334',1,'cv::gapi::wip::draw::Text::lt()'],['../structcv_1_1gapi_1_1wip_1_1draw_1_1_rect.html#ae10a93a9f5924b64fcca832b0c7ca04e',1,'cv::gapi::wip::draw::Rect::lt()'],['../structcv_1_1gapi_1_1wip_1_1draw_1_1_circle.html#a0c3534c983a8be0b4416c458a920aeec',1,'cv::gapi::wip::draw::Circle::lt()'],['../structcv_1_1gapi_1_1wip_1_1draw_1_1_line.html#ae6a8f0ba84f674f9c3fdf87f3d2107f0',1,'cv::gapi::wip::draw::Line::lt()'],['../structcv_1_1gapi_1_1wip_1_1draw_1_1_poly.html#af0f7ecd2e8b4098625a193b9676b6bdd',1,'cv::gapi::wip::draw::Poly::lt()']]],
+  ['ltype_12877',['ltype',['../group__imgproc__shape.html#ga4e95cb24a8c74e38f63aba84804272e5',1,'cv']]],
+  ['lut_12878',['lut',['../group__core__c.html#gac0182572699c7759eba7ba1d6b8e32d6',1,'core_c.h']]]
+];

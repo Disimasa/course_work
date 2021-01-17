@@ -1,0 +1,1066 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Graph API: Math operations</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__gapi__math.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Graph API: Math operations<div class="ingroups"><a class="el" href="group__gapi__core.html">G-API Core functionality</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga0d2c762e70417fbd0c12421d161ed929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929">cv::gapi::add</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga0d2c762e70417fbd0c12421d161ed929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element sum of two matrices.  <a href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0d2c762e70417fbd0c12421d161ed929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabadab04bf5b8bf558526283243c5c2a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#gabadab04bf5b8bf558526283243c5c2a9">cv::gapi::addC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;c, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:gabadab04bf5b8bf558526283243c5c2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element sum of matrix and given scalar.  <a href="group__gapi__math.html#gabadab04bf5b8bf558526283243c5c2a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabadab04bf5b8bf558526283243c5c2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae05b59acbf8fa5f00330178b283ca4ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#gae05b59acbf8fa5f00330178b283ca4ec">cv::gapi::addC</a> (const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;c, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:gae05b59acbf8fa5f00330178b283ca4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="group__gapi__math.html#gae05b59acbf8fa5f00330178b283ca4ec">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae05b59acbf8fa5f00330178b283ca4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9de72704bf2c804c2b6819448115073a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a">cv::gapi::sub</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga9de72704bf2c804c2b6819448115073a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element difference between two matrices.  <a href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9de72704bf2c804c2b6819448115073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39114b71382d8956758d48c835659a60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga39114b71382d8956758d48c835659a60">cv::gapi::subC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;c, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga39114b71382d8956758d48c835659a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element difference between matrix and given scalar.  <a href="group__gapi__math.html#ga39114b71382d8956758d48c835659a60">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga39114b71382d8956758d48c835659a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99eb84981ff5c9b7d6b78213da9f55b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga99eb84981ff5c9b7d6b78213da9f55b4">cv::gapi::subRC</a> (const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;c, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga99eb84981ff5c9b7d6b78213da9f55b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element difference between given scalar and the matrix.  <a href="group__gapi__math.html#ga99eb84981ff5c9b7d6b78213da9f55b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga99eb84981ff5c9b7d6b78213da9f55b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d71a2500c57c4eac273225a1c71f515"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga4d71a2500c57c4eac273225a1c71f515">cv::gapi::mul</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>=1.0, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga4d71a2500c57c4eac273225a1c71f515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the per-element scaled product of two matrices.  <a href="group__gapi__math.html#ga4d71a2500c57c4eac273225a1c71f515">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4d71a2500c57c4eac273225a1c71f515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5c6fdd00a96cd59369fbf1789ffe2a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#gab5c6fdd00a96cd59369fbf1789ffe2a5">cv::gapi::mulC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, double multiplier, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:gab5c6fdd00a96cd59369fbf1789ffe2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies matrix by scalar.  <a href="group__gapi__math.html#gab5c6fdd00a96cd59369fbf1789ffe2a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab5c6fdd00a96cd59369fbf1789ffe2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56e8cce45a37cc3e4dcfefe39c5194e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga56e8cce45a37cc3e4dcfefe39c5194e8">cv::gapi::mulC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;multiplier, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga56e8cce45a37cc3e4dcfefe39c5194e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="group__gapi__math.html#ga56e8cce45a37cc3e4dcfefe39c5194e8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga56e8cce45a37cc3e4dcfefe39c5194e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aba954fc520ed1bc327315dbd9ed7f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga2aba954fc520ed1bc327315dbd9ed7f0">cv::gapi::mulC</a> (const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;multiplier, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga2aba954fc520ed1bc327315dbd9ed7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="group__gapi__math.html#ga2aba954fc520ed1bc327315dbd9ed7f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2aba954fc520ed1bc327315dbd9ed7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24730405a2bba6688f84e4f4dfed7710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710">cv::gapi::div</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga897de4702c922f4cccda0d57ccdcafb3">src1</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__c.html#ga7561a36d48069d54a6c8ac4e4750edfd">src2</a>, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga24730405a2bba6688f84e4f4dfed7710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs per-element division of two matrices.  <a href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga24730405a2bba6688f84e4f4dfed7710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3c11abb52d2c92b3d53ab0ca9a59c7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#gac3c11abb52d2c92b3d53ab0ca9a59c7b">cv::gapi::divC</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;divisor, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:gac3c11abb52d2c92b3d53ab0ca9a59c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides matrix by scalar.  <a href="group__gapi__math.html#gac3c11abb52d2c92b3d53ab0ca9a59c7b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac3c11abb52d2c92b3d53ab0ca9a59c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16fc357272f405025a2d9c9eac8b5948"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga16fc357272f405025a2d9c9eac8b5948">cv::gapi::divRC</a> (const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;divident, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, double <a class="el" href="group__imgproc__c.html#gaf08b297b807a1b8810a4bbaa70ca3d99">scale</a>, <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> ddepth=-1)</td></tr>
+<tr class="memdesc:ga16fc357272f405025a2d9c9eac8b5948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides scalar by matrix.  <a href="group__gapi__math.html#ga16fc357272f405025a2d9c9eac8b5948">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga16fc357272f405025a2d9c9eac8b5948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12c68ca310a3be2365fcbcb36dfa2bc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga12c68ca310a3be2365fcbcb36dfa2bc6">cv::gapi::mask</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;mask)</td></tr>
+<tr class="memdesc:ga12c68ca310a3be2365fcbcb36dfa2bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a mask to a matrix.  <a href="group__gapi__math.html#ga12c68ca310a3be2365fcbcb36dfa2bc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga12c68ca310a3be2365fcbcb36dfa2bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f7d190675212e9226127dceb76fc8d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga1f7d190675212e9226127dceb76fc8d1">cv::gapi::mean</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga1f7d190675212e9226127dceb76fc8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an average (mean) of matrix elements.  <a href="group__gapi__math.html#ga1f7d190675212e9226127dceb76fc8d1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1f7d190675212e9226127dceb76fc8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5040e36cf3233824b8069629c0aa9b8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga5040e36cf3233824b8069629c0aa9b8f">cv::gapi::polarToCart</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__core__array.html#ga9d6a63e59493978a8ebaaf25d6288374">magnitude</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__imgproc__c.html#ga00147158cd32c0f762ad7d5917e6d8fd">angle</a>, bool angleInDegrees=false)</td></tr>
+<tr class="memdesc:ga5040e36cf3233824b8069629c0aa9b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates x and y coordinates of 2D vectors from their magnitude and angle.  <a href="group__gapi__math.html#ga5040e36cf3233824b8069629c0aa9b8f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5040e36cf3233824b8069629c0aa9b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf29f32340c29c1216177ea92d970016c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt; <a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#gaf29f32340c29c1216177ea92d970016c">cv::gapi::cartToPolar</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>, bool angleInDegrees=false)</td></tr>
+<tr class="memdesc:gaf29f32340c29c1216177ea92d970016c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the magnitude and angle of 2D vectors.  <a href="group__gapi__math.html#gaf29f32340c29c1216177ea92d970016c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf29f32340c29c1216177ea92d970016c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47718340caad28afe80367a65563cdab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga47718340caad28afe80367a65563cdab">cv::gapi::phase</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>, const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;<a class="el" href="group__highgui__c.html#gaf1202c02b14870c18fb3a1da73e9e7c7">y</a>, bool angleInDegrees=false)</td></tr>
+<tr class="memdesc:ga47718340caad28afe80367a65563cdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotation angle of 2D vectors.  <a href="group__gapi__math.html#ga47718340caad28afe80367a65563cdab">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga47718340caad28afe80367a65563cdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bf24164070adfa27290da64124ad2df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gapi__math.html#ga2bf24164070adfa27290da64124ad2df">cv::gapi::sqrt</a> (const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;src)</td></tr>
+<tr class="memdesc:ga2bf24164070adfa27290da64124ad2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a square root of array elements.  <a href="group__gapi__math.html#ga2bf24164070adfa27290da64124ad2df">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2bf24164070adfa27290da64124ad2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga0d2c762e70417fbd0c12421d161ed929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d2c762e70417fbd0c12421d161ed929">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element sum of two matrices. </p>
+<p>The function add calculates sum of two matrices of the same size and the same number of channels: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst}(I) = \texttt{saturate} ( \texttt{src1}(I) + \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0\]" src="form_398.png"/>
+</p>
+<p>The function can be replaced with matrix expressions: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \texttt{src1} + \texttt{src2}\]" src="form_558.png"/>
+</p>
+<p>The input matrices and the output matrix can all have the same or different depths. For example, you can add a 16-bit unsigned matrix to a 8-bit signed matrix and store the sum as a 32-bit floating-point matrix. Depth of the output matrix is determined by the ddepth parameter. If src1.depth() == src2.depth(), ddepth can be set to the default -1. In this case, the output matrix will have the same depth as the input matrices.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.add" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="gabadab04bf5b8bf558526283243c5c2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabadab04bf5b8bf558526283243c5c2a9">&#9670;&nbsp;</a></span>addC() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::addC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element sum of matrix and given scalar. </p>
+<p>The function addC adds a given scalar value to each element of given matrix. The function can be replaced with matrix expressions: </p><pre class="fragment">\f[\texttt{dst} =  \texttt{src1} + \texttt{c}\f]
+</pre><p> Depth of the output matrix is determined by the ddepth parameter. If ddepth is set to default -1, the depth of output matrix will be the same as the depth of input matrix. The matrices can be single or multi channel. Output matrix must have the same size and number of channels as the input matrix.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.addC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">c</td><td>scalar value to be added. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="gae05b59acbf8fa5f00330178b283ca4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae05b59acbf8fa5f00330178b283ca4ec">&#9670;&nbsp;</a></span>addC() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::addC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="gaf29f32340c29c1216177ea92d970016c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf29f32340c29c1216177ea92d970016c">&#9670;&nbsp;</a></span>cartToPolar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&gt; cv::gapi::cartToPolar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>angleInDegrees</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the magnitude and angle of 2D vectors. </p>
+<p>The function cartToPolar calculates either the magnitude, angle, or both for every 2D vector (x(I),y(I)): </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} \texttt{magnitude} (I)= \sqrt{\texttt{x}(I)^2+\texttt{y}(I)^2} , \\ \texttt{angle} (I)= \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))[ \cdot180 / \pi ] \end{array}\]" src="form_459.png"/>
+</p>
+<p>The angles are calculated with accuracy about 0.3 degrees. For the point (0,0), the angle is set to 0.</p>
+<p>First output is a matrix of magnitudes of the same size and depth as input x. Second output is a matrix of angles that has the same size and depth as x; the angles are measured in radians (from 0 to 2*Pi) or in degrees (0 to 360 degrees).</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.cartToPolar"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>matrix of <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a> x-coordinates. </td></tr>
+    <tr><td class="paramname">y</td><td>array of <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a> y-coordinates. </td></tr>
+    <tr><td class="paramname">angleInDegrees</td><td>a flag, indicating whether the angles are measured in radians (which is by default), or in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga5040e36cf3233824b8069629c0aa9b8f" title="Calculates x and y coordinates of 2D vectors from their magnitude and angle.">polarToCart</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga24730405a2bba6688f84e4f4dfed7710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24730405a2bba6688f84e4f4dfed7710">&#9670;&nbsp;</a></span>div()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::div </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs per-element division of two matrices. </p>
+<p>The function divides one matrix by another: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst(I) = saturate(src1(I)*scale/src2(I))}\]" src="form_406.png"/>
+</p>
+<p>When src2(I) is zero, dst(I) will also be zero. Different channels of multi-channel matrices are processed independently. The matrices can be single or multi channel. Output matrix must have the same size and depth as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.div" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix of the same size and depth as src1. </td></tr>
+    <tr><td class="paramname">scale</td><td>scalar factor. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix; you can only pass -1 when src1.depth() == src2.depth(). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga4d71a2500c57c4eac273225a1c71f515" title="Calculates the per-element scaled product of two matrices.">mul</a>, <a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a> </dd></dl>
+
+</div>
+</div>
+<a id="gac3c11abb52d2c92b3d53ab0ca9a59c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3c11abb52d2c92b3d53ab0ca9a59c7b">&#9670;&nbsp;</a></span>divC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::divC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>divisor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divides matrix by scalar. </p>
+<p>The function divC divides each element of matrix src by given scalar value:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst(I) = saturate(src(I)*scale/divisor)}\]" src="form_564.png"/>
+</p>
+<p>When divisor is zero, dst(I) will also be zero. Different channels of multi-channel matrices are processed independently. The matrices can be single or multi channel. Output matrix must have the same size and depth as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.divC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">divisor</td><td>number to be divided by. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. If -1, the depth of output matrix will be the same as input matrix depth. </td></tr>
+    <tr><td class="paramname">scale</td><td>scale factor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710" title="Performs per-element division of two matrices.">div</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga16fc357272f405025a2d9c9eac8b5948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16fc357272f405025a2d9c9eac8b5948">&#9670;&nbsp;</a></span>divRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::divRC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>divident</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divides scalar by matrix. </p>
+<p>The function divRC divides given scalar by each element of matrix src and keep the division result in new matrix of the same size and type as src:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst(I) = saturate(divident*scale/src(I))}\]" src="form_565.png"/>
+</p>
+<p>When src(I) is zero, dst(I) will also be zero. Different channels of multi-channel matrices are processed independently. The matrices can be single or multi channel. Output matrix must have the same size and depth as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.divRC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">divident</td><td>number to be divided. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. If -1, the depth of output matrix will be the same as input matrix depth. </td></tr>
+    <tr><td class="paramname">scale</td><td>scale factor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710" title="Performs per-element division of two matrices.">div</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga12c68ca310a3be2365fcbcb36dfa2bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12c68ca310a3be2365fcbcb36dfa2bc6">&#9670;&nbsp;</a></span>mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::mask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies a mask to a matrix. </p>
+<p>The function mask set value from given matrix if the corresponding pixel value in mask matrix set to true, and set the matrix value to 0 otherwise.</p>
+<p>Supported src matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>. Supported mask data type is <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.mask" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">mask</td><td>input mask matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1f7d190675212e9226127dceb76fc8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f7d190675212e9226127dceb76fc8d1">&#9670;&nbsp;</a></span>mean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#ab1afad8a2eab141789b23a68a47ab31e">GAPI_EXPORTS_W</a> <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> cv::gapi::mean </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates an average (mean) of matrix elements. </p>
+<p>The function mean calculates the mean value M of matrix elements, independently for each channel, and return it.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.mean" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__matrixop.html#ga5adbd0c875e1c097800a095b66ea7587" title="Counts non-zero array elements.">countNonZero</a>, <a class="el" href="group__gapi__matrixop.html#ga41b5151ede5d72db53ff17fcb894e2d5" title="Calculates per-element minimum of two matrices.">min</a>, <a class="el" href="group__gapi__matrixop.html#ga82c0c4c077981e3a20f66985cc14fd7b" title="Calculates per-element maximum of two matrices.">max</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga4d71a2500c57c4eac273225a1c71f515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d71a2500c57c4eac273225a1c71f515">&#9670;&nbsp;</a></span>mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::mul </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element scaled product of two matrices. </p>
+<p>The function mul calculates the per-element product of two matrices:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{scale} \cdot \texttt{src1} (I) \cdot \texttt{src2} (I))\]" src="form_405.png"/>
+</p>
+<p>If src1.depth() == src2.depth(), ddepth can be set to the default -1. In this case, the output matrix will have the same depth as the input matrices. The matrices can be single or multi channel. Output matrix must have the same size as input matrices.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.mul" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix of the same size and the same depth as src1. </td></tr>
+    <tr><td class="paramname">scale</td><td>optional scale factor. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710" title="Performs per-element division of two matrices.">div</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga56e8cce45a37cc3e4dcfefe39c5194e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56e8cce45a37cc3e4dcfefe39c5194e8">&#9670;&nbsp;</a></span>mulC() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::mulC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="gab5c6fdd00a96cd59369fbf1789ffe2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5c6fdd00a96cd59369fbf1789ffe2a5">&#9670;&nbsp;</a></span>mulC() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::mulC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies matrix by scalar. </p>
+<p>The function mulC multiplies each element of matrix src by given scalar value:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I) \cdot \texttt{multiplier} )\]" src="form_563.png"/>
+</p>
+<p>The matrices can be single or multi channel. Output matrix must have the same size as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.mulC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input matrix. </td></tr>
+    <tr><td class="paramname">multiplier</td><td>factor to be multiplied. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. If -1, the depth of output matrix will be the same as input matrix depth. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#ga9de72704bf2c804c2b6819448115073a" title="Calculates the per-element difference between two matrices.">sub</a>, <a class="el" href="group__gapi__math.html#ga24730405a2bba6688f84e4f4dfed7710" title="Performs per-element division of two matrices.">div</a>, <a class="el" href="group__gapi__matrixop.html#ga0595801e238e1f51ea4dde38fb32dcd2" title="Calculates the weighted sum of two matrices.">addWeighted</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2aba954fc520ed1bc327315dbd9ed7f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2aba954fc520ed1bc327315dbd9ed7f0">&#9670;&nbsp;</a></span>mulC() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::mulC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ga47718340caad28afe80367a65563cdab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47718340caad28afe80367a65563cdab">&#9670;&nbsp;</a></span>phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::phase </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>angleInDegrees</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the rotation angle of 2D vectors. </p>
+<p>The function <a class="el" href="group__core__array.html#ga5d0d1970b0ce1083cb752d83f9a4f6f9" title="Calculates the rotation angle of 2D vectors.">cv::phase</a> calculates the rotation angle of each 2D vector that is formed from the corresponding elements of x and y : </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{angle} (I) = \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))\]" src="form_460.png"/>
+</p>
+<p>The angle estimation accuracy is about 0.3 degrees. When x(I)=y(I)=0 , the corresponding angle(I) is set to 0. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>input floating-point array of x-coordinates of 2D vectors. </td></tr>
+    <tr><td class="paramname">y</td><td>input array of y-coordinates of 2D vectors; it must have the same size and the same type as x. </td></tr>
+    <tr><td class="paramname">angleInDegrees</td><td>when true, the function calculates the angle in degrees, otherwise, they are measured in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>array of vector angles; it has the same size and same type as x. </dd></dl>
+
+</div>
+</div>
+<a id="ga5040e36cf3233824b8069629c0aa9b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5040e36cf3233824b8069629c0aa9b8f">&#9670;&nbsp;</a></span>polarToCart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> std::tuple&lt;<a class="el" href="classcv_1_1_g_mat.html">GMat</a>, <a class="el" href="classcv_1_1_g_mat.html">GMat</a>&gt; cv::gapi::polarToCart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>magnitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>angleInDegrees</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates x and y coordinates of 2D vectors from their magnitude and angle. </p>
+<p>The function polarToCart calculates the Cartesian coordinates of each 2D vector represented by the corresponding elements of magnitude and angle: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\begin{array}{l} \texttt{x} (I) = \texttt{magnitude} (I) \cos ( \texttt{angle} (I)) \\ \texttt{y} (I) = \texttt{magnitude} (I) \sin ( \texttt{angle} (I)) \\ \end{array}\]" src="form_458.png"/>
+</p>
+<p>The relative accuracy of the estimated coordinates is about 1e-6.</p>
+<p>First output is a matrix of x-coordinates of 2D vectors. Second output is a matrix of y-coordinates of 2D vectors. Both output must have the same size and depth as input matrices.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.polarToCart"</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">magnitude</td><td>input floating-point <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a> matrix (1xN) of magnitudes of 2D vectors; </td></tr>
+    <tr><td class="paramname">angle</td><td>input floating-point <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a> matrix (1xN) of angles of 2D vectors. </td></tr>
+    <tr><td class="paramname">angleInDegrees</td><td>when true, the input angles are measured in degrees, otherwise, they are measured in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#gaf29f32340c29c1216177ea92d970016c" title="Calculates the magnitude and angle of 2D vectors.">cartToPolar</a>, <a class="el" href="group__core.html#ga96ff82d32417d677722a7e786425c98e">exp</a>, <a class="el" href="group__core.html#ga4eba02a849f926ee1764acde47108753">log</a>, <a class="el" href="group__core__utils__softfloat.html#gacc9755ee334124bc51f95652308a8418" title="Raising to the power.">pow</a>, <a class="el" href="group__gapi__math.html#ga2bf24164070adfa27290da64124ad2df" title="Calculates a square root of array elements.">sqrt</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2bf24164070adfa27290da64124ad2df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bf24164070adfa27290da64124ad2df">&#9670;&nbsp;</a></span>sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::sqrt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates a square root of array elements. </p>
+<p>The function <a class="el" href="group__gapi__math.html#ga2bf24164070adfa27290da64124ad2df" title="Calculates a square root of array elements.">cv::gapi::sqrt</a> calculates a square root of each input array element. In case of multi-channel arrays, each channel is processed independently. The accuracy is approximately the same as of the built-in std::sqrt . </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input floating-point array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>output array of the same size and type as src. </dd></dl>
+
+</div>
+</div>
+<a id="ga9de72704bf2c804c2b6819448115073a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9de72704bf2c804c2b6819448115073a">&#9670;&nbsp;</a></span>sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::sub </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element difference between two matrices. </p>
+<p>The function sub calculates difference between two matrices, when both matrices have the same size and the same number of channels: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst}(I) = \texttt{src1}(I) - \texttt{src2}(I)\]" src="form_559.png"/>
+</p>
+<p>The function can be replaced with matrix expressions: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \texttt{src1} - \texttt{src2}\]" src="form_560.png"/>
+</p>
+<p>The input matrices and the output matrix can all have the same or different depths. For example, you can subtract two 8-bit unsigned matrices store the result as a 16-bit signed matrix. Depth of the output matrix is determined by the ddepth parameter. If src1.depth() == src2.depth(), ddepth can be set to the default -1. In this case, the output matrix will have the same depth as the input matrices. The matrices can be single or multi channel.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.sub" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src1</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">src2</td><td>second input matrix. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#gabadab04bf5b8bf558526283243c5c2a9" title="Calculates the per-element sum of matrix and given scalar.">addC</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga39114b71382d8956758d48c835659a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39114b71382d8956758d48c835659a60">&#9670;&nbsp;</a></span>subC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::subC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element difference between matrix and given scalar. </p>
+<p>The function can be replaced with matrix expressions: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \texttt{src} - \texttt{c}\]" src="form_561.png"/>
+</p>
+<p>Depth of the output matrix is determined by the ddepth parameter. If ddepth is set to default -1, the depth of output matrix will be the same as the depth of input matrix. The matrices can be single or multi channel. Output matrix must have the same size as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.subC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>first input matrix. </td></tr>
+    <tr><td class="paramname">c</td><td>scalar value to subtracted. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#gabadab04bf5b8bf558526283243c5c2a9" title="Calculates the per-element sum of matrix and given scalar.">addC</a>, <a class="el" href="group__gapi__math.html#ga99eb84981ff5c9b7d6b78213da9f55b4" title="Calculates the per-element difference between given scalar and the matrix.">subRC</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga99eb84981ff5c9b7d6b78213da9f55b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99eb84981ff5c9b7d6b78213da9f55b4">&#9670;&nbsp;</a></span>subRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exports_8hpp.html#aa8b19b214081394654ba18aa754418e4">GAPI_EXPORTS</a> <a class="el" href="classcv_1_1_g_mat.html">GMat</a> cv::gapi::subRC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_scalar.html">GScalar</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_g_mat.html">GMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>ddepth</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the per-element difference between given scalar and the matrix. </p>
+<p>The function can be replaced with matrix expressions: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[\texttt{dst} = \texttt{val} - \texttt{src}\]" src="form_562.png"/>
+</p>
+<p>Depth of the output matrix is determined by the ddepth parameter. If ddepth is set to default -1, the depth of output matrix will be the same as the depth of input matrix. The matrices can be single or multi channel. Output matrix must have the same size as src.</p>
+<p>Supported matrix data types are <a class="el" href="group__core__hal__interface.html#ga81df635441b21f532fdace401e04f588">CV_8UC1</a>, <a class="el" href="group__core__hal__interface.html#ga88c4cd9de76f678f33928ef1e3f96047">CV_8UC3</a>, <a class="el" href="group__core__hal__interface.html#ga404fd4e4553b57c481b7fac31aedcd2b">CV_16UC1</a>, <a class="el" href="group__core__hal__interface.html#ga3515053e24377cf079fa1027d208ad52">CV_16SC1</a>, <a class="el" href="group__core__hal__interface.html#ga32ec76240e43e4c9c7b2e2785180a7e6">CV_32FC1</a>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Function textual ID is "org.opencv.core.math.subRC" </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>scalar value to subtract from. </td></tr>
+    <tr><td class="paramname">src</td><td>input matrix to be subtracted. </td></tr>
+    <tr><td class="paramname">ddepth</td><td>optional depth of the output matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="group__gapi__math.html#ga0d2c762e70417fbd0c12421d161ed929" title="Calculates the per-element sum of two matrices.">add</a>, <a class="el" href="group__gapi__math.html#gabadab04bf5b8bf558526283243c5c2a9" title="Calculates the per-element sum of matrix and given scalar.">addC</a>, <a class="el" href="group__gapi__math.html#ga39114b71382d8956758d48c835659a60" title="Calculates the per-element difference between matrix and given scalar.">subC</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

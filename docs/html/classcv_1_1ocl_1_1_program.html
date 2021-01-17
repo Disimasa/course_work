@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::ocl::Program</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1ocl_1_1_program.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="classcv_1_1ocl_1_1_program-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::ocl::Program<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__opencl.html">OpenCL support</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a5cda416295d66e370dd288a800d39c05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a5cda416295d66e370dd288a800d39c05">Program</a> ()</td></tr>
+<tr class="separator:a5cda416295d66e370dd288a800d39c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35356fa973803991f9ebcefdf9cc61b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a35356fa973803991f9ebcefdf9cc61b1">Program</a> (const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;src, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildflags, <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;errmsg)</td></tr>
+<tr class="separator:a35356fa973803991f9ebcefdf9cc61b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c50073baeb930dd9c42b5eaafd4ca0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a5c50073baeb930dd9c42b5eaafd4ca0b">Program</a> (const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;prog)</td></tr>
+<tr class="separator:a5c50073baeb930dd9c42b5eaafd4ca0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d76780ecc8d97fe76ef926123c507c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a9d76780ecc8d97fe76ef926123c507c0">operator=</a> (const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;prog)</td></tr>
+<tr class="separator:a9d76780ecc8d97fe76ef926123c507c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8314815661759f1d33ddc78b23fd1e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#ab8314815661759f1d33ddc78b23fd1e9">~Program</a> ()</td></tr>
+<tr class="separator:ab8314815661759f1d33ddc78b23fd1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefabbfce0ead62656025b1765422d612"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#aefabbfce0ead62656025b1765422d612">create</a> (const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;src, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildflags, <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;errmsg)</td></tr>
+<tr class="separator:aefabbfce0ead62656025b1765422d612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6254d08954fc8ad190e0ce8256c85a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a6254d08954fc8ad190e0ce8256c85a01">ptr</a> () const</td></tr>
+<tr class="separator:a6254d08954fc8ad190e0ce8256c85a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad023ecd172b89a89f615653b23854637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#ad023ecd172b89a89f615653b23854637">getBinary</a> (std::vector&lt; char &gt; &amp;binary) const</td></tr>
+<tr class="memdesc:ad023ecd172b89a89f615653b23854637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query device-specific program binary.  <a href="classcv_1_1ocl_1_1_program.html#ad023ecd172b89a89f615653b23854637">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad023ecd172b89a89f615653b23854637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af008a599b89b003d6c190b5543db481a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_program.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#af008a599b89b003d6c190b5543db481a">getImpl</a> () const</td></tr>
+<tr class="separator:af008a599b89b003d6c190b5543db481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe76ca49b8114002556a27430489338a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#abe76ca49b8114002556a27430489338a">empty</a> () const</td></tr>
+<tr class="separator:abe76ca49b8114002556a27430489338a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ba1721bff556a7edec6055b319d40d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a34ba1721bff556a7edec6055b319d40d">read</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buf, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildflags)</td></tr>
+<tr class="separator:a34ba1721bff556a7edec6055b319d40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c1ce1fe9fa460bfa2b12ae03bfba96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#af3c1ce1fe9fa460bfa2b12ae03bfba96">write</a> (<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buf) const</td></tr>
+<tr class="separator:af3c1ce1fe9fa460bfa2b12ae03bfba96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30ee72575d4f3261da5c0b8820f6ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#ae30ee72575d4f3261da5c0b8820f6ae0">source</a> () const</td></tr>
+<tr class="separator:ae30ee72575d4f3261da5c0b8820f6ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50290ba008a14f515139019d3cb896e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a50290ba008a14f515139019d3cb896e5">getPrefix</a> () const</td></tr>
+<tr class="separator:a50290ba008a14f515139019d3cb896e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a4bf7ea23672d82e60abc16886b396e2b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#a4bf7ea23672d82e60abc16886b396e2b">getPrefix</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;buildflags)</td></tr>
+<tr class="separator:a4bf7ea23672d82e60abc16886b396e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:acba6c3d3895d4c72a46849efb7570b0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1ocl_1_1_program.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#acba6c3d3895d4c72a46849efb7570b0b">p</a></td></tr>
+<tr class="separator:acba6c3d3895d4c72a46849efb7570b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:aee24c43b9029c5fba6fb8747c948c0da"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1ocl_1_1_program.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a></td></tr>
+<tr class="separator:aee24c43b9029c5fba6fb8747c948c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a5cda416295d66e370dd288a800d39c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cda416295d66e370dd288a800d39c05">&#9670;&nbsp;</a></span>Program() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Program::Program </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35356fa973803991f9ebcefdf9cc61b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35356fa973803991f9ebcefdf9cc61b1">&#9670;&nbsp;</a></span>Program() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Program::Program </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildflags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>errmsg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c50073baeb930dd9c42b5eaafd4ca0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c50073baeb930dd9c42b5eaafd4ca0b">&#9670;&nbsp;</a></span>Program() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Program::Program </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8314815661759f1d33ddc78b23fd1e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8314815661759f1d33ddc78b23fd1e9">&#9670;&nbsp;</a></span>~Program()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::ocl::Program::~Program </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aefabbfce0ead62656025b1765422d612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefabbfce0ead62656025b1765422d612">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Program::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildflags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>errmsg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe76ca49b8114002556a27430489338a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe76ca49b8114002556a27430489338a">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::ocl::Program::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad023ecd172b89a89f615653b23854637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad023ecd172b89a89f615653b23854637">&#9670;&nbsp;</a></span>getBinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::ocl::Program::getBinary </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binary</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query device-specific program binary. </p>
+<p>Returns RAW OpenCL executable binary without additional attachments.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1ocl_1_1_program_source.html#a221c9df82bf2af3b61fd85925a0862ba" title="Describe OpenCL program binary. Do not call clCreateProgramWithBinary() and/or clBuildProgram().">ProgramSource::fromBinary</a></dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">binary</td><td>output buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af008a599b89b003d6c190b5543db481a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af008a599b89b003d6c190b5543db481a">&#9670;&nbsp;</a></span>getImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_program.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a>* cv::ocl::Program::getImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50290ba008a14f515139019d3cb896e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50290ba008a14f515139019d3cb896e5">&#9670;&nbsp;</a></span>getPrefix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> cv::ocl::Program::getPrefix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bf7ea23672d82e60abc16886b396e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf7ea23672d82e60abc16886b396e2b">&#9670;&nbsp;</a></span>getPrefix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> cv::ocl::Program::getPrefix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildflags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d76780ecc8d97fe76ef926123c507c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d76780ecc8d97fe76ef926123c507c0">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a>&amp; cv::ocl::Program::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6254d08954fc8ad190e0ce8256c85a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6254d08954fc8ad190e0ce8256c85a01">&#9670;&nbsp;</a></span>ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>* cv::ocl::Program::ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34ba1721bff556a7edec6055b319d40d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ba1721bff556a7edec6055b319d40d">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> bool cv::ocl::Program::read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buildflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae30ee72575d4f3261da5c0b8820f6ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30ee72575d4f3261da5c0b8820f6ae0">&#9670;&nbsp;</a></span>source()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> const <a class="el" href="classcv_1_1ocl_1_1_program_source.html">ProgramSource</a>&amp; cv::ocl::Program::source </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3c1ce1fe9fa460bfa2b12ae03bfba96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c1ce1fe9fa460bfa2b12ae03bfba96">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga27de0dfc4088e366e615fc5f981edef2">CV_DEPRECATED</a> bool cv::ocl::Program::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Документация по друзьям класса и функциям, относящимся к классу</h2>
+<a id="aee24c43b9029c5fba6fb8747c948c0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee24c43b9029c5fba6fb8747c948c0da">&#9670;&nbsp;</a></span>Impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct Impl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="acba6c3d3895d4c72a46849efb7570b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba6c3d3895d4c72a46849efb7570b0b">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1ocl_1_1_program.html#aee24c43b9029c5fba6fb8747c948c0da">Impl</a>* cv::ocl::Program::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/core/<a class="el" href="ocl_8hpp_source.html">ocl.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1ocl.html">ocl</a></li><li class="navelem"><a class="el" href="classcv_1_1ocl_1_1_program.html">Program</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

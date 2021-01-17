@@ -1,0 +1,1643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::Stitcher</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_stitcher.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="classcv_1_1_stitcher-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::Stitcher<div class="ingroups"><a class="el" href="group__stitching.html">Images stitching</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>High level image stitcher.  
+ <a href="classcv_1_1_stitcher.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stitching_8hpp_source.html">stitching.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a507409ce9435dd89857469d12ec06b45"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> { <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45afc04343b65c6780b62b684ed14e26586">OK</a> = 0
+, <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45a2d8d41bde739520bdc0a75af8c869bbe">ERR_NEED_MORE_IMGS</a> = 1
+, <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45af0b270c03b2a88cd0415c8e3f5e58c3e">ERR_HOMOGRAPHY_EST_FAIL</a> = 2
+, <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45aabbdc1cc372c5aacc5266c5e2df0d492">ERR_CAMERA_PARAMS_ADJUST_FAIL</a> = 3
+ }</td></tr>
+<tr class="separator:a507409ce9435dd89857469d12ec06b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a114713924ec05a0309f4df7e918c0324"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324">Mode</a> { <a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324a67810f8a77e48cadc3134972ed7f99fd">PANORAMA</a> = 0
+, <a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324ac706a6a118a4a648fef8b2fca5950e2a">SCANS</a> = 1
+ }</td></tr>
+<tr class="separator:a114713924ec05a0309f4df7e918c0324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9d7e3cf0b2a860714142d17cad9911be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a9d7e3cf0b2a860714142d17cad9911be">registrationResol</a> () const</td></tr>
+<tr class="separator:a9d7e3cf0b2a860714142d17cad9911be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b2f4ca60a57b58e417bb20056e3d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a53b2f4ca60a57b58e417bb20056e3d53">setRegistrationResol</a> (double resol_mpx)</td></tr>
+<tr class="separator:a53b2f4ca60a57b58e417bb20056e3d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab902b1c72cccbee50d9862c20d2ac0cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ab902b1c72cccbee50d9862c20d2ac0cc">seamEstimationResol</a> () const</td></tr>
+<tr class="separator:ab902b1c72cccbee50d9862c20d2ac0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b3bda0517d4f3bdfe5a927f95c6b66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#af1b3bda0517d4f3bdfe5a927f95c6b66">setSeamEstimationResol</a> (double resol_mpx)</td></tr>
+<tr class="separator:af1b3bda0517d4f3bdfe5a927f95c6b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34eca64bacfa106882f3efbda6a9ceeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a34eca64bacfa106882f3efbda6a9ceeb">compositingResol</a> () const</td></tr>
+<tr class="separator:a34eca64bacfa106882f3efbda6a9ceeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03967a77329e1644ca69199a24e631d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#aa03967a77329e1644ca69199a24e631d">setCompositingResol</a> (double resol_mpx)</td></tr>
+<tr class="separator:aa03967a77329e1644ca69199a24e631d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9245980d2432e0926abed8b0ed2a233b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a9245980d2432e0926abed8b0ed2a233b">panoConfidenceThresh</a> () const</td></tr>
+<tr class="separator:a9245980d2432e0926abed8b0ed2a233b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00fbf5f70c1e5205752fd629412b2f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ab00fbf5f70c1e5205752fd629412b2f0">setPanoConfidenceThresh</a> (double conf_thresh)</td></tr>
+<tr class="separator:ab00fbf5f70c1e5205752fd629412b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac76435eb9bfb67bc5cecd998e909d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a9ac76435eb9bfb67bc5cecd998e909d9">waveCorrection</a> () const</td></tr>
+<tr class="separator:a9ac76435eb9bfb67bc5cecd998e909d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4a25b6e7961b125b64254f48ff6808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a7e4a25b6e7961b125b64254f48ff6808">setWaveCorrection</a> (bool flag)</td></tr>
+<tr class="separator:a7e4a25b6e7961b125b64254f48ff6808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea56225ebc888f0ef56f823c118e332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121">InterpolationFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a0ea56225ebc888f0ef56f823c118e332">interpolationFlags</a> () const</td></tr>
+<tr class="separator:a0ea56225ebc888f0ef56f823c118e332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d04563ed171aeddf367c8082247151"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ab2d04563ed171aeddf367c8082247151">setInterpolationFlags</a> (<a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121">InterpolationFlags</a> interp_flags)</td></tr>
+<tr class="separator:ab2d04563ed171aeddf367c8082247151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c9c9b8a97b686ad3b93f7918c4c6de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">detail::WaveCorrectKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ad9c9c9b8a97b686ad3b93f7918c4c6de">waveCorrectKind</a> () const</td></tr>
+<tr class="separator:ad9c9c9b8a97b686ad3b93f7918c4c6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17413f5c06e4e569bfd45e01d4e8ff4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a17413f5c06e4e569bfd45e01d4e8ff4a">setWaveCorrectKind</a> (<a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">detail::WaveCorrectKind</a> kind)</td></tr>
+<tr class="separator:a17413f5c06e4e569bfd45e01d4e8ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92b06472f22df6c9e25869fc58e9ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ad92b06472f22df6c9e25869fc58e9ceb">featuresFinder</a> ()</td></tr>
+<tr class="separator:ad92b06472f22df6c9e25869fc58e9ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96ea17da5a882e990c0b77e43850179"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#af96ea17da5a882e990c0b77e43850179">featuresFinder</a> () const</td></tr>
+<tr class="separator:af96ea17da5a882e990c0b77e43850179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943d01c149aa987e289f6be9b63d4e4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a943d01c149aa987e289f6be9b63d4e4b">setFeaturesFinder</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a> &gt; features_finder)</td></tr>
+<tr class="separator:a943d01c149aa987e289f6be9b63d4e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426a576f1e2c12d9d5437a86625564c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a426a576f1e2c12d9d5437a86625564c0">featuresMatcher</a> ()</td></tr>
+<tr class="separator:a426a576f1e2c12d9d5437a86625564c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4593da8d34466283ef0cdd21fff3e7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#adf4593da8d34466283ef0cdd21fff3e7">featuresMatcher</a> () const</td></tr>
+<tr class="separator:adf4593da8d34466283ef0cdd21fff3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7fb8b0e696bfe3104f73d07ab0b5c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ada7fb8b0e696bfe3104f73d07ab0b5c4">setFeaturesMatcher</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a> &gt; features_matcher)</td></tr>
+<tr class="separator:ada7fb8b0e696bfe3104f73d07ab0b5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2624192c5854601f4baebeee321c81"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a4b2624192c5854601f4baebeee321c81">matchingMask</a> () const</td></tr>
+<tr class="separator:a4b2624192c5854601f4baebeee321c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1591614305b0385f8a6152458f93955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ad1591614305b0385f8a6152458f93955">setMatchingMask</a> (const <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;<a class="el" href="group__core__c.html#gab1abe7ada6425dcc502761faec53e651">mask</a>)</td></tr>
+<tr class="separator:ad1591614305b0385f8a6152458f93955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3afc54727bdd855bad04613f7e337a89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a3afc54727bdd855bad04613f7e337a89">bundleAdjuster</a> ()</td></tr>
+<tr class="separator:a3afc54727bdd855bad04613f7e337a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8938cad4d5b9084c8199ea192f2b332"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#aa8938cad4d5b9084c8199ea192f2b332">bundleAdjuster</a> () const</td></tr>
+<tr class="separator:aa8938cad4d5b9084c8199ea192f2b332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3060cbd7d492a53052754439e830d40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#aa3060cbd7d492a53052754439e830d40">setBundleAdjuster</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a> &gt; bundle_adjuster)</td></tr>
+<tr class="separator:aa3060cbd7d492a53052754439e830d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9a51ac0f2fab42c1d694f88e1d6c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a5a9a51ac0f2fab42c1d694f88e1d6c2d">estimator</a> ()</td></tr>
+<tr class="separator:a5a9a51ac0f2fab42c1d694f88e1d6c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad872c75dcdf2b2006b24b7bc05079ac9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ad872c75dcdf2b2006b24b7bc05079ac9">estimator</a> () const</td></tr>
+<tr class="separator:ad872c75dcdf2b2006b24b7bc05079ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fecbbacdfd0adc964f8ce451c0046b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a29fecbbacdfd0adc964f8ce451c0046b">setEstimator</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a> &gt; <a class="el" href="classcv_1_1_stitcher.html#a5a9a51ac0f2fab42c1d694f88e1d6c2d">estimator</a>)</td></tr>
+<tr class="separator:a29fecbbacdfd0adc964f8ce451c0046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99a767d1d40f8ae1e739c8793278e57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ab99a767d1d40f8ae1e739c8793278e57">warper</a> ()</td></tr>
+<tr class="separator:ab99a767d1d40f8ae1e739c8793278e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a068dd5eb4e1e45791ce3abb509b9b97e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a068dd5eb4e1e45791ce3abb509b9b97e">warper</a> () const</td></tr>
+<tr class="separator:a068dd5eb4e1e45791ce3abb509b9b97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1219c1caae710736a5a5e6b13ad21b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#adb1219c1caae710736a5a5e6b13ad21b">setWarper</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a> &gt; creator)</td></tr>
+<tr class="separator:adb1219c1caae710736a5a5e6b13ad21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc646488ee47f87c743d3ab1e3832b48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#afc646488ee47f87c743d3ab1e3832b48">exposureCompensator</a> ()</td></tr>
+<tr class="separator:afc646488ee47f87c743d3ab1e3832b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab065fe029bb9b499c4d86c80741d0a2d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ab065fe029bb9b499c4d86c80741d0a2d">exposureCompensator</a> () const</td></tr>
+<tr class="separator:ab065fe029bb9b499c4d86c80741d0a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487373f15a54192e6a85ce6b04151d91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a487373f15a54192e6a85ce6b04151d91">setExposureCompensator</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a> &gt; exposure_comp)</td></tr>
+<tr class="separator:a487373f15a54192e6a85ce6b04151d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380c7c920f59047f2b25de7dc86f563d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a380c7c920f59047f2b25de7dc86f563d">seamFinder</a> ()</td></tr>
+<tr class="separator:a380c7c920f59047f2b25de7dc86f563d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850ad8689b42b43e10f8f45c39b0f797"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a850ad8689b42b43e10f8f45c39b0f797">seamFinder</a> () const</td></tr>
+<tr class="separator:a850ad8689b42b43e10f8f45c39b0f797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad813cf8a3493fa6fe53343f3f5a1da81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ad813cf8a3493fa6fe53343f3f5a1da81">setSeamFinder</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a> &gt; seam_finder)</td></tr>
+<tr class="separator:ad813cf8a3493fa6fe53343f3f5a1da81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf325d20b42ed5336956c966b6a416fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#aaf325d20b42ed5336956c966b6a416fe">blender</a> ()</td></tr>
+<tr class="separator:aaf325d20b42ed5336956c966b6a416fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07adb5cdfbbb49f181f96470a2bb203f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a07adb5cdfbbb49f181f96470a2bb203f">blender</a> () const</td></tr>
+<tr class="separator:a07adb5cdfbbb49f181f96470a2bb203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79651cf9e4b87cb6af26caa0535b9baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a79651cf9e4b87cb6af26caa0535b9baa">setBlender</a> (<a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a> &gt; b)</td></tr>
+<tr class="separator:a79651cf9e4b87cb6af26caa0535b9baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870f7fc1b75861b86d03b803f7cc9ef6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a870f7fc1b75861b86d03b803f7cc9ef6">estimateTransform</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> images, <a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> masks=<a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>())</td></tr>
+<tr class="memdesc:a870f7fc1b75861b86d03b803f7cc9ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">These functions try to match the given images and to estimate rotations of each camera.  <a href="classcv_1_1_stitcher.html#a870f7fc1b75861b86d03b803f7cc9ef6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a870f7fc1b75861b86d03b803f7cc9ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92819da901fa7cadfdf6909f120ebf4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a92819da901fa7cadfdf6909f120ebf4a">composePanorama</a> (<a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> pano)</td></tr>
+<tr class="separator:a92819da901fa7cadfdf6909f120ebf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05955c9e285b548c08948233009efd0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a05955c9e285b548c08948233009efd0c">composePanorama</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> images, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> pano)</td></tr>
+<tr class="memdesc:a05955c9e285b548c08948233009efd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">These functions try to compose the given images (or images stored internally from the other function calls) into the final pano under the assumption that the image transformations were estimated before.  <a href="classcv_1_1_stitcher.html#a05955c9e285b548c08948233009efd0c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a05955c9e285b548c08948233009efd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640f4372720587a1d14b979dd17be17e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a640f4372720587a1d14b979dd17be17e">stitch</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> images, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> pano)</td></tr>
+<tr class="separator:a640f4372720587a1d14b979dd17be17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4c20d42cf671cf5dcbfbd43aa421b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a6e4c20d42cf671cf5dcbfbd43aa421b9">stitch</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> images, <a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> masks, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> pano)</td></tr>
+<tr class="memdesc:a6e4c20d42cf671cf5dcbfbd43aa421b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">These functions try to stitch the given images.  <a href="classcv_1_1_stitcher.html#a6e4c20d42cf671cf5dcbfbd43aa421b9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6e4c20d42cf671cf5dcbfbd43aa421b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fed80561a9b46a1a924ac6cb334ac85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a7fed80561a9b46a1a924ac6cb334ac85">component</a> () const</td></tr>
+<tr class="separator:a7fed80561a9b46a1a924ac6cb334ac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9097e2b658dc1d3d57763c3fefd40aa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_camera_params.html">detail::CameraParams</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#af9097e2b658dc1d3d57763c3fefd40aa">cameras</a> () const</td></tr>
+<tr class="separator:af9097e2b658dc1d3d57763c3fefd40aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066784862e0b85001745577d8befc6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#a066784862e0b85001745577d8befc6f8">workScale</a> () const</td></tr>
+<tr class="separator:a066784862e0b85001745577d8befc6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56296a206e88fe886470fe09738c2c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcv_1_1_u_mat.html">UMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ac56296a206e88fe886470fe09738c2c8">resultMask</a> () const</td></tr>
+<tr class="separator:ac56296a206e88fe886470fe09738c2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ac8bf64a1cf6fd8e42da7f4cc650b3333"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_stitcher.html">Stitcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#ac8bf64a1cf6fd8e42da7f4cc650b3333">create</a> (<a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324">Mode</a> mode=<a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324a67810f8a77e48cadc3134972ed7f99fd">Stitcher::PANORAMA</a>)</td></tr>
+<tr class="memdesc:ac8bf64a1cf6fd8e42da7f4cc650b3333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classcv_1_1_stitcher.html" title="High level image stitcher.">Stitcher</a> configured in one of the stitching modes.  <a href="classcv_1_1_stitcher.html#ac8bf64a1cf6fd8e42da7f4cc650b3333">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac8bf64a1cf6fd8e42da7f4cc650b3333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:af864448487371edc19bc3034ab2479b6"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_stitcher.html#af864448487371edc19bc3034ab2479b6">ORIG_RESOL</a></td></tr>
+<tr class="separator:af864448487371edc19bc3034ab2479b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>High level image stitcher. </p>
+<p>It's possible to use this class without being aware of the entire stitching pipeline. However, to be able to achieve higher stitching stability and quality of the final images at least being familiar with the theory is recommended.</p>
+<dl class="section note"><dt>Заметки</dt><dd><ul>
+<li>A basic example on image stitching can be found at opencv_source_code/samples/cpp/stitching.cpp</li>
+<li>A basic example on image stitching in Python can be found at opencv_source_code/samples/python/stitching.py</li>
+<li>A detailed example on image stitching can be found at opencv_source_code/samples/cpp/stitching_detailed.cpp </li>
+</ul>
+</dd></dl>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a114713924ec05a0309f4df7e918c0324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114713924ec05a0309f4df7e918c0324">&#9670;&nbsp;</a></span>Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324">cv::Stitcher::Mode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a114713924ec05a0309f4df7e918c0324a67810f8a77e48cadc3134972ed7f99fd"></a>PANORAMA&#160;</td><td class="fielddoc"><p>Mode for creating photo panoramas. Expects images under perspective transformation and projects resulting pano to sphere.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1detail_1_1_best_of2_nearest_matcher.html" title="Features matcher which finds two best matches for each feature and leaves the best one only if the ra...">detail::BestOf2NearestMatcher</a> <a class="el" href="classcv_1_1_spherical_warper.html" title="Spherical warper factory class.">SphericalWarper</a> </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a114713924ec05a0309f4df7e918c0324ac706a6a118a4a648fef8b2fca5950e2a"></a>SCANS&#160;</td><td class="fielddoc"><p>Mode for composing scans. Expects images under affine transformation does not compensate exposure by default.</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classcv_1_1detail_1_1_affine_best_of2_nearest_matcher.html" title="Features matcher similar to cv::detail::BestOf2NearestMatcher which finds two best matches for each f...">detail::AffineBestOf2NearestMatcher</a> <a class="el" href="classcv_1_1_affine_warper.html" title="Affine warper factory class.">AffineWarper</a> </dd></dl>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a507409ce9435dd89857469d12ec06b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507409ce9435dd89857469d12ec06b45">&#9670;&nbsp;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">cv::Stitcher::Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a507409ce9435dd89857469d12ec06b45afc04343b65c6780b62b684ed14e26586"></a>OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a507409ce9435dd89857469d12ec06b45a2d8d41bde739520bdc0a75af8c869bbe"></a>ERR_NEED_MORE_IMGS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a507409ce9435dd89857469d12ec06b45af0b270c03b2a88cd0415c8e3f5e58c3e"></a>ERR_HOMOGRAPHY_EST_FAIL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a507409ce9435dd89857469d12ec06b45aabbdc1cc372c5aacc5266c5e2df0d492"></a>ERR_CAMERA_PARAMS_ADJUST_FAIL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aaf325d20b42ed5336956c966b6a416fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf325d20b42ed5336956c966b6a416fe">&#9670;&nbsp;</a></span>blender() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a>&gt; cv::Stitcher::blender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07adb5cdfbbb49f181f96470a2bb203f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07adb5cdfbbb49f181f96470a2bb203f">&#9670;&nbsp;</a></span>blender() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a>&gt; cv::Stitcher::blender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3afc54727bdd855bad04613f7e337a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3afc54727bdd855bad04613f7e337a89">&#9670;&nbsp;</a></span>bundleAdjuster() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a>&gt; cv::Stitcher::bundleAdjuster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8938cad4d5b9084c8199ea192f2b332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8938cad4d5b9084c8199ea192f2b332">&#9670;&nbsp;</a></span>bundleAdjuster() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a>&gt; cv::Stitcher::bundleAdjuster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9097e2b658dc1d3d57763c3fefd40aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9097e2b658dc1d3d57763c3fefd40aa">&#9670;&nbsp;</a></span>cameras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structcv_1_1detail_1_1_camera_params.html">detail::CameraParams</a>&gt; cv::Stitcher::cameras </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fed80561a9b46a1a924ac6cb334ac85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fed80561a9b46a1a924ac6cb334ac85">&#9670;&nbsp;</a></span>component()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; cv::Stitcher::component </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05955c9e285b548c08948233009efd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05955c9e285b548c08948233009efd0c">&#9670;&nbsp;</a></span>composePanorama() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> cv::Stitcher::composePanorama </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>pano</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>These functions try to compose the given images (or images stored internally from the other function calls) into the final pano under the assumption that the image transformations were estimated before. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Use the functions only if you're aware of the stitching pipeline, otherwise use <a class="el" href="classcv_1_1_stitcher.html#a640f4372720587a1d14b979dd17be17e">Stitcher::stitch</a>.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">images</td><td>Input images. </td></tr>
+    <tr><td class="paramname">pano</td><td>Final pano. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Status code. </dd></dl>
+
+</div>
+</div>
+<a id="a92819da901fa7cadfdf6909f120ebf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92819da901fa7cadfdf6909f120ebf4a">&#9670;&nbsp;</a></span>composePanorama() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> cv::Stitcher::composePanorama </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>pano</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="a34eca64bacfa106882f3efbda6a9ceeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34eca64bacfa106882f3efbda6a9ceeb">&#9670;&nbsp;</a></span>compositingResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double cv::Stitcher::compositingResol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8bf64a1cf6fd8e42da7f4cc650b3333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bf64a1cf6fd8e42da7f4cc650b3333">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_stitcher.html">Stitcher</a>&gt; cv::Stitcher::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324">Mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="classcv_1_1_stitcher.html#a114713924ec05a0309f4df7e918c0324a67810f8a77e48cadc3134972ed7f99fd">Stitcher::PANORAMA</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classcv_1_1_stitcher.html" title="High level image stitcher.">Stitcher</a> configured in one of the stitching modes. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>Scenario for stitcher operation. This is usually determined by source of images to stitch and their transformation. Default parameters will be chosen for operation in given scenario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="classcv_1_1_stitcher.html" title="High level image stitcher.">Stitcher</a> class instance. </dd></dl>
+
+</div>
+</div>
+<a id="a870f7fc1b75861b86d03b803f7cc9ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870f7fc1b75861b86d03b803f7cc9ef6">&#9670;&nbsp;</a></span>estimateTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> cv::Stitcher::estimateTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>masks</em> = <code><a class="el" href="group__core__basic.html#ga5d41a4929a976a8869632e76ce83211e">noArray</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>These functions try to match the given images and to estimate rotations of each camera. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Use the functions only if you're aware of the stitching pipeline, otherwise use <a class="el" href="classcv_1_1_stitcher.html#a640f4372720587a1d14b979dd17be17e">Stitcher::stitch</a>.</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">images</td><td>Input images. </td></tr>
+    <tr><td class="paramname">masks</td><td>Masks for each input image specifying where to look for keypoints (optional). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Status code. </dd></dl>
+
+</div>
+</div>
+<a id="a5a9a51ac0f2fab42c1d694f88e1d6c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9a51ac0f2fab42c1d694f88e1d6c2d">&#9670;&nbsp;</a></span>estimator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a>&gt; cv::Stitcher::estimator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad872c75dcdf2b2006b24b7bc05079ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad872c75dcdf2b2006b24b7bc05079ac9">&#9670;&nbsp;</a></span>estimator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a>&gt; cv::Stitcher::estimator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc646488ee47f87c743d3ab1e3832b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc646488ee47f87c743d3ab1e3832b48">&#9670;&nbsp;</a></span>exposureCompensator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a>&gt; cv::Stitcher::exposureCompensator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab065fe029bb9b499c4d86c80741d0a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab065fe029bb9b499c4d86c80741d0a2d">&#9670;&nbsp;</a></span>exposureCompensator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a>&gt; cv::Stitcher::exposureCompensator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad92b06472f22df6c9e25869fc58e9ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92b06472f22df6c9e25869fc58e9ceb">&#9670;&nbsp;</a></span>featuresFinder() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a>&gt; cv::Stitcher::featuresFinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af96ea17da5a882e990c0b77e43850179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96ea17da5a882e990c0b77e43850179">&#9670;&nbsp;</a></span>featuresFinder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a>&gt; cv::Stitcher::featuresFinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a426a576f1e2c12d9d5437a86625564c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426a576f1e2c12d9d5437a86625564c0">&#9670;&nbsp;</a></span>featuresMatcher() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a>&gt; cv::Stitcher::featuresMatcher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf4593da8d34466283ef0cdd21fff3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4593da8d34466283ef0cdd21fff3e7">&#9670;&nbsp;</a></span>featuresMatcher() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a>&gt; cv::Stitcher::featuresMatcher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ea56225ebc888f0ef56f823c118e332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea56225ebc888f0ef56f823c118e332">&#9670;&nbsp;</a></span>interpolationFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121">InterpolationFlags</a> cv::Stitcher::interpolationFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b2624192c5854601f4baebeee321c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2624192c5854601f4baebeee321c81">&#9670;&nbsp;</a></span>matchingMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a>&amp; cv::Stitcher::matchingMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9245980d2432e0926abed8b0ed2a233b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9245980d2432e0926abed8b0ed2a233b">&#9670;&nbsp;</a></span>panoConfidenceThresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double cv::Stitcher::panoConfidenceThresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7e3cf0b2a860714142d17cad9911be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7e3cf0b2a860714142d17cad9911be">&#9670;&nbsp;</a></span>registrationResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double cv::Stitcher::registrationResol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac56296a206e88fe886470fe09738c2c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56296a206e88fe886470fe09738c2c8">&#9670;&nbsp;</a></span>resultMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcv_1_1_u_mat.html">UMat</a> cv::Stitcher::resultMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab902b1c72cccbee50d9862c20d2ac0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab902b1c72cccbee50d9862c20d2ac0cc">&#9670;&nbsp;</a></span>seamEstimationResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double cv::Stitcher::seamEstimationResol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a380c7c920f59047f2b25de7dc86f563d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380c7c920f59047f2b25de7dc86f563d">&#9670;&nbsp;</a></span>seamFinder() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a>&gt; cv::Stitcher::seamFinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a850ad8689b42b43e10f8f45c39b0f797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850ad8689b42b43e10f8f45c39b0f797">&#9670;&nbsp;</a></span>seamFinder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a>&gt; cv::Stitcher::seamFinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79651cf9e4b87cb6af26caa0535b9baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79651cf9e4b87cb6af26caa0535b9baa">&#9670;&nbsp;</a></span>setBlender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setBlender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_blender.html">detail::Blender</a> &gt;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3060cbd7d492a53052754439e830d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3060cbd7d492a53052754439e830d40">&#9670;&nbsp;</a></span>setBundleAdjuster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setBundleAdjuster </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">detail::BundleAdjusterBase</a> &gt;&#160;</td>
+          <td class="paramname"><em>bundle_adjuster</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa03967a77329e1644ca69199a24e631d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03967a77329e1644ca69199a24e631d">&#9670;&nbsp;</a></span>setCompositingResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setCompositingResol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resol_mpx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29fecbbacdfd0adc964f8ce451c0046b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fecbbacdfd0adc964f8ce451c0046b">&#9670;&nbsp;</a></span>setEstimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setEstimator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_estimator.html">detail::Estimator</a> &gt;&#160;</td>
+          <td class="paramname"><em>estimator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a487373f15a54192e6a85ce6b04151d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487373f15a54192e6a85ce6b04151d91">&#9670;&nbsp;</a></span>setExposureCompensator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setExposureCompensator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_exposure_compensator.html">detail::ExposureCompensator</a> &gt;&#160;</td>
+          <td class="paramname"><em>exposure_comp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a943d01c149aa987e289f6be9b63d4e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943d01c149aa987e289f6be9b63d4e4b">&#9670;&nbsp;</a></span>setFeaturesFinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setFeaturesFinder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_feature2_d.html">Feature2D</a> &gt;&#160;</td>
+          <td class="paramname"><em>features_finder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada7fb8b0e696bfe3104f73d07ab0b5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7fb8b0e696bfe3104f73d07ab0b5c4">&#9670;&nbsp;</a></span>setFeaturesMatcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setFeaturesMatcher </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_features_matcher.html">detail::FeaturesMatcher</a> &gt;&#160;</td>
+          <td class="paramname"><em>features_matcher</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2d04563ed171aeddf367c8082247151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d04563ed171aeddf367c8082247151">&#9670;&nbsp;</a></span>setInterpolationFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setInterpolationFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__imgproc__transform.html#ga5bb5a1fea74ea38e1a5445ca803ff121">InterpolationFlags</a>&#160;</td>
+          <td class="paramname"><em>interp_flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1591614305b0385f8a6152458f93955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1591614305b0385f8a6152458f93955">&#9670;&nbsp;</a></span>setMatchingMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setMatchingMask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcv_1_1_u_mat.html">cv::UMat</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab00fbf5f70c1e5205752fd629412b2f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00fbf5f70c1e5205752fd629412b2f0">&#9670;&nbsp;</a></span>setPanoConfidenceThresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setPanoConfidenceThresh </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>conf_thresh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53b2f4ca60a57b58e417bb20056e3d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b2f4ca60a57b58e417bb20056e3d53">&#9670;&nbsp;</a></span>setRegistrationResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setRegistrationResol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resol_mpx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1b3bda0517d4f3bdfe5a927f95c6b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b3bda0517d4f3bdfe5a927f95c6b66">&#9670;&nbsp;</a></span>setSeamEstimationResol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setSeamEstimationResol </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resol_mpx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad813cf8a3493fa6fe53343f3f5a1da81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad813cf8a3493fa6fe53343f3f5a1da81">&#9670;&nbsp;</a></span>setSeamFinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setSeamFinder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1detail_1_1_seam_finder.html">detail::SeamFinder</a> &gt;&#160;</td>
+          <td class="paramname"><em>seam_finder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb1219c1caae710736a5a5e6b13ad21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb1219c1caae710736a5a5e6b13ad21b">&#9670;&nbsp;</a></span>setWarper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setWarper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a> &gt;&#160;</td>
+          <td class="paramname"><em>creator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e4a25b6e7961b125b64254f48ff6808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4a25b6e7961b125b64254f48ff6808">&#9670;&nbsp;</a></span>setWaveCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setWaveCorrection </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17413f5c06e4e569bfd45e01d4e8ff4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17413f5c06e4e569bfd45e01d4e8ff4a">&#9670;&nbsp;</a></span>setWaveCorrectKind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::Stitcher::setWaveCorrectKind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">detail::WaveCorrectKind</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e4c20d42cf671cf5dcbfbd43aa421b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4c20d42cf671cf5dcbfbd43aa421b9">&#9670;&nbsp;</a></span>stitch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> cv::Stitcher::stitch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>masks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>pano</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>These functions try to stitch the given images. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">images</td><td>Input images. </td></tr>
+    <tr><td class="paramname">masks</td><td>Masks for each input image specifying where to look for keypoints (optional). </td></tr>
+    <tr><td class="paramname">pano</td><td>Final pano. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Status code. </dd></dl>
+
+</div>
+</div>
+<a id="a640f4372720587a1d14b979dd17be17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640f4372720587a1d14b979dd17be17e">&#9670;&nbsp;</a></span>stitch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="classcv_1_1_stitcher.html#a507409ce9435dd89857469d12ec06b45">Status</a> cv::Stitcher::stitch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>pano</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами. </p>
+
+</div>
+</div>
+<a id="ab99a767d1d40f8ae1e739c8793278e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99a767d1d40f8ae1e739c8793278e57">&#9670;&nbsp;</a></span>warper() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a>&gt; cv::Stitcher::warper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a068dd5eb4e1e45791ce3abb509b9b97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068dd5eb4e1e45791ce3abb509b9b97e">&#9670;&nbsp;</a></span>warper() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1_warper_creator.html">WarperCreator</a>&gt; cv::Stitcher::warper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ac76435eb9bfb67bc5cecd998e909d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac76435eb9bfb67bc5cecd998e909d9">&#9670;&nbsp;</a></span>waveCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::Stitcher::waveCorrection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9c9c9b8a97b686ad3b93f7918c4c6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c9c9b8a97b686ad3b93f7918c4c6de">&#9670;&nbsp;</a></span>waveCorrectKind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">detail::WaveCorrectKind</a> cv::Stitcher::waveCorrectKind </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a066784862e0b85001745577d8befc6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066784862e0b85001745577d8befc6f8">&#9670;&nbsp;</a></span>workScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> double cv::Stitcher::workScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af864448487371edc19bc3034ab2479b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af864448487371edc19bc3034ab2479b6">&#9670;&nbsp;</a></span>ORIG_RESOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double cv::Stitcher::ORIG_RESOL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When setting a resolution for stitching, this values is a placeholder for preserving the original resolution. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="stitching_8hpp_source.html">stitching.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_stitcher.html">Stitcher</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

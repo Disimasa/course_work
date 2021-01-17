@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Private implementation helpers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__core__hal__intrin__impl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Private implementation helpers<div class="ingroups"><a class="el" href="group__core.html">Core functionality</a> &raquo; <a class="el" href="group__core__hal.html">Hardware Acceleration Layer</a> &raquo; <a class="el" href="group__core__hal__intrin.html">Universal intrinsics</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gaab5dddc36659025bcf499054aa6ee267"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaab5dddc36659025bcf499054aa6ee267">OPENCV_HAL_IMPL_MATH_FUNC</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc,  _Tp2)</td></tr>
+<tr class="memdesc:gaab5dddc36659025bcf499054aa6ee267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaab5dddc36659025bcf499054aa6ee267">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaab5dddc36659025bcf499054aa6ee267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga806c8c38c74c1e6e9ee64248345707cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga806c8c38c74c1e6e9ee64248345707cd">OPENCV_HAL_IMPL_MATH_FUNC_FLOAT</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  cfunc)</td></tr>
+<tr class="memdesc:ga806c8c38c74c1e6e9ee64248345707cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga806c8c38c74c1e6e9ee64248345707cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga806c8c38c74c1e6e9ee64248345707cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga24ff6e3ec8d93d9e0dde4f308c8ad0cd">OPENCV_HAL_IMPL_CMP_OP</a>(<a class="el" href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a>)</td></tr>
+<tr class="memdesc:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga24ff6e3ec8d93d9e0dde4f308c8ad0cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gad1e58f5f11e0f285dd9d72aac7216dd8">OPENCV_HAL_IMPL_ARITHM_OP</a>(<a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>,  bin_op,  cast_op,  _Tp2)</td></tr>
+<tr class="memdesc:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gad1e58f5f11e0f285dd9d72aac7216dd8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad1e58f5f11e0f285dd9d72aac7216dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc208994b4622b8ef3e21fdad7e387c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gafc208994b4622b8ef3e21fdad7e387c2">OPENCV_HAL_IMPL_SHIFT_OP</a>(shift_op)</td></tr>
+<tr class="memdesc:gafc208994b4622b8ef3e21fdad7e387c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gafc208994b4622b8ef3e21fdad7e387c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc208994b4622b8ef3e21fdad7e387c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2323457942fdb195a2b1b6aac3bad605"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga2323457942fdb195a2b1b6aac3bad605">OPENCV_HAL_IMPL_ROTATE_SHIFT_OP</a>(suffix,  opA,  opB)</td></tr>
+<tr class="memdesc:ga2323457942fdb195a2b1b6aac3bad605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise shift left.  <a href="group__core__hal__intrin__impl.html#ga2323457942fdb195a2b1b6aac3bad605">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2323457942fdb195a2b1b6aac3bad605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaa61141ff9bbb0448d8a75f41e8df2815">OPENCV_HAL_IMPL_C_INIT_ZERO</a>(_Tpvec,  _Tp,  suffix)&#160;&#160;&#160;inline _Tpvec v_setzero_##suffix() { return _Tpvec::zero(); }</td></tr>
+<tr class="memdesc:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaa61141ff9bbb0448d8a75f41e8df2815">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa61141ff9bbb0448d8a75f41e8df2815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7962182f93583a3065e7530d887476f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga7962182f93583a3065e7530d887476f7">OPENCV_HAL_IMPL_C_INIT_VAL</a>(_Tpvec,  _Tp,  suffix)&#160;&#160;&#160;inline _Tpvec v_setall_##suffix(_Tp val) { return _Tpvec::all(val); }</td></tr>
+<tr class="memdesc:ga7962182f93583a3065e7530d887476f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga7962182f93583a3065e7530d887476f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7962182f93583a3065e7530d887476f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga61cb06aaad99087d73ed1ed0acc6b450">OPENCV_HAL_IMPL_C_REINTERPRET</a>(_Tpvec,  _Tp,  suffix)</td></tr>
+<tr class="memdesc:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga61cb06aaad99087d73ed1ed0acc6b450">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga61cb06aaad99087d73ed1ed0acc6b450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gad1dc4d73959f133ee2bf9e9a8e562cd5">OPENCV_HAL_IMPL_C_SHIFTL</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gad1dc4d73959f133ee2bf9e9a8e562cd5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad1dc4d73959f133ee2bf9e9a8e562cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7a214c8dd89815cfb209bd930816bf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gaf7a214c8dd89815cfb209bd930816bf2">OPENCV_HAL_IMPL_C_SHIFTR</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gaf7a214c8dd89815cfb209bd930816bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gaf7a214c8dd89815cfb209bd930816bf2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf7a214c8dd89815cfb209bd930816bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gacd53058c7a7fb7155c3a0c4f0f34ec75">OPENCV_HAL_IMPL_C_RSHIFTR</a>(_Tpvec,  _Tp)</td></tr>
+<tr class="memdesc:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gacd53058c7a7fb7155c3a0c4f0f34ec75">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacd53058c7a7fb7155c3a0c4f0f34ec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gafc538cc8f8cdd2b0d51b93bdd8f071d2">OPENCV_HAL_IMPL_C_PACK</a>(_Tpvec,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gafc538cc8f8cdd2b0d51b93bdd8f071d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc538cc8f8cdd2b0d51b93bdd8f071d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga97c1f8273d7f3e8a78e40143f4f605ab">OPENCV_HAL_IMPL_C_RSHR_PACK</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga97c1f8273d7f3e8a78e40143f4f605ab">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga97c1f8273d7f3e8a78e40143f4f605ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga0008a7a28941bda32a0cdf59b0d0e16c">OPENCV_HAL_IMPL_C_PACK_STORE</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#ga0008a7a28941bda32a0cdf59b0d0e16c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0008a7a28941bda32a0cdf59b0d0e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab467b59cfb166937d5fbaa41e800be79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#gab467b59cfb166937d5fbaa41e800be79">OPENCV_HAL_IMPL_C_RSHR_PACK_STORE</a>(_Tpvec,  _Tp,  _Tpnvec,  _Tpn,  pack_suffix,  cast)</td></tr>
+<tr class="memdesc:gab467b59cfb166937d5fbaa41e800be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro.  <a href="group__core__hal__intrin__impl.html#gab467b59cfb166937d5fbaa41e800be79">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab467b59cfb166937d5fbaa41e800be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga33704e2cb5abc6be55e50b2781a01323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__hal__intrin__impl.html#ga33704e2cb5abc6be55e50b2781a01323">cv::OPENCV_HAL_IMPL_MATH_FUNC</a> (v_abs,(typename <a class="el" href="structcv_1_1_v___type_traits.html">V_TypeTraits</a>&lt; _Tp &gt;::abs_type) std::abs, typename <a class="el" href="structcv_1_1_v___type_traits.html">V_TypeTraits</a>&lt; _Tp &gt;::abs_type) static const unsigned char popCountTable[]</td></tr>
+<tr class="memdesc:ga33704e2cb5abc6be55e50b2781a01323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square root of elements.  <a href="group__core__hal__intrin__impl.html#ga33704e2cb5abc6be55e50b2781a01323">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga33704e2cb5abc6be55e50b2781a01323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Макросы</h2>
+<a id="gad1e58f5f11e0f285dd9d72aac7216dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1e58f5f11e0f285dd9d72aac7216dd8">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_ARITHM_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_ARITHM_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bin_op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cast_op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; \</div>
+<div class="line">inline v_reg&lt;_Tp2, n&gt; <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a, <span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; b) \</div>
+<div class="line">{ \</div>
+<div class="line">    typedef _Tp2 rtype; \</div>
+<div class="line">    v_reg&lt;rtype, n&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; n; i++ ) \</div>
+<div class="line">        c.s[i] = cast_op(a.s[i] bin_op b.s[i]); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__c_html_ga120677ac732b3c9bfecab149fc978afa"><div class="ttname"><a href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a></div><div class="ttdeci">CvCmpFunc func</div><div class="ttdef"><b>Definition:</b> core_c.h:1709</div></div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga7962182f93583a3065e7530d887476f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7962182f93583a3065e7530d887476f7">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_INIT_VAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_INIT_VAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;inline _Tpvec v_setall_##suffix(_Tp val) { return _Tpvec::all(val); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gaa61141ff9bbb0448d8a75f41e8df2815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa61141ff9bbb0448d8a75f41e8df2815">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_INIT_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_INIT_ZERO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;inline _Tpvec v_setzero_##suffix() { return _Tpvec::zero(); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gafc538cc8f8cdd2b0d51b93bdd8f071d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc538cc8f8cdd2b0d51b93bdd8f071d2">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_PACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_PACK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpnvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pack_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cast&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">inline</span> _Tpnvec v_##pack_suffix(<span class="keyword">const</span> _Tpvec&amp; a, <span class="keyword">const</span> _Tpvec&amp; b) \</div>
+<div class="line">{ \</div>
+<div class="line">    _Tpnvec c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; _Tpvec::nlanes; i++ ) \</div>
+<div class="line">    { \</div>
+<div class="line">        c.s[i] = cast&lt;_Tpn&gt;(a.s[i]); \</div>
+<div class="line">        c.s[i+_Tpvec::nlanes] = cast&lt;_Tpn&gt;(b.s[i]); \</div>
+<div class="line">    } \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga0008a7a28941bda32a0cdf59b0d0e16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0008a7a28941bda32a0cdf59b0d0e16c">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_PACK_STORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_PACK_STORE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpnvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pack_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cast&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> v_##pack_suffix##_store(_Tpn* ptr, <span class="keyword">const</span> _Tpvec&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; _Tpvec::nlanes; i++ ) \</div>
+<div class="line">        ptr[i] = cast&lt;_Tpn&gt;(a.s[i]); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga61cb06aaad99087d73ed1ed0acc6b450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61cb06aaad99087d73ed1ed0acc6b450">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_REINTERPRET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_REINTERPRET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp0, <span class="keywordtype">int</span> n0&gt; <span class="keyword">inline</span> _Tpvec \</div>
+<div class="line">    v_reinterpret_as_##suffix(<span class="keyword">const</span> v_reg&lt;_Tp0, n0&gt;&amp; a) \</div>
+<div class="line">{ <span class="keywordflow">return</span> a.template reinterpret_as&lt;_Tp, _Tpvec::nlanes&gt;(); }</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gacd53058c7a7fb7155c3a0c4f0f34ec75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd53058c7a7fb7155c3a0c4f0f34ec75">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_RSHIFTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_RSHIFTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> _Tpvec v_rshr(<span class="keyword">const</span> _Tpvec&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    _Tpvec c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; _Tpvec::nlanes; i++ ) \</div>
+<div class="line">        c.s[i] = (_Tp)((a.s[i] + ((_Tp)1 &lt;&lt; (n - 1))) &gt;&gt; n); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga97c1f8273d7f3e8a78e40143f4f605ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97c1f8273d7f3e8a78e40143f4f605ab">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_RSHR_PACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_RSHR_PACK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpnvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pack_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cast&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> _Tpnvec v_rshr_##pack_suffix(<span class="keyword">const</span> _Tpvec&amp; a, <span class="keyword">const</span> _Tpvec&amp; b) \</div>
+<div class="line">{ \</div>
+<div class="line">    _Tpnvec c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; _Tpvec::nlanes; i++ ) \</div>
+<div class="line">    { \</div>
+<div class="line">        c.s[i] = cast&lt;_Tpn&gt;((a.s[i] + ((_Tp)1 &lt;&lt; (n - 1))) &gt;&gt; n); \</div>
+<div class="line">        c.s[i+_Tpvec::nlanes] = cast&lt;_Tpn&gt;((b.s[i] + ((_Tp)1 &lt;&lt; (n - 1))) &gt;&gt; n); \</div>
+<div class="line">    } \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gab467b59cfb166937d5fbaa41e800be79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab467b59cfb166937d5fbaa41e800be79">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_RSHR_PACK_STORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_RSHR_PACK_STORE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpnvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pack_suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cast&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> <span class="keywordtype">void</span> v_rshr_##pack_suffix##_store(_Tpn* ptr, <span class="keyword">const</span> _Tpvec&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; _Tpvec::nlanes; i++ ) \</div>
+<div class="line">        ptr[i] = cast&lt;_Tpn&gt;((a.s[i] + ((_Tp)1 &lt;&lt; (n - 1))) &gt;&gt; n); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gad1dc4d73959f133ee2bf9e9a8e562cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1dc4d73959f133ee2bf9e9a8e562cd5">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_SHIFTL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_SHIFTL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> _Tpvec v_shl(<span class="keyword">const</span> _Tpvec&amp; a) \</div>
+<div class="line">{ <span class="keywordflow">return</span> a &lt;&lt; n; }</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gaf7a214c8dd89815cfb209bd930816bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7a214c8dd89815cfb209bd930816bf2">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_C_SHIFTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_C_SHIFTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tpvec, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> _Tpvec v_shr(<span class="keyword">const</span> _Tpvec&amp; a) \</div>
+<div class="line">{ <span class="keywordflow">return</span> a &gt;&gt; n; }</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga24ff6e3ec8d93d9e0dde4f308c8ad0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24ff6e3ec8d93d9e0dde4f308c8ad0cd">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_CMP_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_CMP_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; \</div>
+<div class="line">inline v_reg&lt;_Tp, n&gt; <span class="keyword">operator</span> <a class="code" href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a>(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a, <span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; b) \</div>
+<div class="line">{ \</div>
+<div class="line">    typedef <span class="keyword">typename</span> V_TypeTraits&lt;_Tp&gt;::int_type itype; \</div>
+<div class="line">    v_reg&lt;_Tp, n&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; n; i++ ) \</div>
+<div class="line">        c.s[i] = V_TypeTraits&lt;_Tp&gt;::reinterpret_from_int((itype)-(<span class="keywordtype">int</span>)(a.s[i] <a class="code" href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a> b.s[i])); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__c_html_ga292f0fbbab460e725fd3d77e51a5e4c1"><div class="ttname"><a href="group__core__c.html#ga292f0fbbab460e725fd3d77e51a5e4c1">cmp_op</a></div><div class="ttdeci">const CvArr CvArr int cmp_op</div><div class="ttdef"><b>Definition:</b> core_c.h:1154</div></div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="gaab5dddc36659025bcf499054aa6ee267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab5dddc36659025bcf499054aa6ee267">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_MATH_FUNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_MATH_FUNC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cfunc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_Tp2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> v_reg&lt;_Tp2, n&gt; <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    v_reg&lt;_Tp2, n&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; n; i++ ) \</div>
+<div class="line">        c.s[i] = cfunc(a.s[i]); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga806c8c38c74c1e6e9ee64248345707cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga806c8c38c74c1e6e9ee64248345707cd">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_MATH_FUNC_FLOAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_MATH_FUNC_FLOAT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cfunc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">inline</span> v_reg&lt;int, 4&gt; <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;float, 4&gt;&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    v_reg&lt;int, 4&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; 4; i++ ) \</div>
+<div class="line">        c.s[i] = cfunc(a.s[i]); \</div>
+<div class="line">    return c; \</div>
+<div class="line">} \</div>
+<div class="line">inline v_reg&lt;int, 4&gt; <a class="code" href="group__core__c.html#ga120677ac732b3c9bfecab149fc978afa">func</a>(<span class="keyword">const</span> v_reg&lt;double, 2&gt;&amp; a) \</div>
+<div class="line">{ \</div>
+<div class="line">    v_reg&lt;int, 4&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; 2; i++ ) \</div>
+<div class="line">    { \</div>
+<div class="line">        c.s[i] = cfunc(a.s[i]); \</div>
+<div class="line">        c.s[i + 2] = 0; \</div>
+<div class="line">    } \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<a id="ga2323457942fdb195a2b1b6aac3bad605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2323457942fdb195a2b1b6aac3bad605">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_ROTATE_SHIFT_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_ROTATE_SHIFT_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">suffix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">opA, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">opB&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bitwise shift left. </p>
+<p>For 16-, 32- and 64-bit integer values.</p>
+<p>Bitwise shift right</p>
+<p>For 16-, 32- and 64-bit integer values.</p>
+<p>Helper macro </p>
+
+</div>
+</div>
+<a id="gafc208994b4622b8ef3e21fdad7e387c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc208994b4622b8ef3e21fdad7e387c2">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_SHIFT_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_IMPL_SHIFT_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">shift_op</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> _Tp, <span class="keywordtype">int</span> n&gt; <span class="keyword">inline</span> v_reg&lt;_Tp, n&gt; <span class="keyword">operator</span> shift_op(<span class="keyword">const</span> v_reg&lt;_Tp, n&gt;&amp; a, <span class="keywordtype">int</span> imm) \</div>
+<div class="line">{ \</div>
+<div class="line">    v_reg&lt;_Tp, n&gt; c; \</div>
+<div class="line">    for( <span class="keywordtype">int</span> i = 0; i &lt; n; i++ ) \</div>
+<div class="line">        c.s[i] = (_Tp)(a.s[i] shift_op imm); \</div>
+<div class="line">    return c; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Helper macro. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga33704e2cb5abc6be55e50b2781a01323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33704e2cb5abc6be55e50b2781a01323">&#9670;&nbsp;</a></span>OPENCV_HAL_IMPL_MATH_FUNC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::OPENCV_HAL_IMPL_MATH_FUNC </td>
+          <td>(</td>
+          <td class="paramtype">v_abs&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(typename <a class="el" href="structcv_1_1_v___type_traits.html">V_TypeTraits</a>&lt; _Tp &gt;::abs_type) std::abs&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structcv_1_1_v___type_traits.html">V_TypeTraits</a>&lt; _Tp &gt;::abs_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Square root of elements. </p>
+<p>Only for floating point types.</p>
+<p>Absolute value of elements</p>
+<p>Only for floating point types.</p>
+<p>Round elements</p>
+<p>Only for floating point types.</p>
+<p>Floor elements</p>
+<p>Only for floating point types.</p>
+<p>Ceil elements</p>
+<p>Only for floating point types.</p>
+<p>Truncate elements</p>
+<p>Only for floating point types.</p>
+<p>Helper macro</p>
+<p>Helper macro</p>
+<p>Choose min values for each pair</p>
+<p>Scheme: </p><div class="fragment"><div class="line">{A1 A2 ...}</div>
+<div class="line">{B1 B2 ...}</div>
+<div class="line">--------------</div>
+<div class="line">{<a class="code" href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379">min</a>(A1,B1) <a class="code" href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379">min</a>(A2,B2) ...}</div>
+<div class="ttc" id="agroup__core__utils__softfloat_html_gac48df53b8fd34b87e7b121fa8fd4c379"><div class="ttname"><a href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379">cv::min</a></div><div class="ttdeci">softfloat min(const softfloat &amp;a, const softfloat &amp;b)</div><div class="ttdoc">Min and Max functions.</div><div class="ttdef"><b>Definition:</b> softfloat.hpp:437</div></div>
+</div><!-- fragment --><p> For all types except 64-bit integer.</p>
+<p>Choose max values for each pair</p>
+<p>Scheme: </p><div class="fragment"><div class="line">{A1 A2 ...}</div>
+<div class="line">{B1 B2 ...}</div>
+<div class="line">--------------</div>
+<div class="line">{<a class="code" href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">max</a>(A1,B1) <a class="code" href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">max</a>(A2,B2) ...}</div>
+<div class="ttc" id="agroup__core__utils__softfloat_html_ga78f988f6cfa6223610298cbd4f86ec66"><div class="ttname"><a href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">cv::max</a></div><div class="ttdeci">softfloat max(const softfloat &amp;a, const softfloat &amp;b)</div><div class="ttdef"><b>Definition:</b> softfloat.hpp:440</div></div>
+</div><!-- fragment --><p> For all types except 64-bit integer.</p>
+<p>Find one min value</p>
+<p>Scheme: </p><div class="fragment"><div class="line">{A1 A2 A3 ...} =&gt; <a class="code" href="group__core__utils__softfloat.html#gac48df53b8fd34b87e7b121fa8fd4c379">min</a>(A1,A2,A3,...)</div>
+</div><!-- fragment --><p> For all types except 64-bit integer and 64-bit floating point types.</p>
+<p>Find one max value</p>
+<p>Scheme: </p><div class="fragment"><div class="line">{A1 A2 A3 ...} =&gt; <a class="code" href="group__core__utils__softfloat.html#ga78f988f6cfa6223610298cbd4f86ec66">max</a>(A1,A2,A3,...)</div>
+</div><!-- fragment --><p> For all types except 64-bit integer and 64-bit floating point types. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

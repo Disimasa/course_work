@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Исходный файл opencv/build/include/opencv2/videoio/videoio_c.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('videoio__c_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">videoio_c.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="videoio__c_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">    1</a></span>&#160;<span class="comment">/*M///////////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  By downloading, copying, installing or using the software you agree to this license.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  If you do not agree to this license, do not download, install,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copy or use the software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//                        Intel License Agreement</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                For Open Source Computer Vision Library</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Copyright (C) 2000, Intel Corporation, all rights reserved.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Third party copyrights are property of their respective owners.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without modification,</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//   * Redistribution&#39;s of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//   * Redistribution&#39;s in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//     this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//     and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//   * The name of Intel Corporation may not be used to endorse or promote products</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//     derived from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// This software is provided by the copyright holders and contributors &quot;as is&quot; and</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// any express or implied warranties, including, but not limited to, the implied</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// warranties of merchantability and fitness for a particular purpose are disclaimed.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// In no event shall the Intel Corporation or contributors be liable for any direct,</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// indirect, incidental, special, exemplary, or consequential damages</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// (including, but not limited to, procurement of substitute goods or services;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// loss of use, data, or profits; or business interruption) however caused</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// and on any theory of liability, whether in contract, strict liability,</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// or tort (including negligence or otherwise) arising in any way out of</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// the use of this software, even if advised of the possibility of such damage.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//M*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifndef OPENCV_VIDEOIO_H</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define OPENCV_VIDEOIO_H</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core__c_8h.html">opencv2/core/core_c.h</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="videoio_2legacy_2constants__c_8h.html">opencv2/videoio/legacy/constants_c.h</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/****************************************************************************************\</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">*                         Working with Video Files and Cameras                           *</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">\****************************************************************************************/</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a> <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">   70</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>*) cvCreateFileCapture( <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a> );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga8c399265194069eb08b059fe98d8a545">   74</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>*) cvCreateFileCaptureWithPreference( <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a> , <span class="keywordtype">int</span> <a class="code" href="group__videoio__c.html#ga8c399265194069eb08b059fe98d8a545">apiPreference</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>*) cvCreateCameraCapture( <span class="keywordtype">int</span> <a class="code" href="group__core__c.html#ga750b5d744c39a06bfb13e6eb010e35d0">index</a> );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="group__videoio__c.html#gaee2deb635b1c2ba647492fd2b7a2093e">   84</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">int</span>) cvGrabFrame( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga1ee02d49f53d1bffa105b003988cb6db">   92</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="struct___ipl_image.html">IplImage</a>*) cvRetrieveFrame( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture, <span class="keywordtype">int</span> streamIdx <a class="code" href="group__videoio__c.html#ga4ecc2faec8765245141b834c83d9bfa1">CV_DEFAULT</a>(0) );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="struct___ipl_image.html">IplImage</a>*) cvQueryFrame( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga7994447b15bb1eeacbf342259c5e015b">  102</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">void</span>) cvReleaseCapture( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>** capture );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga8635d9e852e1fa7a5720868b2df59427">  106</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">double</span>) cvGetCaptureProperty( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture, <span class="keywordtype">int</span> <a class="code" href="group__videoio__c.html#ga8635d9e852e1fa7a5720868b2df59427">property_id</a> );</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">  109</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">int</span>)    cvSetCaptureProperty( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture, <span class="keywordtype">int</span> <a class="code" href="group__videoio__c.html#ga8635d9e852e1fa7a5720868b2df59427">property_id</a>, <span class="keywordtype">double</span> <a class="code" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a> );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">  115</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">int</span>)    cvGetCaptureDomain( <a class="code" href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a>* capture);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a> <a class="code" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga9aa0a26434ee5817a5e37a4972bae0d8">  125</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<a class="code" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>*) cvCreateVideoWriter( <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, <span class="keywordtype">int</span> <a class="code" href="group__videoio__c.html#ga9aa0a26434ee5817a5e37a4972bae0d8">fourcc</a>,</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga058dbaebc483d4becfa7f75d2ed3dd1c">  126</a></span>&#160;                                           <span class="keywordtype">double</span> <a class="code" href="group__videoio__c.html#gadbca5b692e9ace76ccf02d9c621ee228">fps</a>, <a class="code" href="struct_cv_size.html">CvSize</a> <a class="code" href="group__videoio__c.html#ga058dbaebc483d4becfa7f75d2ed3dd1c">frame_size</a>,</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga2342b4114eef6675f281a365a58b3478">  127</a></span>&#160;                                           <span class="keywordtype">int</span> is_color <a class="code" href="group__videoio__c.html#ga4ecc2faec8765245141b834c83d9bfa1">CV_DEFAULT</a>(1));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">  131</a></span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">int</span>) cvWriteFrame( <a class="code" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>* <a class="code" href="group__core__c.html#gab0556d637aece6457c15641ff0d5e1ea">writer</a>, <span class="keyword">const</span> <a class="code" href="struct___ipl_image.html">IplImage</a>* <a class="code" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<a class="code" href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a>(<span class="keywordtype">void</span>) cvReleaseVideoWriter( <a class="code" href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a>** <a class="code" href="group__core__c.html#gab0556d637aece6457c15641ff0d5e1ea">writer</a> );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">// ***************************************************************************************</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga740fbcd0a6dc9a25e747ce3946491772">  140</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define cvCaptureFromCAM cvCreateCameraCapture </span></div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga709ac3b8d05afd27c1d86f6636cf55fb">  141</a></span>&#160;<span class="preprocessor">#define cvCaptureFromFile cvCreateFileCapture  </span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="group__videoio__c.html#ga710135adb524858e34858a447d03f507">  142</a></span>&#160;<span class="preprocessor">#define cvCaptureFromAVI cvCaptureFromFile     </span></div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="group__videoio__c.html#gaea3f63afc666dc8e09293498c15128c2">  143</a></span>&#160;<span class="preprocessor">#define cvCreateAVIWriter cvCreateVideoWriter  </span></div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="group__videoio__c.html#gaa251b74b997bc2ad92c424f96ecf82de">  144</a></span>&#160;<span class="preprocessor">#define cvWriteToAVI cvWriteFrame              </span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//OPENCV_VIDEOIO_H</span></div>
+<div class="ttc" id="acore__c_8h_html"><div class="ttname"><a href="core__c_8h.html">core_c.h</a></div></div>
+<div class="ttc" id="agroup__core__c_html_ga750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="group__core__c.html#ga750b5d744c39a06bfb13e6eb010e35d0">index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> core_c.h:631</div></div>
+<div class="ttc" id="agroup__core__c_html_gab0556d637aece6457c15641ff0d5e1ea"><div class="ttname"><a href="group__core__c.html#gab0556d637aece6457c15641ff0d5e1ea">writer</a></div><div class="ttdeci">CvSeqWriter * writer</div><div class="ttdef"><b>Definition:</b> core_c.h:1643</div></div>
+<div class="ttc" id="agroup__core__c_html_gacc427f35f3bd9f865d39012657cc42f8"><div class="ttname"><a href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a></div><div class="ttdeci">const char const char ** filename</div><div class="ttdef"><b>Definition:</b> core_c.h:2627</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga058dbaebc483d4becfa7f75d2ed3dd1c"><div class="ttname"><a href="group__videoio__c.html#ga058dbaebc483d4becfa7f75d2ed3dd1c">frame_size</a></div><div class="ttdeci">int double CvSize frame_size</div><div class="ttdef"><b>Definition:</b> videoio_c.h:126</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga394109074fab9bdca2ea45514b1946b7"><div class="ttname"><a href="group__videoio__c.html#ga394109074fab9bdca2ea45514b1946b7">CvCapture</a></div><div class="ttdeci">struct CvCapture CvCapture</div><div class="ttdoc">&quot;black box&quot; capture structure</div><div class="ttdef"><b>Definition:</b> videoio_c.h:66</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga4ecc2faec8765245141b834c83d9bfa1"><div class="ttname"><a href="group__videoio__c.html#ga4ecc2faec8765245141b834c83d9bfa1">CV_DEFAULT</a></div><div class="ttdeci">int streamIdx CV_DEFAULT(0))</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga731049183fae0125c0b5d2940d461cf3"><div class="ttname"><a href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a></div><div class="ttdeci">const IplImage * image</div><div class="ttdef"><b>Definition:</b> videoio_c.h:131</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga81cab760e486f32e9c518d88fda50528"><div class="ttname"><a href="group__videoio__c.html#ga81cab760e486f32e9c518d88fda50528">CVAPI</a></div><div class="ttdeci">CVAPI(CvCapture *) cvCreateFileCapture(const char *filename)</div><div class="ttdoc">start capturing frames from video file</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga8635d9e852e1fa7a5720868b2df59427"><div class="ttname"><a href="group__videoio__c.html#ga8635d9e852e1fa7a5720868b2df59427">property_id</a></div><div class="ttdeci">int property_id</div><div class="ttdef"><b>Definition:</b> videoio_c.h:106</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga888ba48aa022b60aecf98a462aa1b638"><div class="ttname"><a href="group__videoio__c.html#ga888ba48aa022b60aecf98a462aa1b638">CvVideoWriter</a></div><div class="ttdeci">struct CvVideoWriter CvVideoWriter</div><div class="ttdoc">&quot;black box&quot; video file writer structure</div><div class="ttdef"><b>Definition:</b> videoio_c.h:121</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga8c399265194069eb08b059fe98d8a545"><div class="ttname"><a href="group__videoio__c.html#ga8c399265194069eb08b059fe98d8a545">apiPreference</a></div><div class="ttdeci">int apiPreference</div><div class="ttdef"><b>Definition:</b> videoio_c.h:74</div></div>
+<div class="ttc" id="agroup__videoio__c_html_ga9aa0a26434ee5817a5e37a4972bae0d8"><div class="ttname"><a href="group__videoio__c.html#ga9aa0a26434ee5817a5e37a4972bae0d8">fourcc</a></div><div class="ttdeci">int fourcc</div><div class="ttdef"><b>Definition:</b> videoio_c.h:125</div></div>
+<div class="ttc" id="agroup__videoio__c_html_gad4670c92695d4327c21292905a803901"><div class="ttname"><a href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a></div><div class="ttdeci">int double value</div><div class="ttdef"><b>Definition:</b> videoio_c.h:109</div></div>
+<div class="ttc" id="agroup__videoio__c_html_gadbca5b692e9ace76ccf02d9c621ee228"><div class="ttname"><a href="group__videoio__c.html#gadbca5b692e9ace76ccf02d9c621ee228">fps</a></div><div class="ttdeci">int double fps</div><div class="ttdef"><b>Definition:</b> videoio_c.h:126</div></div>
+<div class="ttc" id="astruct___ipl_image_html"><div class="ttname"><a href="struct___ipl_image.html">_IplImage</a></div><div class="ttdef"><b>Definition:</b> types_c.h:328</div></div>
+<div class="ttc" id="astruct_cv_size_html"><div class="ttname"><a href="struct_cv_size.html">CvSize</a></div><div class="ttdef"><b>Definition:</b> types_c.h:1170</div></div>
+<div class="ttc" id="avideoio_2legacy_2constants__c_8h_html"><div class="ttname"><a href="videoio_2legacy_2constants__c_8h.html">constants_c.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_b40d80130979037c28edf8ba7bbdc012.html">videoio</a></li><li class="navelem"><a class="el" href="videoio__c_8h.html">videoio_c.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

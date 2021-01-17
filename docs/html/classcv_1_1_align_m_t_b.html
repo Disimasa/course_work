@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::AlignMTB</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1_align_m_t_b.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classcv_1_1_align_m_t_b-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::AlignMTB<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__photo.html">Computational Photography</a> &raquo; <a class="el" href="group__photo__hdr.html">HDR imaging</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations.  
+ <a href="classcv_1_1_align_m_t_b.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opencv2_2photo_8hpp_source.html">photo.hpp</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classcv_1_1_align_exposures.html">cv::AlignExposures</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aedff9c2e50c13acd393556ffb68a1ca4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#aedff9c2e50c13acd393556ffb68a1ca4">process</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> src, std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> times, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> response) <a class="el" href="group__core__utils.html#ga4d89d63e402ef9ddc48e18e21180fe4a">CV_OVERRIDE</a>=0</td></tr>
+<tr class="memdesc:aedff9c2e50c13acd393556ffb68a1ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns images.  <a href="classcv_1_1_align_m_t_b.html#aedff9c2e50c13acd393556ffb68a1ca4">Подробнее...</a><br /></td></tr>
+<tr class="separator:aedff9c2e50c13acd393556ffb68a1ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed88b348a719b41c49e6faf31d64b755"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#aed88b348a719b41c49e6faf31d64b755">process</a> (<a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a> src, std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;<a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>)=0</td></tr>
+<tr class="memdesc:aed88b348a719b41c49e6faf31d64b755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short version of process, that doesn't take extra arguments.  <a href="classcv_1_1_align_m_t_b.html#aed88b348a719b41c49e6faf31d64b755">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed88b348a719b41c49e6faf31d64b755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1856f020c96e3e7a9636e122dad7cac"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#ac1856f020c96e3e7a9636e122dad7cac">calculateShift</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img0, <a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img1)=0</td></tr>
+<tr class="memdesc:ac1856f020c96e3e7a9636e122dad7cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates shift between two images, i. e. how to shift the second image to correspond it with the first.  <a href="classcv_1_1_align_m_t_b.html#ac1856f020c96e3e7a9636e122dad7cac">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac1856f020c96e3e7a9636e122dad7cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebdfa882c8246d6b959165d666aca6c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#a4ebdfa882c8246d6b959165d666aca6c">shiftMat</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> src, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> <a class="el" href="group__imgproc__misc.html#ga52bb929b38b35664f16102ee054f0b3d">dst</a>, const <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> shift)=0</td></tr>
+<tr class="memdesc:a4ebdfa882c8246d6b959165d666aca6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function, that shift <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> filling new regions with zeros.  <a href="classcv_1_1_align_m_t_b.html#a4ebdfa882c8246d6b959165d666aca6c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ebdfa882c8246d6b959165d666aca6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c9c7b685c6f6c792e7bff2a0feb933"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#a25c9c7b685c6f6c792e7bff2a0feb933">computeBitmaps</a> (<a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a> img, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> tb, <a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a> eb)=0</td></tr>
+<tr class="memdesc:a25c9c7b685c6f6c792e7bff2a0feb933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes median threshold and exclude bitmaps of given image.  <a href="classcv_1_1_align_m_t_b.html#a25c9c7b685c6f6c792e7bff2a0feb933">Подробнее...</a><br /></td></tr>
+<tr class="separator:a25c9c7b685c6f6c792e7bff2a0feb933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54b62678337774b0e4aefe699e2a65e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#af54b62678337774b0e4aefe699e2a65e">getMaxBits</a> () const =0</td></tr>
+<tr class="separator:af54b62678337774b0e4aefe699e2a65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9663f5ba7326e78c68970bff1effcd8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#aa9663f5ba7326e78c68970bff1effcd8">setMaxBits</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> max_bits)=0</td></tr>
+<tr class="separator:aa9663f5ba7326e78c68970bff1effcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad644b36b4a468dbbd37d7ba239b07e2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#aad644b36b4a468dbbd37d7ba239b07e2">getExcludeRange</a> () const =0</td></tr>
+<tr class="separator:aad644b36b4a468dbbd37d7ba239b07e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c5e1370264eadb397bf97a13ab0049"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#ab2c5e1370264eadb397bf97a13ab0049">setExcludeRange</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> exclude_range)=0</td></tr>
+<tr class="separator:ab2c5e1370264eadb397bf97a13ab0049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2cb0688999da747010c3271e96cf2b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#aed2cb0688999da747010c3271e96cf2b">getCut</a> () const =0</td></tr>
+<tr class="separator:aed2cb0688999da747010c3271e96cf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c69958af18bd39100bc299a5cbaa37b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_align_m_t_b.html#a6c69958af18bd39100bc299a5cbaa37b">setCut</a> (bool <a class="el" href="group__videoio__c.html#gad4670c92695d4327c21292905a803901">value</a>)=0</td></tr>
+<tr class="separator:a6c69958af18bd39100bc299a5cbaa37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a827c8b2781ed17574805f373e6054ff1">Algorithm</a> ()</td></tr>
+<tr class="separator:a827c8b2781ed17574805f373e6054ff1 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8ae826127fa0f1f8d10a24841bd376f8">~Algorithm</a> ()</td></tr>
+<tr class="separator:a8ae826127fa0f1f8d10a24841bd376f8 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">clear</a> ()</td></tr>
+<tr class="memdesc:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the algorithm state.  <a href="classcv_1_1_algorithm.html#a382269508151069f33e2991e9eabbcab">Подробнее...</a><br /></td></tr>
+<tr class="separator:a382269508151069f33e2991e9eabbcab inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">write</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="memdesc:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores algorithm parameters in a file storage.  <a href="classcv_1_1_algorithm.html#a1f8ad7b8add515077367fb9949a174d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f8ad7b8add515077367fb9949a174d2 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">write</a> (const <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &gt; &amp;fs, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;name=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>()) const</td></tr>
+<tr class="memdesc:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">simplified API for language bindings Эта функция перегружена и предоставляется исключительно для удобства использования. Она отличается от вышеупомянутой только фактическими аргументами.  <a href="classcv_1_1_algorithm.html#a63ae96500f2c84b7c5479418f467e974">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63ae96500f2c84b7c5479418f467e974 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm parameters from a file storage.  <a href="classcv_1_1_algorithm.html#a8b47225d8dcc934de71b919403538b16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b47225d8dcc934de71b919403538b16 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">empty</a> () const</td></tr>
+<tr class="memdesc:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classcv_1_1_algorithm.html" title="This is a base class for all more or less complex algorithms in OpenCV.">Algorithm</a> is empty (e.g. in the very beginning or after unsuccessful read.  <a href="classcv_1_1_algorithm.html#aecd390e05cdd34fc6b6ebabd89ff53c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecd390e05cdd34fc6b6ebabd89ff53c9 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#af5584a693c6fe6a3b8e0fcdd6c25d1fd">save</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>) const</td></tr>
+<tr class="separator:af5584a693c6fe6a3b8e0fcdd6c25d1fd inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a6ec6ed12df12de3ae03f50fcd2118cd7">getDefaultName</a> () const</td></tr>
+<tr class="separator:a6ec6ed12df12de3ae03f50fcd2118cd7 inherit pub_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">read</a> (const <a class="el" href="classcv_1_1_file_node.html">FileNode</a> &amp;fn)</td></tr>
+<tr class="memdesc:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads algorithm from the file node.  <a href="classcv_1_1_algorithm.html#ad8c591bacb34c485f5b7a250c314fc53">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8c591bacb34c485f5b7a250c314fc53 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">load</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from the file.  <a href="classcv_1_1_algorithm.html#a623841c33b58ea9c4847da04607e067b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a623841c33b58ea9c4847da04607e067b inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplParams" colspan="2">template&lt;typename _Tp &gt; </td></tr>
+<tr class="memitem:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; _Tp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">loadFromString</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;strModel, const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;objname=<a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a>())</td></tr>
+<tr class="memdesc:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads algorithm from a String.  <a href="classcv_1_1_algorithm.html#a3ba305a10d02479c13cf7d169c321547">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ba305a10d02479c13cf7d169c321547 inherit pub_static_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcv_1_1_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcv_1_1_algorithm')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="classcv_1_1_algorithm.html">cv::Algorithm</a></td></tr>
+<tr class="memitem:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1_algorithm.html#a68eeca71617474ad3d4561786f0289d2">writeFormat</a> (<a class="el" href="classcv_1_1_file_storage.html">FileStorage</a> &amp;fs) const</td></tr>
+<tr class="separator:a68eeca71617474ad3d4561786f0289d2 inherit pro_methods_classcv_1_1_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. </p>
+<p>It is invariant to exposure, so exposure values and camera response are not necessary.</p>
+<p>In this implementation new image regions are filled with zeros.</p>
+<p>For more information see <b>[GW03]</b> . </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ac1856f020c96e3e7a9636e122dad7cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1856f020c96e3e7a9636e122dad7cac">&#9670;&nbsp;</a></span>calculateShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a> cv::AlignMTB::calculateShift </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates shift between two images, i. e. how to shift the second image to correspond it with the first. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img0</td><td>first image </td></tr>
+    <tr><td class="paramname">img1</td><td>second image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25c9c7b685c6f6c792e7bff2a0feb933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c9c7b685c6f6c792e7bff2a0feb933">&#9670;&nbsp;</a></span>computeBitmaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::computeBitmaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>tb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>eb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes median threshold and exclude bitmaps of given image. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>input image </td></tr>
+    <tr><td class="paramname">tb</td><td>median threshold bitmap </td></tr>
+    <tr><td class="paramname">eb</td><td>exclude bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed2cb0688999da747010c3271e96cf2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2cb0688999da747010c3271e96cf2b">&#9670;&nbsp;</a></span>getCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> bool cv::AlignMTB::getCut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad644b36b4a468dbbd37d7ba239b07e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad644b36b4a468dbbd37d7ba239b07e2">&#9670;&nbsp;</a></span>getExcludeRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::AlignMTB::getExcludeRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af54b62678337774b0e4aefe699e2a65e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54b62678337774b0e4aefe699e2a65e">&#9670;&nbsp;</a></span>getMaxBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> cv::AlignMTB::getMaxBits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed88b348a719b41c49e6faf31d64b755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed88b348a719b41c49e6faf31d64b755">&#9670;&nbsp;</a></span>process() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Short version of process, that doesn't take extra arguments. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>vector of input images </td></tr>
+    <tr><td class="paramname">dst</td><td>vector of aligned images </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedff9c2e50c13acd393556ffb68a1ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedff9c2e50c13acd393556ffb68a1ca4">&#9670;&nbsp;</a></span>process() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#ga606feabe3b50ab6838f1ba89727aa07a">InputArrayOfArrays</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>times</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aligns images. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>vector of input images </td></tr>
+    <tr><td class="paramname">dst</td><td>vector of aligned images </td></tr>
+    <tr><td class="paramname">times</td><td>vector of exposure time values for each image </td></tr>
+    <tr><td class="paramname">response</td><td>256x1 matrix with inverse camera response function for each pixel value, it should have the same number of channels as images. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classcv_1_1_align_exposures.html#af9b69b8245e7fbc6bcf7caccc82a5271">cv::AlignExposures</a>.</p>
+
+</div>
+</div>
+<a id="a6c69958af18bd39100bc299a5cbaa37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c69958af18bd39100bc299a5cbaa37b">&#9670;&nbsp;</a></span>setCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::setCut </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2c5e1370264eadb397bf97a13ab0049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c5e1370264eadb397bf97a13ab0049">&#9670;&nbsp;</a></span>setExcludeRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::setExcludeRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>exclude_range</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9663f5ba7326e78c68970bff1effcd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9663f5ba7326e78c68970bff1effcd8">&#9670;&nbsp;</a></span>setMaxBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::setMaxBits </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>max_bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ebdfa882c8246d6b959165d666aca6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ebdfa882c8246d6b959165d666aca6c">&#9670;&nbsp;</a></span>shiftMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__core__utils.html#gae435babf3ce7cca990524b23adf6b4a3">CV_WRAP</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::AlignMTB::shiftMat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gab1371a23c90d5f4725ea98240377d7a1">InputArray</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__basic.html#gaad17fda1d0f0d1ee069aebb1df2913c0">OutputArray</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1e83eafb2d26b3c93f09e8338bcab192">Point</a>&#160;</td>
+          <td class="paramname"><em>shift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function, that shift <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">Mat</a> filling new regions with zeros. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>input image </td></tr>
+    <tr><td class="paramname">dst</td><td>result image </td></tr>
+    <tr><td class="paramname">shift</td><td>shift value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/<a class="el" href="opencv2_2photo_8hpp_source.html">photo.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="classcv_1_1_align_m_t_b.html">AlignMTB</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

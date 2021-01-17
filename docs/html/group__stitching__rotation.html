@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Rotation Estimation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__stitching__rotation.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Rotation Estimation<div class="ingroups"><a class="el" href="group__stitching.html">Images stitching</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_estimator.html">cv::detail::Estimator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation estimator base class.  <a href="classcv_1_1detail_1_1_estimator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_homography_based_estimator.html">cv::detail::HomographyBasedEstimator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Homography based rotation estimator.  <a href="classcv_1_1detail_1_1_homography_based_estimator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_affine_based_estimator.html">cv::detail::AffineBasedEstimator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affine transformation based estimator.  <a href="classcv_1_1detail_1_1_affine_based_estimator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_base.html">cv::detail::BundleAdjusterBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all camera parameters refinement methods.  <a href="classcv_1_1detail_1_1_bundle_adjuster_base.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_no_bundle_adjuster.html">cv::detail::NoBundleAdjuster</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stub bundle adjuster that does nothing.  <a href="classcv_1_1detail_1_1_no_bundle_adjuster.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_reproj.html">cv::detail::BundleAdjusterReproj</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the camera parameters refinement algorithm which minimizes sum of the reprojection error squares.  <a href="classcv_1_1detail_1_1_bundle_adjuster_reproj.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_ray.html">cv::detail::BundleAdjusterRay</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the camera parameters refinement algorithm which minimizes sum of the distances between the rays passing through the camera center and a feature. :  <a href="classcv_1_1detail_1_1_bundle_adjuster_ray.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_affine.html">cv::detail::BundleAdjusterAffine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bundle adjuster that expects affine transformation represented in homogeneous coordinates in R for each camera param. Implements camera parameters refinement algorithm which minimizes sum of the reprojection error squares.  <a href="classcv_1_1detail_1_1_bundle_adjuster_affine.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1detail_1_1_bundle_adjuster_affine_partial.html">cv::detail::BundleAdjusterAffinePartial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bundle adjuster that expects affine transformation with 4 DOF represented in homogeneous coordinates in R for each camera param. Implements camera parameters refinement algorithm which minimizes sum of the reprojection error squares.  <a href="classcv_1_1detail_1_1_bundle_adjuster_affine_partial.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga83b24d4c3e93584986a56d9e43b9cf7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">cv::detail::WaveCorrectKind</a> { <a class="el" href="group__stitching__rotation.html#gga83b24d4c3e93584986a56d9e43b9cf7faa9e3a58207a58e3245aab95af18b68a9">cv::detail::WAVE_CORRECT_HORIZ</a>
+, <a class="el" href="group__stitching__rotation.html#gga83b24d4c3e93584986a56d9e43b9cf7fa3d3661394e07da0c7c51ddeb84851212">cv::detail::WAVE_CORRECT_VERT</a>
+, <a class="el" href="group__stitching__rotation.html#gga83b24d4c3e93584986a56d9e43b9cf7facb39c2cdb52bdf9cc0819416f6b1d8fc">cv::detail::WAVE_CORRECT_AUTO</a>
+ }</td></tr>
+<tr class="separator:ga83b24d4c3e93584986a56d9e43b9cf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga1e0a0fd8d31d146784f847faf78e5ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">WaveCorrectKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga1e0a0fd8d31d146784f847faf78e5ef5">cv::detail::autoDetectWaveCorrectKind</a> (const std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;rmats)</td></tr>
+<tr class="memdesc:ga1e0a0fd8d31d146784f847faf78e5ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to detect the wave correction kind depending on whether a panorama spans horizontally or vertically.  <a href="group__stitching__rotation.html#ga1e0a0fd8d31d146784f847faf78e5ef5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1e0a0fd8d31d146784f847faf78e5ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7deff9c9965d4decf5226c46d93226bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga7deff9c9965d4decf5226c46d93226bb">cv::detail::waveCorrect</a> (<a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;rmats, <a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">WaveCorrectKind</a> kind)</td></tr>
+<tr class="memdesc:ga7deff9c9965d4decf5226c46d93226bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to make panorama more horizontal (or vertical).  <a href="group__stitching__rotation.html#ga7deff9c9965d4decf5226c46d93226bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7deff9c9965d4decf5226c46d93226bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga095e66ef1f5000562ee212ec974b2d4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> <a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga095e66ef1f5000562ee212ec974b2d4e">cv::detail::matchesGraphAsString</a> (std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;pathes, std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;pairwise_matches, float conf_threshold)</td></tr>
+<tr class="separator:ga095e66ef1f5000562ee212ec974b2d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a2b2243c4e1ae6f62f01e90baff281e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga2a2b2243c4e1ae6f62f01e90baff281e">cv::detail::leaveBiggestComponent</a> (std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_image_features.html">ImageFeatures</a> &gt; &amp;<a class="el" href="group__stitching__match.html#ga9abb80158a01f6f8cd3a1a782075f481">features</a>, std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;pairwise_matches, float conf_threshold)</td></tr>
+<tr class="separator:ga2a2b2243c4e1ae6f62f01e90baff281e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba0b4a98942144a2cfb7a82a39e2fdc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#gaba0b4a98942144a2cfb7a82a39e2fdc1">cv::detail::findMaxSpanningTree</a> (<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> num_images, const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;pairwise_matches, <a class="el" href="classcv_1_1detail_1_1_graph.html">Graph</a> &amp;span_tree, std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;centers)</td></tr>
+<tr class="separator:gaba0b4a98942144a2cfb7a82a39e2fdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ga83b24d4c3e93584986a56d9e43b9cf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83b24d4c3e93584986a56d9e43b9cf7f">&#9670;&nbsp;</a></span>WaveCorrectKind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">cv::detail::WaveCorrectKind</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga83b24d4c3e93584986a56d9e43b9cf7faa9e3a58207a58e3245aab95af18b68a9"></a>WAVE_CORRECT_HORIZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga83b24d4c3e93584986a56d9e43b9cf7fa3d3661394e07da0c7c51ddeb84851212"></a>WAVE_CORRECT_VERT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga83b24d4c3e93584986a56d9e43b9cf7facb39c2cdb52bdf9cc0819416f6b1d8fc"></a>WAVE_CORRECT_AUTO&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ga1e0a0fd8d31d146784f847faf78e5ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e0a0fd8d31d146784f847faf78e5ef5">&#9670;&nbsp;</a></span>autoDetectWaveCorrectKind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">WaveCorrectKind</a> cv::detail::autoDetectWaveCorrectKind </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rmats</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to detect the wave correction kind depending on whether a panorama spans horizontally or vertically. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rmats</td><td>Camera rotation matrices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>The correction kind to use for this panorama </dd></dl>
+
+</div>
+</div>
+<a id="gaba0b4a98942144a2cfb7a82a39e2fdc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba0b4a98942144a2cfb7a82a39e2fdc1">&#9670;&nbsp;</a></span>findMaxSpanningTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> cv::detail::findMaxSpanningTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&#160;</td>
+          <td class="paramname"><em>num_images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pairwise_matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1detail_1_1_graph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>span_tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>centers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2a2b2243c4e1ae6f62f01e90baff281e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a2b2243c4e1ae6f62f01e90baff281e">&#9670;&nbsp;</a></span>leaveBiggestComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> std::vector&lt;<a class="el" href="namespacecv.html#ae4ef4b83c54acc5e8d2956db165de790">int</a>&gt; cv::detail::leaveBiggestComponent </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_image_features.html">ImageFeatures</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pairwise_matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>conf_threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga095e66ef1f5000562ee212ec974b2d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga095e66ef1f5000562ee212ec974b2d4e">&#9670;&nbsp;</a></span>matchesGraphAsString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> <a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> cv::detail::matchesGraphAsString </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pathes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structcv_1_1detail_1_1_matches_info.html">MatchesInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pairwise_matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>conf_threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7deff9c9965d4decf5226c46d93226bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7deff9c9965d4decf5226c46d93226bb">&#9670;&nbsp;</a></span>waveCorrect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> <a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> cv::detail::waveCorrect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__core__utils.html#ga3ebcb7da2dea1ae77f77f643f54dcf09">CV_IN_OUT</a> std::vector&lt; <a class="el" href="classcv_1_1_mat.html">Mat</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rmats</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">WaveCorrectKind</a>&#160;</td>
+          <td class="paramname"><em>kind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to make panorama more horizontal (or vertical). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rmats</td><td>Camera rotation matrices. </td></tr>
+    <tr><td class="paramname">kind</td><td>Correction kind, see <a class="el" href="group__stitching__rotation.html#ga83b24d4c3e93584986a56d9e43b9cf7f">detail::WaveCorrectKind</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

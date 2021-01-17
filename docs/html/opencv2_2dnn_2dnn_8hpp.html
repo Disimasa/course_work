@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/dnn/dnn.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('opencv2_2dnn_2dnn_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл dnn.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="opencv2_2core_8hpp_source.html">opencv2/core.hpp</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="async_8hpp_source.html">opencv2/core/async.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dnn_2version_8hpp_source.html">../dnn/version.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="dict_8hpp_source.html">opencv2/dnn/dict.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="layer_8hpp_source.html">opencv2/dnn/layer.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="dnn_8inl_8hpp_source.html">opencv2/dnn/dnn.inl.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="inference__engine_8hpp_source.html">opencv2/dnn/utils/inference_engine.hpp</a>&gt;</code><br />
+</div>
+<p><a href="opencv2_2dnn_2dnn_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer_params.html">cv::dnn::LayerParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class provides all data needed to initialize layer.  <a href="classcv_1_1dnn_1_1_layer_params.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_backend_node.html">cv::dnn::BackendNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of this class encapsulates functions of certain backends.  <a href="classcv_1_1dnn_1_1_backend_node.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_backend_wrapper.html">cv::dnn::BackendWrapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivatives of this class wraps <a class="el" href="classcv_1_1_mat.html" title="n-dimensional dense array class">cv::Mat</a> for different backends and targets.  <a href="classcv_1_1dnn_1_1_backend_wrapper.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer.html">cv::dnn::Layer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This interface class allows to build new Layers - are building blocks of networks.  <a href="classcv_1_1dnn_1_1_layer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_net.html">cv::dnn::Net</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class allows to create and manipulate comprehensive artificial neural networks.  <a href="classcv_1_1dnn_1_1_net.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_model.html">cv::dnn::Model</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is presented high-level API for neural networks.  <a href="classcv_1_1dnn_1_1_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_classification_model.html">cv::dnn::ClassificationModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for classification models.  <a href="classcv_1_1dnn_1_1_classification_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_keypoints_model.html">cv::dnn::KeypointsModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for keypoints models.  <a href="classcv_1_1dnn_1_1_keypoints_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_segmentation_model.html">cv::dnn::SegmentationModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for segmentation models.  <a href="classcv_1_1dnn_1_1_segmentation_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_detection_model.html">cv::dnn::DetectionModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for object detection networks.  <a href="classcv_1_1dnn_1_1_detection_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_text_recognition_model.html">cv::dnn::TextRecognitionModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for text recognition networks.  <a href="classcv_1_1dnn_1_1_text_recognition_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_text_detection_model.html">cv::dnn::TextDetectionModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for text detection networks.  <a href="classcv_1_1dnn_1_1_text_detection_model.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_text_detection_model___e_a_s_t.html">cv::dnn::TextDetectionModel_EAST</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for text detection DL networks compatible with EAST model.  <a href="classcv_1_1dnn_1_1_text_detection_model___e_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_text_detection_model___d_b.html">cv::dnn::TextDetectionModel_DB</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents high-level API for text detection DL networks compatible with DB model.  <a href="classcv_1_1dnn_1_1_text_detection_model___d_b.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1dnn"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1dnn.html">cv::dnn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga8a9ab61770c140f0fa2880c90aeae832"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga8a9ab61770c140f0fa2880c90aeae832">cv::dnn::MatShape</a></td></tr>
+<tr class="separator:ga8a9ab61770c140f0fa2880c90aeae832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga186f7d9bfacac8b0ff2e26e2eab02625"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga186f7d9bfacac8b0ff2e26e2eab02625">cv::dnn::Backend</a> { <br />
+&#160;&#160;<a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625a51129aae9bc5df62a3ba95f98008717e">cv::dnn::DNN_BACKEND_DEFAULT</a> = 0
+, <a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625ab066325cd703cf32062246e77dca4a76">cv::dnn::DNN_BACKEND_HALIDE</a>
+, <a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625a6d17a7450b1e077ac91faa10a1e85486">cv::dnn::DNN_BACKEND_INFERENCE_ENGINE</a>
+, <a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625a88591466239dde609ae676cec698a5b1">cv::dnn::DNN_BACKEND_OPENCV</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625a91dbe681fc3246a2bd36b04e7b65122f">cv::dnn::DNN_BACKEND_VKCOM</a>
+, <a class="el" href="group__dnn.html#gga186f7d9bfacac8b0ff2e26e2eab02625ab242310e1ca6b405ead9308f4b66971c">cv::dnn::DNN_BACKEND_CUDA</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga186f7d9bfacac8b0ff2e26e2eab02625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of computation backends supported by layers.  <a href="group__dnn.html#ga186f7d9bfacac8b0ff2e26e2eab02625">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga186f7d9bfacac8b0ff2e26e2eab02625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga709af7692ba29788182cf573531b0ff5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">cv::dnn::Target</a> { <br />
+&#160;&#160;<a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a17439f29cc1356016ed533e465b03539">cv::dnn::DNN_TARGET_CPU</a> = 0
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a45f8ea53f004e52665078a88167c7c08">cv::dnn::DNN_TARGET_OPENCL</a>
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5ab6d2643e6e5a3d0dfaca2ec69fd041b6">cv::dnn::DNN_TARGET_OPENCL_FP16</a>
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a17d5b540a9ee3ee726f181f309a223b3">cv::dnn::DNN_TARGET_MYRIAD</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5aacc0a9bdf5a6ecfca0bd6557470d5a8e">cv::dnn::DNN_TARGET_VULKAN</a>
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a03cfa62d77507ae5e32f8aa4e559f331">cv::dnn::DNN_TARGET_FPGA</a>
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a5d7e050b90e78a923d304c328d16e5f1">cv::dnn::DNN_TARGET_CUDA</a>
+, <a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5a36a5a729e39ff249d590ea78170b6968">cv::dnn::DNN_TARGET_CUDA_FP16</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dnn.html#gga709af7692ba29788182cf573531b0ff5ac2d885f739eec7f45de4cb7068a93292">cv::dnn::DNN_TARGET_HDDL</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga709af7692ba29788182cf573531b0ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of target devices for computations.  <a href="group__dnn.html#ga709af7692ba29788182cf573531b0ff5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga709af7692ba29788182cf573531b0ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga5ed111d42949dc05667a0e5a4a62d3f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> std::vector&lt; std::pair&lt; Backend, Target &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga5ed111d42949dc05667a0e5a4a62d3f4">cv::dnn::getAvailableBackends</a> ()</td></tr>
+<tr class="separator:ga5ed111d42949dc05667a0e5a4a62d3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4f5b809c27bd8f1662aa036390709b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> std::vector&lt; Target &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gab4f5b809c27bd8f1662aa036390709b3">cv::dnn::getAvailableTargets</a> (dnn::Backend be)</td></tr>
+<tr class="separator:gab4f5b809c27bd8f1662aa036390709b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga152c68c0640248b5524264b50c19ead9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga152c68c0640248b5524264b50c19ead9">cv::dnn::readNetFromDarknet</a> (const String &amp;cfgFile, const String &amp;darknetModel=String())</td></tr>
+<tr class="memdesc:ga152c68c0640248b5524264b50c19ead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://pjreddie.com/darknet/">Darknet</a> model files.  <a href="group__dnn.html#ga152c68c0640248b5524264b50c19ead9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga152c68c0640248b5524264b50c19ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2967a88eee9ab2e0a774d08d8d3a70f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga2967a88eee9ab2e0a774d08d8d3a70f1">cv::dnn::readNetFromDarknet</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferCfg, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModel=std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt;())</td></tr>
+<tr class="memdesc:ga2967a88eee9ab2e0a774d08d8d3a70f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://pjreddie.com/darknet/">Darknet</a> model files.  <a href="group__dnn.html#ga2967a88eee9ab2e0a774d08d8d3a70f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2967a88eee9ab2e0a774d08d8d3a70f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade12d5862b7c7e1a7841f5e58b2bdf40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gade12d5862b7c7e1a7841f5e58b2bdf40">cv::dnn::readNetFromDarknet</a> (const char *bufferCfg, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenCfg, const char *bufferModel=NULL, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenModel=0)</td></tr>
+<tr class="memdesc:gade12d5862b7c7e1a7841f5e58b2bdf40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://pjreddie.com/darknet/">Darknet</a> model files.  <a href="group__dnn.html#gade12d5862b7c7e1a7841f5e58b2bdf40">Подробнее...</a><br /></td></tr>
+<tr class="separator:gade12d5862b7c7e1a7841f5e58b2bdf40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab45728f0089ab857830b5570442cb48c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gab45728f0089ab857830b5570442cb48c">cv::dnn::readNetFromCaffe</a> (const String &amp;prototxt, const String &amp;caffeModel=String())</td></tr>
+<tr class="memdesc:gab45728f0089ab857830b5570442cb48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="http://caffe.berkeleyvision.org">Caffe</a> framework's format.  <a href="group__dnn.html#gab45728f0089ab857830b5570442cb48c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab45728f0089ab857830b5570442cb48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5df3ff7eadc2feeae0aef3fd957e5d28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga5df3ff7eadc2feeae0aef3fd957e5d28">cv::dnn::readNetFromCaffe</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferProto, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModel=std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt;())</td></tr>
+<tr class="memdesc:ga5df3ff7eadc2feeae0aef3fd957e5d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in Caffe model in memory.  <a href="group__dnn.html#ga5df3ff7eadc2feeae0aef3fd957e5d28">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5df3ff7eadc2feeae0aef3fd957e5d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac48554cdba97f372d45c46699ccb0927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gac48554cdba97f372d45c46699ccb0927">cv::dnn::readNetFromCaffe</a> (const char *bufferProto, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenProto, const char *bufferModel=NULL, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenModel=0)</td></tr>
+<tr class="memdesc:gac48554cdba97f372d45c46699ccb0927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in Caffe model in memory.  <a href="group__dnn.html#gac48554cdba97f372d45c46699ccb0927">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac48554cdba97f372d45c46699ccb0927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc25ad7c0415a886c8fdccd6654405ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gadc25ad7c0415a886c8fdccd6654405ee">cv::dnn::readNetFromTensorflow</a> (const String &amp;model, const String &amp;config=String())</td></tr>
+<tr class="memdesc:gadc25ad7c0415a886c8fdccd6654405ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://www.tensorflow.org/">TensorFlow</a> framework's format.  <a href="group__dnn.html#gadc25ad7c0415a886c8fdccd6654405ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadc25ad7c0415a886c8fdccd6654405ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab3fc197ba7ae0d33a2fb039aeaa6e14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gaab3fc197ba7ae0d33a2fb039aeaa6e14">cv::dnn::readNetFromTensorflow</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModel, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferConfig=std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt;())</td></tr>
+<tr class="memdesc:gaab3fc197ba7ae0d33a2fb039aeaa6e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://www.tensorflow.org/">TensorFlow</a> framework's format.  <a href="group__dnn.html#gaab3fc197ba7ae0d33a2fb039aeaa6e14">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaab3fc197ba7ae0d33a2fb039aeaa6e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe3cd77290bfcb01206288f59651e787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gafe3cd77290bfcb01206288f59651e787">cv::dnn::readNetFromTensorflow</a> (const char *bufferModel, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenModel, const char *bufferConfig=NULL, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> lenConfig=0)</td></tr>
+<tr class="memdesc:gafe3cd77290bfcb01206288f59651e787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="https://www.tensorflow.org/">TensorFlow</a> framework's format.  <a href="group__dnn.html#gafe3cd77290bfcb01206288f59651e787">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafe3cd77290bfcb01206288f59651e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1469d6d8da75d59b77ec1a4e43cc78de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga1469d6d8da75d59b77ec1a4e43cc78de">cv::dnn::readNetFromTorch</a> (const String &amp;model, bool isBinary=true, bool evaluate=true)</td></tr>
+<tr class="memdesc:ga1469d6d8da75d59b77ec1a4e43cc78de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model stored in <a href="http://torch.ch">Torch7</a> framework's format.  <a href="group__dnn.html#ga1469d6d8da75d59b77ec1a4e43cc78de">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1469d6d8da75d59b77ec1a4e43cc78de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b63323fa4e6f8833e682ae06bac7ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga8b63323fa4e6f8833e682ae06bac7ead">cv::dnn::readNet</a> (const String &amp;model, const String &amp;config=&quot;&quot;, const String &amp;framework=&quot;&quot;)</td></tr>
+<tr class="memdesc:ga8b63323fa4e6f8833e682ae06bac7ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read deep learning network represented in one of the supported formats.  <a href="group__dnn.html#ga8b63323fa4e6f8833e682ae06bac7ead">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8b63323fa4e6f8833e682ae06bac7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8bdefe379f69c4657dea3fcf1d52c3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gad8bdefe379f69c4657dea3fcf1d52c3b">cv::dnn::readNet</a> (const String &amp;framework, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModel, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferConfig=std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt;())</td></tr>
+<tr class="memdesc:gad8bdefe379f69c4657dea3fcf1d52c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read deep learning network represented in one of the supported formats.  <a href="group__dnn.html#gad8bdefe379f69c4657dea3fcf1d52c3b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad8bdefe379f69c4657dea3fcf1d52c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49ab1837d0e59982721a29555fee9a79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga49ab1837d0e59982721a29555fee9a79">cv::dnn::readTorchBlob</a> (const String &amp;<a class="el" href="group__core__c.html#gacc427f35f3bd9f865d39012657cc42f8">filename</a>, bool isBinary=true)</td></tr>
+<tr class="memdesc:ga49ab1837d0e59982721a29555fee9a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads blob which was serialized as torch.Tensor object of Torch7 framework.  <a href="group__dnn.html#ga49ab1837d0e59982721a29555fee9a79">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga49ab1837d0e59982721a29555fee9a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga091ac571df35736ff8455112ee7b01e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga091ac571df35736ff8455112ee7b01e5">cv::dnn::readNetFromModelOptimizer</a> (const String &amp;xml, const String &amp;bin)</td></tr>
+<tr class="memdesc:ga091ac571df35736ff8455112ee7b01e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer intermediate representation.  <a href="group__dnn.html#ga091ac571df35736ff8455112ee7b01e5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga091ac571df35736ff8455112ee7b01e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c8ad83f76a289b2c9a252844abb249f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga4c8ad83f76a289b2c9a252844abb249f">cv::dnn::readNetFromModelOptimizer</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferModelConfig, const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;bufferWeights)</td></tr>
+<tr class="memdesc:ga4c8ad83f76a289b2c9a252844abb249f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer intermediate representation.  <a href="group__dnn.html#ga4c8ad83f76a289b2c9a252844abb249f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4c8ad83f76a289b2c9a252844abb249f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61f41387a29171da1ad0e960545b2fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga61f41387a29171da1ad0e960545b2fe5">cv::dnn::readNetFromModelOptimizer</a> (const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *bufferModelConfigPtr, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> bufferModelConfigSize, const <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> *bufferWeightsPtr, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> bufferWeightsSize)</td></tr>
+<tr class="memdesc:ga61f41387a29171da1ad0e960545b2fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a network from Intel's <a class="el" href="classcv_1_1dnn_1_1_model.html" title="This class is presented high-level API for neural networks.">Model</a> Optimizer intermediate representation.  <a href="group__dnn.html#ga61f41387a29171da1ad0e960545b2fe5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga61f41387a29171da1ad0e960545b2fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf48bd57b33d36f908528461796f3e14c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gaf48bd57b33d36f908528461796f3e14c">cv::dnn::readNetFromONNX</a> (const String &amp;onnxFile)</td></tr>
+<tr class="memdesc:gaf48bd57b33d36f908528461796f3e14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model <a href="https://onnx.ai/">ONNX</a>.  <a href="group__dnn.html#gaf48bd57b33d36f908528461796f3e14c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf48bd57b33d36f908528461796f3e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f375aed8244a7f120daa439099a9619"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga8f375aed8244a7f120daa439099a9619">cv::dnn::readNetFromONNX</a> (const char *<a class="el" href="group__imgproc__c.html#gac9db6ccf8d1a2abfd9a0a162547f9666">buffer</a>, <a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">size_t</a> sizeBuffer)</td></tr>
+<tr class="memdesc:ga8f375aed8244a7f120daa439099a9619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model from <a href="https://onnx.ai/">ONNX</a> in-memory buffer.  <a href="group__dnn.html#ga8f375aed8244a7f120daa439099a9619">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8f375aed8244a7f120daa439099a9619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0773053d87fcc74e4ca218a66670e2c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Net&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga0773053d87fcc74e4ca218a66670e2c1">cv::dnn::readNetFromONNX</a> (const std::vector&lt; <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a> &gt; &amp;<a class="el" href="group__imgproc__c.html#gac9db6ccf8d1a2abfd9a0a162547f9666">buffer</a>)</td></tr>
+<tr class="memdesc:ga0773053d87fcc74e4ca218a66670e2c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a network model from <a href="https://onnx.ai/">ONNX</a> in-memory buffer.  <a href="group__dnn.html#ga0773053d87fcc74e4ca218a66670e2c1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0773053d87fcc74e4ca218a66670e2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7fd3f318f27236f74592a90b7949c3f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga7fd3f318f27236f74592a90b7949c3f3">cv::dnn::readTensorFromONNX</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:ga7fd3f318f27236f74592a90b7949c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates blob from .pb file.  <a href="group__dnn.html#ga7fd3f318f27236f74592a90b7949c3f3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7fd3f318f27236f74592a90b7949c3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafebdc16c4e071e804c36218a75251f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gafebdc16c4e071e804c36218a75251f94">cv::dnn::blobFromImage</a> (InputArray <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, double scalefactor=1.0, const Size &amp;<a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>=Size(), const Scalar &amp;<a class="el" href="group__core__c.html#gad090d0faa53f44e0377c8d63dab3fa20">mean</a>=Scalar(), bool swapRB=false, bool crop=false, int ddepth=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:gafebdc16c4e071e804c36218a75251f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 4-dimensional blob from image. Optionally resizes and crops <code>image</code> from center, subtract <code>mean</code> values, scales values by <code>scalefactor</code>, swap Blue and Red channels.  <a href="group__dnn.html#gafebdc16c4e071e804c36218a75251f94">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafebdc16c4e071e804c36218a75251f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a633e1ca05fd60a6f6a101048597a7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga5a633e1ca05fd60a6f6a101048597a7a">cv::dnn::blobFromImage</a> (InputArray <a class="el" href="group__videoio__c.html#ga731049183fae0125c0b5d2940d461cf3">image</a>, OutputArray blob, double scalefactor=1.0, const Size &amp;<a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>=Size(), const Scalar &amp;<a class="el" href="group__core__c.html#gad090d0faa53f44e0377c8d63dab3fa20">mean</a>=Scalar(), bool swapRB=false, bool crop=false, int ddepth=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:ga5a633e1ca05fd60a6f6a101048597a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 4-dimensional blob from image.  <a href="group__dnn.html#ga5a633e1ca05fd60a6f6a101048597a7a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5a633e1ca05fd60a6f6a101048597a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9029ffff4ff6b8648c349a023e8ad1eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga9029ffff4ff6b8648c349a023e8ad1eb">cv::dnn::blobFromImages</a> (InputArrayOfArrays images, double scalefactor=1.0, Size <a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>=Size(), const Scalar &amp;<a class="el" href="group__core__c.html#gad090d0faa53f44e0377c8d63dab3fa20">mean</a>=Scalar(), bool swapRB=false, bool crop=false, int ddepth=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:ga9029ffff4ff6b8648c349a023e8ad1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 4-dimensional blob from series of images. Optionally resizes and crops <code>images</code> from center, subtract <code>mean</code> values, scales values by <code>scalefactor</code>, swap Blue and Red channels.  <a href="group__dnn.html#ga9029ffff4ff6b8648c349a023e8ad1eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9029ffff4ff6b8648c349a023e8ad1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05e2b48213538cddc241f6d9c3680da5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga05e2b48213538cddc241f6d9c3680da5">cv::dnn::blobFromImages</a> (InputArrayOfArrays images, OutputArray blob, double scalefactor=1.0, Size <a class="el" href="group__core__c.html#ga854352f53b148adc24983a58a1866d66">size</a>=Size(), const Scalar &amp;<a class="el" href="group__core__c.html#gad090d0faa53f44e0377c8d63dab3fa20">mean</a>=Scalar(), bool swapRB=false, bool crop=false, int ddepth=<a class="el" href="group__core__hal__interface.html#ga4a3def5d72b74bed31f5f8ab7676099c">CV_32F</a>)</td></tr>
+<tr class="memdesc:ga05e2b48213538cddc241f6d9c3680da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 4-dimensional blob from series of images.  <a href="group__dnn.html#ga05e2b48213538cddc241f6d9c3680da5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga05e2b48213538cddc241f6d9c3680da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga929ecb2bc0eeefaa826427a639f7e677"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga929ecb2bc0eeefaa826427a639f7e677">cv::dnn::imagesFromBlob</a> (const <a class="el" href="classcv_1_1_mat.html">cv::Mat</a> &amp;blob_, OutputArrayOfArrays images_)</td></tr>
+<tr class="memdesc:ga929ecb2bc0eeefaa826427a639f7e677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure (std::vector&lt;cv::Mat&gt;).  <a href="group__dnn.html#ga929ecb2bc0eeefaa826427a639f7e677">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga929ecb2bc0eeefaa826427a639f7e677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf865939b43f9438c08ee281ce14ed5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gacf865939b43f9438c08ee281ce14ed5a">cv::dnn::shrinkCaffeModel</a> (const String &amp;src, const String &amp;<a class="el" href="group__imgproc__c.html#gaaf2b96e41a49dc4d072b2a0707f56596">dst</a>, const std::vector&lt; String &gt; &amp;layersTypes=std::vector&lt; String &gt;())</td></tr>
+<tr class="memdesc:gacf865939b43f9438c08ee281ce14ed5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert all weights of Caffe network to half precision floating point.  <a href="group__dnn.html#gacf865939b43f9438c08ee281ce14ed5a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacf865939b43f9438c08ee281ce14ed5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba5ab6a20f45025cdf1d53e0fa7f0dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gaba5ab6a20f45025cdf1d53e0fa7f0dc9">cv::dnn::writeTextGraph</a> (const String &amp;model, const String &amp;output)</td></tr>
+<tr class="memdesc:gaba5ab6a20f45025cdf1d53e0fa7f0dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a text representation for a binary network stored in protocol buffer format.  <a href="group__dnn.html#gaba5ab6a20f45025cdf1d53e0fa7f0dc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaba5ab6a20f45025cdf1d53e0fa7f0dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a9f1c9e8adf5840712f9472d350795c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga2a9f1c9e8adf5840712f9472d350795c">cv::dnn::NMSBoxes</a> (const std::vector&lt; Rect &gt; &amp;bboxes, const std::vector&lt; float &gt; &amp;scores, const float score_threshold, const float nms_threshold, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; int &gt; &amp;indices, const float eta=1.f, const int top_k=0)</td></tr>
+<tr class="memdesc:ga2a9f1c9e8adf5840712f9472d350795c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs non maximum suppression given boxes and corresponding scores.  <a href="group__dnn.html#ga2a9f1c9e8adf5840712f9472d350795c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2a9f1c9e8adf5840712f9472d350795c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga545d5d23677e62854aa97039e938c6fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__utils.html#ga67ea671a3582ce612ac3c281e067f480">CV_EXPORTS_W</a> <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#ga545d5d23677e62854aa97039e938c6fb">cv::dnn::NMSBoxes</a> (const std::vector&lt; Rect2d &gt; &amp;bboxes, const std::vector&lt; float &gt; &amp;scores, const float score_threshold, const float nms_threshold, <a class="el" href="group__core__utils.html#ga4e999bc21cb894d3ed789f3f0bc26778">CV_OUT</a> std::vector&lt; int &gt; &amp;indices, const float eta=1.f, const int top_k=0)</td></tr>
+<tr class="separator:ga545d5d23677e62854aa97039e938c6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:gaf2f2806f40c471630d7f847c6fbc13a1"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="group__core__utils.html#ga1bf9f0e121b54272da02379cfccd0a2b">CV_EXPORTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dnn.html#gaf2f2806f40c471630d7f847c6fbc13a1">cv::dnn::ActivationLayer</a></td></tr>
+<tr class="separator:gaf2f2806f40c471630d7f847c6fbc13a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_421ae26bf906500c467d23ae4bda784b.html">dnn</a></li><li class="navelem"><a class="el" href="opencv2_2dnn_2dnn_8hpp.html">dnn.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

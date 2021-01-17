@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Структура cv::gapi::ie::detail::ParamDesc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура cv::gapi::ie::detail::ParamDesc</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ie_8hpp_source.html">ie.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a92acb8d8a99627386311945554af59fe"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">Kind</a> { <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb">Load</a>
+, <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a">Import</a>
+ }</td></tr>
+<tr class="separator:a92acb8d8a99627386311945554af59fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973fed5585bc862a96339cf10f632bbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">ConstInput</a> = std::pair&lt; <a class="el" href="classcv_1_1_mat.html">cv::Mat</a>, <a class="el" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">TraitAs</a> &gt;</td></tr>
+<tr class="separator:a973fed5585bc862a96339cf10f632bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac819ca1d4c72c0ff505565b7c12b137f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#ac819ca1d4c72c0ff505565b7c12b137f">model_path</a></td></tr>
+<tr class="separator:ac819ca1d4c72c0ff505565b7c12b137f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b8c348bcf3aea523bbb69cc8df77eb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a52b8c348bcf3aea523bbb69cc8df77eb">weights_path</a></td></tr>
+<tr class="separator:a52b8c348bcf3aea523bbb69cc8df77eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cedf45e3d8bde8ed5bde5b79ff08987"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a6cedf45e3d8bde8ed5bde5b79ff08987">device_id</a></td></tr>
+<tr class="separator:a6cedf45e3d8bde8ed5bde5b79ff08987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23f13d4a2063df67603b64941af4cc3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#af23f13d4a2063df67603b64941af4cc3">input_names</a></td></tr>
+<tr class="separator:af23f13d4a2063df67603b64941af4cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8858a371b710e686b4df176c3ccd946"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa8858a371b710e686b4df176c3ccd946">output_names</a></td></tr>
+<tr class="separator:aa8858a371b710e686b4df176c3ccd946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd569505d17ebb8d373458e689b2d4d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">ConstInput</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#abcd569505d17ebb8d373458e689b2d4d">const_inputs</a></td></tr>
+<tr class="separator:abcd569505d17ebb8d373458e689b2d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f7bf27319d7cc4be75276b2e2ed861"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a75f7bf27319d7cc4be75276b2e2ed861">num_in</a></td></tr>
+<tr class="separator:a75f7bf27319d7cc4be75276b2e2ed861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91fcee8a7d169d5e0785458c7fb8219f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a91fcee8a7d169d5e0785458c7fb8219f">num_out</a></td></tr>
+<tr class="separator:a91fcee8a7d169d5e0785458c7fb8219f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f93fe836984050944ca17668c1cad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">Kind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a84f93fe836984050944ca17668c1cad9">kind</a></td></tr>
+<tr class="separator:a84f93fe836984050944ca17668c1cad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43f214dcd5d4b8ed1f4e1a285ff66ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#aa43f214dcd5d4b8ed1f4e1a285ff66ab">is_generic</a></td></tr>
+<tr class="separator:aa43f214dcd5d4b8ed1f4e1a285ff66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4790813bb0f908c472c596f05045bd98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a4790813bb0f908c472c596f05045bd98">config</a></td></tr>
+<tr class="separator:a4790813bb0f908c472c596f05045bd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a id="a973fed5585bc862a96339cf10f632bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973fed5585bc862a96339cf10f632bbb">&#9670;&nbsp;</a></span>ConstInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">cv::gapi::ie::detail::ParamDesc::ConstInput</a> =  std::pair&lt;<a class="el" href="classcv_1_1_mat.html">cv::Mat</a>, <a class="el" href="namespacecv_1_1gapi_1_1ie.html#af63f38e596d0a0c4a2196532cfba3c1b">TraitAs</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a92acb8d8a99627386311945554af59fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92acb8d8a99627386311945554af59fe">&#9670;&nbsp;</a></span>Kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">cv::gapi::ie::detail::ParamDesc::Kind</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a92acb8d8a99627386311945554af59feaf19dbf2edb3a0bd74b0524d960ff21eb"></a>Load&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a92acb8d8a99627386311945554af59fea72d6d7a1885885bb55a565fd1070581a"></a>Import&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a4790813bb0f908c472c596f05045bd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4790813bb0f908c472c596f05045bd98">&#9670;&nbsp;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecv_1_1gapi_1_1ie.html#a8cfbcd3dee47ed8a7a94fe6a9453356d">IEConfig</a> cv::gapi::ie::detail::ParamDesc::config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcd569505d17ebb8d373458e689b2d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd569505d17ebb8d373458e689b2d4d">&#9670;&nbsp;</a></span>const_inputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a973fed5585bc862a96339cf10f632bbb">ConstInput</a>&gt; cv::gapi::ie::detail::ParamDesc::const_inputs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cedf45e3d8bde8ed5bde5b79ff08987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cedf45e3d8bde8ed5bde5b79ff08987">&#9670;&nbsp;</a></span>device_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cv::gapi::ie::detail::ParamDesc::device_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af23f13d4a2063df67603b64941af4cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23f13d4a2063df67603b64941af4cc3">&#9670;&nbsp;</a></span>input_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; cv::gapi::ie::detail::ParamDesc::input_names</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa43f214dcd5d4b8ed1f4e1a285ff66ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43f214dcd5d4b8ed1f4e1a285ff66ab">&#9670;&nbsp;</a></span>is_generic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cv::gapi::ie::detail::ParamDesc::is_generic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84f93fe836984050944ca17668c1cad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f93fe836984050944ca17668c1cad9">&#9670;&nbsp;</a></span>kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html#a92acb8d8a99627386311945554af59fe">Kind</a> cv::gapi::ie::detail::ParamDesc::kind</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac819ca1d4c72c0ff505565b7c12b137f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac819ca1d4c72c0ff505565b7c12b137f">&#9670;&nbsp;</a></span>model_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cv::gapi::ie::detail::ParamDesc::model_path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75f7bf27319d7cc4be75276b2e2ed861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f7bf27319d7cc4be75276b2e2ed861">&#9670;&nbsp;</a></span>num_in</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> cv::gapi::ie::detail::ParamDesc::num_in</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91fcee8a7d169d5e0785458c7fb8219f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91fcee8a7d169d5e0785458c7fb8219f">&#9670;&nbsp;</a></span>num_out</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="runtime_2autogenerated_2opencl__core_8hpp.html#a6ff403ead16f7faa1f7228274eb6b01d">std::size_t</a> cv::gapi::ie::detail::ParamDesc::num_out</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8858a371b710e686b4df176c3ccd946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8858a371b710e686b4df176c3ccd946">&#9670;&nbsp;</a></span>output_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; cv::gapi::ie::detail::ParamDesc::output_names</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52b8c348bcf3aea523bbb69cc8df77eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b8c348bcf3aea523bbb69cc8df77eb">&#9670;&nbsp;</a></span>weights_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cv::gapi::ie::detail::ParamDesc::weights_path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>opencv/build/include/opencv2/gapi/infer/<a class="el" href="ie_8hpp_source.html">ie.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi.html">gapi</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1ie.html">ie</a></li><li class="navelem"><a class="el" href="namespacecv_1_1gapi_1_1ie_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structcv_1_1gapi_1_1ie_1_1detail_1_1_param_desc.html">ParamDesc</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

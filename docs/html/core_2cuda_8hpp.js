@@ -1,0 +1,35 @@
+var core_2cuda_8hpp =
+[
+    [ "Allocator", "classcv_1_1cuda_1_1_gpu_mat_1_1_allocator.html", "classcv_1_1cuda_1_1_gpu_mat_1_1_allocator" ],
+    [ "FeatureSet", "core_2cuda_8hpp.html#ga776cf8e0301b18e19be4782754274fe0", [
+      [ "FEATURE_SET_COMPUTE_10", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0ab34c101b8be1bfbf64fe53db6277639d", null ],
+      [ "FEATURE_SET_COMPUTE_11", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a82461455d1a5663b49d55c4b21c6ff52", null ],
+      [ "FEATURE_SET_COMPUTE_12", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0abe959647501a9c973592060723fe9d16", null ],
+      [ "FEATURE_SET_COMPUTE_13", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0ae1996d5cc9efd9d0db1edb987a6b88b0", null ],
+      [ "FEATURE_SET_COMPUTE_20", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0ac3b86a55893548ec28d6360b38ef78cd", null ],
+      [ "FEATURE_SET_COMPUTE_21", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0ac46cbea580480b80f48f9a843b1fca98", null ],
+      [ "FEATURE_SET_COMPUTE_30", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0aeb9eaa4b4a1be83d87212c4afad9bebb", null ],
+      [ "FEATURE_SET_COMPUTE_32", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a965876faa336b34a95b781129915766d", null ],
+      [ "FEATURE_SET_COMPUTE_35", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0acb28f583b1a1e680da03ef1363e96301", null ],
+      [ "FEATURE_SET_COMPUTE_50", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a4e7aa099ce8d9f1b4c26cb9755a17d11", null ],
+      [ "GLOBAL_ATOMICS", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a9b148c4a092e640c4e1f5bf54e166c68", null ],
+      [ "SHARED_ATOMICS", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a63dd888f7ac8c7e6716af80bb9580ad5", null ],
+      [ "NATIVE_DOUBLE", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a86553a98540f6a0fb2656730af504693", null ],
+      [ "WARP_SHUFFLE_FUNCTIONS", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a22dd302fe5c91cbb63078b4676f58cae", null ],
+      [ "DYNAMIC_PARALLELISM", "core_2cuda_8hpp.html#gga776cf8e0301b18e19be4782754274fe0a2d8ef1fc50ce9e89ea1e058b6ba9df47", null ]
+    ] ],
+    [ "convertFp16", "core_2cuda_8hpp.html#ga0163a317178d98dedbf77433eb26bdb2", null ],
+    [ "createContinuous", "core_2cuda_8hpp.html#ga59de44df3b4b32f696d285b303e90c75", null ],
+    [ "deviceSupports", "core_2cuda_8hpp.html#gafa6e41b1379e7b06c86b99ddfb44aea1", null ],
+    [ "ensureSizeIsEnough", "core_2cuda_8hpp.html#ga7bc980059acce8220eeedae2918762c5", null ],
+    [ "getCudaEnabledDeviceCount", "core_2cuda_8hpp.html#gaed0ef250035ded4ad1a31f5f5ad68006", null ],
+    [ "getDevice", "core_2cuda_8hpp.html#gaa846fa7d9c2c5d1380426ad2106bb774", null ],
+    [ "printCudaDeviceInfo", "core_2cuda_8hpp.html#ga4e16bc5e903159db7b1038539f720b2a", null ],
+    [ "printShortCudaDeviceInfo", "core_2cuda_8hpp.html#gab933b94754f6aad3ff0aa7495ffd0244", null ],
+    [ "registerPageLocked", "core_2cuda_8hpp.html#ga3c09d6c72d00b38eb9437eb37cd469da", null ],
+    [ "resetDevice", "core_2cuda_8hpp.html#gada623ef92e9cc48f80824b65e028be3e", null ],
+    [ "setBufferPoolConfig", "core_2cuda_8hpp.html#gaea47826613b76ca2970e84cffa1d5fac", null ],
+    [ "setBufferPoolUsage", "core_2cuda_8hpp.html#ga0444b78168a19e590ed1c3a2e2704085", null ],
+    [ "setDevice", "core_2cuda_8hpp.html#ga61ad99f1fce0c17852473110a0a3a89b", null ],
+    [ "unregisterPageLocked", "core_2cuda_8hpp.html#ga18a5239020d49c6cbcbe1f09b3c32e02", null ]
+];

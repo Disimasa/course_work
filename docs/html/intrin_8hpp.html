@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Файл opencv/build/include/opencv2/core/hal/intrin.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('intrin_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл intrin.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="cvdef_8h_source.html">opencv2/core/cvdef.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="intrin__cpp_8hpp_source.html">opencv2/core/hal/intrin_cpp.hpp</a>&quot;</code><br />
+</div>
+<p><a href="intrin_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcv_1_1_v___type_traits.html">cv::V_TypeTraits&lt; _Tp &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
+<tr class="memdesc:namespacecv"><td class="mdescLeft">&#160;</td><td class="mdescRight">"black box" representation of the file storage associated with a file on disk. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecv_1_1hal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1hal.html">cv::hal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a1c34ed60a89ca6c3f7db824285eda741"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a1c34ed60a89ca6c3f7db824285eda741">OPENCV_HAL_ADD</a>(a,  b)&#160;&#160;&#160;((a) + (b))</td></tr>
+<tr class="separator:a1c34ed60a89ca6c3f7db824285eda741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29e507fba7170290ecf25f2527b8091"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#ae29e507fba7170290ecf25f2527b8091">OPENCV_HAL_AND</a>(a,  b)&#160;&#160;&#160;((a) &amp; (b))</td></tr>
+<tr class="separator:ae29e507fba7170290ecf25f2527b8091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7ab694a9baa2ea503aad4d3f4ec463"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a5d7ab694a9baa2ea503aad4d3f4ec463">OPENCV_HAL_NOP</a>(a)&#160;&#160;&#160;(a)</td></tr>
+<tr class="separator:a5d7ab694a9baa2ea503aad4d3f4ec463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae837a7f397116986e18fdbc843cac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a7cae837a7f397116986e18fdbc843cac">OPENCV_HAL_1ST</a>(a,  b)&#160;&#160;&#160;(a)</td></tr>
+<tr class="separator:a7cae837a7f397116986e18fdbc843cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0833584e831017146d2dec3cffc00c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a9e0833584e831017146d2dec3cffc00c">CV_INTRIN_DEF_TYPE_TRAITS</a>(<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>,  int_type_,  uint_type_,  abs_type_,  w_type_,  q_type_,  sum_type_,  nlanes128_)</td></tr>
+<tr class="separator:a9e0833584e831017146d2dec3cffc00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17edb3bbc1341edc830a1e1749d822e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a17edb3bbc1341edc830a1e1749d822e8">CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a>(<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>,  int_type_,  uint_type_,  abs_type_,  w_type_,  sum_type_,  nlanes128_)</td></tr>
+<tr class="separator:a17edb3bbc1341edc830a1e1749d822e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77dc8da0ef4ee34971caa814982c936"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#ac77dc8da0ef4ee34971caa814982c936">CV_CPU_OPTIMIZATION_HAL_NAMESPACE</a>&#160;&#160;&#160;hal_baseline</td></tr>
+<tr class="separator:ac77dc8da0ef4ee34971caa814982c936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eec4bbfbd04454940bb80335e3a0f8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#a1eec4bbfbd04454940bb80335e3a0f8e">CV_CPU_OPTIMIZATION_HAL_NAMESPACE_BEGIN</a>&#160;&#160;&#160;namespace hal_baseline {</td></tr>
+<tr class="separator:a1eec4bbfbd04454940bb80335e3a0f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac207cd6d7ed3995528c5ce33192994e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="intrin_8hpp.html#ac207cd6d7ed3995528c5ce33192994e5">CV_CPU_OPTIMIZATION_HAL_NAMESPACE_END</a>&#160;&#160;&#160;}</td></tr>
+<tr class="separator:ac207cd6d7ed3995528c5ce33192994e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:afe7c2ef8e1924718cfa3a33010834904"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv_1_1hal.html#afe7c2ef8e1924718cfa3a33010834904">cv::hal::StoreMode</a> { <a class="el" href="namespacecv_1_1hal.html#afe7c2ef8e1924718cfa3a33010834904adcb5798a4d3a33e327c29d5bb95c080a">cv::hal::STORE_UNALIGNED</a> = 0
+, <a class="el" href="namespacecv_1_1hal.html#afe7c2ef8e1924718cfa3a33010834904ab5cb308631f6c97244313f5a4d09d621">cv::hal::STORE_ALIGNED</a> = 1
+, <a class="el" href="namespacecv_1_1hal.html#afe7c2ef8e1924718cfa3a33010834904a37cb7fb8de75e609d48468004ffdb4d2">cv::hal::STORE_ALIGNED_NOCACHE</a> = 2
+ }</td></tr>
+<tr class="separator:afe7c2ef8e1924718cfa3a33010834904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3a6e5f260e4119fff79775f813a8457b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a3a6e5f260e4119fff79775f813a8457b">cv::CV_INTRIN_DEF_TYPE_TRAITS</a> (<a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, <a class="el" href="group__core__hal__interface.html#ga0fd9ce9d735064461bebfe6037026093">schar</a>, <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, unsigned, unsigned, 16)</td></tr>
+<tr class="separator:a3a6e5f260e4119fff79775f813a8457b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e6f436ecc71d0684a4c32e5314bcc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#ae5e6f436ecc71d0684a4c32e5314bcc2">cv::CV_INTRIN_DEF_TYPE_TRAITS</a> (<a class="el" href="group__core__hal__interface.html#ga0fd9ce9d735064461bebfe6037026093">schar</a>, <a class="el" href="group__core__hal__interface.html#ga0fd9ce9d735064461bebfe6037026093">schar</a>, <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, <a class="el" href="group__core__hal__interface.html#ga65f85814a8290f9797005d3b28e7e5fc">uchar</a>, short, int, int, 16)</td></tr>
+<tr class="separator:ae5e6f436ecc71d0684a4c32e5314bcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a989526a7ad6202801c75d04d2cefc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a60a989526a7ad6202801c75d04d2cefc">cv::CV_INTRIN_DEF_TYPE_TRAITS</a> (<a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, short, <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, unsigned, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, unsigned, 8)</td></tr>
+<tr class="separator:a60a989526a7ad6202801c75d04d2cefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247e2e97b05bdf4972b1375e8d39e9b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a247e2e97b05bdf4972b1375e8d39e9b3">cv::CV_INTRIN_DEF_TYPE_TRAITS</a> (short, short, <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, <a class="el" href="group__core__hal__interface.html#gab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>, int, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, int, 8)</td></tr>
+<tr class="separator:a247e2e97b05bdf4972b1375e8d39e9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5733ac4ee43e1eb42292d95ec7798e65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a5733ac4ee43e1eb42292d95ec7798e65">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (unsigned, int, unsigned, unsigned, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, unsigned, 4)</td></tr>
+<tr class="separator:a5733ac4ee43e1eb42292d95ec7798e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd96212471847a4021cbf183acf726a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a5dd96212471847a4021cbf183acf726a">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (int, int, unsigned, unsigned, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, int, 4)</td></tr>
+<tr class="separator:a5dd96212471847a4021cbf183acf726a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c48158dce1d29fd3dd81bcc0132b497"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a4c48158dce1d29fd3dd81bcc0132b497">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (float, int, unsigned, float, double, float, 4)</td></tr>
+<tr class="separator:a4c48158dce1d29fd3dd81bcc0132b497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae570fdf3608b1005f76b079f5f7e0c9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#ae570fdf3608b1005f76b079f5f7e0c9a">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (<a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, 2)</td></tr>
+<tr class="separator:ae570fdf3608b1005f76b079f5f7e0c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cecf3f4ebc4cbb5ff0dd51e59bef877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a8cecf3f4ebc4cbb5ff0dd51e59bef877">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (<a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, 2)</td></tr>
+<tr class="separator:a8cecf3f4ebc4cbb5ff0dd51e59bef877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db891036784a00104a2b6bfaca24422"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a7db891036784a00104a2b6bfaca24422">cv::CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</a> (double, <a class="el" href="group__core__hal__interface.html#ga7cde0074dfd288f2d70c0e035dacb28a">int64</a>, <a class="el" href="group__core__hal__interface.html#gabc0f5bc07737e498f287334775dff2b6">uint64</a>, double, <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>, double, 2)</td></tr>
+<tr class="separator:a7db891036784a00104a2b6bfaca24422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ac77dc8da0ef4ee34971caa814982c936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77dc8da0ef4ee34971caa814982c936">&#9670;&nbsp;</a></span>CV_CPU_OPTIMIZATION_HAL_NAMESPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_CPU_OPTIMIZATION_HAL_NAMESPACE&#160;&#160;&#160;hal_baseline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1eec4bbfbd04454940bb80335e3a0f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eec4bbfbd04454940bb80335e3a0f8e">&#9670;&nbsp;</a></span>CV_CPU_OPTIMIZATION_HAL_NAMESPACE_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_CPU_OPTIMIZATION_HAL_NAMESPACE_BEGIN&#160;&#160;&#160;namespace hal_baseline {</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac207cd6d7ed3995528c5ce33192994e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac207cd6d7ed3995528c5ce33192994e5">&#9670;&nbsp;</a></span>CV_CPU_OPTIMIZATION_HAL_NAMESPACE_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_CPU_OPTIMIZATION_HAL_NAMESPACE_END&#160;&#160;&#160;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e0833584e831017146d2dec3cffc00c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0833584e831017146d2dec3cffc00c">&#9670;&nbsp;</a></span>CV_INTRIN_DEF_TYPE_TRAITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_INTRIN_DEF_TYPE_TRAITS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">int_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uint_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">abs_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">q_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sum_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nlanes128_&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span>V_TypeTraits&lt;<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>&gt; \</div>
+<div class="line">    { \</div>
+<div class="line">        typedef <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> value_type; \</div>
+<div class="line">        typedef int_type_ int_type; \</div>
+<div class="line">        typedef abs_type_ abs_type; \</div>
+<div class="line">        typedef uint_type_ uint_type; \</div>
+<div class="line">        typedef w_type_ w_type; \</div>
+<div class="line">        typedef q_type_ q_type; \</div>
+<div class="line">        typedef sum_type_ sum_type; \</div>
+<div class="line">        enum { nlanes128 = nlanes128_ }; \</div>
+<div class="line">    \</div>
+<div class="line">        static <span class="keyword">inline</span> int_type reinterpret_int(<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) \</div>
+<div class="line">        { \</div>
+<div class="line">            union { <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> l; int_type i; } v; \</div>
+<div class="line">            v.l = <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>; \</div>
+<div class="line">            return v.i; \</div>
+<div class="line">        } \</div>
+<div class="line">    \</div>
+<div class="line">        static <span class="keyword">inline</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> reinterpret_from_int(int_type <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) \</div>
+<div class="line">        { \</div>
+<div class="line">            union { <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> l; int_type i; } v; \</div>
+<div class="line">            v.i = <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>; \</div>
+<div class="line">            return v.l; \</div>
+<div class="line">        } \</div>
+<div class="line">    }</div>
+<div class="ttc" id="agroup__core__c_html_ga8bc957583d2a5247e490ea9ce960cf21"><div class="ttname"><a href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a></div><div class="ttdeci">int int type</div><div class="ttdef"><b>Definition:</b> core_c.h:218</div></div>
+<div class="ttc" id="agroup__highgui__c_html_ga6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> highgui_c.h:204</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a17edb3bbc1341edc830a1e1749d822e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17edb3bbc1341edc830a1e1749d822e8">&#9670;&nbsp;</a></span>CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">int_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uint_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">abs_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sum_type_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nlanes128_&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <span class="keyword">template</span>&lt;&gt; <span class="keyword">struct </span>V_TypeTraits&lt;<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a>&gt; \</div>
+<div class="line">    { \</div>
+<div class="line">        typedef <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> value_type; \</div>
+<div class="line">        typedef int_type_ int_type; \</div>
+<div class="line">        typedef abs_type_ abs_type; \</div>
+<div class="line">        typedef uint_type_ uint_type; \</div>
+<div class="line">        typedef w_type_ w_type; \</div>
+<div class="line">        typedef sum_type_ sum_type; \</div>
+<div class="line">        enum { nlanes128 = nlanes128_ }; \</div>
+<div class="line">    \</div>
+<div class="line">        static <span class="keyword">inline</span> int_type reinterpret_int(<a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) \</div>
+<div class="line">        { \</div>
+<div class="line">            union { <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> l; int_type i; } v; \</div>
+<div class="line">            v.l = <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>; \</div>
+<div class="line">            return v.i; \</div>
+<div class="line">        } \</div>
+<div class="line">    \</div>
+<div class="line">        static <span class="keyword">inline</span> <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> reinterpret_from_int(int_type <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>) \</div>
+<div class="line">        { \</div>
+<div class="line">            union { <a class="code" href="group__core__c.html#ga8bc957583d2a5247e490ea9ce960cf21">type</a> l; int_type i; } v; \</div>
+<div class="line">            v.i = <a class="code" href="group__highgui__c.html#ga6150e0515f7202e2fb518f7206ed97dc">x</a>; \</div>
+<div class="line">            return v.l; \</div>
+<div class="line">        } \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7cae837a7f397116986e18fdbc843cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cae837a7f397116986e18fdbc843cac">&#9670;&nbsp;</a></span>OPENCV_HAL_1ST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_1ST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(a)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c34ed60a89ca6c3f7db824285eda741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c34ed60a89ca6c3f7db824285eda741">&#9670;&nbsp;</a></span>OPENCV_HAL_ADD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_ADD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((a) + (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae29e507fba7170290ecf25f2527b8091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29e507fba7170290ecf25f2527b8091">&#9670;&nbsp;</a></span>OPENCV_HAL_AND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_AND</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((a) &amp; (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d7ab694a9baa2ea503aad4d3f4ec463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7ab694a9baa2ea503aad4d3f4ec463">&#9670;&nbsp;</a></span>OPENCV_HAL_NOP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENCV_HAL_NOP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td>&#160;&#160;&#160;(a)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bc7ba1e312bfc05dfad081506e1881af.html">opencv</a></li><li class="navelem"><a class="el" href="dir_8fc632d752f6d751e41b475a42a2d0e9.html">build</a></li><li class="navelem"><a class="el" href="dir_0c7a46bf06adc6f86caf0222f81352ad.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab0d0e48f1a69f2e5d0482bfd9b51df.html">opencv2</a></li><li class="navelem"><a class="el" href="dir_8203f7d84f14c30b8d97e17c479654d2.html">core</a></li><li class="navelem"><a class="el" href="dir_9cfd5b47b88c986e548a798da92b3d78.html">hal</a></li><li class="navelem"><a class="el" href="intrin_8hpp.html">intrin.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>

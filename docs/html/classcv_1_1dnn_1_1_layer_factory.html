@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Neural Network library: Класс cv::dnn::LayerFactory</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Neural Network library
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+   <div id="projectbrief">Small lib for neural networks</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classcv_1_1dnn_1_1_layer_factory.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classcv_1_1dnn_1_1_layer_factory-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс cv::dnn::LayerFactory<div class="ingroups"><a class="el" href="group__dnn.html">Deep Neural Network module</a> &raquo; <a class="el" href="group__dnn_layer_factory.html">Utilities for New Layers Registration</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Layer factory allows to create instances of registered layers.  
+ <a href="classcv_1_1dnn_1_1_layer_factory.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="layer_8hpp_source.html">layer.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a5a9145f3c87e3f42aa74bef2b2585fa8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a> &gt;(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#a5a9145f3c87e3f42aa74bef2b2585fa8">Constructor</a>) (<a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a5a9145f3c87e3f42aa74bef2b2585fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each <a class="el" href="classcv_1_1dnn_1_1_layer.html" title="This interface class allows to build new Layers - are building blocks of networks.">Layer</a> class must provide this function to the factory.  <a href="classcv_1_1dnn_1_1_layer_factory.html#a5a9145f3c87e3f42aa74bef2b2585fa8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5a9145f3c87e3f42aa74bef2b2585fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aca69c92ed171a3a1e4ea38f28be20252"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#aca69c92ed171a3a1e4ea38f28be20252">registerLayer</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#a5a9145f3c87e3f42aa74bef2b2585fa8">Constructor</a> constructor)</td></tr>
+<tr class="memdesc:aca69c92ed171a3a1e4ea38f28be20252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the layer class with typename <code>type</code> and specified <code>constructor</code>. Thread-safe.  <a href="classcv_1_1dnn_1_1_layer_factory.html#aca69c92ed171a3a1e4ea38f28be20252">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca69c92ed171a3a1e4ea38f28be20252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229f5b982a69b44e38ad2e68a580fd9f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#a229f5b982a69b44e38ad2e68a580fd9f">unregisterLayer</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>)</td></tr>
+<tr class="memdesc:a229f5b982a69b44e38ad2e68a580fd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters registered layer with specified type name. Thread-safe.  <a href="classcv_1_1dnn_1_1_layer_factory.html#a229f5b982a69b44e38ad2e68a580fd9f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a229f5b982a69b44e38ad2e68a580fd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850765f77a59a3c2f58eeb0e5a930ac3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt; <a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#a850765f77a59a3c2f58eeb0e5a930ac3">createLayerInstance</a> (const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;<a class="el" href="group__imgproc__c.html#ga84612d8738bf935200cf32a103d8efe1">type</a>, <a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a850765f77a59a3c2f58eeb0e5a930ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates instance of registered layer.  <a href="classcv_1_1dnn_1_1_layer_factory.html#a850765f77a59a3c2f58eeb0e5a930ac3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a850765f77a59a3c2f58eeb0e5a930ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Layer factory allows to create instances of registered layers. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a5a9145f3c87e3f42aa74bef2b2585fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9145f3c87e3f42aa74bef2b2585fa8">&#9670;&nbsp;</a></span>Constructor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a>&gt;(* cv::dnn::LayerFactory::Constructor) (<a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;params)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Each <a class="el" href="classcv_1_1dnn_1_1_layer.html" title="This interface class allows to build new Layers - are building blocks of networks.">Layer</a> class must provide this function to the factory. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a850765f77a59a3c2f58eeb0e5a930ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850765f77a59a3c2f58eeb0e5a930ac3">&#9670;&nbsp;</a></span>createLayerInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structcv_1_1_ptr.html">Ptr</a>&lt;<a class="el" href="classcv_1_1dnn_1_1_layer.html">Layer</a>&gt; cv::dnn::LayerFactory::createLayerInstance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_layer_params.html">LayerParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates instance of registered layer. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>type name of creating layer. </td></tr>
+    <tr><td class="paramname">params</td><td>parameters which will be used for layer initialization. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Thread-safe. </dd></dl>
+
+</div>
+</div>
+<a id="aca69c92ed171a3a1e4ea38f28be20252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca69c92ed171a3a1e4ea38f28be20252">&#9670;&nbsp;</a></span>registerLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::LayerFactory::registerLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html#a5a9145f3c87e3f42aa74bef2b2585fa8">Constructor</a>&#160;</td>
+          <td class="paramname"><em>constructor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers the layer class with typename <code>type</code> and specified <code>constructor</code>. Thread-safe. </p>
+
+</div>
+</div>
+<a id="a229f5b982a69b44e38ad2e68a580fd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229f5b982a69b44e38ad2e68a580fd9f">&#9670;&nbsp;</a></span>unregisterLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__highgui__c.html#gad1f9461adaad33556b3a01c7f2c6ceab">void</a> cv::dnn::LayerFactory::unregisterLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core__basic.html#ga1f6634802eeadfd7245bc75cf3e216c2">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unregisters registered layer with specified type name. Thread-safe. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>opencv/build/include/opencv2/dnn/<a class="el" href="layer_8hpp_source.html">layer.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecv.html">cv</a></li><li class="navelem"><a class="el" href="namespacecv_1_1dnn.html">dnn</a></li><li class="navelem"><a class="el" href="classcv_1_1dnn_1_1_layer_factory.html">LayerFactory</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+  </ul>
+</div>
+</body>
+</html>
