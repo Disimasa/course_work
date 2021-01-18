@@ -17,6 +17,9 @@ add_executable(mnist_with_opencv examples/mnist_with_opencv.cpp)
 target_link_libraries(mnist_with_opencv NeuralNetwork ${OpenCV_LIBS})
 
 install(FILES $<TARGET_FILE:opencv_world> DESTINATION $<TARGET_FILE_DIR:mnist_with_opencv>)
+install(TARGETS
+        xor_example mnist_example mnist_with_opencv
+        DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/images/ DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/train_data/ DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/weights/ DESTINATION ${CMAKE_BINARY_DIR})
