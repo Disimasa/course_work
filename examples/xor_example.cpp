@@ -18,5 +18,5 @@ int main() {
 	network.addLayer(new FullyConnected(1));
 	network.setRandomWeights();
 	std::cout<<network.train(data, answers, 5000, 1);
-	std::cin.get();
+	std::system("pause");
 }

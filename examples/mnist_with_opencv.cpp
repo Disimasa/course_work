@@ -26,7 +26,7 @@ int main() {
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
-	network.readWeights("./trained_weights.txt");
+	network.readWeights("trained_weights.txt");
 	Matrix prediction = network.activate(testData).back();
 	double maxVal = prediction(0, 0);
 	int maxId = 0;
@@ -36,6 +36,6 @@ int main() {
 			maxId = i;
 		}
 	}
-	std::cout<<std::endl<<"There is " + std::to_string(maxId) + " on the image";
-	std::cin.get();
+	std::cout<<std::endl<<"There is " + std::to_string(maxId) + " on the image"<<std::endl;
+	std::system("pause");
 }

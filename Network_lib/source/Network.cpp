@@ -63,6 +63,8 @@ void Network::readWeights(std::string path) {
 			weights.push_back(matrix);
 		}
 		setWeights(weights);
+	} else {
+		throw std::invalid_argument("can't find the file");
 	}
 }
 
