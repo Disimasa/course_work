@@ -16,7 +16,7 @@ int intoDec (int x) //from 32bit
 }
 
 int main() {
-	std::ifstream data_file("./train-images.idx3-ubyte", std::ios::binary);
+	std::ifstream data_file("../train_data/train-images.idx3-ubyte", std::ios::binary);
 	Matrix trainData(60000, 784);
 	if (data_file.is_open())
 	{
@@ -37,7 +37,7 @@ int main() {
 		}
 	}
 	data_file.close();
-	std::ifstream answers_file("./train-labels.idx1-ubyte", std::ios::binary);
+	std::ifstream answers_file("../train_data/train-labels.idx1-ubyte", std::ios::binary);
 	Matrix trainAnswers(60000, 10);
 	if (answers_file.is_open()) {
 		int magic = 0, answersAmount = 0;
@@ -60,6 +60,6 @@ int main() {
 
 	network.setRandomWeights();
 	network.train(trainData, trainAnswers, 500, 0.0015);
-	network.recordWeights("./trained_weights.txt");
+	network.recordWeights("../weights/trained_weights.txt");
 	std::system("pause");
 }

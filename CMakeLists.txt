@@ -20,9 +20,9 @@ install(FILES $<TARGET_FILE:opencv_world> DESTINATION bin)
 install(TARGETS
         xor_example mnist_example mnist_with_opencv
         DESTINATION bin)
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/images/ DESTINATION bin)
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/train_data/ DESTINATION bin)
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/weights/ DESTINATION bin)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/images/ DESTINATION images)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/train_data/ DESTINATION train_data)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/weights/ DESTINATION weights)
 message(${CMAKE_INSTALL_PREFIX})
 #file(COPY ${PROJECT_SOURCE_DIR}/images/ DESTINATION bin)
 #file(COPY ${PROJECT_SOURCE_DIR}/train_data/ DESTINATION bin)

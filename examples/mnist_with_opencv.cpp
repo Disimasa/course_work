@@ -7,7 +7,7 @@ int main() {
 	std::cout<<"Input the path to the image:"<<std::endl<<std::endl;
 	std::string path;
 	std::cin>>path;
-	cv::Mat img = cv::imread(path, cv::IMREAD_GRAYSCALE);
+	cv::Mat img = cv::imread("../images/"+path, cv::IMREAD_GRAYSCALE);
 	cv::resize(img, img, cv::Size(28, 28));
 	Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> matrix;
 	cv::cv2eigen(img, matrix);
@@ -26,7 +26,7 @@ int main() {
 	network.addLayer(new Convolutional(28, 28, 3));
 	network.addLayer(new FullyConnected(676));
 	network.addLayer(new FullyConnected(10));
-	network.readWeights("trained_weights.txt");
+	network.readWeights("../weights/trained_weights.txt");
 	Matrix prediction = network.activate(testData).back();
 	double maxVal = prediction(0, 0);
 	int maxId = 0;
